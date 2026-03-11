@@ -1,0 +1,3116 @@
+DOCUMENT: peraturan-bssn-no-8-tahun-2024.pdf
+TYPE: peraturan
+TOTAL CHUNKS: 150
+============================================================
+
+--- CHUNK 1 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "hierarchy": "Pembukaan", "bab": "", "pasal": "", "ayat": ""}
+CONTENT:
+- 1 - 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PERATURAN BADAN SIBER DAN SANDI NEGARA 
+REPUBLIK INDONESIA 
+NOMOR 8 TAHUN 2024 
+TENTANG 
+STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN  
+SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK 
+ 
+DENGAN RAHMAT TUHAN YANG MAHA ESA 
+ 
+KEPALA BADAN SIBER DAN SANDI NEGARA, 
+ 
+ 
+Menimbang 
+: bahwa untuk melaksanakan ketentuan Pasal 58 ayat (6) 
+Peraturan Presiden Nomor 95 Tahun 2018 tentang Sistem 
+Pemerintahan Berbasis Elektronik, perlu menetapkan 
+Peraturan Badan Siber dan Sandi Negara tentang Standar 
+dan Tata Cara Pelaksanaan Audit Keamanan Sistem 
+Pemerintahan Berbasis Elektronik;
+----------------------------------------
+
+--- CHUNK 2 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "hierarchy": "Pembukaan", "bab": "", "pasal": "", "ayat": ""}
+CONTENT:
+dan Tata Cara Pelaksanaan Audit Keamanan Sistem 
+Pemerintahan Berbasis Elektronik; 
+ 
+Mengingat 
+: 1. 
+Peraturan Presiden Nomor 95 Tahun 2018 tentang 
+Sistem Pemerintahan Berbasis Elektronik (Lembaran 
+Negara Republik Indonesia Tahun 2018 Nomor 182); 
+2. 
+Peraturan Presiden Nomor 28 Tahun 2021 tentang 
+Badan Siber dan Sandi Negara (Lembaran Negara 
+Republik Indonesia Tahun 2021 Nomor 101); 
+3. 
+Peraturan 
+Menteri 
+Komunikasi 
+dan 
+Informatika 
+Republik Indonesia Nomor 16 Tahun 2022 tentang 
+Kebijakan Umum Penyelenggaraan Audit Teknologi 
+Informasi dan Komunikasi (Berita Negara Republik
+----------------------------------------
+
+--- CHUNK 3 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "hierarchy": "Pembukaan", "bab": "", "pasal": "", "ayat": ""}
+CONTENT:
+Kebijakan Umum Penyelenggaraan Audit Teknologi 
+Informasi dan Komunikasi (Berita Negara Republik 
+Indonesia Tahun 2022 Nomor 1374); 
+4. 
+Peraturan Badan Siber dan Sandi Negara Nomor 6 
+Tahun 2021 tentang Organisasi dan Tata Kerja Badan 
+Siber dan Sandi Negara (Berita Negara Republik 
+Indonesia Tahun 2021 Nomor 803) sebagaimana telah 
+diubah dengan Peraturan Badan Siber dan Sandi 
+Negara Nomor 4 Tahun 2023 tentang Perubahan atas 
+Peraturan Badan Siber dan Sandi Negara Nomor 6 
+Tahun 2021 tentang Organisasi dan Tata Kerja Badan 
+Siber dan Sandi Negara (Berita Negara Republik
+----------------------------------------
+
+--- CHUNK 4 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "hierarchy": "Pembukaan", "bab": "", "pasal": "", "ayat": ""}
+CONTENT:
+Tahun 2021 tentang Organisasi dan Tata Kerja Badan 
+Siber dan Sandi Negara (Berita Negara Republik 
+Indonesia Tahun 2023 Nomor 544); 
+ 
+MEMUTUSKAN: 
+ 
+Menetapkan : PERATURAN BADAN SIBER DAN SANDI NEGARA TENTANG 
+STANDAR 
+DAN 
+TATA 
+CARA 
+PELAKSANAAN 
+AUDIT 
+KEAMANAN 
+SISTEM 
+PEMERINTAHAN 
+BERBASIS 
+ELEKTRONIK.
+----------------------------------------
+
+--- CHUNK 5 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB I", "pasal": "", "bagian": "", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I"}
+CONTENT:
+KETENTUAN UMUM
+----------------------------------------
+
+--- CHUNK 6 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB I", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I > Pasal 1"}
+CONTENT:
+Dalam Peraturan Badan ini yang dimaksud dengan: 
+1. 
+Sistem 
+Pemerintahan 
+Berbasis 
+Elektronik 
+yang 
+selanjutnya disingkat SPBE adalah penyelenggaraan 
+pemerintahan yang memanfaatkan teknologi informasi 
+dan komunikasi untuk memberikan layanan kepada 
+pengguna sistem pemerintahan berbasis elektronik. 
+2. 
+Keamanan SPBE adalah pengendalian keamanan yang 
+terpadu dalam SPBE. 
+3. 
+Audit Keamanan SPBE adalah audit teknologi informasi 
+dan komunikasi cakupan keamanan SPBE. 
+4. 
+Audit Teknologi Informasi dan Komunikasi yang 
+selanjutnya disebut Audit TIK adalah proses yang
+----------------------------------------
+
+--- CHUNK 7 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB I", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I > Pasal 1"}
+CONTENT:
+Audit Teknologi Informasi dan Komunikasi yang 
+selanjutnya disebut Audit TIK adalah proses yang 
+sistematis untuk memperoleh dan mengevaluasi bukti 
+secara objektif terhadap aset teknologi informasi dan 
+komunikasi dengan tujuan untuk menetapkan tingkat 
+kesesuaian antara teknologi informasi dan komunikasi 
+dengan 
+kriteria 
+dan/atau 
+standar 
+yang 
+telah 
+ditetapkan. 
+5. 
+Badan Siber dan Sandi Negara yang selanjutnya disebut 
+Badan adalah lembaga pemerintah yang melaksanakan 
+tugas pemerintahan di bidang keamanan siber dan 
+sandi. 
+6. 
+Instansi 
+Pusat 
+adalah 
+kementerian, 
+lembaga
+----------------------------------------
+
+--- CHUNK 8 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB I", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I > Pasal 1"}
+CONTENT:
+sandi. 
+6. 
+Instansi 
+Pusat 
+adalah 
+kementerian, 
+lembaga 
+pemerintah non kementerian, kesekretariatan lembaga 
+negara, kesekretariatan lembaga nonstruktural, dan 
+lembaga pemerintah lainnya. 
+7. 
+Pemerintah Daerah adalah kepala daerah sebagai 
+unsur 
+penyelenggara 
+pemerintahan 
+daerah 
+yang 
+memimpin pelaksanaan urusan pemerintahan yang 
+menjadi kewenangan daerah otonom. 
+8. 
+Lembaga Pelaksana Audit TIK yang selanjutnya disebut 
+LATIK adalah lembaga yang melaksanakan Audit TIK. 
+9. 
+LATIK Terakreditasi adalah badan hukum yang telah 
+terakreditasi sebagai pelaksana Audit TIK.
+----------------------------------------
+
+--- CHUNK 9 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB I", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I > Pasal 1"}
+CONTENT:
+9. 
+LATIK Terakreditasi adalah badan hukum yang telah 
+terakreditasi sebagai pelaksana Audit TIK. 
+10. Layanan SPBE adalah keluaran yang dihasilkan oleh 1 
+(satu) atau beberapa fungsi aplikasi SPBE dan yang 
+memiliki nilai manfaat. 
+11. Infrastruktur SPBE adalah semua perangkat keras, 
+perangkat lunak, dan fasilitas yang menjadi penunjang 
+utama 
+untuk 
+menjalankan 
+sistem, 
+aplikasi, 
+komunikasi data, pengolahan dan penyimpanan data, 
+perangkat 
+integrasi/penghubung, 
+dan 
+perangkat 
+elektronik lainnya.  
+12. Infrastruktur SPBE Nasional adalah Infrastruktur
+----------------------------------------
+
+--- CHUNK 10 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB I", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I > Pasal 1"}
+CONTENT:
+dan 
+perangkat 
+elektronik lainnya.  
+12. Infrastruktur SPBE Nasional adalah Infrastruktur 
+SPBE yang terhubung dengan Infrastruktur SPBE 
+Instansi Pusat dan Pemerintah Daerah dan digunakan 
+secara bagi pakai oleh Instansi Pusat dan Pemerintah 
+Daerah. 
+13. Peta 
+Rencana 
+SPBE 
+adalah 
+dokumen 
+yang 
+mendeskripsikan arah dan langkah penyiapan dan 
+pelaksanaan SPBE yang terintegrasi.
+----------------------------------------
+
+--- CHUNK 11 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB I", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I > Pasal 1"}
+CONTENT:
+- 3 -  
+ 
+14. Aplikasi SPBE adalah satu atau sekumpulan program 
+komputer 
+dan 
+prosedur 
+yang 
+dirancang 
+untuk 
+melakukan tugas atau fungsi Layanan SPBE. 
+15. Aplikasi Umum adalah Aplikasi SPBE yang sama, 
+standar, dan digunakan secara bagi pakai oleh Instansi 
+Pusat dan/atau Pemerintah Daerah. 
+16. Aplikasi Khusus adalah Aplikasi SPBE yang dibangun, 
+dikembangkan, digunakan, dan dikelola oleh Instansi 
+Pusat 
+atau 
+Pemerintah 
+Daerah 
+tertentu 
+untuk 
+memenuhi kebutuhan khusus yang bukan kebutuhan 
+Instansi Pusat dan Pemerintah Daerah lain. 
+17. Jaringan 
+Intra 
+adalah 
+jaringan
+----------------------------------------
+
+--- CHUNK 12 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB I", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I > Pasal 1"}
+CONTENT:
+Instansi Pusat dan Pemerintah Daerah lain. 
+17. Jaringan 
+Intra 
+adalah 
+jaringan 
+tertutup 
+yang 
+menghubungkan antar simpul jaringan dalam suatu 
+organisasi. 
+18. Sistem 
+Penghubung 
+Layanan 
+adalah 
+perangkat 
+integrasi/penghubung untuk melakukan pertukaran 
+Layanan SPBE. 
+19. Pusat Data adalah fasilitas yang digunakan untuk 
+penempatan sistem elektronik dan komponen terkait 
+lainnya untuk keperluan penempatan, penyimpanan 
+dan pengolahan data, dan pemulihan data. 
+20. Sistem Elektronik adalah serangkaian perangkat dan 
+prosedur elektronik yang berfungsi mempersiapkan,
+----------------------------------------
+
+--- CHUNK 13 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB I", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I > Pasal 1"}
+CONTENT:
+prosedur elektronik yang berfungsi mempersiapkan, 
+mengumpulkan, mengolah, menganalisis, menyimpan, 
+menampilkan, 
+mengumumkan, 
+mengirimkan, 
+dan/atau menyebarkan informasi elektronik. 
+21. Infrastruktur Informasi Vital yang selanjutnya disingkat 
+IIV adalah Sistem Elektronik yang memanfaatkan 
+teknologi informasi dan/atau teknologi operasional, 
+baik berdiri sendiri maupun saling bergantung dengan 
+Sistem Elektronik lainnya dalam menunjang sektor 
+strategis, yang jika terjadi gangguan, kerusakan, 
+dan/atau kehancuran pada infrastruktur dimaksud 
+berdampak 
+serius 
+terhadap 
+kepentingan
+----------------------------------------
+
+--- CHUNK 14 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB I", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I > Pasal 1"}
+CONTENT:
+dan/atau kehancuran pada infrastruktur dimaksud 
+berdampak 
+serius 
+terhadap 
+kepentingan 
+umum, 
+pelayanan publik, pertahanan dan keamanan, atau 
+perekonomian nasional.
+----------------------------------------
+
+--- CHUNK 15 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "", "bagian": "", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II"}
+CONTENT:
+STANDAR AUDIT KEAMANAN SPBE
+Umum
+Objek Audit Keamanan SPBE
+Pelaksana Audit Keamanan SPBE
+Kriteria Audit Keamanan SPBE
+Bukti Audit Keamanan SPBE
+Kesimpulan Audit Keamanan SPBE
+----------------------------------------
+
+--- CHUNK 16 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 2", "bagian": "Kesatu - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Kesatu -  > Pasal 2"}
+CONTENT:
+Standar Audit Keamanan SPBE terdiri atas: 
+a. 
+objek Audit Keamanan SPBE; 
+b. 
+pelaksana Audit Keamanan SPBE; 
+c. 
+kriteria Audit Keamanan SPBE; 
+d. 
+bukti Audit Keamanan SPBE; dan 
+e. 
+kesimpulan Audit Keamanan SPBE. 
+ 
+ 
+ 
+
+
+ - 4 -
+----------------------------------------
+
+--- CHUNK 17 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 3", "bagian": "Kedua - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Kedua -  > Pasal 3 > Ayat (1)-(2)"}
+CONTENT:
+(1) Objek Audit Keamanan SPBE sebagaimana dimaksud 
+dalam Pasal 2 huruf a terdiri atas: 
+a. 
+Infrastruktur SPBE Nasional;  
+b. 
+Infrastruktur SPBE Instansi Pusat dan Pemerintah 
+Daerah; 
+c. 
+Aplikasi Umum; dan 
+d. 
+Aplikasi Khusus.
+(2) Infrastruktur SPBE Nasional sebagaimana dimaksud 
+pada ayat (1) huruf a terdiri atas: 
+a. 
+Pusat Data nasional; 
+b. 
+Jaringan Intra pemerintah; dan 
+c. 
+Sistem Penghubung Layanan pemerintah.
+----------------------------------------
+
+--- CHUNK 18 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 3", "bagian": "Kedua - ", "ayat": "Ayat (3)-(4)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Kedua -  > Pasal 3 > Ayat (3)-(4)"}
+CONTENT:
+(3) Infrastruktur SPBE Instansi Pusat dan Pemerintah 
+Daerah sebagaimana dimaksud pada ayat (1) huruf b 
+terdiri atas: 
+a. 
+Jaringan Intra Instansi Pusat dan Pemerintah 
+Daerah; dan 
+b. 
+Sistem Penghubung Layanan Instansi Pusat dan 
+Pemerintah Daerah.
+(4) Objek Audit Keamanan SPBE sebagaimana dimaksud 
+pada ayat (1) termasuk keamanan data dan informasi 
+yang dikelola di dalamnya.
+----------------------------------------
+
+--- CHUNK 19 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 4", "bagian": "Ketiga - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Ketiga -  > Pasal 4 > Ayat (1)-(2)"}
+CONTENT:
+(1) Pelaksana 
+Audit 
+Keamanan 
+SPBE 
+sebagaimana 
+dimaksud dalam Pasal 2 huruf b yaitu LATIK cakupan 
+Keamanan SPBE.
+(2) LATIK 
+cakupan 
+Keamanan 
+SPBE 
+sebagaimana 
+dimaksud pada ayat (1) terdiri atas: 
+a. 
+LATIK pemerintah; atau 
+b. 
+LATIK Terakreditasi yang terdaftar.
+----------------------------------------
+
+--- CHUNK 20 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 5", "bagian": "Ketiga - ", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Ketiga -  > Pasal 5 > Ayat (1)-(3)"}
+CONTENT:
+(1) LATIK pemerintah sebagaimana dimaksud dalam Pasal 
+4 ayat (2) huruf a melaksanakan audit keamanan 
+terhadap Infrastruktur SPBE Nasional dan Aplikasi 
+Umum.
+(2) LATIK pemerintah sebagaimana dimaksud pada ayat (1) 
+dilaksanakan oleh Badan.
+(3) Audit keamanan sebagaimana dimaksud pada ayat (1) 
+dilaksanakan paling sedikit 1 (satu) kali dalam 1 (satu) 
+tahun.
+----------------------------------------
+
+--- CHUNK 21 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 6", "bagian": "Ketiga - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Ketiga -  > Pasal 6 > Ayat (1)-(2)"}
+CONTENT:
+(1) LATIK 
+Terakreditasi 
+yang 
+terdaftar 
+sebagaimana 
+dimaksud dalam Pasal 4 ayat (2) huruf b harus: 
+
+
+ - 5 -  
+ 
+a. 
+terakreditasi oleh lembaga nonstruktural yang 
+bertugas dan bertanggung jawab di bidang 
+akreditasi lembaga penilaian kesesuaian; dan  
+b. 
+terdaftar pada Badan.
+(2) LATIK 
+Terakreditasi 
+yang 
+terdaftar 
+sebagaimana 
+dimaksud pada 
+ ayat (1) melaksanakan 
+Audit 
+Keamanan SPBE terhadap Infrastruktur SPBE Instansi 
+Pusat dan Pemerintah Daerah serta Aplikasi Khusus.
+----------------------------------------
+
+--- CHUNK 22 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 6", "bagian": "Ketiga - ", "ayat": "Ayat (3)-(5)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Ketiga -  > Pasal 6 > Ayat (3)-(5)"}
+CONTENT:
+(3) LATIK 
+Terakreditasi 
+yang 
+terdaftar 
+dalam 
+melaksanakan Audit Keamanan SPBE sebagaimana 
+dimaksud pada ayat (2) membentuk tim auditor 
+Keamanan SPBE.
+(4) Dalam 
+hal 
+LATIK 
+Terakreditasi 
+yang 
+terdaftar 
+sebagaimana dimaksud pada ayat (1) belum ada, 
+pelaksanaan Audit Keamanan SPBE sebagaimana 
+dimaksud pada ayat (2) dilaksanakan oleh LATIK 
+pemerintah.
+(5) Audit Keamanan SPBE sebagaimana dimaksud pada 
+ayat (2) dilaksanakan paling sedikit 1 (satu) kali dalam 
+2 (dua) tahun.
+----------------------------------------
+
+--- CHUNK 23 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 7", "bagian": "Ketiga - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Ketiga -  > Pasal 7 > Ayat (1)-(2)"}
+CONTENT:
+(1) Auditor Keamanan SPBE sebagaimana dimaksud 
+dalam Pasal 6 ayat (3) harus memiliki kompetensi Audit 
+Keamanan SPBE yang terdiri atas: 
+a. 
+latar belakang pendidikan; 
+b. 
+keahlian dan pengalaman; 
+c. 
+pengetahuan tentang standar Audit Keamanan 
+SPBE; 
+d. 
+pengetahuan 
+umum 
+tentang 
+objek 
+Audit 
+Keamanan SPBE; dan 
+e. 
+keterampilan yang memerlukan pengetahuan 
+khusus dalam bidang tertentu sesuai dengan 
+Audit Keamanan SPBE yang dilaksanakan.
+(2) Bentuk kompetensi sebagaimana dimaksud pada ayat
+----------------------------------------
+
+--- CHUNK 24 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 7", "bagian": "Ketiga - ", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Ketiga -  > Pasal 7 > Ayat (1)-(3)"}
+CONTENT:
+(1) dibuktikan dengan sertifikat kompetensi yang 
+diterbitkan oleh lembaga yang berwenang dan masih 
+berlaku.
+(3) Dalam 
+hal 
+penyelenggara 
+sertifikasi 
+kompetensi 
+sebagaimana dimaksud pada ayat (2) belum tersedia, 
+kompetensi dibuktikan dengan dokumen lainnya yang 
+berlaku dan menyatakan keahlian.
+----------------------------------------
+
+--- CHUNK 25 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 8", "bagian": "Ketiga - ", "ayat": "Ayat (1)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Ketiga -  > Pasal 8 > Ayat (1)"}
+CONTENT:
+(1) Pelaksanaan Audit Keamanan SPBE yang dilaksanakan 
+oleh LATIK Terakreditasi sebagaimana dimaksud dalam
+----------------------------------------
+
+--- CHUNK 26 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 6", "bagian": "Ketiga - ", "ayat": "Ayat (2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Ketiga -  > Pasal 6 > Ayat (2)"}
+CONTENT:
+dikecualikan untuk Instansi Pusat tertentu.
+(2) Pelaksanaan Audit Keamanan SPBE untuk Instansi 
+Pusat tertentu sebagaimana dimaksud pada ayat (1) 
+dilaksanakan oleh Badan.
+----------------------------------------
+
+--- CHUNK 27 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 6", "bagian": "Ketiga - ", "ayat": "Ayat (3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Ketiga -  > Pasal 6 > Ayat (3)"}
+CONTENT:
+dikecualikan untuk Instansi Pusat tertentu.
+(3) Instansi Pusat tertentu sebagaimana dimaksud pada 
+ayat (2) terdiri atas: 
+a. 
+kementerian 
+yang 
+menyelenggarakan 
+urusan 
+pemerintahan di bidang kesekretariatan negara;
+----------------------------------------
+
+--- CHUNK 28 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 6", "bagian": "Ketiga - ", "ayat": "Ayat (3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Ketiga -  > Pasal 6 > Ayat (3)"}
+CONTENT:
+- 6 -  
+ 
+b. 
+lembaga 
+pemerintah 
+yang 
+menyelenggarakan 
+tugas memberikan dukungan manajemen kabinet 
+kepada Presiden dan Wakil Presiden; 
+c. 
+kementerian 
+yang 
+menyelenggarakan 
+urusan 
+pemerintahan di bidang luar negeri; 
+d. 
+kementerian 
+yang 
+menyelenggarakan 
+urusan 
+pemerintahan di bidang pertahanan; 
+e. 
+Tentara Nasional Indonesia; 
+f. 
+Kepolisian Negara Republik Indonesia;  
+g. 
+Badan Intelijen Negara; dan 
+h. 
+Instansi Pusat lain yang ditetapkan dengan 
+Keputusan Kepala Badan.
+----------------------------------------
+
+--- CHUNK 29 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 6", "bagian": "Ketiga - ", "ayat": "Ayat (4)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Ketiga -  > Pasal 6 > Ayat (4)"}
+CONTENT:
+dikecualikan untuk Instansi Pusat tertentu.
+(4) Penetapan Instansi Pusat lain sebagaimana dimaksud 
+pada ayat (3) huruf h dilakukan berdasarkan usulan 
+Instansi Pusat yang merupakan penyelenggara IIV.
+----------------------------------------
+
+--- CHUNK 30 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 9", "bagian": "Ketiga - ", "ayat": "Ayat (1)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Ketiga -  > Pasal 9 > Ayat (1)"}
+CONTENT:
+(1) Audit Keamanan SPBE sebagaimana dimaksud dalam
+----------------------------------------
+
+--- CHUNK 31 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 8", "bagian": "Ketiga - ", "ayat": "Ayat (2)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Ketiga -  > Pasal 8 > Ayat (2)-(3)"}
+CONTENT:
+ayat (2) dilakukan pada Aplikasi Khusus dan
+Infrastruktur 
+SPBE 
+Instansi 
+Pusat 
+tertentu 
+sebagaimana dimaksud dalam Pasal 8 ayat (3) yang 
+ditetapkan sebagai IIV sesuai dengan ketentuan 
+peraturan perundang-undangan.
+(2) Dalam hal Aplikasi Khusus dan Infrastruktur SPBE 
+Instansi Pusat tertentu tidak termasuk dalam IIV, Audit 
+Keamanan 
+SPBE 
+dilaksanakan 
+oleh 
+LATIK 
+Terakreditasi yang terdaftar.
+(3) Audit Keamanan SPBE terhadap Aplikasi Khusus dan 
+Infrastruktur 
+SPBE 
+Instansi 
+Pusat 
+tertentu 
+sebagaimana dimaksud pada ayat (1) dilaksanakan
+----------------------------------------
+
+--- CHUNK 32 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 8", "bagian": "Ketiga - ", "ayat": "Ayat (2)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Ketiga -  > Pasal 8 > Ayat (2)-(3)"}
+CONTENT:
+Infrastruktur 
+SPBE 
+Instansi 
+Pusat 
+tertentu 
+sebagaimana dimaksud pada ayat (1) dilaksanakan 
+paling sedikit 1 (satu) kali dalam 2 (dua) tahun.
+----------------------------------------
+
+--- CHUNK 33 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 10", "bagian": "Keempat - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keempat -  > Pasal 10 > Ayat (1)-(2)"}
+CONTENT:
+(1) Kriteria Audit Keamanan SPBE sebagaimana dimaksud 
+dalam Pasal 2 huruf c meliputi hal pokok teknis pada: 
+a. 
+tata kelola Keamanan SPBE; 
+b. 
+manajemen Keamanan SPBE;  
+c. 
+fungsionalitas dan kinerja Keamanan SPBE; dan 
+d. 
+aspek keamanan lainnya.
+(2) Hal pokok teknis sebagaimana dimaksud pada ayat (1) 
+disusun dengan mempertimbangkan:  
+a. 
+kebijakan makro terkait Keamanan SPBE dan 
+pelindungan data pribadi; dan 
+b. 
+kebijakan meso terkait Keamanan SPBE dan 
+pelindungan data pribadi.
+----------------------------------------
+
+--- CHUNK 34 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 10", "bagian": "Keempat - ", "ayat": "Ayat (3)-(4)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keempat -  > Pasal 10 > Ayat (3)-(4)"}
+CONTENT:
+(3) Kebijakan makro dan kebijakan meso sebagaimana 
+dimaksud pada ayat (2) merupakan kebijakan yang 
+ditetapkan dalam peraturan perundang-undangan.
+(4) Kriteria Audit Keamanan SPBE sebagaimana dimaksud 
+pada ayat (1) ditetapkan dengan Keputusan Kepala 
+Badan. 
+ 
+
+
+ - 7 -
+----------------------------------------
+
+--- CHUNK 35 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 11", "bagian": "Keempat - ", "ayat": "Ayat (1)-(1)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keempat -  > Pasal 11 > Ayat (1)-(1)"}
+CONTENT:
+(1) Tata Kelola Keamanan SPBE sebagaimana dimaksud 
+dalam Pasal 10 ayat (1) huruf a meliputi pemeriksaan 
+atas aktivitas: 
+a. 
+evaluasi Keamanan SPBE; 
+b. 
+pengarahan Keamanan SPBE; dan 
+c. 
+pengendalian Keamanan SPBE.
+(2) Evaluasi Keamanan SPBE sebagaimana dimaksud pada 
+ayat
+(1) huruf 
+a 
+dilakukan 
+untuk 
+memeriksa 
+mekanisme penilaian kinerja Keamanan SPBE yang 
+dilakukan oleh organisasi sesuai dengan standar dan 
+tujuan yang ditetapkan.
+----------------------------------------
+
+--- CHUNK 36 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 11", "bagian": "Keempat - ", "ayat": "Ayat (3)-(4)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keempat -  > Pasal 11 > Ayat (3)-(4)"}
+CONTENT:
+(3) Pengarahan Keamanan SPBE sebagaimana dimaksud 
+pada ayat (1) huruf b dilakukan untuk memeriksa 
+komitmen pimpinan dalam pengambilan keputusan 
+dan pemberian arahan strategis Keamanan SPBE.
+(4) Pengendalian Keamanan SPBE sebagaimana dimaksud 
+pada ayat (1) huruf c dilakukan untuk memeriksa 
+mekanisme pengawasan manajemen Keamanan SPBE 
+yang 
+dilakukan 
+oleh 
+organisasi 
+sesuai 
+dengan 
+kebijakan dan prosedur yang ditetapkan.
+----------------------------------------
+
+--- CHUNK 37 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 12", "bagian": "Keempat - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keempat -  > Pasal 12 > Ayat (1)-(2)"}
+CONTENT:
+(1) Manajemen Keamanan SPBE sebagaimana dimaksud 
+dalam Pasal 10 ayat (1) huruf b meliputi pemeriksaan 
+terhadap tahapan: 
+a. 
+perencanaan Keamanan SPBE; 
+b. 
+pengembangan Keamanan SPBE; 
+c. 
+pengoperasian Keamanan SPBE; dan 
+d. 
+pemantauan Keamanan SPBE.
+(2) Perencanaan Keamanan SPBE sebagaimana dimaksud 
+pada ayat (1) huruf a dilakukan untuk memeriksa 
+penetapan kebijakan dan prosedur Keamanan SPBE 
+sesuai dengan manajemen risiko Keamanan SPBE dan 
+kriteria Audit Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 38 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 12", "bagian": "Keempat - ", "ayat": "Ayat (3)-(5)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keempat -  > Pasal 12 > Ayat (3)-(5)"}
+CONTENT:
+(3) Pengembangan 
+Keamanan 
+SPBE 
+sebagaimana 
+dimaksud pada ayat (1) huruf b dilakukan untuk 
+memeriksa pengembangan desain kendali keamanan 
+yang sesuai dengan manajemen risiko Keamanan SPBE 
+dan kriteria Audit Keamanan SPBE.
+(4) Pengoperasian 
+Keamanan 
+SPBE 
+sebagaimana 
+dimaksud pada ayat (1) huruf c dilakukan untuk 
+memeriksa 
+implementasi 
+prosedur 
+dan 
+kendali 
+Keamanan SPBE.
+(5) Pemantauan Keamanan SPBE sebagaimana dimaksud 
+pada ayat (1) huruf d dilakukan untuk memeriksa 
+pelaksanaan kegiatan Keamanan SPBE sesuai dengan 
+rencana yang ditetapkan.
+----------------------------------------
+
+--- CHUNK 39 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 13", "bagian": "Keempat - ", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keempat -  > Pasal 13 > Ayat (1)-(3)"}
+CONTENT:
+(1) Pemeriksaan sebagaimana dimaksud dalam Pasal 12 
+ayat (1) dilakukan untuk memastikan penerapan 
+pengendalian Keamanan SPBE yang terdiri atas: 
+a. 
+organisasi keamanan; 
+b. 
+keamanan personel; 
+
+
+ - 8 -  
+ 
+c. 
+keamanan fisik; dan 
+d. 
+keamanan teknologi.
+(2) Organisasi keamanan sebagaimana dimaksud pada 
+ayat (1) huruf a merupakan struktur organisasi yang 
+mendukung kebijakan dan prosedur Keamanan SPBE 
+termasuk penetapan tanggung jawab dan wewenang 
+manajemen Keamanan SPBE.
+(3) Keamanan personel sebagaimana dimaksud pada ayat
+----------------------------------------
+
+--- CHUNK 40 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 13", "bagian": "Keempat - ", "ayat": "Ayat (1)-(5)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keempat -  > Pasal 13 > Ayat (1)-(5)"}
+CONTENT:
+(1) huruf b merupakan pengelolaan personel organisasi 
+dan pihak ketiga, termasuk peningkatan kompetensi, 
+kesadaran Keamanan SPBE, dan proses perekrutan 
+untuk memastikan kepatuhan terhadap kebijakan dan 
+prosedur Keamanan SPBE.
+(4) Keamanan fisik sebagaimana dimaksud pada ayat (1) 
+huruf c merupakan perlindungan infrastruktur fisik 
+dan aset organisasi dari risiko Keamanan SPBE yang 
+meliputi akses tidak sah, pencurian, dan kerusakan.
+(5) Keamanan teknologi sebagaimana dimaksud pada ayat
+----------------------------------------
+
+--- CHUNK 41 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 13", "bagian": "Keempat - ", "ayat": "Ayat (1)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keempat -  > Pasal 13 > Ayat (1)"}
+CONTENT:
+(1) huruf d merupakan penerapan teknologi keamanan 
+yang melindungi kerahasiaan, keutuhan, ketersedian, 
+keaslian, dan kenirsangkalan data dan informasi.
+----------------------------------------
+
+--- CHUNK 42 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 14", "bagian": "Keempat - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keempat -  > Pasal 14 > Ayat (1)-(2)"}
+CONTENT:
+(1) Fungsionalitas 
+dan 
+kinerja 
+Keamanan 
+SPBE 
+sebagaimana dimaksud dalam Pasal 10 ayat (1) huruf c 
+meliputi pemeriksaan terhadap fungsionalitas: 
+a. 
+kelengkapan fungsi dan kinerja Keamanan SPBE; 
+b. 
+kebenaran fungsi dan kinerja Keamanan SPBE; 
+dan 
+c. 
+kelayakan fungsi dan kinerja Keamanan SPBE.
+(2) Kelengkapan fungsi dan kinerja Keamanan SPBE 
+sebagaimana dimaksud pada ayat (1) huruf a untuk 
+memeriksa pemenuhan atas rangkaian fungsi dan 
+kinerja terhadap semua tugas dan tujuan yang 
+ditentukan.
+----------------------------------------
+
+--- CHUNK 43 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 14", "bagian": "Keempat - ", "ayat": "Ayat (3)-(4)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keempat -  > Pasal 14 > Ayat (3)-(4)"}
+CONTENT:
+(3) Kebenaran fungsi dan kinerja Keamanan SPBE 
+sebagaimana dimaksud pada ayat (1) huruf b untuk 
+memeriksa kesesuaian keluaran hasil sistem dengan 
+tingkat presisi yang diperlukan.
+(4) Kelayakan 
+fungsi 
+dan 
+kinerja 
+Keamanan 
+SPBE 
+sebagaimana dimaksud pada ayat (1) huruf c untuk 
+memeriksa kepatutan fungsi dan kinerja sistem dalam 
+pencapaian tugas dan tujuan tertentu.
+----------------------------------------
+
+--- CHUNK 44 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 15", "bagian": "Keempat - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keempat -  > Pasal 15"}
+CONTENT:
+Aspek Keamanan SPBE lainnya sebagaimana dimaksud 
+dalam Pasal 10 ayat (1) huruf d meliputi: 
+a. 
+penilaian pemenuhan ketentuan peraturan perundang-
+undangan; 
+b. 
+penilaian kesesuaian dalam rangka sertifikasi atau 
+terdapat perubahan yang telah disertifikasi; dan/atau 
+c. 
+tindak lanjut atas adanya informasi dan/atau laporan 
+publik atas gangguan terhadap Keamanan SPBE, yang 
+tidak dalam rangka penindakan tindak pidana. 
+ 
+
+
+ - 9 -
+----------------------------------------
+
+--- CHUNK 45 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 16", "bagian": "Keempat - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keempat -  > Pasal 16 > Ayat (1)-(2)"}
+CONTENT:
+(1) Selain kriteria Audit Keamanan SPBE sebagaimana 
+dimaksud dalam Pasal 10 ayat (1), pelaksanaan Audit 
+Keamanan SPBE harus memperhatikan kebijakan 
+mikro terkait Keamanan SPBE.
+(2) Kebijakan mikro sebagaimana dimaksud pada ayat (1) 
+merupakan kebijakan internal Instansi Pusat dan 
+Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 46 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 17", "bagian": "Kelima - ", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Kelima -  > Pasal 17 > Ayat (1)-(3)"}
+CONTENT:
+(1) Bukti Audit Keamanan SPBE sebagaimana dimaksud 
+dalam Pasal 2 huruf d harus memenuhi aspek: 
+a. 
+kecukupan; dan  
+b. 
+ketepatan.
+(2) Kecukupan sebagaimana dimaksud pada ayat (1) huruf 
+a merupakan ukuran kuantitas bukti Audit Keamanan 
+SPBE 
+yang 
+dipengaruhi 
+oleh 
+penilaian 
+auditor 
+Keamanan SPBE atas risiko Audit Keamanan SPBE dan 
+kualitas bukti Audit Keamanan SPBE.
+(3) Ketepatan sebagaimana dimaksud pada ayat (1) huruf 
+b merupakan ukuran kualitas bukti Audit Keamanan 
+SPBE yaitu relevan, valid, dan andal untuk mendukung 
+hasil Audit Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 47 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 18", "bagian": "Kelima - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Kelima -  > Pasal 18 > Ayat (1)-(2)"}
+CONTENT:
+(1) Bukti Audit Keamanan SPBE sebagaimana dimaksud 
+dalam Pasal 17 dapat diperoleh melalui: 
+a. 
+inspeksi; 
+b. 
+observasi; 
+c. 
+permintaan keterangan; 
+d. 
+konfirmasi; dan/atau 
+e. 
+prosedur analitis.
+(2) Bukti Audit Keamanan SPBE sebagaimana dimaksud 
+pada ayat (1) dapat berbentuk dokumen elektronik 
+dan/atau fisik.
+----------------------------------------
+
+--- CHUNK 48 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 19", "bagian": "Keenam - ", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keenam -  > Pasal 19 > Ayat (1)-(3)"}
+CONTENT:
+(1) Kesimpulan Audit Keamanan SPBE sebagaimana 
+dimaksud dalam Pasal 2 huruf e dinyatakan secara 
+jelas.
+(2) Kesimpulan Audit Keamanan SPBE sebagaimana 
+dimaksud pada ayat (1) diberikan pada setiap prosedur 
+pelaksanaan 
+Audit 
+Keamanan 
+SPBE 
+mencakup 
+prosedur evaluasi: 
+a. 
+desain kontrol Keamanan SPBE; 
+b. 
+implementasi kontrol Keamanan SPBE; dan 
+c. 
+efektivitas kontrol Keamanan SPBE. 
+
+
+ - 10 -
+(3) Kesimpulan Audit Keamanan SPBE sebagaimana 
+dimaksud pada ayat (2) menghasilkan konklusi Audit 
+Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 49 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 19", "bagian": "Keenam - ", "ayat": "Ayat (4)-(6)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keenam -  > Pasal 19 > Ayat (4)-(6)"}
+CONTENT:
+(4) Konklusi 
+Audit 
+Keamanan 
+SPBE 
+sebagaimana 
+dimaksud pada ayat (3) terdiri atas: 
+a. 
+memadai; 
+b. 
+perlu peningkatan; atau 
+c. 
+tidak memadai.
+(5) Pemberian 
+konklusi 
+Audit 
+Keamanan 
+SPBE 
+sebagaimana dimaksud pada ayat (4) mengacu pada 
+matriks konklusi Audit Keamanan SPBE
+(6) Matriks konklusi Audit Keamanan SPBE sebagaimana 
+dimaksud pada ayat (5) tercantum dalam Lampiran I 
+yang merupakan bagian tidak terpisahkan dari 
+Peraturan Badan ini.
+----------------------------------------
+
+--- CHUNK 50 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 20", "bagian": "Keenam - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keenam -  > Pasal 20 > Ayat (1)-(2)"}
+CONTENT:
+(1) Evaluasi desain kontrol Keamanan SPBE sebagaimana 
+dimaksud dalam Pasal 19 ayat  (2) huruf a merupakan 
+prosedur yang dilakukan auditor Keamanan SPBE 
+untuk memperoleh keyakinan yang memadai bahwa 
+desain kontrol Keamanan SPBE telah sesuai dengan 
+kriteria Audit Keamanan SPBE yang digunakan.
+(2) Evaluasi desain kontrol Keamanan SPBE sebagaimana 
+dimaksud pada ayat (1) menghasilkan kesimpulan yang 
+terdiri atas: 
+a. 
+memadai; 
+b. 
+perlu peningkatan; atau 
+c. 
+tidak memadai.
+----------------------------------------
+
+--- CHUNK 51 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 21", "bagian": "Keenam - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keenam -  > Pasal 21 > Ayat (1)-(2)"}
+CONTENT:
+(1) Evaluasi 
+implementasi 
+kontrol 
+Keamanan 
+SPBE 
+sebagaimana dimaksud dalam Pasal 19 ayat (2) huruf b 
+merupakan 
+prosedur 
+yang 
+dilakukan 
+Auditor 
+Keamanan SPBE untuk memperoleh keyakinan yang 
+memadai bahwa implementasi kontrol telah sesuai 
+dengan desain kontrol Keamanan SPBE.
+(2) Evaluasi 
+implementasi 
+kontrol 
+Keamanan 
+SPBE 
+sebagaimana dimaksud pada ayat (1) menghasilkan 
+kesimpulan yang terdiri atas: 
+a. 
+sesuai dengan desain kontrol; atau 
+b. 
+tidak sesuai dengan desain kontrol.
+----------------------------------------
+
+--- CHUNK 52 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 22", "bagian": "Keenam - ", "ayat": "Ayat (1)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keenam -  > Pasal 22 > Ayat (1)"}
+CONTENT:
+(1) Evaluasi 
+efektivitas 
+kontrol 
+Keamanan 
+SPBE 
+sebagaimana dimaksud dalam Pasal 19 ayat (2) huruf c 
+merupakan 
+prosedur 
+yang 
+dilakukan 
+auditor 
+Keamanan SPBE untuk: 
+a. 
+memperoleh keyakinan yang memadai bahwa 
+kontrol Keamanan SPBE yang berjalan telah 
+mencapai tujuannya dengan efektif; atau  
+b. 
+mengidentifikasi risiko yang terjadi karena adanya 
+kelemahan desain dan/atau implementasi kontrol 
+Keamanan SPBE. 
+
+
+ - 11 -
+----------------------------------------
+
+--- CHUNK 53 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB II", "pasal": "Pasal 22", "bagian": "Keenam - ", "ayat": "Ayat (2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keenam -  > Pasal 22 > Ayat (2)"}
+CONTENT:
+(2) Evaluasi 
+efektivitas 
+kontrol 
+Keamanan 
+SPBE 
+sebagaimana dimaksud pada ayat (1) menghasilkan 
+kesimpulan yang terdiri atas: 
+a. 
+efektif; 
+b. 
+perlu peningkatan; atau 
+c. 
+belum efektif.
+----------------------------------------
+
+--- CHUNK 54 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "", "bagian": "", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III"}
+CONTENT:
+TATA CARA AUDIT KEAMANAN SPBE
+Umum
+Pelaksanaan Audit Keamanan SPBE 
+ 
+Paragraf 1 
+Umum
+Pelaporan Audit Keamanan SPBE
+Tindak Lanjut Audit Keamanan SPBE
+Pendaftaran Pelaksana Audit Keamanan SPBE 
+ 
+Paragraf 1 
+Umum
+Pengalokasian Sumber Daya
+----------------------------------------
+
+--- CHUNK 55 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 23", "bagian": "Kesatu - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kesatu -  > Pasal 23"}
+CONTENT:
+Audit Keamanan SPBE dilaksanakan melalui: 
+a. 
+pelaksanaan Audit Keamanan SPBE;  
+b. 
+pelaporan Audit Keamanan SPBE; 
+c. 
+tindak lanjut Audit Keamanan SPBE; 
+d. 
+pendaftaran pelaksana Audit Keamanan SPBE; dan 
+e. 
+pengalokasian sumber daya.
+----------------------------------------
+
+--- CHUNK 56 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 24", "bagian": "Kedua - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 24"}
+CONTENT:
+Pelaksanaan Audit Keamanan SPBE sebagaimana dimaksud 
+dalam Pasal 23 huruf a terdiri atas:  
+a. 
+Audit Keamanan SPBE internal; 
+b. 
+Audit  Keamanan SPBE oleh LATIK Terakreditasi yang 
+terdaftar; dan 
+c. 
+Audit Keamanan SPBE oleh LATIK pemerintah. 
+ 
+Paragraf 2 
+Audit Keamanan SPBE Internal
+----------------------------------------
+
+--- CHUNK 57 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 25", "bagian": "Kedua - ", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 25 > Ayat (1)-(3)"}
+CONTENT:
+(1) Audit Keamanan SPBE internal sebagaimana dimaksud 
+dalam Pasal 24 huruf a dilaksanakan untuk kebutuhan 
+internal Instansi Pusat atau Pemerintah Daerah.
+(2) Audit Keamanan SPBE internal sebagaimana dimaksud 
+pada ayat (1) dilaksanakan dengan tahapan: 
+a. 
+perencanaan; 
+b. 
+pelaksanaan; 
+c. 
+pelaporan; dan 
+d. 
+pemantauan tindak lanjut.
+(3) Audit Keamanan SPBE internal sebagaimana dimaksud 
+pada ayat (1) dilaksanakan secara periodik oleh auditor 
+pada unit kerja Instansi Pusat atau Pemerintah Daerah 
+yang melaksanakan tugas dan fungsi di bidang 
+pengawasan intern.
+----------------------------------------
+
+--- CHUNK 58 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 25", "bagian": "Kedua - ", "ayat": "Ayat (4)-(5)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 25 > Ayat (4)-(5)"}
+CONTENT:
+(4) Unit kerja Instansi Pusat atau Pemerintah Daerah yang 
+melaksanakan tugas dan fungsi di bidang pengawasan 
+
+
+ - 12 -  
+ 
+intern sebagaimana dimaksud pada ayat (2) dapat 
+melibatkan pegawai aparatur sipil negara dari unit 
+kerja lain yang memiliki kompetensi: 
+a. 
+Audit TIK; dan/atau 
+b. 
+audit keamanan informasi.
+(5) Kompetensi Audit sebagaimana dimaksud pada ayat (3) 
+dibuktikan dengan sertifikat pelatihan Audit TIK 
+dan/atau audit keamanan informasi.
+----------------------------------------
+
+--- CHUNK 59 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 25", "bagian": "Kedua - ", "ayat": "Ayat (6)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 25 > Ayat (6)"}
+CONTENT:
+(6) Pelatihan audit sebagaimana dimaksud pada ayat (4) 
+diselenggarakan oleh Badan atau lembaga pelatihan 
+lain yang mendapat pengakuan dari Badan.
+----------------------------------------
+
+--- CHUNK 60 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 26", "bagian": "Kedua - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 26 > Ayat (1)-(2)"}
+CONTENT:
+(1) Audit Keamanan SPBE internal sebagaimana dimaksud 
+dalam Pasal 25 mengacu pada kebijakan Instansi Pusat 
+atau Pemerintah Daerah dengan objek dan kriteria 
+Audit Keamanan SPBE yang sesuai dengan yang diatur 
+dalam Peraturan Badan ini.
+(2) Audit Keamanan SPBE internal sebagaimana dimaksud 
+pada ayat (1)  dilaksanakan sebelum pelaksanaan Audit 
+Keamanan SPBE oleh LATIK pemerintah atau LATIK 
+Terakreditasi yang terdaftar.
+----------------------------------------
+
+--- CHUNK 61 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 26", "bagian": "Kedua - ", "ayat": "Ayat (3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 26 > Ayat (3)"}
+CONTENT:
+(3) Audit Keamanan SPBE internal sebagaimana dimaksud 
+pada ayat (2) tidak menghilangkan kewajiban Audit 
+Keamanan SPBE oleh LATIK pemerintah atau LATIK 
+Terakreditasi yang terdaftar.
+----------------------------------------
+
+--- CHUNK 62 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 27", "bagian": "Kedua - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 27"}
+CONTENT:
+Audit Keamanan SPBE internal sebagaimana dimaksud 
+dalam Pasal 26 dilaksanakan dengan prosedur: 
+a. 
+pemahaman kontrol Keamanan SPBE; 
+b. 
+evaluasi desain kontrol Keamanan SPBE;  
+c. 
+evaluasi implementasi kontrol Keamanan SPBE; dan 
+d. 
+evaluasi efektivitas kontrol Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 63 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 28", "bagian": "Kedua - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 28"}
+CONTENT:
+Pemahaman 
+kontrol 
+Keamanan 
+SPBE 
+sebagaimana 
+dimaksud dalam Pasal 27 huruf a dilakukan melalui 
+identifikasi informasi terdokumentasi untuk memperoleh 
+pemahaman yang memadai tentang kontrol Keamanan 
+SPBE terhadap lingkup Audit Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 64 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 29", "bagian": "Kedua - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 29 > Ayat (1)-(2)"}
+CONTENT:
+(1) Evaluasi desain kontrol Keamanan SPBE sebagaimana 
+dimaksud dalam Pasal 27 huruf b menghasilkan 
+kesimpulan.
+(2) Dalam hal kesimpulan sebagaimana dimaksud pada 
+ayat (1) hasilnya memadai atau perlu peningkatan, tim 
+auditor pada unit kerja Instansi Pusat atau Pemerintah 
+Daerah yang melaksanakan tugas dan fungsi di bidang 
+pengawasan intern melakukan: 
+a. 
+prosedur evaluasi implementasi kontrol Keamanan 
+SPBE dengan cakupan uji petik yang cukup; dan 
+b. 
+evaluasi efektivitas kontrol Keamanan SPBE. 
+
+
+ - 13 -
+----------------------------------------
+
+--- CHUNK 65 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 29", "bagian": "Kedua - ", "ayat": "Ayat (3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 29 > Ayat (3)"}
+CONTENT:
+(3) Dalam hal kesimpulan sebagaimana dimaksud pada 
+ayat (1) hasilnya tidak memadai, tim auditor pada unit 
+kerja Instansi Pusat atau Pemerintah Daerah yang 
+melaksanakan tugas dan fungsi di bidang pengawasan 
+intern melakukan prosedur evaluasi efektivitas kontrol 
+Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 66 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 30", "bagian": "Kedua - ", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 30 > Ayat (1)-(3)"}
+CONTENT:
+(1) Evaluasi 
+implementasi 
+kontrol 
+Keamanan 
+SPBE 
+sebagaimana dimaksud dalam Pasal 
+27 huruf c 
+menghasilkan kesimpulan.
+(2) Dalam hal kesimpulan sebagaimana dimaksud pada ayat
+(1) hasilnya sesuai dengan desain kontrol, tim auditor 
+pada unit kerja Instansi Pusat atau Pemerintah Daerah 
+yang 
+melaksanakan 
+tugas 
+dan 
+fungsi 
+di 
+bidang 
+pengawasan 
+intern 
+melakukan 
+prosedur 
+evaluasi 
+efektivitas kontrol Keamanan SPBE dengan cakupan uji 
+petik yang cukup.
+(3) Dalam hal kesimpulan sebagaimana dimaksud pada ayat
+----------------------------------------
+
+--- CHUNK 67 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 30", "bagian": "Kedua - ", "ayat": "Ayat (1)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 30 > Ayat (1)"}
+CONTENT:
+(1) hasilnya 
+tidak 
+sesuai 
+dengan 
+desain 
+kontrol 
+Keamanan SPBE, tim auditor pada unit kerja Instansi 
+Pusat atau Pemerintah Daerah yang melaksanakan tugas 
+dan fungsi di bidang pengawasan intern melakukan: 
+a. 
+penambahan cakupan uji petik dalam evaluasi 
+implementasi kontrol Keamanan SPBE; dan 
+b. 
+prosedur evaluasi efektivitas kontrol Keamanan 
+SPBE dengan cakupan uji petik yang ekstensif.
+----------------------------------------
+
+--- CHUNK 68 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 31", "bagian": "Kedua - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 31"}
+CONTENT:
+Evaluasi efektivitas kontrol Keamanan SPBE sebagaimana 
+dimaksud 
+dalam 
+Pasal 
+27 
+huruf 
+d 
+menghasilkan 
+kesimpulan.
+----------------------------------------
+
+--- CHUNK 69 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 32", "bagian": "Kedua - ", "ayat": "Ayat (1)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 32 > Ayat (1)"}
+CONTENT:
+(1) Kesimpulan sebagaimana dimaksud dalam Pasal 29 ayat 
+(1), Pasal 30 ayat (1), dan Pasal 31 dapat digunakan untuk 
+menentukan konklusi Audit Keamanan SPBE internal.
+----------------------------------------
+
+--- CHUNK 70 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 32", "bagian": "Kedua - ", "ayat": "Ayat (2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 32 > Ayat (2)"}
+CONTENT:
+(2) Konklusi Audit Keamanan SPBE internal sebagaimana 
+dimaksud pada ayat (1) mendapatkan hasil memadai jika: 
+a. 
+hasil evaluasi desain kontrol memadai, hasil evaluasi 
+implementasi kontrol sesuai dengan desain kontrol, 
+dan hasil evaluasi efektivitas kontrol efektif atau 
+perlu peningkatan; atau 
+b. 
+hasil evaluasi desain kontrol perlu peningkatan, 
+hasil evaluasi implementasi kontrol sesuai dengan 
+desain kontrol, dan hasil evaluasi efektivitas kontrol 
+efektif.
+----------------------------------------
+
+--- CHUNK 71 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 32", "bagian": "Kedua - ", "ayat": "Ayat (3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 32 > Ayat (3)"}
+CONTENT:
+(3) Konklusi Audit Keamanan SPBE internal sebagaimana 
+dimaksud pada ayat (1) mendapatkan hasil perlu 
+peningkatan jika: 
+a. 
+hasil evaluasi desain kontrol memadai, hasil evaluasi 
+implementasi kontrol sesuai dengan desain kontrol, 
+dan hasil evaluasi efektivitas kontrol belum efektif; 
+b. 
+hasil evaluasi desain kontrol memadai, hasil evaluasi 
+implementasi kontrol tidak sesuai dengan desain
+----------------------------------------
+
+--- CHUNK 72 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 32", "bagian": "Kedua - ", "ayat": "Ayat (3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 32 > Ayat (3)"}
+CONTENT:
+- 14 -  
+ 
+kontrol, dan hasil evaluasi efektivitas kontrol efektif; 
+atau 
+c. 
+hasil evaluasi desain kontrol perlu peningkatan, 
+hasil evaluasi implementasi kontrol sesuai dengan 
+desain kontrol, dan hasil evaluasi efektivitas kontrol 
+perlu peningkatan.
+----------------------------------------
+
+--- CHUNK 73 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 32", "bagian": "Kedua - ", "ayat": "Ayat (4)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 32 > Ayat (4)"}
+CONTENT:
+(4) Konklusi Audit Keamanan SPBE internal sebagaimana 
+dimaksud pada ayat (1) mendapatkan hasil tidak 
+memadai 
+jika 
+hasil 
+kesimpulan 
+tidak 
+memenuhi 
+ketentuan sebagaimana dimaksud pada ayat (2) dan ayat 
+(3).
+----------------------------------------
+
+--- CHUNK 74 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 33", "bagian": "Kedua - ", "ayat": "Ayat (1)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 33 > Ayat (1)"}
+CONTENT:
+(1) Audit Keamanan SPBE internal sebagaimana dimaksud 
+dalam Pasal 25 harus dituangkan dalam Peta Rencana 
+SPBE pada Instansi Pusat dan Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 75 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 33", "bagian": "Kedua - ", "ayat": "Ayat (2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 33 > Ayat (2)"}
+CONTENT:
+(2) Audit Keamanan SPBE internal sebagaimana dimaksud 
+pada ayat (1) disusun dengan memperhatikan: 
+a. 
+Aplikasi SPBE dan/atau Infrastruktur SPBE yang 
+dimiliki Instansi Pusat dan Pemerintah Daerah; 
+b. 
+risiko pada Aplikasi SPBE dan/atau Infrastruktur 
+SPBE; 
+c. 
+kategori Sistem Elektronik;  
+d. 
+tingkat vitalitas Sistem Elektronik; dan/atau 
+e. 
+Audit Keamanan SPBE yang sudah dilaksanakan 
+sebelumnya. 
+ 
+Paragraf 3 
+Audit Keamanan SPBE oleh LATIK Terakreditasi yang 
+Terdaftar
+----------------------------------------
+
+--- CHUNK 76 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 34", "bagian": "Kedua - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 34"}
+CONTENT:
+Audit Keamanan SPBE oleh LATIK Terakreditasi yang 
+terdaftar sebagaimana dimaksud dalam Pasal 24 huruf b 
+dilakukan dengan tahapan: 
+a. 
+penunjukan; 
+b. 
+penugasan; 
+c. 
+perencanaan; dan 
+d. 
+pelaksanaan.
+----------------------------------------
+
+--- CHUNK 77 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 35", "bagian": "Kedua - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 35 > Ayat (1)-(2)"}
+CONTENT:
+(1) Penunjukan sebagaimana dimaksud dalam Pasal 34 
+huruf a dilaksanakan sesuai dengan ketentuan 
+peraturan perundang-undangan mengenai pengadaan 
+barang dan/atau jasa pemerintah.
+(2) Dalam melakukan penunjukan sebagaimana dimaksud 
+pada ayat (1), Instansi Pusat atau Pemerintah Daerah 
+harus menyediakan dokumen mengenai: 
+a. 
+lingkup Audit Keamanan SPBE; dan 
+b. 
+ringkasan hasil Audit Keamanan SPBE internal 
+dengan objek Audit Keamanan SPBE yang sama 
+paling lama 2 (dua) tahun sebelumnya. 
+ 
+ 
+ 
+
+
+ - 15 -
+----------------------------------------
+
+--- CHUNK 78 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 36", "bagian": "Kedua - ", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 36 > Ayat (1)-(3)"}
+CONTENT:
+(1) Penugasan sebagaimana dimaksud dalam Pasal 34 
+huruf b diberikan oleh pimpinan LATIK Terakreditasi 
+yang terdaftar kepada tim auditor Keamanan SPBE.
+(2) Tim auditor Keamanan SPBE sebagaimana dimaksud 
+pada ayat (1) beranggotakan auditor Keamanan SPBE 
+yang telah teregistrasi pada Badan.
+(3) Tim auditor Keamanan SPBE sebagaimana dimaksud 
+pada ayat (2) bertindak sebagai: 
+a. 
+pengendali mutu; 
+b. 
+pengendali teknis; 
+c. 
+ketua tim; dan 
+d. 
+anggota tim.
+----------------------------------------
+
+--- CHUNK 79 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 36", "bagian": "Kedua - ", "ayat": "Ayat (4)-(6)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 36 > Ayat (4)-(6)"}
+CONTENT:
+(4) Pengendali mutu sebagaimana dimaksud pada ayat (3) 
+huruf a bertugas memastikan pelaksanaan Audit 
+Keamanan SPBE telah sesuai dengan kebijakan dan 
+prosedur Audit Keamanan SPBE yang dimiliki oleh 
+LATIK Terakreditasi yang terdaftar.
+(5) Pengendali teknis sebagaimana dimaksud pada ayat (3) 
+huruf b bertugas memastikan pelaksanaan Audit 
+Keamanan SPBE telah memadai secara teknis sesuai 
+dengan lingkup Audit Keamanan SPBE.
+(6) Ketua tim sebagaimana dimaksud pada ayat (3) huruf c 
+bertugas memimpin pelaksanaan Audit Keamanan 
+SPBE.
+----------------------------------------
+
+--- CHUNK 80 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 36", "bagian": "Kedua - ", "ayat": "Ayat (7)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 36 > Ayat (7)"}
+CONTENT:
+(7) Anggota tim sebagaimana dimaksud pada ayat (3) huruf 
+d bertugas melaksanakan prosedur Audit Keamanan 
+SPBE.
+----------------------------------------
+
+--- CHUNK 81 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 37", "bagian": "Kedua - ", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 37 > Ayat (1)-(3)"}
+CONTENT:
+(1) Penugasan sebagaimana dimaksud dalam Pasal 36 
+dilaksanakan berdasarkan surat tugas tim auditor 
+Keamanan SPBE.
+(2) Surat tugas tim auditor Keamanan SPBE sebagaimana 
+dimaksud pada ayat (1) paling sedikit memuat: 
+a. 
+nama auditor Keamanan SPBE; 
+b. 
+jabatan dalam tim auditor Keamanan SPBE; 
+c. 
+nama Instansi Pusat atau Pemerintah Daerah yang 
+diaudit; dan 
+d. 
+lingkup Audit Keamanan SPBE.
+(3) Tim auditor Keamanan SPBE sebagaimana dimaksud 
+pada ayat (1) harus memiliki kompetensi Audit 
+Keamanan SPBE yang dapat dipenuhi secara kolektif.
+----------------------------------------
+
+--- CHUNK 82 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 38", "bagian": "Kedua - ", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 38 > Ayat (1)-(3)"}
+CONTENT:
+(1) Perencanaan sebagaimana dimaksud dalam Pasal 34 
+huruf c dilakukan oleh tim auditor Keamanan SPBE.
+(2) Perencanaan sebagaimana dimaksud pada ayat (1) 
+paling sedikit memuat: 
+a. 
+lingkup Audit Keamanan SPBE; 
+b. 
+analisis risiko Keamanan SPBE; 
+c. 
+kriteria Audit Keamanan SPBE; dan 
+d. 
+rencana pengujian Audit Keamanan SPBE.
+(3) Lingkup Audit Keamanan SPBE sebagaimana dimaksud 
+pada ayat (2) huruf a merupakan hasil kesepakatan 
+
+
+ - 16 -  
+ 
+dengan klien Audit Keamanan SPBE terkait objek, 
+organisasi, 
+lokasi 
+geografis, 
+dan 
+periode 
+Audit 
+Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 83 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 38", "bagian": "Kedua - ", "ayat": "Ayat (4)-(5)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 38 > Ayat (4)-(5)"}
+CONTENT:
+(4) Analisis risiko keamanan SPBE sebagaimana dimaksud 
+pada ayat (2) huruf b merupakan proses identifikasi dan 
+evaluasi risiko Keamanan SPBE yang relevan dengan 
+lingkup Audit Keamanan SPBE.
+(5) Kriteria Audit Keamanan SPBE sebagaimana dimaksud 
+pada ayat (2) huruf c merupakan identifikasi dan 
+pemetaan kriteria kontrol Keamanan SPBE yang sesuai 
+dengan lingkup Audit Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 84 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 38", "bagian": "Kedua - ", "ayat": "Ayat (6)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 38 > Ayat (6)"}
+CONTENT:
+(6) Rencana 
+pengujian 
+Audit 
+Keamanan 
+SPBE 
+sebagaimana dimaksud pada ayat (2) huruf d berisikan 
+rencana prosedur pengujian yang harus dilakukan 
+Auditor Keamanan Informasi atas kontrol Keamanan 
+SPBE termasuk alokasi waktu, personel, dan alat bantu 
+Audit Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 85 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 39", "bagian": "Kedua - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 39"}
+CONTENT:
+Pelaksanaan sebagaimana dimaksud dalam Pasal 34 huruf 
+d terdiri atas prosedur: 
+a. 
+pemahaman kontrol Keamanan SPBE; 
+b. 
+evaluasi desain kontrol Keamanan SPBE;  
+c. 
+evaluasi implementasi kontrol Keamanan SPBE; dan 
+d. 
+evaluasi efektivitas kontrol Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 86 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 40", "bagian": "Kedua - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 40"}
+CONTENT:
+Pemahaman 
+kontrol 
+Keamanan 
+SPBE 
+sebagaimana 
+dimaksud dalam Pasal 39 huruf a dilakukan melalui 
+identifikasi informasi terdokumentasi untuk memperoleh 
+pemahaman yang memadai tentang kontrol Keamanan 
+SPBE terhadap lingkup Audit Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 87 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 41", "bagian": "Kedua - ", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 41 > Ayat (1)-(3)"}
+CONTENT:
+(1) Evaluasi desain kontrol Keamanan SPBE sebagaimana 
+dimaksud dalam Pasal 39 huruf b menghasilkan 
+kesimpulan.
+(2) Dalam hal kesimpulan sebagaimana dimaksud pada 
+ayat (1) hasilnya memadai atau perlu peningkatan, tim 
+auditor Keamanan SPBE melakukan: 
+a. 
+prosedur evaluasi implementasi kontrol Keamanan 
+SPBE dengan cakupan uji petik yang cukup; dan 
+b. 
+evaluasi efektivitas kontrol Keamanan SPBE.
+(3) Dalam hal kesimpulan sebagaimana dimaksud pada 
+ayat (1) hasilnya tidak memadai, tim auditor Keamanan 
+SPBE melakukan prosedur evaluasi efektivitas kontrol 
+Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 88 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 42", "bagian": "Kedua - ", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 42 > Ayat (1)-(3)"}
+CONTENT:
+(1) Evaluasi 
+implementasi 
+kontrol 
+Keamanan 
+SPBE 
+sebagaimana dimaksud dalam Pasal 
+39 huruf c 
+menghasilkan kesimpulan.
+(2) Dalam hal kesimpulan sebagaimana dimaksud pada ayat
+(1) hasilnya sesuai dengan desain kontrol, tim auditor 
+Keamanan SPBE melakukan prosedur evaluasi efektivitas 
+
+
+ - 17 -  
+ 
+kontrol Keamanan SPBE dengan cakupan uji petik yang 
+cukup.
+(3) Dalam hal kesimpulan sebagaimana dimaksud pada ayat
+----------------------------------------
+
+--- CHUNK 89 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 42", "bagian": "Kedua - ", "ayat": "Ayat (1)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 42 > Ayat (1)"}
+CONTENT:
+(1) hasilnya 
+tidak 
+sesuai 
+dengan 
+desain 
+kontrol 
+Keamanan 
+SPBE, 
+tim 
+auditor 
+Keamanan 
+SPBE 
+melakukan: 
+a. 
+penambahan cakupan uji petik dalam evaluasi 
+implementasi kontrol Keamanan SPBE; dan 
+b. 
+prosedur evaluasi efektivitas kontrol Keamanan 
+SPBE dengan cakupan uji petik yang ekstensif.
+----------------------------------------
+
+--- CHUNK 90 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 43", "bagian": "Kedua - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 43"}
+CONTENT:
+Evaluasi efektivitas kontrol Keamanan SPBE sebagaimana 
+dimaksud dalam Pasal 39 huruf d menghasilkan kesimpulan.
+----------------------------------------
+
+--- CHUNK 91 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 44", "bagian": "Kedua - ", "ayat": "Ayat (1)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 44 > Ayat (1)"}
+CONTENT:
+(1) Kesimpulan sebagaimana dimaksud dalam Pasal 41 ayat 
+(1), Pasal 42 ayat (1), dan Pasal 43 digunakan untuk 
+menentukan konklusi Audit Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 92 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 44", "bagian": "Kedua - ", "ayat": "Ayat (2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 44 > Ayat (2)"}
+CONTENT:
+(2) Konklusi Audit Keamanan SPBE sebagaimana dimaksud 
+pada ayat (1) mendapatkan hasil memadai jika: 
+a. 
+hasil evaluasi desain kontrol memadai, hasil evaluasi 
+implementasi kontrol sesuai dengan desain kontrol, 
+dan hasil evaluasi efektivitas kontrol efektif atau 
+perlu peningkatan; atau 
+b. 
+hasil evaluasi desain kontrol perlu peningkatan, 
+hasil evaluasi implementasi kontrol sesuai dengan 
+desain kontrol, dan hasil evaluasi efektivitas kontrol 
+efektif.
+----------------------------------------
+
+--- CHUNK 93 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 44", "bagian": "Kedua - ", "ayat": "Ayat (3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 44 > Ayat (3)"}
+CONTENT:
+(3) Konklusi Audit Keamanan SPBE sebagaimana dimaksud 
+pada ayat (1) mendapatkan hasil perlu peningkatan jika: 
+a. 
+hasil evaluasi desain kontrol memadai, hasil evaluasi 
+implementasi kontrol sesuai dengan desain kontrol, 
+dan hasil evaluasi efektivitas kontrol belum efektif; 
+b. 
+hasil evaluasi desain kontrol memadai, hasil evaluasi 
+implementasi kontrol tidak sesuai dengan desain 
+kontrol, dan hasil evaluasi efektivitas kontrol efektif; 
+atau 
+c. 
+hasil evaluasi desain kontrol perlu peningkatan, 
+hasil evaluasi implementasi kontrol sesuai dengan
+----------------------------------------
+
+--- CHUNK 94 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 44", "bagian": "Kedua - ", "ayat": "Ayat (3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 44 > Ayat (3)"}
+CONTENT:
+hasil evaluasi implementasi kontrol sesuai dengan 
+desain kontrol, dan hasil evaluasi efektivitas kontrol 
+perlu peningkatan.
+----------------------------------------
+
+--- CHUNK 95 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 44", "bagian": "Kedua - ", "ayat": "Ayat (5)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 44 > Ayat (5)"}
+CONTENT:
+(5) Konklusi Audit Keamanan SPBE sebagaimana dimaksud 
+pada ayat (1) mendapatkan hasil tidak memadai jika hasil 
+kesimpulan tidak memenuhi ketentuan sebagaimana 
+dimaksud pada ayat (2) dan ayat (3).
+----------------------------------------
+
+--- CHUNK 96 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 45", "bagian": "Kedua - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 45"}
+CONTENT:
+LATIK Terakreditasi yang terdaftar harus menerbitkan surat 
+keterangan untuk setiap Audit Keamanan SPBE yang 
+dilaksanakannya 
+sesuai 
+dengan 
+ketentuan 
+peraturan 
+perundang-undangan. 
+ 
+ 
+ 
+
+
+ - 18 -
+----------------------------------------
+
+--- CHUNK 97 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 46", "bagian": "Kedua - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 46"}
+CONTENT:
+Ketentuan mengenai pelaksanaan Audit Keamanan SPBE 
+oleh LATIK Terakreditasi yang terdaftar sebagaimana 
+dimaksud dalam Pasal 34 sampai dengan Pasal 45 berlaku 
+secara mutatis mutandis terhadap pelaksanaan Audit 
+Keamanan SPBE oleh LATIK pemerintah yang dilaksanakan 
+terhadap Aplikasi Khusus dan/atau Infrastruktur Instansi 
+Pusat dan Pemerintah Daerah jika LATIK Terakreditasi yang 
+terdaftar belum ada. 
+ 
+Paragraf 4 
+Audit Keamanan SPBE oleh LATIK Pemerintah
+----------------------------------------
+
+--- CHUNK 98 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 47", "bagian": "Kedua - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 47"}
+CONTENT:
+Audit Keamanan SPBE oleh LATIK pemerintah sebagaimana 
+dimaksud dalam Pasal 24 huruf c dilakukan dengan 
+tahapan: 
+a. 
+penugasan; 
+b. 
+perencanaan; dan 
+c. 
+pelaksanaan.
+----------------------------------------
+
+--- CHUNK 99 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 48", "bagian": "Kedua - ", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 48 > Ayat (1)-(3)"}
+CONTENT:
+(1) Penugasan sebagaimana dimaksud dalam Pasal 47 
+huruf a diberikan kepada tim auditor Keamanan SPBE 
+pada LATIK pemerintah.
+(2) Tim auditor Keamanan SPBE sebagaimana dimaksud 
+pada ayat (1) ditetapkan dengan Keputusan Kepala 
+Badan.
+(3) Tim auditor Keamanan SPBE sebagaimana dimaksud 
+pada ayat (1) paling sedikit terdiri atas: 
+a. 
+pengendali mutu; 
+b. 
+pengendali teknis; 
+c. 
+ketua tim; dan 
+d. 
+anggota tim.
+----------------------------------------
+
+--- CHUNK 100 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 48", "bagian": "Kedua - ", "ayat": "Ayat (4)-(7)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 48 > Ayat (4)-(7)"}
+CONTENT:
+(4) Pengendali mutu sebagaimana dimaksud pada ayat (3) 
+huruf a bertugas memastikan pelaksanaan Audit 
+Keamanan SPBE telah sesuai dengan kebijakan dan 
+prosedur Audit Keamanan SPBE yang dimiliki oleh 
+LATIK pemerintah.
+(5) Pengendali teknis sebagaimana dimaksud pada ayat (3) 
+memadai secara teknis sesuai dengan lingkup Audit 
+Keamanan SPBE.
+(6) Ketua tim sebagaimana dimaksud pada ayat (3) huruf b 
+bertugas memimpin Audit Keamanan SPBE.
+(7) Anggota tim sebagaimana dimaksud pada ayat (3) huruf 
+c bertugas melaksanakan prosedur Audit Keamanan 
+SPBE.
+----------------------------------------
+
+--- CHUNK 101 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 49", "bagian": "Kedua - ", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 49 > Ayat (1)-(3)"}
+CONTENT:
+(1) Penugasan sebagaimana dimaksud dalam Pasal 48 
+dilaksanakan berdasarkan keputusan Kepala Badan 
+tentang tim auditor Keamanan SPBE.
+(2) Keputusan Kepala Badan sebagaimana dimaksud pada 
+ayat (1) paling sedikit memuat: 
+a. 
+nama auditor Keamanan SPBE; 
+
+
+ - 19 -  
+ 
+b. 
+jabatan dalam tim auditor Keamanan SPBE; 
+c. 
+nama Instansi Pusat atau Pemerintah Daerah yang 
+diaudit; dan 
+d. 
+lingkup Audit Keamanan SPBE.
+(3) Tim auditor Keamanan SPBE sebagaimana dimaksud 
+pada ayat (1) harus memiliki kompetensi Audit 
+Keamanan SPBE yang dapat dipenuhi secara kolektif.
+----------------------------------------
+
+--- CHUNK 102 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 50", "bagian": "Kedua - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 50 > Ayat (1)-(2)"}
+CONTENT:
+(1) Perencanaan sebagaimana dimaksud dalam Pasal 47 
+huruf b dilakukan oleh auditor Keamanan SPBE 
+dengan menyusun perencanaan Audit Keamanan 
+SPBE.
+(2) Ketentuan mengenai perencanaan Audit Keamanan 
+SPBE 
+oleh 
+LATIK 
+Terakreditasi 
+yang 
+terdaftar 
+sebagaimana dimaksud dalam Pasal 38 berlaku secara 
+mutatis 
+mutandis 
+terhadap 
+perencanaan 
+Audit 
+Keamanan SPBE yang dilaksanakan LATIK pemerintah.
+----------------------------------------
+
+--- CHUNK 103 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 51", "bagian": "Kedua - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 51"}
+CONTENT:
+Ketentuan mengenai pelaksanaan Audit Keamanan SPBE 
+oleh LATIK Terakreditasi yang terdaftar sebagaimana 
+dimaksud dalam Pasal 39 sampai dengan Pasal 44 berlaku 
+secara mutatis mutandis terhadap pelaksanaan Audit 
+Keamanan SPBE yang dilaksanakan LATIK pemerintah.
+----------------------------------------
+
+--- CHUNK 104 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 52", "bagian": "Kedua - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 52"}
+CONTENT:
+LATIK pemerintah harus menerbitkan surat keterangan 
+untuk setiap Audit Keamanan SPBE yang dilaksanakannya 
+sesuai dengan ketentuan peraturan perundang-undangan.
+----------------------------------------
+
+--- CHUNK 105 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 53", "bagian": "Kedua - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kedua -  > Pasal 53"}
+CONTENT:
+Ketentuan mengenai pelaksanaan Audit Keamanan SPBE 
+oleh LATIK pemerintah dilaksanakan terhadap Aplikasi 
+Umum dan/atau Infrastruktur SPBE Nasional sebagaimana 
+dimaksud dalam Pasal 47 sampai dengan Pasal 52 berlaku 
+secara mutatis mutandis terhadap pelaksanaan Audit 
+Keamanan SPBE oleh Badan yang dilaksanakan terhadap 
+Aplikasi Khusus dan Infrastruktur SPBE Instansi Pusat 
+tertentu yang ditetapkan sebagai IIV.
+----------------------------------------
+
+--- CHUNK 106 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 54", "bagian": "Ketiga - ", "ayat": "Ayat (1)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Ketiga -  > Pasal 54 > Ayat (1)"}
+CONTENT:
+(1) Pelaporan 
+Audit 
+Keamanan 
+SPBE 
+sebagaimana 
+dimaksud dalam Pasal 23 huruf b dilakukan dengan 
+cara:  
+a. 
+ketua tim Auditor Keamanan SPBE menyusun 
+rancangan laporan hasil Audit Keamanan SPBE 
+dengan memastikan tujuan Audit Keamanan SPBE 
+tercapai; 
+a. 
+rancangan laporan hasil Audit Keamanan SPBE 
+direviu oleh pengendali teknis dan pengendali 
+mutu;
+----------------------------------------
+
+--- CHUNK 107 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 54", "bagian": "Ketiga - ", "ayat": "Ayat (1)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Ketiga -  > Pasal 54 > Ayat (1)"}
+CONTENT:
+- 20 -  
+ 
+b. 
+rancangan laporan hasil Audit Keamanan SPBE 
+yang telah direviu disampaikan oleh ketua tim 
+Auditor Keamanan SPBE kepada pimpinan LATIK 
+cakupan Keamanan SPBE; 
+c. 
+pimpinan 
+LATIK 
+cakupan 
+Keamanan 
+SPBE 
+mengesahkan laporan hasil Audit Keamanan 
+SPBE; dan 
+d. 
+laporan hasil Audit Keamanan SPBE yang telah 
+disahkan disampaikan oleh pimpinan LATIK 
+cakupan Keamanan SPBE kepada pimpinan 
+Instansi Pusat atau Pemerintah Daerah dan 
+ditembuskan 
+kepada 
+unit 
+kerja 
+yang 
+melaksanakan 
+tugas 
+dan 
+fungsi 
+di 
+bidang 
+pengawasan intern pada Instansi Pusat dan 
+Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 108 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 54", "bagian": "Ketiga - ", "ayat": "Ayat (2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Ketiga -  > Pasal 54 > Ayat (2)"}
+CONTENT:
+(2) Laporan hasil Audit Keamanan SPBE sebagaimana 
+dimaksud pada ayat (1) dapat diberikan kepada pihak 
+lain atas pertimbangan dari Instansi Pusat dan 
+Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 109 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 55", "bagian": "Keempat - ", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Keempat -  > Pasal 55 > Ayat (1)-(3)"}
+CONTENT:
+(1) Tindak lanjut Audit Keamanan SPBE sebagaimana 
+dimaksud dalam Pasal 23 huruf c dilakukan oleh 
+Instansi Pusat dan Pemerintah Daerah.
+(2) Pemantauan atas tindak lanjut sebagaimana dimaksud 
+pada ayat (1) dilakukan oleh unit kerja yang 
+melaksanakan tugas dan fungsi di bidang pengawasan 
+intern pada Instansi Pusat dan Pemerintah Daerah.
+(3) Hasil pemantauan atas tindak lanjut Audit Keamanan 
+SPBE 
+sebagaimana 
+dimaksud 
+pada 
+ayat
+----------------------------------------
+
+--- CHUNK 110 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 55", "bagian": "Keempat - ", "ayat": "Ayat (2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Keempat -  > Pasal 55 > Ayat (2)"}
+CONTENT:
+(2) disampaikan kepada: 
+a. 
+LATIK pemerintah, untuk Aplikasi Umum dan 
+Infrastruktur SPBE Nasional; dan 
+b. 
+menteri 
+yang 
+menyelenggarakan 
+urusan 
+pemerintahan 
+di 
+bidang 
+komunikasi 
+dan 
+informatika dan Kepala Badan, untuk Aplikasi 
+Khusus dan Infrastruktur SPBE Instansi Pusat 
+dan Pemerintah Daerah ditembuskan kepada 
+Badan.
+----------------------------------------
+
+--- CHUNK 111 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 56", "bagian": "Keempat - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Keempat -  > Pasal 56"}
+CONTENT:
+Penyampaian hasil pemantauan atas Audit Keamanan SPBE 
+untuk Aplikasi Umum dan Infrastruktur SPBE Nasional 
+sebagaimana dimaksud dalam Pasal 55 ayat (3) huruf a 
+dilakukan setiap bulan April tahun berjalan.
+----------------------------------------
+
+--- CHUNK 112 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 57", "bagian": "Keempat - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Keempat -  > Pasal 57"}
+CONTENT:
+Penyampaian hasil pemantauan atas Audit Keamanan SPBE 
+untuk Aplikasi Khusus dan Infrastruktur SPBE Instansi 
+Pusat dan Pemerintah Daerah sebagaimana dimaksud 
+dalam Pasal 55 ayat (3) huruf b dilakukan secara elektronik 
+sesuai dengan ketentuan peraturan perundang-undangan. 
+
+
+ - 21 -
+----------------------------------------
+
+--- CHUNK 113 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 58", "bagian": "Kelima - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 58"}
+CONTENT:
+Pendaftaran pelaksana Audit Keamanan SPBE sebagaimana 
+dimaksud dalam Pasal 23 huruf d terdiri atas: 
+a. 
+pendaftaran LATIK Terakreditasi; dan 
+b. 
+pendaftaran auditor Keamanan SPBE. 
+ 
+Paragraf 2 
+Pendaftaran LATIK Terakreditasi
+----------------------------------------
+
+--- CHUNK 114 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 59", "bagian": "Kelima - ", "ayat": "Ayat (1)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 59 > Ayat (1)"}
+CONTENT:
+(1) Pendaftaran 
+LATIK 
+Terakreditasi 
+sebagaimana 
+dimaksud dalam Pasal 58 huruf a dilakukan oleh 
+pimpinan LATIK dengan mengajukan permohonan 
+pendaftaran kepada Kepala Badan.
+----------------------------------------
+
+--- CHUNK 115 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 59", "bagian": "Kelima - ", "ayat": "Ayat (2)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 59 > Ayat (2)-(3)"}
+CONTENT:
+(2) Permohonan pendaftaran sebagaimana dimaksud pada 
+ayat (1) dengan menyampaikan: 
+a. 
+surat permohonan; 
+b. 
+salinan akta pendirian badan hukum; 
+c. 
+struktur organisasi; 
+d. 
+dokumen sistem kendali mutu audit; 
+e. 
+daftar auditor Keamanan SPBE yang berstatus 
+sebagai pegawai tetap dan tidak tetap; 
+f. 
+bukti akreditasi terkait dari lembaga pemerintah 
+nonstruktural yang bertugas dan bertanggung 
+jawab di bidang akreditasi lembaga penilaian 
+kesesuaian; 
+g. 
+surat izin usaha; dan 
+h. 
+surat keterangan domisili.
+(3) Pendaftaran 
+LATIK 
+Terakreditasi 
+sebagaimana 
+dimaksud 
+pada 
+ayat
+----------------------------------------
+
+--- CHUNK 116 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 59", "bagian": "Kelima - ", "ayat": "Ayat (2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 59 > Ayat (2)"}
+CONTENT:
+(2) dilaksanakan 
+melalui 
+pelayanan perizinan berusaha terintegrasi secara 
+elektronik 
+sesuai 
+dengan 
+ketentuan 
+peraturan 
+perundang-undangan.
+----------------------------------------
+
+--- CHUNK 117 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 60", "bagian": "Kelima - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 60 > Ayat (1)-(2)"}
+CONTENT:
+(1) Dalam hal permohonan pendaftaran sebagaimana 
+dimaksud dalam Pasal 59 dinyatakan valid dan lengkap, 
+Badan menerbitkan surat tanda register.
+(2) Surat tanda register sebagaimana dimaksud pada ayat
+(1) diberikan paling lambat 15 (lima belas) hari kerja 
+setelah permohonan dinyatakan sesuai dan lengkap.
+(3) Surat tanda register sebagaimana dimaksud pada ayat
+(2) berlaku sesuai dengan masa berlaku akreditasi dari 
+lembaga pemerintah nonstruktural yang bertugas dan 
+bertanggung jawab di bidang Akreditasi lembaga 
+penilaian kesesuaian.
+----------------------------------------
+
+--- CHUNK 118 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 60", "bagian": "Kelima - ", "ayat": "Ayat (4)-(5)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 60 > Ayat (4)-(5)"}
+CONTENT:
+(4) LATIK Terakreditasi yang telah mendapatkan surat 
+tanda register sebagaimana dimaksud pada ayat (1) 
+dinyatakan sebagai LATIK Terakreditasi yang terdaftar. 
+
+
+ - 22 -
+(5) Badan mempublikasikan daftar LATIK Terakreditasi 
+yang terdaftar sebagaimana dimaksud pada ayat (4) 
+melalui laman resmi Badan.
+----------------------------------------
+
+--- CHUNK 119 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 61", "bagian": "Kelima - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 61 > Ayat (1)-(2)"}
+CONTENT:
+(1) Masa berlaku surat tanda register dapat diperpanjang 
+dengan mengajukan permohonan kepada Kepala Badan 
+paling lambat 30 (tiga puluh) hari kalender sebelum 
+habis masa berlaku surat tanda register.
+(2) Permohonan sebagaimana dimaksud pada ayat (1) 
+diajukan dengan menyampaikan: 
+a. 
+surat permohonan; 
+b. 
+sertifikat akreditasi dari lembaga pemerintah 
+nonstruktural yang bertugas dan bertanggung 
+jawab di bidang akreditasi lembaga penilaian 
+kesesuaian; dan 
+c. 
+daftar auditor Keamanan SPBE yang menjadi 
+anggota.
+----------------------------------------
+
+--- CHUNK 120 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 62", "bagian": "Kelima - ", "ayat": "Ayat (1)-(1)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 62 > Ayat (1)-(1)"}
+CONTENT:
+(1) Surat tanda register tidak berlaku apabila: 
+a. 
+habis masa berlaku; 
+b. 
+LATIK Terakreditasi yang terdaftar melanggar 
+ketentuan peraturan perundang-undangan; atau 
+c. 
+LATIK Terakreditasi yang terdaftar dinyatakan 
+pailit 
+sesuai 
+dengan 
+ketentuan 
+peraturan 
+perundang-undangan.
+(2) LATIK Terakreditasi yang terdaftar dengan surat tanda 
+register tidak berlaku sebagaimana dimaksud pada ayat
+(1) dihapus dari daftar LATIK Terakreditasi yang 
+terdaftar.
+----------------------------------------
+
+--- CHUNK 121 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 63", "bagian": "Kelima - ", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 63"}
+CONTENT:
+LATIK Terakreditasi yang terdaftar menyampaikan: 
+a. 
+laporan secara periodik atas pelaksanaan Audit 
+Keamanan SPBE setiap bulan April dan Oktober; dan 
+b. 
+laporan perubahan daftar auditor Keamanan SPBE 
+paling lambat 2 (dua) hari kerja setelah perubahan 
+keanggotaan dilakukan; 
+kepada Kepala Badan. 
+ 
+Paragraf 3 
+Pendaftaran Auditor Keamanan SPBE
+----------------------------------------
+
+--- CHUNK 122 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 64", "bagian": "Kelima - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 64 > Ayat (1)-(2)"}
+CONTENT:
+(1) Pendaftaran auditor Keamanan SPBE sebagaimana 
+dimaksud dalam Pasal 58 huruf b dilakukan oleh 
+pimpinan LATIK dengan mengajukan permohonan 
+pendaftaran kepada Kepala Badan.
+(2) Permohonan pendaftaran sebagaimana dimaksud pada 
+ayat (1) disampaikan secara elektronik.
+----------------------------------------
+
+--- CHUNK 123 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 64", "bagian": "Kelima - ", "ayat": "Ayat (3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 64 > Ayat (3)"}
+CONTENT:
+(3) Permohonan pendaftaran sebagaimana dimaksud pada 
+ayat (2) dilakukan dengan menyampaikan: 
+a. 
+surat permohonan; 
+ 
+ 
+
+
+ - 23 -  
+ 
+b. 
+salinan ijazah pendidikan strata satu atau 
+sederajat; 
+c. 
+salinan sertifikat kompetensi auditor Keamanan 
+SPBE yang diterbitkan oleh Lembaga Sertifikasi 
+Profesi ruang lingkup auditor Keamanan SPBE; 
+d. 
+dokumen 
+pengalaman 
+di 
+bidang 
+keamanan 
+informasi atau teknologi informasi yang dibuktikan 
+dengan surat tugas, surat penempatan, surat 
+keputusan, atau kontrak kerja; 
+e. 
+pakta integritas; dan 
+f. 
+salinan bukti keanggotaan organisasi profesi.
+----------------------------------------
+
+--- CHUNK 124 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 64", "bagian": "Kelima - ", "ayat": "Ayat (4)-(5)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 64 > Ayat (4)-(5)"}
+CONTENT:
+(4) Dalam hal sertifikat kompetensi auditor Keamanan 
+SPBE sebagaimana dimaksud pada ayat (3) huruf c 
+belum 
+tersedia 
+karena 
+belum 
+tersedianya 
+penyelenggara 
+sertifikasi 
+kompetensi, 
+sertifikat 
+kompetensi 
+auditor 
+Keamanan 
+SPBE 
+digantikan 
+dengan 
+dokumen 
+lainnya 
+yang 
+berlaku 
+dan 
+menyatakan keahlian.
+(5) Dalam hal organisasi profesi sebagaimana dimaksud 
+pada ayat (3) huruf f belum terbentuk, tidak perlu 
+melampirkan salinan bukti keanggotaan organisasi 
+profesi.
+----------------------------------------
+
+--- CHUNK 125 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 65", "bagian": "Kelima - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 65 > Ayat (1)-(2)"}
+CONTENT:
+(1) Dalam hal permohonan pendaftaran sebagaimana 
+dimaksud dalam Pasal 64 dinyatakan valid dan 
+lengkap, Badan menerbitkan surat tanda register.
+(2) Surat tanda register sebagaimana dimaksud pada ayat
+(1) diterbitkan paling lambat 14 (empat belas) hari kerja 
+setelah pendaftaran dinyatakan valid dan lengkap.
+(3) Surat tanda register sebagaimana dimaksud pada ayat
+(2) berlaku sesuai dengan masa berlaku sertifikat 
+kompetensi auditor Keamanan SPBE, paling lama 3 
+(tiga) tahun.
+----------------------------------------
+
+--- CHUNK 126 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 65", "bagian": "Kelima - ", "ayat": "Ayat (4)-(5)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 65 > Ayat (4)-(5)"}
+CONTENT:
+(4) Auditor Keamanan SPBE yang telah memperoleh surat 
+tanda register sebagaimana dimaksud pada ayat (3) 
+dimuat dalam daftar auditor Keamanan SPBE.
+(5) Badan mempublikasikan daftar auditor Keamanan 
+SPBE yang telah memperoleh surat tanda register 
+sebagaimana dimaksud pada ayat (4) melalui laman 
+resmi Badan.
+----------------------------------------
+
+--- CHUNK 127 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 66", "bagian": "Kelima - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 66 > Ayat (1)-(2)"}
+CONTENT:
+(1) Masa berlaku surat tanda register dapat diperpanjang 
+dengan mengajukan permohonan kepada Kepala Badan 
+paling lambat 30 (tiga puluh) hari kalender sebelum 
+habis masa berlaku surat tanda register.
+(2) Permohonan sebagaimana dimaksud pada ayat (1) 
+diajukan dengan menyampaikan: 
+a. 
+surat permohonan;  
+b. 
+salinan sertifikat kompetensi auditor Keamanan 
+SPBE terbaru yang diterbitkan oleh Lembaga 
+Sertifikasi Profesi di bidang keamanan siber yang 
+berkaitan dengan Audit Keamanan SPBE; dan 
+c. 
+salinan bukti keanggotaan organisasi profesi. 
+
+
+ - 24 -
+----------------------------------------
+
+--- CHUNK 128 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 66", "bagian": "Kelima - ", "ayat": "Ayat (3)-(4)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 66 > Ayat (3)-(4)"}
+CONTENT:
+(3) Dalam hal sertifikat kompetensi auditor Keamanan 
+SPBE sebagaimana dimaksud pada ayat (2) huruf b 
+belum 
+tersedia 
+karena 
+belum 
+tersedianya 
+penyelenggara 
+sertifikasi 
+kompetensi, 
+sertifikat 
+kompetensi 
+auditor 
+Keamanan 
+SPBE 
+digantikan 
+dengan 
+dokumen 
+lainnya 
+yang 
+berlaku 
+dan 
+menyatakan keahlian.
+(4) Dalam hal organisasi profesi sebagaimana dimaksud 
+pada ayat (2) huruf c belum ada, tidak perlu 
+melampirkan salinan bukti keanggotaan.
+----------------------------------------
+
+--- CHUNK 129 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 67", "bagian": "Kelima - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 67 > Ayat (1)-(2)"}
+CONTENT:
+(1) Surat tanda register dinyatakan tidak berlaku apabila: 
+a. 
+habis masa berlaku; 
+b. 
+auditor Keamanan SPBE meninggal dunia; 
+c. 
+auditor Keamanan SPBE mengundurkan diri dari 
+organisasi profesi;  
+d. 
+auditor 
+Keamanan 
+SPBE 
+dikeluarkan 
+dari 
+keanggotaan 
+organisasi 
+profesi 
+karena 
+pelanggaran kode etik profesi; atau 
+e. 
+auditor Keamanan SPBE terbukti melanggar 
+ketentuan peraturan perundang-undangan.
+(2) Auditor Keamanan SPBE dengan surat tanda register 
+tidak berlaku sebagaimana dimaksud pada ayat (1) 
+dihapus dari daftar auditor Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 130 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 67", "bagian": "Kelima - ", "ayat": "Ayat (3)-(1)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 67 > Ayat (3)-(1)"}
+CONTENT:
+(3) Auditor Keamanan SPBE dengan surat tanda register 
+habis masa berlaku sebagaimana dimaksud pada ayat
+(1) huruf a dapat mengajukan permohonan pendaftaran 
+kembali sesuai dengan ketentuan dalam Pasal 64 
+melalui LATIK Terakreditasi yang terdaftar.
+----------------------------------------
+
+--- CHUNK 131 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 68", "bagian": "Kelima - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 68 > Ayat (1)-(2)"}
+CONTENT:
+(1) Pengalokasian sumber daya sebagaimana dimaksud 
+dalam 
+Pasal 
+23 
+huruf 
+e 
+dilakukan 
+dengan 
+mengalokasikan sumber daya Audit Keamanan SPBE 
+dengan memadai.
+(2) Dalam mengalokasi sumber daya Audit Keamanan 
+SPBE sebagaimana dimaksud pada ayat (1), Instansi 
+Pusat, Pemerintah Daerah, dan LATIK cakupan 
+Keamanan SPBE menentukan: 
+a. 
+jumlah auditor Keamanan SPBE; 
+b. 
+jumlah hari pelaksanaan Audit Keamanan SPBE; 
+dan 
+c. 
+alat bantu Audit Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 132 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 69", "bagian": "Kelima - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 69 > Ayat (1)-(2)"}
+CONTENT:
+(1) Jumlah 
+Auditor 
+Keamanan 
+SPBE 
+sebagaimana 
+dimaksud dalam Pasal 68 ayat (2) huruf a paling sedikit 
+berjumlah 2 (dua) orang dalam 1 (satu) penugasan dan 
+dapat ditambah sesuai kebutuhan.
+(2) Kebutuhan sebagaimana dimaksud pada ayat (1) 
+ditentukan dengan mempertimbangkan: 
+
+
+ - 25 -  
+ 
+a. 
+kompetensi yang dibutuhkan sesuai lingkup Audit 
+Keamanan SPBE; dan 
+b. 
+kompleksitas teknologi dalam 
+lingkup 
+Audit 
+Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 133 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 70", "bagian": "Kelima - ", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 70 > Ayat (1)-(3)"}
+CONTENT:
+(1) Jumlah hari pelaksanaan Audit Keamanan SPBE 
+sebagaimana dimaksud dalam Pasal 68 ayat (2) huruf b 
+mengacu pada matriks jumlah hari pelaksanaan Audit 
+Keamanan SPBE.
+(2) Jumlah hari pelaksanaan Audit Keamanan SPBE 
+sebagaimana dimaksud pada ayat (1) berlaku untuk 
+satu prosedur pelaksanaan Audit Keamanan SPBE.
+(3) Jumlah hari pelaksanaan Audit Keamanan SPBE 
+sebagaimana dimaksud pada ayat (2) ditentukan 
+dengan mempertimbangkan: 
+a. 
+kompleksitas objek Audit Keamanan SPBE; 
+b. 
+kompleksitas teknologi objek Audit Keamanan SPBE; 
+dan 
+c. 
+sebaran lokasi objek Audit Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 134 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 70", "bagian": "Kelima - ", "ayat": "Ayat (4)-(6)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 70 > Ayat (4)-(6)"}
+CONTENT:
+(4) Kompleksitas 
+objek 
+Audit 
+Keamanan 
+SPBE 
+sebagaimana dimaksud pada ayat (3) huruf a paling 
+sedikit mengacu pada matriks kompleksitas objek Audit 
+Keamanan SPBE.
+(5) Kompleksitas teknologi objek Audit Keamanan SPBE 
+sebagaimana dimaksud pada ayat (3) huruf b paling 
+sedikit  mengacu pada matriks kompleksitas teknologi 
+objek Audit Keamanan SPBE.
+(6) Sebaran 
+lokasi 
+objek 
+Audit 
+Keamanan 
+SPBE 
+sebagaimana dimaksud pada ayat (3) huruf c dibedakan 
+berdasarkan lokasi fisik yaitu: 
+a. 
+terpusat; dan 
+b. 
+tersebar.
+----------------------------------------
+
+--- CHUNK 135 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 70", "bagian": "Kelima - ", "ayat": "Ayat (7)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 70 > Ayat (7)"}
+CONTENT:
+(7) Matriks objek Audit Keamanan SPBE sebagaimana 
+dimaksud pada ayat (3) sampai dengan ayat (6) 
+tercantum dalam Lampiran II yang merupakan bagian 
+tidak terpisahkan dari Peraturan Badan ini.
+----------------------------------------
+
+--- CHUNK 136 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB III", "pasal": "Pasal 71", "bagian": "Kelima - ", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 71 > Ayat (1)-(2)"}
+CONTENT:
+(1) Alat bantu Audit Keamanan SPBE sebagaimana 
+dimaksud dalam Pasal 68 ayat (2) huruf c merupakan 
+perangkat teknologi yang digunakan auditor Keamanan 
+SPBE dalam pelaksanaan pengujian kontrol keamanan.
+(2) Dalam menentukan penggunaan alat bantu Audit 
+Keamanan SPBE sebagaimana dimaksud pada ayat (1) 
+LATIK 
+cakupan 
+Keamanan 
+SPBE 
+harus 
+mempertimbangkan: 
+a. 
+kompleksitas 
+teknologi 
+dalam 
+objek 
+Audit 
+Keamanan SPBE; dan 
+b. 
+keamanan alat bantu Audit Keamanan SPBE yang 
+digunakan. 
+ 
+ 
+ 
+ 
+
+
+ - 26 -
+----------------------------------------
+
+--- CHUNK 137 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB IV", "pasal": "", "bagian": "", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB IV"}
+CONTENT:
+PENDANAAN AUDIT KEAMANAN SPBE
+----------------------------------------
+
+--- CHUNK 138 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB IV", "pasal": "Pasal 72", "bagian": "", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB IV > Pasal 72 > Ayat (1)-(3)"}
+CONTENT:
+(1) Instansi Pusat dan Pemerintah Daerah menyusun 
+perencanaan dan penganggaran pelaksanaan Audit 
+Keamanan SPBE sesuai dengan siklus perencanaan 
+dan penganggaran.
+(2) Besaran biaya Audit Keamanan SPBE dihitung dengan 
+mempertimbangkan kompleksitas objek audit, sebaran 
+lokasi, dan jumlah hari pelaksanaan audit.
+(3) Pendanaan berasal dari: 
+a. 
+Anggaran Pendapatan dan Belanja Negara;  
+b. 
+anggaran 
+pendapatan 
+dan 
+belanja 
+daerah; 
+dan/atau 
+c. 
+sumber lain yang sah dan tidak mengikat sesuai 
+dengan 
+ketentuan 
+peraturan 
+perundang-
+undangan.
+----------------------------------------
+
+--- CHUNK 139 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB V", "pasal": "", "bagian": "", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB V"}
+CONTENT:
+KETENTUAN PENUTUP
+----------------------------------------
+
+--- CHUNK 140 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB V", "pasal": "Pasal 73", "bagian": "", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB V > Pasal 73"}
+CONTENT:
+Peraturan 
+Badan 
+ini 
+mulai 
+berlaku 
+pada 
+tanggal 
+diundangkan.
+----------------------------------------
+
+--- CHUNK 141 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bab": "BAB V", "pasal": "Pasal 73", "bagian": "", "ayat": "", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB V > Pasal 73"}
+CONTENT:
+- 27 -  
+ 
+Agar 
+setiap 
+orang 
+mengetahuinya, 
+memerintahkan 
+pengundangan Peraturan Badan ini dengan penempatannya 
+dalam Berita Negara Republik Indonesia. 
+ 
+Ditetapkan di Jakarta  
+pada tanggal 9 Oktober 2024 
+ 
+KEPALA BADAN SIBER DAN SANDI NEGARA,  
+ 
+Œ 
+ 
+HINSA SIBURIAN 
+ 
+Diundangkan di Jakarta 
+pada tanggal              Д 
+ 
+Plt. DIREKTUR JENDERAL 
+PERATURAN PERUNDANG-UNDANGAN 
+KEMENTERIAN HUKUM DAN HAK ASASI MANUSIA 
+REPUBLIK INDONESIA, 
+ 
+ 
+ 
+   Ѽ 
+ 
+ASEP N. MULYANA 
+ 
+ 
+BERITA NEGARA REPUBLIK INDONESIA TAHUN 2024 NOMOR        Ж
+----------------------------------------
+
+--- CHUNK 142 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > Lampiran"}
+CONTENT:
+LAMPIRAN I 
+PERATURAN BADAN SIBER DAN SANDI NEGARA 
+NOMOR 8 TAHUN 2024 
+TENTANG  
+STANDAR DAN TATA CARA PELAKSANAAN 
+AUDIT KEAMANAN SISTEM PEMERINTAHAN 
+BERBASIS ELEKTRONIK 
+ 
+MATRIKS KONKLUSI AUDIT KEAMANAN SPBE 
+ 
+Hasil Evaluasi 
+Desain Kontrol 
+Hasil Evaluasi 
+Implementasi 
+Kontrol 
+Hasil Evaluasi 
+Efektivitas Kontrol 
+Konklusi Audit 
+Keamanan SPBE 
+Memadai 
+Sesuai Dengan 
+Desain Kontrol 
+Efektif 
+Memadai 
+Perlu Peningkatan 
+Memadai 
+Belum Efektif 
+Perlu Peningkatan 
+Tidak Sesuai 
+Dengan 
+Desain Kontrol 
+Efektif 
+Perlu Peningkatan 
+Perlu Peningkatan 
+Tidak Memadai 
+Belum Efektif
+----------------------------------------
+
+--- CHUNK 143 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > Lampiran"}
+CONTENT:
+Desain Kontrol 
+Efektif 
+Perlu Peningkatan 
+Perlu Peningkatan 
+Tidak Memadai 
+Belum Efektif 
+Tidak Memadai 
+Perlu 
+Peningkatan 
+Sesuai Dengan 
+Desain Kontrol 
+Efektif 
+Memadai 
+Perlu Peningkatan 
+Perlu Peningkatan 
+Belum Efektif 
+Tidak Memadai 
+Tidak Sesuai 
+Dengan 
+Desain Kontrol 
+Efektif 
+Tidak Memadai 
+Perlu Peningkatan 
+Tidak Memadai 
+Belum Efektif 
+Tidak Memadai 
+Tidak 
+Memadai 
+- 
+Efektif 
+Tidak Memadai 
+Perlu Peningkatan 
+Tidak Memadai 
+Belum Efektif 
+Tidak Memadai 
+ 
+KEPALA BADAN SIBER DAN SANDI NEGARA,  
+ 
+ttd. 
+ 
+HINSA SIBURIAN
+----------------------------------------
+
+--- CHUNK 144 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > Lampiran"}
+CONTENT:
+- 29 -  
+ 
+LAMPIRAN II 
+PERATURAN BADAN SIBER DAN SANDI NEGARA 
+NOMOR 8 TAHUN 2024 
+TENTANG  
+STANDAR DAN TATA CARA PELAKSANAAN 
+AUDIT KEAMANAN SISTEM PEMERINTAHAN 
+BERBASIS ELEKTRONIK 
+ 
+MATRIKS OBJEK KEAMANAN AUDIT KEAMANAN SPBE 
+ 
+A. 
+MATRIKS JUMLAH HARI PELAKSANAAN AUDIT KEAMANAN SPBE 
+ 
+Kompleksitas 
+Objek Audit 
+Kompleksitas 
+Teknologi Objek 
+Audit Keamanan 
+SPBE 
+Sebaran Lokasi 
+Objek Audit 
+Keamanan 
+SPBE 
+Jumlah  
+Hari (paling 
+singkat)* 
+Sederhana 
+Sederhana 
+Terpusat 
+2 
+Tersebar 
+3 
+Sedang 
+Terpusat 
+3 
+Tersebar 
+4 
+Kompleks 
+Terpusat 
+4 
+Tersebar 
+5 
+Sedang 
+Sederhana
+----------------------------------------
+
+--- CHUNK 145 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > Lampiran"}
+CONTENT:
+3 
+Sedang 
+Terpusat 
+3 
+Tersebar 
+4 
+Kompleks 
+Terpusat 
+4 
+Tersebar 
+5 
+Sedang 
+Sederhana 
+Terpusat 
+5 
+Tersebar 
+6 
+Sedang 
+Terpusat 
+6 
+Tersebar 
+7 
+Kompleks 
+Terpusat 
+7 
+Tersebar 
+8 
+Kompleks 
+Sederhana 
+Terpusat 
+8 
+Tersebar 
+9 
+Sedang 
+Terpusat 
+9 
+Tersebar 
+10 
+Kompleks 
+Terpusat 
+10 
+Tersebar 
+10 
+* untuk 1 tim auditor (paling sedikit dua orang) untuk satu prosedur 
+pelaksanaan audit 
+ 
+ 
+B. 
+MATRIKS KOMPLEKSITAS OBJEK AUDIT KEAMANAN SPBE 
+ 
+Indikator 
+Tingkat Kompleksitas Objek Audit 
+Sederhana 
+Sedang 
+Kompleks 
+Aplikasi SPBE 
+Aplikasi 
+Khusus 
+Instansi Pusat 
+Aplikasi 
+Khusus
+----------------------------------------
+
+--- CHUNK 146 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > Lampiran"}
+CONTENT:
+Sederhana 
+Sedang 
+Kompleks 
+Aplikasi SPBE 
+Aplikasi 
+Khusus 
+Instansi Pusat 
+Aplikasi 
+Khusus 
+Pemerintah 
+Daerah 
+Aplikasi Umum 
+SPBE Nasional 
+Pusat Data Nasional 
+ 
+ 
+ 
+Nasional 
+Jaringan Intra 
+Instansi Pusat 
+Pemerintah 
+Daerah 
+Nasional 
+Sistem Penghubung 
+Layanan 
+Instansi Pusat 
+Pemerintah 
+Daerah 
+Nasional
+----------------------------------------
+
+--- CHUNK 147 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > Lampiran"}
+CONTENT:
+- 30 -  
+ 
+C. 
+MATRIKS KOMPLEKSITAS TEKNOLOGI OBJEK AUDIT KEAMANAN 
+SPBE 
+ 
+Indikator 
+Tingkat Kompleksitas Teknologi 
+Sederhana 
+Sedang 
+Kompleks 
+UMUM 
+Jumlah Personil TI 
+< 5 orang  
+6-10 orang 
+> 10 orang 
+Jumlah Pengguna 
+< 100 pengguna 
+100-1000 
+pengguna 
+> 1000 
+pengguna 
+Jenis Dampak 
+Kegagalan 
+Operasional saja 
+Operasional dan 
+Finansial 
+Operasional, 
+Finansial, 
+dan  Legal 
+APLIKASI 
+Sebaran peladen  
+Terpusat 
+Terdistribusi  
+Dalam Negeri  
+Terdistribusi  
+Dalam & 
+Luar Negeri 
+Platform Teknologi 
+1 jenis 
+2-3 jenis 
+> 3 jenis 
+Waktu 
+Pengembangan 
+< 3 bulan 
+3-12 bulan
+----------------------------------------
+
+--- CHUNK 148 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > Lampiran"}
+CONTENT:
+Platform Teknologi 
+1 jenis 
+2-3 jenis 
+> 3 jenis 
+Waktu 
+Pengembangan 
+< 3 bulan 
+3-12 bulan  
+> 12 bulan 
+Usia Sistem  
+< 1 tahun 
+1–3 tahun 
+> 3 tahun 
+Transaksi per hari 
+< 5000  
+5000 s.d. 50.000  
+> 50.000  
+Pola Pemrosesan 
+Batch 
+Realtime 
+Hybrid 
+Cakupan Proses 
+Bisnis 
+< 30 % 
+30-60%  
+> 60%  
+INFRASTRUKTUR – PUSAT DATA NASIONAL 
+Pengelolaan  
+Alih Daya, Sewa 
+Mandiri 
+Campuran  
+Strata SNI 
+Strata 1-2 
+Strata 3 
+Strata 4 
+Sertifikasi 
+Belum Ada 
+SNI 27001 
+SNI 27001 
+dan Standar 
+Lain 
+INFRASTRUKTUR – JARINGAN INTRA 
+Pengelolaan  
+Alih Daya, Sewa 
+Mandiri 
+Campuran
+----------------------------------------
+
+--- CHUNK 149 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > Lampiran"}
+CONTENT:
+Lain 
+INFRASTRUKTUR – JARINGAN INTRA 
+Pengelolaan  
+Alih Daya, Sewa 
+Mandiri 
+Campuran  
+Cakupan Jaringan  
+Local Area 
+Network, Cluster 
+Area Network 
+Metropolitan Area 
+Network, Virtual 
+Private Network 
+Wide Area 
+Network, 
+Nasional 
+Media Jaringan 
+Kabel 
+Nirkabel 
+Kabel & 
+Nirkabel 
+INFRASTRUKTUR – SISTEM PENGHUBUNG LAYANAN 
+Cakupan Sistem 
+Intra Instansi 
+Pusat atau Intra 
+Pemerintah 
+Daerah 
+Antar Instansi 
+Pusat atau Antar 
+Pemerintah 
+Daerah 
+Nasional 
+Sifat Sistem  
+Tertutup 
+Semi Terbuka 
+Terbuka 
+Konten Sistem  
+Data 
+Aplikasi 
+Layanan 
+Sifat Informasi 
+yang Dihubungkan 
+Terbuka
+----------------------------------------
+
+--- CHUNK 150 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024", "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "peraturan-bssn-no-8-tahun-2024.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > Lampiran"}
+CONTENT:
+Terbuka 
+Konten Sistem  
+Data 
+Aplikasi 
+Layanan 
+Sifat Informasi 
+yang Dihubungkan 
+Terbuka 
+Terbatas 
+Tertutup 
+ 
+KEPALA BADAN SIBER DAN SANDI NEGARA,  
+ 
+ttd. 
+ 
+HINSA SIBURIAN
+----------------------------------------
+

@@ -1,0 +1,643 @@
+1,00 
+1,80 
+1,00 
+2,54 
+1,90 
+Cukup 
+7 
+Pemerintah Kab. Seram
+
+2,00 
+1,20 
+1,00 
+3,71 
+2,41 
+Cukup 
+8 
+Pemerintah Kab. Buru 
+Selatan 
+1,00 
+1,20 
+1,00 
+2,66 
+1,81 
+Cukup 
+9 
+Pemerintah Kab. Maluku 
+Barat Daya 
+1,50 
+1,30 
+1,00 
+2,99 
+2,05 
+Cukup 
+10 
+Pemerintah Kota Ambon 
+3,20 
+2,10 
+1,00 
+3,37 
+2,64 
+Baik 
+11 
+Pemerintah Kota Tual 
+2,80 
+1,00 
+1,00 
+3,29 
+2,28 
+Cukup
+
+Tabel 48. Hasil Evaluasi SPBE Pemerintah Daerah di Maluku Utara 
+No 
+Nama Instansi 
+D1 
+D2 
+D3 
+D4 
+Indeks 
+Predikat 
+1 
+Pemerintah Provinsi 
+Maluku Utara 
+3,00 
+2,10 
+1,64 
+3,30 
+2,69 
+Baik 
+2 
+Pemerintah Kab. 
+Halmahera Barat 
+1,00 
+1,10 
+1,00 
+2,92 
+1,90 
+Cukup 
+3 
+Pemerintah Kab. 
+Halmahera Tengah 
+1,00 
+1,10 
+1,00 
+2,92 
+1,90 
+Cukup 
+4 
+Pemerintah Kab. 
+Kepulauan Sula 
+3,00 
+1,20 
+1,00 
+2,65 
+2,06 
+Cukup
+
+80 |
+
+No 
+Nama Instansi 
+D1 
+D2 
+D3 
+D4 
+Indeks 
+Predikat 
+5 
+Pemerintah Kab. 
+Halmahera Selatan 
+2,00 
+2,10 
+1,00 
+3,25 
+2,43 
+Cukup 
+6 
+Pemerintah Kab. 
+Halmahera Utara 
+3,10 
+2,10 
+1,27 
+3,49 
+2,73 
+Baik 
+7 
+Pemerintah Kab. 
+Halmahera Timur 
+2,00 
+1,30 
+1,18 
+1,31 
+1,38 
+Kurang 
+8 
+Pemerintah Kab. Pulau 
+Morotai 
+1,20 
+1,10 
+1,00 
+3,03 
+1,97 
+Cukup 
+9 
+Pemerintah Kab. Pulau 
+Taliabu 
+2,70 
+1,00 
+1,00 
+2,92 
+2,09 
+Cukup 
+10 
+Pemerintah Kota Tidore 
+Kepulauan 
+3,00 
+1,30 
+1,00 
+3,17 
+2,32 
+Cukup 
+11 
+Pemerintah Kota Ternate 
+1,80 
+1,00 
+1,00 
+2,74 
+1,89 
+Cukup
+
+Tabel 49. Hasil Evaluasi SPBE Pemerintah Daerah di Papua 
+No 
+Nama Instansi 
+D1 
+D2 
+D3 
+D4 
+Indeks 
+Predikat 
+1 
+Pemerintah Provinsi 
+Papua 
+1,50 
+1,30 
+1,00 
+2,95 
+2,03 
+Cukup 
+2 
+Pemerintah Kab. 
+Jayapura 
+3,10 
+2,20 
+2,18 
+3,32 
+2,82 
+Baik 
+3 
+Pemerintah Kab. 
+Keerom 
+1,00 
+1,00 
+1,00 
+1,30 
+1,14 
+Kurang 
+4 
+Pemerintah Kab. Sarmi 
+1,00 
+1,10 
+1,00 
+2,10 
+1,53 
+Kurang 
+5 
+Pemerintah Kab. 
+Supiori 
+1,00 
+1,00 
+1,00 
+2,04 
+1,48 
+Kurang 
+6 
+Pemerintah Kota 
+Jayapura 
+3,00 
+1,40 
+1,00 
+3,17 
+2,35 
+Cukup
+
+81 |
+
+Tabel 50. Hasil Evaluasi SPBE Pemerintah Daerah di Papua Barat 
+No 
+Nama Instansi 
+D1 
+D2 
+D3 
+D4 
+Indeks 
+Predikat 
+1 
+Pemerintah Provinsi 
+Papua Barat 
+2,40 
+1,70 
+1,00 
+3,03 
+2,28 
+Cukup 
+2 
+Pemerintah Kab. 
+Manokwari 
+2,90 
+1,10 
+1,00 
+2,05 
+1,75 
+Kurang 
+3 
+Pemerintah Kab. Teluk 
+Wondama 
+3,50 
+1,60 
+1,00 
+3,04 
+2,40 
+Cukup 
+4 
+Pemerintah Kab. Fak-Fak 
+1,50 
+1,10 
+1,00 
+2,29 
+1,68 
+Kurang 
+5 
+Pemerintah Kab. 
+Kaimana 
+1,00 
+1,30 
+1,00 
+3,37 
+2,15 
+Cukup
+
+Tabel 51. Hasil Evaluasi SPBE Pemerintah Daerah di Papua Selatan 
+No 
+Nama Instansi 
+D1 
+D2 
+D3 
+D4 
+Indeks 
+Predikat 
+1 
+Pemerintah Provinsi 
+Papua Selatan 
+1,00 
+1,00 
+1,00 
+2,33 
+1,61 
+Kurang 
+2 
+Pemerintah Kab. 
+Merauke 
+1,20 
+1,40 
+1,00 
+3,47 
+2,25 
+Cukup 
+3 
+Pemerintah Kab. Boven 
+Digoel 
+2,00 
+1,80 
+1,00 
+2,81 
+2,16 
+Cukup 
+4 
+Pemerintah Kab. Asmat 
+1,00 
+1,10 
+1,00 
+1,00 
+1,03 
+Kurang
+
+Tabel 52. Hasil Evaluasi SPBE Pemerintah Daerah di Papua Tengah 
+No 
+Nama Instansi 
+D1 
+D2 
+D3 
+D4 
+Indeks 
+Predikat 
+1 
+Pemerintah Provinsi 
+Papua Tengah 
+1,00 
+1,10 
+1,00 
+2,88 
+1,88 
+Cukup 
+2 
+Pemerintah Kab. Puncak 
+Jaya 
+2,80 
+1,20 
+1,00 
+2,44 
+1,94 
+Cukup 
+3 
+Pemerintah Kab. Mimika 
+3,00 
+1,50 
+1,00 
+3,07 
+2,33 
+Cukup 
+4 
+Pemerintah Kab. Puncak 
+1,00 
+1,00 
+1,00 
+2,35 
+1,62 
+Kurang 
+5 
+Pemerintah Kab. Dogiyai 
+1,00 
+1,00 
+1,00 
+2,16 
+1,53 
+Kurang
+
+82 |
+
+Tabel 53. Hasil Evaluasi SPBE Pemerintah Daerah di Papua Pegunungan 
+No 
+Nama Instansi 
+D1 
+D2 
+D3 
+D4 
+Indeks 
+Predikat 
+1 
+Pemerintah Provinsi 
+Papua Pegunungan 
+1,00 
+1,50 
+1,00 
+2,09 
+1,62 
+Kurang 
+2 
+Pemerintah Kab. 
+Jayawijaya 
+2,60 
+1,20 
+1,00 
+3,57 
+2,43 
+Cukup 
+3 
+Pemerintah Kab. 
+Mamberamo Tengah 
+1,00 
+1,00 
+1,00 
+1,19 
+1,09 
+Kurang 
+4 
+Pemerintah Kab. Nduga 
+1,00 
+1,00 
+1,00 
+2,10 
+1,50 
+Kurang 
+5 
+Pemerintah Kab. Tolikara 
+1,00 
+1,00 
+1,00 
+2,04 
+1,47 
+Kurang
+
+Tabel 54. Hasil Evaluasi SPBE Pemerintah Daerah di Papua Barat Daya 
+No 
+Nama Instansi 
+D1 
+D2 
+D3 
+D4 
+Indeks 
+Predikat 
+1 
+Pemerintah Provinsi 
+Papua Barat Daya 
+3,00 
+1,10 
+1,00 
+3,43 
+2,39 
+Cukup 
+2 
+Pemerintah Kab. 
+Sorong 
+3,10 
+1,30 
+1,00 
+3,50 
+2,49 
+Cukup 
+3 
+Pemerintah Kab. Raja 
+Ampat 
+1,00 
+1,00 
+1,00 
+1,73 
+1,33 
+Kurang 
+4 
+Pemerintah Kota 
+Sorong 
+1,00 
+1,20 
+1,00 
+2,61 
+1,78 
+Kurang
+
+83 |
+
+Penutup
+
+84 |
+
+Kesimpulan 
+Dari hasil Evaluasi SPBE 2024, dapat disimpulkan bahwa penerapan SPBE 
+di Indonesia telah menunjukkan kemajuan signifikan dibandingkan tahun-tahun 
+sebelumnya. Secara nasional, Indeks Maturitas SPBE mencapai 3,12 (kategori 
+“Baik”), melebihi target yang telah ditetapkan dan menandai pencapaian penting 
+karena untuk pertama kalinya indeks nasional berada di atas angka 3. 
+Pada tingkat Instansi Pusat, rata-rata indeks kematangan mencapai skor 
+3,71. Hasil ini menunjukkan bahwa  instansi pusat secara umum telah mampu 
+menerapkan tata kelola SPBE yang menyeluruh.
+
+unjukkan bahwa  instansi pusat secara umum telah mampu 
+menerapkan tata kelola SPBE yang menyeluruh. Domain Layanan dan Kebijakan 
+Internal SPBE mencatat hasil yang mengungguli domain lainnya dengan nilai 
+rata-rata 4,15 dan 3,95 yang masing-masing masuk dalam kategori “Sangat 
+Baik”. Pencapaian ini menunjukkan bahwa instansi pusat telah berhasil 
+mengintegrasikan layanan administrasi dan layanan publik secara digital, serta 
+mengimplementasikan kebijakan internal yang mendukung transformasi digital.
+
+k secara digital, serta 
+mengimplementasikan kebijakan internal yang mendukung transformasi digital. 
+Namun, nilai pada Domain Manajemen dengan rerata skor indeks kematangan 
+2,59 dapat dikatakan masih belum bisa mengejar performa ketiga domain 
+lainnya rendah. Hal ini menandakan bahwa meski fondasi digital telah kuat, 
+aspek pengelolaan—terutama dalam hal manajemen risiko, audit TIK, dan 
+pemanfaatan sumber daya manusia—masih perlu ditingkatkan secara signifikan.
+
+risiko, audit TIK, dan 
+pemanfaatan sumber daya manusia—masih perlu ditingkatkan secara signifikan. 
+Sedangkan pada Pemerintah Daerah, capaian indeks sebesar 3,08 
+menunjukkan bahwa penerapan SPBE masih berada pada level yang relatif 
+sejalan dengan capaian nasional. Domain Layanan juga mendominasi dengan 
+nilai 3,79 (kategori “Sangat Baik”), menandakan bahwa sebagian besar 
+pemerintah daerah telah berhasil memberikan layanan publik digital yang 
+terintegrasi.
+
+bagian besar 
+pemerintah daerah telah berhasil memberikan layanan publik digital yang 
+terintegrasi. Di sisi lain, Domain Tata Kelola dan Manajemen masih menunjukkan 
+tantangan untuk menyusul domain Layanan, masing-masing dengan nilai 2,51 
+dan 1,76. Kesenjangan ini mengungkapkan adanya disparitas dalam
+
+an, masing-masing dengan nilai 2,51 
+dan 1,76. Kesenjangan ini mengungkapkan adanya disparitas dalam
+
+kapasitas pengelolaan dan perencanaan strategis di tingkat daerah, di mana 
+beberapa wilayah mampu mencapai standar nasional sementara yang lain masih 
+tertinggal, bahkan mencapai kategori “Kurang”. 
+Secara menyeluruh, meskipun terdapat tren peningkatan yang stabil, 
+evaluasi SPBE di tahun 2024 menunjukan variasi ekstrim antar instansi, bahkan 
+di dalam satu lokus yang sama. Rentang nilai pada masing-masing domain 
+(rentangi 1,00 hingga 5,00) menunjukkan bahwa perbedaan implementasi SPBE 
+sangat bergantung pada kesiapan institusional dan kapasitas pengelolaan 
+internal.
+
+mplementasi SPBE 
+sangat bergantung pada kesiapan institusional dan kapasitas pengelolaan 
+internal. Domain Manajemen menjadi titik kritis yang konsisten menghadapi 
+tantangan, mengindikasikan perlunya intervensi strategis untuk standarisasi dan 
+peningkatan sistem manajemen di seluruh instansi, baik di tingkat pusat maupun 
+daerah. 
+Hasil evaluasi SPBE 2024 mengaksentuasi bahwa penerapan SPBE di 
+Indonesia telah memasuki fase yang matang dalam beberapa domain, namun 
+masih terdapat celah yang signifikan pada domain manajemen dan tata kelola.
+
+beberapa domain, namun 
+masih terdapat celah yang signifikan pada domain manajemen dan tata kelola. 
+Perbedaan kinerja antara Instansi Pusat dan Pemerintah Daerah, serta disparitas 
+antar daerah, menuntut adanya pendekatan yang lebih terintegrasi dan dukungan 
+kebijakan yang lebih spesifik dan tepat sasaran. Upaya peningkatan kualitas 
+SPBE harus diarahkan tidak hanya pada penguatan infrastruktur, tetapi juga pada 
+peningkatan kompetensi dan sinergi antar instansi.
+
+a pada penguatan infrastruktur, tetapi juga pada 
+peningkatan kompetensi dan sinergi antar instansi.
+
+Tindak Lanjut dan Rekomendasi 
+Berdasarkan analisis capaian nilai indeks kematangan SPBE, langkah-
+langkah tindak lanjut dan rekomendasi yang dapat diambil antara lain: 
+1. Peningkatan Domain Manajemen SPBE: 
+● Mengoptimalkan penerapan manajemen risiko, manajemen keamanan 
+informasi, dan pelaksanaan audit TIK melalui program pelatihan dan 
+peningkatan kapasitas SDM. 
+● Menerapkan sistem manajemen berbasis best practice yang telah 
+diadopsi oleh instansi dengan capaian tinggi, sebagai model 
+pengembangan di instansi yang masih berada pada kategori “Kurang” 
+atau “Cukup”. 
+2.
+
+sebagai model 
+pengembangan di instansi yang masih berada pada kategori “Kurang” 
+atau “Cukup”. 
+2. Penguatan Tata Kelola dan Perencanaan Strategis: 
+● Memperkuat koordinasi antara instansi pusat dan pemerintah daerah 
+untuk memastikan keselarasan strategi dan penyusunan rencana 
+SPBE yang komprehensif. 
+● Melakukan review dan penyesuaian kerangka kerja tata kelola SPBE 
+agar lebih responsif terhadap dinamika implementasi yang sesuai 
+dengan kebutuhan. 
+3.
+
+kelola SPBE 
+agar lebih responsif terhadap dinamika implementasi yang sesuai 
+dengan kebutuhan. 
+3. Penyempurnaan Layanan SPBE: 
+● Mempertahankan dan mengembangkan inovasi pada layanan 
+administrasi pemerintahan dan layanan publik berbasis elektronik, 
+yang telah menunjukkan kinerja “Sangat Baik”. 
+● Mengintegrasikan feedback dari pengguna layanan sebagai dasar 
+perbaikan berkelanjutan dalam penyediaan layanan digital. 
+4. Penanganan Ketimpangan Antar Daerah: 
+● Mengidentifikasi daerah-daerah dengan capaian SPBE yang masih 
+rendah dan mengalokasikan sumber daya dan dukungan lain yang
+
+-daerah dengan capaian SPBE yang masih 
+rendah dan mengalokasikan sumber daya dan dukungan lain yang
+
+bersifat teknis secara intensif guna mempercepat peningkatan 
+kualitas implementasi. 
+● Mendorong pembentukan forum kolaborasi antar daerah untuk 
+berbagi best practices dan solusi inovatif dalam mengatasi kendala 
+spesifik di masing-masing wilayah. 
+5. Evaluasi dan Monitoring Berkala: 
+● Menetapkan 
+mekanisme 
+evaluasi 
+berkala 
+untuk 
+memonitor 
+perkembangan penerapan SPBE, sehingga kendala dan tantangan 
+dapat diidentifikasi serta ditangani secepat dan setepat mungkin.
+
+E, sehingga kendala dan tantangan 
+dapat diidentifikasi serta ditangani secepat dan setepat mungkin. 
+● Mengintegrasikan hasil evaluasi ke dalam perumusan kebijakan 
+strategis untuk mendorong transformasi digital yang lebih holistik dan 
+berkelanjutan. 
+6.
+
+ebijakan 
+strategis untuk mendorong transformasi digital yang lebih holistik dan 
+berkelanjutan. 
+6. Mendukung Arah Transformasi Digital Pemerintah  
+Dengan implementasi rekomendasi di atas, diharapkan penerapan SPBE 
+di Indonesia dapat terus ditingkatkan, menciptakan pemerintahan digital 
+yang lebih efisien, transparan, dan responsif terhadap kebutuhan 
+masyarakat, serta mampu mengurangi kesenjangan antara instansi pusat 
+dan pemerintah daerah.
+
+utuhan 
+masyarakat, serta mampu mengurangi kesenjangan antara instansi pusat 
+dan pemerintah daerah.

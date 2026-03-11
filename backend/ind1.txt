@@ -1,0 +1,157 @@
+Instansi Pusat/Pemerintah Daerah 
+Pertanyaan : Apakah Instansi Pusat/Pemerintah Daerah memiliki 
+kebijakan internal Arsitektur SPBE Instansi 
+Pusat/Pemerintah Daerah? 
+Tingkat 
+Kriteria 
+1 
+Konsep kebijakan internal terkait Arsitektur SPBE Instansi 
+Pusat/Pemerintah Daerah belum atau telah tersedia.
+
+ijakan internal terkait Arsitektur SPBE Instansi 
+Pusat/Pemerintah Daerah belum atau telah tersedia. 
+2 
+Kebijakan internal Arsitektur SPBE  Instansi Pusat/Pemerintah 
+Daerah telah ditetapkan.  
+Kondisi: Kebijakan internal Arsitektur SPBE Instansi 
+Pusat/Pemerintah Daerah tersebut belum memuat secara 
+lengkap pengaturan mengenai referensi Arsitektur dan domain 
+Arsitektur SPBE (Proses Bisnis, Data dan Informasi, 
+Infrastruktur SPBE, Aplikasi SPBE, Keamanan SPBE, dan 
+Layanan SPBE).
+
+s Bisnis, Data dan Informasi, 
+Infrastruktur SPBE, Aplikasi SPBE, Keamanan SPBE, dan 
+Layanan SPBE).  
+3 
+Kriteria tingkat 2 telah terpenuhi dan kebijakan internal 
+Arsitektur SPBE Instansi Pusat/Pemerintah Daerah telah 
+memuat  secara lengkap pengaturan mengenai referensi 
+Arsitektur dan domain Arsitektur SPBE (Proses Bisnis, Data 
+dan Informasi, Infrastruktur SPBE, Aplikasi SPBE, Keamanan 
+SPBE, dan Layanan SPBE).
+
+s Bisnis, Data 
+dan Informasi, Infrastruktur SPBE, Aplikasi SPBE, Keamanan 
+SPBE, dan Layanan SPBE).  
+4 
+Kriteria tingkat 3 telah terpenuhi, kebijakan internal Arsitektur 
+SPBE Instansi Pusat/Pemerintah Daerah telah mengatur 
+integrasi SPBE antar Instansi Pusat, antar Pemerintah Daerah, 
+dan/atau antar Instansi Pusat dan Pemerintah Daerah, dan 
+kebijakan internal Arsitektur SPBE Instansi Pusat/Pemerintah 
+Daerah telah direviu dan dievaluasi secara periodik.
+
+rnal Arsitektur SPBE Instansi Pusat/Pemerintah 
+Daerah telah direviu dan dievaluasi secara periodik. 
+5 
+Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi 
+kebijakan internal Arsitektur Instansi Pusat/Pemerintah 
+Daerah SPBE telah ditindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+rah SPBE telah ditindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+ah SPBE telah ditindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+h SPBE telah ditindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+SPBE telah ditindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+SPBE telah ditindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+PBE telah ditindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+BE telah ditindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+E telah ditindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+telah ditindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+telah ditindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+elah ditindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+lah ditindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+ah ditindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+h ditindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+ditindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+ditindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+itindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+tindaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+indaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+ndaklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5
+
+daklanjuti dengan kebijakan baru. 
+Jawaban 
+: Pilih tingkat 1, 2, 3, 4, atau 5 
+
+
+ 
+-31- 
+ 
+ 
+Penjelasan  
+: ………………………………………………………………………….. 
+Data dukung : ……………………………………………………………………….….
+
+31- 
+ 
+ 
+Penjelasan  
+: ………………………………………………………………………….. 
+Data dukung : ……………………………………………………………………….…. 
+ 
+Domain 1 
+: Kebijakan Internal SPBE 
+Aspek 1 
+: Kebijakan Internal Tata Kelola SPBE 

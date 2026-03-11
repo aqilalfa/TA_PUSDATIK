@@ -1,0 +1,214 @@
+DOCUMENT: Permenpan RB Nomor 5 Tahun 2020.pdf
+TYPE: peraturan
+TOTAL CHUNKS: 10
+============================================================
+
+--- CHUNK 1 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 5 Tahun 2020", "tentang": "PEDOMAN MANAJEMEN RISIKO SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 5 Tahun 2020.pdf", "hierarchy": "Pembukaan", "bab": "", "pasal": "", "ayat": ""}
+CONTENT:
+PERATURAN MENTERI PENDAYAGUNAAN APARATUR NEGARA 
+DAN REFORMASI BIROKRASI REPUBLIK INDONESIA 
+NOMOR 5 TAHUN 2020 
+TENTANG 
+PEDOMAN MANAJEMEN RISIKO 
+SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK 
+ 
+DENGAN RAHMAT TUHAN YANG MAHA ESA 
+ 
+MENTERI PENDAYAGUNAAN APARATUR NEGARA 
+DAN REFORMASI BIROKRASI REPUBLIK INDONESIA, 
+ 
+ 
+Menimbang 
+:   
+bahwa untuk melaksanakan ketentuan Pasal 47 ayat 
+(5) Peraturan Presiden Nomor 95 Tahun 2018 tentang 
+Sistem 
+Pemerintahan 
+Berbasis 
+Elektronik, 
+perlu 
+menetapkan 
+Peraturan 
+Menteri 
+Pendayagunaan 
+Aparatur Negara dan Reformasi Birokrasi tentang
+----------------------------------------
+
+--- CHUNK 2 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 5 Tahun 2020", "tentang": "PEDOMAN MANAJEMEN RISIKO SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 5 Tahun 2020.pdf", "hierarchy": "Pembukaan", "bab": "", "pasal": "", "ayat": ""}
+CONTENT:
+menetapkan 
+Peraturan 
+Menteri 
+Pendayagunaan 
+Aparatur Negara dan Reformasi Birokrasi tentang 
+Pedoman Manajemen Risiko Sistem Pemerintahan 
+Berbasis Elektronik; 
+ 
+Mengingat 
+: 1. Pasal 17 ayat (3) Undang-Undang Dasar Negara 
+Republik Indonesia Tahun 1945; 
+2. Peraturan Presiden Nomor 47 Tahun 2015 tentang 
+Kementerian  Pendayagunaan Aparatur Negara dan 
+Reformasi 
+Birokrasi 
+(Lembaran 
+Negara 
+Republik 
+Indonesia Tahun 2015 Nomor 89); 
+3. Peraturan Presiden Nomor 95 Tahun 2018 tentang 
+Sistem Pemerintahan Berbasis Elektronik (Lembaran 
+Negara Republik Indonesia Tahun 2018 Nomor 182);
+----------------------------------------
+
+--- CHUNK 3 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 5 Tahun 2020", "tentang": "PEDOMAN MANAJEMEN RISIKO SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 5 Tahun 2020.pdf", "hierarchy": "Pembukaan", "bab": "", "pasal": "", "ayat": ""}
+CONTENT:
+- 2 - 
+ 
+MEMUTUSKAN: 
+Menetapkan 
+: PERATURAN MENTERI PENDAYAGUNAAN APARATUR 
+NEGARA DAN REFORMASI BIROKRASI REPUBLIK 
+INDONESIA TENTANG PEDOMAN MANAJEMEN RISIKO 
+SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK.
+----------------------------------------
+
+--- CHUNK 4 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 5 Tahun 2020", "tentang": "PEDOMAN MANAJEMEN RISIKO SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 5 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan 5 Tahun 2020 > Pasal 1"}
+CONTENT:
+Dalam Peraturan Menteri ini yang dimaksud dengan :  
+1. Sistem 
+Pemerintahan 
+Berbasis 
+Elektronik 
+yang 
+selanjutnya disingkat SPBE adalah penyelenggaraan 
+pemerintahan 
+yang 
+memanfaatkan 
+teknologi 
+informasi 
+dan 
+komunikasi 
+untuk 
+memberikan 
+layanan kepada Pengguna SPBE.  
+2. Manajemen 
+Risiko 
+SPBE 
+adalah 
+pendekatan 
+sistematis 
+yang 
+meliputi 
+proses, 
+pengukuran, 
+struktur, dan budaya untuk menentukan tindakan 
+terbaik terkait Risiko SPBE.  
+3. Risiko 
+SPBE 
+adalah 
+peluang 
+terjadinya 
+suatu 
+peristiwa yang akan mempengaruhi keberhasilan
+----------------------------------------
+
+--- CHUNK 5 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 5 Tahun 2020", "tentang": "PEDOMAN MANAJEMEN RISIKO SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 5 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan 5 Tahun 2020 > Pasal 1"}
+CONTENT:
+3. Risiko 
+SPBE 
+adalah 
+peluang 
+terjadinya 
+suatu 
+peristiwa yang akan mempengaruhi keberhasilan 
+terhadap pencapaian tujuan penerapan SPBE.  
+4. Pengguna SPBE adalah Instansi Pusat, Pemerintah 
+Daerah, pegawai Aparatur Sipil Negara, perorangan, 
+masyarakat, pelaku usaha, dan pihak lain yang 
+memanfaatkan layanan SPBE.  
+5. Instansi 
+Pusat 
+adalah 
+kementerian, 
+lembaga 
+pemerintah 
+nonkementerian, 
+kesekretariatan 
+lembaga 
+negara, 
+kesekretariatan 
+lembaga 
+nonstruktural, dan lembaga pemerintah lainnya.  
+6. Pemerintah Daerah adalah kepala daerah sebagai
+----------------------------------------
+
+--- CHUNK 6 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 5 Tahun 2020", "tentang": "PEDOMAN MANAJEMEN RISIKO SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 5 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan 5 Tahun 2020 > Pasal 1"}
+CONTENT:
+nonstruktural, dan lembaga pemerintah lainnya.  
+6. Pemerintah Daerah adalah kepala daerah sebagai 
+unsur penyelenggara pemerintahan daerah yang 
+memimpin pelaksanaan urusan pemerintahan yang 
+menjadi kewenangan daerah otonom.  
+7. Menteri adalah menteri yang menangangi urusan 
+pemerintahan di bidang pendayagunaan aparatur 
+Negara.
+----------------------------------------
+
+--- CHUNK 7 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 5 Tahun 2020", "tentang": "PEDOMAN MANAJEMEN RISIKO SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 5 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 2", "bagian": "", "ayat": "", "hierarchy": "Peraturan 5 Tahun 2020 > Pasal 2"}
+CONTENT:
+Pedoman Manajemen Risiko SPBE digunakan untuk 
+memberikan panduan kepada Instansi Pusat dan 
+Pemerintah 
+Daerah 
+dalam 
+menyusun 
+dan 
+melaksanakan Manajemen Risiko SPBE.
+----------------------------------------
+
+--- CHUNK 8 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 5 Tahun 2020", "tentang": "PEDOMAN MANAJEMEN RISIKO SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 5 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 3", "bagian": "", "ayat": "", "hierarchy": "Peraturan 5 Tahun 2020 > Pasal 3"}
+CONTENT:
+Dalam penyusunan dan pelaksanaan Manajemen 
+Risiko SPBE sebagaimana dimaksud dalam Pasal 2, 
+Instansi 
+Pusat 
+dan 
+Pemerintah 
+Daerah 
+dapat 
+menyesuaikan karakteristik masing-masing dengan 
+berpedoman pada Peraturan Menteri ini
+----------------------------------------
+
+--- CHUNK 9 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 5 Tahun 2020", "tentang": "PEDOMAN MANAJEMEN RISIKO SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 5 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 4", "bagian": "", "ayat": "", "hierarchy": "Peraturan 5 Tahun 2020 > Pasal 4"}
+CONTENT:
+Dalam 
+pelaksanaan 
+Manajemen 
+Risiko 
+SPBE, 
+pimpinan 
+Instansi 
+Pusat 
+dan 
+kepala 
+daerah 
+berkoordinasi dan dapat melakukan konsultasi 
+dengan Menteri.
+----------------------------------------
+
+--- CHUNK 10 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 5 Tahun 2020", "tentang": "PEDOMAN MANAJEMEN RISIKO SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 5 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 5", "bagian": "", "ayat": "", "hierarchy": "Peraturan 5 Tahun 2020 > Pasal 5"}
+CONTENT:
+Pedoman Manajemen Risiko SPBE tercantum dalam
+----------------------------------------
+

@@ -1,0 +1,836 @@
+DOCUMENT: Perpres Nomor 82 Tahun 2023.pdf
+TYPE: peraturan
+TOTAL CHUNKS: 55
+============================================================
+
+--- CHUNK 1 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "hierarchy": "Pembukaan", "bab": "", "pasal": "", "ayat": ""}
+CONTENT:
+SALINAN
+PRESIDEN
+REPUBLIK INDONESIA
+PERATURAN PRESIDEN REPUBLIK INDONESIA
+NOMOR 82 TAHUN 2023
+TENTANG
+PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN
+DIGITAL NASIONAL
+DENGAN RAHMAT TUHAN YANG MAHA ESA
+PRESIDEN REPUBUK INDONESIA,
+Menimbang
+a. bahwa untuk mewujudkan pelayanan publik yang
+berkualitas dan tepercaya, sistem pemerintahan
+berbasis elektronik dan satu data Indonesia yang
+terpadu dan menyeluruh, birokrasi dan pelayanan
+publik yang berkinerja tinggi, penguatan pencegahan
+korupsi, dan penguatan aspek keamanan siber dan
+keamanan informasi, perlu melakukan percepatan
+----------------------------------------
+
+--- CHUNK 2 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "hierarchy": "Pembukaan", "bab": "", "pasal": "", "ayat": ""}
+CONTENT:
+korupsi, dan penguatan aspek keamanan siber dan
+keamanan informasi, perlu melakukan percepatan
+transformasi digitaf ;
+b. bahwa untuk mewujudkan percepatan transformasi
+digital dalam sistem pemerintahan berbasis elektronik,
+perlu koordinasi dan kolaborasi antara
+kementerian/lemb"ga dan badan usaha milik negara;
+c. bahwa berdasarkan pertimbangan sebagaimana
+dimaksud dalam huruf a dan huruf b, perlu
+menetapkan Peraturan Presiden tentang percepatan
+Transformasi Digital dan Keterpaduan Layanan Digital
+Nasional;
+----------------------------------------
+
+--- CHUNK 3 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "", "pasal": "Pasal 4", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > Pasal 4"}
+CONTENT:
+ayat (l) Undang-Undang Dasar Negara Republik
+Indonesia Tahun 1945;
+Mengingat
+Menetapkan
+MEMUTUSKAN:
+PERATURAN PRESIDEN TENTANG PERCEPATAN
+TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN
+DIGITAL NASIONAL.
+SK No 132281A
+BABI...
+
+
+PRESIDEN
+REPUALIK INDONESIA
+-2
+----------------------------------------
+
+--- CHUNK 4 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB I", "pasal": "", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB I"}
+CONTENT:
+KETENTUAN UMUM
+----------------------------------------
+
+--- CHUNK 5 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB I", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB I > Pasal 1"}
+CONTENT:
+Dalam Peraturan Presiden ini yang dimaksud dengan:
+1. Sistem Pemerintahan Berbasis Elektronik yang
+selanjutnya disingkat SPBE adalah penyelenggaraan
+pemerintahan yang memanfaatkan teknologi informasi
+dan komunikasi untuk memberikan layanan kepada
+pengguna SPBE.
+2. Satu Data Indonesia adalah kebijakan tata kelola data
+pemerintah sebagaimana dimaksud dalam Peraturan
+Presiden mengenai Satu Data Indonesia.
+3. Layanan SPBE adalah keluaran yang dihasilkan oleh
+I (satu) atau beberapa fungsi aplikasi SPBE dan yang
+memiliki nilai manfaat.
+4. Pengguna SPBE adalah instansi pusat, pemerintah
+----------------------------------------
+
+--- CHUNK 6 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB I", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB I > Pasal 1"}
+CONTENT:
+memiliki nilai manfaat.
+4. Pengguna SPBE adalah instansi pusat, pemerintah
+daerah, pegawai Aparatur Sipil Negara, perorangan,
+masyarakat, pelaku usaha, dan pihak lain yang
+memanfaatkan Layanan SPBE.
+5. Aplikasi SPBE adalah satu atau sekumpulan program
+komputer dan prosedur yang dirancang untuk melakukan
+tugas atau fungsi Layanan SPBE.
+6. Aplikasi SPBE Prioritas adalah Aplikasi SPBE yang
+berdampak luas dan merupakan perwujudan nyata dari
+Layanan SPBE yang berkualitas dan tepercaya.
+7. Infrastruktur SPBE adalah semua perangkat keras,
+perangkat lunak, dan fasilitas yang menjadi penunjang
+----------------------------------------
+
+--- CHUNK 7 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB I", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB I > Pasal 1"}
+CONTENT:
+perangkat lunak, dan fasilitas yang menjadi penunjang
+utama untuk menjalankan sistem, aplikasi, komunikasi
+data, pengolahan dan penyimpanan data, perangkat
+integrasi/penghubung, dan perangkat elektronik lainnya.
+8. Tim Koordinasi SPBE Nasional adalah penyelenggara SPBE
+yang mempunyai tugas melakukan koordinasi dan
+penerapan kebijakan SPBE pada instansi pusat dan
+pemerintah daerah.
+9. Forum Satu Data Indonesia adalah wadah komunikasi dan
+koordinasi instansi pusat dan/ atau instansi daerah untuk
+penyelenggaraan Satu Data Indonesia.
+SK No 132282 A
+10. Perusahaan . . .
+----------------------------------------
+
+--- CHUNK 8 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB I", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB I > Pasal 1"}
+CONTENT:
+PRESIDEN
+REPUBLIK INDONESIA
+-3-
+10. Perusahaan Umum Percetakan Uang Republik Indonesia
+yang selanjutnya disebut Perum Peruri adalah badan
+usaha milik negara yang seluruh modalnya dimiliki negara
+berupa kekayaan negara yang dipisahkan dan tidak
+terbagi atas saham, yang menyelenggarakan usaha
+pencetakan uang, pembuatan dokumen sekuriti untuk
+negara dan dokumen sekuriti lainnya, jasa digital sekuriti,
+serta usaha lainnya yang dapat menunjang tercapainya
+maksud dan tujuan perusahaan.
+----------------------------------------
+
+--- CHUNK 9 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB II", "pasal": "", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB II"}
+CONTENT:
+APLIKASI SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK PRIORITAS
+----------------------------------------
+
+--- CHUNK 10 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB II", "pasal": "Pasal 2", "bagian": "", "ayat": "Ayat (1)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB II > Pasal 2 > Ayat (1)"}
+CONTENT:
+(1) Dalam rangka mencapai keterpaduan layanan digital
+nasional, Pemerintah melakukan percepatan transformasi
+digital melalui penyelenggaraan Aplikasi SPBE Prioritas
+dengan mengutamakan integrasi dan interoperabilitas.
+(21 Aplikasi SPBE Prioritas dapat berupa:
+a. Aplikasi SPBE yang baru akan beroperasi atau akan
+dibangun; dan
+b. Aplikasi SPBE yang telah beroperasi atau akan
+dikembangkan,
+yang memiliki minimal 200.000 (dua ratus ribu) Pengguna
+SPBE atau target Pengguna SPBE.
+----------------------------------------
+
+--- CHUNK 11 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB II", "pasal": "Pasal 2", "bagian": "", "ayat": "Ayat (3)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB II > Pasal 2 > Ayat (3)"}
+CONTENT:
+(3) Aplikasi SPBE Prioritas diselenggarakan untuk
+mendukung:
+a. layanan pendidikan terintegrasi, dengan penanggung
+jawab menteri yang
+urusan
+pemerintahan di bidang pendidikan;
+b. layanan kesehatan terintegrasi, dengan penElnggung
+jawab menteri yang
+urusan
+pemerintahan di bidang kesehatan;
+c. layanan bantuan sosial terintegrasi, dengan
+penanggung jawab menteri yang menyelenggarakan
+urusan pemerintahan di bidang sosial;
+d. layanan administrasi kependudukan yang
+terintegrasi dengan layanan identitas kependudukan
+digitat, dengan penanggung jawab menteri yang
+urusan pemerintahan dalam
+----------------------------------------
+
+--- CHUNK 12 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB II", "pasal": "Pasal 2", "bagian": "", "ayat": "Ayat (3)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB II > Pasal 2 > Ayat (3)"}
+CONTENT:
+digitat, dengan penanggung jawab menteri yang
+urusan pemerintahan dalam
+e. layanan . . .
+SK No 132283 A
+negeru
+----------------------------------------
+
+--- CHUNK 13 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB II", "pasal": "Pasal 2", "bagian": "", "ayat": "Ayat (3)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB II > Pasal 2 > Ayat (3)"}
+CONTENT:
+PRESIDEN
+REPUBLIK INDONESIA
+-4
+e. layanan transaksi keuangan negara sebagai layanan
+pembayaran terpadu yang terintegrasi dengan
+seluruh penyedia layanan jasa keuangan, dengan
+penanggung jawab menteri yang menyelenggarakan
+urusan pemerintahan di bidang keuangan negara;
+f. layanan administrasi pemerintahan di bidang
+aparatur negara yang terintegrasi dengan layanan
+dasar kepegawaian, dengan penanggung jawab
+menteri yang 
+menyelenggarakan urusan
+pemerintahan di bidang aparatur negara;
+g. layanan portal pelayanan publik, layanan singLe sign
+on nasional, layanan identitas digital terpadu, dan
+----------------------------------------
+
+--- CHUNK 14 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB II", "pasal": "Pasal 2", "bagian": "", "ayat": "Ayat (3)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB II > Pasal 2 > Ayat (3)"}
+CONTENT:
+on nasional, layanan identitas digital terpadu, dan
+Iayanan Infrastruktur SPBE terintegrasi termasuk
+pusat data nasional, jaringan intra pemerintah,
+sistem penghubung layanan pemerintah, dan
+komputasi awan, dengan penanggung jawab menteri
+yang menyelenggarakan urusan pemerintahan di
+bidang komunikasi dan informatika;
+h. layanan Satu Data Indonesia, dengan penanggung
+jawab menteri yang menyelenggarakan urusan
+pemerintahan di bidang perencanaan pembangunan
+nasional; dan
+i. 
+layanan kepolisian yang terintegrasi meliputi
+penerbitan surat izin mengemudi dan izin keramaian,
+----------------------------------------
+
+--- CHUNK 15 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB II", "pasal": "Pasal 2", "bagian": "", "ayat": "Ayat (3)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB II > Pasal 2 > Ayat (3)"}
+CONTENT:
+layanan kepolisian yang terintegrasi meliputi
+penerbitan surat izin mengemudi dan izin keramaian,
+dengan penanggung jawab Kepala Kepolisian Negara
+Republik Indonesia.
+----------------------------------------
+
+--- CHUNK 16 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB II", "pasal": "Pasal 2", "bagian": "", "ayat": "Ayat (4)-(6)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB II > Pasal 2 > Ayat (4)-(6)"}
+CONTENT:
+(4) Aplikasi SPBE Prioritas sebagaimana dimaksud pada
+ayat (2) huruf a telah diintegrasikan dan diluncurkan
+secara terpadu untuk pertama kalinya paling lambat pada
+triwulan III tahun 2024.
+(5) Aplikasi SPBE Prioritas sebagaimana dimaksud pada
+ayat (21 huruf b telah diintegrasikan dan diluncurkan
+secara terpadu sebagai versi lebih lanjut paling lambat
+pada triwulan lll tahun 2024.
+(6) Aplikasi SPBE Prioritas sebagaimana dimaksud pada
+ayat l4l dan ayat (5) tetap dikembangkan secara
+berkesinambungan setelah peluncuran.
+SK No 132284A
+BABIII ...
+
+
+PRESIDEN
+REPUBLIK INDONESIA
+5-
+----------------------------------------
+
+--- CHUNK 17 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III"}
+CONTENT:
+PENUGASAN PEI{YELENGGARAAN APLIKASI SISTEM PEMERINTAHAN
+BERBASIS ELEKTRONIK PRIORITAS
+----------------------------------------
+
+--- CHUNK 18 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 3", "bagian": "", "ayat": "Ayat (1)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 3 > Ayat (1)"}
+CONTENT:
+(1) Pemerintah sebagaimana dimaksud dalam Pasal 2
+ayat (1) menugaskan Perum Peruri untuk penyelenggaraan
+Aplikasi SPBE Prioritas.
+(21 Dalam melaksanalan penugasan sebagaimana dimaksud
+pada ayat (1), Perum Peruri wajib melakukan:
+a. identifrkasi permasalahan penyelenggaraan Aplikasi
+SPBE Prioritas;
+b. pendalaman kebutuhan Pengguna SPBE; dan
+c. perancangan solusi tepat guna.
+----------------------------------------
+
+--- CHUNK 19 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 3", "bagian": "", "ayat": "Ayat (3)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 3 > Ayat (3)"}
+CONTENT:
+(3) Dengan memperhatikan peruulcangan solusi tepat guna
+sebagaimana dimaksud pada ayat (2) huruf c, penugas€rn
+sebagaimana dimaksud pada ayat (1) terdiri atas:
+a. perencanaan penyelenggaraan Aplikasi SPBE
+Prioritas;
+b. pembangunan dan/ atau pengembangan Aplikasi
+SPBE Prioritas;
+c. pengintegrasian Aplikasi SPBE Prioritas;
+d. pengoperasian Aplikasi SPBE Prioritas;
+e. keamanan Aplikasi SPBE Prioritas;
+f. distribusi dan/atau diseminasi Aplikasi SPBE
+Prioritas;
+g. pemeliharaan Aplikasi SPBE Prioritas; dan/ atau
+h. pengelolaan Infrastruktur SPBE yang mendukung
+Aplikasi SPBE Prioritas.
+----------------------------------------
+
+--- CHUNK 20 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 3", "bagian": "", "ayat": "Ayat (4)-(5)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 3 > Ayat (4)-(5)"}
+CONTENT:
+(4) Kementerian/lembaga pen€mggung jawab Aplikasi SPBE
+Prioritas menentukan paling sedikit 1 (satu) cakupan
+penugasan sebagaimana dimaksud pada ayat (3), dengan
+memperhatikan:
+a. kebutuhan kementerian/lembaga penanggung jawab
+Aplikasi SPBE Prioritas;
+b. ketersediaanpendanaan;
+c. kapabilitas Perum Peruri; dan
+d. potensi ketercapaian target peluncuran Aplikasi
+SPBE Prioritas sebagaimana dimaksud dalam Pasal 2
+ayat (4) dan ayat (5).
+SK No 132285 A
+(5) Dalam . . .
+
+
+PRESIDEN
+K INDONESIA
+-6-
+----------------------------------------
+
+--- CHUNK 21 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 3", "bagian": "", "ayat": "Ayat (5)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 3 > Ayat (5)"}
+CONTENT:
+(5) Dalam hal kementerian/lembaga penanggung jawab
+Aplikasi SPBE Prioritas sed€rng dalam proses melakukan
+pembangunan Aplikasi SPBE Prioritas, selain penugasan
+sebagaimana dimaksud pada ayat (2), Perum Peruri
+melakukan:
+a. pelaksanaan kendali mutu penyelenggaraan Aplikasi
+SPBE Prioritas;
+b. pendampingan teknis penyelenggaraan Aplikasi SPBE
+Prioritas; dan/ atau
+c. fasilitasi pengintegrasian Aplikasi SPBE Prioritas.
+----------------------------------------
+
+--- CHUNK 22 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 3", "bagian": "", "ayat": "Ayat (6)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 3 > Ayat (6)"}
+CONTENT:
+(6) Cakupan penugasan sebagaimana dimaksud pada ayat
+(21, ayat (3), dan ayat (5) tidak mengambil alih peran
+kementerian/lembaga penanggung jawab Aplikasi SPBE
+Prioritas untuk mengendalikan data dan informasi,
+Aplikasi SPBE, Infrastruktur SPBE, dan keamanan SPBE
+untuk penyelenggaraan Aplikasi SPBE Prioritas.
+----------------------------------------
+
+--- CHUNK 23 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 4", "bagian": "", "ayat": "Ayat (1)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 4 > Ayat (1)"}
+CONTENT:
+(1) Dalam pelaksanaan penugasan penyelenggaraan Aplikasi
+SPBE Prioritas oleh Perum Peruri sebageimana dimaksud
+dalam Pasal 3 ayat (1), Tim Koordinasi SPBE Nasional
+melakukan koordinasi, penyelarasan, pengawalan, dan
+pengarahan untuk memastikan pencapaian tujuan dari
+penugasan Perum Peruri.
+(21 Dalam melaksanakan koordinasi, penyelarasan,
+pengawalan, dan pengarahan sebagaimana dimaksud
+pada ayat (1), Tim Koordinasi SPBE Nasional melibatkan:
+a. menteri/kepala lemb"ga penanggung jawab Aplikasi
+SPBE Prioritas;
+b. menteri yang
+pemerintahan di bidang badan usaha milik negara;
+dan
+----------------------------------------
+
+--- CHUNK 24 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 4", "bagian": "", "ayat": "Ayat (1)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 4 > Ayat (1)"}
+CONTENT:
+SPBE Prioritas;
+b. menteri yang
+pemerintahan di bidang badan usaha milik negara;
+dan
+c. kepala lembaga yang
+pemerintahan di bidang pengawasan keuangan
+negara dan pembangunan nasional.
+----------------------------------------
+
+--- CHUNK 25 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 5", "bagian": "", "ayat": "Ayat (1)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 5 > Ayat (1)"}
+CONTENT:
+(1) Dalam rangka pelaksanaan penugasan sebasaimana
+dimaksud dalam Pasal 3 ayat (1), Perum Peruri dapat:
+urusan
+urusan
+SK No 132286 A
+a. bekerja sama . . .
+----------------------------------------
+
+--- CHUNK 26 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 5", "bagian": "", "ayat": "Ayat (1)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 5 > Ayat (1)"}
+CONTENT:
+PRESIDEN
+REPUBLIK INDONESIA
+-7 -
+a. bekerja sama dengan badan usaha milik negara, anak
+perusahaan badan usaha milik negara, dan badan
+usaha lainnya sesuai dengan kaidah bisnis dan tata
+kelola perusahaan yang baik; dan
+b.
+jasa dan/atau sumber daya
+manusia sektor teknologi yang mumpuni dan sumber
+daya manusia sektor lainnya sebagai pendukung,
+sesuai dengan referensi harga yang ditetapkan oleh
+kementerian yang
+urusan
+pemerintahan di bidang komunikasi dan informatika.
+(21 Kerja sama sebagaimana dimaksud pada ayat (1)
+huruf a dilakukan dengan tqiuan meningkatkan
+----------------------------------------
+
+--- CHUNK 27 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 5", "bagian": "", "ayat": "Ayat (1)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 5 > Ayat (1)"}
+CONTENT:
+(21 Kerja sama sebagaimana dimaksud pada ayat (1)
+huruf a dilakukan dengan tqiuan meningkatkan
+kemanfaatan dan efisiensi penyelenggaraan Aplikasi SPBE
+Prioritas.
+----------------------------------------
+
+--- CHUNK 28 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 5", "bagian": "", "ayat": "Ayat (3)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 5 > Ayat (3)"}
+CONTENT:
+(3) Referensi harga sebagaimana dimaksud pada ayat (1)
+huruf b ditetapkan dengan keputusan menteri yang
+urusan pemerintahan di bidang
+komunikasi dan informatika paling lambat 30 (tiga puluh)
+hari sejak Peraturan Presiden ini berlaku.
+----------------------------------------
+
+--- CHUNK 29 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 6", "bagian": "", "ayat": "Ayat (1)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 6 > Ayat (1)"}
+CONTENT:
+(1) Kementerian/lembaga penanggung jawab Aplikasi SPBE
+Prioritas dapat melakukan pengakhiran Aplikasi SPBE
+yang telah beroperasi sebelum Peraturan Presiden ini
+diundangkan.
+(21 Pengakhiran Aplikasi SPBE sebagaimana dimaksud pada
+ayat (1) bertujuan untuk meningkatkan efektivitas
+dan/ atau efisiensi penyelenggaraan SPBE.
+----------------------------------------
+
+--- CHUNK 30 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 6", "bagian": "", "ayat": "Ayat (3)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 6 > Ayat (3)"}
+CONTENT:
+(3) Pengakhiran Aplikasi SPBE sebagaimana dimaksud pada
+ayat (1) dilaksanakan berdasarkan:
+a. rancangan solusi tepat guna sebagaimana dimaksud
+dalam Pasal 3 ayat(2) hurufc; dan
+b. rekomendasi dari lembaga yang menyelenggarakan
+urusan pemerintahan di bidang pengawasan
+keuangan negara dan pembangunan nasional.
+Pasa77
+----------------------------------------
+
+--- CHUNK 31 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 6", "bagian": "", "ayat": "Ayat (1)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 6 > Ayat (1)"}
+CONTENT:
+(1) Pendanaan untuk penugasan Perum Peruri sebagaimana
+dimaksud dalam Pasal 3 ayat (1) bersumber dari:
+SK No 132287A
+a. anggaran . . .
+----------------------------------------
+
+--- CHUNK 32 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 6", "bagian": "", "ayat": "Ayat (1)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 6 > Ayat (1)"}
+CONTENT:
+PRESIDEN
+REPIIBLIK INDONESIA
+-8-
+a. anggaran pendapatan dan belanja negara; dan/ atau
+b. sumber-sumber lain yang sah dan tidak mengikat
+sesuai dengan ketentuan peraturan perundang-
+undangan.
+(21 Pendanaan sebagaimana dimaksud pada ayat (1) huruf a
+dialokasikan pada anggaran pendapatan dan belanja
+negara kementerian/lembaga penzrnggung jawab Aplikasi
+SPBE Prioritas yang diprioritaskan untuk digunakan
+secara khusus sebagai pembayaran pelaksanaan
+penugasan Perum Peruri.
+----------------------------------------
+
+--- CHUNK 33 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 6", "bagian": "", "ayat": "Ayat (3)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 6 > Ayat (3)"}
+CONTENT:
+(3) Pendanaan sebagaimana dimaksud pada ayat (2) dapat
+dilakukan secara tahun jamak sesuai dengan ketentuan
+peraturan perundang-undangan.
+----------------------------------------
+
+--- CHUNK 34 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 8", "bagian": "", "ayat": "Ayat (1)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 8 > Ayat (1)"}
+CONTENT:
+(1) Dalam hal terdapat potensi penerimaan negara yang perlu
+dalam penyelenggaraan Aplikasi SPBE
+Prioritas maka Perum Peruri dapat ditunjuk sebagai mitra
+instansi pengelola penerimaan negara bukan pajak.
+(21 Penunjukan sebagaimana dimaksud pada ayat (1)
+dilakukan sesuai dengan ketentuan peraturan
+undangan.
+----------------------------------------
+
+--- CHUNK 35 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 9", "bagian": "", "ayat": "Ayat (1)-(5)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 9 > Ayat (1)-(5)"}
+CONTENT:
+(1) Pelaksanaan penugasan Perum Peruri sebagaimana
+dimaksud dalam Pasal 3 ayal (21, ayat (3), dan/atau ayat
+(5) dituangkan dalam perjanjian pelaksanaan penugasan
+antara kementerian/lembaga penanggung jawab Aplikasi
+SPBE Prioritas dengan Perum Peruri.
+----------------------------------------
+
+--- CHUNK 36 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 9", "bagian": "", "ayat": "Ayat (3)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 9 > Ayat (3)"}
+CONTENT:
+(3) Perjanjian pelaksanaan penugasan sebagaimana
+dimaksud pada ayat (1) paling sedikit memuat:
+a. ruang lingkup perjanjian;
+b. bentuk dukungan kementerian / lembaga terkait;
+c. hak dan kewajiban para pihak;
+d. jumlah pendanaan pelaksanaan penugasan;
+e. mekanisme pembayaran pelaksanaan penugasan;
+f. 
+sifat kerahasiaan pelaksanaan perjanjian;
+g. pengakhiranperjanjian;
+h. penyelesaian sengketa; dan
+i. 
+keadaan kahar.
+----------------------------------------
+
+--- CHUNK 37 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 1"}
+CONTENT:
+O. . .
+SK No 132288 A
+
+
+PRESIDEN
+REPUBLIK INDONESIA
+-9-
+----------------------------------------
+
+--- CHUNK 38 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 10", "bagian": "", "ayat": "Ayat (1)-(3)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 10 > Ayat (1)-(3)"}
+CONTENT:
+(1) Kementerian/lembaga penanggung jawab Aplikasi SPBE
+Prioritas merupakan pemegang hak kekayaan intelektual
+atas Aplikasi SPBE Prioritas yang dibangun dan
+dikembangkan dalam rangka pelaksanaan penugasan
+sebagaimana dimaksud dalam Pasal 3 ayat (1).
+(21 Aplikasi SPBE Prioritas merupakan barang milik negara
+pada kementerian/lembaga penanggung jawab Aplikasi
+SPBE Prioritas dan dikelola berdasarkan ketentuan
+peraturan perundang-undangan.
+(3) Hak kekayaan intelektual yang timbul dalam masa
+penugasan dapat diatur lebih lanjut dalam perjanjian
+pelaksanaan penugasan sebagaimana dimaksud dalam
+----------------------------------------
+
+--- CHUNK 39 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB III", "pasal": "Pasal 9", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 9"}
+CONTENT:
+ayat (1) antara kementerian/ lembaga penanggung
+jawab Aplikasi SPBE Prioritas dan Perum Peruri sesuai
+dengan ketentuan peraturan perundang-undangan.
+----------------------------------------
+
+--- CHUNK 40 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB IV", "pasal": "", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB IV"}
+CONTENT:
+PERAN INSTANSI PEMERINTAH
+Pasal l1
+Kementerian/lembaga penanggung jawab Aplikasi SPBE
+Prioritas:
+a. menyediakan data dan informasi yang dibutuhkan dalam
+pelaksanaan penugas€rn sebagaimana yang tertuang
+dalam perjanjian sesuai dengan ketentuan peraturan
+perundang-undangan;
+b. melaksanakan manajemen perubahan dalam
+penyelenggaraan Aplikasi SPBE Prioritas;
+c.
+d.
+e.
+menunjuk pejabat untuk
+koordinasi;
+menetapkan standar kinerja penyelenggaraan Aplikasi
+SPBE Prioritas;
+melakukan pembinaan dan pengawasan terhadap
+penyusunan dan pelaksanaan perjanjian yang sedang
+berlangsung dalam
+Prioritas; dan
+----------------------------------------
+
+--- CHUNK 41 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB IV", "pasal": "", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB IV"}
+CONTENT:
+penyusunan dan pelaksanaan perjanjian yang sedang
+berlangsung dalam
+Prioritas; dan
+anggaran yang diperlukan,
+dalam penugasan Perum Peruri sebagaimana diatur dalam
+Peraturan Presiden ini.
+----------------------------------------
+
+--- CHUNK 42 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB IV", "pasal": "Pasal 12", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB IV > Pasal 12"}
+CONTENT:
+.. .
+fungsi
+Aplikasi SPBE
+f.
+SK No 132289 A
+
+
+PRESIDEN
+REPUBLIK INDONESIA
+_10_
+----------------------------------------
+
+--- CHUNK 43 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB IV", "pasal": "Pasal 12", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB IV > Pasal 12"}
+CONTENT:
+Menteri yang menyelenggarakan urusan pemerintahan di
+bidang badan usaha milik negara:
+a. melakukan pembinaan dan pengawasan korporasi
+terhadap pelaksanaan penugasan oleh Perum Peruri; dan
+b. mengoordinasikan badan usaha milik negara lainnya
+untuk mendukung pelaksanaan penugasan oleh Perum
+Peruri.
+----------------------------------------
+
+--- CHUNK 44 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB IV", "pasal": "Pasal 13", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB IV > Pasal 13"}
+CONTENT:
+Menteri yang menyelenggarakan urusan pemerintahan di
+bidang aparatur negara selaku ketua Tim Koordinasi SPBE
+Nasional melakukan:
+a. optimalisasi penyelenggaraan pelayanan publik berbasis
+digital sejalan dengan tematik layanan digital; dan
+b. pembinaan dan pengawasan terkait dengan pelaksanaan
+Peraturan Presiden ini.
+----------------------------------------
+
+--- CHUNK 45 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB IV", "pasal": "Pasal 14", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB IV > Pasal 14"}
+CONTENT:
+Menteri yang menyelenggarakan urusan pemerintahan di
+bidang komunikasi dan informatika selaku anggota
+Tim Koordinasi SPBE Nasional melakukan koordinasi
+penerapan serta pembinaan dan pengawasan terhadap
+pelaksanaan penugasan sebagaimana dimaksud dalam
+----------------------------------------
+
+--- CHUNK 46 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB IV", "pasal": "Pasal 3", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB IV > Pasal 3"}
+CONTENT:
+ayat (1) terkait dengan:
+a. integrasi antar Aplikasi SPBE Prioritas;
+b. interoperabilitas data dan informasi dalam Aplikasi SPBE
+Prioritas;
+c. integrasi antar infrastruktur pendukung Aplikasi SPBE
+Prioritas;
+d. integrasi Aplikasi SPBE Prioritas dengan pemanfaatan
+identitas digital; dan
+e. pemanfaatan Infrastruktur SPBE dalam rangka
+mendukung Aplikasi SPBE Prioritas.
+----------------------------------------
+
+--- CHUNK 47 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB IV", "pasal": "Pasal 15", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB IV > Pasal 15"}
+CONTENT:
+Menteri yang menyelenggarakan urusan pemerintahan di
+bidang perencanaan pembangunan nasional selaku ketua
+dewan pengarah penyelenggara Satu Data Indonesia dan
+selaku anggota Tim Koordinasi SPBE Nasional:
+a. memanfaatkan Forum Satu Data Indonesia untuk
+mendukung penyelenggaraan pertukaran data dan tata
+kelola data pada Aplikasi SPBE Prioritas; dan
+SK No 132290A
+b. melakukan . . .
+
+
+PRESIDEN
+REPUELIK INDONESIA
+- 11-
+b. melakukan pembinaan dan pengawasan terkait dengan
+pertukaran data sejalan dengan
+kebijakan Satu Data Indonesia.
+----------------------------------------
+
+--- CHUNK 48 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB IV", "pasal": "Pasal 16", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB IV > Pasal 16"}
+CONTENT:
+Kepala lembaga yang menyelenggarakan urusan pemerintahan
+di bidang pengawasan keuangan negara dan pembangunan
+nasional melakukan pembinaan dan pengawasan akuntabilitas
+keuangan dan pembangunan terhadap pelaksanaan
+penugasan sebagaimana diatur dalam Peraturan Presiden ini.
+----------------------------------------
+
+--- CHUNK 49 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB IV", "pasal": "Pasal 17", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB IV > Pasal 17"}
+CONTENT:
+Menteri yang menyelenggarakan urusan pemerintahan di
+bidang keuangan negara selaku anggota Tim Koordinasi SPBE
+Nasional memberikan fasilitasi dan dukungan teknis
+penganggaran yang diperlukan untuk pelaksanaan penugasan
+sebagaimana dimaksud dalam Pasal 3 ayat (1) sesuai dengan
+ketentuan peraturan perundang-undangan dan kemampuan
+keuangan negara.
+----------------------------------------
+
+--- CHUNK 50 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB IV", "pasal": "Pasal 18", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB IV > Pasal 18"}
+CONTENT:
+Menteri yang menyelenggarakan koordinasi, sinkronisasi, dan
+pengendalian urusan kementerian dalam penyelenggaraan
+pemerintahan di bidang politik, hukum, dan keamanan, bidang
+perekonomian, bidang pembangunan manusia dan
+kebudayaan, dan bidang kemaritiman dan investasi:
+a. memantau penerapan percepatan transformasi digital dan
+pencapaian inisiatif strategis arsitektur SPBE nasional;
+dan
+penyediaan data dan informasi untuk
+penyiapan integrasi l,ayanan SPBE lintas sektor,
+pada kementerian/lembaga yang dikoordinasikan.
+----------------------------------------
+
+--- CHUNK 51 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB IV", "pasal": "Pasal 19", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB IV > Pasal 19"}
+CONTENT:
+Pemerintah daerah mendukung dan melaksanakan penerapan
+percepatan transformasi digital melalui pemanfaatan Aplikasi
+SPBE Prioritas sebagaimana diatur dalam Peraturan Presiden
+ini.
+b.
+BABV. . .
+SK No 132291 A
+
+
+PRESIDEN
+REPUBLIK INDONESIA
+-t2-
+----------------------------------------
+
+--- CHUNK 52 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB V", "pasal": "Pasal 2", "bagian": "", "ayat": "Ayat (1)-(2)", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB V > Pasal 2 > Ayat (1)-(2)"}
+CONTENT:
+O
+(1) Direksi Perum Peruri menyampaikan laporan pelaksanaan
+penugasan kepada menteri yang menyelenggarakan
+urusan pemerintahan di bidang aparatur negara selaku
+ketua Tim Koordinasi SPBE Nasional, secara berkaLa
+setiap 3 (tiga) bulan dan/atau sewaltu-waktu apabila
+diperlukan.
+(2) Laporan pelaksanaan penugasan sebagaimana dimaksud
+pada ayat (1)juga disampaikan kepada:
+a. menteri yang 
+menyelenggarakan urusan
+pemerintahan di bidang badan usaha milik negara;
+dan
+b. kepala lembaga yang
+urusan
+pemerintahan di bidang pengawasan keuangan
+negara dan pembangunan nasional.
+----------------------------------------
+
+--- CHUNK 53 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB V", "pasal": "Pasal 21", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB V > Pasal 21"}
+CONTENT:
+Menteri yang menyelenggarakan urusErn pemerintahan di
+bidang aparatur negara selaku ketua Tim Koordinasi SPBE
+Nasional, melaporkan kemajuan penerapan percepatan
+transformasi digital dan pencapaian inisiatif strategis arsitektur
+SPBE nasional, termasuk pelaksanaan penugasan
+sebagaimana diatur dalam Peraturan Presiden ini, kepada
+Fresiden secara berkala setiap 4 (empat) bulan dan/ atau
+sewaktu-waktu apabila diperlukan, melalui menteri yang
+menyelenggarakan koordinasi, sinkronisasi, dan pengendalian
+urusan kementerian dalam penyelenggaraan pemerintahan di
+bidang politik, hukum, dan keamanan.
+----------------------------------------
+
+--- CHUNK 54 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB VI", "pasal": "", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB VI"}
+CONTENT:
+KETENTUAN PENUTUP
+Pasal22
+Peraturan Presiden ini mulai berlaku pada tanegal
+diundangkan.
+SK No 132292A
+Agar
+----------------------------------------
+
+--- CHUNK 55 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023", "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL", "filename": "Perpres Nomor 82 Tahun 2023.pdf", "bab": "BAB VI", "pasal": "", "bagian": "", "ayat": "", "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB VI"}
+CONTENT:
+PRESIDEN
+REPUBL]K INDONESIA
+-13-
+Agar setiap orang mengetahuinya, memerintahkan
+pengundangan Peraturan Presiden ini dengan penempatannya
+dalam Lembaran Negara Republik Indonesia.
+Ditetapkan di Jakarta
+pada tanggal 18 Desember 2O23
+PRESIDEN REPUBLIK INDONESIA,
+ttd.
+JOKO WIDODO
+Diundangkan di Jakarta
+pada tanggal 18 Desember 2023
+MENTERI SEKRETARIS NEGARA
+REPUBLIK INDONESIA,
+PRATIKNO
+LEMBARAN NEGARA REPUBLIK INDONESIA TAHUN 2023 NOMOR 159
+Salinan sesuai dengan aslinya
+KEMENTERIAN SEKRETARIAT NEGARA
+REPUBLIK INDONESIA
+g Perundang-undangan dan
+asi Hukum,
+/r tlio
+anna Djaman
+ttd
+SK No 132293 A
+----------------------------------------
+

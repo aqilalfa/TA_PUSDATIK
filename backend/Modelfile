@@ -1,0 +1,19 @@
+# Modelfile for importing local Qwen2.5-7B GGUF
+# Usage: ollama create qwen25-7b-local -f Modelfile
+
+FROM ./models/llm/Qwen2.5-7B-Instruct-Q4_K_M.gguf
+
+# Template untuk Qwen2.5 Instruct
+TEMPLATE """<|im_start|>system
+{{ .System }}<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+"""
+
+PARAMETER stop "<|im_end|>"
+PARAMETER temperature 0.7
+PARAMETER num_ctx 2048
+PARAMETER num_predict 512
+
+SYSTEM """Anda adalah asisten AI untuk menjawab pertanyaan tentang regulasi SPBE (Sistem Pemerintahan Berbasis Elektronik) Indonesia dan audit keamanan siber BSSN. Jawablah berdasarkan konteks yang diberikan."""

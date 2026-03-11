@@ -1,0 +1,5422 @@
+{
+  "type": "laporan_spbe",
+  "metadata_dokumen": {
+    "jenis_dokumen": "Laporan Evaluasi SPBE",
+    "tahun_evaluasi": "2024",
+    "penerbit": "Kementerian PANRB",
+    "deputi": "Deputi Bidang Kelembagaan dan Tata Laksana",
+    "sumber_file": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf"
+  },
+  "ringkasan_eksekutif": [
+    {
+      "topik": "Kesimpulan Evaluasi",
+      "isi": "Dari hasil Evaluasi SPBE 2024, dapat disimpulkan bahwa penerapan SPBE di Indonesia telah menunjukkan kemajuan signifikan dibandingkan tahun-tahun sebelumnya. Secara nasional, Indeks Maturitas SPBE mencapai 3,12 (kategori “Baik”), melebihi target yang telah ditetapkan dan menandai pencapaian penting karena untuk pertama kalinya indeks nasional berada di atas angka 3. Pada tingkat Instansi Pusat, rata-rata indeks kematangan mencapai skor 3,71. Hasil ini menunjukkan bahwa  instansi pusat secara umum telah mampu menerapkan tata kelola SPBE yang menyeluruh. Domain Layanan dan Kebijakan Internal SPBE mencatat hasil yang mengungguli domain lainnya dengan nilai rata-rata 4,15 dan 3,95 yang masing-masing masuk dalam kategori “Sangat Baik”. Pencapaian ini menunjukkan bahwa instansi pusat telah berhasil mengintegrasikan layanan administrasi dan layanan publik secara digital, serta mengimplementasikan kebijakan internal yang mendukung transformasi digital. Namun, nilai pada Domain Manajemen dengan rerata skor indeks kematangan 2,59 dapat dikatakan masih belum bisa mengejar performa ketiga domain lainnya rendah. Hal ini menandakan bahwa meski fondasi digital telah kuat, aspek pengelolaan—terutama dalam hal manajemen risiko, audit TIK, dan pemanfaatan sumber daya manusia—masih perlu ditingkatkan secara signifikan. Sedangkan pada Pemerintah Daerah, capaian indeks sebesar 3,08 menunjukkan bahwa penerapan SPBE masih berada pada level yang relatif sejalan dengan capaian nasional. Domain Layanan juga mendominasi dengan nilai 3,79 (kategori “Sangat Baik”), menandakan bahwa sebagian besar pemerintah daerah telah berhasil memberikan layanan publik digital yang terintegrasi. Di sisi lain, Domain Tata Kelola dan Manajemen masih menunjukkan tantangan untuk menyusul domain Layanan, masing-masing dengan nilai 2,51 dan 1,76. Kesenjangan ini mengungkapkan adanya disparitas dalam kapasitas pengelolaan dan perencanaan strategis di tingkat daerah, di mana beberapa wilayah mampu mencapai standar nasional sementara yang lain masih tertinggal, bahkan mencapai kategori “Kurang”. Secara menyeluruh, meskipun terdapat tren peningkatan yang stabil, evaluasi SPBE di tahun 2024 menunjukan variasi ekstrim antar instansi, bahkan di dalam satu lokus yang sama. Rentang nilai pada masing-masing domain (rentangi 1,00 hingga 5,00) menunjukkan bahwa perbedaan implementasi SPBE sangat bergantung pada kesiapan institusional dan kapasitas pengelolaan internal. Domain Manajemen menjadi titik kritis yang konsisten menghadapi tantangan, mengindikasikan perlunya intervensi strategis untuk standarisasi dan peningkatan sistem manajemen di seluruh instansi, baik di tingkat pusat maupun daerah. Hasil evaluasi SPBE 2024 mengaksentuasi bahwa penerapan SPBE di Indonesia telah memasuki fase yang matang dalam beberapa domain, namun masih terdapat celah yang signifikan pada domain manajemen dan tata kelola. Perbedaan kinerja antara Instansi Pusat dan Pemerintah Daerah, serta disparitas antar daerah, menuntut adanya pendekatan yang lebih terintegrasi dan dukungan kebijakan yang lebih spesifik dan tepat sasaran. Upaya peningkatan kualitas SPBE harus diarahkan tidak hanya pada penguatan infrastruktur, tetapi juga pada peningkatan kompetensi dan sinergi antar instansi."
+    }
+  ],
+  "rekomendasi_strategis": [
+    {
+      "poin_ke": 1,
+      "judul": "Peningkatan Domain Manajemen SPBE",
+      "tindakan": [
+        "Mengoptimalkan penerapan manajemen risiko, manajemen keamanan informasi, dan pelaksanaan audit TIK melalui program pelatihan dan peningkatan kapasitas SDM.",
+        "Menerapkan sistem manajemen berbasis best practice yang telah diadopsi oleh instansi dengan capaian tinggi, sebagai model pengembangan di instansi yang masih berada pada kategori “Kurang” atau “Cukup”."
+      ]
+    },
+    {
+      "poin_ke": 2,
+      "judul": "Penguatan Tata Kelola dan Perencanaan Strategis",
+      "tindakan": [
+        "Memperkuat koordinasi antara instansi pusat dan pemerintah daerah untuk memastikan keselarasan strategi dan penyusunan rencana SPBE yang komprehensif.",
+        "Melakukan review dan penyesuaian kerangka kerja tata kelola SPBE agar lebih responsif terhadap dinamika implementasi yang sesuai dengan kebutuhan."
+      ]
+    },
+    {
+      "poin_ke": 3,
+      "judul": "Penyempurnaan Layanan SPBE",
+      "tindakan": [
+        "Mempertahankan dan mengembangkan inovasi pada layanan administrasi pemerintahan dan layanan publik berbasis elektronik, yang telah menunjukkan kinerja “Sangat Baik”.",
+        "Mengintegrasikan feedback dari pengguna layanan sebagai dasar perbaikan berkelanjutan dalam penyediaan layanan digital."
+      ]
+    },
+    {
+      "poin_ke": 4,
+      "judul": "Penanganan Ketimpangan Antar Daerah",
+      "tindakan": [
+        "Mengidentifikasi daerah-daerah dengan capaian SPBE yang masih rendah dan mengalokasikan sumber daya dan dukungan lain yang bersifat teknis secara intensif guna mempercepat peningkatan kualitas implementasi.",
+        "Mendorong pembentukan forum kolaborasi antar daerah untuk berbagi best practices dan solusi inovatif dalam mengatasi kendala spesifik di masing-masing wilayah."
+      ]
+    },
+    {
+      "poin_ke": 5,
+      "judul": "Evaluasi dan Monitoring Berkala",
+      "tindakan": [
+        "Menetapkan mekanisme evaluasi berkala untuk memonitor perkembangan penerapan SPBE, sehingga kendala dan tantangan dapat diidentifikasi serta ditangani secepat dan setepat mungkin.",
+        "Mengintegrasikan hasil evaluasi ke dalam perumusan kebijakan strategis untuk mendorong transformasi digital yang lebih holistik dan berkelanjutan."
+      ]
+    },
+    {
+      "poin_ke": 6,
+      "judul": "Mendukung Arah Transformasi Digital Pemerintah",
+      "tindakan": []
+    }
+  ],
+  "data_capaian_instansi": [
+    {
+      "nama_instansi": "Badan Kepegawaian Negara",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.4,
+        "tata_kelola": 4.0,
+        "manajemen_spbe": 3.55,
+        "layanan_spbe": 4.19
+      },
+      "indeks_spbe_akhir": 4.06,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Badan Pusat Statistik",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 5.0,
+        "tata_kelola": 4.1,
+        "manajemen_spbe": 3.18,
+        "layanan_spbe": 4.38
+      },
+      "indeks_spbe_akhir": 4.19,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Badan Informasi Geospasial",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.1,
+        "tata_kelola": 4.3,
+        "manajemen_spbe": 2.36,
+        "layanan_spbe": 4.13
+      },
+      "indeks_spbe_akhir": 3.88,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Badan Kependudukan dan Keluarga Berencana",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.2,
+        "tata_kelola": 3.8,
+        "manajemen_spbe": 3.0,
+        "layanan_spbe": 4.44
+      },
+      "indeks_spbe_akhir": 3.88,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Badan Pengawasan Keuangan dan",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.5,
+        "tata_kelola": 3.4,
+        "manajemen_spbe": 2.09,
+        "layanan_spbe": 4.08
+      },
+      "indeks_spbe_akhir": 3.51,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Badan Standardisasi Nasional",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.6,
+        "tata_kelola": 3.5,
+        "manajemen_spbe": 3.09,
+        "layanan_spbe": 4.7
+      },
+      "indeks_spbe_akhir": 4.12,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Badan Pengawas Tenaga Nuklir",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.0,
+        "tata_kelola": 4.0,
+        "manajemen_spbe": 3.0,
+        "layanan_spbe": 3.93
+      },
+      "indeks_spbe_akhir": 3.81,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Badan Pengawas Obat dan Makanan",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.3,
+        "tata_kelola": 4.2,
+        "manajemen_spbe": 2.55,
+        "layanan_spbe": 4.14
+      },
+      "indeks_spbe_akhir": 3.91,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Badan Narkotika Nasional",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.2,
+        "tata_kelola": 3.8,
+        "manajemen_spbe": 3.45,
+        "layanan_spbe": 4.2
+      },
+      "indeks_spbe_akhir": 3.98,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Badan Nasional Penanggulangan Bencana",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.2,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 2.45,
+        "layanan_spbe": 3.69
+      },
+      "indeks_spbe_akhir": 3.38,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Badan Keamanan Laut",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 2.9,
+        "manajemen_spbe": 1.64,
+        "layanan_spbe": 3.82
+      },
+      "indeks_spbe_akhir": 3.14,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Badan Nasional Pencarian Dan",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.9,
+        "tata_kelola": 3.6,
+        "manajemen_spbe": 2.82,
+        "layanan_spbe": 3.74
+      },
+      "indeks_spbe_akhir": 3.57,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Lembaga Kebijakan Pengadaan Barang/Jasa",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.0,
+        "tata_kelola": 3.2,
+        "manajemen_spbe": 1.91,
+        "layanan_spbe": 4.38
+      },
+      "indeks_spbe_akhir": 3.63,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Badan Nasional Penanggulangan",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.4,
+        "tata_kelola": 3.6,
+        "manajemen_spbe": 2.45,
+        "layanan_spbe": 4.56
+      },
+      "indeks_spbe_akhir": 3.95,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Badan Pangan Nasional",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.4,
+        "tata_kelola": 3.5,
+        "manajemen_spbe": 1.82,
+        "layanan_spbe": 3.24
+      },
+      "indeks_spbe_akhir": 3.09,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Badan Perlindungan Pekerja Migran Indonesia",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.5,
+        "tata_kelola": 3.3,
+        "manajemen_spbe": 2.91,
+        "layanan_spbe": 4.45
+      },
+      "indeks_spbe_akhir": 3.91,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Sekretariat Jenderal Majelis Permusyawaratan",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 5.0,
+        "tata_kelola": 4.0,
+        "manajemen_spbe": 3.27,
+        "layanan_spbe": 4.26
+      },
+      "indeks_spbe_akhir": 4.13,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Sekretariat Jenderal Dewan Perwakilan Rakyat",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.2,
+        "tata_kelola": 2.8,
+        "manajemen_spbe": 1.64,
+        "layanan_spbe": 3.55
+      },
+      "indeks_spbe_akhir": 3.0,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Sekretariat Jenderal Badan Pemeriksa",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.3,
+        "tata_kelola": 3.1,
+        "manajemen_spbe": 2.09,
+        "layanan_spbe": 4.33
+      },
+      "indeks_spbe_akhir": 3.52,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Sekretariat Jenderal Mahkamah Konstitusi",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.1,
+        "tata_kelola": 3.8,
+        "manajemen_spbe": 2.55,
+        "layanan_spbe": 4.2
+      },
+      "indeks_spbe_akhir": 3.81,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Sekretariat Jenderal Komisi Yudisial",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.3,
+        "tata_kelola": 4.0,
+        "manajemen_spbe": 3.64,
+        "layanan_spbe": 4.13
+      },
+      "indeks_spbe_akhir": 3.91,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Sekretariat Jenderal Dewan Perwakilan Daerah",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.7,
+        "tata_kelola": 2.7,
+        "manajemen_spbe": 1.18,
+        "layanan_spbe": 3.43
+      },
+      "indeks_spbe_akhir": 2.65,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Badan Pembinaan Ideologi Pancasila",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 5.0,
+        "tata_kelola": 4.4,
+        "manajemen_spbe": 3.73,
+        "layanan_spbe": 4.01
+      },
+      "indeks_spbe_akhir": 4.19,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Radio Republik Indonesia",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.7,
+        "tata_kelola": 2.5,
+        "manajemen_spbe": 1.73,
+        "layanan_spbe": 3.99
+      },
+      "indeks_spbe_akhir": 3.21,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Sekretariat Jenderal Komisi Pemilihan Umum",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.9,
+        "tata_kelola": 3.1,
+        "manajemen_spbe": 2.91,
+        "layanan_spbe": 3.54
+      },
+      "indeks_spbe_akhir": 3.37,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Sekretariat Komisi Nasional Hak Asasi",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.0,
+        "tata_kelola": 3.2,
+        "manajemen_spbe": 2.0,
+        "layanan_spbe": 4.13
+      },
+      "indeks_spbe_akhir": 3.53,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Komisi Pemberantasan Korupsi",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.2,
+        "tata_kelola": 2.3,
+        "manajemen_spbe": 1.45,
+        "layanan_spbe": 4.3
+      },
+      "indeks_spbe_akhir": 3.32,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Badan Nasional Pengelola Perbatasan",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 5.0,
+        "tata_kelola": 3.9,
+        "manajemen_spbe": 2.73,
+        "layanan_spbe": 4.07
+      },
+      "indeks_spbe_akhir": 3.93,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Sekretariat Komisi Pengawas Persaingan",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.8,
+        "tata_kelola": 3.4,
+        "manajemen_spbe": 2.55,
+        "layanan_spbe": 4.08
+      },
+      "indeks_spbe_akhir": 3.75,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Badan Pengawas Pemilihan Umum",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.4,
+        "tata_kelola": 2.2,
+        "manajemen_spbe": 1.55,
+        "layanan_spbe": 3.74
+      },
+      "indeks_spbe_akhir": 2.82,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Sekretariat Komisi Penyiaran Indonesia",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.0,
+        "tata_kelola": 3.4,
+        "manajemen_spbe": 2.55,
+        "layanan_spbe": 3.68
+      },
+      "indeks_spbe_akhir": 3.47,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Sekretariat Komisi Kejaksaan",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.2,
+        "tata_kelola": 2.7,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.6
+      },
+      "indeks_spbe_akhir": 2.65,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Sekretariat Komisi Kepolisian Nasional",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.47
+      },
+      "indeks_spbe_akhir": 1.67,
+      "predikat": "Kurang"
+    },
+    {
+      "nama_instansi": "Dewan Pertimbangan Presiden",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 1.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.03
+      },
+      "indeks_spbe_akhir": 2.22,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Sekretariat Dewan Pers",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 2.2,
+        "manajemen_spbe": 2.64,
+        "layanan_spbe": 2.75
+      },
+      "indeks_spbe_akhir": 2.63,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Badan Pengatur Hilir Minyak Dan Gas Bumi",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.6,
+        "tata_kelola": 3.7,
+        "manajemen_spbe": 1.18,
+        "layanan_spbe": 3.67
+      },
+      "indeks_spbe_akhir": 3.39,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Badan Pengusahaan Sabang",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.4,
+        "tata_kelola": 4.1,
+        "manajemen_spbe": 3.45,
+        "layanan_spbe": 3.37
+      },
+      "indeks_spbe_akhir": 3.57,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Badan Pengusahaan Batam",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.9,
+        "manajemen_spbe": 1.18,
+        "layanan_spbe": 2.98
+      },
+      "indeks_spbe_akhir": 2.42,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Lembaga Perlindungan Saksi Dan Korban",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.7,
+        "tata_kelola": 3.2,
+        "manajemen_spbe": 2.64,
+        "layanan_spbe": 4.63
+      },
+      "indeks_spbe_akhir": 3.82,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Lembaga Sensor Film",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.5,
+        "tata_kelola": 3.2,
+        "manajemen_spbe": 2.27,
+        "layanan_spbe": 4.19
+      },
+      "indeks_spbe_akhir": 3.54,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Sekretariat Konsil Kedokteran Indonesia",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.89
+      },
+      "indeks_spbe_akhir": 2.75,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Kantor Staf Presiden",
+      "jenis_instansi": "Kementerian",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.3,
+        "tata_kelola": 2.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.35
+      },
+      "indeks_spbe_akhir": 2.36,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Aceh Besar",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.0,
+        "tata_kelola": 3.3,
+        "manajemen_spbe": 2.64,
+        "layanan_spbe": 4.08
+      },
+      "indeks_spbe_akhir": 3.64,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pidie",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.7,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.51
+      },
+      "indeks_spbe_akhir": 2.39,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Aceh Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.7,
+        "tata_kelola": 1.4,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.04
+      },
+      "indeks_spbe_akhir": 2.25,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Aceh Timur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.2,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 1.58
+      },
+      "indeks_spbe_akhir": 1.44,
+      "predikat": "Kurang"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Aceh Selatan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.4,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.87
+      },
+      "indeks_spbe_akhir": 2.38,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Aceh Barat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 2.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.69
+      },
+      "indeks_spbe_akhir": 2.75,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Aceh Tenggara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.3,
+        "tata_kelola": 1.5,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.62
+      },
+      "indeks_spbe_akhir": 2.48,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bireuen",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.5,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.55
+      },
+      "indeks_spbe_akhir": 2.29,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Aceh Singkil",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.4,
+        "tata_kelola": 1.4,
+        "manajemen_spbe": 1.18,
+        "layanan_spbe": 3.51
+      },
+      "indeks_spbe_akhir": 2.32,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Aceh Barat Daya",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.13
+      },
+      "indeks_spbe_akhir": 2.28,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Gayo Lues",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 2.1,
+        "manajemen_spbe": 1.45,
+        "layanan_spbe": 3.75
+      },
+      "indeks_spbe_akhir": 2.86,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Aceh Tamiang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 1.5,
+        "manajemen_spbe": 1.27,
+        "layanan_spbe": 3.74
+      },
+      "indeks_spbe_akhir": 2.69,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Nagan Raya",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.3,
+        "tata_kelola": 2.1,
+        "manajemen_spbe": 1.27,
+        "layanan_spbe": 4.01
+      },
+      "indeks_spbe_akhir": 2.86,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Aceh Jaya",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.3,
+        "tata_kelola": 2.5,
+        "manajemen_spbe": 1.27,
+        "layanan_spbe": 3.69
+      },
+      "indeks_spbe_akhir": 2.94,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bener Meriah",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.5,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.56
+      },
+      "indeks_spbe_akhir": 2.67,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pidie Jaya",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.4,
+        "tata_kelola": 1.8,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.82
+      },
+      "indeks_spbe_akhir": 2.66,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Sabang",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.5,
+        "tata_kelola": 1.3,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.95
+      },
+      "indeks_spbe_akhir": 2.61,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Banda Aceh",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.5,
+        "tata_kelola": 2.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 4.12
+      },
+      "indeks_spbe_akhir": 3.02,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Langsa",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.0,
+        "tata_kelola": 3.3,
+        "manajemen_spbe": 2.18,
+        "layanan_spbe": 4.37
+      },
+      "indeks_spbe_akhir": 3.7,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Lhokseumawe",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.2,
+        "tata_kelola": 1.0,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 2.99
+      },
+      "indeks_spbe_akhir": 1.95,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Subulussalam",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.8,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.95
+      },
+      "indeks_spbe_akhir": 2.8,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Langkat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.9,
+        "tata_kelola": 2.3,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.95
+      },
+      "indeks_spbe_akhir": 3.04,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Simalungun",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.1,
+        "tata_kelola": 1.3,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.55
+      },
+      "indeks_spbe_akhir": 2.38,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Dairi",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.3,
+        "tata_kelola": 1.6,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.31
+      },
+      "indeks_spbe_akhir": 2.37,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tapanuli Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.8,
+        "tata_kelola": 1.6,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.87
+      },
+      "indeks_spbe_akhir": 2.69,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tapanuli Selatan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.8,
+        "tata_kelola": 2.3,
+        "manajemen_spbe": 1.73,
+        "layanan_spbe": 3.57
+      },
+      "indeks_spbe_akhir": 2.85,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Indragiri Hulu",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.8,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.64,
+        "layanan_spbe": 3.81
+      },
+      "indeks_spbe_akhir": 2.79,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Indragiri Hilir",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.4,
+        "tata_kelola": 2.4,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.69
+      },
+      "indeks_spbe_akhir": 2.89,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pelalawan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.1,
+        "tata_kelola": 1.8,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.63
+      },
+      "indeks_spbe_akhir": 2.54,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Rokan Hulu",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.4,
+        "tata_kelola": 1.5,
+        "manajemen_spbe": 1.73,
+        "layanan_spbe": 3.64
+      },
+      "indeks_spbe_akhir": 2.5,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Rokan Hilir",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.1,
+        "tata_kelola": 2.8,
+        "manajemen_spbe": 2.27,
+        "layanan_spbe": 4.07
+      },
+      "indeks_spbe_akhir": 3.46,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kepulauan Meranti",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.8,
+        "tata_kelola": 2.6,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 4.2
+      },
+      "indeks_spbe_akhir": 3.23,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Pekanbaru",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.2,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.57
+      },
+      "indeks_spbe_akhir": 3.08,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bintan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 2.3,
+        "manajemen_spbe": 2.36,
+        "layanan_spbe": 3.69
+      },
+      "indeks_spbe_akhir": 3.05,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Karimun",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.0,
+        "tata_kelola": 2.9,
+        "manajemen_spbe": 2.0,
+        "layanan_spbe": 3.68
+      },
+      "indeks_spbe_akhir": 3.25,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Natuna",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.8,
+        "tata_kelola": 1.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.42
+      },
+      "indeks_spbe_akhir": 2.33,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kepulauan Anambas",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 2.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.43
+      },
+      "indeks_spbe_akhir": 2.6,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Batam",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 2.6,
+        "manajemen_spbe": 1.91,
+        "layanan_spbe": 3.68
+      },
+      "indeks_spbe_akhir": 3.04,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Agam",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.7,
+        "tata_kelola": 3.8,
+        "manajemen_spbe": 2.91,
+        "layanan_spbe": 4.26
+      },
+      "indeks_spbe_akhir": 3.85,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pasaman",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.6,
+        "tata_kelola": 1.8,
+        "manajemen_spbe": 1.45,
+        "layanan_spbe": 3.37
+      },
+      "indeks_spbe_akhir": 2.56,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Limapuluh Kota",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.9,
+        "tata_kelola": 1.9,
+        "manajemen_spbe": 2.0,
+        "layanan_spbe": 3.56
+      },
+      "indeks_spbe_akhir": 2.67,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Solok",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.3,
+        "tata_kelola": 2.2,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.38
+      },
+      "indeks_spbe_akhir": 2.7,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Padang Pariaman",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.6,
+        "tata_kelola": 3.1,
+        "manajemen_spbe": 2.55,
+        "layanan_spbe": 4.01
+      },
+      "indeks_spbe_akhir": 3.49,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pesisir Selatan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.6,
+        "tata_kelola": 3.5,
+        "manajemen_spbe": 2.82,
+        "layanan_spbe": 3.74
+      },
+      "indeks_spbe_akhir": 3.51,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sijunjung",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.5,
+        "tata_kelola": 1.9,
+        "manajemen_spbe": 1.27,
+        "layanan_spbe": 3.95
+      },
+      "indeks_spbe_akhir": 2.81,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kep. Mentawai",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.7,
+        "tata_kelola": 2.2,
+        "manajemen_spbe": 2.36,
+        "layanan_spbe": 3.76
+      },
+      "indeks_spbe_akhir": 3.0,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Solok Selatan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.25
+      },
+      "indeks_spbe_akhir": 2.46,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Dharmasraya",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.0,
+        "tata_kelola": 2.4,
+        "manajemen_spbe": 2.55,
+        "layanan_spbe": 3.82
+      },
+      "indeks_spbe_akhir": 3.28,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Bukittinggi",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 5.0,
+        "tata_kelola": 3.3,
+        "manajemen_spbe": 2.36,
+        "layanan_spbe": 3.95
+      },
+      "indeks_spbe_akhir": 3.66,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Padang Panjang",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.1,
+        "tata_kelola": 1.6,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.88
+      },
+      "indeks_spbe_akhir": 2.49,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Sawahlunto",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.6,
+        "tata_kelola": 2.9,
+        "manajemen_spbe": 1.36,
+        "layanan_spbe": 3.82
+      },
+      "indeks_spbe_akhir": 3.16,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Solok",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 2.27,
+        "layanan_spbe": 4.2
+      },
+      "indeks_spbe_akhir": 3.41,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Padang",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.1,
+        "tata_kelola": 3.9,
+        "manajemen_spbe": 1.18,
+        "layanan_spbe": 4.51
+      },
+      "indeks_spbe_akhir": 3.75,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Payakumbuh",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.7,
+        "tata_kelola": 3.7,
+        "manajemen_spbe": 2.45,
+        "layanan_spbe": 4.44
+      },
+      "indeks_spbe_akhir": 3.96,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Pariaman",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.3,
+        "tata_kelola": 3.4,
+        "manajemen_spbe": 2.36,
+        "layanan_spbe": 4.57
+      },
+      "indeks_spbe_akhir": 3.75,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Batang Hari",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.3,
+        "tata_kelola": 2.4,
+        "manajemen_spbe": 2.18,
+        "layanan_spbe": 3.95
+      },
+      "indeks_spbe_akhir": 3.05,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tanjung Jabung Barat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 3.3,
+        "manajemen_spbe": 2.18,
+        "layanan_spbe": 4.31
+      },
+      "indeks_spbe_akhir": 3.55,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bungo",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 2.6,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.74
+      },
+      "indeks_spbe_akhir": 2.92,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Merangin",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.6,
+        "manajemen_spbe": 1.45,
+        "layanan_spbe": 3.68
+      },
+      "indeks_spbe_akhir": 2.71,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kerinci",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.0,
+        "tata_kelola": 2.6,
+        "manajemen_spbe": 1.64,
+        "layanan_spbe": 3.87
+      },
+      "indeks_spbe_akhir": 3.2,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sarolangun",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.4,
+        "tata_kelola": 1.4,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.98
+      },
+      "indeks_spbe_akhir": 2.18,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tebo",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.7,
+        "tata_kelola": 2.8,
+        "manajemen_spbe": 1.45,
+        "layanan_spbe": 3.68
+      },
+      "indeks_spbe_akhir": 3.1,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Muaro Jambi",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.63
+      },
+      "indeks_spbe_akhir": 2.62,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Jambi",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 2.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.76
+      },
+      "indeks_spbe_akhir": 2.83,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Musi Banyuasin",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.7,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 1.18,
+        "layanan_spbe": 3.75
+      },
+      "indeks_spbe_akhir": 3.0,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Muara Enim",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.4,
+        "tata_kelola": 1.9,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.63
+      },
+      "indeks_spbe_akhir": 2.62,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Lahat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.3,
+        "tata_kelola": 3.2,
+        "manajemen_spbe": 1.36,
+        "layanan_spbe": 3.75
+      },
+      "indeks_spbe_akhir": 3.29,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Musi Rawas",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.6,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.37
+      },
+      "indeks_spbe_akhir": 2.33,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Ogan Komering Ilir",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.2,
+        "tata_kelola": 2.4,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.87
+      },
+      "indeks_spbe_akhir": 3.09,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Ogan Komering Ulu Timur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 2.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.56
+      },
+      "indeks_spbe_akhir": 2.71,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Ogan Komering Ulu Sel.",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 2.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.42
+      },
+      "indeks_spbe_akhir": 2.61,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Ogan Ilir",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.0,
+        "tata_kelola": 1.3,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.63
+      },
+      "indeks_spbe_akhir": 2.4,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Empat Lawang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.7,
+        "tata_kelola": 2.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.88
+      },
+      "indeks_spbe_akhir": 2.94,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Musi Rawas Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.4,
+        "tata_kelola": 1.6,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.49
+      },
+      "indeks_spbe_akhir": 2.34,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Lubuk Linggau",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.69
+      },
+      "indeks_spbe_akhir": 2.54,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Prabumulih",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 2.0,
+        "manajemen_spbe": 1.27,
+        "layanan_spbe": 3.38
+      },
+      "indeks_spbe_akhir": 2.64,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Penukal Abab Lematang Ilir",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.7,
+        "tata_kelola": 2.9,
+        "manajemen_spbe": 2.55,
+        "layanan_spbe": 3.83
+      },
+      "indeks_spbe_akhir": 3.37,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Belitung",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.5,
+        "tata_kelola": 1.8,
+        "manajemen_spbe": 1.36,
+        "layanan_spbe": 3.95
+      },
+      "indeks_spbe_akhir": 2.8,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bangka Barat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 2.8,
+        "manajemen_spbe": 3.0,
+        "layanan_spbe": 3.88
+      },
+      "indeks_spbe_akhir": 3.35,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bangka Tengah",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.8,
+        "tata_kelola": 2.5,
+        "manajemen_spbe": 2.18,
+        "layanan_spbe": 3.69
+      },
+      "indeks_spbe_akhir": 3.16,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Belitung Timur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.6,
+        "tata_kelola": 2.9,
+        "manajemen_spbe": 2.36,
+        "layanan_spbe": 3.37
+      },
+      "indeks_spbe_akhir": 3.25,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bengkulu Selatan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 1.82,
+        "layanan_spbe": 4.07
+      },
+      "indeks_spbe_akhir": 3.28,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Rejang Lebong",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.55,
+        "layanan_spbe": 3.93
+      },
+      "indeks_spbe_akhir": 2.87,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kaur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.6,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 2.09,
+        "layanan_spbe": 3.69
+      },
+      "indeks_spbe_akhir": 3.24,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Seluma",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 1.5,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.31
+      },
+      "indeks_spbe_akhir": 2.42,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Mukomuko",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.4,
+        "tata_kelola": 1.6,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.05
+      },
+      "indeks_spbe_akhir": 2.26,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kepahiang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.2,
+        "tata_kelola": 1.5,
+        "manajemen_spbe": 1.18,
+        "layanan_spbe": 2.66
+      },
+      "indeks_spbe_akhir": 2.07,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Lebong",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.8,
+        "tata_kelola": 1.6,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.38
+      },
+      "indeks_spbe_akhir": 2.47,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bengkulu Tengah",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.8,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 2.09,
+        "layanan_spbe": 3.93
+      },
+      "indeks_spbe_akhir": 3.38,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Bengkulu",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.1,
+        "tata_kelola": 2.4,
+        "manajemen_spbe": 1.36,
+        "layanan_spbe": 3.82
+      },
+      "indeks_spbe_akhir": 2.84,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Lampung Selatan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.3,
+        "tata_kelola": 4.5,
+        "manajemen_spbe": 2.27,
+        "layanan_spbe": 4.75
+      },
+      "indeks_spbe_akhir": 4.09,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Lampung Tengah",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.1,
+        "tata_kelola": 2.7,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.74
+      },
+      "indeks_spbe_akhir": 3.08,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Lampung Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 1.8,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.62
+      },
+      "indeks_spbe_akhir": 2.68,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Lampung Barat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.8,
+        "tata_kelola": 2.4,
+        "manajemen_spbe": 1.55,
+        "layanan_spbe": 3.88
+      },
+      "indeks_spbe_akhir": 3.12,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tanggamus",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.7,
+        "tata_kelola": 2.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.69
+      },
+      "indeks_spbe_akhir": 2.85,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Way Kanan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.1,
+        "tata_kelola": 3.8,
+        "manajemen_spbe": 2.18,
+        "layanan_spbe": 3.51
+      },
+      "indeks_spbe_akhir": 3.44,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Lampung Timur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.3,
+        "tata_kelola": 3.3,
+        "manajemen_spbe": 2.91,
+        "layanan_spbe": 3.93
+      },
+      "indeks_spbe_akhir": 3.52,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pesawaran",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.9,
+        "tata_kelola": 2.3,
+        "manajemen_spbe": 1.18,
+        "layanan_spbe": 3.44
+      },
+      "indeks_spbe_akhir": 2.84,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tulang Bawang Barat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.6,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 2.64,
+        "layanan_spbe": 3.75
+      },
+      "indeks_spbe_akhir": 3.49,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pringsewu",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.6,
+        "tata_kelola": 2.1,
+        "manajemen_spbe": 1.45,
+        "layanan_spbe": 3.05
+      },
+      "indeks_spbe_akhir": 2.49,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Mesuji",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 2.4,
+        "manajemen_spbe": 2.09,
+        "layanan_spbe": 3.75
+      },
+      "indeks_spbe_akhir": 3.05,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pesisir Barat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.7,
+        "tata_kelola": 4.0,
+        "manajemen_spbe": 2.18,
+        "layanan_spbe": 4.44
+      },
+      "indeks_spbe_akhir": 3.99,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Metro",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 2.6,
+        "manajemen_spbe": 1.64,
+        "layanan_spbe": 3.54
+      },
+      "indeks_spbe_akhir": 2.94,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Bandar Lampung",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.7,
+        "tata_kelola": 3.1,
+        "manajemen_spbe": 2.73,
+        "layanan_spbe": 3.87
+      },
+      "indeks_spbe_akhir": 3.34,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Cianjur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.7,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 2.73,
+        "layanan_spbe": 4.7
+      },
+      "indeks_spbe_akhir": 3.95,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bekasi",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.1,
+        "tata_kelola": 3.4,
+        "manajemen_spbe": 2.09,
+        "layanan_spbe": 4.45
+      },
+      "indeks_spbe_akhir": 3.75,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Karawang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.7,
+        "tata_kelola": 3.5,
+        "manajemen_spbe": 3.09,
+        "layanan_spbe": 4.57
+      },
+      "indeks_spbe_akhir": 4.08,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Subang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.9,
+        "tata_kelola": 3.5,
+        "manajemen_spbe": 2.91,
+        "layanan_spbe": 4.57
+      },
+      "indeks_spbe_akhir": 3.94,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bandung",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.3,
+        "tata_kelola": 3.2,
+        "manajemen_spbe": 2.0,
+        "layanan_spbe": 4.01
+      },
+      "indeks_spbe_akhir": 3.38,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sumedang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.6,
+        "tata_kelola": 3.7,
+        "manajemen_spbe": 2.45,
+        "layanan_spbe": 4.51
+      },
+      "indeks_spbe_akhir": 3.98,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tasikmalaya",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 5.0,
+        "tata_kelola": 4.0,
+        "manajemen_spbe": 2.36,
+        "layanan_spbe": 4.07
+      },
+      "indeks_spbe_akhir": 3.89,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Ciamis",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.4,
+        "tata_kelola": 3.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 4.94
+      },
+      "indeks_spbe_akhir": 3.76,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Cirebon",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 5.0,
+        "tata_kelola": 2.9,
+        "manajemen_spbe": 2.36,
+        "layanan_spbe": 4.14
+      },
+      "indeks_spbe_akhir": 3.65,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kuningan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.1,
+        "tata_kelola": 3.1,
+        "manajemen_spbe": 2.36,
+        "layanan_spbe": 4.2
+      },
+      "indeks_spbe_akhir": 3.61,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Indramayu",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 3.2,
+        "manajemen_spbe": 2.82,
+        "layanan_spbe": 4.2
+      },
+      "indeks_spbe_akhir": 3.57,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Majalengka",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.6,
+        "tata_kelola": 3.8,
+        "manajemen_spbe": 2.73,
+        "layanan_spbe": 4.25
+      },
+      "indeks_spbe_akhir": 3.93,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bandung Barat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 2.5,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.89
+      },
+      "indeks_spbe_akhir": 2.94,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pangandaran",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.4,
+        "tata_kelola": 3.1,
+        "manajemen_spbe": 3.18,
+        "layanan_spbe": 4.2
+      },
+      "indeks_spbe_akhir": 3.78,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Bandung",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 5.0,
+        "tata_kelola": 2.9,
+        "manajemen_spbe": 1.82,
+        "layanan_spbe": 4.13
+      },
+      "indeks_spbe_akhir": 3.56,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Sukabumi",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.1,
+        "tata_kelola": 3.9,
+        "manajemen_spbe": 3.64,
+        "layanan_spbe": 4.33
+      },
+      "indeks_spbe_akhir": 4.08,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Bekasi",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.7,
+        "tata_kelola": 4.1,
+        "manajemen_spbe": 3.36,
+        "layanan_spbe": 4.26
+      },
+      "indeks_spbe_akhir": 4.13,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Depok",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.1,
+        "tata_kelola": 3.3,
+        "manajemen_spbe": 2.55,
+        "layanan_spbe": 4.5
+      },
+      "indeks_spbe_akhir": 3.83,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Tasikmalaya",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.8,
+        "tata_kelola": 3.8,
+        "manajemen_spbe": 3.27,
+        "layanan_spbe": 4.76
+      },
+      "indeks_spbe_akhir": 4.15,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Banjar",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.9,
+        "tata_kelola": 3.7,
+        "manajemen_spbe": 2.73,
+        "layanan_spbe": 4.58
+      },
+      "indeks_spbe_akhir": 3.96,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Serang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 3.4,
+        "manajemen_spbe": 2.55,
+        "layanan_spbe": 4.01
+      },
+      "indeks_spbe_akhir": 3.47,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Lebak",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 2.8,
+        "manajemen_spbe": 2.64,
+        "layanan_spbe": 4.19
+      },
+      "indeks_spbe_akhir": 3.45,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Serang",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.5,
+        "tata_kelola": 2.0,
+        "manajemen_spbe": 1.36,
+        "layanan_spbe": 3.31
+      },
+      "indeks_spbe_akhir": 2.56,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Tangerang Selatan",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.8,
+        "tata_kelola": 1.9,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.82
+      },
+      "indeks_spbe_akhir": 2.61,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sleman",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.0,
+        "tata_kelola": 3.7,
+        "manajemen_spbe": 3.09,
+        "layanan_spbe": 4.88
+      },
+      "indeks_spbe_akhir": 4.18,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kulon Progo",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.4,
+        "tata_kelola": 3.3,
+        "manajemen_spbe": 2.45,
+        "layanan_spbe": 4.75
+      },
+      "indeks_spbe_akhir": 3.96,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Yogyakarta",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.4,
+        "tata_kelola": 3.8,
+        "manajemen_spbe": 3.27,
+        "layanan_spbe": 4.06
+      },
+      "indeks_spbe_akhir": 3.91,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kendal",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.3,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 2.18,
+        "layanan_spbe": 3.88
+      },
+      "indeks_spbe_akhir": 3.31,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Demak",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.4,
+        "tata_kelola": 2.8,
+        "manajemen_spbe": 2.36,
+        "layanan_spbe": 4.38
+      },
+      "indeks_spbe_akhir": 3.66,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Grobogan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.6,
+        "tata_kelola": 3.8,
+        "manajemen_spbe": 2.82,
+        "layanan_spbe": 4.51
+      },
+      "indeks_spbe_akhir": 3.93,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pekalongan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.4,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 2.82,
+        "layanan_spbe": 4.2
+      },
+      "indeks_spbe_akhir": 3.57,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Batang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 2.4,
+        "manajemen_spbe": 1.91,
+        "layanan_spbe": 3.87
+      },
+      "indeks_spbe_akhir": 3.05,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tegal",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.3,
+        "tata_kelola": 3.6,
+        "manajemen_spbe": 2.36,
+        "layanan_spbe": 4.02
+      },
+      "indeks_spbe_akhir": 3.55,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Brebes",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.4,
+        "tata_kelola": 2.3,
+        "manajemen_spbe": 2.18,
+        "layanan_spbe": 3.92
+      },
+      "indeks_spbe_akhir": 3.16,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pati",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.8,
+        "tata_kelola": 2.3,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.82
+      },
+      "indeks_spbe_akhir": 2.84,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kudus",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.5,
+        "tata_kelola": 3.5,
+        "manajemen_spbe": 2.27,
+        "layanan_spbe": 4.2
+      },
+      "indeks_spbe_akhir": 3.75,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Rembang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.8,
+        "tata_kelola": 2.9,
+        "manajemen_spbe": 2.45,
+        "layanan_spbe": 4.14
+      },
+      "indeks_spbe_akhir": 3.51,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Blora",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.4,
+        "tata_kelola": 3.7,
+        "manajemen_spbe": 2.64,
+        "layanan_spbe": 4.52
+      },
+      "indeks_spbe_akhir": 3.99,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Banyumas",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.5,
+        "tata_kelola": 2.6,
+        "manajemen_spbe": 1.45,
+        "layanan_spbe": 4.25
+      },
+      "indeks_spbe_akhir": 3.28,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Cilacap",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.5,
+        "tata_kelola": 3.8,
+        "manajemen_spbe": 2.55,
+        "layanan_spbe": 4.69
+      },
+      "indeks_spbe_akhir": 4.09,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Purbalingga",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.2,
+        "tata_kelola": 2.7,
+        "manajemen_spbe": 1.91,
+        "layanan_spbe": 3.81
+      },
+      "indeks_spbe_akhir": 3.27,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Banjarnegara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.4,
+        "tata_kelola": 3.7,
+        "manajemen_spbe": 2.73,
+        "layanan_spbe": 4.35
+      },
+      "indeks_spbe_akhir": 3.93,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Magelang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.9,
+        "tata_kelola": 3.4,
+        "manajemen_spbe": 1.64,
+        "layanan_spbe": 4.32
+      },
+      "indeks_spbe_akhir": 3.72,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Temanggung",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.9,
+        "tata_kelola": 4.1,
+        "manajemen_spbe": 2.09,
+        "layanan_spbe": 4.2
+      },
+      "indeks_spbe_akhir": 3.92,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Wonosobo",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.8,
+        "tata_kelola": 3.1,
+        "manajemen_spbe": 2.09,
+        "layanan_spbe": 4.46
+      },
+      "indeks_spbe_akhir": 3.64,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Purworejo",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.7,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 2.55,
+        "layanan_spbe": 4.7
+      },
+      "indeks_spbe_akhir": 3.79,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kebumen",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.1,
+        "tata_kelola": 3.2,
+        "manajemen_spbe": 2.55,
+        "layanan_spbe": 3.82
+      },
+      "indeks_spbe_akhir": 3.49,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Klaten",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.6,
+        "tata_kelola": 3.4,
+        "manajemen_spbe": 2.27,
+        "layanan_spbe": 4.94
+      },
+      "indeks_spbe_akhir": 4.07,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Boyolali",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.5,
+        "tata_kelola": 4.0,
+        "manajemen_spbe": 2.27,
+        "layanan_spbe": 4.64
+      },
+      "indeks_spbe_akhir": 4.07,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sragen",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 5.0,
+        "tata_kelola": 3.7,
+        "manajemen_spbe": 2.82,
+        "layanan_spbe": 4.07
+      },
+      "indeks_spbe_akhir": 3.89,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Wonogiri",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.3,
+        "tata_kelola": 3.9,
+        "manajemen_spbe": 2.45,
+        "layanan_spbe": 4.31
+      },
+      "indeks_spbe_akhir": 3.9,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Salatiga",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 5.0,
+        "tata_kelola": 3.6,
+        "manajemen_spbe": 2.27,
+        "layanan_spbe": 4.45
+      },
+      "indeks_spbe_akhir": 3.95,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Tegal",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.4,
+        "tata_kelola": 3.3,
+        "manajemen_spbe": 2.55,
+        "layanan_spbe": 4.27
+      },
+      "indeks_spbe_akhir": 3.76,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Magelang",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 5.0,
+        "tata_kelola": 3.7,
+        "manajemen_spbe": 2.82,
+        "layanan_spbe": 4.2
+      },
+      "indeks_spbe_akhir": 3.95,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Surakarta",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.5,
+        "tata_kelola": 3.2,
+        "manajemen_spbe": 2.64,
+        "layanan_spbe": 4.39
+      },
+      "indeks_spbe_akhir": 3.69,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sidoarjo",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.5,
+        "tata_kelola": 3.8,
+        "manajemen_spbe": 2.82,
+        "layanan_spbe": 4.75
+      },
+      "indeks_spbe_akhir": 4.16,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Jombang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.8,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 2.73,
+        "layanan_spbe": 4.7
+      },
+      "indeks_spbe_akhir": 3.96,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sampang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.9,
+        "tata_kelola": 4.1,
+        "manajemen_spbe": 3.36,
+        "layanan_spbe": 4.0
+      },
+      "indeks_spbe_akhir": 3.91,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pamekasan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.6,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 2.09,
+        "layanan_spbe": 4.64
+      },
+      "indeks_spbe_akhir": 3.67,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sumenep",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 5.0,
+        "tata_kelola": 4.4,
+        "manajemen_spbe": 3.0,
+        "layanan_spbe": 3.68
+      },
+      "indeks_spbe_akhir": 3.92,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bangkalan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.2,
+        "tata_kelola": 3.1,
+        "manajemen_spbe": 2.82,
+        "layanan_spbe": 4.26
+      },
+      "indeks_spbe_akhir": 3.73,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bondowoso",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.6,
+        "tata_kelola": 2.5,
+        "manajemen_spbe": 2.0,
+        "layanan_spbe": 3.57
+      },
+      "indeks_spbe_akhir": 2.92,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Situbondo",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.0,
+        "tata_kelola": 4.2,
+        "manajemen_spbe": 3.0,
+        "layanan_spbe": 3.95
+      },
+      "indeks_spbe_akhir": 3.86,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Malang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.2,
+        "tata_kelola": 2.9,
+        "manajemen_spbe": 2.82,
+        "layanan_spbe": 4.26
+      },
+      "indeks_spbe_akhir": 3.54,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pasuruan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.9,
+        "tata_kelola": 3.4,
+        "manajemen_spbe": 1.73,
+        "layanan_spbe": 4.62
+      },
+      "indeks_spbe_akhir": 3.74,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Probolinggo",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 5.0,
+        "tata_kelola": 3.4,
+        "manajemen_spbe": 1.82,
+        "layanan_spbe": 4.57
+      },
+      "indeks_spbe_akhir": 3.88,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Lumajang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.4,
+        "tata_kelola": 3.7,
+        "manajemen_spbe": 2.18,
+        "layanan_spbe": 4.64
+      },
+      "indeks_spbe_akhir": 3.97,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kediri",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.2,
+        "tata_kelola": 2.3,
+        "manajemen_spbe": 1.73,
+        "layanan_spbe": 4.64
+      },
+      "indeks_spbe_akhir": 3.39,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Nganjuk",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.5,
+        "tata_kelola": 3.7,
+        "manajemen_spbe": 1.91,
+        "layanan_spbe": 4.58
+      },
+      "indeks_spbe_akhir": 3.78,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Trenggalek",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.7,
+        "tata_kelola": 4.0,
+        "manajemen_spbe": 2.45,
+        "layanan_spbe": 4.02
+      },
+      "indeks_spbe_akhir": 3.84,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Ngawi",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.6,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 3.09,
+        "layanan_spbe": 4.2
+      },
+      "indeks_spbe_akhir": 3.77,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Magetan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.8,
+        "tata_kelola": 3.2,
+        "manajemen_spbe": 1.82,
+        "layanan_spbe": 4.14
+      },
+      "indeks_spbe_akhir": 3.61,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Ponorogo",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.3,
+        "tata_kelola": 2.4,
+        "manajemen_spbe": 1.18,
+        "layanan_spbe": 4.01
+      },
+      "indeks_spbe_akhir": 2.92,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pacitan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 2.6,
+        "manajemen_spbe": 1.45,
+        "layanan_spbe": 3.94
+      },
+      "indeks_spbe_akhir": 3.07,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bojonegoro",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.7,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 2.09,
+        "layanan_spbe": 3.94
+      },
+      "indeks_spbe_akhir": 3.5,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tuban",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.6,
+        "tata_kelola": 4.1,
+        "manajemen_spbe": 2.64,
+        "layanan_spbe": 4.57
+      },
+      "indeks_spbe_akhir": 4.14,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Madiun",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 5.0,
+        "tata_kelola": 3.4,
+        "manajemen_spbe": 2.45,
+        "layanan_spbe": 5.0
+      },
+      "indeks_spbe_akhir": 4.18,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Probolinggo",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.9,
+        "tata_kelola": 3.4,
+        "manajemen_spbe": 2.73,
+        "layanan_spbe": 4.7
+      },
+      "indeks_spbe_akhir": 4.07,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Blitar",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.1,
+        "tata_kelola": 3.8,
+        "manajemen_spbe": 2.73,
+        "layanan_spbe": 4.63
+      },
+      "indeks_spbe_akhir": 4.04,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Kediri",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.3,
+        "tata_kelola": 3.4,
+        "manajemen_spbe": 3.27,
+        "layanan_spbe": 4.76
+      },
+      "indeks_spbe_akhir": 4.11,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Madiun",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.8,
+        "tata_kelola": 3.8,
+        "manajemen_spbe": 2.55,
+        "layanan_spbe": 4.45
+      },
+      "indeks_spbe_akhir": 3.89,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sanggau",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.2,
+        "tata_kelola": 1.9,
+        "manajemen_spbe": 1.18,
+        "layanan_spbe": 4.01
+      },
+      "indeks_spbe_akhir": 2.91,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sintang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.9,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 2.82,
+        "layanan_spbe": 3.45
+      },
+      "indeks_spbe_akhir": 3.29,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Mempawah",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.8,
+        "tata_kelola": 1.5,
+        "manajemen_spbe": 1.18,
+        "layanan_spbe": 3.0
+      },
+      "indeks_spbe_akhir": 2.3,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kapuas Hulu",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 1.8,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.76
+      },
+      "indeks_spbe_akhir": 2.73,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Ketapang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.9,
+        "tata_kelola": 2.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.63
+      },
+      "indeks_spbe_akhir": 2.82,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bengkayang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.5,
+        "tata_kelola": 2.5,
+        "manajemen_spbe": 1.82,
+        "layanan_spbe": 3.7
+      },
+      "indeks_spbe_akhir": 3.06,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Landak",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.3,
+        "tata_kelola": 2.8,
+        "manajemen_spbe": 1.36,
+        "layanan_spbe": 3.88
+      },
+      "indeks_spbe_akhir": 3.12,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Melawi",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.1,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.38
+      },
+      "indeks_spbe_akhir": 2.4,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sekadau",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.7,
+        "tata_kelola": 1.3,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.57
+      },
+      "indeks_spbe_akhir": 2.47,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kayong Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.4,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 2.55,
+        "layanan_spbe": 3.88
+      },
+      "indeks_spbe_akhir": 3.38,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Pontianak",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.76
+      },
+      "indeks_spbe_akhir": 2.68,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Singkawang",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.6,
+        "tata_kelola": 3.4,
+        "manajemen_spbe": 1.73,
+        "layanan_spbe": 4.14
+      },
+      "indeks_spbe_akhir": 3.49,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kapuas",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.2,
+        "tata_kelola": 2.1,
+        "manajemen_spbe": 1.73,
+        "layanan_spbe": 3.89
+      },
+      "indeks_spbe_akhir": 2.87,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Barito Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.63
+      },
+      "indeks_spbe_akhir": 2.63,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Barito Selatan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 2.2,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.56
+      },
+      "indeks_spbe_akhir": 2.73,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kotawaringin Timur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.8,
+        "tata_kelola": 2.6,
+        "manajemen_spbe": 2.64,
+        "layanan_spbe": 3.55
+      },
+      "indeks_spbe_akhir": 3.2,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kotawaringin Barat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 2.9,
+        "manajemen_spbe": 1.27,
+        "layanan_spbe": 4.14
+      },
+      "indeks_spbe_akhir": 3.22,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pulang Pisau",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 2.2,
+        "manajemen_spbe": 1.64,
+        "layanan_spbe": 3.63
+      },
+      "indeks_spbe_akhir": 2.87,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Gunung Mas",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.2,
+        "tata_kelola": 2.3,
+        "manajemen_spbe": 1.82,
+        "layanan_spbe": 3.82
+      },
+      "indeks_spbe_akhir": 3.16,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Lamandau",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 1.9,
+        "manajemen_spbe": 1.27,
+        "layanan_spbe": 3.69
+      },
+      "indeks_spbe_akhir": 2.74,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sukamara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.0,
+        "tata_kelola": 2.3,
+        "manajemen_spbe": 1.55,
+        "layanan_spbe": 3.95
+      },
+      "indeks_spbe_akhir": 3.15,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Murung Raya",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.3,
+        "tata_kelola": 2.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.88
+      },
+      "indeks_spbe_akhir": 2.75,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Seruyan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.8,
+        "tata_kelola": 2.9,
+        "manajemen_spbe": 1.82,
+        "layanan_spbe": 3.81
+      },
+      "indeks_spbe_akhir": 3.25,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Barito Timur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.8,
+        "tata_kelola": 1.9,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.3
+      },
+      "indeks_spbe_akhir": 2.5,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Palangka Raya",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.73,
+        "layanan_spbe": 3.75
+      },
+      "indeks_spbe_akhir": 2.82,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tanah Laut",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 2.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.99
+      },
+      "indeks_spbe_akhir": 2.87,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tapin",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 3.1,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.87
+      },
+      "indeks_spbe_akhir": 3.12,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Barito Kuala",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.6,
+        "tata_kelola": 2.9,
+        "manajemen_spbe": 1.82,
+        "layanan_spbe": 4.13
+      },
+      "indeks_spbe_akhir": 3.37,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tabalong",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.2,
+        "tata_kelola": 2.4,
+        "manajemen_spbe": 1.27,
+        "layanan_spbe": 3.88
+      },
+      "indeks_spbe_akhir": 2.99,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Hulu Sungai Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.4,
+        "tata_kelola": 1.8,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.3
+      },
+      "indeks_spbe_akhir": 2.43,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tanah Bumbu",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.9,
+        "tata_kelola": 1.9,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.56
+      },
+      "indeks_spbe_akhir": 2.51,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Banjarmasin",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.0,
+        "tata_kelola": 2.8,
+        "manajemen_spbe": 1.64,
+        "layanan_spbe": 4.07
+      },
+      "indeks_spbe_akhir": 3.34,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Paser",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.6,
+        "tata_kelola": 2.2,
+        "manajemen_spbe": 1.82,
+        "layanan_spbe": 3.88
+      },
+      "indeks_spbe_akhir": 3.09,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Berau",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.9,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 2.36,
+        "layanan_spbe": 3.56
+      },
+      "indeks_spbe_akhir": 3.27,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kutai Barat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.8,
+        "tata_kelola": 1.9,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.8
+      },
+      "indeks_spbe_akhir": 2.28,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kutai Timur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.7,
+        "tata_kelola": 2.0,
+        "manajemen_spbe": 1.55,
+        "layanan_spbe": 3.62
+      },
+      "indeks_spbe_akhir": 2.62,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Penajam Paser Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 2.4,
+        "manajemen_spbe": 2.27,
+        "layanan_spbe": 3.64
+      },
+      "indeks_spbe_akhir": 3.02,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Mahakam Ulu",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 2.7,
+        "manajemen_spbe": 1.27,
+        "layanan_spbe": 3.51
+      },
+      "indeks_spbe_akhir": 2.87,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Samarinda",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.7,
+        "tata_kelola": 1.4,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.04
+      },
+      "indeks_spbe_akhir": 2.25,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Nunukan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.8,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.18,
+        "layanan_spbe": 3.5
+      },
+      "indeks_spbe_akhir": 2.45,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tana Tidung",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.8,
+        "tata_kelola": 2.5,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.81
+      },
+      "indeks_spbe_akhir": 2.89,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Tarakan",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.3,
+        "tata_kelola": 2.5,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.81
+      },
+      "indeks_spbe_akhir": 2.84,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Minahasa",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.6,
+        "tata_kelola": 2.4,
+        "manajemen_spbe": 1.55,
+        "layanan_spbe": 3.42
+      },
+      "indeks_spbe_akhir": 3.01,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bolaang Mongondow",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.0,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.37
+      },
+      "indeks_spbe_akhir": 2.23,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kepulauan Sangihe",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.3,
+        "tata_kelola": 2.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.76
+      },
+      "indeks_spbe_akhir": 2.73,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Minahasa Selatan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.8,
+        "tata_kelola": 1.5,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.13
+      },
+      "indeks_spbe_akhir": 2.46,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kepulauan Talaud",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 1.6,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.37
+      },
+      "indeks_spbe_akhir": 2.48,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Minahasa Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 1.6,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.18
+      },
+      "indeks_spbe_akhir": 2.39,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bolaang Mongondow Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.4,
+        "tata_kelola": 2.9,
+        "manajemen_spbe": 1.82,
+        "layanan_spbe": 3.89
+      },
+      "indeks_spbe_akhir": 3.37,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Siau Tagulandang Biaro",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.1,
+        "tata_kelola": 1.5,
+        "manajemen_spbe": 1.27,
+        "layanan_spbe": 3.25
+      },
+      "indeks_spbe_akhir": 2.34,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Minahasa Tenggara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.4,
+        "tata_kelola": 1.6,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.49
+      },
+      "indeks_spbe_akhir": 2.46,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bolaang Mongondow Timur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.7,
+        "tata_kelola": 2.0,
+        "manajemen_spbe": 1.82,
+        "layanan_spbe": 3.31
+      },
+      "indeks_spbe_akhir": 2.66,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Manado",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.3,
+        "tata_kelola": 2.4,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.68
+      },
+      "indeks_spbe_akhir": 2.88,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Tomohon",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.9,
+        "tata_kelola": 3.4,
+        "manajemen_spbe": 2.18,
+        "layanan_spbe": 3.51
+      },
+      "indeks_spbe_akhir": 3.31,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Kotamobagu",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.8,
+        "tata_kelola": 2.3,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.95
+      },
+      "indeks_spbe_akhir": 3.03,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Boalemo",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.6,
+        "tata_kelola": 2.4,
+        "manajemen_spbe": 1.27,
+        "layanan_spbe": 3.37
+      },
+      "indeks_spbe_akhir": 2.68,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pohuwato",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.0,
+        "tata_kelola": 1.6,
+        "manajemen_spbe": 1.27,
+        "layanan_spbe": 3.37
+      },
+      "indeks_spbe_akhir": 2.4,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bone Bolango",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.6,
+        "tata_kelola": 1.4,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.94
+      },
+      "indeks_spbe_akhir": 2.52,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Gorontalo Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.7,
+        "tata_kelola": 2.0,
+        "manajemen_spbe": 1.36,
+        "layanan_spbe": 3.95
+      },
+      "indeks_spbe_akhir": 3.0,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Gorontalo",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 2.6,
+        "manajemen_spbe": 1.55,
+        "layanan_spbe": 3.48
+      },
+      "indeks_spbe_akhir": 2.89,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Poso",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.4,
+        "tata_kelola": 2.6,
+        "manajemen_spbe": 1.36,
+        "layanan_spbe": 3.49
+      },
+      "indeks_spbe_akhir": 2.91,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tolitoli",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.6,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.68
+      },
+      "indeks_spbe_akhir": 2.45,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Banggai",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.9,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.16
+      },
+      "indeks_spbe_akhir": 2.49,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Morowali",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.9,
+        "tata_kelola": 2.3,
+        "manajemen_spbe": 1.73,
+        "layanan_spbe": 4.01
+      },
+      "indeks_spbe_akhir": 3.19,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Banggai Kepulauan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.5,
+        "tata_kelola": 2.8,
+        "manajemen_spbe": 1.64,
+        "layanan_spbe": 4.0
+      },
+      "indeks_spbe_akhir": 3.25,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Parigi Moutong",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 1.3,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.62
+      },
+      "indeks_spbe_akhir": 2.55,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tojo Una Una",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.2,
+        "tata_kelola": 1.9,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.62
+      },
+      "indeks_spbe_akhir": 2.72,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sigi",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.4,
+        "tata_kelola": 1.9,
+        "manajemen_spbe": 1.27,
+        "layanan_spbe": 3.96
+      },
+      "indeks_spbe_akhir": 3.06,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Banggai Laut",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.5,
+        "tata_kelola": 1.6,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.07
+      },
+      "indeks_spbe_akhir": 2.29,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Morowali Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.0,
+        "tata_kelola": 1.2,
+        "manajemen_spbe": 1.36,
+        "layanan_spbe": 2.91
+      },
+      "indeks_spbe_akhir": 2.11,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Palu",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.5,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.62
+      },
+      "indeks_spbe_akhir": 2.56,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Gowa",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.3,
+        "tata_kelola": 3.3,
+        "manajemen_spbe": 1.36,
+        "layanan_spbe": 4.14
+      },
+      "indeks_spbe_akhir": 3.49,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bone",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 2.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.81
+      },
+      "indeks_spbe_akhir": 2.77,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tana Toraja",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.3,
+        "tata_kelola": 2.6,
+        "manajemen_spbe": 2.18,
+        "layanan_spbe": 3.82
+      },
+      "indeks_spbe_akhir": 3.18,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Luwu",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.4,
+        "tata_kelola": 2.4,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.99
+      },
+      "indeks_spbe_akhir": 3.15,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sinjai",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.2,
+        "tata_kelola": 2.1,
+        "manajemen_spbe": 1.27,
+        "layanan_spbe": 3.75
+      },
+      "indeks_spbe_akhir": 2.6,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bulukumba",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.0,
+        "tata_kelola": 2.5,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.74
+      },
+      "indeks_spbe_akhir": 3.01,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bantaeng",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.8,
+        "tata_kelola": 1.4,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.69
+      },
+      "indeks_spbe_akhir": 2.56,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kepulauan Selayar",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.1,
+        "tata_kelola": 2.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 4.07
+      },
+      "indeks_spbe_akhir": 3.1,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Takalar",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.8,
+        "tata_kelola": 1.8,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.49
+      },
+      "indeks_spbe_akhir": 2.57,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Barru",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.5,
+        "tata_kelola": 2.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.87
+      },
+      "indeks_spbe_akhir": 2.8,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sidenreng Rappang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.2,
+        "tata_kelola": 2.4,
+        "manajemen_spbe": 1.82,
+        "layanan_spbe": 3.81
+      },
+      "indeks_spbe_akhir": 2.79,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pangkajene dan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 5.0,
+        "tata_kelola": 2.0,
+        "manajemen_spbe": 1.27,
+        "layanan_spbe": 3.68
+      },
+      "indeks_spbe_akhir": 3.04,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Soppeng",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.0,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.69
+      },
+      "indeks_spbe_akhir": 2.64,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Enrekang",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 2.7,
+        "manajemen_spbe": 1.64,
+        "layanan_spbe": 3.62
+      },
+      "indeks_spbe_akhir": 2.98,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Luwu Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 2.9,
+        "manajemen_spbe": 1.73,
+        "layanan_spbe": 3.95
+      },
+      "indeks_spbe_akhir": 3.2,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Luwu Timur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.5,
+        "tata_kelola": 2.6,
+        "manajemen_spbe": 1.82,
+        "layanan_spbe": 4.07
+      },
+      "indeks_spbe_akhir": 3.26,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Toraja Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.9,
+        "tata_kelola": 2.3,
+        "manajemen_spbe": 1.36,
+        "layanan_spbe": 4.08
+      },
+      "indeks_spbe_akhir": 3.16,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Makassar",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.0,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.49
+      },
+      "indeks_spbe_akhir": 2.31,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Palopo",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.8,
+        "tata_kelola": 1.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.94
+      },
+      "indeks_spbe_akhir": 2.62,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Konawe",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 2.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.88
+      },
+      "indeks_spbe_akhir": 2.87,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Buton",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 2.1,
+        "manajemen_spbe": 2.09,
+        "layanan_spbe": 3.62
+      },
+      "indeks_spbe_akhir": 2.92,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Muna",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 1.3,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.01
+      },
+      "indeks_spbe_akhir": 2.26,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kolaka",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.99
+      },
+      "indeks_spbe_akhir": 2.35,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bombana",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.55
+      },
+      "indeks_spbe_akhir": 2.63,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Wakatobi",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 2.5,
+        "manajemen_spbe": 1.55,
+        "layanan_spbe": 3.51
+      },
+      "indeks_spbe_akhir": 2.85,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Buton Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.4,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.62
+      },
+      "indeks_spbe_akhir": 2.55,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Konawe Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.5
+      },
+      "indeks_spbe_akhir": 2.19,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kolaka Timur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.5,
+        "tata_kelola": 2.2,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.95
+      },
+      "indeks_spbe_akhir": 2.85,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Konawe Kepulauan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.5,
+        "tata_kelola": 1.3,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.87
+      },
+      "indeks_spbe_akhir": 2.12,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Buton Selatan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.49
+      },
+      "indeks_spbe_akhir": 2.16,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Buton Tengah",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.3,
+        "tata_kelola": 1.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.37
+      },
+      "indeks_spbe_akhir": 2.25,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Muna Barat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.4,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.18,
+        "layanan_spbe": 3.45
+      },
+      "indeks_spbe_akhir": 2.63,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Kendari",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.9,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.48
+      },
+      "indeks_spbe_akhir": 1.82,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Baubau",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.9,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 2.0,
+        "layanan_spbe": 3.62
+      },
+      "indeks_spbe_akhir": 3.23,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Mamuju",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 1.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.69
+      },
+      "indeks_spbe_akhir": 2.52,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Mamasa",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.2,
+        "tata_kelola": 1.5,
+        "manajemen_spbe": 1.45,
+        "layanan_spbe": 3.62
+      },
+      "indeks_spbe_akhir": 2.42,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Polewali Mandar",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.1,
+        "tata_kelola": 1.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.79
+      },
+      "indeks_spbe_akhir": 2.01,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Mamuju Tengah",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 5.0,
+        "tata_kelola": 1.9,
+        "manajemen_spbe": 2.27,
+        "layanan_spbe": 3.38
+      },
+      "indeks_spbe_akhir": 3.04,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Jembrana",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.7,
+        "tata_kelola": 3.5,
+        "manajemen_spbe": 2.36,
+        "layanan_spbe": 4.26
+      },
+      "indeks_spbe_akhir": 3.69,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Gianyar",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.3,
+        "tata_kelola": 3.8,
+        "manajemen_spbe": 2.45,
+        "layanan_spbe": 4.08
+      },
+      "indeks_spbe_akhir": 3.77,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Karangasem",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 3.0,
+        "manajemen_spbe": 2.73,
+        "layanan_spbe": 4.14
+      },
+      "indeks_spbe_akhir": 3.49,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bangli",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.7,
+        "tata_kelola": 1.9,
+        "manajemen_spbe": 1.55,
+        "layanan_spbe": 3.27
+      },
+      "indeks_spbe_akhir": 2.57,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Badung",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.2,
+        "tata_kelola": 2.0,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.82
+      },
+      "indeks_spbe_akhir": 2.71,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tabanan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.7,
+        "tata_kelola": 3.1,
+        "manajemen_spbe": 2.45,
+        "layanan_spbe": 4.57
+      },
+      "indeks_spbe_akhir": 3.87,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Klungkung",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.7,
+        "tata_kelola": 3.2,
+        "manajemen_spbe": 2.27,
+        "layanan_spbe": 4.14
+      },
+      "indeks_spbe_akhir": 3.54,
+      "predikat": "Sangat Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Lombok Tengah",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.2,
+        "tata_kelola": 2.2,
+        "manajemen_spbe": 2.09,
+        "layanan_spbe": 3.82
+      },
+      "indeks_spbe_akhir": 3.05,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Lombok Timur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.7,
+        "tata_kelola": 2.5,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.88
+      },
+      "indeks_spbe_akhir": 3.04,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Bima",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 3.3,
+        "manajemen_spbe": 1.55,
+        "layanan_spbe": 3.95
+      },
+      "indeks_spbe_akhir": 3.27,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sumbawa",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 1.8,
+        "manajemen_spbe": 1.18,
+        "layanan_spbe": 3.3
+      },
+      "indeks_spbe_akhir": 2.52,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Dompu",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.7,
+        "tata_kelola": 2.5,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.57
+      },
+      "indeks_spbe_akhir": 2.9,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sumbawa Barat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.5,
+        "tata_kelola": 1.8,
+        "manajemen_spbe": 1.45,
+        "layanan_spbe": 3.3
+      },
+      "indeks_spbe_akhir": 2.52,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Lombok Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.1,
+        "tata_kelola": 2.7,
+        "manajemen_spbe": 2.55,
+        "layanan_spbe": 4.01
+      },
+      "indeks_spbe_akhir": 3.45,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Mataram",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.9,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.69
+      },
+      "indeks_spbe_akhir": 2.71,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Belu",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.7,
+        "tata_kelola": 1.9,
+        "manajemen_spbe": 1.18,
+        "layanan_spbe": 3.5
+      },
+      "indeks_spbe_akhir": 2.48,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Timor Tengah Selatan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.5,
+        "tata_kelola": 1.4,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.5
+      },
+      "indeks_spbe_akhir": 2.43,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Alor",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.8,
+        "tata_kelola": 2.2,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.82
+      },
+      "indeks_spbe_akhir": 2.83,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sikka",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.4,
+        "tata_kelola": 1.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.11
+      },
+      "indeks_spbe_akhir": 2.19,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Flores Timur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.5,
+        "tata_kelola": 1.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.81
+      },
+      "indeks_spbe_akhir": 2.02,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Ende",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.2,
+        "tata_kelola": 1.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.36
+      },
+      "indeks_spbe_akhir": 2.1,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Ngada",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.5,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.62
+      },
+      "indeks_spbe_akhir": 2.58,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Manggarai",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.01
+      },
+      "indeks_spbe_akhir": 2.17,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sumba Timur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 2.0,
+        "manajemen_spbe": 1.64,
+        "layanan_spbe": 3.81
+      },
+      "indeks_spbe_akhir": 2.9,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sumba Barat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.5,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.58
+      },
+      "indeks_spbe_akhir": 2.56,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Lembata",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.4,
+        "tata_kelola": 2.3,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.95
+      },
+      "indeks_spbe_akhir": 3.12,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Rote Ndao",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 1.5,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.31
+      },
+      "indeks_spbe_akhir": 2.42,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Manggarai Barat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 5.0,
+        "tata_kelola": 2.6,
+        "manajemen_spbe": 1.91,
+        "layanan_spbe": 3.82
+      },
+      "indeks_spbe_akhir": 3.35,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Manggarai Timur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.9,
+        "tata_kelola": 3.1,
+        "manajemen_spbe": 2.73,
+        "layanan_spbe": 3.82
+      },
+      "indeks_spbe_akhir": 3.47,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sumba Barat Daya",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 3.62
+      },
+      "indeks_spbe_akhir": 2.64,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sumba Tengah",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.1,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.19
+      },
+      "indeks_spbe_akhir": 2.03,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sabu Raijua",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.5,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 2.73
+      },
+      "indeks_spbe_akhir": 2.19,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Malaka",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 4.6,
+        "tata_kelola": 1.5,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 1.51
+      },
+      "indeks_spbe_akhir": 1.84,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Kupang",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.2,
+        "tata_kelola": 1.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.24
+      },
+      "indeks_spbe_akhir": 2.17,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Maluku Tengah",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.5,
+        "tata_kelola": 2.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.5
+      },
+      "indeks_spbe_akhir": 2.63,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Maluku Tenggara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.03
+      },
+      "indeks_spbe_akhir": 2.24,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kepulauan Tanimbar",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.0,
+        "tata_kelola": 1.0,
+        "manajemen_spbe": 1.09,
+        "layanan_spbe": 2.79
+      },
+      "indeks_spbe_akhir": 1.96,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kepulauan Aru",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.7,
+        "tata_kelola": 1.6,
+        "manajemen_spbe": 1.18,
+        "layanan_spbe": 2.99
+      },
+      "indeks_spbe_akhir": 2.31,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Seram Bagian Barat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.8,
+        "tata_kelola": 1.4,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.37
+      },
+      "indeks_spbe_akhir": 2.41,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Seram Bagian Timur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.8,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.54
+      },
+      "indeks_spbe_akhir": 1.9,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Buru Selatan",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.0,
+        "tata_kelola": 1.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.71
+      },
+      "indeks_spbe_akhir": 2.41,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Maluku Barat Daya",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.66
+      },
+      "indeks_spbe_akhir": 1.81,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Ambon",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.5,
+        "tata_kelola": 1.3,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.99
+      },
+      "indeks_spbe_akhir": 2.05,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Tual",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.2,
+        "tata_kelola": 2.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.37
+      },
+      "indeks_spbe_akhir": 2.64,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Halmahera Barat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 2.1,
+        "manajemen_spbe": 1.64,
+        "layanan_spbe": 3.3
+      },
+      "indeks_spbe_akhir": 2.69,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Halmahera Tengah",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.92
+      },
+      "indeks_spbe_akhir": 1.9,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kepulauan Sula",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.92
+      },
+      "indeks_spbe_akhir": 1.9,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Halmahera Utara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.0,
+        "tata_kelola": 2.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.25
+      },
+      "indeks_spbe_akhir": 2.43,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Halmahera Timur",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 2.1,
+        "manajemen_spbe": 1.27,
+        "layanan_spbe": 3.49
+      },
+      "indeks_spbe_akhir": 2.73,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pulau Morotai",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.0,
+        "tata_kelola": 1.3,
+        "manajemen_spbe": 1.18,
+        "layanan_spbe": 1.31
+      },
+      "indeks_spbe_akhir": 1.38,
+      "predikat": "Kurang"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Pulau Taliabu",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.2,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.03
+      },
+      "indeks_spbe_akhir": 1.97,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Tidore Kepulauan",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.7,
+        "tata_kelola": 1.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.92
+      },
+      "indeks_spbe_akhir": 2.09,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Ternate",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.3,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.17
+      },
+      "indeks_spbe_akhir": 2.32,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Jayapura",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.5,
+        "tata_kelola": 1.3,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.95
+      },
+      "indeks_spbe_akhir": 2.03,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Keerom",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 2.2,
+        "manajemen_spbe": 2.18,
+        "layanan_spbe": 3.32
+      },
+      "indeks_spbe_akhir": 2.82,
+      "predikat": "Baik"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sarmi",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 1.3
+      },
+      "indeks_spbe_akhir": 1.14,
+      "predikat": "Kurang"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Supiori",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.1
+      },
+      "indeks_spbe_akhir": 1.53,
+      "predikat": "Kurang"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Jayapura",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.04
+      },
+      "indeks_spbe_akhir": 1.48,
+      "predikat": "Kurang"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Manokwari",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.4,
+        "tata_kelola": 1.7,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.03
+      },
+      "indeks_spbe_akhir": 2.28,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Teluk Wondama",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.9,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.05
+      },
+      "indeks_spbe_akhir": 1.75,
+      "predikat": "Kurang"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Fak-Fak",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.5,
+        "tata_kelola": 1.6,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.04
+      },
+      "indeks_spbe_akhir": 2.4,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Kaimana",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.5,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.29
+      },
+      "indeks_spbe_akhir": 1.68,
+      "predikat": "Kurang"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Merauke",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.33
+      },
+      "indeks_spbe_akhir": 1.61,
+      "predikat": "Kurang"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Boven Digoel",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.2,
+        "tata_kelola": 1.4,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.47
+      },
+      "indeks_spbe_akhir": 2.25,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Asmat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.0,
+        "tata_kelola": 1.8,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.81
+      },
+      "indeks_spbe_akhir": 2.16,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Puncak Jaya",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.88
+      },
+      "indeks_spbe_akhir": 1.88,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Mimika",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.8,
+        "tata_kelola": 1.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.44
+      },
+      "indeks_spbe_akhir": 1.94,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Puncak",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.5,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.07
+      },
+      "indeks_spbe_akhir": 2.33,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Dogiyai",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.35
+      },
+      "indeks_spbe_akhir": 1.62,
+      "predikat": "Kurang"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Jayawijaya",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.5,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.09
+      },
+      "indeks_spbe_akhir": 1.62,
+      "predikat": "Kurang"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Mamberamo Tengah",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 2.6,
+        "tata_kelola": 1.2,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.57
+      },
+      "indeks_spbe_akhir": 2.43,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Nduga",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 1.19
+      },
+      "indeks_spbe_akhir": 1.09,
+      "predikat": "Kurang"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Tolikara",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 2.1
+      },
+      "indeks_spbe_akhir": 1.5,
+      "predikat": "Kurang"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Sorong",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.0,
+        "tata_kelola": 1.1,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.43
+      },
+      "indeks_spbe_akhir": 2.39,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kab. Raja Ampat",
+      "jenis_instansi": "Pemerintah Kabupaten",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 3.1,
+        "tata_kelola": 1.3,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 3.5
+      },
+      "indeks_spbe_akhir": 2.49,
+      "predikat": "Cukup"
+    },
+    {
+      "nama_instansi": "Pemerintah Kota Sorong",
+      "jenis_instansi": "Pemerintah Kota",
+      "kategori_wilayah": "Nasional",
+      "skor_domain": {
+        "kebijakan_internal": 1.0,
+        "tata_kelola": 1.0,
+        "manajemen_spbe": 1.0,
+        "layanan_spbe": 1.73
+      },
+      "indeks_spbe_akhir": 1.33,
+      "predikat": "Kurang"
+    }
+  ],
+  "source_filename": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf"
+}

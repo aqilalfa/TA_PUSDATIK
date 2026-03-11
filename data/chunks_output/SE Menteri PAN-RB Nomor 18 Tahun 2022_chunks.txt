@@ -1,0 +1,628 @@
+DOCUMENT: SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf
+TYPE: peraturan
+TOTAL CHUNKS: 34
+============================================================
+
+--- CHUNK 1 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 1 - Latar Belakang", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 1 - Latar Belakang > Pasal isi"}
+CONTENT:
+Dalam
+rangka
+pelaksanaan
+prioritas
+pembangunan
+nasional
+sebagaimana ditetapkan dalam Peraturan Presiden Nomor 18 Tahun
+SURATEDARAN
+MENTERI PENDAYAGUNAAN APARATUR NEGARA
+DAN REFORMASI BIROKRASI
+NOMOR: 18 TAHUN 2022
+TENTANG
+KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN
+ARSITEKTUR SPBE DAN PETA RENCANA SPBE
+Para Menteri Kabinet Indonesia Maju;
+Sekretaris Kabinet;
+Panglima Tentara Nasional Indonesia;
+Kepala KepolisianNegara Republik Indonesia;
+Jaksa AgungRepublik Indonesia;
+KepalaBadan Intelijen Negara Republik Indonesia;
+Para Kepala LembagaPemerintah Non Kementerian;
+----------------------------------------
+
+--- CHUNK 2 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 1 - Latar Belakang", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 1 - Latar Belakang > Pasal isi"}
+CONTENT:
+KepalaBadan Intelijen Negara Republik Indonesia;
+Para Kepala LembagaPemerintah Non Kementerian;
+Para Pimpinan Kesekretariatan LembagaNegara;
+Para Pimpinan Kesekretariatan LembagaNonStruktural;
+10. Para Pimpinan LembagaPenyiaran Publik;
+11. Para Gubernur;
+12. Para Bupati; dan
+13. Para WaliKota.
+MENTERI
+PENDAYAGUNAAN APARATUR NEGARA
+DAN REFORMASI BIROKRASI
+REPUBLIK INDONESIA
+di
+Tempat
+Yth.
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+----------------------------------------
+
+--- CHUNK 3 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 1 - Latar Belakang", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 1 - Latar Belakang > Pasal isi"}
+CONTENT:
+Berdasarkan uraian tersebut di atas, maka berbagai inovasi digital
+untuk mendukung terwujudnya layanan digital nasional memerlukan
+keterpaduan pembangunan dan pengembangan Sistem Pemerintahan
+BerbasisElektronik(SPBE)baik pada instansi pusat maupun pemerintah
+daerah. Keterpaduan tersebut akan meningkatkan kualitas layanan
+administrasi pemerintahan dan layanan publik sehinggalebihsistematis,
+sederhana, dan terpadu. Pelaksanaan keterpaduan dimaksud sejalan
+dengan ketentuan dalam Peraturan PresidenNomor95 Tahun 2018,yang
+mengamanatkan agar penyusunan rencana dan anggaran SPBE, Peta
+----------------------------------------
+
+--- CHUNK 4 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 1 - Latar Belakang", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 1 - Latar Belakang > Pasal isi"}
+CONTENT:
+mengamanatkan agar penyusunan rencana dan anggaran SPBE, Peta
+Rencana SPBE,pembangunan aplikasi khusus pada instansi pusat dan
+pemerintah daerah, serta pembangunan dan pengembangan Aplikasi
+Bahwa saat ini terdapat berbagai aplikasi yang dimiliki dan/ atau
+dikelolaoleh instansi pusat dan pemerintah daerah dalam mendukung
+pelaksanaan layanan digital. Namun demikian, pembangunan dan
+pengembangan aplikasi tersebut cenderung bersifat sektoral dan belum
+terintegrasi,
+sehingga
+diperlukan
+upaya
+yang
+kuat
+untuk
+mengintegrasikan layanan digitallayanan tersebut yang pada akhimya
+----------------------------------------
+
+--- CHUNK 5 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 1 - Latar Belakang", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 1 - Latar Belakang > Pasal isi"}
+CONTENT:
+diperlukan
+upaya
+yang
+kuat
+untuk
+mengintegrasikan layanan digitallayanan tersebut yang pada akhimya
+akan meningkatkan kualitas layanan administrasi pemerintahan dan
+layanan publik. Pembangunan dan pengembanganaplikasi yang bersifat
+sektoral dan belum terintegrasi juga berimplikasi dalam peningkatan
+risiko operasionaldan keamanan informasi, serta membebani keuangan
+negara.
+2020 tentang Rencana Pembangunan Jangka MenengahNasional2020-
+2024, diperlukan percepatan Reformasi Birokrasi yang dilaksanakan
+melalui strategi pemanfaatan teknologidigital.Tata kelolapemerintahan
+----------------------------------------
+
+--- CHUNK 6 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 1 - Latar Belakang", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 1 - Latar Belakang > Pasal isi"}
+CONTENT:
+melalui strategi pemanfaatan teknologidigital.Tata kelolapemerintahan
+dengan memanfaatkan teknologi digital tersebut dilaksanakan melalui
+pengimplementasianPeraturan Presiden Nomor95 Tahun 2018 tentang
+Sistem Pemerintahan Berbasis Elektronik(Peraturan Presiden Nomor95
+Tahun 2018) yang didasarkan pada prinsip efektivitas, keterpaduan,
+kesinambungan,
+efisiensi,
+akuntabilitas,
+interoperabilitas,
+dan
+keamanan informasi.
+- 2-
+----------------------------------------
+
+--- CHUNK 7 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 2 - Maksud dan Tujuan", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 2 - Maksud dan Tujuan > Pasal isi"}
+CONTENT:
+a. Maksud
+Surat Edaran ini dimaksudkan sebagai arahan yang mendorong
+instansi pusat dan pemerintah daerah untuk melakukan penyusunan
+Arsitektur SPBE dan Peta Rencana SPBE sebagai dasar penerapan
+SPBE pada lingkup instansi pusat dan pemerintah daerah masing-
+masing.
+Bahwa dengan
+mempertimbangkan perlunya
+suatu
+panduan
+penyusunan Arsitektur SPBE dan Peta Rencana SPBE untuk segera
+melaksanakan ketentuan Peraturan Presiden Nomor 95 Tahun 2018
+tentang SPBEmaka disusun suatu instrumen hukum untuk mendorong
+dan menjadi pedoman dalam penyusunan Arsitektur SPBE dan Peta
+----------------------------------------
+
+--- CHUNK 8 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 2 - Maksud dan Tujuan", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 2 - Maksud dan Tujuan > Pasal isi"}
+CONTENT:
+dan menjadi pedoman dalam penyusunan Arsitektur SPBE dan Peta
+Rencana SPBEbaik pada instansi pusat maupun pemerintah daerah.
+Bahwa
+Arsitektur
+SPBE merupakan
+kerangka
+dasar
+yang
+mendeskripsikan
+integrasi
+proses
+bisnis,
+data
+dan.
+informasi,
+infrastruktur SPBE,aplikasi SPBE,dan keamanan SPBEyang ditujukan
+untuk menghasilkanlayanan SPBEyangterintegrasi.PetaRencanaSPBE
+merupakan dokumenyangmendeskripsikanarah dan langkah penyiapan
+serta pelaksanaan SPBE yang terintegrasi. Arsitektur SPBE dan Peta
+RencanaSPBEakan membantu pengembanganlayanan pemerintahyang
+----------------------------------------
+
+--- CHUNK 9 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 2 - Maksud dan Tujuan", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 2 - Maksud dan Tujuan > Pasal isi"}
+CONTENT:
+RencanaSPBEakan membantu pengembanganlayanan pemerintahyang
+terpadu dan sederhana serta menjadireferensidalam pembangunan dan
+pengembangan aplikasi yang terpadu Keterpaduan layanan tersebut
+diharapkan dapat menghindaridan mengurangiduplikasi pembangunan
+aplikasi dan potensi inefisiensi penggunaan anggaran sehingga dapat
+mendorong penerapan prinsip keterpaduan SPBEpada instansi pusat,
+pemerintah daerah, maupun pada tingkat nasional guna mewujudkan
+Smart Government.
+UmumSPBEyangdigunakan secara nasional didasarkan pada Arsitektur
+SPBE.
+-3 -
+----------------------------------------
+
+--- CHUNK 10 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 5 - lsi Edaran", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 5 - lsi Edaran > Pasal isi"}
+CONTENT:
+a. Instansi pusat dan pemerintah daerah segeramelakukan penyusunan
+Arsitektur SPBE dan Peta Rencana SPBE yang ditetapkan oleh
+pimpinan instansi pusat dan kepala daerah paling lambat Desember
+Tahun 2022;
+d.
+Keputusan PresidenNomor75/P Tahun 2022 tentang Pemberhentian
+dan Penunjukan Pelaksana Tugas, Wewenang,dan TanggungJawab
+Menteri Pendayagunaan Aparatur Negara dan Reformasi Birokrasi
+KabinetIndonesia MajuPeriodeTahun 2019-2024.
+C.
+Peraturan Presiden Nomor 47 Tahun 2021 tentang Kementerian
+Pendayagunaan Aparatur Negaradan ReformasiBirokrasi;
+b.
+----------------------------------------
+
+--- CHUNK 11 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 5 - lsi Edaran", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 5 - lsi Edaran > Pasal isi"}
+CONTENT:
+Pendayagunaan Aparatur Negaradan ReformasiBirokrasi;
+b.
+Peraturan Presiden Nomor 39 Tahun 2019 tentang Satu Data
+Indonesia;
+----------------------------------------
+
+--- CHUNK 12 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 4 - Dasar Hukum", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 4 - Dasar Hukum > Pasal isi"}
+CONTENT:
+a.
+Peraturan
+Presiden
+Nomor 95
+Tahun
+2018
+tentang
+Sistem
+Pemerintahan Berbasis Elektronik;
+----------------------------------------
+
+--- CHUNK 13 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 3 - Ruang Lingkup", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 3 - Ruang Lingkup > Pasal isi"}
+CONTENT:
+Surat Edaran ini memuat arahan dan panduan bagi instansi pusat dan
+pemerintah daerah dalam melakukan penyusunan Arsitektur SPBEdan
+Peta Rencana SPBEsesuai amanat Peraturan Presiden Nomor95 Tahun
+2018.
+b. Tujuan
+Surat
+Edaran
+ini
+bertujuan
+untuk
+memastikan
+keterpaduan
+penerapan
+SPBE di tingkat instansi pusat,
+pemerintah daerah,
+maupun nasional, guna terwujudnya layanan digital nasional yang
+terpadu sebagaiupaya peningkatan kualitas layanan pemerintah, baik
+layanan administrasi pemerintah maupun layanan publik.
+- 4-
+----------------------------------------
+
+--- CHUNK 14 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 3 - Ruang Lingkup", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 3 - Ruang Lingkup > Pasal isi"}
+CONTENT:
+c.
+Penyusunan dan pengelolaan Arsitektur SPBE dan Peta Rencana
+SPBEdilakukan menggunakan Sistem InformasiArsitektur SPBE;
+d. Pemerintah daerah provinsi mendorong dan melakukan pembinaan
+dan pengawasan terhadap penyusunan dan pengelolaan Arsitektur
+SPBEpada pemerintah daerah kabupatenj'kota di wilayahnya;
+e. Instansi pusat dan pemerintah daerah dalam penyusunan Arsitektur
+SPBEdan Peta Rencana SPBEwajibmelakukan penyelarasan dengan
+arsitektur SPBEnasional sehingga perlu melakukan koordinasi dan
+konsultasi dengan Tim Arsitek SPBENasionalyang dikoordinasikan
+----------------------------------------
+
+--- CHUNK 15 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 3 - Ruang Lingkup", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 3 - Ruang Lingkup > Pasal isi"}
+CONTENT:
+konsultasi dengan Tim Arsitek SPBENasionalyang dikoordinasikan
+oleh Asisten Deputi Perumusan Kebijakandan KoordinasiPenerapan
+SPBE, Deputi Kelembagaan dan Tata Laksana pada Kementerian
+Pendayagunaan dan Aparatur Negara, selaku KoordinatorKelompok
+KerjaTimKoordinasiSPBENasional;
+f.
+Penyelarasan penyusunan Arsitektur SPBE oleh instansi pusat dan
+pemerintah
+daerah
+dilakukan dengan mengacu pada
+panduan
+penyusunan Arsitektur SPBEdan Peta Rencana SPBE sebagaimana
+tercantum dalam lampiran yang merupakan bagian yang tidak
+terpisahkan dari Surat Edaran ini dan dapat diunduh pada situs web
+----------------------------------------
+
+--- CHUNK 16 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 3 - Ruang Lingkup", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 3 - Ruang Lingkup > Pasal isi"}
+CONTENT:
+terpisahkan dari Surat Edaran ini dan dapat diunduh pada situs web
+http:// s.idj SE_KeterpaduanLayananDigitalNasional
+b. Arsitektur SPBE dan Peta Rencana SPBE sebagaimana dimaksud
+pada huruf a, menjadi dasar dalam penyusunan
+rencana dan
+anggaran SPBEserta pelaksanaan pembangunan dan pengembangan
+SPBE,
+seperti
+penyiapan
+Aplikasi,
+Infrastruktur
+TIK,
+dan
+pembentukan layanan digital pada instansi pusat dan pemerintah
+daerah;
+- 5-
+----------------------------------------
+
+--- CHUNK 17 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 3 - Ruang Lingkup", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 3 - Ruang Lingkup > Pasal isi"}
+CONTENT:
+TernbusanYth.:
+1. PresidenRepublikIndonesia;
+2. WakilPresiden RepublikIndonesia.
+2022
+Ditetapkan di Jakarta
+pada tanggal
+\'1
+A9vstV-i
+kasih.
+Atas perhatian dan kerja sarna BapakjIbu, disarnpaikan terirna
+----------------------------------------
+
+--- CHUNK 18 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 6 - Penutup", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 6 - Penutup > Pasal isi"}
+CONTENT:
+DernikianSurat Edaran ini agar diperhatikan dan dipedornanioleh
+seluruh
+Instansi
+Pusat
+dan
+Daerah
+dalarn rangka
+rnewujudkan
+keterpaduan penerapan SPBE.
+- 6-
+
+
+ 
+ 
+      LAMPIRAN 
+SURAT EDARAN MENTERI 
+PENDAYAGUNAAN APARATUR NEGARA 
+DAN REFORMASI BIROKRASI 
+ 
+ 
+ 
+ 
+ 
+NOMOR 18 TAHUN 2022 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PETUNJUK TEKNIS 
+PENYUSUNAN 
+ 
+ARSITEKTUR SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK 
+DAN PETA RENCANA SISTEM PEMERINTAHAN BERBASIS 
+ELEKTRONIK  
+PADA  
+INSTANSI PUSAT DAN PEMERINTAH DAERAH  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+REPUBLIK INDONESIA 
+2022
+----------------------------------------
+
+--- CHUNK 19 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 6 - Penutup", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 6 - Penutup > Pasal isi"}
+CONTENT:
+DAFTAR ISI 
+ 
+ 
+BAB I 
+PENDAHULUAN .......................................................................................................... 1 
+1.1. 
+Latar Belakang ............................................................................................................ 1 
+1.2. 
+Maksud dan Tujuan .................................................................................................... 1 
+BAB II 
+KERANGKA KERJA .................................................................................................... 2 
+2.1.
+----------------------------------------
+
+--- CHUNK 20 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 6 - Penutup", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 6 - Penutup > Pasal isi"}
+CONTENT:
+2.1. 
+Kerangka Kerja Arsitektur SPBE .................................................................................. 2 
+2.2. 
+Manajemen SPBE ........................................................................................................ 3 
+BAB III 
+ARSITEKTUR............................................................................................................... 4 
+3.1. 
+Arsitektur SPBE Nasional ............................................................................................ 4 
+3.1.1.
+----------------------------------------
+
+--- CHUNK 21 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 6 - Penutup", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 6 - Penutup > Pasal isi"}
+CONTENT:
+3.1.1. 
+Referensi Arsitektur SPBE Nasional ............................................................................ 4 
+3.1.2. 
+Domain Arsitektur SPBE Nasional ............................................................................. 15 
+3.1.3. 
+Metadata Arsitektur SPBE Nasional.......................................................................... 36 
+3.2. 
+Arsitektur SPBE Instansi Pusat dan Pemerintah Daerah .......................................... 40 
+BAB IV 
+PETA RENCANA ....................................................................................................... 42
+----------------------------------------
+
+--- CHUNK 22 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 6 - Penutup", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 6 - Penutup > Pasal isi"}
+CONTENT:
+4.1. 
+Metodologi Penyusunan Peta Rencana SPBE ........................................................... 43 
+4.1.1. 
+Penentuan Sasaran Program/Kegiatan Dokumen Strategis ..................................... 43 
+4.1.2. 
+Pengkategorian Sesuai Inisiatif Strategis Arsitektur SPBE ........................................ 44 
+4.1.3. 
+Pengkategorian Sesuai Muatan Peta Rencana SPBE ................................................ 44 
+4.1.4. 
+Penyusunan Program dan Kegiatan .......................................................................... 45 
+4.1.5.
+----------------------------------------
+
+--- CHUNK 23 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 6 - Penutup", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 6 - Penutup > Pasal isi"}
+CONTENT:
+4.1.5. 
+Efektivitas Program ................................................................................................... 45 
+4.1.6. 
+Kelayakan Program ................................................................................................... 46 
+4.1.7. 
+Efisiensi Program ...................................................................................................... 47 
+4.1.8. 
+Metode Penyajian Peta Rencana SPBE ..................................................................... 48 
+4.1.9.
+----------------------------------------
+
+--- CHUNK 24 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bab": "BAB 6 - Penutup", "pasal": "Pasal isi", "bagian": "", "ayat": "", "hierarchy": "Peraturan 18 Tahun 2022 > BAB 6 - Penutup > Pasal isi"}
+CONTENT:
+4.1.9. 
+Pemantauan dan Evaluasi Program .......................................................................... 49 
+BAB V 
+PENUTUP ................................................................................................................... 50
+----------------------------------------
+
+--- CHUNK 25 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan 18 Tahun 2022 > Lampiran"}
+CONTENT:
+LAMPIRAN.................................................................................................................................... 51 
+REFERENSI ARSITEKTUR SPBE ........................................................................................... 51 
+Taksonomi Referensi Arsitektur Proses Bisnis ........................................................................... 51 
+METADATA ARSITEKTUR SPBE NASIONAL ....................................................................... 58
+----------------------------------------
+
+--- CHUNK 26 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan 18 Tahun 2022 > Lampiran"}
+CONTENT:
+01 - Atribut Metadata Arsitektur Proses Bisnis .......................................................................... 58 
+02 - Atribut Metadata Data dan Informasi ................................................................................. 59 
+03 - Atribut Metadata Layanan .................................................................................................. 59 
+04 - Atribut Metadata Aplikasi ................................................................................................... 60
+----------------------------------------
+
+--- CHUNK 27 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan 18 Tahun 2022 > Lampiran"}
+CONTENT:
+05 - Atribut Metadata Komputasi Awan .................................................................................... 61 
+06 - Atribut Metadata Perangkat Lunak Platform ...................................................................... 62 
+07 - Atribut Metadata Perangkat Keras Server .......................................................................... 62
+----------------------------------------
+
+--- CHUNK 28 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan 18 Tahun 2022 > Lampiran"}
+CONTENT:
+08 - Atribut Metadata Perangkat Keras Media Penyimpanan ................................................... 63 
+09 - Atribut Metadata Perangkat Keras Jaringan ....................................................................... 64 
+10 - Atribut Metadata Perangkat Keras Keamanan ................................................................... 64 
+11 - Atribut Metadata Perangkat Keras Periferal ....................................................................... 65 
+12 - Atribut Metadata Sistem Penghubung Layanan Pemerintah ............................................. 65
+----------------------------------------
+
+--- CHUNK 29 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan 18 Tahun 2022 > Lampiran"}
+CONTENT:
+13 - Atribut Metadata Jaringan Intra Pemerintah ...................................................................... 65 
+14 - Atribut Metadata Fasilitas Komputasi ................................................................................. 66 
+15 - Atribut Metadata Keamanan ............................................................................................... 66
+----------------------------------------
+
+--- CHUNK 30 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan 18 Tahun 2022 > Lampiran"}
+CONTENT:
+1 
+BAB I  
+PENDAHULUAN 
+ 
+ 
+1.1. 
+Latar Belakang 
+Dalam rangka pelaksanaan penerapan Sistem Pemerintahan Berbasis Elektronik 
+(SPBE) sesuai amanat dalam Peraturan Presiden Nomor 95 Tahun 2018 dan 
+pelaksanaan arah kebijakan transformasi di bidang kelembagaan dan tata laksana 
+yang menjadi prioritas pembangunan nasional dalam Peraturan Presiden Nomor 
+18 Tahun 2020 tentang Rencana Pembangunan Jangka Menengah Nasional 
+2020-2024, maka dirasakan perlu untuk instansi pusat dan pemerintah daerah 
+melakukan penyusunan Arsitektur SPBE masing-masing.  Arsitektur SPBE
+----------------------------------------
+
+--- CHUNK 31 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan 18 Tahun 2022 > Lampiran"}
+CONTENT:
+melakukan penyusunan Arsitektur SPBE masing-masing.  Arsitektur SPBE 
+merupakan kerangka dasar yang mendeskripsikan integrasi proses bisnis, data 
+dan informasi, infrastruktur SPBE, aplikasi SPBE, dan keamanan SPBE untuk 
+menghasilkan layanan SPBE yang terintegrasi. Dokumen ini menjadi dokumen 
+kunci yang dapat menjadi panduan dasar bagi instansi pusat dan pemerintah 
+daerah dalam rangka penataan proses bisnis dan penerapan SPBE di masing-
+masing instansi sesuai dengan arah kebijakan transformasi kelembagaan dan tata 
+laksana yang menjadi amanat dalam Rencana Pembangunan Jangka Menengah
+----------------------------------------
+
+--- CHUNK 32 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan 18 Tahun 2022 > Lampiran"}
+CONTENT:
+laksana yang menjadi amanat dalam Rencana Pembangunan Jangka Menengah 
+Nasional 2020-2024. 
+ 
+1.2. 
+Maksud dan Tujuan 
+Maksud dan tujuan disusunnya Arsitektur SPBE adalah: 
+a. 
+mendeskripsikan integrasi proses bisnis, data dan informasi, aplikasi SPBE, 
+infrastruktur SPBE, dan keamanan SPBE untuk menghasilkan layanan 
+pemerintah yang terintegrasi; dan  
+b. 
+memberikan panduan dalam pelaksanaan integrasi proses bisnis, data dan 
+informasi, aplikasi SPBE, infrastruktur SPBE, dan keamanan SPBE untuk 
+menghasilkan operasional layanan pemerintah yang terpadu secara nasional.
+----------------------------------------
+
+--- CHUNK 33 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan 18 Tahun 2022 > Lampiran"}
+CONTENT:
+2 
+BAB II  
+KERANGKA KERJA 
+ 
+ 
+2.1. 
+Kerangka Kerja Arsitektur SPBE 
+Kerangka kerja SPBE sesuai dengan Peraturan Presiden Nomor 95 Tahun 2018, 
+merupakan kerangka kerja yang digunakan dalam pelaksanaan tata kelola SPBE 
+dan manajemen SPBE.  Tata kelola SPBE diterapkan untuk memastikan 
+penerapan unsur-unsur SPBE secara terpadu. Unsur-unsur SPBE ini antara lain: 
+a. 
+rencana induk SPBE Nasional; 
+b. 
+Arsitektur SPBE; 
+c. 
+peta rencana SPBE, memuat rencana SPBE mengenai penerapan tata kelola 
+SPBE, manajemen SPBE, layanan SPBE, infrastruktur SPBE, Aplikasi SPBE,
+----------------------------------------
+
+--- CHUNK 34 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 18 Tahun 2022", "tentang": "KETERPADUAN LAYANANDIGITAL NASIONAL MELALUI PENERAPAN ARSITEKTUR SPBE DAN PETA RENCANA SPBE", "filename": "SE Menteri PAN-RB Nomor 18 Tahun 2022.pdf", "bagian": "Lampiran", "hierarchy": "Peraturan 18 Tahun 2022 > Lampiran"}
+CONTENT:
+SPBE, manajemen SPBE, layanan SPBE, infrastruktur SPBE, Aplikasi SPBE, 
+keamanan SPBE, dan audit teknologi informasi dan komunikasi; 
+d. 
+rencana dan anggaran SPBE; 
+e. 
+proses bisnis; 
+f. 
+data dan informasi; 
+g. 
+infrastruktur SPBE; 
+h. 
+Aplikasi SPBE; 
+i. 
+keamanan SPBE; dan 
+j. 
+layanan SPBE. 
+ 
+Salah satu unsur SPBE dalam kerangka kerja tersebut di atas adalah Arsitektur 
+SPBE Nasional, yang memberikan keterpaduan dari seluruh Domain Arsitektur 
+SPBE Nasional yang terdiri dari: 
+a. 
+domain arsitektu
+----------------------------------------
+

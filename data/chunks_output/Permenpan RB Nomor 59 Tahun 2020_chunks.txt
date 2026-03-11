@@ -1,0 +1,1321 @@
+DOCUMENT: Permenpan RB Nomor 59 Tahun 2020.pdf
+TYPE: peraturan
+TOTAL CHUNKS: 75
+============================================================
+
+--- CHUNK 1 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "hierarchy": "Pembukaan", "bab": "", "pasal": "", "ayat": ""}
+CONTENT:
+PERATURAN MENTERI PENDAYAGUNAAN APARATUR NEGARA 
+DAN REFORMASI BIROKRASI REPUBLIK INDONESIA 
+NOMOR 59 TAHUN 2020 
+TENTANG 
+PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS 
+ELEKTRONIK  
+ 
+DENGAN RAHMAT TUHAN YANG MAHA ESA 
+ 
+MENTERI PENDAYAGUNAAN APARATUR NEGARA  
+DAN REFORMASI BIROKRASI REPUBLIK INDONESIA, 
+ 
+ 
+Menimbang 
+: bahwa untuk melaksanakan ketentuan Pasal 71 ayat (3) 
+Peraturan Presiden Nomor 95 Tahun 2018 tentang 
+Sistem 
+Pemerintahan 
+Berbasis 
+Elektronik, 
+perlu 
+menetapkan 
+Peraturan 
+Menteri 
+Pendayagunaan 
+Aparatur Negara dan Reformasi Birokrasi tentang 
+Pemantauan 
+dan
+----------------------------------------
+
+--- CHUNK 2 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "hierarchy": "Pembukaan", "bab": "", "pasal": "", "ayat": ""}
+CONTENT:
+Menteri 
+Pendayagunaan 
+Aparatur Negara dan Reformasi Birokrasi tentang 
+Pemantauan 
+dan 
+Evaluasi 
+Sistem 
+Pemerintahan 
+Berbasis Elektronik;  
+ 
+Mengingat 
+: 1. Pasal 17 ayat (3) Undang-Undang Dasar Negara 
+Republik Indonesia Tahun 1945; 
+2. Undang-Undang Nomor 39 Tahun 2008 tentang 
+Kementerian Negara (Lembaran Negara Republik 
+Indonesia Tahun 2008 Nomor 166, Tambahan 
+Lembaran Negara Republik Indonesia Nomor 4916); 
+3. Peraturan Presiden Nomor 47 Tahun 2015 tentang 
+Kementerian Pendayagunaan Aparatur Negara dan 
+SALINAN
+----------------------------------------
+
+--- CHUNK 3 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "hierarchy": "Pembukaan", "bab": "", "pasal": "", "ayat": ""}
+CONTENT:
+-2- 
+ 
+ 
+Reformasi Birokrasi (Lembaran Negara Republik 
+Indonesia Tahun 2015 Nomor 89);  
+4. Peraturan Presiden Nomor 95 Tahun 2018 tentang 
+Sistem 
+Pemerintahan 
+Berbasis 
+Elektronik  
+(Lembaran Negara Republik Indonesia Tahun 2018 
+Nomor 182); 
+5. Peraturan Presiden Nomor 39 Tahun 2019 tentang 
+Satu Data Indonesia (Lembaran Negara Republik 
+Indonesia Tahun 2019 Nomor 112);  
+6. Peraturan Menteri Pendayagunaan Aparatur Negara 
+dan Reformasi Birokrasi Nomor 25 Tahun 2019 
+tentang Organisasi dan Tata Kerja Kementerian 
+Pendayagunaan Aparatur Negara dan Reformasi
+----------------------------------------
+
+--- CHUNK 4 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "hierarchy": "Pembukaan", "bab": "", "pasal": "", "ayat": ""}
+CONTENT:
+tentang Organisasi dan Tata Kerja Kementerian 
+Pendayagunaan Aparatur Negara dan Reformasi 
+Birokrasi (Berita Negara Republik Indonesia Tahun 
+2019 Nomor 1593); 
+ 
+ 
+MEMUTUSKAN: 
+Menetapkan 
+: PERATURAN MENTERI PENDAYAGUNAAN APARATUR 
+NEGARA DAN REFORMASI BIROKRASI TENTANG  
+PEMANTAUAN 
+DAN 
+EVALUASI 
+ 
+SISTEM 
+PEMERINTAHAN BERBASIS ELEKTRONIK.
+----------------------------------------
+
+--- CHUNK 5 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 1"}
+CONTENT:
+Dalam Peraturan Menteri ini yang dimaksud dengan: 
+1. 
+Sistem Pemerintahan Berbasis Elektronik selanjutnya 
+disingkat SPBE adalah penyelenggaraan pemerintahan 
+dengan 
+memanfaatkan 
+teknologi 
+informasi 
+dan 
+komunikasi 
+untuk 
+memberikan 
+layanan 
+kepada 
+Instansi Pusat, Pemerintah Daerah, pegawai Aparatur 
+Sipil Negara, perorangan, masyarakat, pelaku usaha, 
+dan pihak lain yang memanfaatkan layanan SPBE.  
+2. 
+Pemantauan SPBE adalah proses penilaian secara 
+sistematis melalui verifikasi informasi terhadap hasil 
+Penilaian Mandiri untuk mengukur tingkat kematangan 
+penerapan SPBE.
+----------------------------------------
+
+--- CHUNK 6 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 1"}
+CONTENT:
+-3- 
+ 
+ 
+3. 
+Evaluasi 
+SPBE 
+adalah 
+proses 
+penilaian 
+secara 
+sistematis melalui verifikasi dan klarifikasi informasi 
+yang dapat dilanjutkan dengan validasi informasi 
+terhadap hasil Penilaian Mandiri untuk mengukur 
+tingkat kematangan penerapan SPBE. 
+4. 
+Asesor adalah seseorang yang melakukan penilaian atas 
+penerapan SPBE. 
+5. 
+Tim Asesor Internal adalah sekelompok Asesor yang 
+terdiri dari pejabat/pegawai di lingkungan Instansi 
+Pusat dan Pemerintah Daerah. 
+6. 
+Tim Asesor Eksternal adalah sekelompok Asesor yang 
+terdiri atas pegawai aparatur sipil negara, akademisi,
+----------------------------------------
+
+--- CHUNK 7 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 1"}
+CONTENT:
+terdiri atas pegawai aparatur sipil negara, akademisi, 
+dan/atau tenaga ahli. 
+7. 
+Responden adalah seseorang atau sekelompok orang 
+yang 
+diberi 
+tugas 
+oleh 
+pimpinan 
+Instansi 
+Pusat/Pemerintah Daerah untuk memberikan jawaban 
+dan penjelasan serta bukti pendukung atas pertanyaan 
+yang diberikan oleh Asesor. 
+8. 
+Penilaian Mandiri adalah penilaian yang dilakukan oleh 
+Tim Asesor Internal pada penerapan SPBE Instansi 
+Pusat dan Pemerintah Daerah. 
+9. 
+Penilaian Dokumen adalah penilaian berdasarkan 
+dokumen Penilaian Mandiri yang dilakukan oleh Tim
+----------------------------------------
+
+--- CHUNK 8 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 1"}
+CONTENT:
+Penilaian Dokumen adalah penilaian berdasarkan 
+dokumen Penilaian Mandiri yang dilakukan oleh Tim 
+Asesor Eksternal untuk verifikasi informasi. 
+10. Penilaian Interviu adalah penilaian dengan melakukan 
+tanya-jawab antara Tim Asesor Eksternal dan Tim 
+Asesor Internal untuk klarifikasi informasi. 
+11. Penilaian Visitasi adalah penilaian dengan melakukan 
+pengamatan langsung oleh Tim Asesor Eksternal pada 
+lokus penilaian untuk validasi informasi. 
+12. Kuesioner adalah instrumen penilaian yang terdiri atas 
+daftar 
+pertanyaan 
+bertujuan 
+untuk 
+mendapatkan
+----------------------------------------
+
+--- CHUNK 9 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 1"}
+CONTENT:
+daftar 
+pertanyaan 
+bertujuan 
+untuk 
+mendapatkan 
+jawaban dan penjelasan dari Tim Asesor Internal 
+dan/atau Responden. 
+13. Indikator Kinerja Utama adalah ukuran keberhasilan 
+dari suatu tujuan dan sasaran strategis organisasi.
+----------------------------------------
+
+--- CHUNK 10 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 1"}
+CONTENT:
+-4- 
+ 
+ 
+14. Instansi 
+Pusat 
+adalah 
+kementerian, 
+lembaga 
+pemerintah nonkementerian, kesekretariatan lembaga 
+negara, kesekretariatan lembaga nonstruktural, dan 
+lembaga pemerintah lainnya. 
+15. Pemerintah Daerah adalah kepala daerah sebagai unsur 
+penyelenggara pemerintahan daerah yang memimpin 
+pelaksanaan 
+urusan 
+pemerintahan 
+yang 
+menjadi 
+kewenangan daerah otonom. 
+16. Koordinator SPBE adalah sekretaris pada Instansi 
+Pusat dan Pemerintah Daerah atau pejabat yang 
+memimpin unit sekretariat. 
+17. Kementerian 
+adalah 
+kementerian 
+yang
+----------------------------------------
+
+--- CHUNK 11 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 1", "bagian": "", "ayat": "", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 1"}
+CONTENT:
+memimpin unit sekretariat. 
+17. Kementerian 
+adalah 
+kementerian 
+yang 
+menyelenggarakan urusan pemerintahan di bidang 
+aparatur negara. 
+18. Menteri adalah menteri yang menyelenggarakan urusan 
+pemerintahan di bidang aparatur negara.
+----------------------------------------
+
+--- CHUNK 12 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 2", "bagian": "", "ayat": "Ayat (1)", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 2 > Ayat (1)"}
+CONTENT:
+(1) Peraturan Menteri ini dimaksudkan untuk memberikan 
+panduan bagi Instansi Pusat dan Pemerintah Daerah 
+dalam: 
+a. memahami tujuan pemantauan dan evaluasi serta 
+penetapan 
+ruang 
+lingkup 
+penilaian 
+penerapan 
+SPBE; 
+b. memahami metode penilaian Pemantauan dan 
+Evaluasi SPBE; 
+c. memahami 
+langkah-langkah 
+kerja 
+yang 
+harus 
+dilakukan dalam proses Pemantauan dan Evaluasi 
+SPBE; dan 
+d. menjamin kualitas pelaksanaan Pemantauan dan 
+Evaluasi SPBE pada Instansi Pusat dan Pemerintah 
+Daerah.
+----------------------------------------
+
+--- CHUNK 13 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 2", "bagian": "", "ayat": "Ayat (2)", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 2 > Ayat (2)"}
+CONTENT:
+(2) Pemantauan dan Evaluasi SPBE bertujuan untuk: 
+a. mengukur capaian kemajuan penerapan SPBE pada 
+Instansi Pusat dan Pemerintah Daerah;  
+
+
+ 
+-5- 
+ 
+ 
+b. meningkatkan 
+kualitas 
+penerapan 
+SPBE 
+pada 
+Instansi Pusat dan Pemerintah Daerah; dan 
+c. meningkatkan kualitas pelayanan publik pada 
+Instansi Pusat dan Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 14 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 3", "bagian": "", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 3 > Ayat (1)-(3)"}
+CONTENT:
+(1) Pemantauan SPBE dilakukan dengan aktivitas Penilaian 
+Mandiri dan Penilaian Dokumen.
+(2) Evaluasi SPBE dilakukan dengan aktivitas Penilaian 
+Mandiri, Penilaian Dokumen, dan Penilaian Interviu.
+(3) Dalam hal diperlukan penilaian lebih lanjut, Evaluasi 
+SPBE sebagaimana dimaksud pada ayat (2) dapat 
+dilanjutkan dengan aktivitas Penilaian Visitasi.
+----------------------------------------
+
+--- CHUNK 15 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 4", "bagian": "", "ayat": "Ayat (1)-(2)", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 4 > Ayat (1)-(2)"}
+CONTENT:
+(1) Penilaian Mandiri sebagaimana dimaksud dalam Pasal 3 
+ayat (1) dan ayat (2) dilakukan oleh Tim Assesor internal.
+(2) Tim Asesor Internal sebagaimana dimaksud pada ayat (1) 
+ditetapkan oleh: 
+a. menteri pada kementerian; 
+b. kepala 
+lembaga 
+pada 
+lembaga 
+pemerintah 
+nonkementerian; 
+c. sekretaris jenderal pada kesekretariatan lembaga 
+negara;  
+d. pimpinan pada lembaga nonstruktural; 
+e. gubernur pada pemerintah daerah provinsi; atau 
+f. bupati/walikota 
+pada 
+pemerintah 
+daerah 
+kabupaten/kota.
+----------------------------------------
+
+--- CHUNK 16 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 4", "bagian": "", "ayat": "Ayat (3)", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 4 > Ayat (3)"}
+CONTENT:
+(3) Penilaian Mandiri sebagaimana dimaksud  pada ayat (1) 
+dikoordinasikan oleh Koordinator SPBE.
+----------------------------------------
+
+--- CHUNK 17 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 5", "bagian": "", "ayat": "Ayat (1)", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 5 > Ayat (1)"}
+CONTENT:
+(1) Hasil Penilaian Mandiri sebagaimana dimaksud dalam
+----------------------------------------
+
+--- CHUNK 18 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 4", "bagian": "", "ayat": "Ayat (2)-(3)", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 4 > Ayat (2)-(3)"}
+CONTENT:
+disampaikan oleh Koordinator SPBE kepada
+Menteri. 
+
+
+ 
+-6-
+(2) Hasil Penilaian Mandiri sebagaimana dimaksud pada 
+ayat (1) disampaikan secara daring.
+(3) Dalam 
+hal 
+hasil 
+Penilaian 
+Mandiri 
+sebagaimana 
+dimaksud pada ayat (2) tidak dapat disampaikan secara 
+daring, hasil Penilaian Mandiri dapat disampaikan 
+secara luring dalam bentuk dokumen.
+----------------------------------------
+
+--- CHUNK 19 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 6", "bagian": "", "ayat": "Ayat (1)-(1)", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 6 > Ayat (1)-(1)"}
+CONTENT:
+(1) Penilaian dokumen sebagaimana dimaksud dalam Pasal 
+3 ayat (1), penilaian dokumen dan penilaian interviu 
+sebagaimana dimaksud dalam Pasal 3 ayat (2), serta 
+penilaian visitasi sebagaimana dimaksud dalam Pasal 3 
+ayat (3) dilakukan oleh Tim Assesor eksternal.
+(2) Tim Assesor eksternal sebagaimana dimaksud pada ayat
+(1) ditetapkan oleh Menteri.
+----------------------------------------
+
+--- CHUNK 20 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 7", "bagian": "", "ayat": "Ayat (1)-(1)", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 7 > Ayat (1)-(1)"}
+CONTENT:
+(1) Hasil Pemantauan dan Evaluasi SPBE sebagaimana 
+dimaksud dalam Pasal 6 disampaikan oleh Menteri 
+kepada Instansi Pusat dan Pemerintah Daerah.
+(2) Hasil Pemantauan dan Evaluasi SPBE sebagaimana 
+dimaksud 
+pada 
+ayat
+(1) dijadikan 
+dasar 
+untuk 
+penyusunan profil SPBE nasional oleh Menteri.
+----------------------------------------
+
+--- CHUNK 21 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 8", "bagian": "", "ayat": "Ayat (1)-(3)", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 8 > Ayat (1)-(3)"}
+CONTENT:
+(1) Pemantauan dan evaluasi SPBE sebagaimana dimaksud 
+dalam Pasal 3 dilaksanakan berdasarkan pedoman 
+pemantauan dan evaluasi SPBE.
+(2) Pedoman Pemantauan dan Evaluasi SPBE sebagaimana 
+dimaksud pada ayat (1) merupakan instrumen yang 
+digunakan sebagai panduan dalam melakukan penilaian 
+tingkat kematangan penerapan Sistem Pemerintahan 
+Berbasis Elektronik pada Instansi Pusat dan Pemerintah 
+Daerah.
+(3) Pedoman SPBE sebagaimana dimasud dalam ayat (1) 
+mencakup: 
+
+
+ 
+-7- 
+ 
+ 
+a. pendahuluan; 
+b. metode Pemantauan dan Evaluasi SPBE; 
+c. proses Pemantauan dan Evaluasi SPBE; dan 
+d. penutup.
+----------------------------------------
+
+--- CHUNK 22 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 8", "bagian": "", "ayat": "Ayat (4)", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 8 > Ayat (4)"}
+CONTENT:
+(4) Pedoman Pemantauan dan Evaluasi SPBE sebagaimana 
+dimaksud pada ayat (3) tercantum dalam Lampiran  
+yang 
+merupakan 
+bagian 
+tidak 
+terpisahkan 
+dari 
+Peraturan Menteri ini.
+----------------------------------------
+
+--- CHUNK 23 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 9", "bagian": "", "ayat": "", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 9"}
+CONTENT:
+Ketentuan 
+mengenai 
+petunjuk 
+teknis 
+pelaksanaan 
+Pemantauan dan Evaluasi SPBE ditetapkan oleh Menteri.
+----------------------------------------
+
+--- CHUNK 24 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 10", "bagian": "", "ayat": "", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 10"}
+CONTENT:
+Instansi 
+Pusat 
+dan 
+Pemerintah 
+Daerah 
+melakukan 
+penyesuaian target indeks SPBE yang dijadikan sebagai 
+Indikator Kinerja Utama berdasarkan Peraturan Menteri ini.
+----------------------------------------
+
+--- CHUNK 25 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 11", "bagian": "", "ayat": "", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 11"}
+CONTENT:
+Pada saat Peraturan Menteri ini mulai berlaku, Peraturan 
+Menteri Pendayagunaan Aparatur Negara Dan Reformasi 
+Birokrasi Nomor 5 Tahun 2018 tentang Pedoman Evaluasi 
+Sistem Pemerintahan Berbasis Elektronik (Berita Negara 
+Republik Indonesia Tahun 2018 Nomor 154) dicabut dan 
+dinyatakan tidak berlaku.
+----------------------------------------
+
+--- CHUNK 26 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 12", "bagian": "", "ayat": "", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 12"}
+CONTENT:
+Peraturan Menteri ini mulai berlaku pada tanggal 1 Januari 
+2021.
+----------------------------------------
+
+--- CHUNK 27 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 12", "bagian": "", "ayat": "", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 12"}
+CONTENT:
+-8- 
+ 
+ 
+Agar 
+setiap 
+orang 
+mengetahuinya, 
+memerintahkan 
+pengundangan 
+peraturan 
+Menteri 
+ini 
+dengan 
+penempatannya dalam Berita Negara Republik Indonesia.  
+ 
+ 
+Ditetapkan di Jakarta 
+pada tanggal 2 September 2020      
+ 
+MENTERI PENDAYAGUNAAN APARATUR  
+NEGARA DAN REFORMASI BIROKRASI  
+REPUBLIK INDONESIA, 
+ 
+ 
+ttd 
+ 
+TJAHJO KUMOLO 
+ 
+Diundangkan di Jakarta 
+pada tanggal 4 September 2020 
+ 
+DIREKTUR JENDERAL 
+PERATURAN PERUNDANG-UNDANGAN 
+KEMENTERIAN HUKUM DAN HAK ASASI MANUSIA 
+REPUBLIK INDONESIA, 
+ 
+ 
+ttd 
+ 
+WIDODO EKATJAHJANA
+----------------------------------------
+
+--- CHUNK 28 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bab": "", "pasal": "Pasal 12", "bagian": "", "ayat": "", "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 12"}
+CONTENT:
+KEMENTERIAN HUKUM DAN HAK ASASI MANUSIA 
+REPUBLIK INDONESIA, 
+ 
+ 
+ttd 
+ 
+WIDODO EKATJAHJANA 
+ 
+ 
+BERITA NEGARA REPUBLIK INDONESIA TAHUN 2020 NOMOR 994
+----------------------------------------
+
+--- CHUNK 29 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 1: Kebijakan Internal SPBE > Aspek 1: Kebijakan Internal Tata Kelola SPBE > Indikator 1: Tingkat Kematangan Kebijakan Internal Arsitektur SPBE", "indikator": "Tingkat Kematangan Kebijakan Internal Arsitektur SPBE", "domain": "Kebijakan Internal SPBE", "aspek": "Kebijakan Internal Tata Kelola SPBE"}
+CONTENT:
+Indikator 1: Tingkat Kematangan Kebijakan Internal Arsitektur SPBE
+Pertanyaan: Instansi Pusat/Pemerintah Daerah 
+Pertanyaan : Apakah Instansi Pusat/Pemerintah Daerah memiliki 
+kebijakan internal Arsitektur SPBE Instansi 
+Pusat/Pemerintah Daerah? 
+Tingkat
+Tingkat 1: Konsep kebijakan internal terkait Arsitektur SPBE Instansi Pusat/Pemerintah Daerah belum atau telah tersedia.
+Tingkat 2: Kebijakan internal Arsitektur SPBE  Instansi Pusat/Pemerintah Daerah telah ditetapkan. Kondisi: Kebijakan internal Arsitektur SPBE Instansi Pusat/Pemerintah Daerah tersebut belum memuat secara lengkap pengaturan mengenai referensi Arsitektur dan domain Arsitektur SPBE (Proses Bisnis, Data dan Informasi, Infrastruktur SPBE, Aplikasi SPBE, Keamanan SPBE, dan Layanan SPBE).
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan kebijakan internal Arsitektur SPBE Instansi Pusat/Pemerintah Daerah telah memuat  secara lengkap pengaturan mengenai referensi Arsitektur dan domain Arsitektur SPBE (Proses Bisnis, Data dan Informasi, Infrastruktur SPBE, Aplikasi SPBE, Keamanan SPBE, dan Layanan SPBE).
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi, kebijakan internal Arsitektur SPBE Instansi Pusat/Pemerintah Daerah telah mengatur integrasi SPBE antar Instansi Pusat, antar Pemerintah Daerah, dan/atau antar Instansi Pusat dan Pemerintah Daerah, dan kebijakan internal Arsitektur SPBE Instansi Pusat/Pemerintah Daerah telah direviu dan dievaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi kebijakan internal Arsitektur Instansi Pusat/Pemerintah Daerah SPBE telah ditindaklanjuti dengan kebijakan baru.
+----------------------------------------
+
+--- CHUNK 30 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 1: Kebijakan Internal SPBE > Aspek 1: Kebijakan Internal Tata Kelola SPBE > Indikator 2: Tingkat Kematangan Kebijakan Internal Peta Rencana", "indikator": "Tingkat Kematangan Kebijakan Internal Peta Rencana", "domain": "Kebijakan Internal SPBE", "aspek": "Kebijakan Internal Tata Kelola SPBE"}
+CONTENT:
+Indikator 2: Tingkat Kematangan Kebijakan Internal Peta Rencana
+Pertanyaan: SPBE Instansi Pusat/Pemerintah Daerah 
+Pertanyaan 
+: Apakah Instansi Pusat/Pemerintah Daerah memiliki 
+kebijakan internal Peta Rencana SPBE Instansi 
+Pusat/Pemerintah Daerah? 
+Tingkat
+Tingkat 1: Konsep kebijakan internal terkait Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah belum atau telah tersedia.
+Tingkat 2: Kebijakan internal Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah telah ditetapkan. Kondisi: Kebijakan internal Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah tersebut belum mengatur muatan Peta Rencana SPBE secara lengkap (Tata Kelola SPBE, Manajemen SPBE, Layanan SPBE, Infrastruktur SPBE, Aplikasi SPBE, Keamanan SPBE, dan Audit TIK).
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan kebijakan internal Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah telah mengatur seluruh muatan Peta Rencana SPBE secara lengkap (Tata Kelola SPBE, Manajemen SPBE, Layanan SPBE, Infrastruktur SPBE, Aplikasi SPBE, Keamanan SPBE, dan Audit TIK).
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi, kebijakan internal Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah telah mengatur keselarasan antara Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah dan Peta Rencana SPBE Nasional. Selain itu, Kebijakan internal Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah telah direviu dan dievaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi kebijakan internal Peta Rencana SPBE Instansi -32- Pusat/Pemerintah Daerah telah ditindaklanjuti dengan kebijakan baru.
+----------------------------------------
+
+--- CHUNK 31 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 1: Kebijakan Internal SPBE > Aspek 1: Kebijakan Internal Tata Kelola SPBE > Indikator 3: Tingkat Kematangan Kebijakan Internal Manajemen Data", "indikator": "Tingkat Kematangan Kebijakan Internal Manajemen Data", "domain": "Kebijakan Internal SPBE", "aspek": "Kebijakan Internal Tata Kelola SPBE"}
+CONTENT:
+Indikator 3: Tingkat Kematangan Kebijakan Internal Manajemen Data
+Pertanyaan: Pertanyaan : 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki 
+kebijakan internal Manajemen Data? 
+Tingkat
+Tingkat 1: Konsep kebijakan internal terkait Manajemen Data di Instansi Pusat/Pemerintah Daerah belum atau telah tersedia.
+Tingkat 2: Kebijakan internal Manajemen Data di Instansi Pusat/Pemerintah Daerah telah ditetapkan.
+Tingkat 3: Kondisi: Kebijakan internal Manajemen Data di Instansi Pusat/Pemerintah Daerah tersebut hanya mengatur sebagian dari rangkaian proses pengelolaan arsitektur data, data induk, data referensi, basis data, kualitas data dan interoperabilitas data.
+Tingkat 4: Kriteria tingkat 2 telah terpenuhi dan kebijakan internal Manajemen Data di Instansi Pusat/Pemerintah Daerah telah mengatur seluruh rangkaian proses pengelolaan arsitektur data, data induk, data referensi, basis data, kualitas data dan interoperabilitas data.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi kebijakan internal Manajemen Data di Instansi Pusat/Pemerintah Daerah telah ditindaklanjuti dengan kebijakan baru.
+----------------------------------------
+
+--- CHUNK 32 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 1: Kebijakan Internal SPBE > Aspek 1: Kebijakan Internal Tata Kelola SPBE > Indikator 4: Tingkat Kematangan Kebijakan Internal Pembangunan", "indikator": "Tingkat Kematangan Kebijakan Internal Pembangunan", "domain": "Kebijakan Internal SPBE", "aspek": "Kebijakan Internal Tata Kelola SPBE"}
+CONTENT:
+Indikator 4: Tingkat Kematangan Kebijakan Internal Pembangunan
+Pertanyaan: Aplikasi SPBE 
+Pertanyaan : 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki 
+kebijakan internal Pembangunan Aplikasi SPBE? 
+Tingkat
+Tingkat 1: Konsep kebijakan internal terkait siklus Pembangunan Aplikasi SPBE di Instansi Pusat/Pemerintah Daerah belum atau telah tersedia.
+Tingkat 2: Kebijakan internal terkait siklus Pembangunan Aplikasi SPBE di Instansi Pusat/Pemerintah Daerah telah ditetapkan. Kondisi: Kebijakan internal terkait Pembangunan Aplikasi SPBE telah mengatur siklus pembangunan aplikasi.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Kebijakan internal terkait siklus Pembangunan Aplikasi SPBE  telah mengatur proses konsultasi terkait siklus Pembangunan Aplikasi SPBE dengan unit kerja/perangkat daerah yang menjalankan fungsi pengelolaan TIK di Instansi Pusat/Pemerintah Daerah.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi, kebijakan internal terkait siklus Pembangunan Aplikasi SPBE di Instansi Pusat/Pemerintah Daerah telah mengatur keterpaduan dan pengendalian Pembangunan Aplikasi SPBE oleh unit kerja/perangkat daerah yang menjalankan fungsi pengelolaan TIK di Instansi Pusat/Pemerintah Daerah. Selain itu, kebijakan internal Pembangunan Aplikasi SPBE direviu dan dievaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi kebijakan internal Pembangunan  Aplikasi SPBE di Instansi Pusat/Pemerintah Daerah SPBE telah ditindaklanjuti dengan kebijakan baru.
+----------------------------------------
+
+--- CHUNK 33 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 1: Kebijakan Internal SPBE > Aspek 1: Kebijakan Internal Tata Kelola SPBE > Indikator 5: Tingkat Kematangan Kebijakan Internal Layanan Pusat", "indikator": "Tingkat Kematangan Kebijakan Internal Layanan Pusat", "domain": "Kebijakan Internal SPBE", "aspek": "Kebijakan Internal Tata Kelola SPBE"}
+CONTENT:
+Indikator 5: Tingkat Kematangan Kebijakan Internal Layanan Pusat
+Pertanyaan: Data 
+Pertanyaan : 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki 
+kebijakan internal Layanan Pusat Data? 
+Tingkat
+Tingkat 1: Konsep kebijakan internal terkait Layanan Pusat Data yang digunakan di Instansi Pusat/Pemerintah Daerah belum atau telah tersedia.
+Tingkat 2: Kebijakan internal terkait Layanan Pusat Data yang digunakan di Instansi Pusat/Pemerintah Daerah telah ditetapkan. Kondisi: Kebijakan internal terkait Layanan Pusat Data telah mengatur penggunaan Layanan Pusat Data untuk sebagian unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan kebijakan internal terkait Layanan Pusat Data telah mengatur penggunaan Layanan Pusat Data untuk seluruh unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi, kebijakan internal terkait Layanan Pusat Data yang digunakan di Instansi Pusat/Pemerintah Daerah telah mengatur interkoneksi Layanan Pusat Data dengan Pusat Data Nasional dan/atau mengatur penggunaan Layanan Pusat Data Nasional. Selain itu, kebijakan internal terkait penggunaan Layanan Pusat Data di Instansi Pusat/Pemerintah Daerah telah direviu dan dievaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi kebijakan internal terkait Layanan Pusat Data yang digunakan di Instansi Pusat/Pemerintah Daerah SPBE telah ditindaklanjuti dengan kebijakan baru.
+----------------------------------------
+
+--- CHUNK 34 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 1: Kebijakan Internal SPBE > Aspek 1: Kebijakan Internal Tata Kelola SPBE > Indikator 6: Tingkat Kematangan Kebijakan Internal Layanan", "indikator": "Tingkat Kematangan Kebijakan Internal Layanan", "domain": "Kebijakan Internal SPBE", "aspek": "Kebijakan Internal Tata Kelola SPBE"}
+CONTENT:
+Indikator 6: Tingkat Kematangan Kebijakan Internal Layanan
+Pertanyaan: Jaringan Intra Instansi Pusat/Pemerintah Daerah 
+Pertanyaan : 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki 
+kebijakan internal Layanan Jaringan Intra Instansi 
+Pusat/Pemerintah Daerah? 
+Tingkat
+Tingkat 1: Konsep kebijakan internal terkait Layanan Jaringan Intra Instansi Pusat/Pemerintah Daerah belum atau telah tersedia.
+Tingkat 2: Kebijakan internal terkait Layanan Jaringan Intra Instansi Pusat/Pemerintah Daerah telah ditetapkan. Kondisi: Kebijakan internal terkait Layanan Jaringan Intra Instansi Pusat/Pemerintah Daerah telah mengatur Layanan Jaringan Intra untuk sebagian unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan kebijakan internal terkait Layanan Jaringan Intra Instansi Pusat/Pemerintah Daerah telah mengatur Layanan Jaringan Intra untuk seluruh unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan kebijakan internal terkait Layanan Jaringan Intra Instansi Pusat/Pemerintah Daerah telah mengatur interkoneksi Layanan Jaringan Intra Instansi Pusat/Pemerintah Daerah dengan Jaringan Intra Pemerintah dan/atau Jaringan Intra Instansi Pusat/Pemerintah Daerah lain. Selain itu,  kebijakan internal Daerah telah direviu dan dievaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi kebijakan internal terkait Layanan Jaringan Intra Instansi Pusat/Pemerintah Daerah telah ditindaklanjuti dengan kebijakan baru. -36-
+----------------------------------------
+
+--- CHUNK 35 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 1: Kebijakan Internal SPBE > Aspek 1: Kebijakan Internal Tata Kelola SPBE > Indikator 7: Tingkat Kematangan Kebijakan Internal Penggunaan Sistem", "indikator": "Tingkat Kematangan Kebijakan Internal Penggunaan Sistem", "domain": "Kebijakan Internal SPBE", "aspek": "Kebijakan Internal Tata Kelola SPBE"}
+CONTENT:
+Indikator 7: Tingkat Kematangan Kebijakan Internal Penggunaan Sistem
+Pertanyaan: Penghubung Layanan Instansi Pusat/Pemerintah Daerah 
+Pertanyaan 
+: Apakah Instansi Pusat/Pemerintah Daerah memiliki 
+kebijakan internal terkait penggunaan Sistem Penghubung 
+Layanan Instansi Pusat/Pemerintah Daerah? 
+Tingkat
+Tingkat 1: Konsep kebijakan internal terkait Penggunaan Sistem Penghubung Layanan Instansi Pusat/Pemerintah Daerah belum atau telah tersedia.
+Tingkat 2: Kebijakan internal terkait Penggunaan Sistem Penghubung Layanan Instansi Pusat/Pemerintah Daerah telah ditetapkan. Kondisi: Kebijakan internal terkait Penggunaan Sistem Penghubung Layanan Instansi Pusat/Pemerintah Daerah telah mengatur penggunaan Sistem Penghubung Layanan Instansi Pusat/Pemerintah Daerah untuk sebagian unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan kebijakan internal terkait Penggunaan Sistem Penghubung Layanan Instansi Pusat/Pemerintah Daerah telah mengatur penggunaan Sistem Penghubung Layanan untuk seluruh unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi, kebijakan internal terkait Penggunaan Sistem Penghubung Layanan Instansi Pusat/Pemerintah Daerah telah mengatur keterhubungan dengan Sistem Penghubung Layanan Pemerintah. Selain itu, kebijakan internal terkait Penggunaan Sistem Penghubung Layanan Instansi Pusat/Pemerintah Daerah telah direviu dan dievaluasi secara periodik. -37-
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi kebijakan internal terkait Penggunaan Sistem Penghubung Layanan Instansi Pusat/Pemerintah Daerah telah ditindaklanjuti dengan kebijakan baru.
+----------------------------------------
+
+--- CHUNK 36 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 1: Kebijakan Internal SPBE > Aspek 1: Kebijakan Internal Tata Kelola SPBE > Indikator 8: Tingkat Kematangan Kebijakan Internal Manajemen", "indikator": "Tingkat Kematangan Kebijakan Internal Manajemen", "domain": "Kebijakan Internal SPBE", "aspek": "Kebijakan Internal Tata Kelola SPBE"}
+CONTENT:
+Indikator 8: Tingkat Kematangan Kebijakan Internal Manajemen
+Pertanyaan: Keamanan Informasi 
+Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki 
+kebijakan internal Manajemen Keamanan Informasi? 
+Tingkat
+Tingkat 1: Konsep kebijakan internal terkait Manajemen Keamanan Informasi belum atau telah tersedia.
+Tingkat 2: Kebijakan internal terkait Manajemen Keamanan Informasi telah ditetapkan. Kondisi: Kebijakan internal terkait Manajemen Keamanan Informasi belum mengatur secara lengkap mengenai cakupan Manajemen Keamanan Informasi (penetapan ruang lingkup, penetapan penanggung jawab, perencanaan, dukungan pengoperasian, evaluasi kinerja, dan perbaikan berkelanjutan terhadap Keamanan Informasi).
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan kebijakan internal terkait Manajemen Keamanan Informasi mengatur seluruh cakupan Manajemen Keamanan Informasi secara lengkap (penetapan ruang lingkup, penetapan penanggung jawab, perencanaan, dukungan pengoperasian, evaluasi kinerja, dan perbaikan berkelanjutan terhadap Keamanan Informasi).
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi, dan kebijakan internal terkait Manajemen Keamanan Informasi telah mengatur penerapan untuk seluruh unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah. Selain itu, kebijakan internal terkait Manajemen Keamanan Informasi telah direviu dan dievaluasi secara periodik. -38-
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi kebijakan internal terkait Manajemen Keamanan Informasi telah ditindaklanjuti dengan kebijakan baru.
+----------------------------------------
+
+--- CHUNK 37 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 1: Kebijakan Internal SPBE > Aspek 1: Kebijakan Internal Tata Kelola SPBE > Indikator 9: Tingkat Kematangan Kebijakan Internal Audit TIK", "indikator": "Tingkat Kematangan Kebijakan Internal Audit TIK", "domain": "Kebijakan Internal SPBE", "aspek": "Kebijakan Internal Tata Kelola SPBE"}
+CONTENT:
+Indikator 9: Tingkat Kematangan Kebijakan Internal Audit TIK
+Pertanyaan: Pertanyaan : 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki 
+kebijakan internal Audit TIK? 
+Tingkat
+Tingkat 1: Konsep kebijakan internal terkait Audit TIK belum atau telah tersedia.
+Tingkat 2: Kebijakan internal Audit TIK telah ditetapkan. Kondisi: Kebijakan internal terkait Audit TIK hanya mengatur pelaksanaan sebagian Audit TIK (Audit Infrastruktur SPBE, Audit Aplikasi SPBE, dan Audit Keamanan SPBE).
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan kebijakan internal terkait Audit TIK telah mengatur pelaksanaan seluruh Audit TIK (Audit Infrastruktur SPBE Audit Aplikasi SPBE, dan Audit Keamanan SPBE).
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan kebijakan internal terkait Audit TIK telah direviu dan dievaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi kebijakan internal terkait Audit TIK telah ditindaklanjuti dengan kebijakan baru.
+----------------------------------------
+
+--- CHUNK 38 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 1: Kebijakan Internal SPBE > Aspek 1: Kebijakan Internal Tata Kelola SPBE > Indikator 10: Tingkat Kematangan Kebijakan Internal Tim Koordinasi", "indikator": "Tingkat Kematangan Kebijakan Internal Tim Koordinasi", "domain": "Kebijakan Internal SPBE", "aspek": "Kebijakan Internal Tata Kelola SPBE"}
+CONTENT:
+Indikator 10: Tingkat Kematangan Kebijakan Internal Tim Koordinasi
+Pertanyaan: SPBE Instansi Pusat/Pemerintah Daerah 
+Pertanyaan 
+: Apakah Instansi Pusat/Pemerintah Daerah memiliki 
+kebijakan internal Tim Koordinasi SPBE Instansi 
+Pusat/Pemerintah Daerah? 
+Tingkat
+Tingkat 1: Konsep kebijakan internal terkait Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah belum atau telah tersedia.
+Tingkat 2: Kebijakan internal Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah telah ditetapkan. Kondisi: Kebijakan internal terkait Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah telah mencakup pengaturan tugas-tugas Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah  yang mendukung penerapan SPBE  pada sebagian unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan kebijakan internal terkait Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah telah mencakup pengaturan tugas-tugas Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah  yang mendukung penerapan SPBE  pada seluruh unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi, kebijakan internal terkait Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah yang mendukung penerapan SPBE antar Instansi Pusat, antar Pemerintah Daerah, dan/atau antar Instansi Pusat dan Pemerintah Daerah, dan kebijakan internal terkait Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah telah direviu dan dievaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi kebijakan internal terkait Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah telah ditindaklanjuti dengan kebijakan baru.
+----------------------------------------
+
+--- CHUNK 39 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 2: Tata Kelola SPBE > Aspek 2: Perencanaan Strategis SPBE > Indikator 11: Tingkat Kematangan Arsitektur SPBE Instansi", "indikator": "Tingkat Kematangan Arsitektur SPBE Instansi", "domain": "Tata Kelola SPBE", "aspek": "Perencanaan Strategis SPBE"}
+CONTENT:
+Indikator 11: Tingkat Kematangan Arsitektur SPBE Instansi
+Pertanyaan: Pusat/Pemerintah Daerah 
+Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki 
+Arsitektur SPBE Instansi Pusat/Pemerintah Daerah? 
+Tingkat
+Tingkat 1: Konsep dokumen Arsitektur SPBE belum atau telah tersedia.
+Tingkat 2: Dokumen Arsitektur SPBE telah tersedia. Kondisi: Dokumen Arsitektur SPBE tidak/belum mencakup referensi dan domain Arsitektur SPBE Instansi Pusat/Pemerintah Daerah secara lengkap yaitu referensi dan domain arsitektur Proses Bisnis, Data dan Informasi, Infrastruktur SPBE, Aplikasi SPBE, Keamanan SPBE, dan Layanan SPBE.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan dokumen Arsitektur SPBE telah mencakup seluruh referensi dan domain Arsitektur SPBE Instansi Pusat/Pemerintah Daerah yaitu referensi dan domain arsitektur Proses Bisnis, Data dan Informasi, Infrastruktur SPBE, Aplikasi SPBE, Keamanan SPBE, dan Layanan SPBE.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan dokumen Arsitektur SPBE Instansi Pusat/Pemerintah Daerah telah berpedoman pada Arsitektur SPBE Nasional. Selain itu, dokumen Arsitektur SPBE Instansi Pusat/Pemerintah Daerah telah dilakukan reviu dan evaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan dokumen Arsitektur SPBE Instansi Pusat/Pemerintah Daerah telah dilakukan pemutakhiran sebagai tindak lanjut hasil reviu dan evaluasi.
+----------------------------------------
+
+--- CHUNK 40 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 2: Tata Kelola SPBE > Aspek 2: Perencanaan Strategis SPBE > Indikator 12: Tingkat Kematangan Peta Rencana SPBE Instansi", "indikator": "Tingkat Kematangan Peta Rencana SPBE Instansi", "domain": "Tata Kelola SPBE", "aspek": "Perencanaan Strategis SPBE"}
+CONTENT:
+Indikator 12: Tingkat Kematangan Peta Rencana SPBE Instansi
+Pertanyaan: Pusat/Pemerintah Daerah 
+Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki 
+Peta Rencana SPBE Instansi Pusat/Pemerintah 
+Daerah? 
+Tingkat
+Tingkat 1: Konsep dokumen Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah belum atau telah tersedia.
+Tingkat 2: Dokumen Peta Rencana SPBE telah tersedia. Kondisi: dokumen Peta Rencana SPBE tidak/belum mencakup muatan Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah secara lengkap yaitu peta rencana Tata Kelola SPBE, Manajemen SPBE, Layanan SPBE, Infrastruktur SPBE, Aplikasi SPBE, Keamanan SPBE, Audit Teknologi SPBE dan Audit TIK.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan dokumen Peta Rencana SPBE telah mencakup seluruh muatan Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah secara lengkap yaitu peta rencana Tata Kelola SPBE, Manajemen SPBE, Layanan SPBE, Infrastruktur SPBE, Aplikasi SPBE, Keamanan SPBE, Audit Teknologi SPBE dan Audit TIK.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan dokumen Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah telah diterapkan secara konsisten melalui rencana kerja dan anggaran 3 (tiga) tahun terakhir. Selain itu, dokumen Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah telah dilakukan reviu dan evaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan dokumen Peta Rencana SPBE Instansi Pusat/Pemerintah Daerah telah dilakukan pemutakhiran sebagai tindak lanjut hasil reviu dan evaluasi.
+----------------------------------------
+
+--- CHUNK 41 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 2: Tata Kelola SPBE > Aspek 2: Perencanaan Strategis SPBE > Indikator 13: Tingkat Kematangan Keterpaduan Rencana dan", "indikator": "Tingkat Kematangan Keterpaduan Rencana dan", "domain": "Tata Kelola SPBE", "aspek": "Perencanaan Strategis SPBE"}
+CONTENT:
+Indikator 13: Tingkat Kematangan Keterpaduan Rencana dan
+Pertanyaan: Anggaran SPBE 
+Pertanyaan 
+: Apakah Instansi Pusat/Pemerintah Daerah melakukan 
+keterpaduan Rencana dan Anggaran SPBE? 
+Tingkat
+Tingkat 1: Rencana dan Anggaran SPBE belum atau telah tertuang dalam rencana kerja dan anggaran tahunan.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi  dan Rencana dan Anggaran SPBE pada unit kerja/perangkat daerah tidak seluruhnya dikonsultasikan kepada unit pengelola TIK di Instansi Pusat/Pemerintah Daerah.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan seluruh Rencana dan Anggaran SPBE  unit kerja/perangkat daerah telah dikonsultasikan kepada unit pengelola TIK di Instansi Pusat/Pemerintah Daerah.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi. Seluruh Rencana dan Anggaran SPBE Instansi Pusat/Pemerintah Daerah telah terpadu dan dapat dikendalikan oleh unit kerja/lembaga daerah yang menjalankan fungsi perencanaan dan penganggaran. Selain itu, Rencana dan Anggaran SPBE telah direviu dan dievaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi  serta Rencana dan Anggaran SPBE telah dilakukan perbaikan untuk tahun anggaran berikutnya sebagai tindak lanjut  hasil reviu dan evaluasi.
+----------------------------------------
+
+--- CHUNK 42 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 2: Tata Kelola SPBE > Aspek 2: Perencanaan Strategis SPBE > Indikator 14: Tingkat Kematangan Inovasi Proses Bisnis SPBE", "indikator": "Tingkat Kematangan Inovasi Proses Bisnis SPBE", "domain": "Tata Kelola SPBE", "aspek": "Perencanaan Strategis SPBE"}
+CONTENT:
+Indikator 14: Tingkat Kematangan Inovasi Proses Bisnis SPBE
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah menerapkan 
+Inovasi Proses Bisnis SPBE? 
+Tingkat
+Tingkat 1: Dokumen Proses Bisnis Instansi Pusat/Pemerintah belum atau telah tersedia. Kondisi: Dokumen Proses Bisnis Instansi Pusat/Pemeritah Daerah belum memenuhi standar.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan dokumen Proses Bisnis Instansi Pusat/Pemeritah Daerah telah memenuhi standar.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Proses Bisnis Instansi Pusat/Pemeritah Daerah telah dilakukan perbaikan sebagai bentuk inovasi Proses Bisnis untuk mewujudkan proses bisnis yang lebih efisien.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi, Inovasi Proses bisnis telah diterapkan ke dalam sistem elektronik/sistem aplikasi, serta telah dilakukan reviu dan evaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan melakukan perbaikan Inovasi Proses Bisnis yang diterapkan ke dalam sistem elektronik/ sistem aplikasi sebagai tindak lanjut hasil reviu dan evaluasi.
+----------------------------------------
+
+--- CHUNK 43 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 2: Tata Kelola SPBE > Aspek 3: Teknologi Informasi dan Komunikasi > Indikator 15: Tingkat Kematangan Pembangunan Aplikasi SPBE", "indikator": "Tingkat Kematangan Pembangunan Aplikasi SPBE", "domain": "Tata Kelola SPBE", "aspek": "Teknologi Informasi dan Komunikasi"}
+CONTENT:
+Indikator 15: Tingkat Kematangan Pembangunan Aplikasi SPBE
+Pertanyaan: Pertanyaan 
+: Apakah Instansi Pusat/Pemerintah Daerah 
+melaksanakan keterpaduan pembangunan Aplikasi 
+SPBE? 
+Tingkat
+Tingkat 1: Proses pembangunan Aplikasi SPBE belum atau telah dilakukan secara adhoc (sewaktu-waktu, tidak terencana). Kondisi: Proses pembangunan Aplikasi SPBE belum memenuhi siklus pembangunan aplikasi.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan proses pembangunan Aplikasi SPBE telah dilakukan sesuai siklus pembangunan aplikasi.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan proses pembangunan aplikasi SPBE telah dikonsultasikan kepada unit kerja/perangkat daerah yang melaksanakan fungsi pengelolaan TIK di Instansi Pusat/Pemerintah Daerah.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Pembangunan Aplikasi SPBE Instansi Pusat/Pemerintah Daerah telah terpadu dan dapat dikendalikan oleh unit kerja/lembaga daerah yang menjalankan fungsi pengelolaan TIK di Instansi Pusat/Pemerintah Daerah. selain itu, Pembangunan Aplikasi SPBE direviu dan dievaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan Aplikasi SPBE telah dikembangkan secara optimal untuk meningkatkan efektivitas dan efisiensi terhadap perubahan lingkungan, teknologi, dan kebutuhan Instansi Pusat/Pemerintah Daerah sebagai tindak lanjut hasil reviu dan evaluasi.
+----------------------------------------
+
+--- CHUNK 44 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 2: Tata Kelola SPBE > Aspek 3: Teknologi Informasi dan Komunikasi > Indikator 16: Tingkat Kematangan Layanan Pusat Data", "indikator": "Tingkat Kematangan Layanan Pusat Data", "domain": "Tata Kelola SPBE", "aspek": "Teknologi Informasi dan Komunikasi"}
+CONTENT:
+Indikator 16: Tingkat Kematangan Layanan Pusat Data
+Pertanyaan: Pertanyaan 
+: Apakah Instansi Pusat/Pemerintah Daerah memiliki 
+Layanan Pusat Data? 
+Tingkat
+Tingkat 1: Layanan Pusat Data belum atau telah tersedia digunakan oleh Instansi Pusat/Pemerintah Daerah.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi. Kondisi: Layanan Pusat Data tidak/belum digunakan oleh seluruh unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Pusat Data telah digunakan oleh seluruh unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah. Selain itu, terdapat prosedur pengoperasian baku Layanan Pusat Data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan terdapat interkoneksi Layanan Pusat Data dengan Pusat Data Nasional/Pusat Data Instansi Pusat/Pusat Data Pemerintah Daerah lain dan/atau penggunaan Layanan Pusat Data Nasional. Selain itu, penggunaan Layanan Pusat Data di Instansi Pusat/Pemerintah Daerah telah direviu dan dievaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi penggunaan Layanan Pusat Data di Instansi Pusat/Pemerintah Daerah telah ditindaklanjuti dengan melakukan perbaikan terhadap Layanan Pusat Data.
+----------------------------------------
+
+--- CHUNK 45 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 2: Tata Kelola SPBE > Aspek 3: Teknologi Informasi dan Komunikasi > Indikator 17: Tingkat Kematangan Layanan Jaringan Intra Instansi", "indikator": "Tingkat Kematangan Layanan Jaringan Intra Instansi", "domain": "Tata Kelola SPBE", "aspek": "Teknologi Informasi dan Komunikasi"}
+CONTENT:
+Indikator 17: Tingkat Kematangan Layanan Jaringan Intra Instansi
+Pertanyaan: Pusat/Pemerintah Daerah 
+Pertanyaan 
+: Apakah Instansi Pusat/Pemerintah Daerah 
+menggunakan Layanan Jaringan Intra Instansi 
+Pusat/Pemerintah Daerah? 
+Tingkat
+Tingkat 1: Layanan Jaringan Intra Instansi Pusat/Pemerintah Daerah belum atau telah tersedia.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi. Kondisi: Layanan Jaringan Intra Instansi Pusat/Pemerintah Daerah tidak/belum diterapkan di seluruh unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Jaringan Intra Instansi Pusat/Pemerintah Daerah telah diterapkan di seluruh unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi  dan terdapat interkoneksi Layanan Jaringan Intra Instansi Pusat/Pemerintah Daerah dengan Jaringan Intra Pemerintah dan/atau Jaringan Intra Instansi Pusat/Pemerintah Daerah lain. Selain itu,  Layanan Jaringan Intra Instansi Pusat/Pemerintah Daerah telah direviu dan dievaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi Layanan Jaringan Intra Instansi Pusat/Pemerintah Daerah telah ditindaklanjuti dengan melakukan perbaikan terhadap Layanan Jaringan Intra Instansi Pusat/Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 46 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 2: Tata Kelola SPBE > Aspek 3: Teknologi Informasi dan Komunikasi > Indikator 18: Tingkat Kematangan Penggunaan Sistem Penghubung", "indikator": "Tingkat Kematangan Penggunaan Sistem Penghubung", "domain": "Tata Kelola SPBE", "aspek": "Teknologi Informasi dan Komunikasi"}
+CONTENT:
+Indikator 18: Tingkat Kematangan Penggunaan Sistem Penghubung
+Pertanyaan: Layanan Instansi Pusat/Pemerintah Daerah 
+Pertanyaan 
+: Apakah Instansi Pusat/Pemerintah Daerah menggunakan 
+Sistem Penghubung Layanan Instansi Pusat/Pemerintah 
+Daerah 
+Tingkat
+Tingkat 1: Sistem penghubung layanan Instansi Pusat dan Pemerintah Daerah belum atau telah tersedia.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi. Kondisi: Sistem penghubung layanan Instansi Pusat dan Pemerintah Daerah tidak/belum diterapkan di seluruh unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan sistem penghubung layanan Instansi Pusat dan Pemerintah Daerah telah diterapkan di seluruh unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi, sistem penghubung layanan Instansi Pusat dan Pemerintah Daerah telah terintegrasi dengan sistem penghubungan layanan pemerintah dan/atau sistem penghubung layanan Instansi Pusat/Pemerintah Daerah lain. Selain itu, sistem penghubung layanan Instansi Pusat/Pemerintah Daerah telah direviu dan dievaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi sistem penghubung layanan Instansi Pusat dan Pemerintah Daerah telah ditindaklanjuti dengan melakukan perbaikan.
+----------------------------------------
+
+--- CHUNK 47 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 2: Tata Kelola SPBE > Aspek 4: Penyelenggara SPBE > Indikator 19: Tingkat Kematangan Pelaksanaan Tim Koordinasi SPBE", "indikator": "Tingkat Kematangan Pelaksanaan Tim Koordinasi SPBE", "domain": "Tata Kelola SPBE", "aspek": "Penyelenggara SPBE"}
+CONTENT:
+Indikator 19: Tingkat Kematangan Pelaksanaan Tim Koordinasi SPBE
+Pertanyaan: Instansi Pusat/Pemerintah Daerah 
+Pertanyaan 
+: 
+Apakah Tim Koordinasi SPBE Instansi Pusat/Pemerintah 
+Daerah melaksanakan tugas dan program kerjanya? 
+Tingkat 
+s
+Tingkat 1: Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah belum atau telah terbentuk. Kondisi: Tugas/program kerja Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah dilaksanakan sewaktu-waktu atau tanpa perencanaan.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan tugas/program kerja Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah telah dilaksanakan sesuai perencanaan. Kondisi: tugas/program kerja Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah tidak/belum dilaksanakan seluruhnya.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan tugas/program kerja Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah telah dilaksanakan seluruhnya. Kondisi: program kerja Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah belum dikomunikasikan/dikoordinasikan kepada semua unit kerja/perangkat daerah terkait di Instansi Pusat/Pemerintah Daerah.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan program kerja Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah telah dikomunikasikan/dikoordinasikan kepada semua unit kerja/perangkat daerah terkait di Instansi Pusat/Pemerintah Daerah. Selain itu, tugas/program kerja Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah telah dilakukan reviu dan evaluasi.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan hasil reviu dan evaluasi tugas/program kerja Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah telah ditindaklanjuti melalui perbaikan tugas/program kerja Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah dan pelaksanaannya.
+----------------------------------------
+
+--- CHUNK 48 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 2: Tata Kelola SPBE > Aspek 4: Penyelenggara SPBE > Indikator 20: Tingkat Kematangan Kolaborasi Penerapan SPBE", "indikator": "Tingkat Kematangan Kolaborasi Penerapan SPBE", "domain": "Tata Kelola SPBE", "aspek": "Penyelenggara SPBE"}
+CONTENT:
+Indikator 20: Tingkat Kematangan Kolaborasi Penerapan SPBE
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah menerapkan SPBE 
+secara kolaboratif? 
+Tingkat
+Tingkat 1: Kolaborasi antar unit kerja/perangkat daerah di Instansi Pusat/Perangkat Daerah dalam penerapan SPBE belum atau telah dilaksanakan. Kondisi: Kolaborasi antar unit kerja/perangkat daerah di Instansi Pusat/Perangkat Daerah dalam penerapan SPBE dilaksanakan sewaktu-waktu atau tanpa perencanaan.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan kolaborasi antar unit kerja/perangkat daerah di Instansi Pusat/Perangkat Daerah dalam penerapan SPBE telah dilaksanakan sesuai perencanaan. Kondisi: Kolaborasi antar unit kerja/perangkat daerah di Instansi Pusat/Perangkat Daerah dalam penerapan SPBE tidak dibentuk secara formal.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan kolaborasi antar unit kerja/perangkat daerah di Instansi Pusat/Perangkat Daerah dalam penerapan SPBE telah dilaksanakan oleh tim yang dibentuk secara formal. Kondisi: Kolaborasi antar unit kerja/perangkat daerah dalam penerapan SPBE tidak/belum dilaksanakan pada seluruh unit kerja/perangkat daerah di Instansi Pusat/Perangkat Daerah (kolaborasi dibentuk berdasarkan adanya kegiatan bersama).
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan kolaborasi antar unit kerja/perangkat daerah dalam penerapan SPBE telah dilaksanakan secara terpadu pada seluruh unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah yang dikoordinasikan oleh menteri/kepala lembaga/kepala daerah atau sekretaris kementerian/lembaga/pemerintah daerah. Selain itu, kolaborasi dalam penerapan SPBE telah dilakukan reviu dan evaluasi.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan hasil reviu dan evaluasi kolaborasi dalam penerapan SPBE telah ditindaklanjuti melalui perbaikan pelaksanaan kolaborasi dalam penerapan SPBE.
+----------------------------------------
+
+--- CHUNK 49 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 3: Manajemen SPBE > Aspek 5: Penerapan Manajemen SPBE > Indikator 21: Tingkat Kematangan Penerapan Manajemen Risiko SPBE", "indikator": "Tingkat Kematangan Penerapan Manajemen Risiko SPBE", "domain": "Manajemen SPBE", "aspek": "Penerapan Manajemen SPBE"}
+CONTENT:
+Indikator 21: Tingkat Kematangan Penerapan Manajemen Risiko SPBE
+Pertanyaan: Pertanyaan 
+: Apakah Instansi Pusat/Pemerintah Daerah menerapkan 
+Manajemen Risiko SPBE? 
+Tingkat
+Tingkat 1: Kegiatan Manajemen Risiko SPBE belum atau telah diterapkan. Kondisi: Kegiatan Manajemen Risiko SPBE diterapkan tanpa program kegiatan yang terarah  dan terencana.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan kegiatan Manajemen Risiko SPBE diterapkan dengan program kegiatan yang terarah dan terencana. Kondisi: Penerapan Manajemen Risiko SPBE  dilaksanakan tanpa mengacu pada pedoman manajemen risiko SPBE.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Manajemen Risiko SPBE telah dilaksanakan dengan mengacu pada pedoman manajemen risiko SPBE.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan kebijakann strategis Manajemen Risiko SPBE telah ditetapkan oleh Komite Manajemen Risiko SPBE atau Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah dan diterapkan ke seluruh unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah. Selain itu, penerapan Manajemen Risiko SPBE telah  direviu dan dievaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi Manajemen Risiko SPBE ditindaklanjuti melalui perbaikan penerapan Manajemen Risiko SPBE.
+----------------------------------------
+
+--- CHUNK 50 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 3: Manajemen SPBE > Aspek 5: Penerapan Manajemen SPBE > Indikator 22: Tingkat Kematangan Penerapan Manajemen Keamanan", "indikator": "Tingkat Kematangan Penerapan Manajemen Keamanan", "domain": "Manajemen SPBE", "aspek": "Penerapan Manajemen SPBE"}
+CONTENT:
+Indikator 22: Tingkat Kematangan Penerapan Manajemen Keamanan
+Pertanyaan: Informasi  
+Pertanyaan 
+: Apakah Instansi Pusat/Pemerintah Daerah menerapkan 
+Manajemen Keamanan Informasi? 
+Tingkat
+Tingkat 1: Pengendalian Keamanan Informasi belum atau telah tersedia dalam tahap pembangunan.
+Tingkat 2: Pengendalian Keamanan Informasi telah tersedia. Kondisi: Pengendalian Keamanan Informasi telah dilaksanakan pada sebagian unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan pengendalian Keamanan Informasi telah dilaksanakan pada seluruh unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah dengan berdasarkan Risiko SPBE.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan pengendalian Keamanan Informasi dilakukan melalui strategi Keamanan Informasi yang ditetapkan oleh Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah. Selain itu, pengendalian Keamanan Informasi telah dilakukan reviu dan evaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi pengendalian Keamanan Informasi ditindaklanjuti melalui perbaikan penerapan proses pengendalian Keamanan Informasi.
+----------------------------------------
+
+--- CHUNK 51 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 3: Manajemen SPBE > Aspek 5: Penerapan Manajemen SPBE > Indikator 23: Tingkat Kematangan Penerapan Manajemen Data", "indikator": "Tingkat Kematangan Penerapan Manajemen Data", "domain": "Manajemen SPBE", "aspek": "Penerapan Manajemen SPBE"}
+CONTENT:
+Indikator 23: Tingkat Kematangan Penerapan Manajemen Data
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah menerapkan 
+Manajemen Data? 
+Tingkat
+Tingkat 1: Kegiatan Manajemen Data belum atau telah diterapkan. Kondisi: Kegiatan Manajemen Data diterapkan tanpa program kegiatan yang terarah  dan terencana.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi  dan kegiatan Manajemen Data diterapkan dengan program kegiatan yang terarah dan terencana. Kondisi: Manajemen Data dilaksanakan tanpa mengacu pada pedoman Manajemen Data.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Manajemen Data telah dilaksanakan dengan mengacu pada pedoman Manajemen Data yang mencakup pengelolaan arsitektur data, data induk, data referensi, basis data, kualitas data, dan interoperabilitas data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Manajemen Data dilaksanakan melalui strategi pengelolaan data yang ditetapkan Forum Satu Data atau Tim Koordinasi SPBE Instansi Pusat/Pemerintah Daerah dan diterapkan ke seluruh unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah. Selain itu, penerapan Manajemen Data telah direviu dan dievaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi Manajemen Data ditindaklanjuti melalui perbaikan penerapan Manajemen Data.
+----------------------------------------
+
+--- CHUNK 52 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 3: Manajemen SPBE > Aspek 5: Penerapan Manajemen SPBE > Indikator 24: Tingkat Kematangan Penerapan Manajemen Aset TIK", "indikator": "Tingkat Kematangan Penerapan Manajemen Aset TIK", "domain": "Manajemen SPBE", "aspek": "Penerapan Manajemen SPBE"}
+CONTENT:
+Indikator 24: Tingkat Kematangan Penerapan Manajemen Aset TIK
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah menerapkan 
+Manajemen Aset TIK? 
+Tingkat
+Tingkat 1: Kegiatan Manajemen Aset TIK belum atau telah diterapkan. Kondisi: Kegiatan Manajemen Aset TIK diterapkan tanpa program kegiatan yang terarah  dan terencana.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi  dan kegiatan Manajemen Aset TIK diterapkan dengan program kegiatan yang terarah dan terencana. Kondisi: Manajemen Aset TIK dilaksanakan tanpa mengacu pada pedoman Manajemen Aset TIK yang mencakup proses perencanaan, pengadaan, pemanfaatan/penggunaan, dan penghapusan aset TIK.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Manajemen Aset TIK telah dilaksanakan dengan mengacu pada pedoman Manajemen Aset TIK yang mencakup proses perencanaan, pengadaan, pemanfaatan/penggunaan, dan penghapusan aset TIK.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi, Manajemen Aset TIK dilaksanakan melalui strategi pengelolaan aset TIK  oleh unit kerja/ perangkat daerah yang menjalankan fungsi pengelolaan TIK di Instansi Pusat/Pemerintah Daerah dan diterapkan ke seluruh unit kerja/perangkat daerah di Instansi Pusat/Pemerintah Daerah. Selain itu, penerapan Manajemen Aset TIK telah  direviu dan dievaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi Manajemen Aset TIK ditindaklanjuti melalui perbaikan penerapan Manajemen Aset TIK.
+----------------------------------------
+
+--- CHUNK 53 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 3: Manajemen SPBE > Aspek 5: Penerapan Manajemen SPBE > Indikator 25: Tingkat Kematangan Penerapan Kompetensi Sumber Daya", "indikator": "Tingkat Kematangan Penerapan Kompetensi Sumber Daya", "domain": "Manajemen SPBE", "aspek": "Penerapan Manajemen SPBE"}
+CONTENT:
+Indikator 25: Tingkat Kematangan Penerapan Kompetensi Sumber Daya
+Pertanyaan: Manusia 
+Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah menerapkan 
+Kompetensi Sumber Daya Manusia di bidang SPBE? 
+Tingkat
+Tingkat 1: Pemenuhan kompetensi Sumber Daya Manusia belum atau telah diupayakan. Kondisi: Pemenuhan kompetensi Sumber Daya Manusia SPBE dilakukan tanpa perencanaan Sumber Daya Manusia.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan pemenuhan kompetensi Sumber Daya Manusia SPBE dilakukan sesuai dengan perencanaan Sumber Daya Manusia. Kondisi: Kompetensi Sumber Daya Manusia SPBE tidak/belum terpenuhi seluruhnya yaitu kompetensi di bidang proses bisnis memerintahan, arsitektur SPBE, data dan informasi, keamanan SPBE, aplikasi SPBE, dan infrastruktur SPBE.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan kompetensi Sumber Daya Manusia SPBE telah terpenuhi seluruhnya yaitu kompetensi di bidang proses bisnis memerintahan, arsitektur SPBE, data dan informasi, keamanan SPBE, aplikasi SPBE, dan infrastruktur SPBE.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi, peningkatan dan penilaian kompetensi Sumber Daya Manusia SPBE telah dilakukan. Selain itu, pemenuhan kompetensi Sumber Daya Manusia SPBE telah dilakukan reviu dan evaluasi secara periodik.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi telah ditindaklanjuti melalui perbaikan perencanaan dan pemenuhan kompetensi Sumber Daya Manusia SPBE.
+----------------------------------------
+
+--- CHUNK 54 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 3: Manajemen SPBE > Aspek 5: Penerapan Manajemen SPBE > Indikator 26: Tingkat Kematangan Penerapan Manajemen Pengetahuan", "indikator": "Tingkat Kematangan Penerapan Manajemen Pengetahuan", "domain": "Manajemen SPBE", "aspek": "Penerapan Manajemen SPBE"}
+CONTENT:
+Indikator 26: Tingkat Kematangan Penerapan Manajemen Pengetahuan
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah menerapkan 
+Manajemen Pengetahuan? 
+Tingkat
+Tingkat 1: Manajemen Pengetahuan SPBE belum atau telah diterapkan. Kondisi: Manajemen Pengetahuan SPBE diterapkan tanpa perencanaan.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan dilaksanakan dengan perencanaan. Kondisi: Manajemen Pengetahuan SPBE telah dilaksanakan tanpa pedoman di Instansi Pusat/Pemerintah Daerah.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi, Manajemen Pengetahuan SPBE dilaksanakan dengan mengacu pada pedoman di Instansi Pusat/Pemerintah Daerah dan Manajemen Pengetahuan SPBE diterapkan dengan menggunakan sistem aplikasi manajemen pengetahuan.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi, semua unit kerja/perangkat daerah telah menerapkan Manajemen Pengetahuan SPBE dengan menggunakan sistem aplikasi manajemen pengetahuan yang terintegrasi serta telah dilakukan reviu dan evaluasi terhadap penerapan Manajemen Pengetahuan SPBE.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi terhadap penerapan Manajemen Pengetahuan SPBE  telah ditindaklanjuti melalui perbaikan Manajemen Pengetahuan SPBE.
+----------------------------------------
+
+--- CHUNK 55 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 3: Manajemen SPBE > Aspek 5: Penerapan Manajemen SPBE > Indikator 27: Tingkat Kematangan Penerapan Manajemen Perubahan", "indikator": "Tingkat Kematangan Penerapan Manajemen Perubahan", "domain": "Manajemen SPBE", "aspek": "Penerapan Manajemen SPBE"}
+CONTENT:
+Indikator 27: Tingkat Kematangan Penerapan Manajemen Perubahan
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah menerapkan 
+Manajemen Perubahan? 
+Tingkat
+Tingkat 1: Kegiatan Manajemen Perubahan SPBE belum atau telah dilaksanakan. Kondisi: Kegiatan Manajemen Perubahan SPBE dilaksanakan tanpa perencanaan.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan kegiatan Manajemen Perubahan SPBE dilaksanakan dengan perencanaan. Kondisi: Kegiatan Manajemen Perubahan SPBE tidak/belum dilaksanakan oleh seluruh unit kerja/perangkat daerah terkait di Instansi Pusat/Pemerintah Daerah dengan caranya masing- masing.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan kegiatan Manajemen Perubahan SPBE  dilaksanakan oleh seluruh unit kerja/perangkat daerah terkait di Instansi Pusat/Pemerintah Daerah sesuai pedoman Manajemen Perubahan.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan kegiatan Manajemen Perubahan SPBE telah dilakukan reviu dan evaluasi.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi telah ditindaklanjuti melalui perbaikan Manajemen Perubahan SPBE.
+----------------------------------------
+
+--- CHUNK 56 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 3: Manajemen SPBE > Aspek 5: Penerapan Manajemen SPBE > Indikator 28: Tingkat Kematangan Penerapan Manajemen Layanan SPBE", "indikator": "Tingkat Kematangan Penerapan Manajemen Layanan SPBE", "domain": "Manajemen SPBE", "aspek": "Penerapan Manajemen SPBE"}
+CONTENT:
+Indikator 28: Tingkat Kematangan Penerapan Manajemen Layanan SPBE
+Pertanyaan: Pertanyaan 
+: Apakah Instansi Pusat/Pemerintah Daerah menerapkan 
+Manajemen Layanan SPBE? 
+Tingkat
+Tingkat 1: Manajemen Layanan SPBE belum atau telah dilaksanakan. Kondisi: Manajemen Layanan SPBE dilaksanakan tanpa perencanaan.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan Manajemen Layanan SPBE dilaksanakan dengan perencanaan. Kondisi: Manajemen Layanan SPBE tidak/belum dilaksanakan pada seluruh proses Manajemen Layanan SPBE yaitu Pelayanan Pengguna SPBE dan Pengoperasian Layanan SPBE.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Manajemen Layanan SPBE dilaksanakan pada seluruh proses Manajemen Layanan SPBE yaitu Pelayanan Pengguna SPBE dan Pengoperasian Layanan SPBE.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi, Manajemen Layanan SPBE telah diterapkan dengan menggunakan sistem aplikasi manajemen layanan, dan kegiatan Manajemen Layanan SPBE telah dilakukan reviu dan evaluasi.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi serta hasil reviu dan evaluasi telah ditindaklanjuti melalui perbaikan Manajemen Layanan SPBE.
+----------------------------------------
+
+--- CHUNK 57 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 3: Manajemen SPBE > Aspek 6: Pelaksanaan Audit TIK > Indikator 29: Tingkat Kematangan Pelaksanaan Audit Infrastruktur SPBE", "indikator": "Tingkat Kematangan Pelaksanaan Audit Infrastruktur SPBE", "domain": "Manajemen SPBE", "aspek": "Pelaksanaan Audit TIK"}
+CONTENT:
+Indikator 29: Tingkat Kematangan Pelaksanaan Audit Infrastruktur SPBE
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah melaksanakan 
+Audit Infrastruktur SPBE? 
+Tingkat
+Tingkat 1: Kegiatan Audit Infrastruktur SPBE belum atau telah dilaksanakan. Kondisi: Kegiatan Audit Infrastruktur dilaksanakan tanpa perencanaan yang berkesinambungan.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan kegiatan Audit Infrastruktur dilaksanakan sesuai dengan perencanaan yang berkesinambungan. Kondisi: Kegiatan Audit Infrastruktur dilaksanakan tanpa pedoman Audit Infrastruktur.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan kegiatan Audit Infrastruktur dilaksanakan sesuai dengan pedoman Audit Infrastruktur. Kondisi: kegiatan Audit Infrastruktur dilaksanakan oleh auditor TIK/Sistem Informasi internal Instansi Pusat/Pemerintah Daerah.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan kegiatan Audit Infrastruktur dilaksanakan oleh auditor TIK/Sistem Informasi eksternal yang memiliki sertifikasi auditor TIK/Sistem Informasi.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan hasil audit Infrastruktur SPBE telah ditindaklanjuti melalui perbaikan penerapan Infrastruktur SPBE.
+----------------------------------------
+
+--- CHUNK 58 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 3: Manajemen SPBE > Aspek 6: Pelaksanaan Audit TIK > Indikator 30: Tingkat Kematangan Pelaksanaan Audit Aplikasi SPBE", "indikator": "Tingkat Kematangan Pelaksanaan Audit Aplikasi SPBE", "domain": "Manajemen SPBE", "aspek": "Pelaksanaan Audit TIK"}
+CONTENT:
+Indikator 30: Tingkat Kematangan Pelaksanaan Audit Aplikasi SPBE
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah melaksanakan 
+Audit Aplikasi SPBE? 
+Tingkat
+Tingkat 1: Kegiatan Audit Aplikasi SPBE belum atau telah dilaksanakan. Kondisi: Kegiatan Audit Aplikasi dilaksanakan tanpa perencanaan yang berkesinambungan.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan kegiatan Audit Aplikasi dilaksanakan sesuai dengan perencanaan yang berkesinambungan. Kondisi: Kegiatan Audit Aplikasi dilaksanakan tanpa pedoman Audit Aplikasi SPBE.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan kegiatan Audit Aplikasi dilaksanakan sesuai dengan pedoman Audit Aplikasi SPBE. Kondisi: kegiatan Audit Aplikasi dilaksanakan oleh auditor TIK/Sistem Informasi internal Instansi Pusat/Pemerintah Daerah.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan kegiatan Audit Aplikasi dilaksanakan oleh auditor TIK/Sistem Informasi eksternal yang memiliki sertifikasi auditor TIK/Sistem Informasi.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan hasil audit Aplikasi SPBE telah ditindaklanjuti melalui perbaikan penerapan Aplikasi SPBE.
+----------------------------------------
+
+--- CHUNK 59 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 3: Manajemen SPBE > Aspek 6: Pelaksanaan Audit TIK > Indikator 31: Tingkat Kematangan Pelaksanaan Audit Keamanan SPBE", "indikator": "Tingkat Kematangan Pelaksanaan Audit Keamanan SPBE", "domain": "Manajemen SPBE", "aspek": "Pelaksanaan Audit TIK"}
+CONTENT:
+Indikator 31: Tingkat Kematangan Pelaksanaan Audit Keamanan SPBE
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah melaksanakan 
+Audit Keamanan SPBE? 
+Tingkat
+Tingkat 1: Kegiatan Audit Keamanan SPBE belum atau telah dilaksanakan. Kondisi: Kegiatan Audit Keamanan dilaksanakan tanpa perencanaan yang berkesinambungan.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan kegiatan Audit Keamanan dilaksanakan sesuai dengan perencanaan yang berkesinambungan. Kondisi: Kegiatan Audit Keamanan dilaksanakan tanpa pedoman Audit Keamanan.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan kegiatan Audit Keamanan dilaksanakan sesuai dengan pedoman Audit Keamanan. Kondisi: kegiatan Audit Keamanan dilaksanakan oleh auditor TIK/Sistem Keamanan Informasi internal Instansi Pusat/Pemerintah Daerah.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan kegiatan Audit Keamanan dilaksanakan oleh auditor TIK/Sistem Keamanan Informasi eksternal yang memiliki sertifikasi auditor TIK/Sistem Keamanan Informasi.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan hasil audit Keamanan SPBE telah ditindaklanjuti melalui perbaikan penerapan Keamanan SPBE.
+----------------------------------------
+
+--- CHUNK 60 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 4: Layanan SPBE > Aspek 7: Layanan Administrasi Pemerintahan Berbasis Elektronik > Indikator 32: Tingkat Kematangan Layanan Perencanaan", "indikator": "Tingkat Kematangan Layanan Perencanaan", "domain": "Layanan SPBE", "aspek": "Layanan Administrasi Pemerintahan Berbasis Elektronik"}
+CONTENT:
+Indikator 32: Tingkat Kematangan Layanan Perencanaan
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki Layanan 
+Perencanaan Berbasis Elektronik? 
+Tingkat 
+d
+Tingkat 1: Layanan Perencanan Berbasis Elektronik hanya memberikan layanan informasi terkait perencanaan kegiatan pemerintah.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan Layanan Perencanan Berbasis Elektronik memberikan layanan interaksi terkait perencanaan kegiatan pemerintah seperti pencarian informasi, pengunggahan dan pengunduhan dokumen perencanaan.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Perencanaan Berbasis Elektronik memberikan layanan transaksi kepada pengguna terkait perencanaan kegiatan pemerintah seperti otomasi alur kerja, transaksi basis data, validasi data, mekanisme persetujuan, dan analitik data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Layanan Perencanaan Berbasis Elektronik memberikan layanan kolaborasi dengan layanan elektronik lain, misalnya layanan penganggaran berbasis elektronik, layanan keuangan berbasis elektronik, layanan pengadaan berbasis elektronik, layanan perencanaan berbasis elektronik Instansi Pusat/Pemerintah Daerah lain, dan/atau layanan SPBE Instansi Pusat/Pemerintah Daerah lain.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan Layanan Perencanaan Berbasis Elektronik telah dilakukan perbaikan berdasarkan hasil reviu dan evaluasi terhadap perubahan lingkungan, peraturan perundang- undangan, teknologi atau kebutuhan Instansi Pusat/Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 61 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 4: Layanan SPBE > Aspek 7: Layanan Administrasi Pemerintahan Berbasis Elektronik > Indikator 33: Tingkat Kematangan Layanan Penganggaran", "indikator": "Tingkat Kematangan Layanan Penganggaran", "domain": "Layanan SPBE", "aspek": "Layanan Administrasi Pemerintahan Berbasis Elektronik"}
+CONTENT:
+Indikator 33: Tingkat Kematangan Layanan Penganggaran
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki Layanan 
+Penganggaran Berbasis Elektronik? 
+Tingkat
+Tingkat 1: Layanan Penganggaran Berbasis Elektronik hanya memberikan layanan informasi terkait penganggaran kegiatan pemerintah.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan Layanan Penganggaran Berbasis Elektronik memberikan layanan interaksi terkait penganggaran kegiatan pemerintah seperti pencarian informasi, pengunggahan dan pengunduhan dokumen penganggaran.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Penganggaran Berbasis Elektronik memberikan layanan transaksi kepada pengguna terkait penganggaran kegiatan pemerintah seperti otomasi alur kerja, transaksi basis data, validasi data, mekanisme persetujuan, dan analitik data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Layanan Penganggaran Berbasis Elektronik memberikan layanan kolaborasi dengan layanan elektronik lain, misalnya layanan perencanaan berbasis elektronik, layanan keuangan berbasis elektronik, layanan pengadaan berbasis elektronik,  layanan penganggaran berbasis elektronik Instansi Pusat/Pemerintah Daerah lain, dan/atau layanan SPBE Instansi Pusat/Pemerintah Daerah lain.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan Layanan Penganggaran Berbasis Elektronik telah dilakukan perbaikan berdasarkan hasil reviu dan evaluasi terhadap perubahan lingkungan, peraturan perundang-undangan, teknologi atau kebutuhan Instansi Pusat/Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 62 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 4: Layanan SPBE > Aspek 7: Layanan Administrasi Pemerintahan Berbasis Elektronik > Indikator 34: Tingkat Kematangan Layanan Keuangan", "indikator": "Tingkat Kematangan Layanan Keuangan", "domain": "Layanan SPBE", "aspek": "Layanan Administrasi Pemerintahan Berbasis Elektronik"}
+CONTENT:
+Indikator 34: Tingkat Kematangan Layanan Keuangan
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki Layanan 
+Keuangan Berbasis Elektronik? 
+Tingkat
+Tingkat 1: Layanan Keuangan Berbasis Elektronik hanya memberikan layanan informasi terkait keuangan di Instansi Pusat/Pemerintah.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan Layanan Keuangan Berbasis Elektronik memberikan layanan interaksi terkait keuangan seperti pencarian informasi, pengunggahan dan pengunduhan dokumen.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Keuangan Berbasis Elektronik memberikan layanan transaksi kepada pengguna terkait keuangan seperti otomasi alur kerja, transaksi basis data, validasi data, mekanisme persetujuan, dan analitik data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Layanan Keuangan Berbasis Elektronik memberikan layanan kolaborasi dengan layanan elektronik lain, misalnya Layanan Penganggaran Berbasis Elektronik, Layanan Pengadaan Berbasis Elektronik, Layanan Perencanaan Berbasis Elektronik,  Layanan Keuangan Berbasis Elektronik Instansi Pusat/Pemerintah Daerah lain, dan/atau layanan SPBE Instansi Pusat/Pemerintah Daerah lain.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan Layanan Keuangan Berbasis Elektronik telah dilakukan perbaikan berdasarkan hasil reviu dan evaluasi terhadap perubahan lingkungan, peraturan perundang- undangan, teknologi atau kebutuhan Instansi Pusat/Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 63 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 4: Layanan SPBE > Aspek 7: Layanan Administrasi Pemerintahan Berbasis Elektronik > Indikator 35: Tingkat Kematangan Layanan Pengadaan Barang dan Jasa", "indikator": "Tingkat Kematangan Layanan Pengadaan Barang dan Jasa", "domain": "Layanan SPBE", "aspek": "Layanan Administrasi Pemerintahan Berbasis Elektronik"}
+CONTENT:
+Indikator 35: Tingkat Kematangan Layanan Pengadaan Barang dan Jasa
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki Layanan 
+Pengadaan Barang dan Jasa Berbasis Elektronik? 
+Tingkat
+Tingkat 1: Layanan Pengadaan Barang dan Jasa Berbasis Elektronik hanya memberikan layanan informasi terkait pengadaan barang dan jasa di Instansi Pusat/Pemerintah.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan Layanan Pengadaan Barang dan Jasa Berbasis Elektronik memberikan layanan interaksi terkait pengadaan barang dan jasa seperti pencarian informasi, pengunggahan dan pengunduhan dokumen.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Pengadaan Barang dan Jasa Berbasis Elektronik memberikan layanan transaksi kepada pengguna terkait pengadaan barang dan jasa seperti otomasi alur kerja, transaksi basis data, validasi data, mekanisme persetujuan, dan analitik data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Layanan Pengadaan Barang dan Jasa Berbasis Elektronik memberikan layanan kolaborasi dengan layanan elektronik lain, misalnya Layanan Penganggaran Berbasis Elektronik, Layanan Perencanaan Berbasis Elektronik, Layanan Keuangan Berbasis Elektronik, Layanan Pengadaan Barang dan Jasa Berbasis Elektronik Instansi Pusat/Pemerintah Daerah lain, dan/atau layanan SPBE Instansi Pusat/Pemerintah Daerah lain.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan Layanan Pengadaan Barang dan Jasa Berbasis Elektronik telah dilakukan perbaikan berdasarkan hasil reviu dan evaluasi terhadap perubahan lingkungan, peraturan perundang-undangan, teknologi atau kebutuhan Instansi Pusat/Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 64 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 4: Layanan SPBE > Aspek 7: Layanan Administrasi Pemerintahan Berbasis Elektronik > Indikator 36: Tingkat Kematangan Layanan Kepegawaian", "indikator": "Tingkat Kematangan Layanan Kepegawaian", "domain": "Layanan SPBE", "aspek": "Layanan Administrasi Pemerintahan Berbasis Elektronik"}
+CONTENT:
+Indikator 36: Tingkat Kematangan Layanan Kepegawaian
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki Layanan 
+Kepegawaian Berbasis Elektronik? 
+Tingkat
+Tingkat 1: Layanan Kepegawaian Berbasis Elektronik hanya memberikan layanan informasi terkait kepegawaian.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan Layanan Kepegawaian Berbasis Elektronik memberikan layanan interaksi terkait kepegawaian seperti pencarian informasi, pengunggahan dan pengunduhan dokumen.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Kepegawaian Berbasis Elektronik memberikan layanan transaksi kepada pengguna terkait kepegawaian seperti otomasi alur kerja, transaksi basis data, validasi data, mekanisme persetujuan, dan analitik data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Layanan Kepegawaian Berbasis Elektronik memberikan layanan kolaborasi dengan layanan elektronik lain, misalnya Layanan Kinerja Berbasis Elektronik, Layanan Keuangan Berbasis Elektronik,  Layanan Kepegawaian Berbasis Elektronik Instansi Pusat/Pemerintah Daerah lain, dan/atau layanan SPBE Instansi Pusat/Pemerintah Daerah lain.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan Layanan Kepegawaian Berbasis Elektronik telah dilakukan perbaikan berdasarkan hasil reviu dan evaluasi terhadap perubahan lingkungan, peraturan perundang- undangan, teknologi atau kebutuhan Instansi Pusat/Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 65 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 4: Layanan SPBE > Aspek 7: Layanan Administrasi Pemerintahan Berbasis Elektronik > Indikator 37: Tingkat Kematangan Layanan Kearsipan Dinamis", "indikator": "Tingkat Kematangan Layanan Kearsipan Dinamis", "domain": "Layanan SPBE", "aspek": "Layanan Administrasi Pemerintahan Berbasis Elektronik"}
+CONTENT:
+Indikator 37: Tingkat Kematangan Layanan Kearsipan Dinamis
+Pertanyaan: Pertanyaan 
+: Apakah Instansi Pusat/Pemerintah Daerah memiliki Layanan 
+Kearsipan Dinamis Berbasis Elektronik? 
+Tingkat
+Tingkat 1: Layanan Kearsipan Dinamis Berbasis Elektronik hanya memberikan layanan informasi terkait kearsipan dinamis.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan Layanan Kearsipan Dinamis Berbasis Elektronik memberikan layanan interaksi terkait kearsipan dinamis seperti pencarian informasi, pengunggahan dan pengunduhan dokumen.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Kearsipan Dinamis Berbasis Elektronik memberikan layanan transaksi kepada pengguna terkait kearsipan dinamis seperti otomasi alur kerja, transaksi basis data, validasi data, mekanisme persetujuan, dan analitik data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Layanan Kearsipan Dinamis Berbasis Elektronik memberikan layanan kolaborasi dengan layanan elektronik lain, misalnya Layanan Pengadaan Barang dan Jasa Berbasis Elektronik,  Layanan Kepegawaian Berbasis Elektronik, Layanan Kearsipan Dinamis Berbasis Elektronik Instansi Pusat/Pemerintah Daerah lain, dan/atau layanan SPBE Instansi Pusat/Pemerintah Daerah lain.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan Layanan Kearsipan Dinamis Berbasis Elektronik telah dilakukan perbaikan berdasarkan hasil reviu dan evaluasi terhadap perubahan lingkungan, peraturan perundang-undangan, teknologi atau kebutuhan Instansi Pusat/Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 66 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 4: Layanan SPBE > Aspek 7: Layanan Administrasi Pemerintahan Berbasis Elektronik > Indikator 38: Tingkat Kematangan Layanan Pengelolaan Barang Milik", "indikator": "Tingkat Kematangan Layanan Pengelolaan Barang Milik", "domain": "Layanan SPBE", "aspek": "Layanan Administrasi Pemerintahan Berbasis Elektronik"}
+CONTENT:
+Indikator 38: Tingkat Kematangan Layanan Pengelolaan Barang Milik
+Pertanyaan: Negara/Daerah 
+Pertanyaan 
+: Apakah Instansi Pusat/Pemerintah Daerah memiliki Layanan 
+Pengelolaan Barang Milik Negara/Daerah Berbasis 
+Elektronik? 
+Tingkat
+Tingkat 1: Layanan Pengelolaan Barang Milik Negara/Daerah Berbasis Elektronik hanya memberikan layanan informasi terkait pengelolaan barang milik negara.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan Layanan Pengelolaan Barang Milik Negara/Daerah Berbasis Elektronik memberikan layanan interaksi terkait pengelolaan barang milik negara/daerah seperti pencarian informasi, pengunggahan dan pengunduhan dokumen.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Pengelolaan Barang Milik Negara/Daerah Berbasis Elektronik memberikan layanan transaksi kepada pengguna terkait pengelolaan barang milik negara/daerah seperti otomasi alur kerja, transaksi basis data, validasi data, mekanisme persetujuan, dan analitik data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Layanan Pengelolaan Barang Milik Negara/Daerah Berbasis Elektronik memberikan layanan kolaborasi dengan layanan elektronik lain, misalnya Layanan Penganggaran Berbasis Elektronik, Layanan Pengadaan Barang dan Jasa Berbasis Elektronik,  Layanan Keuangan Berbasis Elektronik, Layanan Pengelolaan Barang Milik Negara/Daerah Berbasis Elektronik Instansi Pusat/Pemerintah Daerah lain, dan/atau layanan SPBE Instansi Pusat/Pemerintah Daerah lain.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan Layanan Pengelolaan Barang Milik Negara/Daerah Berbasis Elektronik telah dilakukan perbaikan berdasarkan hasil reviu dan evaluasi terhadap perubahan lingkungan, peraturan perundang-undangan, teknologi atau kebutuhan Instansi Pusat/Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 67 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 4: Layanan SPBE > Aspek 7: Layanan Administrasi Pemerintahan Berbasis Elektronik > Indikator 39: Tingkat Kematangan Layanan Pengawasan Internal", "indikator": "Tingkat Kematangan Layanan Pengawasan Internal", "domain": "Layanan SPBE", "aspek": "Layanan Administrasi Pemerintahan Berbasis Elektronik"}
+CONTENT:
+Indikator 39: Tingkat Kematangan Layanan Pengawasan Internal
+Pertanyaan: Pemerintah 
+Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki Layanan 
+Pengawasan Internal Pemerintah Berbasis Elektronik? 
+Tingkat
+Tingkat 1: Layanan Pengawasan Internal Pemerintah Berbasis Elektronik hanya memberikan layanan informasi terkait pengawasan internal pemerintah.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan Layanan Pengawasan Internal Pemerintah Berbasis Elektronik memberikan layanan interaksi terkait pengawasan internal pemerintah seperti pencarian informasi, pengunggahan dan pengunduhan dokumen.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Pengawasan Internal Pemerintah Berbasis Elektronik memberikan layanan transaksi kepada pengguna terkait pengawasan internal pemerintah seperti otomasi alur kerja, transaksi basis data, validasi data, mekanisme persetujuan, dan analitik data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Layanan Pengawasan Internal Pemerintah Berbasis Elektronik memberikan layanan kolaborasi dengan layanan elektronik lain, misalnya Layanan Kepegawaian Berbasis Elektronik, Layanan Akuntabilitas Kinerja Berbasis Elektronik, Layanan Pengawasan Internal Pemerintah Berbasis Elektronik Instansi Pusat/Pemerintah Daerah lain, dan/atau layanan SPBE Instansi Pusat/Pemerintah Daerah lain.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan Layanan Pengawasan Internal Berbasis Elektronik telah dilakukan perbaikan berdasarkan hasil reviu dan evaluasi terhadap perubahan lingkungan, peraturan perundang-undangan, teknologi atau kebutuhan Instansi Pusat/Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 68 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 4: Layanan SPBE > Aspek 7: Layanan Administrasi Pemerintahan Berbasis Elektronik > Indikator 40: Tingkat Kematangan Layanan Akuntabilitas Kinerja Organisasi", "indikator": "Tingkat Kematangan Layanan Akuntabilitas Kinerja Organisasi", "domain": "Layanan SPBE", "aspek": "Layanan Administrasi Pemerintahan Berbasis Elektronik"}
+CONTENT:
+Indikator 40: Tingkat Kematangan Layanan Akuntabilitas Kinerja Organisasi
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki Layanan 
+Akuntabilitas Kinerja Organisasi Berbasis Elektronik? 
+Tingkat
+Tingkat 1: Layanan Akuntabilitas Kinerja Instansi Pusat/Pemerintah Daerah Berbasis Elektronik hanya memberikan layanan informasi terkait akuntabilitas kinerja Instansi Pusat/Pemerintah Daerah.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan Layanan Akuntabilitas Kinerja Instansi Pusat/Pemerintah Daerah Berbasis Elektronik memberikan layanan interaksi terkait akuntabilitas kinerja Instansi Pusat/Pemerintah Daerah seperti pencarian informasi, pengunggahan dan pengunduhan dokumen.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Akuntabilitas Kinerja Instansi Pusat/Pemerintah Daerah Berbasis Elektronik memberikan layanan transaksi kepada pengguna terkait akuntabilitas kinerja Instansi Pusat/Pemerintah Daerah seperti otomasi alur kerja, transaksi basis data, validasi data, mekanisme persetujuan, dan analitik data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Layanan Akuntabilitas Kinerja Instansi Pusat/Pemerintah Daerah Berbasis Elektronik memberikan layanan kolaborasi dengan layanan elektronik lain, misalnya Layanan Penganggaran Berbasis Elektronik, Layanan Pengadaan Berbasis Elektronik, Layanan Perencanaan Berbasis Elektronik,  Layanan Keuangan Berbasis Elektronik, Layanan Akuntabilitas Kinerja Instansi Pusat/Pemerintah Daerah Berbasis Elektronik Instansi Pusat/Pemerintah Daerah lain, dan/atau layanan SPBE Instansi Pusat/Pemerintah Daerah lain.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan Layanan Akuntabilitas Kinerja Instansi Pusat/Pemerintah Daerah Berbasis Elektronik telah dilakukan perbaikan berdasarkan hasil reviu dan evaluasi terhadap perubahan lingkungan, peraturan perundang-undangan, teknologi atau kebutuhan Instansi Pusat/Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 69 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 4: Layanan SPBE > Aspek 7: Layanan Administrasi Pemerintahan Berbasis Elektronik > Indikator 41: Tingkat Kematangan Layanan Kinerja Pegawai", "indikator": "Tingkat Kematangan Layanan Kinerja Pegawai", "domain": "Layanan SPBE", "aspek": "Layanan Administrasi Pemerintahan Berbasis Elektronik"}
+CONTENT:
+Indikator 41: Tingkat Kematangan Layanan Kinerja Pegawai
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki Layanan 
+Kinerja Pegawai Berbasis Elektronik? 
+Tingkat
+Tingkat 1: Layanan Kinerja Pegawai Berbasis Elektronik hanya memberikan layanan informasi terkait kinerja pegawai.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan Layanan Kinerja Pegawai Berbasis Elektronik memberikan layanan interaksi terkait kinerja pegawai seperti pencarian informasi, pengunggahan dan pengunduhan dokumen.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Kinerja Pegawai Berbasis Elektronik memberikan layanan transaksi kepada pengguna terkait kinerja pegawai seperti otomasi alur kerja, transaksi basis data, validasi data, mekanisme persetujuan, dan analitik data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Layanan Kinerja Pegawai Berbasis Elektronik memberikan layanan kolaborasi dengan layanan elektronik lain, misalnya Layanan Perencanaan Berbasis Elektronik, Layanan Akuntabilitas Berbasis Elektronik, Layanan Kinerja Pegawai Berbasis Elektronik Instansi Pusat/Pemerintah Daerah lain, dan/atau layanan SPBE Instansi Pusat/Pemerintah Daerah lain.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan Layanan Kinerja Pegawai Berbasis Elektronik telah dilakukan perbaikan berdasarkan hasil reviu dan evaluasi terhadap perubahan lingkungan, peraturan perundang-undangan, teknologi atau kebutuhan Instansi Pusat/Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 70 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 4: Layanan SPBE > Aspek 8: Layanan Publik Berbasis Elektronik > Indikator 42: Tingkat Kematangan Layanan Pengaduan Pelayanan Publik", "indikator": "Tingkat Kematangan Layanan Pengaduan Pelayanan Publik", "domain": "Layanan SPBE", "aspek": "Layanan Publik Berbasis Elektronik"}
+CONTENT:
+Indikator 42: Tingkat Kematangan Layanan Pengaduan Pelayanan Publik
+Pertanyaan: Pertanyaan 
+: Apakah Instansi Pusat/Pemerintah Daerah memiliki Layanan 
+Pengaduan Pelayanan Publik Berbasis Elektronik? 
+Tingkat
+Tingkat 1: Layanan Pengaduan Pelayanan Publik Berbasis Elektronik hanya memberikan layanan informasi terkait pengaduan pelayanan publik.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan Layanan Pengaduan Pelayanan Publik Berbasis Elektronik memberikan layanan interaksi terkait pengaduan pelayanan publik seperti pencarian informasi, pengunggahan dan pengunduhan dokumen.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Pengaduan Pelayanan Publik Berbasis Elektronik memberikan layanan transaksi kepada pengguna terkait pengaduan pelayanan publik seperti otomasi alur kerja, transaksi basis data, validasi data, mekanisme persetujuan, dan analitik data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Layanan Pengaduan Pelayanan Publik Berbasis Elektronik memberikan layanan kolaborasi dengan layanan elektronik lain, misalnya Layanan Kepegawaian Berbasis Elektronik, Layanan Pengaduan Pelayanan Publik Berbasis Elektronik Instansi Pusat/Pemerintah Daerah lain, dan/atau layanan SPBE Instansi Pusat/Pemerintah Daerah lain.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan Layanan Pengaduan Pelayanan Publik Berbasis Elektronik telah dilakukan perbaikan berdasarkan hasil reviu dan evaluasi terhadap perubahan lingkungan, peraturan perundang-undangan, teknologi atau kebutuhan Instansi Pusat/Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 71 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 4: Layanan SPBE > Aspek 8: Layanan Publik Berbasis Elektronik > Indikator 43: Tingkat Kematangan Layanan Data Terbuka", "indikator": "Tingkat Kematangan Layanan Data Terbuka", "domain": "Layanan SPBE", "aspek": "Layanan Publik Berbasis Elektronik"}
+CONTENT:
+Indikator 43: Tingkat Kematangan Layanan Data Terbuka
+Pertanyaan: Pertanyaan 
+: Apakah Instansi Pusat/Pemerintah Daerah memiliki Layanan 
+Data Terbuka Berbasis Elektronik? 
+Tingkat
+Tingkat 1: Layanan Data Terbuka Berbasis Elektronik hanya memberikan layanan informasi terkait data terbuka.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan Layanan Data Terbuka Berbasis Elektronik memberikan layanan interaksi terkait data terbuka seperti pencarian informasi, pengunggahan dan pengunduhan dokumen.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Data Terbuka Berbasis Elektronik memberikan layanan transaksi kepada pengguna terkait data terbuka seperti otomasi pertukaran data, otomasi alur kerja, transaksi basis data, validasi data, mekanisme persetujuan, dan analitik data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Layanan Data Terbuka Berbasis Elektronik memberikan layanan kolaborasi dengan layanan elektronik lain, misalnya Layanan Data Terbuka Berbasis Elektronik Instansi Pusat/Pemerintah Daerah lain, dan/atau layanan SPBE Instansi Pusat/Pemerintah Daerah lain.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan Layanan Data Terbuka Berbasis Elektronik telah dilakukan perbaikan berdasarkan hasil reviu dan evaluasi terhadap perubahan lingkungan, peraturan perundang- undangan, teknologi atau kebutuhan Instansi Pusat/Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 72 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 4: Layanan SPBE > Aspek 8: Layanan Publik Berbasis Elektronik > Indikator 44: Tingkat Kematangan Jaringan Dokumentasi dan Informasi", "indikator": "Tingkat Kematangan Jaringan Dokumentasi dan Informasi", "domain": "Layanan SPBE", "aspek": "Layanan Publik Berbasis Elektronik"}
+CONTENT:
+Indikator 44: Tingkat Kematangan Jaringan Dokumentasi dan Informasi
+Pertanyaan: Hukum (JDIH) 
+Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki Jaringan 
+Dokumentasi dan Informasi Hukum (JDIH) Berbasis 
+Elektronik? 
+Tingkat
+Tingkat 1: Layanan Jaringan Dokumentasi dan Informasi Hukum Berbasis Elektronik hanya memberikan layanan informasi terkait jaringan dokumentasi dan informasi hukum.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan Layanan Jaringan Dokumentasi dan Informasi Hukum Berbasis Elektronik memberikan layanan interaksi terkait jaringan dokumentasi dan informasi hukum seperti pencarian informasi, pengunggahan dan pengunduhan dokumen.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Jaringan Dokumentasi dan Informasi Hukum Berbasis Elektronik memberikan layanan transaksi kepada pengguna terkait jaringan dokumentasi dan informasi hukum seperti otomasi alur kerja, transaksi basis data, validasi data, mekanisme persetujuan, dan analitik data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Layanan Jaringan Dokumentasi dan Informasi Hukum Berbasis Elektronik memberikan layanan kolaborasi dengan layanan elektronik lain, misalnya  Layanan Jaringan Dokumentasi dan Informasi Hukum Berbasis Elektronik Instansi Pusat/Pemerintah Daerah lain, dan/atau layanan SPBE Instansi Pusat/Pemerintah Daerah lain.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan Layanan Jaringan Dokumentasi dan Informasi Hukum Berbasis Elektronik telah dilakukan perbaikan berdasarkan hasil reviu dan evaluasi terhadap perubahan lingkungan, peraturan perundang-undangan, teknologi atau kebutuhan Instansi Pusat/Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 73 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 4: Layanan SPBE > Aspek 8: Layanan Publik Berbasis Elektronik > Indikator 45: Tingkat Kematangan Layanan Publik Sektor 1", "indikator": "Tingkat Kematangan Layanan Publik Sektor 1", "domain": "Layanan SPBE", "aspek": "Layanan Publik Berbasis Elektronik"}
+CONTENT:
+Indikator 45: Tingkat Kematangan Layanan Publik Sektor 1
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki Layanan 
+Publik Berbasis Elektronik pada Sektor 1? 
+Tingkat
+Tingkat 1: Layanan Publik Sektoral Berbasis Elektronik hanya memberikan layanan informasi terkait Publik Sektoral kegiatan pemerintah.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan Layanan Publik Sektoral Berbasis Elektronik memberikan layanan interaksi terkait Publik Sektoral kegiatan pemerintah seperti pencarian informasi, pengunggahan dan pengunduhan dokumen Layanan Publik Sektoral.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Publik Sektoral Berbasis Elektronik memberikan layanan transaksi kepada pengguna terkait Publik Sektoral kegiatan pemerintah seperti otomasi alur kerja, transaksi basis data, validasi data, mekanisme persetujuan, dan analitik data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Layanan Publik Sektoral Berbasis Elektronik memberikan layanan kolaborasi dengan layanan elektronik lain, misalnya  Layanan Publik Sektoral Berbasis Elektronik Instansi Pusat/Pemerintah Daerah lain, dan/atau layanan SPBE Instansi Pusat/Pemerintah Daerah lain.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan Layanan Publik Sektoral Berbasis Elektronik telah dilakukan perbaikan berdasarkan hasil reviu dan evaluasi terhadap perubahan lingkungan, peraturan perundang-undangan, teknologi dan kebutuhan Instansi Pusat/Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 74 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 4: Layanan SPBE > Aspek 8: Layanan Publik Berbasis Elektronik > Indikator 46: Tingkat Kematangan Layanan Publik Sektor 2", "indikator": "Tingkat Kematangan Layanan Publik Sektor 2", "domain": "Layanan SPBE", "aspek": "Layanan Publik Berbasis Elektronik"}
+CONTENT:
+Indikator 46: Tingkat Kematangan Layanan Publik Sektor 2
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki Layanan 
+Publik Berbasis Elektronik pada Sektor 2? 
+Tingkat
+Tingkat 1: Layanan Publik Sektoral Berbasis Elektronik hanya memberikan layanan informasi terkait Publik Sektoral kegiatan pemerintah.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan Layanan Publik Sektoral Berbasis Elektronik memberikan layanan interaksi terkait Publik Sektoral kegiatan pemerintah seperti pencarian informasi, pengunggahan dan pengunduhan dokumen Layanan Publik Sektoral.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Publik Sektoral Berbasis Elektronik memberikan layanan transaksi kepada pengguna terkait Publik Sektoral kegiatan pemerintah seperti otomasi alur kerja, transaksi basis data, validasi data, mekanisme persetujuan, dan analitik data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Layanan Publik Sektoral Berbasis Elektronik memberikan layanan kolaborasi dengan layanan elektronik lain, misalnya  Layanan Publik Sektoral Berbasis Elektronik Instansi Pusat/Pemerintah Daerah lain, dan/atau layanan SPBE Instansi Pusat/Pemerintah Daerah lain.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan Layanan Publik Sektoral Berbasis Elektronik telah dilakukan perbaikan berdasarkan hasil reviu dan evaluasi terhadap perubahan lingkungan, peraturan perundang-undangan, teknologi dan kebutuhan Instansi Pusat/Pemerintah Daerah.
+----------------------------------------
+
+--- CHUNK 75 ---
+METADATA: {"doc_type": "peraturan", "judul_dokumen": "Peraturan 59 Tahun 2020", "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK", "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf", "bagian": "LAMPIRAN", "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 4: Layanan SPBE > Aspek 8: Layanan Publik Berbasis Elektronik > Indikator 47: Tingkat Kematangan Layanan Publik Sektor 3", "indikator": "Tingkat Kematangan Layanan Publik Sektor 3", "domain": "Layanan SPBE", "aspek": "Layanan Publik Berbasis Elektronik"}
+CONTENT:
+Indikator 47: Tingkat Kematangan Layanan Publik Sektor 3
+Pertanyaan: Pertanyaan 
+: 
+Apakah Instansi Pusat/Pemerintah Daerah memiliki Layanan 
+Publik Berbasis Elektronik pada Sektor 3? 
+Tingkat
+Tingkat 1: Layanan Publik Sektoral Berbasis Elektronik hanya memberikan layanan informasi terkait Publik Sektoral kegiatan pemerintah.
+Tingkat 2: Kriteria tingkat 1 telah terpenuhi dan Layanan Publik Sektoral Berbasis Elektronik memberikan layanan interaksi terkait Publik Sektoral kegiatan pemerintah seperti pencarian informasi, pengunggahan dan pengunduhan dokumen Layanan Publik Sektoral.
+Tingkat 3: Kriteria tingkat 2 telah terpenuhi dan Layanan Publik Sektoral Berbasis Elektronik memberikan layanan transaksi kepada pengguna terkait Publik Sektoral kegiatan pemerintah seperti otomasi alur kerja, transaksi basis data, validasi data, mekanisme persetujuan, dan analitik data.
+Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan Layanan Publik Sektoral Berbasis Elektronik memberikan layanan kolaborasi dengan layanan elektronik lain, misalnya  Layanan Publik Sektoral Berbasis Elektronik Instansi Pusat/Pemerintah Daerah lain, dan/atau layanan SPBE Instansi Pusat/Pemerintah Daerah lain.
+Tingkat 5: Kriteria tingkat 4 telah terpenuhi dan Layanan Publik Sektoral Berbasis Elektronik telah dilakukan perbaikan berdasarkan hasil reviu dan evaluasi terhadap perubahan lingkungan, peraturan perundang-undangan, teknologi dan kebutuhan Instansi Pusat/Pemerintah Daerah.
+----------------------------------------
+

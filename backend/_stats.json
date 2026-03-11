@@ -1,0 +1,348 @@
+{
+  "documents": [
+    {
+      "id": 3,
+      "file": "peraturan-bssn-no-8-tahun-2024.pdf",
+      "type": "peraturan",
+      "status": "completed",
+      "chunks": 168,
+      "max": 596,
+      "min": 14,
+      "avg": 352
+    },
+    {
+      "id": 4,
+      "file": "Permenpan RB Nomor 5 Tahun 2020.pdf",
+      "type": "peraturan",
+      "status": "completed",
+      "chunks": 12,
+      "max": 584,
+      "min": 45,
+      "avg": 313
+    },
+    {
+      "id": 5,
+      "file": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+      "type": "peraturan",
+      "status": "completed",
+      "chunks": 274,
+      "max": 599,
+      "min": 54,
+      "avg": 347
+    },
+    {
+      "id": 6,
+      "file": "Perpres Nomor 82 Tahun 2023.pdf",
+      "type": "peraturan",
+      "status": "completed",
+      "chunks": 69,
+      "max": 599,
+      "min": 14,
+      "avg": 313
+    },
+    {
+      "id": 10,
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "type": "pedoman_spbe",
+      "status": "completed",
+      "chunks": 254,
+      "max": 7890,
+      "min": 79,
+      "avg": 1550
+    },
+    {
+      "id": 11,
+      "file": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+      "type": "laporan_spbe",
+      "status": "completed",
+      "chunks": 424,
+      "max": 578,
+      "min": 63,
+      "avg": 181
+    }
+  ],
+  "oversized": [
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 212,
+      "size": 7890,
+      "preview": "Indikator 6: Tingkat Kematangan Kebijakan Internal Layanan  Jaringan Intra Instansi Pusat/Pemerintah"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 251,
+      "size": 7744,
+      "preview": "Indikator 45: Tingkat Kematangan Layanan Publik Sektoral 1.\nDeskripsi: a. Layanan Publik Sektor adal"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 253,
+      "size": 7723,
+      "preview": "Indikator 47: Tingkat Kematangan Layanan Publik Sektoral 3.\nDeskripsi: a. Layanan Publik Sektor adal"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 252,
+      "size": 7716,
+      "preview": "Indikator 46: Tingkat Kematangan Layanan Publik Sektoral 2.\nDeskripsi: a. Layanan Publik Sektor adal"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 213,
+      "size": 7376,
+      "preview": "Indikator 7: Tingkat  Kematangan  Kebijakan  Internal  Penggunaan Sistem Penghubung Layanan Instansi"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 246,
+      "size": 7249,
+      "preview": "Indikator 40: Tingkat Kematangan Layanan Akuntabilitas  Kinerja Organisasi.\nDeskripsi: a. Akuntabili"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 211,
+      "size": 7248,
+      "preview": "Indikator 5: Tingkat Kematangan Kebijakan Internal Layanan  Pusat Data.\nDeskripsi: a. Layanan  Pusat"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 216,
+      "size": 7179,
+      "preview": "Indikator 10: Tingkat  Kematangan  Kebijakan  Internal  Tim  Koordinasi  SPBE  Instansi  Pusat/Pemer"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 208,
+      "size": 7012,
+      "preview": "Indikator 2: Tingkat Kematangan Kebijakan Internal Peta  Rencana SPBE Instansi Pusat/Pemerintah Daer"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 250,
+      "size": 6894,
+      "preview": "Indikator 44: Tingkat  Kematangan  Layanan  Jaringan  Dokumentasi dan Informasi Hukum (JDIH).\nDeskri"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 210,
+      "size": 6860,
+      "preview": "Indikator 4: Tingkat  Kematangan  Kebijakan  Internal  Pembangunan Aplikasi SPBE.\nDeskripsi: a. Apli"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 244,
+      "size": 6838,
+      "preview": "Indikator 38: Tingkat Kematangan Layanan Pengelolaan Barang  Milik Negara/Daerah.\nDeskripsi: a. Peng"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 241,
+      "size": 6824,
+      "preview": "Indikator 35: Tingkat Kematangan Layanan Pengadaan Barang  dan Jasa.\nDeskripsi: a. Pengadaan Barang/"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 223,
+      "size": 6726,
+      "preview": "Indikator 17: Tingkat  Kematangan  Layanan  Jaringan  Intra  Instansi Pusat/Pemerintah Daerah.\nDeskr"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 214,
+      "size": 6662,
+      "preview": "Indikator 8: Tingkat  Kematangan  Kebijakan  Internal  Manajemen Keamanan Informasi.\nDeskripsi: a. M"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 245,
+      "size": 6657,
+      "preview": "Indikator 39: Tingkat Kematangan Layanan Pengawasan Internal  terkait Pemerintah.\nDeskripsi: a. Peng"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 248,
+      "size": 6514,
+      "preview": "Indikator 42: Tingkat  Kematangan  Layanan  Pengaduan  Pelayanan Publik.\nDeskripsi: a. Pengaduan Pel"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 243,
+      "size": 6427,
+      "preview": "Indikator 37: Tingkat Kematangan Layanan Kearsipan Dinamis\nDeskripsi: a. Kearsipan  adalah  serangka"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 249,
+      "size": 6427,
+      "preview": "Indikator 43: Tingkat Kematangan Layanan Data Terbuka.\nDeskripsi: a. Layanan Data Terbuka merupakan "
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 247,
+      "size": 6366,
+      "preview": "Indikator 41: Tingkat Kematangan Layanan Kinerja Pegawai.\nDeskripsi: a. Kinerja Pegawai adalah seran"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 239,
+      "size": 6296,
+      "preview": "Indikator 33: Tingkat Kematangan Layanan Penganggaran.\nDeskripsi: a. Penganggaran adalah serangkaian"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 238,
+      "size": 6256,
+      "preview": "Indikator 32: Tingkat Kematangan Layanan Perencanaan.\nDeskripsi: a. Perencanaan adalah serangkaian p"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 234,
+      "size": 6243,
+      "preview": "Indikator 28: Tingkat Kematangan Penerapan Manajemen  Layanan SPBE.\nDeskripsi: a. Manajemen  Layanan"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 242,
+      "size": 6243,
+      "preview": "Indikator 36: Tingkat Kematangan Layanan Kepegawaian.\nDeskripsi: a. Kepegawaian adalah serangkaian p"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 224,
+      "size": 6187,
+      "preview": "Indikator 18: Tingkat  Kematangan  Penggunaan  Sistem  Penghubung Layanan Instansi Pusat/Pemerintah "
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 240,
+      "size": 6167,
+      "preview": "Indikator 34: Tingkat Kematangan Layanan Keuangan.\nDeskripsi: a. Keuangan  adalah  serangkaian  pros"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 233,
+      "size": 6068,
+      "preview": "Indikator 27: Tingkat  Kematangan  Penerapan  Manajemen  Perubahan.\nDeskripsi: a. Manajemen  Perubah"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 226,
+      "size": 6004,
+      "preview": "Indikator 20: Tingkat Kematangan Kolaborasi Penerapan SPBE.\nDeskripsi: a. Forum  Kolaborasi  SPBE  m"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 230,
+      "size": 5993,
+      "preview": "Indikator 24: Tingkat Kematangan Penerapan Manajemen Aset  TIK.\nDeskripsi: a. Manajemen  aset  tekno"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 222,
+      "size": 5990,
+      "preview": "Indikator 16: Tingkat Kematangan Layanan Pusat Data.\nDeskripsi: a. Pusat Data adalah fasilitas yang "
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 235,
+      "size": 5818,
+      "preview": "Indikator 29: Tingkat  Kematangan  Pelaksanaan  Audit  Infrastruktur SPBE.\nDeskripsi: a. Audit Infra"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 225,
+      "size": 5754,
+      "preview": "Indikator 19: Tingkat Kematangan Tim Koordinasi SPBE Instansi  Pusat/Pemerintah Daerah.\nDeskripsi: a"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 232,
+      "size": 5701,
+      "preview": "Indikator 26: Tingkat  Kematangan  Penerapan  Manajemen  Pengetahuan.\nDeskripsi: Manajemen  Pengetah"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 209,
+      "size": 5683,
+      "preview": "Indikator 3: Tingkat Kematangan Kebijakan Internal Manajemen  Data.\nDeskripsi: a. Manajemen  Data  b"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 227,
+      "size": 5666,
+      "preview": "Indikator 21: Tingkat Kematangan Penerapan Manajemen Risiko  SPBE.\nDeskripsi: a. Manajemen  Risiko  "
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 231,
+      "size": 5640,
+      "preview": "Indikator 25: Tingkat Kematangan Kompetensi Sumber Daya  Manusia.\nDeskripsi: a. Pemenuhan kompetensi"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 237,
+      "size": 5613,
+      "preview": "Indikator 31: Tingkat Kematangan Pelaksanaan Audit Keamanan  SPBE.\nDeskripsi: a. Audit  Keamanan  SP"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 217,
+      "size": 5605,
+      "preview": "Indikator 11: Tingkat Kematangan Arsitektur SPBE Instansi  Pusat/Pemerintah Daerah.\nDeskripsi: a. Ar"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 228,
+      "size": 5604,
+      "preview": "Indikator 22: Tingkat  Kematangan  Penerapan  Manajemen  Keamanan Informasi.\nDeskripsi: a. Manajemen"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 215,
+      "size": 5586,
+      "preview": "Indikator 9: Tingkat Kematangan Kebijakan Internal Audit TIK.\nDeskripsi: a. Audit Teknologi Informas"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 207,
+      "size": 5499,
+      "preview": "Indikator 1: Tingkat Kematangan Kebijakan Internal Arsitektur  SPBE Instansi Pusat/Pemerintah Daerah"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 221,
+      "size": 5421,
+      "preview": "Indikator 15: Tingkat Kematangan Pembangunan Aplikasi SPBE.\nDeskripsi: a. Aplikasi SPBE adalah satu "
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 229,
+      "size": 5409,
+      "preview": "Indikator 23: Tingkat Kematangan Penerapan Manajemen Data.\nDeskripsi: a. Manajemen Data dilakukan me"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 236,
+      "size": 5309,
+      "preview": "Indikator 30: Tingkat Kematangan Pelaksanaan Audit Aplikasi  SPBE.\nDeskripsi: a. Audit Aplikasi SPBE"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 219,
+      "size": 5308,
+      "preview": "Indikator 13: Tingkat Kematangan Keterpaduan Rencana dan  Anggaran SPBE.\nDeskripsi: a. Rencana dan A"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 220,
+      "size": 4980,
+      "preview": "Indikator 14: Tingkat Kematangan Inovasi Proses Bisnis SPBE.\nDeskripsi: a. Proses  Bisnis  adalah  d"
+    },
+    {
+      "file": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "idx": 218,
+      "size": 4938,
+      "preview": "Indikator 12: Tingkat Kematangan Peta Rencana SPBE Instansi  Pusat/Pemerintah Daerah.\nDeskripsi: a. "
+    }
+  ]
+}

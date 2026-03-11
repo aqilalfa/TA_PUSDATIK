@@ -1,0 +1,302 @@
+[
+  {
+    "found_at": 1,
+    "hits": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "total_retrieved": 10,
+    "no": 1,
+    "question": "Domain SPBE apa yang rata-rata nilainya masih paling rendah dan harus menjadi fokus perbaikan?",
+    "gt_ids": [
+      1,
+      3
+    ]
+  },
+  {
+    "found_at": 1,
+    "hits": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10
+    ],
+    "total_retrieved": 10,
+    "no": 2,
+    "question": "Apa saja rekomendasi strategis untuk meningkatkan skor pada Domain Manajemen?",
+    "gt_ids": [
+      6
+    ]
+  },
+  {
+    "found_at": 1,
+    "hits": [
+      1,
+      2,
+      3,
+      4,
+      7,
+      9,
+      10
+    ],
+    "total_retrieved": 10,
+    "no": 3,
+    "question": "Sebutkan instansi pusat/badan yang berhasil meraih skor Indeks SPBE di atas 4.00 (Sangat Baik)!",
+    "gt_ids": [
+      17,
+      13
+    ]
+  },
+  {
+    "found_at": 1,
+    "hits": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "total_retrieved": 10,
+    "no": 4,
+    "question": "Tindakan apa yang direkomendasikan bagi instansi yang ingin mempertahankan inovasi Layanan SPBE?",
+    "gt_ids": [
+      8
+    ]
+  },
+  {
+    "found_at": 1,
+    "hits": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10
+    ],
+    "total_retrieved": 10,
+    "no": 5,
+    "question": "Apa saja tantangan utama penyebab kesenjangan/disparitas nilai SPBE antar daerah?",
+    "gt_ids": [
+      9,
+      3
+    ]
+  },
+  {
+    "found_at": 1,
+    "hits": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10
+    ],
+    "total_retrieved": 10,
+    "no": 6,
+    "question": "Data dukung apa yang wajib disiapkan agar mencapai tingkat kematangan 5 pada indikator Kebijakan Arsitektur SPBE?",
+    "gt_ids": [
+      76,
+      37
+    ]
+  },
+  {
+    "found_at": 1,
+    "hits": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "total_retrieved": 10,
+    "no": 7,
+    "question": "Bagaimana kriteria penilaian dan data dukung untuk mencapai tingkat 4 pada Manajemen Risiko SPBE?",
+    "gt_ids": [
+      57,
+      58
+    ]
+  },
+  {
+    "found_at": 1,
+    "hits": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "total_retrieved": 10,
+    "no": 8,
+    "question": "Dokumen seperti apa (notulensi/laporan) yang diakui sebagai bukti dukung reviu/evaluasi periodik secara sah?",
+    "gt_ids": [
+      227,
+      214
+    ]
+  },
+  {
+    "found_at": 2,
+    "hits": [
+      2,
+      5,
+      10
+    ],
+    "total_retrieved": 10,
+    "no": 9,
+    "question": "Bagaimana cara membuktikan bahwa sistem penghubung layanan sudah terintegrasi untuk mencapai level maksimal?",
+    "gt_ids": [
+      93,
+      94
+    ]
+  },
+  {
+    "found_at": 2,
+    "hits": [
+      2,
+      3,
+      7,
+      9
+    ],
+    "total_retrieved": 10,
+    "no": 10,
+    "question": "Jika layanan pengadaan barang/jasa hanya memberikan layanan informasi, di tingkat berapakah posisi kami?",
+    "gt_ids": [
+      64,
+      65
+    ]
+  },
+  {
+    "found_at": 2,
+    "hits": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "total_retrieved": 10,
+    "no": 11,
+    "question": "Apa perbedaan karakteristik dari kelima tingkat kematangan dalam penerapan SPBE?",
+    "gt_ids": [
+      36,
+      37,
+      38,
+      39
+    ]
+  },
+  {
+    "found_at": 1,
+    "hits": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10
+    ],
+    "total_retrieved": 10,
+    "no": 12,
+    "question": "Apa saja tahapan pelaksanaan dan siapa yang mengkoordinasikan Penilaian Mandiri?",
+    "gt_ids": [
+      20,
+      21
+    ]
+  },
+  {
+    "found_at": 1,
+    "hits": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "total_retrieved": 10,
+    "no": 13,
+    "question": "Siapa saja pihak yang dapat menjadi atau membentuk Tim Asesor Internal?",
+    "gt_ids": [
+      9,
+      10
+    ]
+  },
+  {
+    "found_at": 1,
+    "hits": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "total_retrieved": 10,
+    "no": 14,
+    "question": "Apa fokus tujuan dilakukannya Penilaian Dokumen dan Penilaian Interviu?",
+    "gt_ids": [
+      11,
+      12
+    ]
+  },
+  {
+    "found_at": 1,
+    "hits": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "total_retrieved": 10,
+    "no": 15,
+    "question": "Apa peran Asesor Eksternal dan siapa yang menetapkannya?",
+    "gt_ids": [
+      24
+    ]
+  }
+]

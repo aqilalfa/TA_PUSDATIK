@@ -1,0 +1,1339 @@
+{
+  "type": "peraturan",
+  "metadata_dokumen": {
+    "jenis_peraturan": "Peraturan Presiden Nomor 95 Tahun 2018 tentang Sistem",
+    "nomor": "95",
+    "tahun": "2018",
+    "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN",
+    "sumber_file": "peraturan-bssn-no-8-tahun-2024.pdf"
+  },
+  "batang_tubuh": [
+    {
+      "bab_nomor": "I",
+      "bab_judul": "",
+      "pasal": [
+        {
+          "nomor": "intro",
+          "isi": "KETENTUAN UMUM",
+          "ayat": []
+        },
+        {
+          "nomor": "1",
+          "isi": "Dalam Peraturan Badan ini yang dimaksud dengan: \n1. \nSistem \nPemerintahan \nBerbasis \nElektronik \nyang \nselanjutnya disingkat SPBE adalah penyelenggaraan \npemerintahan yang memanfaatkan teknologi informasi \ndan komunikasi untuk memberikan layanan kepada \npengguna sistem pemerintahan berbasis elektronik. \n2. \nKeamanan SPBE adalah pengendalian keamanan yang \nterpadu dalam SPBE. \n3. \nAudit Keamanan SPBE adalah audit teknologi informasi \ndan komunikasi cakupan keamanan SPBE. \n4. \nAudit Teknologi Informasi dan Komunikasi yang \nselanjutnya disebut Audit TIK adalah proses yang \nsistematis untuk memperoleh dan mengevaluasi bukti \nsecara objektif terhadap aset teknologi informasi dan \nkomunikasi dengan tujuan untuk menetapkan tingkat \nkesesuaian antara teknologi informasi dan komunikasi \ndengan \nkriteria \ndan/atau \nstandar \nyang \ntelah \nditetapkan. \n5. \nBadan Siber dan Sandi Negara yang selanjutnya disebut \nBadan adalah lembaga pemerintah yang melaksanakan \ntugas pemerintahan di bidang keamanan siber dan \nsandi. \n6. \nInstansi \nPusat \nadalah \nkementerian, \nlembaga \npemerintah non kementerian, kesekretariatan lembaga \nnegara, kesekretariatan lembaga nonstruktural, dan \nlembaga pemerintah lainnya. \n7. \nPemerintah Daerah adalah kepala daerah sebagai \nunsur \npenyelenggara \npemerintahan \ndaerah \nyang \nmemimpin pelaksanaan urusan pemerintahan yang \nmenjadi kewenangan daerah otonom. \n8. \nLembaga Pelaksana Audit TIK yang selanjutnya disebut \nLATIK adalah lembaga yang melaksanakan Audit TIK. \n9. \nLATIK Terakreditasi adalah badan hukum yang telah \nterakreditasi sebagai pelaksana Audit TIK. \n10. Layanan SPBE adalah keluaran yang dihasilkan oleh 1 \n(satu) atau beberapa fungsi aplikasi SPBE dan yang \nmemiliki nilai manfaat. \n11. Infrastruktur SPBE adalah semua perangkat keras, \nperangkat lunak, dan fasilitas yang menjadi penunjang \nutama \nuntuk \nmenjalankan \nsistem, \naplikasi, \nkomunikasi data, pengolahan dan penyimpanan data, \nperangkat \nintegrasi/penghubung, \ndan \nperangkat \nelektronik lainnya.  \n12. Infrastruktur SPBE Nasional adalah Infrastruktur \nSPBE yang terhubung dengan Infrastruktur SPBE \nInstansi Pusat dan Pemerintah Daerah dan digunakan \nsecara bagi pakai oleh Instansi Pusat dan Pemerintah \nDaerah. \n13. Peta \nRencana \nSPBE \nadalah \ndokumen \nyang \nmendeskripsikan arah dan langkah penyiapan dan \npelaksanaan SPBE yang terintegrasi. \n\n\n - 3 -  \n \n14. Aplikasi SPBE adalah satu atau sekumpulan program \nkomputer \ndan \nprosedur \nyang \ndirancang \nuntuk \nmelakukan tugas atau fungsi Layanan SPBE. \n15. Aplikasi Umum adalah Aplikasi SPBE yang sama, \nstandar, dan digunakan secara bagi pakai oleh Instansi \nPusat dan/atau Pemerintah Daerah. \n16. Aplikasi Khusus adalah Aplikasi SPBE yang dibangun, \ndikembangkan, digunakan, dan dikelola oleh Instansi \nPusat \natau \nPemerintah \nDaerah \ntertentu \nuntuk \nmemenuhi kebutuhan khusus yang bukan kebutuhan \nInstansi Pusat dan Pemerintah Daerah lain. \n17. Jaringan \nIntra \nadalah \njaringan \ntertutup \nyang \nmenghubungkan antar simpul jaringan dalam suatu \norganisasi. \n18. Sistem \nPenghubung \nLayanan \nadalah \nperangkat \nintegrasi/penghubung untuk melakukan pertukaran \nLayanan SPBE. \n19. Pusat Data adalah fasilitas yang digunakan untuk \npenempatan sistem elektronik dan komponen terkait \nlainnya untuk keperluan penempatan, penyimpanan \ndan pengolahan data, dan pemulihan data. \n20. Sistem Elektronik adalah serangkaian perangkat dan \nprosedur elektronik yang berfungsi mempersiapkan, \nmengumpulkan, mengolah, menganalisis, menyimpan, \nmenampilkan, \nmengumumkan, \nmengirimkan, \ndan/atau menyebarkan informasi elektronik. \n21. Infrastruktur Informasi Vital yang selanjutnya disingkat \nIIV adalah Sistem Elektronik yang memanfaatkan \nteknologi informasi dan/atau teknologi operasional, \nbaik berdiri sendiri maupun saling bergantung dengan \nSistem Elektronik lainnya dalam menunjang sektor \nstrategis, yang jika terjadi gangguan, kerusakan, \ndan/atau kehancuran pada infrastruktur dimaksud \nberdampak \nserius \nterhadap \nkepentingan \numum, \npelayanan publik, pertahanan dan keamanan, atau \nperekonomian nasional.",
+          "ayat": []
+        }
+      ]
+    },
+    {
+      "bab_nomor": "II",
+      "bab_judul": "",
+      "pasal": [
+        {
+          "nomor": "intro",
+          "isi": "STANDAR AUDIT KEAMANAN SPBE\nUmum\nObjek Audit Keamanan SPBE\nPelaksana Audit Keamanan SPBE\nKriteria Audit Keamanan SPBE\nBukti Audit Keamanan SPBE\nKesimpulan Audit Keamanan SPBE",
+          "ayat": []
+        },
+        {
+          "nomor": "2",
+          "isi": "Standar Audit Keamanan SPBE terdiri atas: \na. \nobjek Audit Keamanan SPBE; \nb. \npelaksana Audit Keamanan SPBE; \nc. \nkriteria Audit Keamanan SPBE; \nd. \nbukti Audit Keamanan SPBE; dan \ne. \nkesimpulan Audit Keamanan SPBE. \n \n \n \n\n\n - 4 -",
+          "ayat": [],
+          "bagian": "Kesatu - "
+        },
+        {
+          "nomor": "3",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Objek Audit Keamanan SPBE sebagaimana dimaksud \ndalam Pasal 2 huruf a terdiri atas: \na. \nInfrastruktur SPBE Nasional;  \nb. \nInfrastruktur SPBE Instansi Pusat dan Pemerintah \nDaerah; \nc. \nAplikasi Umum; dan \nd. \nAplikasi Khusus."
+            },
+            {
+              "nomor": "2",
+              "isi": "Infrastruktur SPBE Nasional sebagaimana dimaksud \npada ayat (1) huruf a terdiri atas: \na. \nPusat Data nasional; \nb. \nJaringan Intra pemerintah; dan \nc. \nSistem Penghubung Layanan pemerintah."
+            },
+            {
+              "nomor": "3",
+              "isi": "Infrastruktur SPBE Instansi Pusat dan Pemerintah \nDaerah sebagaimana dimaksud pada ayat (1) huruf b \nterdiri atas: \na. \nJaringan Intra Instansi Pusat dan Pemerintah \nDaerah; dan \nb. \nSistem Penghubung Layanan Instansi Pusat dan \nPemerintah Daerah."
+            },
+            {
+              "nomor": "4",
+              "isi": "Objek Audit Keamanan SPBE sebagaimana dimaksud \npada ayat (1) termasuk keamanan data dan informasi \nyang dikelola di dalamnya."
+            }
+          ],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "4",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Pelaksana \nAudit \nKeamanan \nSPBE \nsebagaimana \ndimaksud dalam Pasal 2 huruf b yaitu LATIK cakupan \nKeamanan SPBE."
+            },
+            {
+              "nomor": "2",
+              "isi": "LATIK \ncakupan \nKeamanan \nSPBE \nsebagaimana \ndimaksud pada ayat (1) terdiri atas: \na. \nLATIK pemerintah; atau \nb. \nLATIK Terakreditasi yang terdaftar."
+            }
+          ],
+          "bagian": "Ketiga - "
+        },
+        {
+          "nomor": "5",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "LATIK pemerintah sebagaimana dimaksud dalam Pasal \n4 ayat (2) huruf a melaksanakan audit keamanan \nterhadap Infrastruktur SPBE Nasional dan Aplikasi \nUmum."
+            },
+            {
+              "nomor": "2",
+              "isi": "LATIK pemerintah sebagaimana dimaksud pada ayat (1) \ndilaksanakan oleh Badan."
+            },
+            {
+              "nomor": "3",
+              "isi": "Audit keamanan sebagaimana dimaksud pada ayat (1) \ndilaksanakan paling sedikit 1 (satu) kali dalam 1 (satu) \ntahun."
+            }
+          ],
+          "bagian": "Ketiga - "
+        },
+        {
+          "nomor": "6",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "LATIK \nTerakreditasi \nyang \nterdaftar \nsebagaimana \ndimaksud dalam Pasal 4 ayat (2) huruf b harus: \n\n\n - 5 -  \n \na. \nterakreditasi oleh lembaga nonstruktural yang \nbertugas dan bertanggung jawab di bidang \nakreditasi lembaga penilaian kesesuaian; dan  \nb. \nterdaftar pada Badan."
+            },
+            {
+              "nomor": "2",
+              "isi": "LATIK \nTerakreditasi \nyang \nterdaftar \nsebagaimana \ndimaksud pada \n ayat (1) melaksanakan \nAudit \nKeamanan SPBE terhadap Infrastruktur SPBE Instansi \nPusat dan Pemerintah Daerah serta Aplikasi Khusus."
+            },
+            {
+              "nomor": "3",
+              "isi": "LATIK \nTerakreditasi \nyang \nterdaftar \ndalam \nmelaksanakan Audit Keamanan SPBE sebagaimana \ndimaksud pada ayat (2) membentuk tim auditor \nKeamanan SPBE."
+            },
+            {
+              "nomor": "4",
+              "isi": "Dalam \nhal \nLATIK \nTerakreditasi \nyang \nterdaftar \nsebagaimana dimaksud pada ayat (1) belum ada, \npelaksanaan Audit Keamanan SPBE sebagaimana \ndimaksud pada ayat (2) dilaksanakan oleh LATIK \npemerintah."
+            },
+            {
+              "nomor": "5",
+              "isi": "Audit Keamanan SPBE sebagaimana dimaksud pada \nayat (2) dilaksanakan paling sedikit 1 (satu) kali dalam \n2 (dua) tahun."
+            }
+          ],
+          "bagian": "Ketiga - "
+        },
+        {
+          "nomor": "7",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Auditor Keamanan SPBE sebagaimana dimaksud \ndalam Pasal 6 ayat (3) harus memiliki kompetensi Audit \nKeamanan SPBE yang terdiri atas: \na. \nlatar belakang pendidikan; \nb. \nkeahlian dan pengalaman; \nc. \npengetahuan tentang standar Audit Keamanan \nSPBE; \nd. \npengetahuan \numum \ntentang \nobjek \nAudit \nKeamanan SPBE; dan \ne. \nketerampilan yang memerlukan pengetahuan \nkhusus dalam bidang tertentu sesuai dengan \nAudit Keamanan SPBE yang dilaksanakan."
+            },
+            {
+              "nomor": "2",
+              "isi": "Bentuk kompetensi sebagaimana dimaksud pada ayat"
+            },
+            {
+              "nomor": "1",
+              "isi": "dibuktikan dengan sertifikat kompetensi yang \nditerbitkan oleh lembaga yang berwenang dan masih \nberlaku."
+            },
+            {
+              "nomor": "3",
+              "isi": "Dalam \nhal \npenyelenggara \nsertifikasi \nkompetensi \nsebagaimana dimaksud pada ayat (2) belum tersedia, \nkompetensi dibuktikan dengan dokumen lainnya yang \nberlaku dan menyatakan keahlian."
+            }
+          ],
+          "bagian": "Ketiga - "
+        },
+        {
+          "nomor": "8",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Pelaksanaan Audit Keamanan SPBE yang dilaksanakan \noleh LATIK Terakreditasi sebagaimana dimaksud dalam"
+            }
+          ],
+          "bagian": "Ketiga - "
+        },
+        {
+          "nomor": "6",
+          "isi": "dikecualikan untuk Instansi Pusat tertentu.",
+          "ayat": [
+            {
+              "nomor": "2",
+              "isi": "Pelaksanaan Audit Keamanan SPBE untuk Instansi \nPusat tertentu sebagaimana dimaksud pada ayat (1) \ndilaksanakan oleh Badan."
+            },
+            {
+              "nomor": "3",
+              "isi": "Instansi Pusat tertentu sebagaimana dimaksud pada \nayat (2) terdiri atas: \na. \nkementerian \nyang \nmenyelenggarakan \nurusan \npemerintahan di bidang kesekretariatan negara; \n\n\n - 6 -  \n \nb. \nlembaga \npemerintah \nyang \nmenyelenggarakan \ntugas memberikan dukungan manajemen kabinet \nkepada Presiden dan Wakil Presiden; \nc. \nkementerian \nyang \nmenyelenggarakan \nurusan \npemerintahan di bidang luar negeri; \nd. \nkementerian \nyang \nmenyelenggarakan \nurusan \npemerintahan di bidang pertahanan; \ne. \nTentara Nasional Indonesia; \nf. \nKepolisian Negara Republik Indonesia;  \ng. \nBadan Intelijen Negara; dan \nh. \nInstansi Pusat lain yang ditetapkan dengan \nKeputusan Kepala Badan."
+            },
+            {
+              "nomor": "4",
+              "isi": "Penetapan Instansi Pusat lain sebagaimana dimaksud \npada ayat (3) huruf h dilakukan berdasarkan usulan \nInstansi Pusat yang merupakan penyelenggara IIV."
+            }
+          ],
+          "bagian": "Ketiga - "
+        },
+        {
+          "nomor": "9",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Audit Keamanan SPBE sebagaimana dimaksud dalam"
+            }
+          ],
+          "bagian": "Ketiga - "
+        },
+        {
+          "nomor": "8",
+          "isi": "ayat (2) dilakukan pada Aplikasi Khusus dan\nInfrastruktur \nSPBE \nInstansi \nPusat \ntertentu \nsebagaimana dimaksud dalam Pasal 8 ayat (3) yang \nditetapkan sebagai IIV sesuai dengan ketentuan \nperaturan perundang-undangan.",
+          "ayat": [
+            {
+              "nomor": "2",
+              "isi": "Dalam hal Aplikasi Khusus dan Infrastruktur SPBE \nInstansi Pusat tertentu tidak termasuk dalam IIV, Audit \nKeamanan \nSPBE \ndilaksanakan \noleh \nLATIK \nTerakreditasi yang terdaftar."
+            },
+            {
+              "nomor": "3",
+              "isi": "Audit Keamanan SPBE terhadap Aplikasi Khusus dan \nInfrastruktur \nSPBE \nInstansi \nPusat \ntertentu \nsebagaimana dimaksud pada ayat (1) dilaksanakan \npaling sedikit 1 (satu) kali dalam 2 (dua) tahun."
+            }
+          ],
+          "bagian": "Ketiga - "
+        },
+        {
+          "nomor": "10",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Kriteria Audit Keamanan SPBE sebagaimana dimaksud \ndalam Pasal 2 huruf c meliputi hal pokok teknis pada: \na. \ntata kelola Keamanan SPBE; \nb. \nmanajemen Keamanan SPBE;  \nc. \nfungsionalitas dan kinerja Keamanan SPBE; dan \nd. \naspek keamanan lainnya."
+            },
+            {
+              "nomor": "2",
+              "isi": "Hal pokok teknis sebagaimana dimaksud pada ayat (1) \ndisusun dengan mempertimbangkan:  \na. \nkebijakan makro terkait Keamanan SPBE dan \npelindungan data pribadi; dan \nb. \nkebijakan meso terkait Keamanan SPBE dan \npelindungan data pribadi."
+            },
+            {
+              "nomor": "3",
+              "isi": "Kebijakan makro dan kebijakan meso sebagaimana \ndimaksud pada ayat (2) merupakan kebijakan yang \nditetapkan dalam peraturan perundang-undangan."
+            },
+            {
+              "nomor": "4",
+              "isi": "Kriteria Audit Keamanan SPBE sebagaimana dimaksud \npada ayat (1) ditetapkan dengan Keputusan Kepala \nBadan. \n \n\n\n - 7 -"
+            }
+          ],
+          "bagian": "Keempat - "
+        },
+        {
+          "nomor": "11",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Tata Kelola Keamanan SPBE sebagaimana dimaksud \ndalam Pasal 10 ayat (1) huruf a meliputi pemeriksaan \natas aktivitas: \na. \nevaluasi Keamanan SPBE; \nb. \npengarahan Keamanan SPBE; dan \nc. \npengendalian Keamanan SPBE."
+            },
+            {
+              "nomor": "2",
+              "isi": "Evaluasi Keamanan SPBE sebagaimana dimaksud pada \nayat"
+            },
+            {
+              "nomor": "1",
+              "isi": "huruf \na \ndilakukan \nuntuk \nmemeriksa \nmekanisme penilaian kinerja Keamanan SPBE yang \ndilakukan oleh organisasi sesuai dengan standar dan \ntujuan yang ditetapkan."
+            },
+            {
+              "nomor": "3",
+              "isi": "Pengarahan Keamanan SPBE sebagaimana dimaksud \npada ayat (1) huruf b dilakukan untuk memeriksa \nkomitmen pimpinan dalam pengambilan keputusan \ndan pemberian arahan strategis Keamanan SPBE."
+            },
+            {
+              "nomor": "4",
+              "isi": "Pengendalian Keamanan SPBE sebagaimana dimaksud \npada ayat (1) huruf c dilakukan untuk memeriksa \nmekanisme pengawasan manajemen Keamanan SPBE \nyang \ndilakukan \noleh \norganisasi \nsesuai \ndengan \nkebijakan dan prosedur yang ditetapkan."
+            }
+          ],
+          "bagian": "Keempat - "
+        },
+        {
+          "nomor": "12",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Manajemen Keamanan SPBE sebagaimana dimaksud \ndalam Pasal 10 ayat (1) huruf b meliputi pemeriksaan \nterhadap tahapan: \na. \nperencanaan Keamanan SPBE; \nb. \npengembangan Keamanan SPBE; \nc. \npengoperasian Keamanan SPBE; dan \nd. \npemantauan Keamanan SPBE."
+            },
+            {
+              "nomor": "2",
+              "isi": "Perencanaan Keamanan SPBE sebagaimana dimaksud \npada ayat (1) huruf a dilakukan untuk memeriksa \npenetapan kebijakan dan prosedur Keamanan SPBE \nsesuai dengan manajemen risiko Keamanan SPBE dan \nkriteria Audit Keamanan SPBE."
+            },
+            {
+              "nomor": "3",
+              "isi": "Pengembangan \nKeamanan \nSPBE \nsebagaimana \ndimaksud pada ayat (1) huruf b dilakukan untuk \nmemeriksa pengembangan desain kendali keamanan \nyang sesuai dengan manajemen risiko Keamanan SPBE \ndan kriteria Audit Keamanan SPBE."
+            },
+            {
+              "nomor": "4",
+              "isi": "Pengoperasian \nKeamanan \nSPBE \nsebagaimana \ndimaksud pada ayat (1) huruf c dilakukan untuk \nmemeriksa \nimplementasi \nprosedur \ndan \nkendali \nKeamanan SPBE."
+            },
+            {
+              "nomor": "5",
+              "isi": "Pemantauan Keamanan SPBE sebagaimana dimaksud \npada ayat (1) huruf d dilakukan untuk memeriksa \npelaksanaan kegiatan Keamanan SPBE sesuai dengan \nrencana yang ditetapkan."
+            }
+          ],
+          "bagian": "Keempat - "
+        },
+        {
+          "nomor": "13",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Pemeriksaan sebagaimana dimaksud dalam Pasal 12 \nayat (1) dilakukan untuk memastikan penerapan \npengendalian Keamanan SPBE yang terdiri atas: \na. \norganisasi keamanan; \nb. \nkeamanan personel; \n\n\n - 8 -  \n \nc. \nkeamanan fisik; dan \nd. \nkeamanan teknologi."
+            },
+            {
+              "nomor": "2",
+              "isi": "Organisasi keamanan sebagaimana dimaksud pada \nayat (1) huruf a merupakan struktur organisasi yang \nmendukung kebijakan dan prosedur Keamanan SPBE \ntermasuk penetapan tanggung jawab dan wewenang \nmanajemen Keamanan SPBE."
+            },
+            {
+              "nomor": "3",
+              "isi": "Keamanan personel sebagaimana dimaksud pada ayat"
+            },
+            {
+              "nomor": "1",
+              "isi": "huruf b merupakan pengelolaan personel organisasi \ndan pihak ketiga, termasuk peningkatan kompetensi, \nkesadaran Keamanan SPBE, dan proses perekrutan \nuntuk memastikan kepatuhan terhadap kebijakan dan \nprosedur Keamanan SPBE."
+            },
+            {
+              "nomor": "4",
+              "isi": "Keamanan fisik sebagaimana dimaksud pada ayat (1) \nhuruf c merupakan perlindungan infrastruktur fisik \ndan aset organisasi dari risiko Keamanan SPBE yang \nmeliputi akses tidak sah, pencurian, dan kerusakan."
+            },
+            {
+              "nomor": "5",
+              "isi": "Keamanan teknologi sebagaimana dimaksud pada ayat"
+            },
+            {
+              "nomor": "1",
+              "isi": "huruf d merupakan penerapan teknologi keamanan \nyang melindungi kerahasiaan, keutuhan, ketersedian, \nkeaslian, dan kenirsangkalan data dan informasi."
+            }
+          ],
+          "bagian": "Keempat - "
+        },
+        {
+          "nomor": "14",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Fungsionalitas \ndan \nkinerja \nKeamanan \nSPBE \nsebagaimana dimaksud dalam Pasal 10 ayat (1) huruf c \nmeliputi pemeriksaan terhadap fungsionalitas: \na. \nkelengkapan fungsi dan kinerja Keamanan SPBE; \nb. \nkebenaran fungsi dan kinerja Keamanan SPBE; \ndan \nc. \nkelayakan fungsi dan kinerja Keamanan SPBE."
+            },
+            {
+              "nomor": "2",
+              "isi": "Kelengkapan fungsi dan kinerja Keamanan SPBE \nsebagaimana dimaksud pada ayat (1) huruf a untuk \nmemeriksa pemenuhan atas rangkaian fungsi dan \nkinerja terhadap semua tugas dan tujuan yang \nditentukan."
+            },
+            {
+              "nomor": "3",
+              "isi": "Kebenaran fungsi dan kinerja Keamanan SPBE \nsebagaimana dimaksud pada ayat (1) huruf b untuk \nmemeriksa kesesuaian keluaran hasil sistem dengan \ntingkat presisi yang diperlukan."
+            },
+            {
+              "nomor": "4",
+              "isi": "Kelayakan \nfungsi \ndan \nkinerja \nKeamanan \nSPBE \nsebagaimana dimaksud pada ayat (1) huruf c untuk \nmemeriksa kepatutan fungsi dan kinerja sistem dalam \npencapaian tugas dan tujuan tertentu."
+            }
+          ],
+          "bagian": "Keempat - "
+        },
+        {
+          "nomor": "15",
+          "isi": "Aspek Keamanan SPBE lainnya sebagaimana dimaksud \ndalam Pasal 10 ayat (1) huruf d meliputi: \na. \npenilaian pemenuhan ketentuan peraturan perundang-\nundangan; \nb. \npenilaian kesesuaian dalam rangka sertifikasi atau \nterdapat perubahan yang telah disertifikasi; dan/atau \nc. \ntindak lanjut atas adanya informasi dan/atau laporan \npublik atas gangguan terhadap Keamanan SPBE, yang \ntidak dalam rangka penindakan tindak pidana. \n \n\n\n - 9 -",
+          "ayat": [],
+          "bagian": "Keempat - "
+        },
+        {
+          "nomor": "16",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Selain kriteria Audit Keamanan SPBE sebagaimana \ndimaksud dalam Pasal 10 ayat (1), pelaksanaan Audit \nKeamanan SPBE harus memperhatikan kebijakan \nmikro terkait Keamanan SPBE."
+            },
+            {
+              "nomor": "2",
+              "isi": "Kebijakan mikro sebagaimana dimaksud pada ayat (1) \nmerupakan kebijakan internal Instansi Pusat dan \nPemerintah Daerah."
+            }
+          ],
+          "bagian": "Keempat - "
+        },
+        {
+          "nomor": "17",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Bukti Audit Keamanan SPBE sebagaimana dimaksud \ndalam Pasal 2 huruf d harus memenuhi aspek: \na. \nkecukupan; dan  \nb. \nketepatan."
+            },
+            {
+              "nomor": "2",
+              "isi": "Kecukupan sebagaimana dimaksud pada ayat (1) huruf \na merupakan ukuran kuantitas bukti Audit Keamanan \nSPBE \nyang \ndipengaruhi \noleh \npenilaian \nauditor \nKeamanan SPBE atas risiko Audit Keamanan SPBE dan \nkualitas bukti Audit Keamanan SPBE."
+            },
+            {
+              "nomor": "3",
+              "isi": "Ketepatan sebagaimana dimaksud pada ayat (1) huruf \nb merupakan ukuran kualitas bukti Audit Keamanan \nSPBE yaitu relevan, valid, dan andal untuk mendukung \nhasil Audit Keamanan SPBE."
+            }
+          ],
+          "bagian": "Kelima - "
+        },
+        {
+          "nomor": "18",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Bukti Audit Keamanan SPBE sebagaimana dimaksud \ndalam Pasal 17 dapat diperoleh melalui: \na. \ninspeksi; \nb. \nobservasi; \nc. \npermintaan keterangan; \nd. \nkonfirmasi; dan/atau \ne. \nprosedur analitis."
+            },
+            {
+              "nomor": "2",
+              "isi": "Bukti Audit Keamanan SPBE sebagaimana dimaksud \npada ayat (1) dapat berbentuk dokumen elektronik \ndan/atau fisik."
+            }
+          ],
+          "bagian": "Kelima - "
+        },
+        {
+          "nomor": "19",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Kesimpulan Audit Keamanan SPBE sebagaimana \ndimaksud dalam Pasal 2 huruf e dinyatakan secara \njelas."
+            },
+            {
+              "nomor": "2",
+              "isi": "Kesimpulan Audit Keamanan SPBE sebagaimana \ndimaksud pada ayat (1) diberikan pada setiap prosedur \npelaksanaan \nAudit \nKeamanan \nSPBE \nmencakup \nprosedur evaluasi: \na. \ndesain kontrol Keamanan SPBE; \nb. \nimplementasi kontrol Keamanan SPBE; dan \nc. \nefektivitas kontrol Keamanan SPBE. \n\n\n - 10 -"
+            },
+            {
+              "nomor": "3",
+              "isi": "Kesimpulan Audit Keamanan SPBE sebagaimana \ndimaksud pada ayat (2) menghasilkan konklusi Audit \nKeamanan SPBE."
+            },
+            {
+              "nomor": "4",
+              "isi": "Konklusi \nAudit \nKeamanan \nSPBE \nsebagaimana \ndimaksud pada ayat (3) terdiri atas: \na. \nmemadai; \nb. \nperlu peningkatan; atau \nc. \ntidak memadai."
+            },
+            {
+              "nomor": "5",
+              "isi": "Pemberian \nkonklusi \nAudit \nKeamanan \nSPBE \nsebagaimana dimaksud pada ayat (4) mengacu pada \nmatriks konklusi Audit Keamanan SPBE"
+            },
+            {
+              "nomor": "6",
+              "isi": "Matriks konklusi Audit Keamanan SPBE sebagaimana \ndimaksud pada ayat (5) tercantum dalam Lampiran I \nyang merupakan bagian tidak terpisahkan dari \nPeraturan Badan ini."
+            }
+          ],
+          "bagian": "Keenam - "
+        },
+        {
+          "nomor": "20",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Evaluasi desain kontrol Keamanan SPBE sebagaimana \ndimaksud dalam Pasal 19 ayat  (2) huruf a merupakan \nprosedur yang dilakukan auditor Keamanan SPBE \nuntuk memperoleh keyakinan yang memadai bahwa \ndesain kontrol Keamanan SPBE telah sesuai dengan \nkriteria Audit Keamanan SPBE yang digunakan."
+            },
+            {
+              "nomor": "2",
+              "isi": "Evaluasi desain kontrol Keamanan SPBE sebagaimana \ndimaksud pada ayat (1) menghasilkan kesimpulan yang \nterdiri atas: \na. \nmemadai; \nb. \nperlu peningkatan; atau \nc. \ntidak memadai."
+            }
+          ],
+          "bagian": "Keenam - "
+        },
+        {
+          "nomor": "21",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Evaluasi \nimplementasi \nkontrol \nKeamanan \nSPBE \nsebagaimana dimaksud dalam Pasal 19 ayat (2) huruf b \nmerupakan \nprosedur \nyang \ndilakukan \nAuditor \nKeamanan SPBE untuk memperoleh keyakinan yang \nmemadai bahwa implementasi kontrol telah sesuai \ndengan desain kontrol Keamanan SPBE."
+            },
+            {
+              "nomor": "2",
+              "isi": "Evaluasi \nimplementasi \nkontrol \nKeamanan \nSPBE \nsebagaimana dimaksud pada ayat (1) menghasilkan \nkesimpulan yang terdiri atas: \na. \nsesuai dengan desain kontrol; atau \nb. \ntidak sesuai dengan desain kontrol."
+            }
+          ],
+          "bagian": "Keenam - "
+        },
+        {
+          "nomor": "22",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Evaluasi \nefektivitas \nkontrol \nKeamanan \nSPBE \nsebagaimana dimaksud dalam Pasal 19 ayat (2) huruf c \nmerupakan \nprosedur \nyang \ndilakukan \nauditor \nKeamanan SPBE untuk: \na. \nmemperoleh keyakinan yang memadai bahwa \nkontrol Keamanan SPBE yang berjalan telah \nmencapai tujuannya dengan efektif; atau  \nb. \nmengidentifikasi risiko yang terjadi karena adanya \nkelemahan desain dan/atau implementasi kontrol \nKeamanan SPBE. \n\n\n - 11 -"
+            },
+            {
+              "nomor": "2",
+              "isi": "Evaluasi \nefektivitas \nkontrol \nKeamanan \nSPBE \nsebagaimana dimaksud pada ayat (1) menghasilkan \nkesimpulan yang terdiri atas: \na. \nefektif; \nb. \nperlu peningkatan; atau \nc. \nbelum efektif."
+            }
+          ],
+          "bagian": "Keenam - "
+        }
+      ]
+    },
+    {
+      "bab_nomor": "III",
+      "bab_judul": "",
+      "pasal": [
+        {
+          "nomor": "intro",
+          "isi": "TATA CARA AUDIT KEAMANAN SPBE\nUmum\nPelaksanaan Audit Keamanan SPBE \n \nParagraf 1 \nUmum\nPelaporan Audit Keamanan SPBE\nTindak Lanjut Audit Keamanan SPBE\nPendaftaran Pelaksana Audit Keamanan SPBE \n \nParagraf 1 \nUmum\nPengalokasian Sumber Daya",
+          "ayat": []
+        },
+        {
+          "nomor": "23",
+          "isi": "Audit Keamanan SPBE dilaksanakan melalui: \na. \npelaksanaan Audit Keamanan SPBE;  \nb. \npelaporan Audit Keamanan SPBE; \nc. \ntindak lanjut Audit Keamanan SPBE; \nd. \npendaftaran pelaksana Audit Keamanan SPBE; dan \ne. \npengalokasian sumber daya.",
+          "ayat": [],
+          "bagian": "Kesatu - "
+        },
+        {
+          "nomor": "24",
+          "isi": "Pelaksanaan Audit Keamanan SPBE sebagaimana dimaksud \ndalam Pasal 23 huruf a terdiri atas:  \na. \nAudit Keamanan SPBE internal; \nb. \nAudit  Keamanan SPBE oleh LATIK Terakreditasi yang \nterdaftar; dan \nc. \nAudit Keamanan SPBE oleh LATIK pemerintah. \n \nParagraf 2 \nAudit Keamanan SPBE Internal",
+          "ayat": [],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "25",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Audit Keamanan SPBE internal sebagaimana dimaksud \ndalam Pasal 24 huruf a dilaksanakan untuk kebutuhan \ninternal Instansi Pusat atau Pemerintah Daerah."
+            },
+            {
+              "nomor": "2",
+              "isi": "Audit Keamanan SPBE internal sebagaimana dimaksud \npada ayat (1) dilaksanakan dengan tahapan: \na. \nperencanaan; \nb. \npelaksanaan; \nc. \npelaporan; dan \nd. \npemantauan tindak lanjut."
+            },
+            {
+              "nomor": "3",
+              "isi": "Audit Keamanan SPBE internal sebagaimana dimaksud \npada ayat (1) dilaksanakan secara periodik oleh auditor \npada unit kerja Instansi Pusat atau Pemerintah Daerah \nyang melaksanakan tugas dan fungsi di bidang \npengawasan intern."
+            },
+            {
+              "nomor": "4",
+              "isi": "Unit kerja Instansi Pusat atau Pemerintah Daerah yang \nmelaksanakan tugas dan fungsi di bidang pengawasan \n\n\n - 12 -  \n \nintern sebagaimana dimaksud pada ayat (2) dapat \nmelibatkan pegawai aparatur sipil negara dari unit \nkerja lain yang memiliki kompetensi: \na. \nAudit TIK; dan/atau \nb. \naudit keamanan informasi."
+            },
+            {
+              "nomor": "5",
+              "isi": "Kompetensi Audit sebagaimana dimaksud pada ayat (3) \ndibuktikan dengan sertifikat pelatihan Audit TIK \ndan/atau audit keamanan informasi."
+            },
+            {
+              "nomor": "6",
+              "isi": "Pelatihan audit sebagaimana dimaksud pada ayat (4) \ndiselenggarakan oleh Badan atau lembaga pelatihan \nlain yang mendapat pengakuan dari Badan."
+            }
+          ],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "26",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Audit Keamanan SPBE internal sebagaimana dimaksud \ndalam Pasal 25 mengacu pada kebijakan Instansi Pusat \natau Pemerintah Daerah dengan objek dan kriteria \nAudit Keamanan SPBE yang sesuai dengan yang diatur \ndalam Peraturan Badan ini."
+            },
+            {
+              "nomor": "2",
+              "isi": "Audit Keamanan SPBE internal sebagaimana dimaksud \npada ayat (1)  dilaksanakan sebelum pelaksanaan Audit \nKeamanan SPBE oleh LATIK pemerintah atau LATIK \nTerakreditasi yang terdaftar."
+            },
+            {
+              "nomor": "3",
+              "isi": "Audit Keamanan SPBE internal sebagaimana dimaksud \npada ayat (2) tidak menghilangkan kewajiban Audit \nKeamanan SPBE oleh LATIK pemerintah atau LATIK \nTerakreditasi yang terdaftar."
+            }
+          ],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "27",
+          "isi": "Audit Keamanan SPBE internal sebagaimana dimaksud \ndalam Pasal 26 dilaksanakan dengan prosedur: \na. \npemahaman kontrol Keamanan SPBE; \nb. \nevaluasi desain kontrol Keamanan SPBE;  \nc. \nevaluasi implementasi kontrol Keamanan SPBE; dan \nd. \nevaluasi efektivitas kontrol Keamanan SPBE.",
+          "ayat": [],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "28",
+          "isi": "Pemahaman \nkontrol \nKeamanan \nSPBE \nsebagaimana \ndimaksud dalam Pasal 27 huruf a dilakukan melalui \nidentifikasi informasi terdokumentasi untuk memperoleh \npemahaman yang memadai tentang kontrol Keamanan \nSPBE terhadap lingkup Audit Keamanan SPBE.",
+          "ayat": [],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "29",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Evaluasi desain kontrol Keamanan SPBE sebagaimana \ndimaksud dalam Pasal 27 huruf b menghasilkan \nkesimpulan."
+            },
+            {
+              "nomor": "2",
+              "isi": "Dalam hal kesimpulan sebagaimana dimaksud pada \nayat (1) hasilnya memadai atau perlu peningkatan, tim \nauditor pada unit kerja Instansi Pusat atau Pemerintah \nDaerah yang melaksanakan tugas dan fungsi di bidang \npengawasan intern melakukan: \na. \nprosedur evaluasi implementasi kontrol Keamanan \nSPBE dengan cakupan uji petik yang cukup; dan \nb. \nevaluasi efektivitas kontrol Keamanan SPBE. \n\n\n - 13 -"
+            },
+            {
+              "nomor": "3",
+              "isi": "Dalam hal kesimpulan sebagaimana dimaksud pada \nayat (1) hasilnya tidak memadai, tim auditor pada unit \nkerja Instansi Pusat atau Pemerintah Daerah yang \nmelaksanakan tugas dan fungsi di bidang pengawasan \nintern melakukan prosedur evaluasi efektivitas kontrol \nKeamanan SPBE."
+            }
+          ],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "30",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Evaluasi \nimplementasi \nkontrol \nKeamanan \nSPBE \nsebagaimana dimaksud dalam Pasal \n27 huruf c \nmenghasilkan kesimpulan."
+            },
+            {
+              "nomor": "2",
+              "isi": "Dalam hal kesimpulan sebagaimana dimaksud pada ayat"
+            },
+            {
+              "nomor": "1",
+              "isi": "hasilnya sesuai dengan desain kontrol, tim auditor \npada unit kerja Instansi Pusat atau Pemerintah Daerah \nyang \nmelaksanakan \ntugas \ndan \nfungsi \ndi \nbidang \npengawasan \nintern \nmelakukan \nprosedur \nevaluasi \nefektivitas kontrol Keamanan SPBE dengan cakupan uji \npetik yang cukup."
+            },
+            {
+              "nomor": "3",
+              "isi": "Dalam hal kesimpulan sebagaimana dimaksud pada ayat"
+            },
+            {
+              "nomor": "1",
+              "isi": "hasilnya \ntidak \nsesuai \ndengan \ndesain \nkontrol \nKeamanan SPBE, tim auditor pada unit kerja Instansi \nPusat atau Pemerintah Daerah yang melaksanakan tugas \ndan fungsi di bidang pengawasan intern melakukan: \na. \npenambahan cakupan uji petik dalam evaluasi \nimplementasi kontrol Keamanan SPBE; dan \nb. \nprosedur evaluasi efektivitas kontrol Keamanan \nSPBE dengan cakupan uji petik yang ekstensif."
+            }
+          ],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "31",
+          "isi": "Evaluasi efektivitas kontrol Keamanan SPBE sebagaimana \ndimaksud \ndalam \nPasal \n27 \nhuruf \nd \nmenghasilkan \nkesimpulan.",
+          "ayat": [],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "32",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Kesimpulan sebagaimana dimaksud dalam Pasal 29 ayat \n(1), Pasal 30 ayat (1), dan Pasal 31 dapat digunakan untuk \nmenentukan konklusi Audit Keamanan SPBE internal."
+            },
+            {
+              "nomor": "2",
+              "isi": "Konklusi Audit Keamanan SPBE internal sebagaimana \ndimaksud pada ayat (1) mendapatkan hasil memadai jika: \na. \nhasil evaluasi desain kontrol memadai, hasil evaluasi \nimplementasi kontrol sesuai dengan desain kontrol, \ndan hasil evaluasi efektivitas kontrol efektif atau \nperlu peningkatan; atau \nb. \nhasil evaluasi desain kontrol perlu peningkatan, \nhasil evaluasi implementasi kontrol sesuai dengan \ndesain kontrol, dan hasil evaluasi efektivitas kontrol \nefektif."
+            },
+            {
+              "nomor": "3",
+              "isi": "Konklusi Audit Keamanan SPBE internal sebagaimana \ndimaksud pada ayat (1) mendapatkan hasil perlu \npeningkatan jika: \na. \nhasil evaluasi desain kontrol memadai, hasil evaluasi \nimplementasi kontrol sesuai dengan desain kontrol, \ndan hasil evaluasi efektivitas kontrol belum efektif; \nb. \nhasil evaluasi desain kontrol memadai, hasil evaluasi \nimplementasi kontrol tidak sesuai dengan desain \n\n\n - 14 -  \n \nkontrol, dan hasil evaluasi efektivitas kontrol efektif; \natau \nc. \nhasil evaluasi desain kontrol perlu peningkatan, \nhasil evaluasi implementasi kontrol sesuai dengan \ndesain kontrol, dan hasil evaluasi efektivitas kontrol \nperlu peningkatan."
+            },
+            {
+              "nomor": "4",
+              "isi": "Konklusi Audit Keamanan SPBE internal sebagaimana \ndimaksud pada ayat (1) mendapatkan hasil tidak \nmemadai \njika \nhasil \nkesimpulan \ntidak \nmemenuhi \nketentuan sebagaimana dimaksud pada ayat (2) dan ayat \n(3)."
+            }
+          ],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "33",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Audit Keamanan SPBE internal sebagaimana dimaksud \ndalam Pasal 25 harus dituangkan dalam Peta Rencana \nSPBE pada Instansi Pusat dan Pemerintah Daerah."
+            },
+            {
+              "nomor": "2",
+              "isi": "Audit Keamanan SPBE internal sebagaimana dimaksud \npada ayat (1) disusun dengan memperhatikan: \na. \nAplikasi SPBE dan/atau Infrastruktur SPBE yang \ndimiliki Instansi Pusat dan Pemerintah Daerah; \nb. \nrisiko pada Aplikasi SPBE dan/atau Infrastruktur \nSPBE; \nc. \nkategori Sistem Elektronik;  \nd. \ntingkat vitalitas Sistem Elektronik; dan/atau \ne. \nAudit Keamanan SPBE yang sudah dilaksanakan \nsebelumnya. \n \nParagraf 3 \nAudit Keamanan SPBE oleh LATIK Terakreditasi yang \nTerdaftar"
+            }
+          ],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "34",
+          "isi": "Audit Keamanan SPBE oleh LATIK Terakreditasi yang \nterdaftar sebagaimana dimaksud dalam Pasal 24 huruf b \ndilakukan dengan tahapan: \na. \npenunjukan; \nb. \npenugasan; \nc. \nperencanaan; dan \nd. \npelaksanaan.",
+          "ayat": [],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "35",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Penunjukan sebagaimana dimaksud dalam Pasal 34 \nhuruf a dilaksanakan sesuai dengan ketentuan \nperaturan perundang-undangan mengenai pengadaan \nbarang dan/atau jasa pemerintah."
+            },
+            {
+              "nomor": "2",
+              "isi": "Dalam melakukan penunjukan sebagaimana dimaksud \npada ayat (1), Instansi Pusat atau Pemerintah Daerah \nharus menyediakan dokumen mengenai: \na. \nlingkup Audit Keamanan SPBE; dan \nb. \nringkasan hasil Audit Keamanan SPBE internal \ndengan objek Audit Keamanan SPBE yang sama \npaling lama 2 (dua) tahun sebelumnya. \n \n \n \n\n\n - 15 -"
+            }
+          ],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "36",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Penugasan sebagaimana dimaksud dalam Pasal 34 \nhuruf b diberikan oleh pimpinan LATIK Terakreditasi \nyang terdaftar kepada tim auditor Keamanan SPBE."
+            },
+            {
+              "nomor": "2",
+              "isi": "Tim auditor Keamanan SPBE sebagaimana dimaksud \npada ayat (1) beranggotakan auditor Keamanan SPBE \nyang telah teregistrasi pada Badan."
+            },
+            {
+              "nomor": "3",
+              "isi": "Tim auditor Keamanan SPBE sebagaimana dimaksud \npada ayat (2) bertindak sebagai: \na. \npengendali mutu; \nb. \npengendali teknis; \nc. \nketua tim; dan \nd. \nanggota tim."
+            },
+            {
+              "nomor": "4",
+              "isi": "Pengendali mutu sebagaimana dimaksud pada ayat (3) \nhuruf a bertugas memastikan pelaksanaan Audit \nKeamanan SPBE telah sesuai dengan kebijakan dan \nprosedur Audit Keamanan SPBE yang dimiliki oleh \nLATIK Terakreditasi yang terdaftar."
+            },
+            {
+              "nomor": "5",
+              "isi": "Pengendali teknis sebagaimana dimaksud pada ayat (3) \nhuruf b bertugas memastikan pelaksanaan Audit \nKeamanan SPBE telah memadai secara teknis sesuai \ndengan lingkup Audit Keamanan SPBE."
+            },
+            {
+              "nomor": "6",
+              "isi": "Ketua tim sebagaimana dimaksud pada ayat (3) huruf c \nbertugas memimpin pelaksanaan Audit Keamanan \nSPBE."
+            },
+            {
+              "nomor": "7",
+              "isi": "Anggota tim sebagaimana dimaksud pada ayat (3) huruf \nd bertugas melaksanakan prosedur Audit Keamanan \nSPBE."
+            }
+          ],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "37",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Penugasan sebagaimana dimaksud dalam Pasal 36 \ndilaksanakan berdasarkan surat tugas tim auditor \nKeamanan SPBE."
+            },
+            {
+              "nomor": "2",
+              "isi": "Surat tugas tim auditor Keamanan SPBE sebagaimana \ndimaksud pada ayat (1) paling sedikit memuat: \na. \nnama auditor Keamanan SPBE; \nb. \njabatan dalam tim auditor Keamanan SPBE; \nc. \nnama Instansi Pusat atau Pemerintah Daerah yang \ndiaudit; dan \nd. \nlingkup Audit Keamanan SPBE."
+            },
+            {
+              "nomor": "3",
+              "isi": "Tim auditor Keamanan SPBE sebagaimana dimaksud \npada ayat (1) harus memiliki kompetensi Audit \nKeamanan SPBE yang dapat dipenuhi secara kolektif."
+            }
+          ],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "38",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Perencanaan sebagaimana dimaksud dalam Pasal 34 \nhuruf c dilakukan oleh tim auditor Keamanan SPBE."
+            },
+            {
+              "nomor": "2",
+              "isi": "Perencanaan sebagaimana dimaksud pada ayat (1) \npaling sedikit memuat: \na. \nlingkup Audit Keamanan SPBE; \nb. \nanalisis risiko Keamanan SPBE; \nc. \nkriteria Audit Keamanan SPBE; dan \nd. \nrencana pengujian Audit Keamanan SPBE."
+            },
+            {
+              "nomor": "3",
+              "isi": "Lingkup Audit Keamanan SPBE sebagaimana dimaksud \npada ayat (2) huruf a merupakan hasil kesepakatan \n\n\n - 16 -  \n \ndengan klien Audit Keamanan SPBE terkait objek, \norganisasi, \nlokasi \ngeografis, \ndan \nperiode \nAudit \nKeamanan SPBE."
+            },
+            {
+              "nomor": "4",
+              "isi": "Analisis risiko keamanan SPBE sebagaimana dimaksud \npada ayat (2) huruf b merupakan proses identifikasi dan \nevaluasi risiko Keamanan SPBE yang relevan dengan \nlingkup Audit Keamanan SPBE."
+            },
+            {
+              "nomor": "5",
+              "isi": "Kriteria Audit Keamanan SPBE sebagaimana dimaksud \npada ayat (2) huruf c merupakan identifikasi dan \npemetaan kriteria kontrol Keamanan SPBE yang sesuai \ndengan lingkup Audit Keamanan SPBE."
+            },
+            {
+              "nomor": "6",
+              "isi": "Rencana \npengujian \nAudit \nKeamanan \nSPBE \nsebagaimana dimaksud pada ayat (2) huruf d berisikan \nrencana prosedur pengujian yang harus dilakukan \nAuditor Keamanan Informasi atas kontrol Keamanan \nSPBE termasuk alokasi waktu, personel, dan alat bantu \nAudit Keamanan SPBE."
+            }
+          ],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "39",
+          "isi": "Pelaksanaan sebagaimana dimaksud dalam Pasal 34 huruf \nd terdiri atas prosedur: \na. \npemahaman kontrol Keamanan SPBE; \nb. \nevaluasi desain kontrol Keamanan SPBE;  \nc. \nevaluasi implementasi kontrol Keamanan SPBE; dan \nd. \nevaluasi efektivitas kontrol Keamanan SPBE.",
+          "ayat": [],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "40",
+          "isi": "Pemahaman \nkontrol \nKeamanan \nSPBE \nsebagaimana \ndimaksud dalam Pasal 39 huruf a dilakukan melalui \nidentifikasi informasi terdokumentasi untuk memperoleh \npemahaman yang memadai tentang kontrol Keamanan \nSPBE terhadap lingkup Audit Keamanan SPBE.",
+          "ayat": [],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "41",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Evaluasi desain kontrol Keamanan SPBE sebagaimana \ndimaksud dalam Pasal 39 huruf b menghasilkan \nkesimpulan."
+            },
+            {
+              "nomor": "2",
+              "isi": "Dalam hal kesimpulan sebagaimana dimaksud pada \nayat (1) hasilnya memadai atau perlu peningkatan, tim \nauditor Keamanan SPBE melakukan: \na. \nprosedur evaluasi implementasi kontrol Keamanan \nSPBE dengan cakupan uji petik yang cukup; dan \nb. \nevaluasi efektivitas kontrol Keamanan SPBE."
+            },
+            {
+              "nomor": "3",
+              "isi": "Dalam hal kesimpulan sebagaimana dimaksud pada \nayat (1) hasilnya tidak memadai, tim auditor Keamanan \nSPBE melakukan prosedur evaluasi efektivitas kontrol \nKeamanan SPBE."
+            }
+          ],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "42",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Evaluasi \nimplementasi \nkontrol \nKeamanan \nSPBE \nsebagaimana dimaksud dalam Pasal \n39 huruf c \nmenghasilkan kesimpulan."
+            },
+            {
+              "nomor": "2",
+              "isi": "Dalam hal kesimpulan sebagaimana dimaksud pada ayat"
+            },
+            {
+              "nomor": "1",
+              "isi": "hasilnya sesuai dengan desain kontrol, tim auditor \nKeamanan SPBE melakukan prosedur evaluasi efektivitas \n\n\n - 17 -  \n \nkontrol Keamanan SPBE dengan cakupan uji petik yang \ncukup."
+            },
+            {
+              "nomor": "3",
+              "isi": "Dalam hal kesimpulan sebagaimana dimaksud pada ayat"
+            },
+            {
+              "nomor": "1",
+              "isi": "hasilnya \ntidak \nsesuai \ndengan \ndesain \nkontrol \nKeamanan \nSPBE, \ntim \nauditor \nKeamanan \nSPBE \nmelakukan: \na. \npenambahan cakupan uji petik dalam evaluasi \nimplementasi kontrol Keamanan SPBE; dan \nb. \nprosedur evaluasi efektivitas kontrol Keamanan \nSPBE dengan cakupan uji petik yang ekstensif."
+            }
+          ],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "43",
+          "isi": "Evaluasi efektivitas kontrol Keamanan SPBE sebagaimana \ndimaksud dalam Pasal 39 huruf d menghasilkan kesimpulan.",
+          "ayat": [],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "44",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Kesimpulan sebagaimana dimaksud dalam Pasal 41 ayat \n(1), Pasal 42 ayat (1), dan Pasal 43 digunakan untuk \nmenentukan konklusi Audit Keamanan SPBE."
+            },
+            {
+              "nomor": "2",
+              "isi": "Konklusi Audit Keamanan SPBE sebagaimana dimaksud \npada ayat (1) mendapatkan hasil memadai jika: \na. \nhasil evaluasi desain kontrol memadai, hasil evaluasi \nimplementasi kontrol sesuai dengan desain kontrol, \ndan hasil evaluasi efektivitas kontrol efektif atau \nperlu peningkatan; atau \nb. \nhasil evaluasi desain kontrol perlu peningkatan, \nhasil evaluasi implementasi kontrol sesuai dengan \ndesain kontrol, dan hasil evaluasi efektivitas kontrol \nefektif."
+            },
+            {
+              "nomor": "3",
+              "isi": "Konklusi Audit Keamanan SPBE sebagaimana dimaksud \npada ayat (1) mendapatkan hasil perlu peningkatan jika: \na. \nhasil evaluasi desain kontrol memadai, hasil evaluasi \nimplementasi kontrol sesuai dengan desain kontrol, \ndan hasil evaluasi efektivitas kontrol belum efektif; \nb. \nhasil evaluasi desain kontrol memadai, hasil evaluasi \nimplementasi kontrol tidak sesuai dengan desain \nkontrol, dan hasil evaluasi efektivitas kontrol efektif; \natau \nc. \nhasil evaluasi desain kontrol perlu peningkatan, \nhasil evaluasi implementasi kontrol sesuai dengan \ndesain kontrol, dan hasil evaluasi efektivitas kontrol \nperlu peningkatan."
+            },
+            {
+              "nomor": "5",
+              "isi": "Konklusi Audit Keamanan SPBE sebagaimana dimaksud \npada ayat (1) mendapatkan hasil tidak memadai jika hasil \nkesimpulan tidak memenuhi ketentuan sebagaimana \ndimaksud pada ayat (2) dan ayat (3)."
+            }
+          ],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "45",
+          "isi": "LATIK Terakreditasi yang terdaftar harus menerbitkan surat \nketerangan untuk setiap Audit Keamanan SPBE yang \ndilaksanakannya \nsesuai \ndengan \nketentuan \nperaturan \nperundang-undangan. \n \n \n \n\n\n - 18 -",
+          "ayat": [],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "46",
+          "isi": "Ketentuan mengenai pelaksanaan Audit Keamanan SPBE \noleh LATIK Terakreditasi yang terdaftar sebagaimana \ndimaksud dalam Pasal 34 sampai dengan Pasal 45 berlaku \nsecara mutatis mutandis terhadap pelaksanaan Audit \nKeamanan SPBE oleh LATIK pemerintah yang dilaksanakan \nterhadap Aplikasi Khusus dan/atau Infrastruktur Instansi \nPusat dan Pemerintah Daerah jika LATIK Terakreditasi yang \nterdaftar belum ada. \n \nParagraf 4 \nAudit Keamanan SPBE oleh LATIK Pemerintah",
+          "ayat": [],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "47",
+          "isi": "Audit Keamanan SPBE oleh LATIK pemerintah sebagaimana \ndimaksud dalam Pasal 24 huruf c dilakukan dengan \ntahapan: \na. \npenugasan; \nb. \nperencanaan; dan \nc. \npelaksanaan.",
+          "ayat": [],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "48",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Penugasan sebagaimana dimaksud dalam Pasal 47 \nhuruf a diberikan kepada tim auditor Keamanan SPBE \npada LATIK pemerintah."
+            },
+            {
+              "nomor": "2",
+              "isi": "Tim auditor Keamanan SPBE sebagaimana dimaksud \npada ayat (1) ditetapkan dengan Keputusan Kepala \nBadan."
+            },
+            {
+              "nomor": "3",
+              "isi": "Tim auditor Keamanan SPBE sebagaimana dimaksud \npada ayat (1) paling sedikit terdiri atas: \na. \npengendali mutu; \nb. \npengendali teknis; \nc. \nketua tim; dan \nd. \nanggota tim."
+            },
+            {
+              "nomor": "4",
+              "isi": "Pengendali mutu sebagaimana dimaksud pada ayat (3) \nhuruf a bertugas memastikan pelaksanaan Audit \nKeamanan SPBE telah sesuai dengan kebijakan dan \nprosedur Audit Keamanan SPBE yang dimiliki oleh \nLATIK pemerintah."
+            },
+            {
+              "nomor": "5",
+              "isi": "Pengendali teknis sebagaimana dimaksud pada ayat (3) \nmemadai secara teknis sesuai dengan lingkup Audit \nKeamanan SPBE."
+            },
+            {
+              "nomor": "6",
+              "isi": "Ketua tim sebagaimana dimaksud pada ayat (3) huruf b \nbertugas memimpin Audit Keamanan SPBE."
+            },
+            {
+              "nomor": "7",
+              "isi": "Anggota tim sebagaimana dimaksud pada ayat (3) huruf \nc bertugas melaksanakan prosedur Audit Keamanan \nSPBE."
+            }
+          ],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "49",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Penugasan sebagaimana dimaksud dalam Pasal 48 \ndilaksanakan berdasarkan keputusan Kepala Badan \ntentang tim auditor Keamanan SPBE."
+            },
+            {
+              "nomor": "2",
+              "isi": "Keputusan Kepala Badan sebagaimana dimaksud pada \nayat (1) paling sedikit memuat: \na. \nnama auditor Keamanan SPBE; \n\n\n - 19 -  \n \nb. \njabatan dalam tim auditor Keamanan SPBE; \nc. \nnama Instansi Pusat atau Pemerintah Daerah yang \ndiaudit; dan \nd. \nlingkup Audit Keamanan SPBE."
+            },
+            {
+              "nomor": "3",
+              "isi": "Tim auditor Keamanan SPBE sebagaimana dimaksud \npada ayat (1) harus memiliki kompetensi Audit \nKeamanan SPBE yang dapat dipenuhi secara kolektif."
+            }
+          ],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "50",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Perencanaan sebagaimana dimaksud dalam Pasal 47 \nhuruf b dilakukan oleh auditor Keamanan SPBE \ndengan menyusun perencanaan Audit Keamanan \nSPBE."
+            },
+            {
+              "nomor": "2",
+              "isi": "Ketentuan mengenai perencanaan Audit Keamanan \nSPBE \noleh \nLATIK \nTerakreditasi \nyang \nterdaftar \nsebagaimana dimaksud dalam Pasal 38 berlaku secara \nmutatis \nmutandis \nterhadap \nperencanaan \nAudit \nKeamanan SPBE yang dilaksanakan LATIK pemerintah."
+            }
+          ],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "51",
+          "isi": "Ketentuan mengenai pelaksanaan Audit Keamanan SPBE \noleh LATIK Terakreditasi yang terdaftar sebagaimana \ndimaksud dalam Pasal 39 sampai dengan Pasal 44 berlaku \nsecara mutatis mutandis terhadap pelaksanaan Audit \nKeamanan SPBE yang dilaksanakan LATIK pemerintah.",
+          "ayat": [],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "52",
+          "isi": "LATIK pemerintah harus menerbitkan surat keterangan \nuntuk setiap Audit Keamanan SPBE yang dilaksanakannya \nsesuai dengan ketentuan peraturan perundang-undangan.",
+          "ayat": [],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "53",
+          "isi": "Ketentuan mengenai pelaksanaan Audit Keamanan SPBE \noleh LATIK pemerintah dilaksanakan terhadap Aplikasi \nUmum dan/atau Infrastruktur SPBE Nasional sebagaimana \ndimaksud dalam Pasal 47 sampai dengan Pasal 52 berlaku \nsecara mutatis mutandis terhadap pelaksanaan Audit \nKeamanan SPBE oleh Badan yang dilaksanakan terhadap \nAplikasi Khusus dan Infrastruktur SPBE Instansi Pusat \ntertentu yang ditetapkan sebagai IIV.",
+          "ayat": [],
+          "bagian": "Kedua - "
+        },
+        {
+          "nomor": "54",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Pelaporan \nAudit \nKeamanan \nSPBE \nsebagaimana \ndimaksud dalam Pasal 23 huruf b dilakukan dengan \ncara:  \na. \nketua tim Auditor Keamanan SPBE menyusun \nrancangan laporan hasil Audit Keamanan SPBE \ndengan memastikan tujuan Audit Keamanan SPBE \ntercapai; \na. \nrancangan laporan hasil Audit Keamanan SPBE \ndireviu oleh pengendali teknis dan pengendali \nmutu; \n\n\n - 20 -  \n \nb. \nrancangan laporan hasil Audit Keamanan SPBE \nyang telah direviu disampaikan oleh ketua tim \nAuditor Keamanan SPBE kepada pimpinan LATIK \ncakupan Keamanan SPBE; \nc. \npimpinan \nLATIK \ncakupan \nKeamanan \nSPBE \nmengesahkan laporan hasil Audit Keamanan \nSPBE; dan \nd. \nlaporan hasil Audit Keamanan SPBE yang telah \ndisahkan disampaikan oleh pimpinan LATIK \ncakupan Keamanan SPBE kepada pimpinan \nInstansi Pusat atau Pemerintah Daerah dan \nditembuskan \nkepada \nunit \nkerja \nyang \nmelaksanakan \ntugas \ndan \nfungsi \ndi \nbidang \npengawasan intern pada Instansi Pusat dan \nPemerintah Daerah."
+            },
+            {
+              "nomor": "2",
+              "isi": "Laporan hasil Audit Keamanan SPBE sebagaimana \ndimaksud pada ayat (1) dapat diberikan kepada pihak \nlain atas pertimbangan dari Instansi Pusat dan \nPemerintah Daerah."
+            }
+          ],
+          "bagian": "Ketiga - "
+        },
+        {
+          "nomor": "55",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Tindak lanjut Audit Keamanan SPBE sebagaimana \ndimaksud dalam Pasal 23 huruf c dilakukan oleh \nInstansi Pusat dan Pemerintah Daerah."
+            },
+            {
+              "nomor": "2",
+              "isi": "Pemantauan atas tindak lanjut sebagaimana dimaksud \npada ayat (1) dilakukan oleh unit kerja yang \nmelaksanakan tugas dan fungsi di bidang pengawasan \nintern pada Instansi Pusat dan Pemerintah Daerah."
+            },
+            {
+              "nomor": "3",
+              "isi": "Hasil pemantauan atas tindak lanjut Audit Keamanan \nSPBE \nsebagaimana \ndimaksud \npada \nayat"
+            },
+            {
+              "nomor": "2",
+              "isi": "disampaikan kepada: \na. \nLATIK pemerintah, untuk Aplikasi Umum dan \nInfrastruktur SPBE Nasional; dan \nb. \nmenteri \nyang \nmenyelenggarakan \nurusan \npemerintahan \ndi \nbidang \nkomunikasi \ndan \ninformatika dan Kepala Badan, untuk Aplikasi \nKhusus dan Infrastruktur SPBE Instansi Pusat \ndan Pemerintah Daerah ditembuskan kepada \nBadan."
+            }
+          ],
+          "bagian": "Keempat - "
+        },
+        {
+          "nomor": "56",
+          "isi": "Penyampaian hasil pemantauan atas Audit Keamanan SPBE \nuntuk Aplikasi Umum dan Infrastruktur SPBE Nasional \nsebagaimana dimaksud dalam Pasal 55 ayat (3) huruf a \ndilakukan setiap bulan April tahun berjalan.",
+          "ayat": [],
+          "bagian": "Keempat - "
+        },
+        {
+          "nomor": "57",
+          "isi": "Penyampaian hasil pemantauan atas Audit Keamanan SPBE \nuntuk Aplikasi Khusus dan Infrastruktur SPBE Instansi \nPusat dan Pemerintah Daerah sebagaimana dimaksud \ndalam Pasal 55 ayat (3) huruf b dilakukan secara elektronik \nsesuai dengan ketentuan peraturan perundang-undangan. \n\n\n - 21 -",
+          "ayat": [],
+          "bagian": "Keempat - "
+        },
+        {
+          "nomor": "58",
+          "isi": "Pendaftaran pelaksana Audit Keamanan SPBE sebagaimana \ndimaksud dalam Pasal 23 huruf d terdiri atas: \na. \npendaftaran LATIK Terakreditasi; dan \nb. \npendaftaran auditor Keamanan SPBE. \n \nParagraf 2 \nPendaftaran LATIK Terakreditasi",
+          "ayat": [],
+          "bagian": "Kelima - "
+        },
+        {
+          "nomor": "59",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Pendaftaran \nLATIK \nTerakreditasi \nsebagaimana \ndimaksud dalam Pasal 58 huruf a dilakukan oleh \npimpinan LATIK dengan mengajukan permohonan \npendaftaran kepada Kepala Badan."
+            },
+            {
+              "nomor": "2",
+              "isi": "Permohonan pendaftaran sebagaimana dimaksud pada \nayat (1) dengan menyampaikan: \na. \nsurat permohonan; \nb. \nsalinan akta pendirian badan hukum; \nc. \nstruktur organisasi; \nd. \ndokumen sistem kendali mutu audit; \ne. \ndaftar auditor Keamanan SPBE yang berstatus \nsebagai pegawai tetap dan tidak tetap; \nf. \nbukti akreditasi terkait dari lembaga pemerintah \nnonstruktural yang bertugas dan bertanggung \njawab di bidang akreditasi lembaga penilaian \nkesesuaian; \ng. \nsurat izin usaha; dan \nh. \nsurat keterangan domisili."
+            },
+            {
+              "nomor": "3",
+              "isi": "Pendaftaran \nLATIK \nTerakreditasi \nsebagaimana \ndimaksud \npada \nayat"
+            },
+            {
+              "nomor": "2",
+              "isi": "dilaksanakan \nmelalui \npelayanan perizinan berusaha terintegrasi secara \nelektronik \nsesuai \ndengan \nketentuan \nperaturan \nperundang-undangan."
+            }
+          ],
+          "bagian": "Kelima - "
+        },
+        {
+          "nomor": "60",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Dalam hal permohonan pendaftaran sebagaimana \ndimaksud dalam Pasal 59 dinyatakan valid dan lengkap, \nBadan menerbitkan surat tanda register."
+            },
+            {
+              "nomor": "2",
+              "isi": "Surat tanda register sebagaimana dimaksud pada ayat"
+            },
+            {
+              "nomor": "1",
+              "isi": "diberikan paling lambat 15 (lima belas) hari kerja \nsetelah permohonan dinyatakan sesuai dan lengkap."
+            },
+            {
+              "nomor": "3",
+              "isi": "Surat tanda register sebagaimana dimaksud pada ayat"
+            },
+            {
+              "nomor": "2",
+              "isi": "berlaku sesuai dengan masa berlaku akreditasi dari \nlembaga pemerintah nonstruktural yang bertugas dan \nbertanggung jawab di bidang Akreditasi lembaga \npenilaian kesesuaian."
+            },
+            {
+              "nomor": "4",
+              "isi": "LATIK Terakreditasi yang telah mendapatkan surat \ntanda register sebagaimana dimaksud pada ayat (1) \ndinyatakan sebagai LATIK Terakreditasi yang terdaftar. \n\n\n - 22 -"
+            },
+            {
+              "nomor": "5",
+              "isi": "Badan mempublikasikan daftar LATIK Terakreditasi \nyang terdaftar sebagaimana dimaksud pada ayat (4) \nmelalui laman resmi Badan."
+            }
+          ],
+          "bagian": "Kelima - "
+        },
+        {
+          "nomor": "61",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Masa berlaku surat tanda register dapat diperpanjang \ndengan mengajukan permohonan kepada Kepala Badan \npaling lambat 30 (tiga puluh) hari kalender sebelum \nhabis masa berlaku surat tanda register."
+            },
+            {
+              "nomor": "2",
+              "isi": "Permohonan sebagaimana dimaksud pada ayat (1) \ndiajukan dengan menyampaikan: \na. \nsurat permohonan; \nb. \nsertifikat akreditasi dari lembaga pemerintah \nnonstruktural yang bertugas dan bertanggung \njawab di bidang akreditasi lembaga penilaian \nkesesuaian; dan \nc. \ndaftar auditor Keamanan SPBE yang menjadi \nanggota."
+            }
+          ],
+          "bagian": "Kelima - "
+        },
+        {
+          "nomor": "62",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Surat tanda register tidak berlaku apabila: \na. \nhabis masa berlaku; \nb. \nLATIK Terakreditasi yang terdaftar melanggar \nketentuan peraturan perundang-undangan; atau \nc. \nLATIK Terakreditasi yang terdaftar dinyatakan \npailit \nsesuai \ndengan \nketentuan \nperaturan \nperundang-undangan."
+            },
+            {
+              "nomor": "2",
+              "isi": "LATIK Terakreditasi yang terdaftar dengan surat tanda \nregister tidak berlaku sebagaimana dimaksud pada ayat"
+            },
+            {
+              "nomor": "1",
+              "isi": "dihapus dari daftar LATIK Terakreditasi yang \nterdaftar."
+            }
+          ],
+          "bagian": "Kelima - "
+        },
+        {
+          "nomor": "63",
+          "isi": "LATIK Terakreditasi yang terdaftar menyampaikan: \na. \nlaporan secara periodik atas pelaksanaan Audit \nKeamanan SPBE setiap bulan April dan Oktober; dan \nb. \nlaporan perubahan daftar auditor Keamanan SPBE \npaling lambat 2 (dua) hari kerja setelah perubahan \nkeanggotaan dilakukan; \nkepada Kepala Badan. \n \nParagraf 3 \nPendaftaran Auditor Keamanan SPBE",
+          "ayat": [],
+          "bagian": "Kelima - "
+        },
+        {
+          "nomor": "64",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Pendaftaran auditor Keamanan SPBE sebagaimana \ndimaksud dalam Pasal 58 huruf b dilakukan oleh \npimpinan LATIK dengan mengajukan permohonan \npendaftaran kepada Kepala Badan."
+            },
+            {
+              "nomor": "2",
+              "isi": "Permohonan pendaftaran sebagaimana dimaksud pada \nayat (1) disampaikan secara elektronik."
+            },
+            {
+              "nomor": "3",
+              "isi": "Permohonan pendaftaran sebagaimana dimaksud pada \nayat (2) dilakukan dengan menyampaikan: \na. \nsurat permohonan; \n \n \n\n\n - 23 -  \n \nb. \nsalinan ijazah pendidikan strata satu atau \nsederajat; \nc. \nsalinan sertifikat kompetensi auditor Keamanan \nSPBE yang diterbitkan oleh Lembaga Sertifikasi \nProfesi ruang lingkup auditor Keamanan SPBE; \nd. \ndokumen \npengalaman \ndi \nbidang \nkeamanan \ninformasi atau teknologi informasi yang dibuktikan \ndengan surat tugas, surat penempatan, surat \nkeputusan, atau kontrak kerja; \ne. \npakta integritas; dan \nf. \nsalinan bukti keanggotaan organisasi profesi."
+            },
+            {
+              "nomor": "4",
+              "isi": "Dalam hal sertifikat kompetensi auditor Keamanan \nSPBE sebagaimana dimaksud pada ayat (3) huruf c \nbelum \ntersedia \nkarena \nbelum \ntersedianya \npenyelenggara \nsertifikasi \nkompetensi, \nsertifikat \nkompetensi \nauditor \nKeamanan \nSPBE \ndigantikan \ndengan \ndokumen \nlainnya \nyang \nberlaku \ndan \nmenyatakan keahlian."
+            },
+            {
+              "nomor": "5",
+              "isi": "Dalam hal organisasi profesi sebagaimana dimaksud \npada ayat (3) huruf f belum terbentuk, tidak perlu \nmelampirkan salinan bukti keanggotaan organisasi \nprofesi."
+            }
+          ],
+          "bagian": "Kelima - "
+        },
+        {
+          "nomor": "65",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Dalam hal permohonan pendaftaran sebagaimana \ndimaksud dalam Pasal 64 dinyatakan valid dan \nlengkap, Badan menerbitkan surat tanda register."
+            },
+            {
+              "nomor": "2",
+              "isi": "Surat tanda register sebagaimana dimaksud pada ayat"
+            },
+            {
+              "nomor": "1",
+              "isi": "diterbitkan paling lambat 14 (empat belas) hari kerja \nsetelah pendaftaran dinyatakan valid dan lengkap."
+            },
+            {
+              "nomor": "3",
+              "isi": "Surat tanda register sebagaimana dimaksud pada ayat"
+            },
+            {
+              "nomor": "2",
+              "isi": "berlaku sesuai dengan masa berlaku sertifikat \nkompetensi auditor Keamanan SPBE, paling lama 3 \n(tiga) tahun."
+            },
+            {
+              "nomor": "4",
+              "isi": "Auditor Keamanan SPBE yang telah memperoleh surat \ntanda register sebagaimana dimaksud pada ayat (3) \ndimuat dalam daftar auditor Keamanan SPBE."
+            },
+            {
+              "nomor": "5",
+              "isi": "Badan mempublikasikan daftar auditor Keamanan \nSPBE yang telah memperoleh surat tanda register \nsebagaimana dimaksud pada ayat (4) melalui laman \nresmi Badan."
+            }
+          ],
+          "bagian": "Kelima - "
+        },
+        {
+          "nomor": "66",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Masa berlaku surat tanda register dapat diperpanjang \ndengan mengajukan permohonan kepada Kepala Badan \npaling lambat 30 (tiga puluh) hari kalender sebelum \nhabis masa berlaku surat tanda register."
+            },
+            {
+              "nomor": "2",
+              "isi": "Permohonan sebagaimana dimaksud pada ayat (1) \ndiajukan dengan menyampaikan: \na. \nsurat permohonan;  \nb. \nsalinan sertifikat kompetensi auditor Keamanan \nSPBE terbaru yang diterbitkan oleh Lembaga \nSertifikasi Profesi di bidang keamanan siber yang \nberkaitan dengan Audit Keamanan SPBE; dan \nc. \nsalinan bukti keanggotaan organisasi profesi. \n\n\n - 24 -"
+            },
+            {
+              "nomor": "3",
+              "isi": "Dalam hal sertifikat kompetensi auditor Keamanan \nSPBE sebagaimana dimaksud pada ayat (2) huruf b \nbelum \ntersedia \nkarena \nbelum \ntersedianya \npenyelenggara \nsertifikasi \nkompetensi, \nsertifikat \nkompetensi \nauditor \nKeamanan \nSPBE \ndigantikan \ndengan \ndokumen \nlainnya \nyang \nberlaku \ndan \nmenyatakan keahlian."
+            },
+            {
+              "nomor": "4",
+              "isi": "Dalam hal organisasi profesi sebagaimana dimaksud \npada ayat (2) huruf c belum ada, tidak perlu \nmelampirkan salinan bukti keanggotaan."
+            }
+          ],
+          "bagian": "Kelima - "
+        },
+        {
+          "nomor": "67",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Surat tanda register dinyatakan tidak berlaku apabila: \na. \nhabis masa berlaku; \nb. \nauditor Keamanan SPBE meninggal dunia; \nc. \nauditor Keamanan SPBE mengundurkan diri dari \norganisasi profesi;  \nd. \nauditor \nKeamanan \nSPBE \ndikeluarkan \ndari \nkeanggotaan \norganisasi \nprofesi \nkarena \npelanggaran kode etik profesi; atau \ne. \nauditor Keamanan SPBE terbukti melanggar \nketentuan peraturan perundang-undangan."
+            },
+            {
+              "nomor": "2",
+              "isi": "Auditor Keamanan SPBE dengan surat tanda register \ntidak berlaku sebagaimana dimaksud pada ayat (1) \ndihapus dari daftar auditor Keamanan SPBE."
+            },
+            {
+              "nomor": "3",
+              "isi": "Auditor Keamanan SPBE dengan surat tanda register \nhabis masa berlaku sebagaimana dimaksud pada ayat"
+            },
+            {
+              "nomor": "1",
+              "isi": "huruf a dapat mengajukan permohonan pendaftaran \nkembali sesuai dengan ketentuan dalam Pasal 64 \nmelalui LATIK Terakreditasi yang terdaftar."
+            }
+          ],
+          "bagian": "Kelima - "
+        },
+        {
+          "nomor": "68",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Pengalokasian sumber daya sebagaimana dimaksud \ndalam \nPasal \n23 \nhuruf \ne \ndilakukan \ndengan \nmengalokasikan sumber daya Audit Keamanan SPBE \ndengan memadai."
+            },
+            {
+              "nomor": "2",
+              "isi": "Dalam mengalokasi sumber daya Audit Keamanan \nSPBE sebagaimana dimaksud pada ayat (1), Instansi \nPusat, Pemerintah Daerah, dan LATIK cakupan \nKeamanan SPBE menentukan: \na. \njumlah auditor Keamanan SPBE; \nb. \njumlah hari pelaksanaan Audit Keamanan SPBE; \ndan \nc. \nalat bantu Audit Keamanan SPBE."
+            }
+          ],
+          "bagian": "Kelima - "
+        },
+        {
+          "nomor": "69",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Jumlah \nAuditor \nKeamanan \nSPBE \nsebagaimana \ndimaksud dalam Pasal 68 ayat (2) huruf a paling sedikit \nberjumlah 2 (dua) orang dalam 1 (satu) penugasan dan \ndapat ditambah sesuai kebutuhan."
+            },
+            {
+              "nomor": "2",
+              "isi": "Kebutuhan sebagaimana dimaksud pada ayat (1) \nditentukan dengan mempertimbangkan: \n\n\n - 25 -  \n \na. \nkompetensi yang dibutuhkan sesuai lingkup Audit \nKeamanan SPBE; dan \nb. \nkompleksitas teknologi dalam \nlingkup \nAudit \nKeamanan SPBE."
+            }
+          ],
+          "bagian": "Kelima - "
+        },
+        {
+          "nomor": "70",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Jumlah hari pelaksanaan Audit Keamanan SPBE \nsebagaimana dimaksud dalam Pasal 68 ayat (2) huruf b \nmengacu pada matriks jumlah hari pelaksanaan Audit \nKeamanan SPBE."
+            },
+            {
+              "nomor": "2",
+              "isi": "Jumlah hari pelaksanaan Audit Keamanan SPBE \nsebagaimana dimaksud pada ayat (1) berlaku untuk \nsatu prosedur pelaksanaan Audit Keamanan SPBE."
+            },
+            {
+              "nomor": "3",
+              "isi": "Jumlah hari pelaksanaan Audit Keamanan SPBE \nsebagaimana dimaksud pada ayat (2) ditentukan \ndengan mempertimbangkan: \na. \nkompleksitas objek Audit Keamanan SPBE; \nb. \nkompleksitas teknologi objek Audit Keamanan SPBE; \ndan \nc. \nsebaran lokasi objek Audit Keamanan SPBE."
+            },
+            {
+              "nomor": "4",
+              "isi": "Kompleksitas \nobjek \nAudit \nKeamanan \nSPBE \nsebagaimana dimaksud pada ayat (3) huruf a paling \nsedikit mengacu pada matriks kompleksitas objek Audit \nKeamanan SPBE."
+            },
+            {
+              "nomor": "5",
+              "isi": "Kompleksitas teknologi objek Audit Keamanan SPBE \nsebagaimana dimaksud pada ayat (3) huruf b paling \nsedikit  mengacu pada matriks kompleksitas teknologi \nobjek Audit Keamanan SPBE."
+            },
+            {
+              "nomor": "6",
+              "isi": "Sebaran \nlokasi \nobjek \nAudit \nKeamanan \nSPBE \nsebagaimana dimaksud pada ayat (3) huruf c dibedakan \nberdasarkan lokasi fisik yaitu: \na. \nterpusat; dan \nb. \ntersebar."
+            },
+            {
+              "nomor": "7",
+              "isi": "Matriks objek Audit Keamanan SPBE sebagaimana \ndimaksud pada ayat (3) sampai dengan ayat (6) \ntercantum dalam Lampiran II yang merupakan bagian \ntidak terpisahkan dari Peraturan Badan ini."
+            }
+          ],
+          "bagian": "Kelima - "
+        },
+        {
+          "nomor": "71",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Alat bantu Audit Keamanan SPBE sebagaimana \ndimaksud dalam Pasal 68 ayat (2) huruf c merupakan \nperangkat teknologi yang digunakan auditor Keamanan \nSPBE dalam pelaksanaan pengujian kontrol keamanan."
+            },
+            {
+              "nomor": "2",
+              "isi": "Dalam menentukan penggunaan alat bantu Audit \nKeamanan SPBE sebagaimana dimaksud pada ayat (1) \nLATIK \ncakupan \nKeamanan \nSPBE \nharus \nmempertimbangkan: \na. \nkompleksitas \nteknologi \ndalam \nobjek \nAudit \nKeamanan SPBE; dan \nb. \nkeamanan alat bantu Audit Keamanan SPBE yang \ndigunakan. \n \n \n \n \n\n\n - 26 -"
+            }
+          ],
+          "bagian": "Kelima - "
+        }
+      ]
+    },
+    {
+      "bab_nomor": "IV",
+      "bab_judul": "",
+      "pasal": [
+        {
+          "nomor": "intro",
+          "isi": "PENDANAAN AUDIT KEAMANAN SPBE",
+          "ayat": []
+        },
+        {
+          "nomor": "72",
+          "isi": "",
+          "ayat": [
+            {
+              "nomor": "1",
+              "isi": "Instansi Pusat dan Pemerintah Daerah menyusun \nperencanaan dan penganggaran pelaksanaan Audit \nKeamanan SPBE sesuai dengan siklus perencanaan \ndan penganggaran."
+            },
+            {
+              "nomor": "2",
+              "isi": "Besaran biaya Audit Keamanan SPBE dihitung dengan \nmempertimbangkan kompleksitas objek audit, sebaran \nlokasi, dan jumlah hari pelaksanaan audit."
+            },
+            {
+              "nomor": "3",
+              "isi": "Pendanaan berasal dari: \na. \nAnggaran Pendapatan dan Belanja Negara;  \nb. \nanggaran \npendapatan \ndan \nbelanja \ndaerah; \ndan/atau \nc. \nsumber lain yang sah dan tidak mengikat sesuai \ndengan \nketentuan \nperaturan \nperundang-\nundangan."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bab_nomor": "V",
+      "bab_judul": "",
+      "pasal": [
+        {
+          "nomor": "intro",
+          "isi": "KETENTUAN PENUTUP",
+          "ayat": []
+        },
+        {
+          "nomor": "73",
+          "isi": "Peraturan \nBadan \nini \nmulai \nberlaku \npada \ntanggal \ndiundangkan. \n \n \n\n\n - 27 -  \n \nAgar \nsetiap \norang \nmengetahuinya, \nmemerintahkan \npengundangan Peraturan Badan ini dengan penempatannya \ndalam Berita Negara Republik Indonesia. \n \nDitetapkan di Jakarta  \npada tanggal 9 Oktober 2024 \n \nKEPALA BADAN SIBER DAN SANDI NEGARA,  \n \nŒ \n \nHINSA SIBURIAN \n \nDiundangkan di Jakarta \npada tanggal              Д \n \nPlt. DIREKTUR JENDERAL \nPERATURAN PERUNDANG-UNDANGAN \nKEMENTERIAN HUKUM DAN HAK ASASI MANUSIA \nREPUBLIK INDONESIA, \n \n \n \n   Ѽ \n \nASEP N. MULYANA \n \n \nBERITA NEGARA REPUBLIK INDONESIA TAHUN 2024 NOMOR        Ж \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\n\n - 28 -",
+          "ayat": []
+        }
+      ]
+    }
+  ],
+  "lampiran": {
+    "isi_teks": "\nLAMPIRAN I \nPERATURAN BADAN SIBER DAN SANDI NEGARA \nNOMOR 8 TAHUN 2024 \nTENTANG  \nSTANDAR DAN TATA CARA PELAKSANAAN \nAUDIT KEAMANAN SISTEM PEMERINTAHAN \nBERBASIS ELEKTRONIK \n \nMATRIKS KONKLUSI AUDIT KEAMANAN SPBE \n \nHasil Evaluasi \nDesain Kontrol \nHasil Evaluasi \nImplementasi \nKontrol \nHasil Evaluasi \nEfektivitas Kontrol \nKonklusi Audit \nKeamanan SPBE \nMemadai \nSesuai Dengan \nDesain Kontrol \nEfektif \nMemadai \nPerlu Peningkatan \nMemadai \nBelum Efektif \nPerlu Peningkatan \nTidak Sesuai \nDengan \nDesain Kontrol \nEfektif \nPerlu Peningkatan \nPerlu Peningkatan \nTidak Memadai \nBelum Efektif \nTidak Memadai \nPerlu \nPeningkatan \nSesuai Dengan \nDesain Kontrol \nEfektif \nMemadai \nPerlu Peningkatan \nPerlu Peningkatan \nBelum Efektif \nTidak Memadai \nTidak Sesuai \nDengan \nDesain Kontrol \nEfektif \nTidak Memadai \nPerlu Peningkatan \nTidak Memadai \nBelum Efektif \nTidak Memadai \nTidak \nMemadai \n- \nEfektif \nTidak Memadai \nPerlu Peningkatan \nTidak Memadai \nBelum Efektif \nTidak Memadai \n \nKEPALA BADAN SIBER DAN SANDI NEGARA,  \n \nttd. \n \nHINSA SIBURIAN \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\n\n - 29 -  \n \nLAMPIRAN II \nPERATURAN BADAN SIBER DAN SANDI NEGARA \nNOMOR 8 TAHUN 2024 \nTENTANG  \nSTANDAR DAN TATA CARA PELAKSANAAN \nAUDIT KEAMANAN SISTEM PEMERINTAHAN \nBERBASIS ELEKTRONIK \n \nMATRIKS OBJEK KEAMANAN AUDIT KEAMANAN SPBE \n \nA. \nMATRIKS JUMLAH HARI PELAKSANAAN AUDIT KEAMANAN SPBE \n \nKompleksitas \nObjek Audit \nKompleksitas \nTeknologi Objek \nAudit Keamanan \nSPBE \nSebaran Lokasi \nObjek Audit \nKeamanan \nSPBE \nJumlah  \nHari (paling \nsingkat)* \nSederhana \nSederhana \nTerpusat \n2 \nTersebar \n3 \nSedang \nTerpusat \n3 \nTersebar \n4 \nKompleks \nTerpusat \n4 \nTersebar \n5 \nSedang \nSederhana \nTerpusat \n5 \nTersebar \n6 \nSedang \nTerpusat \n6 \nTersebar \n7 \nKompleks \nTerpusat \n7 \nTersebar \n8 \nKompleks \nSederhana \nTerpusat \n8 \nTersebar \n9 \nSedang \nTerpusat \n9 \nTersebar \n10 \nKompleks \nTerpusat \n10 \nTersebar \n10 \n* untuk 1 tim auditor (paling sedikit dua orang) untuk satu prosedur \npelaksanaan audit \n \n \nB. \nMATRIKS KOMPLEKSITAS OBJEK AUDIT KEAMANAN SPBE \n \nIndikator \nTingkat Kompleksitas Objek Audit \nSederhana \nSedang \nKompleks \nAplikasi SPBE \nAplikasi \nKhusus \nInstansi Pusat \nAplikasi \nKhusus \nPemerintah \nDaerah \nAplikasi Umum \nSPBE Nasional \nPusat Data Nasional \n \n \n \nNasional \nJaringan Intra \nInstansi Pusat \nPemerintah \nDaerah \nNasional \nSistem Penghubung \nLayanan \nInstansi Pusat \nPemerintah \nDaerah \nNasional \n \n \n\n\n - 30 -  \n \nC. \nMATRIKS KOMPLEKSITAS TEKNOLOGI OBJEK AUDIT KEAMANAN \nSPBE \n \nIndikator \nTingkat Kompleksitas Teknologi \nSederhana \nSedang \nKompleks \nUMUM \nJumlah Personil TI \n< 5 orang  \n6-10 orang \n> 10 orang \nJumlah Pengguna \n< 100 pengguna \n100-1000 \npengguna \n> 1000 \npengguna \nJenis Dampak \nKegagalan \nOperasional saja \nOperasional dan \nFinansial \nOperasional, \nFinansial, \ndan  Legal \nAPLIKASI \nSebaran peladen  \nTerpusat \nTerdistribusi  \nDalam Negeri  \nTerdistribusi  \nDalam & \nLuar Negeri \nPlatform Teknologi \n1 jenis \n2-3 jenis \n> 3 jenis \nWaktu \nPengembangan \n< 3 bulan \n3-12 bulan  \n> 12 bulan \nUsia Sistem  \n< 1 tahun \n1–3 tahun \n> 3 tahun \nTransaksi per hari \n< 5000  \n5000 s.d. 50.000  \n> 50.000  \nPola Pemrosesan \nBatch \nRealtime \nHybrid \nCakupan Proses \nBisnis \n< 30 % \n30-60%  \n> 60%  \nINFRASTRUKTUR – PUSAT DATA NASIONAL \nPengelolaan  \nAlih Daya, Sewa \nMandiri \nCampuran  \nStrata SNI \nStrata 1-2 \nStrata 3 \nStrata 4 \nSertifikasi \nBelum Ada \nSNI 27001 \nSNI 27001 \ndan Standar \nLain \nINFRASTRUKTUR – JARINGAN INTRA \nPengelolaan  \nAlih Daya, Sewa \nMandiri \nCampuran  \nCakupan Jaringan  \nLocal Area \nNetwork, Cluster \nArea Network \nMetropolitan Area \nNetwork, Virtual \nPrivate Network \nWide Area \nNetwork, \nNasional \nMedia Jaringan \nKabel \nNirkabel \nKabel & \nNirkabel \nINFRASTRUKTUR – SISTEM PENGHUBUNG LAYANAN \nCakupan Sistem \nIntra Instansi \nPusat atau Intra \nPemerintah \nDaerah \nAntar Instansi \nPusat atau Antar \nPemerintah \nDaerah \nNasional \nSifat Sistem  \nTertutup \nSemi Terbuka \nTerbuka \nKonten Sistem  \nData \nAplikasi \nLayanan \nSifat Informasi \nyang Dihubungkan \nTerbuka \nTerbatas \nTertutup \n \nKEPALA BADAN SIBER DAN SANDI NEGARA,  \n \nttd. \n \nHINSA SIBURIAN"
+  },
+  "preamble": "- 1 - \n \n \n \n \n \n \n \n \n \nPERATURAN BADAN SIBER DAN SANDI NEGARA \nREPUBLIK INDONESIA \nNOMOR 8 TAHUN 2024 \nTENTANG \nSTANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN  \nSISTEM PEMERINTAHAN BERBASIS ELEKTRONIK \n \nDENGAN RAHMAT TUHAN YANG MAHA ESA \n \nKEPALA BADAN SIBER DAN SANDI NEGARA, \n \n \nMenimbang \n: bahwa untuk melaksanakan ketentuan Pasal 58 ayat (6) \nPeraturan Presiden Nomor 95 Tahun 2018 tentang Sistem \nPemerintahan Berbasis Elektronik, perlu menetapkan \nPeraturan Badan Siber dan Sandi Negara tentang Standar \ndan Tata Cara Pelaksanaan Audit Keamanan Sistem \nPemerintahan Berbasis Elektronik; \n \nMengingat \n: 1. \nPeraturan Presiden Nomor 95 Tahun 2018 tentang \nSistem Pemerintahan Berbasis Elektronik (Lembaran \nNegara Republik Indonesia Tahun 2018 Nomor 182); \n2. \nPeraturan Presiden Nomor 28 Tahun 2021 tentang \nBadan Siber dan Sandi Negara (Lembaran Negara \nRepublik Indonesia Tahun 2021 Nomor 101); \n3. \nPeraturan \nMenteri \nKomunikasi \ndan \nInformatika \nRepublik Indonesia Nomor 16 Tahun 2022 tentang \nKebijakan Umum Penyelenggaraan Audit Teknologi \nInformasi dan Komunikasi (Berita Negara Republik \nIndonesia Tahun 2022 Nomor 1374); \n4. \nPeraturan Badan Siber dan Sandi Negara Nomor 6 \nTahun 2021 tentang Organisasi dan Tata Kerja Badan \nSiber dan Sandi Negara (Berita Negara Republik \nIndonesia Tahun 2021 Nomor 803) sebagaimana telah \ndiubah dengan Peraturan Badan Siber dan Sandi \nNegara Nomor 4 Tahun 2023 tentang Perubahan atas \nPeraturan Badan Siber dan Sandi Negara Nomor 6 \nTahun 2021 tentang Organisasi dan Tata Kerja Badan \nSiber dan Sandi Negara (Berita Negara Republik \nIndonesia Tahun 2023 Nomor 544); \n \nMEMUTUSKAN: \n \nMenetapkan : PERATURAN BADAN SIBER DAN SANDI NEGARA TENTANG \nSTANDAR \nDAN \nTATA \nCARA \nPELAKSANAAN \nAUDIT \nKEAMANAN \nSISTEM \nPEMERINTAHAN \nBERBASIS \nELEKTRONIK. \n\n\n - 2 -",
+  "source_filename": "peraturan-bssn-no-8-tahun-2024.pdf"
+}
