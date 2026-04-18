@@ -13,6 +13,7 @@ from typing import List, Dict, Any, Optional, Tuple
 from datetime import datetime
 
 from loguru import logger
+from app.config import settings
 
 # Paths
 BASE_DIR = Path(__file__).parent.parent.parent
@@ -261,11 +262,35 @@ def detect_document_type(filename: str, text: str) -> str:
     return "other"
 
 
+def _bm25_search_text(text: str, metadata: Dict[str, Any]) -> str:
+    """Compose lexical text for BM25 using content and structural metadata."""
+    fields = [
+        metadata.get("document_title") or metadata.get("judul_dokumen", ""),
+        metadata.get("filename", ""),
+        metadata.get("doc_type", ""),
+        metadata.get("hierarchy", ""),
+        metadata.get("context_header", ""),
+        metadata.get("bab", ""),
+        metadata.get("bagian", ""),
+        metadata.get("pasal", ""),
+        metadata.get("ayat", ""),
+        text or "",
+    ]
+    return " ".join(str(v).strip() for v in fields if str(v).strip())
+
+
+def _tokenize_bm25(text: str) -> List[str]:
+    return re.findall(r"\b\w+\b", text.lower())
+
+
 def extract_pasals(text: str) -> List[Dict]:
     """Extract Pasal structure from legal document."""
     pasals = []
 
-    pasal_pattern = re.compile(r"^Pasal\s+(\d+)\s*$", re.MULTILINE | re.IGNORECASE)
+    pasal_pattern = re.compile(
+        r"^\s*(?:#+\s*)?(?:\*\*\s*)?Pasal\s+(\d+)\s*(?:\*\*)?\s*(.*?)\s*$",
+        re.MULTILINE | re.IGNORECASE,
+    )
     matches = list(pasal_pattern.finditer(text))
 
     if not matches:
@@ -283,6 +308,7 @@ def extract_pasals(text: str) -> List[Dict]:
 
     for i, match in enumerate(matches):
         pasal_num = match.group(1)
+        inline_content = (match.group(2) or "").strip()
         start = match.end()
 
         if i + 1 < len(matches):
@@ -291,6 +317,8 @@ def extract_pasals(text: str) -> List[Dict]:
             end = len(text)
 
         content = text[start:end].strip()
+        if inline_content:
+            content = f"{inline_content}\n{content}" if content else inline_content
 
         # Look for BAB/Bagian before this Pasal
         prefix_text = text[: match.start()]
@@ -357,7 +385,7 @@ def split_legal_document(
     text: str,
     doc_title: str,
     filename: str,
-    max_chunk_size: int = 1500,
+    max_chunk_size: int = settings.CHUNK_SIZE,
 ) -> List[Dict]:
     """Split legal document into chunks based on Pasal/Ayat structure."""
 
@@ -487,38 +515,380 @@ def split_legal_document(
 
 
 class DocumentManager:
-    """Manages document upload, processing, and indexing."""
+    """Manages document upload, processing, and indexing.
+
+    Phase 1 refactor: Database operations menggunakan SQLAlchemy ORM
+    menggantikan raw sqlite3 dari core/database.py.
+    Interface publik (argumen + return format) tidak berubah.
+    """
 
     def __init__(self):
-        from app.core.database import (
-            create_document,
-            get_document,
-            get_all_documents,
-            update_document,
-            delete_document as db_delete_document,
-            save_chunks,
-            get_chunks,
-            get_chunk_count,
-            mark_chunks_indexed,
-            update_chunk,
-            delete_chunk,
-        )
-
-        self.create_document = create_document
-        self.get_document = get_document
-        self.get_all_documents = get_all_documents
-        self.update_document = update_document
-        self.db_delete_document = db_delete_document
-        self.save_chunks = save_chunks
-        self.get_chunks = get_chunks
-        self.get_chunk_count = get_chunk_count
-        self.mark_chunks_indexed = mark_chunks_indexed
-        self.update_chunk = update_chunk
-        self.delete_chunk = delete_chunk
-
         # Lazy load embedding model
         self._embedding_model = None
         self._tokenizer = None
+
+    # ── Private DB helper ─────────────────────────────────────────
+    def _get_db(self):
+        """Buat session baru per operasi. Caller wajib close()."""
+        from app.database import SessionLocal
+        return SessionLocal()
+
+    @staticmethod
+    def _doc_to_dict(doc) -> Dict[str, Any]:
+        """Convert ORM Document object ke dict format yang kompatibel dengan callers."""
+        if doc is None:
+            return {}
+        return {
+            "id": doc.id,
+            "doc_id": doc.doc_id or str(doc.id),
+            "filename": doc.original_filename or doc.filename or "",
+            "original_filename": doc.original_filename or doc.filename or "",
+            "document_title": doc.document_title or doc.filename or "",
+            "doc_type": doc.doc_type or "other",
+            "file_size": doc.file_size or 0,
+            "file_path": doc.file_path or doc.original_path or "",
+            "status": doc.status or "uploaded",
+            "chunk_count": doc.chunk_count or 0,
+            "created_at": str(doc.uploaded_at) if doc.uploaded_at else "",
+            "processed_at": str(doc.processed_at) if doc.processed_at else None,
+            "error_message": doc.error_message,
+        }
+
+    @staticmethod
+    def _chunk_to_dict(chunk, chunk_metadata: dict = None) -> Dict[str, Any]:
+        """Convert ORM Chunk object ke dict format yang kompatibel dengan callers."""
+        meta = chunk_metadata or {}
+        if not meta and chunk.chunk_metadata:
+            try:
+                import json
+                meta = json.loads(chunk.chunk_metadata)
+            except Exception:
+                meta = {}
+        return {
+            "id": chunk.id,
+            "chunk_index": chunk.chunk_index,
+            "text": chunk.chunk_text or "",
+            "raw_text": chunk.chunk_text or "",
+            "context_header": meta.get("context_header", ""),
+            "document_title": meta.get("document_title", ""),
+            "filename": meta.get("filename", ""),
+            "doc_type": meta.get("doc_type", ""),
+            "bab": str(meta.get("bab", "")),
+            "bagian": str(meta.get("bagian", "")),
+            "pasal": str(meta.get("pasal", "")),
+            "ayat": str(meta.get("ayat", "")),
+            "parent_pasal_text": meta.get("parent_pasal_text", ""),
+            "is_parent": meta.get("is_parent", False),
+            "chunk_type": chunk.chunk_type or meta.get("chunk_type", "text"),
+            "section": meta.get("section", ""),
+            "table_context": meta.get("table_context", ""),
+            "original_table": meta.get("original_table", ""),
+            "is_indexed": True,
+        }
+
+    # ── Document CRUD (ORM) ───────────────────────────────────────
+    def create_document(
+        self,
+        doc_id: str,
+        filename: str,
+        original_filename: str,
+        file_size: int,
+        file_path: str,
+    ) -> Dict[str, Any]:
+        """Create a new document record via ORM."""
+        from app.models.db_models import Document
+        document_title = Path(original_filename).stem.replace("_", " ").replace("-", " ")
+
+        db = self._get_db()
+        try:
+            doc = Document(
+                doc_id=doc_id,
+                filename=filename,
+                original_filename=original_filename,
+                original_path=file_path,
+                file_path=file_path,
+                document_title=document_title,
+                file_size=file_size,
+                status="uploaded",
+                chunk_count=0,
+            )
+            db.add(doc)
+            db.commit()
+            db.refresh(doc)
+            return self._doc_to_dict(doc)
+        except Exception as e:
+            db.rollback()
+            logger.error(f"create_document ORM error: {e}")
+            raise
+        finally:
+            db.close()
+
+    def get_document(self, doc_id: str) -> Optional[Dict[str, Any]]:
+        """Get document by doc_id (UUID text) atau integer id."""
+        from app.models.db_models import Document
+        db = self._get_db()
+        try:
+            doc = db.query(Document).filter(Document.doc_id == doc_id).first()
+            if not doc and doc_id.isdigit():
+                doc = db.query(Document).filter(Document.id == int(doc_id)).first()
+            return self._doc_to_dict(doc) if doc else None
+        except Exception as e:
+            logger.warning(f"get_document ORM error: {e}")
+            return None
+        finally:
+            db.close()
+
+    def get_all_documents(self) -> List[Dict[str, Any]]:
+        """Get all documents dengan live chunk counts."""
+        from app.models.db_models import Document
+        from sqlalchemy import func
+        from app.models.db_models import Chunk
+        db = self._get_db()
+        try:
+            docs = db.query(Document).order_by(Document.uploaded_at.desc()).all()
+            result = []
+            for doc in docs:
+                d = self._doc_to_dict(doc)
+                # Hitung chunk count dari DB
+                count = db.query(func.count(Chunk.id)).filter(
+                    Chunk.document_id == doc.id
+                ).scalar() or 0
+                d["chunk_count"] = count
+                # Coba dapat file_size dari disk jika 0
+                if d["file_size"] == 0 and d["file_path"]:
+                    try:
+                        p = Path(d["file_path"])
+                        if p.exists():
+                            d["file_size"] = p.stat().st_size
+                    except Exception:
+                        pass
+                result.append(d)
+            return result
+        except Exception as e:
+            logger.warning(f"get_all_documents ORM error: {e}")
+            return []
+        finally:
+            db.close()
+
+    def update_document(self, doc_id: str, **kwargs) -> bool:
+        """Update document fields by doc_id via ORM."""
+        from app.models.db_models import Document
+        # Map legacy field names ke ORM column names
+        field_mapping = {
+            "file_path": "file_path",
+            "original_filename": "original_filename",
+            "processed_at": "processed_at",
+            "status": "status",
+            "chunk_count": "chunk_count",
+            "error_message": "error_message",
+            "document_title": "document_title",
+        }
+        db = self._get_db()
+        try:
+            doc = db.query(Document).filter(Document.doc_id == doc_id).first()
+            if not doc and doc_id.isdigit():
+                doc = db.query(Document).filter(Document.id == int(doc_id)).first()
+            if not doc:
+                logger.warning(f"update_document: doc not found for doc_id={doc_id}")
+                return False
+            for k, v in kwargs.items():
+                orm_col = field_mapping.get(k, k)
+                if hasattr(doc, orm_col):
+                    setattr(doc, orm_col, v)
+            db.commit()
+            return True
+        except Exception as e:
+            db.rollback()
+            logger.warning(f"update_document ORM error: {e}")
+            return False
+        finally:
+            db.close()
+
+    def db_delete_document(self, doc_id: str) -> bool:
+        """Delete document and its chunks via ORM."""
+        from app.models.db_models import Document
+        db = self._get_db()
+        try:
+            doc = db.query(Document).filter(Document.doc_id == doc_id).first()
+            if not doc and doc_id.isdigit():
+                doc = db.query(Document).filter(Document.id == int(doc_id)).first()
+            if not doc:
+                logger.warning(f"db_delete_document: doc not found: {doc_id}")
+                return False
+            db.delete(doc)  # cascade delete chunks via relationship
+            db.commit()
+            return True
+        except Exception as e:
+            db.rollback()
+            logger.error(f"db_delete_document ORM error: {e}")
+            return False
+        finally:
+            db.close()
+
+    # ── Chunk CRUD (ORM) ──────────────────────────────────────────
+    def save_chunks(self, doc_id: str, chunks: List[Dict[str, Any]]) -> int:
+        """Save chunks for a document via ORM."""
+        from app.models.db_models import Document, Chunk
+        import json as _json
+        db = self._get_db()
+        try:
+            doc = db.query(Document).filter(Document.doc_id == doc_id).first()
+            if not doc and doc_id.isdigit():
+                doc = db.query(Document).filter(Document.id == int(doc_id)).first()
+            if not doc:
+                raise ValueError(f"Document not found: {doc_id}")
+
+            # Hapus chunks lama
+            db.query(Chunk).filter(Chunk.document_id == doc.id).delete()
+
+            # Insert chunks baru
+            for i, chunk in enumerate(chunks):
+                meta = {
+                    "context_header": chunk.get("context_header", ""),
+                    "document_title": chunk.get("document_title", ""),
+                    "filename": chunk.get("filename", ""),
+                    "doc_type": chunk.get("doc_type", ""),
+                    "bab": chunk.get("bab", ""),
+                    "bagian": chunk.get("bagian", ""),
+                    "pasal": chunk.get("pasal", ""),
+                    "ayat": chunk.get("ayat", ""),
+                    "parent_pasal_text": chunk.get("parent_pasal_text", ""),
+                    "is_parent": chunk.get("is_parent", False),
+                    "section": chunk.get("section", ""),
+                    "table_context": chunk.get("table_context", ""),
+                    "original_table": chunk.get("original_table", ""),
+                    "chunk_type": chunk.get("chunk_type", "text"),
+                }
+                new_chunk = Chunk(
+                    document_id=doc.id,
+                    chunk_index=i,
+                    chunk_text=chunk.get("text", ""),
+                    chunk_metadata=_json.dumps(meta),
+                    chunk_type=chunk.get("chunk_type", "text"),
+                )
+                db.add(new_chunk)
+
+            # Update chunk count di document
+            doc.chunk_count = len(chunks)
+            db.commit()
+            return len(chunks)
+        except Exception as e:
+            db.rollback()
+            logger.error(f"save_chunks ORM error: {e}")
+            raise
+        finally:
+            db.close()
+
+    def get_chunks(self, doc_id: str, limit: int = 100, offset: int = 0) -> List[Dict[str, Any]]:
+        """Get chunks for a document via ORM."""
+        from app.models.db_models import Document, Chunk
+        db = self._get_db()
+        try:
+            doc = db.query(Document).filter(Document.doc_id == doc_id).first()
+            if not doc and doc_id.isdigit():
+                doc = db.query(Document).filter(Document.id == int(doc_id)).first()
+            if not doc:
+                return []
+            chunks = (
+                db.query(Chunk)
+                .filter(Chunk.document_id == doc.id)
+                .order_by(Chunk.chunk_index)
+                .limit(limit)
+                .offset(offset)
+                .all()
+            )
+            return [self._chunk_to_dict(c) for c in chunks]
+        except Exception as e:
+            logger.warning(f"get_chunks ORM error: {e}")
+            return []
+        finally:
+            db.close()
+
+    def get_chunk_count(self, doc_id: str) -> int:
+        """Get chunk count for a document via ORM."""
+        from app.models.db_models import Document, Chunk
+        from sqlalchemy import func
+        db = self._get_db()
+        try:
+            doc = db.query(Document).filter(Document.doc_id == doc_id).first()
+            if not doc and doc_id.isdigit():
+                doc = db.query(Document).filter(Document.id == int(doc_id)).first()
+            if not doc:
+                return 0
+            return db.query(func.count(Chunk.id)).filter(Chunk.document_id == doc.id).scalar() or 0
+        except Exception as e:
+            logger.warning(f"get_chunk_count ORM error: {e}")
+            return 0
+        finally:
+            db.close()
+
+    def mark_chunks_indexed(self, doc_id: str) -> int:
+        """Mark semua chunks dokumen sebagai indexed. ORM: no-op, return chunk count."""
+        return self.get_chunk_count(doc_id)
+
+    def update_chunk(self, chunk_id: int, text: str) -> bool:
+        """Update teks satu chunk via ORM."""
+        from app.models.db_models import Chunk, Document
+        target_doc_id = None
+        db = self._get_db()
+        try:
+            chunk = db.query(Chunk).filter(Chunk.id == chunk_id).first()
+            if not chunk:
+                return False
+
+            doc = db.query(Document).filter(Document.id == chunk.document_id).first()
+            if not doc:
+                return False
+
+            target_doc_id = doc.doc_id or str(doc.id)
+            chunk.chunk_text = text
+            db.commit()
+        except Exception as e:
+            db.rollback()
+            logger.warning(f"update_chunk ORM error: {e}")
+            return False
+        finally:
+            db.close()
+
+        # Re-sync retrieval indexes so updated chunk is immediately reflected in chat results.
+        self.index_document(target_doc_id)
+        return True
+
+    def delete_chunk(self, chunk_id: int) -> bool:
+        """Delete satu chunk via ORM."""
+        from app.models.db_models import Chunk, Document
+        target_doc_id = None
+        db = self._get_db()
+        try:
+            chunk = db.query(Chunk).filter(Chunk.id == chunk_id).first()
+            if not chunk:
+                return False
+
+            doc = db.query(Document).filter(Document.id == chunk.document_id).first()
+            if not doc:
+                return False
+
+            target_doc_id = doc.doc_id or str(doc.id)
+            db.delete(chunk)
+            db.commit()
+        except Exception as e:
+            db.rollback()
+            logger.warning(f"delete_chunk ORM error: {e}")
+            return False
+        finally:
+            db.close()
+
+        # Keep vector index in sync after chunk deletion.
+        if self.get_chunk_count(target_doc_id) > 0:
+            self.index_document(target_doc_id)
+        else:
+            self._delete_qdrant_points_by_doc_id(target_doc_id)
+            self.update_document(target_doc_id, status="uploaded", chunk_count=0)
+            self._rebuild_bm25_index()
+        return True
+
+    # Lazy load embedding model
+
 
     def upload_file(
         self, file_content: bytes, original_filename: str
@@ -598,65 +968,155 @@ class DocumentManager:
         }
 
         # Use specialized parsers for better chunking (especially tables)
-        if detected_type == "audit":
-            from app.core.ingestion.parsers.audit_parser import AuditParser
+        # Jika parser belum diimplementasi, fallback ke split_legal_document secara graceful
+        chunks = None
 
-            logger.info(f"Using AuditParser for document: {doc_title}")
-            raw_chunks = AuditParser.parse(text, base_metadata)
-            # Convert to expected format
-            chunks = []
-            for chunk in raw_chunks:
-                chunks.append(
-                    {
-                        "text": chunk["text"],
-                        "raw_text": chunk["text"],
-                        "context_header": chunk["metadata"].get("section", doc_title),
-                        "document_title": doc_title,
-                        "filename": doc["original_filename"],
-                        "doc_type": detected_type,
-                        "bab": "",
-                        "bagian": "",
-                        "pasal": "",
-                        "ayat": "",
-                        "parent_pasal_text": "",
-                        "is_parent": True,
-                        "chunk_type": chunk["metadata"].get("chunk_type", "section"),
-                        "section": chunk["metadata"].get("section", ""),
-                        "table_context": chunk["metadata"].get("table_context", ""),
-                        "original_table": chunk["metadata"].get("original_table", ""),
-                    }
-                )
-        elif detected_type == "peraturan":
-            from app.core.ingestion.parsers.peraturan_parser import PeraturanParser
+        # Preferred path: use the same structured parser+chunker pipeline as DocumentProcessor
+        # so uploads from this route inherit the latest chunking improvements.
+        try:
+            from app.core.ingestion.json_structure_parser import parse_document
+            from app.core.ingestion.structured_chunker import chunk_document
+            from app.core.ingestion.pdf_processor import DocumentProcessor
 
-            logger.info(f"Using PeraturanParser for document: {doc_title}")
-            raw_chunks = PeraturanParser.parse(text, base_metadata)
-            # Convert to expected format
-            chunks = []
-            for chunk in raw_chunks:
-                meta = chunk.get("metadata", {})
-                chunks.append(
-                    {
-                        "text": chunk["text"],
-                        "raw_text": chunk["text"],
-                        "context_header": meta.get("hierarchy", doc_title),
-                        "document_title": doc_title,
-                        "filename": doc["original_filename"],
-                        "doc_type": detected_type,
-                        "bab": meta.get("bab", ""),
-                        "bagian": meta.get("bagian", ""),
-                        "pasal": meta.get("pasal", ""),
-                        "ayat": meta.get("ayat", ""),
-                        "parent_pasal_text": "",
-                        "is_parent": True,
-                        "chunk_type": meta.get("section_type", "pasal"),
-                        "section": meta.get("hierarchy", ""),
-                        "table_context": meta.get("table_context", ""),
-                        "original_table": meta.get("original_table", ""),
-                    }
+            folder_hint = detected_type
+            if folder_hint == "audit":
+                folder_hint = "laporan"
+
+            doc_structure = parse_document(
+                text=text,
+                filename=doc["original_filename"],
+                folder_hint=folder_hint,
+            )
+
+            md_fallback_path = None
+            marker_candidates = [
+                Path(doc.get("file_path", "")).name,
+                doc.get("filename", ""),
+                doc.get("original_filename", ""),
+            ]
+            for candidate in marker_candidates:
+                if not candidate:
+                    continue
+                md_path = DocumentProcessor._find_marker_markdown_path(candidate)
+                if md_path:
+                    md_fallback_path = md_path
+                    break
+
+            structured_chunks = chunk_document(
+                doc_structure,
+                md_file_path=md_fallback_path,
+            )
+
+            if structured_chunks:
+                chunks = []
+                for chunk in structured_chunks:
+                    meta = chunk.get("metadata", {}) or {}
+                    hierarchy = meta.get("hierarchy", "")
+                    chunks.append(
+                        {
+                            "text": chunk.get("text", ""),
+                            "raw_text": chunk.get("text", ""),
+                            "context_header": hierarchy or doc_title,
+                            "document_title": meta.get("judul_dokumen", doc_title),
+                            "filename": doc["original_filename"],
+                            "doc_type": meta.get("doc_type", detected_type),
+                            "bab": meta.get("bab", ""),
+                            "bagian": meta.get("bagian", ""),
+                            "pasal": meta.get("pasal", ""),
+                            "ayat": meta.get("ayat", ""),
+                            "parent_pasal_text": "",
+                            "is_parent": True,
+                            "chunk_type": chunk.get("chunk_type", "text"),
+                            "section": hierarchy,
+                            "table_context": meta.get("table_context", ""),
+                            "original_table": meta.get("original_table", ""),
+                        }
+                    )
+
+                logger.info(
+                    f"Using structured chunker pipeline for document: {doc_title} ({len(chunks)} chunks)"
                 )
-        else:
-            # Fallback to original splitting for other document types
+        except Exception as e:
+            logger.warning(
+                f"Structured chunker pipeline failed, falling back to legacy parser flow: {e}"
+            )
+            chunks = None
+
+        if chunks is None and detected_type == "audit":
+            try:
+                from app.core.ingestion.parsers.audit_parser import AuditParser
+
+                logger.info(f"Using AuditParser for document: {doc_title}")
+                raw_chunks = AuditParser.parse(text, base_metadata)
+                # Convert to expected format
+                chunks = []
+                for chunk in raw_chunks:
+                    chunks.append(
+                        {
+                            "text": chunk["text"],
+                            "raw_text": chunk["text"],
+                            "context_header": chunk["metadata"].get("section", doc_title),
+                            "document_title": doc_title,
+                            "filename": doc["original_filename"],
+                            "doc_type": detected_type,
+                            "bab": "",
+                            "bagian": "",
+                            "pasal": "",
+                            "ayat": "",
+                            "parent_pasal_text": "",
+                            "is_parent": True,
+                            "chunk_type": chunk["metadata"].get("chunk_type", "section"),
+                            "section": chunk["metadata"].get("section", ""),
+                            "table_context": chunk["metadata"].get("table_context", ""),
+                            "original_table": chunk["metadata"].get("original_table", ""),
+                        }
+                    )
+            except ImportError:
+                logger.warning(
+                    "AuditParser tidak tersedia (parsers/audit_parser.py belum diimplementasi), "
+                    "fallback ke default splitter"
+                )
+                chunks = None
+
+        elif chunks is None and detected_type == "peraturan":
+            try:
+                from app.core.ingestion.parsers.peraturan_parser import PeraturanParser
+
+                logger.info(f"Using PeraturanParser for document: {doc_title}")
+                raw_chunks = PeraturanParser.parse(text, base_metadata)
+                # Convert to expected format
+                chunks = []
+                for chunk in raw_chunks:
+                    meta = chunk.get("metadata", {})
+                    chunks.append(
+                        {
+                            "text": chunk["text"],
+                            "raw_text": chunk["text"],
+                            "context_header": meta.get("hierarchy", doc_title),
+                            "document_title": doc_title,
+                            "filename": doc["original_filename"],
+                            "doc_type": detected_type,
+                            "bab": meta.get("bab", ""),
+                            "bagian": meta.get("bagian", ""),
+                            "pasal": meta.get("pasal", ""),
+                            "ayat": meta.get("ayat", ""),
+                            "parent_pasal_text": "",
+                            "is_parent": True,
+                            "chunk_type": meta.get("section_type", "pasal"),
+                            "section": meta.get("hierarchy", ""),
+                            "table_context": meta.get("table_context", ""),
+                            "original_table": meta.get("original_table", ""),
+                        }
+                    )
+            except ImportError:
+                logger.warning(
+                    "PeraturanParser tidak tersedia (parsers/peraturan_parser.py belum diimplementasi), "
+                    "fallback ke default splitter"
+                )
+                chunks = None
+
+        if chunks is None:
+            # Fallback ke default splitter — untuk tipe 'other', atau jika parser belum tersedia
             logger.info(f"Using default splitter for document: {doc_title}")
             chunks = split_legal_document(
                 text=text,
@@ -754,10 +1214,101 @@ class DocumentManager:
             embedding = outputs.last_hidden_state.mean(dim=1).squeeze().tolist()
             return embedding
 
-    def index_document(self, doc_id: str) -> Dict[str, Any]:
-        """Index document chunks to Qdrant and BM25."""
+    def _delete_qdrant_points_by_doc_id(self, doc_id: str) -> None:
+        """Delete all Qdrant points for a document id."""
         import httpx
 
+        qdrant_url = settings.QDRANT_URL
+        collection_name = settings.QDRANT_COLLECTION
+        response = httpx.post(
+            f"{qdrant_url}/collections/{collection_name}/points/delete",
+            json={
+                "filter": {
+                    "must": [
+                        {"key": "doc_id", "match": {"value": doc_id}},
+                    ]
+                }
+            },
+            timeout=30,
+        )
+        if response.status_code not in [200, 202]:
+            raise RuntimeError(
+                f"Failed to delete old Qdrant points for doc_id={doc_id}: {response.status_code} {response.text}"
+            )
+
+    def _upload_document_points(
+        self,
+        doc_id: str,
+        doc: Dict[str, Any],
+        chunks: List[Dict[str, Any]],
+        embeddings: List[Optional[List[float]]],
+    ) -> int:
+        """Replace all Qdrant points for a document with a fresh upsert set."""
+        import httpx
+
+        qdrant_url = settings.QDRANT_URL
+        collection_name = settings.QDRANT_COLLECTION
+
+        # Remove stale vectors first to avoid duplicates on reindex.
+        self._delete_qdrant_points_by_doc_id(doc_id)
+
+        points = []
+        for i, (chunk, emb) in enumerate(zip(chunks, embeddings)):
+            if emb is None:
+                continue
+
+            chunk_index = chunk.get("chunk_index", i)
+            points.append(
+                {
+                    "id": str(uuid.uuid4()),
+                    "vector": emb,
+                    "payload": {
+                        "chunk_index": chunk_index,
+                        "text": chunk["text"],
+                        "raw_text": chunk.get("raw_text", chunk["text"]),
+                        "context_header": chunk.get("context_header", ""),
+                        "document_title": doc["document_title"],
+                        "filename": doc["original_filename"],
+                        "doc_type": doc.get("doc_type", "other"),
+                        "bab": chunk.get("bab", ""),
+                        "bagian": chunk.get("bagian", ""),
+                        "pasal": chunk.get("pasal", ""),
+                        "ayat": chunk.get("ayat", ""),
+                        "parent_pasal_text": chunk.get("parent_pasal_text", ""),
+                        "is_parent": chunk.get("is_parent", False),
+                        "doc_id": doc_id,
+                        "chunk_type": chunk.get("chunk_type", "text"),
+                        "section": chunk.get("section", ""),
+                        "table_context": chunk.get("table_context", ""),
+                        "original_table": chunk.get("original_table", ""),
+                    },
+                }
+            )
+
+        if not points:
+            raise RuntimeError(
+                f"No embeddings generated for doc_id={doc_id}. Check embedding model availability."
+            )
+
+        batch_size = 100
+        uploaded = 0
+        for i in range(0, len(points), batch_size):
+            batch = points[i : i + batch_size]
+            response = httpx.put(
+                f"{qdrant_url}/collections/{collection_name}/points",
+                json={"points": batch},
+                timeout=60,
+            )
+            if response.status_code not in [200, 201]:
+                raise RuntimeError(
+                    f"Qdrant upload failed for doc_id={doc_id}: {response.status_code} {response.text}"
+                )
+            uploaded += len(batch)
+
+        return uploaded
+
+    def index_document(self, doc_id: str) -> Dict[str, Any]:
+        """Index document chunks to Qdrant and BM25."""
         doc = self.get_document(doc_id)
         if not doc:
             raise ValueError(f"Document not found: {doc_id}")
@@ -776,68 +1327,18 @@ class DocumentManager:
             if (i + 1) % 50 == 0:
                 logger.info(f"Generated {i + 1}/{len(chunks)} embeddings")
 
-        # Upload to Qdrant
-        qdrant_url = "http://localhost:6333"
-        collection_name = "document_chunks"
-
-        try:
-            points = []
-            for i, (chunk, emb) in enumerate(zip(chunks, embeddings)):
-                if emb is None:
-                    continue
-
-                point_id = str(uuid.uuid4())
-                points.append(
-                    {
-                        "id": point_id,
-                        "vector": emb,
-                        "payload": {
-                            "chunk_index": i,  # Simpan index untuk ordering
-                            "text": chunk["text"],
-                            "raw_text": chunk.get("raw_text", chunk["text"]),
-                            "context_header": chunk.get("context_header", ""),
-                            "document_title": doc["document_title"],
-                            "filename": doc["original_filename"],
-                            "doc_type": doc.get("doc_type", "other"),
-                            "bab": chunk.get("bab", ""),
-                            "bagian": chunk.get("bagian", ""),
-                            "pasal": chunk.get("pasal", ""),
-                            "ayat": chunk.get("ayat", ""),
-                            "parent_pasal_text": chunk.get("parent_pasal_text", ""),
-                            "is_parent": chunk.get("is_parent", False),
-                            "doc_id": doc_id,
-                            # Fields for table support
-                            "chunk_type": chunk.get("chunk_type", "text"),
-                            "section": chunk.get("section", ""),
-                            "table_context": chunk.get("table_context", ""),
-                            "original_table": chunk.get("original_table", ""),
-                        },
-                    }
-                )
-
-            # Batch upload
-            batch_size = 100
-            for i in range(0, len(points), batch_size):
-                batch = points[i : i + batch_size]
-                resp = httpx.put(
-                    f"{qdrant_url}/collections/{collection_name}/points",
-                    json={"points": batch},
-                    timeout=60,
-                )
-                if resp.status_code not in [200, 201]:
-                    logger.error(f"Qdrant upload failed: {resp.text}")
-
-            logger.info(f"Uploaded {len(points)} points to Qdrant")
-
-        except Exception as e:
-            logger.error(f"Qdrant indexing failed: {e}")
+        uploaded_points = self._upload_document_points(doc_id, doc, chunks, embeddings)
+        logger.info(f"Uploaded {uploaded_points} points to Qdrant")
 
         # Mark chunks as indexed
         self.mark_chunks_indexed(doc_id)
 
         # Update document status BEFORE BM25 rebuild (so this doc is included)
         self.update_document(
-            doc_id, status="indexed", processed_at=datetime.now().isoformat()
+            doc_id,
+            status="indexed",
+            chunk_count=len(chunks),
+            processed_at=datetime.now().isoformat(),
         )
 
         # Update BM25 index (uses status="indexed" filter)
@@ -882,10 +1383,12 @@ class DocumentManager:
             return
 
         # Tokenize
-        def tokenize(text):
-            return re.findall(r"\b\w+\b", text.lower())
-
-        tokenized = [tokenize(c["text"]) for c in all_chunks]
+        tokenized = []
+        for c in all_chunks:
+            text = c.get("text", "")
+            metadata = c.get("metadata", {}) or {}
+            search_text = _bm25_search_text(text, metadata)
+            tokenized.append(_tokenize_bm25(search_text))
 
         # Build BM25
         bm25 = BM25Okapi(tokenized)
@@ -923,8 +1426,8 @@ class DocumentManager:
         )
 
         # Delete from Qdrant - try multiple filter strategies
-        qdrant_url = "http://localhost:6333"
-        collection_name = "document_chunks"
+        qdrant_url = settings.QDRANT_URL
+        collection_name = settings.QDRANT_COLLECTION
         qdrant_deleted = 0
 
         try:
@@ -1000,8 +1503,9 @@ class DocumentManager:
         }
 
     def list_documents(self) -> List[Dict[str, Any]]:
-        """Get all documents with metadata."""
+        """Get indexed/processed documents with chunk data for management UI."""
         docs = self.get_all_documents()
+        visible_statuses = {"indexed", "processed", "completed"}
         return [
             {
                 "doc_id": d["doc_id"],
@@ -1015,6 +1519,8 @@ class DocumentManager:
                 "processed_at": d["processed_at"],
             }
             for d in docs
+            if d.get("chunk_count", 0) > 0
+            and str(d.get("status", "")).lower() in visible_statuses
         ]
 
     def get_document_detail(self, doc_id: str) -> Dict[str, Any]:
@@ -1041,16 +1547,16 @@ class DocumentManager:
         }
 
     def sync_from_qdrant(self) -> Dict[str, Any]:
-        """Sync documents from Qdrant to SQLite.
+        """Sync documents from Qdrant to SQLite via ORM.
 
         Scans Qdrant collection for unique documents and creates
         records in SQLite for documents not yet tracked.
         """
         import httpx
-        from app.core.database import get_connection
+        from app.models.db_models import Document
 
-        qdrant_url = "http://localhost:6333"
-        collection_name = "document_chunks"
+        qdrant_url = settings.QDRANT_URL
+        collection_name = settings.QDRANT_COLLECTION
 
         logger.info("Syncing documents from Qdrant...")
 
@@ -1109,51 +1615,43 @@ class DocumentManager:
 
             logger.info(f"Found {len(all_docs)} unique documents in Qdrant")
 
-            # Insert into SQLite (skip if already exists)
-            conn = get_connection()
-            cursor = conn.cursor()
-
+            # Insert into DB via ORM (skip jika sudah ada berdasarkan document_title)
+            db = self._get_db()
             imported = 0
             skipped = 0
 
-            for doc_title, info in all_docs.items():
-                # Generate doc_id from title hash
-                doc_id = f"legacy_{abs(hash(doc_title)) % 100000:05d}"
+            try:
+                for doc_title, info in all_docs.items():
+                    # Check jika sudah ada
+                    existing = db.query(Document).filter(
+                        Document.document_title == doc_title
+                    ).first()
 
-                # Check if already exists
-                cursor.execute(
-                    "SELECT doc_id FROM documents WHERE document_title = ?",
-                    (doc_title,),
-                )
-                existing = cursor.fetchone()
+                    if existing:
+                        skipped += 1
+                        continue
 
-                if existing:
-                    skipped += 1
-                    continue
+                    # Generate doc_id dari title hash
+                    doc_id = f"legacy_{abs(hash(doc_title)) % 100000:05d}"
 
-                # Insert new document
-                cursor.execute(
-                    """
-                    INSERT INTO documents (
-                        doc_id, filename, original_filename, document_title,
-                        doc_type, file_size, file_path, status, chunk_count,
-                        created_at, processed_at
-                    ) VALUES (?, ?, ?, ?, ?, 0, '', 'indexed', ?, 
-                              datetime('now'), datetime('now'))
-                """,
-                    (
-                        doc_id,
-                        info["filename"],
-                        info["filename"],
-                        doc_title,
-                        info["doc_type"],
-                        info["chunk_count"],
-                    ),
-                )
-                imported += 1
+                    # Insert via ORM
+                    new_doc = Document(
+                        doc_id=doc_id,
+                        filename=info["filename"],
+                        original_filename=info["filename"],
+                        document_title=doc_title,
+                        doc_type=info["doc_type"],
+                        file_size=0,
+                        file_path="",
+                        status="indexed",
+                        chunk_count=info["chunk_count"],
+                    )
+                    db.add(new_doc)
+                    imported += 1
 
-            conn.commit()
-            conn.close()
+                db.commit()
+            finally:
+                db.close()
 
             logger.info(f"Sync complete: {imported} imported, {skipped} skipped")
 
