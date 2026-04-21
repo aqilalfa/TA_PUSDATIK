@@ -1105,16 +1105,7 @@ class LangchainRAGEngine:
             if "lampiran" in doc_blob:
                 boost += 0.25
 
-            stage_markers = (
-                "tahap persiapan",
-                "tahap pelaksanaan",
-                "tahap pelaporan",
-            )
-            stage_hits = sum(1 for marker in stage_markers if marker in text_blob)
-            if stage_hits > 0:
-                boost += min(1.20, 0.45 * stage_hits)
-
-            mention_only_index = "daftar tabel" in text_blob and stage_hits == 0
+            mention_only_index = "daftar tabel" in text_blob
             if mention_only_index:
                 boost -= 0.95
             if "isi" in q and mention_only_index:
