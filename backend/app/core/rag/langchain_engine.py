@@ -25,7 +25,6 @@ from langchain_core.documents import Document
 from app.database import SessionLocal
 from app.models.db_models import Conversation
 from app.core.rag.prompts import (
-    SYSTEM_PROMPT_SPBE,
     SYSTEM_PROMPT_TABLE,
     SYSTEM_PROMPT_LEGAL,
     SYSTEM_PROMPT_GENERAL,

@@ -193,10 +193,6 @@ TABLE_STAGE_MARKERS = (
 )
 
 
-def _is_table_query(query: str) -> bool:
-    return bool(TABLE_QUERY_PATTERN.search(str(query or "")))
-
-
 def _extract_required_table_stages(context: str) -> List[str]:
     text = str(context or "").lower()
     required: List[str] = []
