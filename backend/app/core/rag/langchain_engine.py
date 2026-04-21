@@ -1177,6 +1177,7 @@ class LangchainRAGEngine:
         query: str,
         top_k: Optional[int] = None,
         use_rag: bool = True,
+        doc_id: Optional[str] = None,
     ) -> Dict[str, Any]:
         """
         Retrieve relevant documents from Qdrant and format them as context.
@@ -1192,14 +1193,16 @@ class LangchainRAGEngine:
         if not use_rag:
             return {"context": "", "sources": [], "raw_docs": []}
 
-        final_top_k = max(1, int(top_k or self.top_k))
+        query_type = classify_query(query)
+        is_table_query = query_type == "table"
 
-        # Table queries benefit from a slightly wider final set to avoid false negatives.
-        is_table_query = bool(
-            re.search(r"\b(?:tabel|table)\s*(?:ke[-\s]*)?\d{1,3}\b", query.lower())
-        )
-        if is_table_query:
-            final_top_k = max(final_top_k, 8)
+        base_top_k = max(1, int(top_k or self.top_k))
+        if query_type == "table":
+            final_top_k = max(base_top_k, 8)
+        else:
+            final_top_k = min(base_top_k, 6)
+
+        qdrant_filter = self._build_doc_filter(doc_id)
 
         logger.info(f"[Retrieval] Query: '{query[:60]}'")
 
@@ -1210,7 +1213,21 @@ class LangchainRAGEngine:
             query=query,
             search_queries=expanded_queries,
             final_top_k=final_top_k,
+            qdrant_filter=qdrant_filter,
+            doc_id=doc_id,
         )
+
+        # Fallback: if doc_id filter returned 0 results, retry without filter
+        if qdrant_filter is not None and not docs:
+            logger.warning(
+                f"[Retrieval] doc_id filter returned 0 results for doc_id='{doc_id}', "
+                "falling back to unscoped retrieval"
+            )
+            docs = self._run_hybrid_retrieval(
+                query=query,
+                search_queries=expanded_queries,
+                final_top_k=final_top_k,
+            )
 
         # Table completeness safety-net: if retrieval only captures partial table, retry once
         # with stronger stage anchors while still preserving the original query intent.
@@ -1246,6 +1263,8 @@ class LangchainRAGEngine:
                     vector_top_k=max(self.vector_top_k, final_top_k * 4),
                     bm25_top_k=max(self.bm25_top_k, final_top_k * 4),
                     literal_table_top_k=max(6, final_top_k * 2),
+                    qdrant_filter=qdrant_filter,
+                    doc_id=doc_id,
                 )
                 retry_coverage = self._table_stage_coverage_score(retry_docs)
 
@@ -1327,7 +1346,7 @@ class LangchainRAGEngine:
                 "score": float(score),
             })
 
-        return {"context": context, "sources": sources, "raw_docs": docs}
+        return {"context": context, "sources": sources, "raw_docs": docs, "query_type": query_type}
 
     def _format_context(self, docs: List[Document]) -> str:
         """Format documents into structured context string.
