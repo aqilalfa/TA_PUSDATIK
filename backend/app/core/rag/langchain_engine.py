@@ -1281,7 +1281,7 @@ class LangchainRAGEngine:
         # Table completeness safety-net: if retrieval only captures partial table, retry once
         # with stronger stage anchors while still preserving the original query intent.
         if is_table_query:
-            base_coverage = self._table_stage_coverage_score(docs)
+            base_coverage = 0  # will be replaced with anchor-based logic in retrieve_context refactor
             if base_coverage < 3:
                 retry_queries = list(expanded_queries)
                 self._append_unique_search_query(
@@ -1315,7 +1315,7 @@ class LangchainRAGEngine:
                     qdrant_filter=qdrant_filter,
                     doc_id=doc_id,
                 )
-                retry_coverage = self._table_stage_coverage_score(retry_docs)
+                retry_coverage = 0  # will be replaced with anchor-based logic in retrieve_context refactor
 
                 if retry_coverage > base_coverage:
                     logger.info(
