@@ -311,15 +311,7 @@ class LangchainRAGEngine:
                 ]
             ).lower()
             text_blob = text.lower()[:2800]
-            stage_markers = (
-                "tahap persiapan",
-                "tahap pelaksanaan",
-                "tahap pelaporan",
-            )
-            stage_hits = sum(1 for marker in stage_markers if marker in text_blob)
-            mention_only_index = (
-                "daftar tabel" in text_blob and stage_hits == 0
-            )
+            mention_only_index = "daftar tabel" in text_blob
 
             score = 2.50
             if "lampiran" in meta_blob or "lampiran" in text.lower()[:500]:
@@ -330,13 +322,11 @@ class LangchainRAGEngine:
                 score += 0.25
             if metadata.get("pasal"):
                 score -= 0.10
-            if stage_hits > 0:
-                score += min(1.20, 0.45 * stage_hits)
             if mention_only_index:
                 score -= 0.95
             if "isi" in q and mention_only_index:
                 score -= 0.35
-            if len(text.strip()) < 280 and stage_hits == 0:
+            if len(text.strip()) < 280:
                 score -= 0.25
 
             if metadata.get("is_table"):
