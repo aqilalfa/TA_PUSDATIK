@@ -442,7 +442,7 @@ class LangchainRAGEngine:
         phrase_counter: Counter = Counter()
         for doc in table_chunks:
             preview = (doc.page_content or "")[:400].lower()
-            words = word_pattern.findall(preview)
+            words = [w for w in word_pattern.findall(preview) if len(w) >= 3]
             seen: set = set()
             for n in range(2, 5):
                 for i in range(len(words) - n + 1):
@@ -1282,7 +1282,7 @@ class LangchainRAGEngine:
         # with stronger stage anchors while still preserving the original query intent.
         if is_table_query:
             base_coverage = 0  # will be replaced with anchor-based logic in retrieve_context refactor
-            if base_coverage < 3:
+            if False:  # Task 6 replaces this block with anchor-based retry
                 retry_queries = list(expanded_queries)
                 self._append_unique_search_query(
                     retry_queries,
