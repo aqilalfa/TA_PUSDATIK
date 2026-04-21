@@ -24,7 +24,13 @@ from langchain_core.documents import Document
 
 from app.database import SessionLocal
 from app.models.db_models import Conversation
-from app.core.rag.prompts import SYSTEM_PROMPT_SPBE, expand_query
+from app.core.rag.prompts import (
+    SYSTEM_PROMPT_SPBE,
+    SYSTEM_PROMPT_TABLE,
+    SYSTEM_PROMPT_LEGAL,
+    SYSTEM_PROMPT_GENERAL,
+    expand_query,
+)
 from app.config import settings
 
 
@@ -1433,7 +1439,7 @@ class LangchainRAGEngine:
     # ------------------------------------------------------------------
 
     async def stream_answer(
-        self, query: str, context: str, history: List, model_name: str
+        self, query: str, context: str, history: List, model_name: str, query_type: str = "general"
     ) -> AsyncIterator[str]:
         """
         Stream LLM answer token by token.
@@ -1444,7 +1450,13 @@ class LangchainRAGEngine:
         llm = self._get_llm(model_name)
 
         # Build messages list
-        system_content = SYSTEM_PROMPT_SPBE + "\n\nKonteks Referensi:\n" + context
+        _PROMPT_MAP = {
+            "table": SYSTEM_PROMPT_TABLE,
+            "pasal": SYSTEM_PROMPT_LEGAL,
+            "general": SYSTEM_PROMPT_GENERAL,
+        }
+        system_prompt = _PROMPT_MAP.get(query_type, SYSTEM_PROMPT_GENERAL)
+        system_content = system_prompt + "\n\nKonteks Referensi:\n" + context
         messages = [SystemMessage(content=system_content)]
         messages.extend(history)
 

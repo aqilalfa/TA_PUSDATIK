@@ -67,6 +67,7 @@ class ChatRequest(BaseModel):
     use_rag: bool = True
     top_k: int = 5
     max_tokens: int = 2048
+    document_id: Optional[str] = None
 
 
 class ChatResponse(BaseModel):
