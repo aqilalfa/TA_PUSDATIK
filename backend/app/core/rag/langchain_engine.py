@@ -478,13 +478,6 @@ class LangchainRAGEngine:
             ]
         ).lower()
 
-        stage_markers = (
-            "tahap persiapan",
-            "tahap pelaksanaan",
-            "tahap pelaporan",
-        )
-        has_stage_content = any(marker in text_blob for marker in stage_markers)
-
         has_table_semantic_content = any(
             marker in text_blob
             for marker in (
@@ -511,7 +504,6 @@ class LangchainRAGEngine:
         return (
             mentions_target_table
             and is_index_like
-            and not has_stage_content
             and not has_table_semantic_content
             and very_short
         )
