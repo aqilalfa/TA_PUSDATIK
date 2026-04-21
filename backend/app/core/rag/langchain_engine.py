@@ -12,6 +12,7 @@ from typing import List, Dict, Any, Optional, AsyncIterator
 import json
 import pickle
 import re
+from collections import Counter
 from loguru import logger
 
 from qdrant_client import QdrantClient
@@ -412,18 +413,61 @@ class LangchainRAGEngine:
         return docs
 
     @staticmethod
-    def _table_stage_coverage_score(docs: List[Document]) -> int:
-        """Score table retrieval completeness by counting mandatory stage headings found in docs."""
-        if not docs:
-            return 0
+    def _extract_table_anchors(
+        docs: List[Document],
+        table_no: str,
+        min_hits: int = 2,
+        max_anchors: int = 5,
+    ) -> List[str]:
+        """Extract recurring structural phrases from retrieved table chunks.
 
+        A phrase found in >= min_hits distinct chunks is likely a real column
+        header or row label for this table, not noise. Returns at most
+        max_anchors phrases sorted by frequency.
+        """
+        if not docs or not table_no:
+            return []
+
+        target_label = f"tabel {table_no}".lower()
+        word_pattern = re.compile(r"[A-Za-z\u00C0-\u024F]+")
+
+        table_chunks = [
+            d for d in docs
+            if target_label in (d.page_content or "").lower()
+            or str(d.metadata.get("table_label", "")).lower() == target_label
+        ]
+        if not table_chunks:
+            return []
+
+        phrase_counter: Counter = Counter()
+        for doc in table_chunks:
+            preview = (doc.page_content or "")[:400].lower()
+            words = word_pattern.findall(preview)
+            seen: set = set()
+            for n in range(2, 5):
+                for i in range(len(words) - n + 1):
+                    phrase = " ".join(words[i : i + n])
+                    seen.add(phrase)
+            for phrase in seen:
+                phrase_counter[phrase] += 1
+
+        anchors = [
+            phrase
+            for phrase, count in phrase_counter.most_common(20)
+            if count >= min_hits
+        ]
+        return anchors[:max_anchors]
+
+    @staticmethod
+    def _table_anchor_coverage_score(docs: List[Document], anchors: List[str]) -> int:
+        """Count how many anchors appear in combined docs text.
+
+        Returns 0 when anchors is empty (no anchors = no penalty, treat as complete).
+        """
+        if not anchors or not docs:
+            return 0
         blob = "\n".join((doc.page_content or "") for doc in docs).lower()
-        required_markers = (
-            "tahap persiapan",
-            "tahap pelaksanaan",
-            "tahap pelaporan",
-        )
-        return sum(1 for marker in required_markers if marker in blob)
+        return sum(1 for anchor in anchors if anchor in blob)
 
     @staticmethod
     def _is_table_index_noise_doc(doc: Document, table_no: Optional[str]) -> bool:
