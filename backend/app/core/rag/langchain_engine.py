@@ -233,13 +233,16 @@ class LangchainRAGEngine:
         except Exception as e:
             logger.warning(f"[Retrieval] Payload enrichment failed: {e}")
 
-    def _vector_search(self, query: str, top_k: int) -> List[Document]:
-        retriever = self.qdrant.as_retriever(search_kwargs={"k": top_k})
+    def _vector_search(self, query: str, top_k: int, qdrant_filter=None) -> List[Document]:
+        search_kwargs: dict = {"k": top_k}
+        if qdrant_filter is not None:
+            search_kwargs["filter"] = qdrant_filter
+        retriever = self.qdrant.as_retriever(search_kwargs=search_kwargs)
         docs = retriever.invoke(query)
         self._enrich_vector_payloads(docs)
         return docs
 
-    def _bm25_search(self, query: str, top_k: int) -> List[Document]:
+    def _bm25_search(self, query: str, top_k: int, doc_id: Optional[str] = None) -> List[Document]:
         self._load_bm25()
         if self._bm25 is None or not self._bm25_docs:
             return []
@@ -258,6 +261,8 @@ class LangchainRAGEngine:
             metadata = dict(raw.get("metadata", {}))
             metadata["bm25_score"] = float(scores[idx])
             docs.append(Document(page_content=text, metadata=metadata))
+        if doc_id:
+            docs = [d for d in docs if str(d.metadata.get("doc_id", "")) == str(doc_id)]
         return docs
 
     def _table_literal_search(self, query: str, top_k: int) -> List[Document]:
@@ -359,6 +364,8 @@ class LangchainRAGEngine:
         vector_top_k: Optional[int] = None,
         bm25_top_k: Optional[int] = None,
         literal_table_top_k: Optional[int] = None,
+        qdrant_filter=None,
+        doc_id: Optional[str] = None,
     ) -> List[Document]:
         """Run vector+BM25+literal retrieval, fusion, rerank, then neighbor stitching."""
         cleaned_queries: List[str] = []
@@ -373,11 +380,11 @@ class LangchainRAGEngine:
 
         ranked_lists: List[List[Document]] = []
         for q in cleaned_queries:
-            vdocs = self._vector_search(q, v_top_k)
+            vdocs = self._vector_search(q, v_top_k, qdrant_filter=qdrant_filter)
             if vdocs:
                 ranked_lists.append(vdocs)
 
-            bdocs = self._bm25_search(q, b_top_k)
+            bdocs = self._bm25_search(q, b_top_k, doc_id=doc_id)
             if bdocs:
                 ranked_lists.append(bdocs)
 
