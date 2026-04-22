@@ -38,12 +38,23 @@ def test_classify_table_wins_over_pasal():
     assert classify_query("tabel di pasal 5 berisi apa?") == "table"
 
 
-def test_build_doc_filter_with_doc_id():
+def test_build_doc_filter_with_doc_id(monkeypatch):
     from app.core.rag.langchain_engine import LangchainRAGEngine
     engine = LangchainRAGEngine.__new__(LangchainRAGEngine)
+    monkeypatch.setattr(engine, "_resolve_doc_target", lambda d: (42, "foo.pdf"))
     f = engine._build_doc_filter("abc-123")
     assert f is not None
     assert len(f.must) == 1
+    cond = f.must[0]
+    assert cond.key == "metadata.document_id"
+    assert cond.match.value == 42
+
+
+def test_build_doc_filter_unresolved_doc_id(monkeypatch):
+    from app.core.rag.langchain_engine import LangchainRAGEngine
+    engine = LangchainRAGEngine.__new__(LangchainRAGEngine)
+    monkeypatch.setattr(engine, "_resolve_doc_target", lambda d: None)
+    assert engine._build_doc_filter("unknown-doc") is None
 
 
 def test_build_doc_filter_without_doc_id():

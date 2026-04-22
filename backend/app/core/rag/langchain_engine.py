@@ -8,7 +8,7 @@ Simplified architecture:
 """
 
 from pathlib import Path
-from typing import List, Dict, Any, Optional, AsyncIterator
+from typing import List, Dict, Any, Optional, AsyncIterator, Tuple
 import json
 import pickle
 import re
@@ -155,11 +155,33 @@ class LangchainRAGEngine:
     # Retrieval
     # ------------------------------------------------------------------
 
-    def _build_doc_filter(self, doc_id: Optional[str]) -> Optional[Filter]:
-        """Build Qdrant filter to scope retrieval to a single document."""
+    def _resolve_doc_target(self, doc_id: Optional[str]) -> Optional[Tuple[int, str]]:
+        """Resolve doc_id (string UUID or numeric) to (db_id:int, filename:str) via DB."""
         if not doc_id:
             return None
-        return Filter(must=[FieldCondition(key="doc_id", match=MatchValue(value=str(doc_id)))])
+        from app.models.db_models import Document as DBDocument
+        with SessionLocal() as db:
+            row = db.query(DBDocument).filter(DBDocument.doc_id == str(doc_id)).first()
+            if not row and str(doc_id).isdigit():
+                row = db.query(DBDocument).filter(DBDocument.id == int(doc_id)).first()
+            if not row:
+                return None
+            return int(row.id), str(row.filename or "")
+
+    def _build_doc_filter(self, doc_id: Optional[str]) -> Optional[Filter]:
+        """Build Qdrant filter to scope retrieval to a single document.
+
+        Payload structure stores the numeric DB id under ``metadata.document_id``.
+        Resolve the incoming ``doc_id`` (may be a UUID-style string or numeric) to
+        the DB's integer primary key before building the filter.
+        """
+        if not doc_id:
+            return None
+        target = self._resolve_doc_target(doc_id)
+        if not target:
+            return None
+        db_id, _ = target
+        return Filter(must=[FieldCondition(key="metadata.document_id", match=MatchValue(value=db_id))])
 
     def _bm25_index_path(self) -> Path:
         backend_root = Path(__file__).resolve().parents[3]
@@ -268,10 +290,23 @@ class LangchainRAGEngine:
             metadata["bm25_score"] = float(scores[idx])
             docs.append(Document(page_content=text, metadata=metadata))
         if doc_id:
-            docs = [d for d in docs if str(d.metadata.get("doc_id", "")) == str(doc_id)]
+            target = self._resolve_doc_target(doc_id)
+            if target:
+                _, target_filename = target
+                if target_filename:
+                    docs = [
+                        d for d in docs
+                        if str(d.metadata.get("filename", "")) == target_filename
+                    ]
+                else:
+                    docs = []
+            else:
+                docs = []
         return docs
 
-    def _table_literal_search(self, query: str, top_k: int) -> List[Document]:
+    def _table_literal_search(
+        self, query: str, top_k: int, doc_id: Optional[str] = None
+    ) -> List[Document]:
         """Literal table lookup over BM25 source docs for queries like 'Tabel 13'."""
         self._load_bm25()
         if not self._bm25_docs:
@@ -291,6 +326,15 @@ class LangchainRAGEngine:
             re.IGNORECASE,
         )
 
+        target_filename: Optional[str] = None
+        if doc_id:
+            resolved = self._resolve_doc_target(doc_id)
+            if not resolved:
+                return []
+            _, target_filename = resolved
+            if not target_filename:
+                return []
+
         ranked: List[tuple[float, Document]] = []
         for raw in self._bm25_docs:
             text = str(raw.get("text", "") or "")
@@ -301,6 +345,8 @@ class LangchainRAGEngine:
                 continue
 
             metadata = dict(raw.get("metadata", {}))
+            if target_filename and str(metadata.get("filename", "")) != target_filename:
+                continue
             meta_blob = " ".join(
                 [
                     str(metadata.get("document_title", "") or ""),
@@ -384,7 +430,7 @@ class LangchainRAGEngine:
             if bdocs:
                 ranked_lists.append(bdocs)
 
-        literal_table_docs = self._table_literal_search(query, top_k=t_top_k)
+        literal_table_docs = self._table_literal_search(query, top_k=t_top_k, doc_id=doc_id)
         if literal_table_docs:
             logger.info(f"[Retrieval] Literal table candidates: {len(literal_table_docs)}")
             ranked_lists.append(literal_table_docs)
