@@ -906,32 +906,13 @@ class LangchainRAGEngine:
             rf"\b(?:tabel|table)\s*(?:ke[-\s]*)?{re.escape(table_no)}\b",
             re.IGNORECASE,
         )
-
         if not table_pattern.search(c):
             return ""
-
-        available_stages = []
-        if re.search(r"\btahap\s+persiapan\b", c, re.IGNORECASE):
-            available_stages.append("Tahap Persiapan")
-        if re.search(r"\btahap\s+pelaksanaan\b", c, re.IGNORECASE):
-            available_stages.append("Tahap Pelaksanaan")
-        if re.search(r"\btahap\s+pelaporan\b", c, re.IGNORECASE):
-            available_stages.append("Tahap Pelaporan")
-
-        stage_instruction = ""
-        if available_stages:
-            stages_text = ", ".join(available_stages)
-            stage_instruction = (
-                f" Konteks memuat tahap berikut: {stages_text}. "
-                "Wajib rangkum SEMUA tahap yang tersedia tersebut, dan dilarang menyatakan tahap itu "
-                "'tidak tersedia' atau 'tidak tercantum'."
-            )
 
         return (
             f"Instruksi tambahan pertanyaan tabel: konteks memuat Tabel {table_no}. "
             f"Wajib jawab menggunakan isi Tabel {table_no} yang tersedia di konteks, sertakan sitasi [n], "
-            "dan jangan menyatakan 'tidak ditemukan' untuk Tabel tersebut."
-            f"{stage_instruction} "
+            "dan jangan menyatakan 'tidak ditemukan' untuk Tabel tersebut. "
             "Jika isi tabel yang tersedia benar-benar parsial, nyatakan jawaban berdasar bagian yang tersedia saja."
         )
 
