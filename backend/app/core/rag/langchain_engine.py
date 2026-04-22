@@ -1379,6 +1379,7 @@ class LangchainRAGEngine:
 
             sources.append({
                 "id": i,
+                "doc_id": str(meta.get("doc_id") or meta.get("document_id") or ""),
                 "document": citation_title,
                 "document_short": doc_title,
                 "citation_title": citation_title,
