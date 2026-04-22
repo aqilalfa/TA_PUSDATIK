@@ -186,52 +186,6 @@ TABLE_QUERY_PATTERN = re.compile(
     r"\b(?:tabel|table)\s*(?:ke[-\s]*)?\d{1,3}\b",
     re.IGNORECASE,
 )
-TABLE_STAGE_MARKERS = (
-    "Tahap Persiapan",
-    "Tahap Pelaksanaan",
-    "Tahap Pelaporan",
-)
-
-
-def _extract_required_table_stages(context: str) -> List[str]:
-    text = str(context or "").lower()
-    required: List[str] = []
-    for stage in TABLE_STAGE_MARKERS:
-        if stage.lower() in text:
-            required.append(stage)
-    return required
-
-
-def _count_stage_hits(answer: str, stages: List[str]) -> int:
-    if not stages:
-        return 0
-    text = str(answer or "").lower()
-    return sum(1 for stage in stages if stage.lower() in text)
-
-
-def _has_unavailable_stage_claim(answer: str, stages: List[str]) -> bool:
-    """Detect claims that table stages are unavailable/missing in the provided context."""
-    if not stages:
-        return False
-
-    text = str(answer or "").lower()
-
-    # Global disclaimer can be enough to consider answer quality low for table completeness.
-    if _contains_unavailable_signal(text):
-        for stage in stages:
-            stage_l = stage.lower()
-            pos = text.find(stage_l)
-            if pos >= 0:
-                start = max(0, pos - 180)
-                end = min(len(text), pos + len(stage_l) + 180)
-                window = text[start:end]
-                if _contains_unavailable_signal(window):
-                    return True
-
-        # If negatives exist anywhere while required stages are known in context, treat as weak answer.
-        return True
-
-    return False
 
 
 def _chunk_text(text: str, chunk_size: int = 180) -> List[str]:
@@ -298,7 +252,6 @@ def _build_answer_quality_report(
     context: str,
     answer: str,
     source_count: int,
-    required_stages: List[str],
 ) -> Dict[str, Any]:
     answer_text = str(answer or "").strip()
     answer_lower = answer_text.lower()
@@ -330,13 +283,6 @@ def _build_answer_quality_report(
     length_ok = len(answer_text) >= 180
     source_ok = source_count > 0
 
-    stage_hits = _count_stage_hits(answer_text, required_stages)
-    missing_stages = [
-        stage for stage in required_stages if stage.lower() not in answer_lower
-    ]
-    stage_ok = not missing_stages
-    has_unavailable_stage_claim = _has_unavailable_stage_claim(answer_text, required_stages)
-
     score = 0
     score += min(12, len(answer_text) // 120)
     score += int(10 * focus_coverage)
@@ -347,13 +293,6 @@ def _build_answer_quality_report(
     if has_unavailable_claim:
         score -= 4
     if conflicting_unavailable_claim:
-        score -= 6
-
-    if required_stages:
-        score += stage_hits * 3
-        if not stage_ok:
-            score -= 8
-    if has_unavailable_stage_claim:
         score -= 6
 
     retry_reasons: List[str] = []
@@ -367,10 +306,6 @@ def _build_answer_quality_report(
         retry_reasons.append("sitasi [n] belum muncul")
     if not length_ok:
         retry_reasons.append("jawaban terlalu ringkas")
-    if required_stages and not stage_ok:
-        retry_reasons.append("tahap wajib belum lengkap")
-    if has_unavailable_stage_claim:
-        retry_reasons.append("klaim unavailable muncul pada tahap yang tersedia")
 
     return {
         "score": score,
@@ -382,15 +317,11 @@ def _build_answer_quality_report(
         "answer_focus_terms": answer_focus_terms,
         "has_unavailable_claim": has_unavailable_claim,
         "conflicting_unavailable_claim": conflicting_unavailable_claim,
-        "has_unavailable_stage_claim": has_unavailable_stage_claim,
         "list_intent": list_intent,
         "list_structure_ok": list_structure_ok,
         "citation_count": citations,
         "source_count": source_count,
         "answer_length": len(answer_text),
-        "required_stages": required_stages,
-        "stage_hits": stage_hits,
-        "missing_stages": missing_stages,
         "unavailable_triggers_active": active_unavailable_triggers,
         "unavailable_triggers_suppressed": suppressed_unavailable_triggers,
     }
@@ -400,7 +331,6 @@ def _quality_rank_key(report: Dict[str, Any]):
     """Rank quality reports with hard constraints first, then score and coverage."""
     return (
         0 if not report.get("conflicting_unavailable_claim") else -1,
-        0 if not report.get("missing_stages") else -1,
         0 if report.get("list_structure_ok", True) else -1,
         int(report.get("score", 0)),
         float(report.get("focus_coverage", 0.0)),
@@ -412,7 +342,6 @@ def _quality_rank_key(report: Dict[str, Any]):
 def _build_retry_query(
     original_query: str,
     quality_report: Dict[str, Any],
-    required_stages: List[str],
 ) -> str:
     instructions = [
         "- Jawab ketat berdasarkan konteks referensi yang sudah diberikan.",
@@ -437,13 +366,6 @@ def _build_retry_query(
     if quality_report.get("list_intent"):
         instructions.append(
             "- Karena pertanyaan meminta rincian/daftar, tulis butir utama secara lengkap dalam format poin."
-        )
-
-    if required_stages:
-        instructions.append(
-            "- Untuk konteks tabel ini, wajib mencakup semua tahap yang tersedia: "
-            + ", ".join(required_stages)
-            + "."
         )
 
     return (
@@ -575,11 +497,6 @@ async def chat_stream(request: ChatRequest, db: Session = Depends(get_db)):
 
             full_response = ""
             selected_quality: Dict[str, Any] = {}
-            required_stages = (
-                _extract_required_table_stages(context)
-                if classify_query(request.message) == "table"
-                else []
-            )
 
             first_response = await collect_answer(request.message)
             first_quality = _build_answer_quality_report(
@@ -587,7 +504,6 @@ async def chat_stream(request: ChatRequest, db: Session = Depends(get_db)):
                 context=context,
                 answer=first_response,
                 source_count=len(sources_for_response),
-                required_stages=required_stages,
             )
 
             candidate_pool = [(first_response, first_quality)]
@@ -604,7 +520,6 @@ async def chat_stream(request: ChatRequest, db: Session = Depends(get_db)):
                 retry_query = _build_retry_query(
                     original_query=request.message,
                     quality_report=current_best_quality,
-                    required_stages=required_stages,
                 )
                 retry_response = await collect_answer(retry_query)
                 retry_quality = _build_answer_quality_report(
@@ -612,7 +527,6 @@ async def chat_stream(request: ChatRequest, db: Session = Depends(get_db)):
                     context=context,
                     answer=retry_response,
                     source_count=len(sources_for_response),
-                    required_stages=required_stages,
                 )
                 candidate_pool.append((retry_response, retry_quality))
 
@@ -696,7 +610,6 @@ async def chat_stream(request: ChatRequest, db: Session = Depends(get_db)):
                 "retry_reasons": selected_quality.get("retry_reasons"),
                 "focus_coverage": selected_quality.get("focus_coverage"),
                 "has_unavailable_claim": selected_quality.get("has_unavailable_claim"),
-                "missing_stages": selected_quality.get("missing_stages"),
                 "unavailable_triggers_active": selected_quality.get(
                     "unavailable_triggers_active", []
                 ),
