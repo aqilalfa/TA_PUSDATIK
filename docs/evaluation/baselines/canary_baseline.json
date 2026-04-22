@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-04-22T19:50:04.317865+07:00",
+  "commit": "2c97101",
+  "queries": [
+    {
+      "id": "canary_tabel13_doc1",
+      "request": {
+        "message": "apa isi tabel 13?",
+        "document_id": "1"
+      },
+      "expected": {
+        "answer_must_contain_any": [
+          "Sekretariat Kabinet",
+          "Kejaksaan Agung"
+        ],
+        "sources_allowed_doc_ids": [
+          1
+        ],
+        "min_score": 20,
+        "has_unavailable_claim": false
+      },
+      "baseline_actual": {
+        "score": 27,
+        "source_count": 8,
+        "answer_length": 994
+      }
+    },
+    {
+      "id": "canary_pasal5_doc6",
+      "request": {
+        "message": "apa isi pasal 5?",
+        "document_id": "6"
+      },
+      "expected": {
+        "answer_must_contain_any": [
+          "Ayat (7)",
+          "Rencana Induk"
+        ],
+        "sources_allowed_doc_ids": [
+          6
+        ],
+        "min_score": 20,
+        "has_unavailable_claim": false
+      },
+      "baseline_actual": {
+        "score": 22,
+        "source_count": 5,
+        "answer_length": 561
+      }
+    },
+    {
+      "id": "canary_leakage_guard",
+      "request": {
+        "message": "apa isi tabel 13?",
+        "document_id": "3"
+      },
+      "expected": {
+        "answer_must_contain_any": [
+          "tidak ditemukan",
+          "tidak ada tabel"
+        ],
+        "sources_allowed_doc_ids": [
+          3
+        ],
+        "min_score": 0
+      },
+      "baseline_actual": {
+        "score": 31,
+        "source_count": 8,
+        "answer_length": 2958
+      }
+    },
+    {
+      "id": "canary_general_spbe",
+      "request": {
+        "message": "apa itu SPBE?"
+      },
+      "expected": {
+        "answer_must_contain_any": [
+          "Sistem Pemerintahan Berbasis Elektronik"
+        ],
+        "min_score": 15,
+        "has_unavailable_claim": false
+      },
+      "baseline_actual": {
+        "score": 23,
+        "source_count": 5,
+        "answer_length": 898
+      }
+    }
+  ]
+}

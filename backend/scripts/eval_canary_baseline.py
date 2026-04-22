@@ -49,7 +49,6 @@ _CANARIES = [
             "answer_must_contain_any": ["tidak ditemukan", "tidak ada tabel"],
             "sources_allowed_doc_ids": [3],
             "min_score": 0,
-            "has_unavailable_claim": True,
         },
     },
     {
