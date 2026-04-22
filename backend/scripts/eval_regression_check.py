@@ -138,7 +138,7 @@ def run(baseline_path: Path, backend: str, timeout: float) -> int:
     # Probe backend
     try:
         if requests is not None:
-            requests.get(f"{backend.rstrip('/')}/api/health/", timeout=3)
+            requests.get(f"{backend.rstrip('/')}/api/health/", timeout=10)
     except Exception as e:
         print(f"[WARN] backend down at {backend} ({e}); skipped", file=sys.stderr)
         return 0
