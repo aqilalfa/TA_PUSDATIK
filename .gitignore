@@ -76,3 +76,7 @@ nul
 !backend/qdrant_storage/.gitkeep
 !backend/logs/backend/.gitkeep
 !backend/logs/nginx/.gitkeep
+
+# Claude Code ephemeral state (dirty flags, session stamps)
+.claude/_state/*
+!.claude/_state/.gitkeep
