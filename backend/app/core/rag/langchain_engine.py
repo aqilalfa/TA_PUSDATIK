@@ -1251,31 +1251,27 @@ class LangchainRAGEngine:
                 final_top_k=final_top_k,
             )
 
-        # Table completeness safety-net: if retrieval only captures partial table, retry once
-        # with stronger stage anchors while still preserving the original query intent.
+        # Table completeness safety-net: if anchor-based coverage is low, retry once
+        # using the missing anchor phrases as additional query keywords.
         if is_table_query:
-            base_coverage = 0  # will be replaced with anchor-based logic in retrieve_context refactor
-            if False:  # Task 6 replaces this block with anchor-based retry
-                retry_queries = list(expanded_queries)
-                self._append_unique_search_query(
-                    retry_queries,
-                    (
-                        f"{query} tahap persiapan tahap pelaksanaan tahap pelaporan"
-                    ),
-                )
+            anchor_table_match = re.search(
+                r"\b(?:tabel|table)\s*(?:ke[-\s]*)?(\d{1,3})\b", query, re.IGNORECASE
+            )
+            anchor_table_no = anchor_table_match.group(1) if anchor_table_match else ""
+            anchors = self._extract_table_anchors(docs, anchor_table_no)
+            base_coverage = self._table_anchor_coverage_score(docs, anchors)
+            anchor_threshold = max(1, len(anchors) // 2) if anchors else 0
 
-                table_match = re.search(
-                    r"\b(?:tabel|table)\s*(?:ke[-\s]*)?(\d{1,3})\b",
-                    query,
-                    re.IGNORECASE,
-                )
-                if table_match:
-                    table_no = table_match.group(1)
+            if anchors and base_coverage < anchor_threshold:
+                combined_blob = "\n".join(
+                    (d.page_content or "") for d in docs
+                ).lower()
+                missing_anchors = [a for a in anchors if a not in combined_blob]
+                retry_queries = list(expanded_queries)
+                if missing_anchors:
                     self._append_unique_search_query(
                         retry_queries,
-                        (
-                            f"{query} tabel {table_no} tahap pelaksanaan tahap pelaporan"
-                        ),
+                        f"{query} {' '.join(missing_anchors[:3])}",
                     )
 
                 retry_docs = self._run_hybrid_retrieval(
@@ -1288,17 +1284,17 @@ class LangchainRAGEngine:
                     qdrant_filter=qdrant_filter,
                     doc_id=doc_id,
                 )
-                retry_coverage = 0  # will be replaced with anchor-based logic in retrieve_context refactor
+                retry_coverage = self._table_anchor_coverage_score(retry_docs, anchors)
 
                 if retry_coverage > base_coverage:
                     logger.info(
-                        "[Retrieval] Table completeness improved "
+                        "[Retrieval] Table anchor coverage improved "
                         f"({base_coverage} -> {retry_coverage}); using retry results"
                     )
                     docs = retry_docs
                 else:
                     logger.info(
-                        "[Retrieval] Table completeness retry did not improve "
+                        "[Retrieval] Table anchor retry did not improve "
                         f"({base_coverage} -> {retry_coverage}); keeping initial results"
                     )
 
