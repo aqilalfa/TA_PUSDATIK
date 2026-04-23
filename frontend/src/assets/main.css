@@ -1,10 +1,265 @@
-/* Tailwind CSS base styles */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+@import 'katex/dist/katex.min.css';
 
-/* Custom global styles */
-body {
+:root {
+  --color-navy: #1a3a6b;
+  --color-navy-dark: #122d57;
+  --color-navy-hover: #2c5282;
+  --color-gold: #c9a84c;
+  --color-gold-hover: #d4b55e;
+  --color-cream: #f8f7f4;
+  --color-cream-dark: #f0ece4;
+  --color-white: #ffffff;
+  --color-border: #e8e0d0;
+  --color-border-light: #f5f2ee;
+  --color-text: #333333;
+  --color-text-muted: #888888;
+  --color-text-light: #bbbbbb;
+  --color-status-ok-bg: #edf7f2;
+  --color-status-ok-text: #2d7a4f;
+  --color-status-ok-border: #a3d9b9;
+  --color-status-warn-bg: #fdf8ee;
+  --color-status-warn-text: #8b7355;
+  --color-status-warn-border: #e0c97a;
+  --color-status-info-bg: #eef2f9;
+  --color-status-info-text: #1a3a6b;
+  --color-status-info-border: #b8cce4;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Source Serif 4', Georgia, serif;
+  --font-ui: 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-ui);
+  background: var(--color-cream);
+  color: var(--color-text);
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Topbar utility classes */
+.topbar {
+  background: var(--color-navy);
+  padding: 10px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.25);
+  flex-shrink: 0;
+}
+
+.topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-logo {
+  width: 34px;
+  height: 34px;
+  background: var(--color-gold);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-navy);
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.topbar-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: white;
+  font-size: 16px;
+  letter-spacing: -0.3px;
+}
+
+.topbar-subtitle {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.topbar-nav {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.topbar-nav-link {
+  padding: 5px 14px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border-radius: 2px;
+  letter-spacing: 0.3px;
+  transition: all 0.15s;
+  text-decoration: none;
+  border: none;
+  background: none;
+  font-family: var(--font-ui);
+}
+
+.topbar-nav-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.topbar-nav-link.active {
+  color: var(--color-gold);
+}
+
+.status-dot {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.status-dot::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #5cb85c;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #5cb85c;
+}
+
+.status-dot.disconnected::before {
+  background: #e74c3c;
+  box-shadow: 0 0 5px #e74c3c;
+}
+
+.status-dot.connecting::before {
+  background: #f39c12;
+  box-shadow: 0 0 5px #f39c12;
+}
+
+/* Badge utility classes */
+.badge {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 2px;
+  font-family: var(--font-ui);
+}
+
+.badge-ok {
+  background: var(--color-status-ok-bg);
+  color: var(--color-status-ok-text);
+  border: 1px solid var(--color-status-ok-border);
+}
+
+.badge-warn {
+  background: var(--color-status-warn-bg);
+  color: var(--color-status-warn-text);
+  border: 1px solid var(--color-status-warn-border);
+}
+
+.badge-info {
+  background: var(--color-status-info-bg);
+  color: var(--color-status-info-text);
+  border: 1px solid var(--color-status-info-border);
+}
+
+/* Section heading utility */
+.section-heading {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.section-heading::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* Animations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
 }

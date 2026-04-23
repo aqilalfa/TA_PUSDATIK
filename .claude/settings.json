@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/hooks/rag_mark_dirty.py"
+            "command": "python d:/aqil/pusdatik/.claude/hooks/rag_mark_dirty.py"
           }
         ]
       }
@@ -16,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/hooks/rag_run_regression.py"
+            "command": "python d:/aqil/pusdatik/.claude/hooks/rag_run_regression.py"
           }
         ]
       }
