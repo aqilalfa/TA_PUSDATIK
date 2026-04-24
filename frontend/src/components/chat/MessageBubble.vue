@@ -18,34 +18,44 @@
           Berdasarkan dokumen resmi
           <span v-if="message.sources && message.sources.length"> · {{ message.sources.length }} sumber</span>
         </span>
+        <span v-if="message.timestamp" class="msg-ai-timestamp">{{ message.timestamp }}</span>
         <span v-if="message.timing && !message.streaming" class="msg-ai-timing">
           {{ Math.round(message.timing.total_ms) }}ms
         </span>
       </div>
 
-      <div class="msg-ai-bubble">
-        <div v-if="message.loading" class="loading-dots">
-          <span></span><span></span><span></span>
+      <div class="msg-ai-bubble-wrapper">
+        <div class="msg-ai-bubble">
+          <div v-if="message.loading" class="loading-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <template v-else>
+            <div class="msg-text" v-html="formattedContent"></div>
+            <span v-if="message.streaming" class="streaming-cursor"></span>
+
+            <div v-if="showSources" class="source-cards">
+              <SourceCard
+                v-for="source in message.sources"
+                :key="`${source.id}-${source.document}-${source.section || 'none'}`"
+                :source="source"
+              />
+            </div>
+
+            <div v-if="showValidationWarnings" class="validation-warnings">
+              <div class="validation-title">⚠ Peringatan Validasi</div>
+              <ul>
+                <li v-for="(warning, i) in message.validation.warnings" :key="i">{{ warning }}</li>
+              </ul>
+            </div>
+          </template>
         </div>
-        <template v-else>
-          <div class="msg-text" v-html="formattedContent"></div>
-          <span v-if="message.streaming" class="streaming-cursor"></span>
 
-          <div v-if="showSources" class="source-cards">
-            <SourceCard
-              v-for="source in message.sources"
-              :key="`${source.id}-${source.document}-${source.section || 'none'}`"
-              :source="source"
-            />
-          </div>
-
-          <div v-if="showValidationWarnings" class="validation-warnings">
-            <div class="validation-title">⚠ Peringatan Validasi</div>
-            <ul>
-              <li v-for="(warning, i) in message.validation.warnings" :key="i">{{ warning }}</li>
-            </ul>
-          </div>
-        </template>
+        <MessageActions
+          v-if="!message.loading && !message.streaming"
+          :content="message.content || ''"
+          :has-warning="showValidationWarnings"
+          @dismiss-warning="warningDismissed = true"
+        />
       </div>
     </div>
 
@@ -53,13 +63,16 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import SourceCard from './SourceCard.vue'
+import MessageActions from './MessageActions.vue'
 import { formatMessageContent } from '@/utils/messageFormatter.js'
 
 const props = defineProps({
   message: { type: Object, required: true }
 })
+
+const warningDismissed = ref(false)
 
 const formattedContent = computed(() => formatMessageContent(props.message.content))
 
@@ -68,6 +81,7 @@ const showSources = computed(() =>
 )
 
 const showValidationWarnings = computed(() => {
+  if (warningDismissed.value) return false
   const w = props.message.validation?.warnings
   return Array.isArray(w) && w.length > 0 && !props.message.streaming
 })
@@ -137,12 +151,27 @@ const showValidationWarnings = computed(() => {
   gap: 6px;
 }
 
+.msg-ai-timestamp {
+  font-size: 9px;
+  color: var(--color-text-light);
+  font-family: var(--font-ui);
+}
+
 .msg-ai-timing {
   font-size: 9px;
   color: var(--color-text-light);
   font-family: var(--font-ui);
   font-style: normal;
   margin-left: auto;
+}
+
+/* Bubble wrapper enables hover-reveal for MessageActions */
+.msg-ai-bubble-wrapper {
+  position: relative;
+}
+
+.msg-ai-bubble-wrapper:hover :deep(.message-actions) {
+  opacity: 1;
 }
 
 .msg-ai-bubble {
