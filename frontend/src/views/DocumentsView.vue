@@ -270,7 +270,7 @@ function clearFile() {
 }
 
 async function uploadFile() {
-  if (!selectedFile.value) return
+  if (!selectedFile.value || validationErrors.value.length > 0) return
   uploading.value = true
   try {
     const data = await uploadDocument(selectedFile.value)

@@ -18,7 +18,7 @@ vi.mock('@/services/documentService', () => ({
   }),
   saveDocument: vi.fn().mockResolvedValue({ chunks_indexed: 5 }),
   listDocuments: vi.fn().mockResolvedValue([]),
-  syncDocuments: vi.fn(),
+  syncDocuments: vi.fn().mockResolvedValue({}),
   deleteDocument: vi.fn()
 }))
 
