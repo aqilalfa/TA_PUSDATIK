@@ -10,6 +10,7 @@
       @new-chat="createNewChat"
       @load-session="loadSession"
       @delete-session="deleteSession"
+      @rename-session="handleRenameSession"
       @model-change="onModelChange"
     />
 
@@ -271,6 +272,16 @@ async function deleteSession(sessionId) {
     }
   } catch (error) {
     console.error('Failed to delete session:', error)
+  }
+}
+
+async function handleRenameSession({ id, title }) {
+  try {
+    await updateSessionTitle(id, title)
+    const session = sessions.value.find(s => s.id === id)
+    if (session) session.title = title
+  } catch (err) {
+    console.error('Failed to rename session', err)
   }
 }
 
