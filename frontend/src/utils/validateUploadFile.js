@@ -15,7 +15,7 @@ export function validateFile(file) {
   }
 
   if (!SAFE_NAME.test(file.name)) {
-    const suggested = file.name.replace(/[^a-zA-Z0-9_\-.()\s]/g, '').replace(/\s{2,}/g, ' ').trim()
+    const suggested = file.name.replace(/[^a-zA-Z0-9_\-.()\s]/g, '').replace(/\s+/g, '_')
     warnings.push(`Nama file mengandung karakter tidak umum. Saran: ${suggested}`)
   }
 

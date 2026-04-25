@@ -41,4 +41,9 @@ describe('validateFile', () => {
     const result = validateFile(makeFile('Laporan_Audit_2024.pdf', 1 * MB))
     expect(result.warnings).toHaveLength(0)
   })
+
+  it('suggests underscores in place of spaces in sanitised filename', () => {
+    const result = validateFile(makeFile('Laporan Final 2024!.pdf', 1 * MB))
+    expect(result.warnings[0]).toContain('Laporan_Final_2024.pdf')
+  })
 })
