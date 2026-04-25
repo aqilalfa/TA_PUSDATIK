@@ -110,12 +110,13 @@
         >
           {{ uploading ? 'Mengunggah...' : 'Unggah Dokumen' }}
         </button>
-        <div v-if="uploading" class="upload-progress">
-          <div class="progress-bar">
-            <div class="progress-fill" :style="{ width: uploadProgress + '%' }"></div>
-          </div>
-          <span class="progress-label">{{ uploadProgress }}%</span>
+      </div>
+      <!-- Progress bar: shown while upload is in progress, regardless of uploadedDocId state -->
+      <div v-if="uploading" class="upload-progress">
+        <div class="progress-bar">
+          <div class="progress-fill" :style="{ width: uploadProgress + '%' }"></div>
         </div>
+        <span class="progress-label">{{ uploadProgress }}%</span>
       </div>
       <div v-if="uploadedDocId && !previewData" class="upload-actions">
         <button @click="previewChunks" :disabled="previewing" class="btn-outline">
@@ -287,7 +288,12 @@ function stepClass(stepNum) {
   if (s === 'idle') return 'idle'
   const active = s === 'step1' ? 1 : s === 'step2' ? 2 : 3
   if (stepNum < active) return 'done'
-  if (stepNum === active) return (stepNum === 1 && uploading.value) ? 'in-progress' : 'active'
+  if (stepNum === active) {
+    const inProg = (stepNum === 1 && uploading.value)
+                 || (stepNum === 2 && previewing.value)
+                 || (stepNum === 3 && saving.value)
+    return inProg ? 'in-progress' : 'active'
+  }
   return 'idle'
 }
 
@@ -447,7 +453,7 @@ onMounted(async () => {
   await syncFromQdrant()
 })
 
-defineExpose({ handleFileChange, uploadedDocId, previewData, saveComplete, selectedFile })
+defineExpose({ handleFileChange, uploadedDocId, previewData, saveComplete, selectedFile, lastChunkCount })
 </script>
 
 <style scoped>
