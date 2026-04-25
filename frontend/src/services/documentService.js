@@ -6,8 +6,8 @@ export async function uploadDocument(file, onProgress) {
     formData.append('file', file)
     const { data } = await api.post('/api/documents/upload', formData, {
       onUploadProgress: (e) => {
-        if (onProgress && e.total) {
-          onProgress(Math.round((e.loaded / e.total) * 100))
+        if (typeof onProgress === 'function' && e.total > 0) {
+          onProgress(Math.min(100, Math.round((e.loaded / e.total) * 100)))
         }
       }
     })
