@@ -1377,6 +1377,7 @@ class LangchainRAGEngine:
                 or 0.0
             )
 
+            _text = doc.page_content or ""
             sources.append({
                 "id": i,
                 "doc_id": str(meta.get("doc_id") or meta.get("document_id") or ""),
@@ -1390,6 +1391,7 @@ class LangchainRAGEngine:
                 "context_header": str(meta.get("context_header") or ""),
                 "hierarchy_path": str(meta.get("hierarchy_path") or ""),
                 "score": float(score),
+                "snippet": (_text[:150].rstrip() + "…") if len(_text) > 150 else _text,
             })
 
         return {"context": context, "sources": sources, "raw_docs": docs, "query_type": query_type}
