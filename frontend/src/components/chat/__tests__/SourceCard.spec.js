@@ -34,6 +34,11 @@ describe('SourceCard', () => {
     expect(wrapper.find('.source-score').exists()).toBe(false)
   })
 
+  it('renders score safely when score is provided as a string', () => {
+    const wrapper = mount(SourceCard, { props: { source: { ...baseSource, score: '0.87' } } })
+    expect(wrapper.find('.source-score').text()).toContain('0.87')
+  })
+
   it('renders snippet in expand panel when present', () => {
     const wrapper = mount(SourceCard, { props: { source: baseSource } })
     expect(wrapper.find('.expand-snippet').text()).toContain('penyelenggaraan pemerintahan')
@@ -48,7 +53,7 @@ describe('SourceCard', () => {
     vi.spyOn(window, 'open').mockImplementation(() => null)
     const wrapper = mount(SourceCard, { props: { source: baseSource } })
     await wrapper.find('.source-card-wrapper').trigger('click')
-    expect(window.open).toHaveBeenCalledWith('/documents/doc-abc', '_blank')
+    expect(window.open).toHaveBeenCalledWith('/documents/doc-abc', '_blank', 'noopener,noreferrer')
   })
 
   it('does not call window.open when doc_id is empty', async () => {

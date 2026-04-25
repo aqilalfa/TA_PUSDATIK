@@ -6,7 +6,7 @@
   >
     <div class="source-card">
       <div class="source-num">
-        📎 SUMBER [{{ source.id }}]<span v-if="source.score > 0" class="source-score"> · {{ source.score.toFixed(2) }}</span>
+        📎 SUMBER [{{ source.id }}]<span v-if="source.score > 0" class="source-score"> · {{ Number(source.score).toFixed(2) }}</span>
       </div>
       <div class="source-title">{{ source.citation_title || source.document }}</div>
       <div v-if="source.section" class="source-meta">{{ source.section }}</div>
@@ -26,7 +26,7 @@ const props = defineProps({
 
 function openDocument() {
   if (props.source.doc_id) {
-    window.open(`/documents/${props.source.doc_id}`, '_blank')
+    window.open(`/documents/${props.source.doc_id}`, '_blank', 'noopener,noreferrer')
   }
 }
 </script>
@@ -47,7 +47,7 @@ function openDocument() {
   border-left: 3px solid var(--color-gold);
   padding: 8px 12px;
   border-radius: 0 3px 0 0;
-  background: #faf9f7;
+  background: var(--color-cream, #faf9f7);
   transition: border-left-color 0.15s, box-shadow 0.15s;
 }
 
@@ -59,7 +59,7 @@ function openDocument() {
 .source-expand {
   border: 1px solid var(--color-navy);
   border-top: none;
-  background: white;
+  background: var(--color-white, #ffffff);
   padding: 0 12px;
   border-radius: 0 0 3px 3px;
   max-height: 0;
