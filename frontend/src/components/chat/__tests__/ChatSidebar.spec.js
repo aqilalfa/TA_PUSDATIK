@@ -113,6 +113,7 @@ describe('ChatSidebar — inline rename', () => {
     await wrapper.find('.session-rename-input').trigger('keydown', { key: 'Escape' })
     expect(wrapper.find('.session-rename-input').exists()).toBe(false)
     expect(wrapper.emitted('rename-session')).toBeFalsy()
+    expect(wrapper.find('.session-title').text()).toBe('Apa itu SPBE?')
   })
 
   it('does not emit rename-session when title is blank after trim', async () => {

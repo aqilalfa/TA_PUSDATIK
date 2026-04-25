@@ -49,6 +49,7 @@
               <input
                 class="session-rename-input"
                 v-model="editingTitle"
+                :ref="setRenameInput"
                 @keydown.enter.prevent="commitEdit"
                 @keydown.escape.prevent="cancelEdit"
                 @blur="commitEdit"
@@ -111,6 +112,7 @@ const emit = defineEmits([
 const editingSessionId = ref(null)
 const editingTitle = ref('')
 const editingOriginalTitle = ref('')
+const renameInput = ref(null)
 
 const GROUPS = [
   { label: 'HARI INI',    test: (d) => d === 0 },
@@ -144,10 +146,7 @@ function startEdit(session) {
   editingSessionId.value = session.id
   editingTitle.value = session.title
   editingOriginalTitle.value = session.title
-  nextTick(() => {
-    document.querySelector('.session-rename-input')?.focus()
-    document.querySelector('.session-rename-input')?.select()
-  })
+  nextTick(() => renameInput.value?.focus())
 }
 
 function commitEdit() {
@@ -161,6 +160,10 @@ function commitEdit() {
 
 function cancelEdit() {
   editingSessionId.value = null
+}
+
+function setRenameInput(el) {
+  renameInput.value = el
 }
 
 function onModelChange(event) {
