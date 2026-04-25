@@ -276,12 +276,18 @@ async function deleteSession(sessionId) {
 }
 
 async function handleRenameSession({ id, title }) {
+  const session = sessions.value.find(s => s.id === id)
+  if (!session) {
+    console.warn(`handleRenameSession: session id=${id} not found in local state`)
+    return
+  }
+  const previousTitle = session.title
+  session.title = title
   try {
     await updateSessionTitle(id, title)
-    const session = sessions.value.find(s => s.id === id)
-    if (session) session.title = title
   } catch (err) {
-    console.error('Failed to rename session', err)
+    session.title = previousTitle
+    console.error(`Failed to rename session (id=${id}):`, err)
   }
 }
 
