@@ -1,10 +1,14 @@
 const MAX_SIZE = 50 * 1024 * 1024
 const ACCEPTED_EXT = /\.(pdf|doc|docx)$/i
-const SAFE_NAME = /^[a-zA-Z0-9_\-.()\s]+$/
+const SAFE_NAME = /^[a-zA-Z0-9_.()\- ]+$/
 
 export function validateFile(file) {
   const errors = []
   const warnings = []
+
+  if (!file || typeof file.name !== 'string' || typeof file.size !== 'number') {
+    return { errors: ['File tidak valid.'], warnings: [] }
+  }
 
   if (!ACCEPTED_EXT.test(file.name)) {
     errors.push('Format tidak didukung. Gunakan PDF, DOC, atau DOCX.')
@@ -15,7 +19,7 @@ export function validateFile(file) {
   }
 
   if (!SAFE_NAME.test(file.name)) {
-    const suggested = file.name.replace(/[^a-zA-Z0-9_\-.()\s]/g, '').replace(/\s+/g, '_')
+    const suggested = file.name.replace(/[^a-zA-Z0-9_.()\- ]/g, '').replace(/\s+/g, '_')
     warnings.push(`Nama file mengandung karakter tidak umum. Saran: ${suggested}`)
   }
 

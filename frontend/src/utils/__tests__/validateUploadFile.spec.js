@@ -28,7 +28,7 @@ describe('validateFile', () => {
 
   it('returns no extension error for .docx', () => {
     const result = validateFile(makeFile('Laporan.docx', 3 * MB, 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'))
-    expect(result.errors.some(e => e.includes('PDF, DOC, atau DOCX'))).toBe(false)
+    expect(result.errors).toHaveLength(0)
   })
 
   it('returns warning (not error) for filename with special characters', () => {
@@ -45,5 +45,10 @@ describe('validateFile', () => {
   it('suggests underscores in place of spaces in sanitised filename', () => {
     const result = validateFile(makeFile('Laporan Final 2024!.pdf', 1 * MB))
     expect(result.warnings[0]).toContain('Laporan_Final_2024.pdf')
+  })
+
+  it('allows a file of exactly 50 MB (boundary)', () => {
+    const result = validateFile(makeFile('exact.pdf', 50 * MB))
+    expect(result.errors.some(e => e.includes('50 MB'))).toBe(false)
   })
 })
