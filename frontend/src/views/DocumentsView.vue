@@ -33,6 +33,33 @@
         </div>
       </div>
 
+      <!-- Stepper -->
+      <div v-if="stepperState !== 'idle'" class="upload-stepper">
+        <div class="stepper-step">
+          <div class="stepper-circle" :class="stepClass(1)">
+            <span v-if="stepClass(1) === 'done'">✓</span>
+            <span v-else>1</span>
+          </div>
+          <span class="stepper-label">UNGGAH</span>
+        </div>
+        <div class="stepper-connector" :class="connectorClass(1)"></div>
+        <div class="stepper-step">
+          <div class="stepper-circle" :class="stepClass(2)">
+            <span v-if="stepClass(2) === 'done'">✓</span>
+            <span v-else>2</span>
+          </div>
+          <span class="stepper-label">PREVIEW</span>
+        </div>
+        <div class="stepper-connector" :class="connectorClass(2)"></div>
+        <div class="stepper-step">
+          <div class="stepper-circle" :class="stepClass(3)">
+            <span v-if="stepClass(3) === 'done'">✓</span>
+            <span v-else>3</span>
+          </div>
+          <span class="stepper-label">INDEKS</span>
+        </div>
+      </div>
+
       <!-- Upload zone -->
       <div
         class="upload-zone"
@@ -83,6 +110,12 @@
         >
           {{ uploading ? 'Mengunggah...' : 'Unggah Dokumen' }}
         </button>
+        <div v-if="uploading" class="upload-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" :style="{ width: uploadProgress + '%' }"></div>
+          </div>
+          <span class="progress-label">{{ uploadProgress }}%</span>
+        </div>
       </div>
       <div v-if="uploadedDocId && !previewData" class="upload-actions">
         <button @click="previewChunks" :disabled="previewing" class="btn-outline">
@@ -99,7 +132,7 @@
           </div>
           <div class="preview-actions">
             <button @click="cancelPreview" class="btn-ghost">Batal</button>
-            <button @click="saveDocument" :disabled="saving" class="btn-primary">
+            <button data-testid="save-btn" @click="saveDocument" :disabled="saving" class="btn-primary">
               {{ saving ? 'Menyimpan...' : 'Simpan ke Indeks' }}
             </button>
           </div>
@@ -119,6 +152,16 @@
         <div v-if="previewData.has_more" class="more-notice">
           + {{ previewData.total_chunks - previewData.chunks.length }} chunk lainnya
         </div>
+      </div>
+
+      <!-- Success card -->
+      <div v-if="saveComplete" class="success-card">
+        <div class="success-icon">✅</div>
+        <div class="success-title">Dokumen berhasil diindeks</div>
+        <div class="success-meta">{{ lastChunkCount }} chunks tersimpan · Siap untuk pencarian</div>
+        <button data-testid="upload-another-btn" @click="resetUpload" class="btn-outline">
+          + Unggah Dokumen Lain
+        </button>
       </div>
 
       <!-- Document list -->
@@ -197,7 +240,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import {
   deleteDocument as deleteDocumentById,
@@ -226,6 +269,34 @@ const toast = ref(null)
 const syncing = ref(false)
 const validationErrors = ref([])
 const validationWarnings = ref([])
+const uploadProgress = ref(0)
+const saveComplete = ref(false)
+const lastChunkCount = ref(0)
+
+const stepperState = computed(() => {
+  if (saveComplete.value) return 'done'
+  if (previewData.value) return 'step3'
+  if (uploadedDocId.value) return 'step2'
+  if (selectedFile.value) return 'step1'
+  return 'idle'
+})
+
+function stepClass(stepNum) {
+  const s = stepperState.value
+  if (s === 'done') return 'done'
+  if (s === 'idle') return 'idle'
+  const active = s === 'step1' ? 1 : s === 'step2' ? 2 : 3
+  if (stepNum < active) return 'done'
+  if (stepNum === active) return (stepNum === 1 && uploading.value) ? 'in-progress' : 'active'
+  return 'idle'
+}
+
+function connectorClass(afterStep) {
+  const s = stepperState.value
+  if (s === 'done') return 'done'
+  const active = s === 'step1' ? 1 : s === 'step2' ? 2 : s === 'step3' ? 3 : 0
+  return afterStep < active ? 'done' : ''
+}
 
 function formatFileSize(bytes) {
   if (!bytes) return '0 B'
@@ -265,15 +336,25 @@ function clearFile() {
   selectedFile.value = null
   uploadedDocId.value = null
   previewData.value = null
+  saveComplete.value = false
+  lastChunkCount.value = 0
+  uploadProgress.value = 0
   validationErrors.value = []
   validationWarnings.value = []
+}
+
+function resetUpload() {
+  clearFile()
 }
 
 async function uploadFile() {
   if (!selectedFile.value || validationErrors.value.length > 0) return
   uploading.value = true
+  uploadProgress.value = 0
   try {
-    const data = await uploadDocument(selectedFile.value)
+    const data = await uploadDocument(selectedFile.value, (pct) => {
+      uploadProgress.value = pct
+    })
     uploadedDocId.value = data.doc_id
     showToast('Upload berhasil! Klik Pratinjau untuk melihat chunks.')
   } catch (e) {
@@ -300,8 +381,8 @@ async function saveDocument() {
   saving.value = true
   try {
     const data = await saveDocumentById(uploadedDocId.value)
-    showToast(`Berhasil mengindeks ${data.chunks_indexed} chunk!`)
-    clearFile()
+    lastChunkCount.value = data.chunks_indexed
+    saveComplete.value = true
     loadDocuments()
   } catch (e) {
     showToast(e.message, 'error')
@@ -366,7 +447,7 @@ onMounted(async () => {
   await syncFromQdrant()
 })
 
-defineExpose({ handleFileChange })
+defineExpose({ handleFileChange, uploadedDocId, previewData, saveComplete, selectedFile })
 </script>
 
 <style scoped>
@@ -810,4 +891,112 @@ defineExpose({ handleFileChange })
 
 .validation-error .validation-msg { color: #c0392b; }
 .validation-warning .validation-msg { color: #856404; }
+
+.upload-stepper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 14px 20px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+.stepper-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stepper-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: var(--font-ui);
+  transition: background 0.2s, color 0.2s;
+}
+
+.stepper-circle.idle { background: var(--color-border); color: #aaa; }
+.stepper-circle.active { background: var(--color-navy); color: white; }
+.stepper-circle.in-progress { background: var(--color-gold); color: var(--color-navy-dark); }
+.stepper-circle.done { background: #2e7d32; color: white; }
+
+.stepper-connector {
+  flex: 1;
+  height: 2px;
+  background: var(--color-border);
+  margin: 0 8px;
+  margin-bottom: 16px;
+  transition: background 0.2s;
+}
+
+.stepper-connector.done { background: var(--color-gold); }
+
+.stepper-label {
+  font-size: 8px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: var(--font-ui);
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+.upload-progress {
+  margin-top: 10px;
+}
+
+.progress-bar {
+  background: var(--color-border);
+  border-radius: 2px;
+  height: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 5px;
+  background: var(--color-gold);
+  border-radius: 2px;
+  transition: width 0.2s ease;
+}
+
+.progress-label {
+  display: block;
+  text-align: right;
+  font-size: 10px;
+  color: var(--color-text-muted);
+  margin-top: 3px;
+  font-family: var(--font-ui);
+}
+
+.success-card {
+  border: 1px solid #2e7d32;
+  border-radius: 4px;
+  background: #f0faf0;
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.success-icon { font-size: 32px; margin-bottom: 8px; }
+
+.success-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2e7d32;
+  font-family: var(--font-display);
+  margin-bottom: 6px;
+}
+
+.success-meta {
+  font-size: 12px;
+  color: #555;
+  font-family: var(--font-ui);
+  margin-bottom: 16px;
+}
 </style>
