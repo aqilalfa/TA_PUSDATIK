@@ -113,6 +113,7 @@ const editingSessionId = ref(null)
 const editingTitle = ref('')
 const editingOriginalTitle = ref('')
 const renameInput = ref(null)
+const skipBlur = ref(false)
 
 const GROUPS = [
   { label: 'HARI INI',    test: (d) => d === 0 },
@@ -150,7 +151,10 @@ function startEdit(session) {
 }
 
 function commitEdit() {
-  if (!editingSessionId.value) return
+  if (!editingSessionId.value || skipBlur.value) {
+    skipBlur.value = false
+    return
+  }
   const trimmed = editingTitle.value.trim()
   if (trimmed && trimmed !== editingOriginalTitle.value) {
     emit('rename-session', { id: editingSessionId.value, title: trimmed })
@@ -159,7 +163,9 @@ function commitEdit() {
 }
 
 function cancelEdit() {
+  skipBlur.value = true
   editingSessionId.value = null
+  editingTitle.value = ''
 }
 
 function setRenameInput(el) {

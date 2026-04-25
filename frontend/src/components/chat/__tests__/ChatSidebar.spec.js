@@ -124,6 +124,23 @@ describe('ChatSidebar — inline rename', () => {
     expect(wrapper.emitted('rename-session')).toBeFalsy()
   })
 
+  it('does not emit rename-session when title is unchanged', async () => {
+    const wrapper = mountSidebar()
+    await wrapper.find('.session-rename-btn').trigger('click')
+    // title field pre-filled with original — do not change it
+    await wrapper.find('.session-rename-input').trigger('keydown', { key: 'Enter' })
+    expect(wrapper.emitted('rename-session')).toBeFalsy()
+  })
+
+  it('emits rename-session on blur with a changed title', async () => {
+    const wrapper = mountSidebar()
+    await wrapper.find('.session-rename-btn').trigger('click')
+    const input = wrapper.find('.session-rename-input')
+    await input.setValue('Nama Baru via Blur')
+    await input.trigger('blur')
+    expect(wrapper.emitted('rename-session')?.[0]?.[0]).toEqual({ id: 's1', title: 'Nama Baru via Blur' })
+  })
+
   it('does not emit load-session when clicking an editing session item', async () => {
     const wrapper = mountSidebar()
     await wrapper.find('.session-rename-btn').trigger('click')
