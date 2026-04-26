@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Add synthetic summary chunk for BSSN Audit Keamanan SPBE scope."""
 import sys
-import re
 import uuid
 import pickle
 import shutil
@@ -11,8 +10,10 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 sys.stdout.reconfigure(encoding="utf-8")
 
 from loguru import logger
+from app.config import settings
+from scripts.rebuild_bm25 import build_bm25_search_text
 
-COLLECTION = "document_chunks"
+COLLECTION = settings.QDRANT_COLLECTION  # baca dari .env / config, jangan hardcode
 DOC_ID = "bssn8_2024"
 
 BSSN_AUDIT_SCOPE_SUMMARY = """Ruang Lingkup dan Objek Audit Keamanan SPBE berdasarkan Peraturan BSSN Nomor 8 Tahun 2024
@@ -121,8 +122,9 @@ def main():
         pl = p.payload or {}
         text = pl.get("text", "")
         metadata = {k: v for k, v in pl.items() if k != "text"}
+        search_text = build_bm25_search_text(text, metadata)
         documents.append({"text": text, "metadata": metadata})
-        corpus.append(re.findall(r"\b\w+\b", text.lower()))
+        corpus.append(search_text.lower().split())
 
     bm25 = BM25Okapi(corpus)
     with open(bm25_path, "wb") as f:

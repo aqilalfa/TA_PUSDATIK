@@ -3,7 +3,7 @@
 Re-ingest all documents with the new structured JSON pipeline.
 
 Pipeline:
-  PDF → Text (Marker/OCR) → JSON Structure → 600-char chunks → DB + Qdrant + BM25
+  PDF → Text (Marker/OCR) → JSON Structure → chunks (peraturan: 900 chars, laporan/pedoman: 1800 chars) → DB + Qdrant + BM25
 """
 
 import sys
