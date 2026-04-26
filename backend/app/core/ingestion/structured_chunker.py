@@ -2,11 +2,13 @@
 Structured Chunker for SPBE RAG System
 
 Takes structured JSON (from json_structure_parser) and produces chunks
-with a maximum size of 600 characters and configurable overlap.
+with configurable overlap. Chunk sizes are per document type:
+  - Peraturan: up to 900 characters
+  - Laporan / Pedoman: up to 1800 characters
 
 Strategies:
   - Peraturan: chunk per ayat/pasal from batang_tubuh
-  - Lampiran SPBE: Each indicator becomes a chunk (or split if >600 chars)
+  - Lampiran SPBE: Each indicator becomes a chunk (or split if over limit)
   - Laporan:   chunk per paragraph, split large paragraphs with overlap
 
 Every chunk carries full metadata for retrieval context.
@@ -16,7 +18,7 @@ import re
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 from loguru import logger
-# Import langchain removed to avoid Torch OOM
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from app.config import settings
 
 
@@ -35,34 +37,6 @@ MAX_CHUNK_SIZE_LAPORAN   = getattr(settings, "CHUNK_SIZE_LAPORAN", 1800)
 CHUNK_OVERLAP_LAPORAN    = getattr(settings, "CHUNK_OVERLAP_LAPORAN", 200)
 
 
-def _normalize_overlap(max_size: int, overlap: int) -> int:
-    """Keep overlap within safe bounds to avoid loops and invalid windows."""
-    if max_size <= 1:
-        return 0
-    return max(0, min(overlap, max_size - 1))
-
-
-def _snap_start_to_word_boundary(text: str, index: int, window: int = 32) -> int:
-    """Shift split start to nearest word boundary to avoid mid-word chunks."""
-    if index <= 0 or index >= len(text):
-        return index
-
-    if text[index].isspace() or text[index - 1].isspace():
-        return index
-
-    right_limit = min(len(text), index + window)
-    for pos in range(index, right_limit):
-        if text[pos].isspace():
-            return min(pos + 1, len(text))
-
-    left_limit = max(0, index - window)
-    for pos in range(index, left_limit, -1):
-        if text[pos - 1].isspace():
-            return pos
-
-    return index
-
-
 # ---------------------------------------------------------------------------
 # Text splitting utilities
 # ---------------------------------------------------------------------------
@@ -72,52 +46,16 @@ def split_text_with_overlap(
     max_size: int = MAX_CHUNK_SIZE,
     overlap: int = CHUNK_OVERLAP,
 ) -> List[str]:
-    """Split long text into bounded chunks with overlap and boundary-aware starts."""
-    if not text:
-        return []
-
-    max_size = max(1, max_size)
-    overlap = _normalize_overlap(max_size, overlap)
-
+    """Split long text using Langchain's RecursiveCharacterTextSplitter."""
     if len(text) <= max_size:
-        return [text.strip()]
+        return [text]
 
-    chunks = []
-    start = 0
-    text_len = len(text)
-    
-    while start < text_len:
-        if start + max_size >= text_len:
-            chunks.append(text[start:].strip())
-            break
-            
-        end = min(start + max_size, text_len)
-        # Find best separator
-        best_end = end
-        for sep in ["\n\n", "\n", ". ", " "]:
-            search_start = min(start + overlap, end - 1)
-            pos = text.rfind(sep, search_start, end)
-            if pos != -1:
-                best_end = pos + len(sep)
-                break
-
-        piece = text[start:best_end].strip()
-        if piece:
-            chunks.append(piece)
-        
-        prev_start = start
-        # Advance with overlap
-        next_start = best_end - overlap
-        if next_start <= prev_start:
-            start = best_end
-        else:
-            start = _snap_start_to_word_boundary(text, next_start)
-
-        if start <= prev_start:
-            # hard guard against any accidental non-advancing index
-            start = min(text_len, best_end)
-
-    return [c for c in chunks if c]
+    splitter = RecursiveCharacterTextSplitter(
+        chunk_size=max_size,
+        chunk_overlap=overlap,
+        separators=["\n\n", "\n", ".", " ", ""],
+    )
+    return splitter.split_text(text)
 
 
 def _is_table_like_text(text: str) -> bool:
@@ -158,7 +96,7 @@ def _split_table_like_text(
     if not lines:
         return []
 
-    overlap = _normalize_overlap(max_size, overlap)
+    overlap = max(0, min(overlap, max_size - 1)) if max_size > 1 else 0
     chunks: List[str] = []
     current_lines: List[str] = []
     current_len = 0
