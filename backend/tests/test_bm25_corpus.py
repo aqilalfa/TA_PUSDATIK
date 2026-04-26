@@ -33,10 +33,10 @@ def test_bm25_excludes_document_level_fields():
     assert result.strip().startswith("PP") is False or "PP_95" not in result, (
         "filename masih ada di search_text"
     )
-    # doc_type = "peraturan" sebagai kata standalone
+    # doc_type = "peraturan" should not appear as a standalone field
     words = result.lower().split()
-    assert "peraturan" not in words or "PP Nomor 95" not in result, (
-        "doc_type 'peraturan' sebagai field standalone masih ada"
+    assert "peraturan" not in words, (
+        "doc_type 'peraturan' sebagai field standalone masih ada di search_text"
     )
 
 

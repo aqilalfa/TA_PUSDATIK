@@ -27,38 +27,80 @@ from app.config import settings
 from loguru import logger
 from datetime import datetime
 import json
+import re
 
 
 # Default path - can be overridden via command line
 DEFAULT_DOCS_DIR = r"D:\aqil\pusdatik\data\documents"
 
 
+def _tokenize(text: str):
+    return re.findall(r"\b\w+\b", text.lower())
+
+
+def _build_bm25_search_text(text: str, metadata: dict) -> str:
+    """Compose BM25 search text from chunk content + structural metadata only.
+
+    Excludes document-level fields (judul_dokumen, filename, doc_type) that are
+    identical across all chunks of a document and degrade BM25 IDF scores.
+    """
+    fields = [
+        metadata.get("hierarchy", ""),
+        metadata.get("context_header", ""),
+        metadata.get("bab", ""),
+        metadata.get("bagian", ""),
+        metadata.get("pasal", ""),
+        metadata.get("ayat", ""),
+        text or "",
+    ]
+    return " ".join(str(v).strip() for v in fields if str(v).strip())
+
+
 def rebuild_bm25_index(db):
-    """Rebuild BM25 index from all chunks in database using the modular BM25Retriever."""
+    """Rebuild BM25 index from all chunks in database."""
     logger.info("\n[Step 6] Rebuilding BM25 index...")
 
     try:
-        from app.core.rag.bm25_retriever import BM25Retriever
+        import pickle
+        from rank_bm25 import BM25Okapi
 
         chunks = db.query(Chunk).all()
         if not chunks:
             logger.warning("  No chunks found, skipping BM25 index")
             return
 
+        corpus = []
         documents = []
         for c in chunks:
-            documents.append({
-                "id": str(c.id),
-                "text": c.chunk_text
-            })
+            text = (c.chunk_text or "").strip()
+            if not text:
+                continue
 
-        retriever = BM25Retriever()
-        retriever.build_index(documents, doc_id_field="id", text_field="text")
+            metadata = {}
+            if c.chunk_metadata:
+                try:
+                    metadata = json.loads(c.chunk_metadata)
+                except Exception:
+                    metadata = {}
+
+            search_text = _build_bm25_search_text(text, metadata)
+
+            documents.append({"text": text, "metadata": metadata})
+            corpus.append(_tokenize(search_text))
+
+        if not documents:
+            logger.warning("  No non-empty chunk text found, skipping BM25 index")
+            return
+
+        bm25 = BM25Okapi(corpus)
 
         bm25_path = Path(__file__).parent.parent / "data" / "bm25_index.pkl"
-        retriever.save_index(path=bm25_path)
+        bm25_path.parent.mkdir(parents=True, exist_ok=True)
 
-        logger.success(f"  ✓ BM25 index rebuilt with {len(chunks)} documents")
+        with open(bm25_path, "wb") as f:
+            pickle.dump({"bm25": bm25, "documents": documents}, f)
+
+        logger.success(f"  ✓ BM25 index rebuilt with {len(documents)} documents")
         logger.info(f"    Saved to: {bm25_path}")
 
     except Exception as e:
