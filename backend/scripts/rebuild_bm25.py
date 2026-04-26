@@ -22,6 +22,25 @@ def tokenize(text: str):
     return re.findall(r"\b\w+\b", text)
 
 
+def build_bm25_search_text(text: str, metadata: dict) -> str:
+    """Compose lexical search text for BM25 using chunk content + structural metadata.
+
+    Excludes document-level fields (judul_dokumen, filename, doc_type) that are
+    identical across all chunks of a document — they inflate term frequency without
+    adding discriminative value and hurt BM25 IDF scores.
+    """
+    fields = [
+        metadata.get("hierarchy", ""),
+        metadata.get("context_header", ""),
+        metadata.get("bab", ""),
+        metadata.get("bagian", ""),
+        metadata.get("pasal", ""),
+        metadata.get("ayat", ""),
+        text or "",
+    ]
+    return " ".join(str(v).strip() for v in fields if str(v).strip())
+
+
 def rebuild_bm25():
     """Rebuild BM25 index with proper format for server_full.py"""
     from rank_bm25 import BM25Okapi
@@ -51,8 +70,11 @@ def rebuild_bm25():
                 except:
                     pass
 
-            documents.append({"text": c.chunk_text, "metadata": metadata})
-            corpus.append(tokenize(c.chunk_text))
+            text = c.chunk_text or ""
+            search_text = build_bm25_search_text(text, metadata)
+
+            documents.append({"text": text, "metadata": metadata})
+            corpus.append(tokenize(search_text))
 
         # Build BM25 index
         bm25 = BM25Okapi(corpus)
