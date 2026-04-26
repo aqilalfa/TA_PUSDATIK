@@ -24,13 +24,15 @@ class Settings(BaseSettings):
     QDRANT_URL: str = "http://localhost:6333"
     QDRANT_HOST: str = "localhost"  # For docker-compose
     QDRANT_PORT: int = 6333
-    QDRANT_COLLECTION: str = "spbe_documents"
+    QDRANT_COLLECTION: str = "document_chunks"
 
     # LLM Model
-    MODEL_PATH: str = "/app/models/llm/qwen-2.5-7b-instruct-q4_k_m.gguf"
+    MODEL_PATH: str = "/app/models/llm/Qwen2.5-7B-Instruct-Q4_K_M.gguf"
     QWEN_MODEL_PATH: str = (
         "/app/models/llm/Qwen2.5-7B-Instruct-Q4_K_M.gguf"  # Alternative name
     )
+    OLLAMA_BASE_URL: str = "http://localhost:11434"
+    DEFAULT_MODEL_FILE: str = "data/default_model.json"
     MODEL_N_GPU_LAYERS: int = 35
     MODEL_N_CTX: int = 8192
     MODEL_N_BATCH: int = 512
@@ -65,6 +67,12 @@ class Settings(BaseSettings):
     CHUNK_OVERLAP: int = 100
     MIN_CHUNK_SIZE: int = 80  # Minimum chars per chunk (merge smaller ones)
     MAX_CHUNK_SIZE: int = 600  # Maximum chars before splitting
+
+    # Per-type chunk sizes — each chunker reads the appropriate constant
+    CHUNK_SIZE_PERATURAN: int = 900
+    CHUNK_OVERLAP_PERATURAN: int = 150
+    CHUNK_SIZE_LAPORAN: int = 1800
+    CHUNK_OVERLAP_LAPORAN: int = 200
 
     # OCR Configuration
     OCR_ENGINE: str = "paddleocr"
