@@ -1484,14 +1484,14 @@ class LangchainRAGEngine:
         self, query: str, context: str, history: List, model_name: str, query_type: str = "general"
     ) -> AsyncIterator[str]:
         """
-        Stream LLM answer token by token.
-        
-        This is a simple async generator that yields string chunks directly.
-        No LCEL, no opaque event routing — just direct llm.astream().
-        """
-        llm = self._get_llm(model_name)
+        Stream LLM answer token by token via direct Ollama /api/chat call.
 
-        # Build messages list
+        langchain-ollama 1.0.1 buffers the full response before yielding —
+        bypassing it with httpx ensures first token arrives within ~1s.
+        """
+        import httpx
+        import json as _json
+
         _PROMPT_MAP = {
             "table": SYSTEM_PROMPT_TABLE,
             "pasal": SYSTEM_PROMPT_LEGAL,
@@ -1499,22 +1499,56 @@ class LangchainRAGEngine:
         }
         system_prompt = _PROMPT_MAP.get(query_type, SYSTEM_PROMPT_GENERAL)
         system_content = system_prompt + "\n\nKonteks Referensi:\n" + context
-        messages = [SystemMessage(content=system_content)]
-        messages.extend(history)
+
+        # Convert LangChain message objects → Ollama role strings
+        def _role(msg) -> str:
+            if isinstance(msg, SystemMessage):
+                return "system"
+            if isinstance(msg, AIMessage):
+                return "assistant"
+            return "user"
+
+        ollama_messages = [{"role": "system", "content": system_content}]
+        for msg in history:
+            ollama_messages.append({"role": _role(msg), "content": msg.content})
 
         quality_guardrail = self._build_quality_guardrail(query, context)
-        user_content_parts = [f"Pertanyaan: {query}"]
+        user_content = f"Pertanyaan: {query}"
         if quality_guardrail:
-            user_content_parts.append(quality_guardrail)
-        messages.append(HumanMessage(content="\n\n".join(user_content_parts)))
+            user_content += f"\n\n{quality_guardrail}"
+        ollama_messages.append({"role": "user", "content": user_content})
 
-        logger.info(f"[LLM] Streaming {model_name} ({len(messages)} messages, context {len(context)} chars)...")
+        # Mirror ChatOllama options: temperature, num_predict, think (for qwen3.x)
+        options: dict = {"temperature": 0.1, "num_predict": 2048}
+        is_thinking_model = any(model_name.startswith(p) for p in ["qwen3", "qwen3.5"])
+        if is_thinking_model:
+            options["think"] = False
+
+        logger.info(
+            f"[LLM] Streaming {model_name} via Ollama API "
+            f"({len(ollama_messages)} messages, context {len(context)} chars)..."
+        )
+
+        url = f"{settings.OLLAMA_BASE_URL}/api/chat"
+        payload = {"model": model_name, "messages": ollama_messages, "stream": True, "options": options}
 
         token_count = 0
-        async for chunk in llm.astream(messages):
-            if chunk.content:
-                token_count += 1
-                yield chunk.content
+        async with httpx.AsyncClient(timeout=600.0) as client:
+            async with client.stream("POST", url, json=payload) as response:
+                response.raise_for_status()
+                async for line in response.aiter_lines():
+                    if not line:
+                        continue
+                    try:
+                        data = _json.loads(line)
+                    except _json.JSONDecodeError:
+                        continue
+                    content = data.get("message", {}).get("content", "")
+                    if content:
+                        token_count += 1
+                        yield content
+                    if data.get("done"):
+                        break
 
         logger.info(f"[LLM] Done. Generated {token_count} tokens.")
 
