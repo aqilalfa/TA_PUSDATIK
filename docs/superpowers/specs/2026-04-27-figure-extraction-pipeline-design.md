@@ -369,9 +369,13 @@ Fallback chain jika qwen2.5vl OOM: `llava:7b` → `moondream:1.8b`.
 
 ### 8.4 Eksekusi validasi
 
+> **Model note:** `evaluate_rag.py` harus pakai chatbot model production (`qwen3.5:4b`) untuk
+> answer generation, bukan `qwen2.5:7b-instruct` (default lama, salah). LLM judge RAGAS
+> bisa tetap `qwen2.5:7b-instruct` (judge boleh berbeda dari model di-evaluasi).
+
 ```bash
 # Step 1: Baseline (sebelum perubahan kode pipeline ingestion)
-python scripts/evaluate_rag.py --phase collect --doc-id 1
+python scripts/evaluate_rag.py --phase collect --doc-id 1 --model qwen3.5:4b
 python scripts/evaluate_ragas.py
 mv data/eval_ragas_report.json data/eval_baseline.json
 
@@ -379,7 +383,7 @@ mv data/eval_ragas_report.json data/eval_baseline.json
 python scripts/reingest_doc.py --doc-id 1 --use-figure-pipeline
 
 # Step 3: Re-evaluate dengan combined GT (40 existing + 15 figure)
-python scripts/evaluate_rag.py --phase collect
+python scripts/evaluate_rag.py --phase collect --model qwen3.5:4b
 python scripts/evaluate_ragas.py
 mv data/eval_ragas_report.json data/eval_after.json
 
@@ -457,7 +461,7 @@ TDD-friendly, frequent commits. Total estimasi **13-19 jam** (~2-3 hari).
 
 | Constraint | Mitigasi |
 |------------|----------|
-| GPU 4GB VRAM tidak cukup load Qwen 2.5 7B + VLM 7B sekaligus | VLM dipanggil via Ollama dengan model swap; ingestion offline (tidak block server) |
+| GPU 4GB VRAM (GTX 1650) — chatbot pakai `qwen3.5:4b` (4B params), VLM 7B masih perlu swap | VLM dipanggil via Ollama dengan model swap; ingestion offline (tidak block server). 4B chatbot lebih ringan dari asumsi awal 7B |
 | Ingestion time bertambah ~10-30s/figure × 16 figure ≈ 5-8 menit/dok | Acceptable untuk one-time ingestion; cached via figures.json |
 | VLM hallucination (output tidak matching gambar) | Prompt menekankan akurasi; manual review 80%+ sebagai DoD; fallback OCR raw text untuk verifikasi |
 | Marker tidak save image files reliably | PyMuPDF parallel extraction; idempotent — kedua source dimerge by page+bbox |
