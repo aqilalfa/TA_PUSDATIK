@@ -33,3 +33,9 @@ def test_figure_types_enum():
     assert "table_image" in FIGURE_TYPES
     assert "photo" in FIGURE_TYPES
     assert len(FIGURE_TYPES) == 7
+
+
+def test_package_exports_processor():
+    from app.core.ingestion.figures import process_figures, FigureExtraction
+    assert callable(process_figures)
+    assert FigureExtraction.__name__ == "FigureExtraction"
