@@ -955,7 +955,65 @@ class DocumentManager:
             "status": "uploaded",
         }
 
-    def preview_chunks(self, doc_id: str) -> Dict[str, Any]:
+    def _apply_figure_pipeline(
+        self,
+        pdf_path,
+        chunks,
+        doc_title,
+        filename,
+        doc_type,
+    ):
+        """Run figure extraction pipeline; append figure chunks to existing list.
+
+        Idempotent via figures.json cache.
+        """
+        from app.core.ingestion.figures import process_figures
+        from app.core.ingestion.structured_chunker import (
+            inject_figure_summaries,
+            make_figure_chunks,
+        )
+        from app.core.ingestion.pdf_processor import DocumentProcessor
+        from pathlib import Path as _Path
+
+        pdf_path = _Path(pdf_path)
+
+        # Locate existing Marker markdown for this PDF
+        md_path_str = DocumentProcessor._find_marker_markdown_path(pdf_path.name)
+        if not md_path_str:
+            md_path_str = DocumentProcessor._find_marker_markdown_path(filename)
+        if not md_path_str:
+            logger.warning("Figure pipeline skipped: no Marker markdown found")
+            return chunks
+
+        md_path = _Path(md_path_str)
+        output_dir = md_path.parent
+        marker_md = md_path.read_text(encoding="utf-8")
+
+        figures = process_figures(
+            pdf_path=pdf_path,
+            marker_md=marker_md,
+            output_dir=output_dir,
+            use_cache=True,
+        )
+
+        enriched_md = inject_figure_summaries(marker_md, figures)
+        if enriched_md != marker_md:
+            md_path.write_text(enriched_md, encoding="utf-8")
+            logger.info(f"Updated markdown with figure summaries: {md_path}")
+
+        figure_chunks = make_figure_chunks(
+            figures,
+            doc_title=doc_title,
+            filename=filename,
+            doc_type=doc_type,
+        )
+        logger.info(
+            f"Figure pipeline: {len(figures)} figures processed, "
+            f"{len(figure_chunks)} figure chunks added"
+        )
+        return chunks + figure_chunks
+
+    def preview_chunks(self, doc_id: str, use_figure_pipeline: bool = False) -> Dict[str, Any]:
         """Extract and preview chunks without indexing."""
 
         doc = self.get_document(doc_id)
@@ -1153,6 +1211,16 @@ class DocumentManager:
                 text=text,
                 doc_title=doc_title,
                 filename=doc["original_filename"],
+            )
+
+        # Apply figure extraction pipeline (opt-in)
+        if use_figure_pipeline and chunks:
+            chunks = self._apply_figure_pipeline(
+                pdf_path=file_path,
+                chunks=chunks,
+                doc_title=doc_title,
+                filename=doc["original_filename"],
+                doc_type=detected_type,
             )
 
         # Save chunks to database (preview stage)
