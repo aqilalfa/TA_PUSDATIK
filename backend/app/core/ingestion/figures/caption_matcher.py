@@ -4,7 +4,7 @@ from typing import List, Tuple
 
 
 IMG_REF_RE = re.compile(r"!\[\]\(_page_(\d+)_Picture_(\d+)\.jpeg\)")
-CAPTION_RE = re.compile(r"^(Gambar|Tabel)\s+\d+[\.\s]", re.MULTILINE)
+CAPTION_RE = re.compile(r"^(Gambar|Tabel|Foto)\s+[\w\d]", re.MULTILINE)
 FIG_NUMBER_RE = re.compile(r"^(Gambar|Tabel)\s+\d+", re.MULTILINE)
 
 
@@ -46,6 +46,9 @@ def find_caption_for_image(markdown: str, page: int, image_index: int) -> str:
     refs = _find_image_refs(markdown)
     captions = _find_captions(markdown)
 
+    # Build sorted list of all image ref offsets for "stop at next image" logic
+    all_ref_offsets = sorted(o for _, _, o in refs)
+
     # Try Marker convention (0-based) first
     for marker_page in (page - 1, page):
         match = next(
@@ -53,9 +56,12 @@ def find_caption_for_image(markdown: str, page: int, image_index: int) -> str:
             None,
         )
         if match is not None:
-            # Find first caption AFTER this image offset, within 500 chars
+            # Find the offset of the NEXT image ref after this one (upper bound)
+            next_ref = next((o for o in all_ref_offsets if o > match), match + 500)
+            search_end = min(match + 500, next_ref)
+            # Find first caption AFTER this image offset, before next image ref
             for cap_offset, cap_text in captions:
-                if 0 <= cap_offset - match <= 500:
+                if match < cap_offset <= search_end:
                     return cap_text
             return ""
     return ""
