@@ -972,21 +972,37 @@ class DocumentManager:
             inject_figure_summaries,
             make_figure_chunks,
         )
-        from app.core.ingestion.pdf_processor import DocumentProcessor
         from pathlib import Path as _Path
 
         pdf_path = _Path(pdf_path)
 
-        # Locate existing Marker markdown for this PDF
-        md_path_str = DocumentProcessor._find_marker_markdown_path(pdf_path.name)
-        if not md_path_str:
-            md_path_str = DocumentProcessor._find_marker_markdown_path(filename)
-        if not md_path_str:
+        # Locate existing Marker markdown without importing pdf_processor (avoids PaddleOCR double-init)
+        def _find_marker_md(stem: str) -> _Path | None:
+            from app.core.ingestion import marker_converter as _mc
+            output_dir = _mc.marker_converter.output_dir
+            norm = lambda s: "".join(c for c in s.lower() if c.isalnum())
+            stem_norm = norm(stem)
+            for folder in output_dir.iterdir():
+                if not folder.is_dir():
+                    continue
+                fname = folder.name
+                fname_no_hash = fname[9:] if len(fname) > 9 and fname[8] == "_" and all(c in "0123456789abcdefABCDEF" for c in fname[:8]) else fname
+                if stem.lower() in fname.lower() or stem_norm in norm(fname) or stem_norm in norm(fname_no_hash):
+                    md = folder / f"{fname}.md"
+                    if md.exists():
+                        return md
+                    for md in folder.glob("*.md"):
+                        return md
+            return None
+
+        md_path = _find_marker_md(_Path(pdf_path).stem) or _find_marker_md(_Path(filename).stem)
+        if not md_path:
             logger.warning("Figure pipeline skipped: no Marker markdown found")
             return chunks
+        md_path_str = str(md_path)
 
         md_path = _Path(md_path_str)
-        output_dir = md_path.parent
+        output_dir = _Path(md_path_str).parent
         marker_md = md_path.read_text(encoding="utf-8")
 
         figures = process_figures(
