@@ -864,3 +864,88 @@ def chunk_document(doc: Dict[str, Any], md_file_path: Optional[str] = None) -> L
         logger.warning(f"No chunks produced for {doc_type} document")
 
     return final_chunks
+
+
+# ===========================================================================
+# Figure pipeline integration
+# ===========================================================================
+
+def inject_figure_summaries(markdown: str, figures: "list") -> str:
+    """Inject 1-line summary after each figure's caption in markdown.
+
+    For each figure with summary text, finds the caption line in markdown
+    and inserts an inline summary line immediately after it. Photos
+    (method='skipped') are not injected.
+
+    Returns modified markdown.
+    """
+    if not figures:
+        return markdown
+
+    import re
+    out = markdown
+    for f in figures:
+        if f.extraction_method in ("skipped", "failed") or not f.summary:
+            continue
+        if not f.figure_number:
+            continue
+        # Match the line starting with "Gambar 7." or "Tabel 7." (escape dots)
+        pattern = re.compile(
+            rf"^({re.escape(f.figure_number)}\.[^\n]*)$",
+            re.MULTILINE,
+        )
+        injection = f"\\1\n\n[{f.figure_number}] {f.summary.strip()}"
+        out, n = pattern.subn(injection, out, count=1)
+        if n == 0:
+            # Caption not found — append summary at end
+            out += f"\n\n[{f.figure_number}] {f.summary.strip()}\n"
+    return out
+
+
+def make_figure_chunks(
+    figures: "list",
+    doc_title: str = "",
+    filename: str = "",
+    doc_type: str = "",
+) -> "list":
+    """Create chunk dicts (document_manager-compatible format) for each
+    successfully-extracted figure.
+
+    Skips photos (extraction_method='skipped') and failed extractions.
+    Output shape matches structured_chunks format used by DocumentManager.save_chunks.
+
+    Figure-specific metadata smuggled into standard fields:
+      - context_header: "Figure: <figure_number>"
+      - section:        full caption ("Gambar 7. Grafik Bobot ...")
+      - table_context:  "<figure_type>|<figure_id>|page:<n>|<method>"
+    """
+    chunks = []
+    for f in figures:
+        if f.extraction_method in ("skipped", "failed"):
+            continue
+        if not f.detail.strip():
+            continue
+        text = f"{f.caption}\n\n{f.detail}".strip() if f.caption else f.detail
+        fig_num = f.figure_number or "Figure"
+        chunks.append({
+            "text": text,
+            "raw_text": text,
+            "context_header": f"Figure: {fig_num}",
+            "hierarchy": "",
+            "document_title": doc_title,
+            "filename": filename,
+            "doc_type": doc_type,
+            "bab": "",
+            "bagian": "",
+            "pasal": "",
+            "ayat": "",
+            "chunk_part": None,
+            "chunk_parts_total": None,
+            "parent_pasal_text": "",
+            "is_parent": True,
+            "chunk_type": "figure",
+            "section": f.caption,
+            "table_context": f"{f.figure_type}|{f.figure_id}|page:{f.page}|{f.extraction_method}",
+            "original_table": f.raw_ocr or "",
+        })
+    return chunks
