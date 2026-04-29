@@ -1,7 +1,9 @@
 """VLM-based figure extraction via Ollama.
 
 Uses qwen3-vl:4b (4.4B params, fits 4GB VRAM) by default.
-Different prompt templates per figure_type for chart vs diagram.
+Uses minimal prompts to avoid excessive thinking-mode token consumption.
+Retries up to MAX_RETRIES times since qwen3-vl:4b non-deterministically
+transitions from thinking to actual response.
 """
 import base64
 import re
@@ -16,41 +18,18 @@ from app.config import settings
 
 VLM_MODEL = "qwen3-vl:4b"
 VLM_TIMEOUT = 180.0  # seconds per inference
+MAX_RETRIES = 3
 
-CHART_PROMPT = """Anda adalah asisten yang mendeskripsikan chart/grafik dalam bahasa Indonesia.
-
-Caption gambar: "{caption}"
-
-Tugas: deskripsikan chart pada gambar ini dengan AKURAT. Sebutkan:
-1. Tipe chart (pie/bar/line)
-2. Semua label dan nilai numerik secara EKSAK (jangan dibulatkan)
-3. Trend atau pola jika ada
-
-Format output (wajib pakai label SUMMARY dan DETAIL):
-SUMMARY: [1-2 kalimat ringkas berisi list label+nilai]
-DETAIL: [paragraf 100-300 kata, deskripsi lengkap]
-"""
-
-DIAGRAM_PROMPT = """Anda adalah asisten yang mendeskripsikan diagram dalam bahasa Indonesia.
-
-Caption gambar: "{caption}"
-
-Tugas: deskripsikan struktur dan konten diagram. Sebutkan:
-1. Tipe diagram (alur, hierarki, struktur, kriteria, dll)
-2. Semua label, level, dan kriteria yang tertulis di gambar
-3. Hubungan antar elemen (jika ada panah / koneksi)
-
-Format output (wajib pakai label SUMMARY dan DETAIL):
-SUMMARY: [1-2 kalimat]
-DETAIL: [paragraf, mention setiap level/kriteria yang terlihat]
-"""
+# Minimal prompts — any longer and qwen3-vl:4b exhausts num_predict on thinking
+CHART_PROMPT = "SUMMARY:\nDETAIL:"
+DIAGRAM_PROMPT = "SUMMARY:\nDETAIL:"
 
 
 def _select_prompt(figure_type: str, caption: str) -> str:
-    """Select appropriate prompt template based on figure type."""
+    """Select prompt template; caption ignored when empty to keep prompt short."""
     if figure_type in ("pie_chart", "bar_chart", "line_chart"):
-        return CHART_PROMPT.format(caption=caption)
-    return DIAGRAM_PROMPT.format(caption=caption)
+        return CHART_PROMPT
+    return DIAGRAM_PROMPT
 
 
 def parse_vlm_output(raw: str) -> Tuple[str, str]:
@@ -92,10 +71,13 @@ def extract_with_vlm(
 ) -> Tuple[str, str, str]:
     """Call Ollama VLM, return (summary, detail, model_used).
 
+    Retries up to MAX_RETRIES times because qwen3-vl:4b non-deterministically
+    produces empty responses when its thinking phase is long.
+
     Args:
         image_path: Path to image file.
         figure_type: Type of figure (pie_chart, bar_chart, etc.).
-        caption: Figure caption text from PDF.
+        caption: Figure caption text from PDF (unused in prompt but stored).
         model: VLM model name (default: qwen3-vl:4b).
 
     Returns:
@@ -110,20 +92,37 @@ def extract_with_vlm(
 
     payload = {
         "model": model,
-        "prompt": prompt,
-        "images": [image_b64],
+        "messages": [
+            {
+                "role": "user",
+                "content": prompt,
+                "images": [image_b64],
+            }
+        ],
         "stream": False,
-        "options": {"temperature": 0.1, "num_predict": 800},
+        "think": False,
+        "options": {"temperature": 1.0, "top_k": 20, "num_predict": 800},
     }
 
-    url = f"{settings.OLLAMA_BASE_URL}/api/generate"
-    logger.debug(f"VLM request: {model} for {image_path.name} ({figure_type})")
+    url = f"{settings.OLLAMA_BASE_URL}/api/chat"
 
-    with httpx.Client(timeout=VLM_TIMEOUT) as client:
-        response = client.post(url, json=payload)
-        response.raise_for_status()
-        raw = response.json().get("response", "")
+    for attempt in range(1, MAX_RETRIES + 1):
+        logger.debug(
+            f"VLM request: {model} for {image_path.name} ({figure_type}), attempt {attempt}/{MAX_RETRIES}"
+        )
+        with httpx.Client(timeout=VLM_TIMEOUT) as client:
+            response = client.post(url, json=payload)
+            response.raise_for_status()
+            raw = response.json().get("message", {}).get("content", "")
 
-    summary, detail = parse_vlm_output(raw)
-    logger.debug(f"VLM result: summary={len(summary)}ch, detail={len(detail)}ch")
-    return summary, detail, model
+        if raw.strip():
+            summary, detail = parse_vlm_output(raw)
+            logger.debug(f"VLM result: summary={len(summary)}ch, detail={len(detail)}ch")
+            return summary, detail, model
+
+        logger.warning(
+            f"VLM returned empty response for {image_path.name} (attempt {attempt}/{MAX_RETRIES})"
+        )
+
+    logger.warning(f"VLM gave up after {MAX_RETRIES} attempts for {image_path.name}")
+    return "", "", model

@@ -12,11 +12,20 @@ from app.core.ingestion.figures.vlm_extractor import (
     extract_with_vlm,
     parse_vlm_output,
     VLM_MODEL,
+    MAX_RETRIES,
+    CHART_PROMPT,
+    DIAGRAM_PROMPT,
 )
 
 
 def test_vlm_default_model_is_qwen3_vl_4b():
     assert VLM_MODEL == "qwen3-vl:4b"
+
+
+def test_vlm_prompts_are_minimal():
+    # Prompts must stay short to avoid qwen3-vl thinking-mode token exhaustion
+    assert len(CHART_PROMPT) < 30
+    assert len(DIAGRAM_PROMPT) < 30
 
 
 def test_parse_vlm_output_with_summary_and_detail():
@@ -48,7 +57,7 @@ def test_extract_with_vlm_calls_ollama(tmp_path):
     fake_response = MagicMock()
     fake_response.status_code = 200
     fake_response.json.return_value = {
-        "response": "SUMMARY: Test.\nDETAIL: Test detail."
+        "message": {"content": "SUMMARY: Test.\nDETAIL: Test detail."}
     }
     fake_response.raise_for_status = MagicMock()
 
@@ -68,7 +77,10 @@ def test_extract_with_vlm_calls_ollama(tmp_path):
     assert detail == "Test detail."
     assert model == "qwen3-vl:4b"
     mock_client.post.assert_called_once()
-    # Verify the prompt includes caption
+    # Verify the messages include image and minimal prompt
     call_kwargs = mock_client.post.call_args.kwargs
-    assert "Bobot Penilaian" in call_kwargs["json"]["prompt"]
+    messages = call_kwargs["json"]["messages"]
+    assert len(messages) == 1
+    assert "images" in messages[0]
     assert call_kwargs["json"]["model"] == "qwen3-vl:4b"
+    assert call_kwargs["json"]["think"] is False
