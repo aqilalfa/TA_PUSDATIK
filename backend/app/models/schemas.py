@@ -68,6 +68,7 @@ class ChatRequest(BaseModel):
     top_k: int = 5
     max_tokens: int = 2048
     document_id: Optional[str] = None
+    max_quality_retries: Optional[int] = None  # override MAX_QUALITY_RETRY_ATTEMPTS; 0 = skip retries
 
 
 class ChatResponse(BaseModel):

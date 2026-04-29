@@ -219,28 +219,25 @@ class LangchainRAGEngine:
             self._bm25_loaded = True
             self._bm25_mtime = None
 
+    @staticmethod
+    def _strip_filename_prefix(text: str) -> str:
+        """Remove leading 'FILENAME.pdf: ' prefix added during ingestion."""
+        if ".pdf: " in text[:120]:
+            idx = text.find(".pdf: ")
+            if idx != -1:
+                return text[idx + 6:]
+        return text
+
     def _chunk_key(self, doc: Document) -> str:
-        """Stable key for dedup/fusion across retrieval methods."""
-        meta = doc.metadata or {}
-        point_id = meta.get("_id")
-        if point_id is not None:
-            return f"point:{point_id}"
+        """Stable key for dedup/fusion across retrieval methods.
 
-        doc_id = meta.get("doc_id")
-        chunk_index = meta.get("chunk_index")
-        if doc_id is not None and chunk_index is not None:
-            return f"chunk:{doc_id}:{chunk_index}"
-
-        text_prefix = (doc.page_content or "")[:180].strip().lower()
-        return "|".join(
-            [
-                str(meta.get("doc_id", "")),
-                str(meta.get("pasal", "")),
-                str(meta.get("ayat", "")),
-                str(meta.get("context_header", "")),
-                text_prefix,
-            ]
-        )
+        Content-only key (after stripping 'FILENAME.pdf: ' prefix) ensures that
+        old-format Qdrant points (bare text) and new-format points (prefixed text)
+        deduplicate as the same chunk across retrieval methods.
+        """
+        raw_text = doc.page_content or ""
+        content_text = self._strip_filename_prefix(raw_text)
+        return content_text[:200].strip().lower()
 
     def _enrich_vector_payloads(self, docs: List[Document]):
         """Enrich LangChain docs with full Qdrant payload metadata."""

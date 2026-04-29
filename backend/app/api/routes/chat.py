@@ -508,7 +508,8 @@ async def chat_stream(request: ChatRequest, db: Session = Depends(get_db)):
 
             candidate_pool = [(first_response, first_quality)]
 
-            for attempt in range(1, MAX_QUALITY_RETRY_ATTEMPTS + 1):
+            _retry_limit = MAX_QUALITY_RETRY_ATTEMPTS if request.max_quality_retries is None else request.max_quality_retries
+            for attempt in range(1, _retry_limit + 1):
                 current_best_response, current_best_quality = max(
                     candidate_pool,
                     key=lambda item: _quality_rank_key(item[1]),
