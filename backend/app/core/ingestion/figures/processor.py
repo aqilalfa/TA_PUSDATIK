@@ -25,8 +25,9 @@ from app.core.ingestion.figures.cache import (
 
 
 CACHE_FILENAME = "figures.json"
-VLM_TYPES = {"pie_chart", "bar_chart", "line_chart", "diagram", "timeline_image"}
+VLM_TYPES = {"pie_chart", "bar_chart", "line_chart"}
 OCR_TYPES = {"table_image"}
+SKIP_TYPES = {"diagram", "timeline_image", "photo"}
 
 
 def _image_idx_from_id(figure_id: str) -> int:
@@ -173,6 +174,11 @@ def process_figures(
         order_in_page = page_order[img.page].index(img.figure_id)
         caption = _find_caption_for_extracted_image(marker_md, img, order_in_page)
         figure_type = classify(caption, (img.width, img.height))
+
+        if figure_type in SKIP_TYPES:
+            logger.debug(f"  {img.figure_id} → skipped ({figure_type})")
+            continue
+
         logger.info(f"  {img.figure_id} → {figure_type} (caption: {caption[:60]!r})")
 
         extraction = _build_extraction(img, caption, figure_type)

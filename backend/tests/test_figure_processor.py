@@ -63,10 +63,8 @@ def test_process_figures_routes_chart_to_vlm_and_skips_photo(tmp_path):
     by_id = {r.figure_id: r for r in results}
     assert "fig_p026_01" in by_id
     assert "fig_p046_01" in by_id
-    # Photo should be present but extraction_method == "skipped"
-    photo = by_id["fig_p031_01"]
-    assert photo.extraction_method == "skipped"
-    assert photo.figure_type == "photo"
+    # Photo and diagram/timeline are completely excluded from results
+    assert "fig_p031_01" not in by_id
 
     chart = by_id["fig_p026_01"]
     assert chart.extraction_method == "vlm"
