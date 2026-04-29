@@ -1,0 +1,242 @@
+[
+  {
+    "id": "gt_041",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Berapa bobot Domain Layanan SPBE dalam penilaian Indeks SPBE?",
+    "ground_truth": "Bobot Domain Layanan SPBE adalah 45,5%, merupakan bobot terbesar dari 4 domain SPBE.",
+    "answer": "Catatan referensi: Poin di atas disintesis dari sumber [1], [2], [3], [4], [5].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Struktur Penilaian Tingkat Kematangan SPBE\n[2] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[3] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[4] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[5] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+    "contexts": [
+      "Penetapan bobot penilaian Indeks SPBE dilakukan pada setiap level dalam struktur penilaian, yaitu domain, aspek, dan indikator, dengan mempertimbangka…",
+      "Aspek 8 - Layanan Publik Berbasis Elektronik\nIndikator 42\nTingkat Kematangan Layanan Pengaduan Pelayanan\nPublik\nIndikator 43\nTingkat Kematangan Layana…",
+      "Bobot\n(%)\nDomain 1\nKebijakan Internal SPBE\n13,00\nDomain 2\nTata Kelola SPBE\n25,00\nDomain 3\nManajemen SPBE\n16,50\nDomain 4\nLayanan SPBE\n45,50\nTotal Bobot…",
+      "indeks SPBE dihitung berdasarkan penjumlahan dari penghitungan\n𝑰𝒏𝒅𝒆𝒌𝒔 𝑺𝑷𝑩𝑬= ∑𝑁𝐷𝑗× 𝐵𝐷𝑗\n𝑛\n𝑗=1\n-24-\nperkalian antara nilai indeks domain dan bobot domain…",
+      "Peta Rencana\nSPBE Instansi\nPusat/\nPemerintah\nDaerah\n4\n2,50\n10,00\nIndikator 13\nTingkat\nKematangan\nKeterpaduan\nRencana dan\nAnggaran SPBE\n3\n2,50\n7,50\nInd…"
+    ],
+    "latency_s": 346.99
+  },
+  {
+    "id": "gt_042",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Berapa bobot Domain Manajemen SPBE dalam penilaian Indeks SPBE?",
+    "ground_truth": "Bobot Domain Manajemen SPBE adalah 13%, merupakan bobot terkecil dari 4 domain SPBE.",
+    "answer": "Catatan referensi: Poin di atas disintesis dari sumber [1], [2], [3], [4], [5].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Struktur Penilaian Tingkat Kematangan SPBE\n[2] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[3] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[4] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[5] Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE > LAMPIRAN",
+    "contexts": [
+      "Penetapan bobot penilaian Indeks SPBE dilakukan pada setiap level dalam struktur penilaian, yaitu domain, aspek, dan indikator, dengan mempertimbangka…",
+      "Aspek 8 - Layanan Publik Berbasis Elektronik\nIndikator 42\nTingkat Kematangan Layanan Pengaduan Pelayanan\nPublik\nIndikator 43\nTingkat Kematangan Layana…",
+      "Bobot\n(%)\nDomain 1\nKebijakan Internal SPBE\n13,00\nDomain 2\nTata Kelola SPBE\n25,00\nDomain 3\nManajemen SPBE\n16,50\nDomain 4\nLayanan SPBE\n45,50\nTotal Bobot…",
+      "indeks SPBE dihitung berdasarkan penjumlahan dari penghitungan\n𝑰𝒏𝒅𝒆𝒌𝒔 𝑺𝑷𝑩𝑬= ∑𝑁𝐷𝑗× 𝐵𝐷𝑗\n𝑛\n𝑗=1\n-24-\nperkalian antara nilai indeks domain dan bobot domain…",
+      "indeks SPBE dihitung berdasarkan penjumlahan dari penghitungan\n𝑰𝒏𝒅𝒆𝒌𝒔 𝑺𝑷𝑩𝑬= ∑𝑁𝐷𝑗× 𝐵𝐷𝑗\n𝑛\n𝑗=1\n-24-\nperkalian antara nilai indeks domain dan bobot domain…"
+    ],
+    "latency_s": 336.95
+  },
+  {
+    "id": "gt_043",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Apa kriteria Tingkat Kematangan Optimum dalam kapabilitas proses SPBE?",
+    "ground_truth": "Tingkat Optimum: kriteria Tingkat Terpadu dan Terukur telah terpenuhi, dan proses penerapan SPBE telah dilakukan peningkatan kualitas secara berkesinambungan berdasarkan hasil reviu dan evaluasi.",
+    "answer": "Catatan referensi: Poin di atas disintesis dari sumber [1], [2], [3], [4], [5].\n\nReferensi Dokumen:\n[1] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[2] Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE > LAMPIRAN\n[3] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[4] Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE > LAMPIRAN\n[5] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+    "contexts": [
+      "kemampuan organisasi pada suatu proses dan akan digunakan untuk\npengukuran tingkat kematangan kebijakan, tata kelola, dan manajemen\nSPBE. Tingkat kema…",
+      "kemampuan organisasi pada suatu proses dan akan digunakan untuk\npengukuran tingkat kematangan kebijakan, tata kelola, dan manajemen\nSPBE. Tingkat kema…",
+      "Proses penerapan SPBE sudah dilakukan sesuai\ndengan\nfungsi\nmanajemen\nyang\nsesuai\npedoman/standar dan diterapkan pada semua unit\nkerja dalam organisasi…",
+      "Proses penerapan SPBE sudah dilakukan sesuai\ndengan\nfungsi\nmanajemen\nyang\nsesuai\npedoman/standar dan diterapkan pada semua unit\nkerja dalam organisasi…",
+      "Nilai indeks yang merepresentasikan tingkat kematangan penerapan\nSPBE dikelompokkan berdasarkan predikat seperti tertera pada Tabel 10\ndi bawah ini.\nT…"
+    ],
+    "latency_s": 314.16
+  },
+  {
+    "id": "gt_044",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Pada tingkat kematangan kapabilitas proses berapa SPBE diukur kontribusinya pada kinerja organisasi?",
+    "ground_truth": "Pada Tingkat 4 (Terpadu dan Terukur): proses penerapan SPBE yang terpadu telah berkontribusi pada kinerja organisasi dan dapat diukur melalui kegiatan reviu dan evaluasi.",
+    "answer": "Catatan referensi: Poin di atas disintesis dari sumber [1], [2], [3], [4], [5].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[2] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[3] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[4] Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE > LAMPIRAN\n[5] Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE > LAMPIRAN",
+    "contexts": [
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Tingkat kematangan mencakup kapabilitas proses dan kapabilitas layanan. Kapabilitas proses menguk…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Model Capability Maturity Model tersebut digunakan untuk mengevaluasi tingkat kematangan dalam ka…",
+      "Proses penerapan SPBE sudah dilakukan sesuai\ndengan\nfungsi\nmanajemen\nyang\nsesuai\npedoman/standar dan diterapkan pada semua unit\nkerja dalam organisasi…",
+      "Proses penerapan SPBE sudah dilakukan sesuai\ndengan\nfungsi\nmanajemen\nyang\nsesuai\npedoman/standar dan diterapkan pada semua unit\nkerja dalam organisasi…",
+      "kemampuan organisasi pada suatu proses dan akan digunakan untuk\npengukuran tingkat kematangan kebijakan, tata kelola, dan manajemen\nSPBE. Tingkat kema…"
+    ],
+    "latency_s": 314.86
+  },
+  {
+    "id": "gt_045",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Apa kriteria Tingkat Kematangan Layanan SPBE pada level Transaksi?",
+    "ground_truth": "Tingkat Transaksi: kriteria Tingkat Interaksi telah terpenuhi, dan layanan SPBE diberikan melalui satu kesatuan transaksi operasi dengan menggunakan beberapa sumber daya SPBE, mencakup validasi data, analitik data, dan mekanisme persetujuan.",
+    "answer": "Catatan referensi: Poin di atas disintesis dari sumber [1], [2], [3], [4], [5].\n\nReferensi Dokumen:\n[1] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[2] Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE > LAMPIRAN\n[3] Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE > LAMPIRAN\n[4] Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE > LAMPIRAN\n[5] Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE > LAMPIRAN",
+    "contexts": [
+      "pengukuran\ntingkat\nkematangan\nlayanan\nSPBE\nyaitu\nlayanan\nadministrasi pemerintahan berbasis elektronik dan layanan publik\nberbasis elektronik. Tingkat…",
+      "pengukuran\ntingkat\nkematangan\nlayanan\nSPBE\nyaitu\nlayanan\nadministrasi pemerintahan berbasis elektronik dan layanan publik\nberbasis elektronik. Tingkat…",
+      "sumber daya SPBE.\n4 – Kolaborasi\nKriteria Tingkat Transaksi telah terpenuhi.\nLayanan SPBE diberikan melalui integrasi/kolaborasi\ndengan layanan SPBE l…",
+      "-76-\nDomain 4\n:\nLayanan SPBE\nAspek 8\n:\nLayanan Publik Berbasis Elektronik\nIndikator 46 :\nTingkat Kematangan Layanan Publik Sektor 2\nPertanyaan\n:\nApaka…",
+      "Domain 3\n:\nManajemen SPBE\nAspek 5\n:\nPenerapan Manajemen SPBE\nIndikator 25\n:\nTingkat Kematangan Penerapan Kompetensi Sumber Daya\nManusia\nPertanyaan\n:\nA…"
+    ],
+    "latency_s": 315.27
+  },
+  {
+    "id": "gt_046",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Bagaimana hierarki Struktur Penilaian Tingkat Kematangan SPBE?",
+    "ground_truth": "Struktur penilaian SPBE terdiri atas 3 level: (1) domain — area penerapan SPBE yang dinilai; (2) aspek — area spesifik dalam domain; (3) indikator — informasi spesifik dari aspek yang dinilai. Sebuah domain terdiri dari satu atau beberapa aspek, dan sebuah aspek terdiri dari beberapa indikator.",
+    "answer": "Catatan referensi: Poin di atas disintesis dari sumber [1], [2], [3], [4], [5].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Struktur Penilaian Tingkat Kematangan SPBE\n[2] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Struktur Penilaian Tingkat Kematangan SPBE\n[3] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[4] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[5] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "Struktur penilaian tingkat kematangan penerapan SPBE terdiri atas:\n- 1. domain, merupakan area penerapan SPBE yang dinilai;\n- 2. aspek, merupakan area…",
+      "Penetapan bobot penilaian Indeks SPBE dilakukan pada setiap level dalam struktur penilaian, yaitu domain, aspek, dan indikator, dengan mempertimbangka…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: ![](_page_29_Picture_0.jpeg)\n\n![](_page_29_Figure_1.jpeg)\n\n<span id=\"page-29-1\"></span>**Gambar 5…",
+      "sumber daya SPBE.\n4 – Kolaborasi\nKriteria Tingkat Transaksi telah terpenuhi.\nLayanan SPBE diberikan melalui integrasi/kolaborasi\ndengan layanan SPBE l…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: ![](_page_29_Picture_9.jpeg)\n\n![](_page_30_Picture_0.jpeg)\n\n![](_page_30_Figure_1.jpeg)\n\n<span id…"
+    ],
+    "latency_s": 333.08
+  },
+  {
+    "id": "gt_047",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Berapa bobot Aspek Penerapan Manajemen SPBE?",
+    "ground_truth": "Bobot Aspek Penerapan Manajemen SPBE adalah 12%.",
+    "answer": "Catatan referensi: Poin di atas disintesis dari sumber [1], [2], [3], [4], [5].\n\nReferensi Dokumen:\n[1] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[2] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[3] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[4] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[5] Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE > LAMPIRAN",
+    "contexts": [
+      "Aspek 8 - Layanan Publik Berbasis Elektronik\nIndikator 42\nTingkat Kematangan Layanan Pengaduan Pelayanan\nPublik\nIndikator 43\nTingkat Kematangan Layana…",
+      "Bobot\n(%)\nDomain 1\nKebijakan Internal SPBE\n13,00\nDomain 2\nTata Kelola SPBE\n25,00\nDomain 3\nManajemen SPBE\n16,50\nDomain 4\nLayanan SPBE\n45,50\nTotal Bobot…",
+      "Peta Rencana\nSPBE Instansi\nPusat/\nPemerintah\nDaerah\n4\n2,50\n10,00\nIndikator 13\nTingkat\nKematangan\nKeterpaduan\nRencana dan\nAnggaran SPBE\n3\n2,50\n7,50\nInd…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: | Domain                     | Aspek                                                    | No. Ind…",
+      "Domain 3\n:\nManajemen SPBE\nAspek 5\n:\nPenerapan Manajemen SPBE\nIndikator 25\n:\nTingkat Kematangan Penerapan Kompetensi Sumber Daya\nManusia\nPertanyaan\n:\nA…"
+    ],
+    "latency_s": 334.01
+  },
+  {
+    "id": "gt_048",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Mana yang lebih besar bobotnya antara Aspek Layanan Administrasi Pemerintahan dan Aspek Layanan Publik berbasis Elektronik?",
+    "ground_truth": "Aspek Layanan Administrasi Pemerintahan Berbasis Elektronik mempunyai bobot 27,5%, lebih besar dari Aspek Layanan Publik Berbasis Elektronik yang berbobot 18%.",
+    "answer": "Catatan referensi: Poin di atas disintesis dari sumber [1], [2], [3], [4], [5].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[2] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[3] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[4] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[5] Perpres Nomor 95 Tahun 2018 | BAB II > Pasal 42 > Ayat (1)-(4)",
+    "contexts": [
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Domain Layanan, dengan indeks rata-rata tertinggi 3.78, mencakup dua aspek yaitu layanan administ…",
+      "Bobot\n(%)\nDomain 1\nKebijakan Internal SPBE\n13,00\nDomain 2\nTata Kelola SPBE\n25,00\nDomain 3\nManajemen SPBE\n16,50\nDomain 4\nLayanan SPBE\n45,50\nTotal Bobot…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Domain Layanan SPBE memperoleh rata-rata indeks tertinggi dengan skor 3,79, yang dikategorikan se…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Domain Layanan SPBE memperoleh rata-rata indeks tertinggi, yakni 4,15 yang setara dengan kategori…",
+      "(1) Layanan SPBE terdiri atas:\na. layanan administrasi pemerintahan berbasis\nelektronik; dan\nb. layanan publik berbasis elektronik.\n(2) Layanan admini…"
+    ],
+    "latency_s": 308.13
+  },
+  {
+    "id": "gt_049",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Berapa nilai Indeks SPBE Nasional pada tahun 2018?",
+    "ground_truth": "Nilai Indeks SPBE Nasional pada tahun 2018 adalah 1,98.",
+    "answer": "Catatan referensi: Poin di atas disintesis dari sumber [1], [2], [3], [4], [5].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[2] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Analisis Capaian Indeks Maturitas SPBE Nasional\n[3] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[4] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Analisis Capaian Indeks Maturitas SPBE Nasional\n[5] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: | Tabel 1. Daftar Domain, Aspek, Domain Pemantauan dan Evaluasi SPBE22 |    |\n|------------------…",
+      "Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 telah selesai dilaksanakan pada Desember 2024 dengan menghasilkan indeks maturitas…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: | Gambar 1. Capaian Indeks SPBE Nasional Tahun 2018 –<br>2024             | 3  |\n|---------------…",
+      "Gambar 11. Perbandingan Nilai Capaian Tiap Domain 2023 dan 2024\n**Tabel 5. Nilai Indeks Domain Nasional 2024**\nNasional: Rerata; Kebijakan<br>Internal…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: ![](_page_41_Picture_3.jpeg)\n\n![](_page_42_Picture_0.jpeg)\n\nDomain Kebijakan SPBE Internal berada…"
+    ],
+    "latency_s": 344.22
+  },
+  {
+    "id": "gt_050",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Pada tahun berapa Indeks SPBE Nasional pertama kali melampaui nilai 3?",
+    "ground_truth": "Tahun 2024 adalah pertama kalinya Indeks SPBE Nasional mencapai nilai di atas 3, yaitu 3,12.",
+    "answer": "Catatan referensi: Poin di atas disintesis dari sumber [1], [2], [3], [4], [5].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Analisis Capaian Indeks Maturitas SPBE Nasional\n[2] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[3] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[4] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[5] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Kesimpulan",
+    "contexts": [
+      "Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 telah selesai dilaksanakan pada Desember 2024 dengan menghasilkan indeks maturitas…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: ![](_page_90_Picture_5.jpeg)\n\n![](_page_91_Figure_0.jpeg)\n\n# <span id=\"page-91-0\"></span>**Penutu…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 telah selesai dilaksanakan pad…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: <span id=\"page-38-1\"></span>**Gambar 10. Lini Masa Pelaksanaan Evaluasi SPBE 2024**\n\n# <span id=\"…",
+      "Dari hasil Evaluasi SPBE 2024, dapat disimpulkan bahwa penerapan SPBE di Indonesia telah menunjukkan kemajuan signifikan dibandingkan tahun-tahun sebe…"
+    ],
+    "latency_s": 336.14
+  },
+  {
+    "id": "gt_051",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Berapa target peringkat EGDI Indonesia pada periode 2025-2029 dan 2045?",
+    "ground_truth": "Indonesia menargetkan masuk ke dalam 50 besar peringkat EGDI pada periode 2025-2029 dan 20 besar pada 2045.",
+    "answer": "Indonesia menargetkan peringkat E-Government Development Index (EGDI) masuk ke dalam 50 besar dunia pada periode tahun 2025–2029 [1]. Sasaran jangka panjang lainnya adalah masuk ke dalam 20 besar pada tahun 2045 [1].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Dalam kerangka Visi Indonesia Emas 2045, pemerintahan digital menjadi suatu elemen penting dalam…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: ![](_page_18_Picture_2.jpeg)\n\n20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Dalam kerangka…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Momentum pertumbuhan digital Indonesia semakin terlihat dengan lonjakan 43 peringkat sejak 2016,…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: pembangunan sistem keamanan digital yang terpadu, serta peningkatan kapabilitas sumber daya manus…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Tahun 2024 ini talah menjadi tahun yang signifikan bagi pelaksanaan pemrintahan digital di Indone…"
+    ],
+    "latency_s": 293.96
+  },
+  {
+    "id": "gt_052",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Siapa saja anggota Tim Koordinasi SPBE Nasional?",
+    "ground_truth": "Tim Koordinasi SPBE Nasional terdiri dari Kementerian PPN/Bappenas, Kementerian Kominfo, Kementerian Keuangan, Kementerian Dalam Negeri, Badan Siber dan Sandi Negara (BSSN), dan Badan Riset dan Inovasi Nasional (BRIN).",
+    "answer": "Catatan referensi: Poin di atas disintesis dari sumber [1], [2], [3], [4], [5].\n\nReferensi Dokumen:\n[1] Perpres Nomor 82 Tahun 2023 | BAB IV > Pasal 14\n[2] Perpres Nomor 82 Tahun 2023 | BAB IV > Pasal 15\n[3] Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik | BAB V > Pasal 60 > Ayat (1)-(4)\n[4] Perpres Nomor 95 Tahun 2018 | BAB V > Pasal 59 > Ayat (3)\n[5] Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik | BAB V > Pasal 59 > Ayat (3)",
+    "contexts": [
+      "Pasal 14\nMenteri yang menyelenggarakan urusan pemerintahan di\nbidang komunikasi dan informatika selaku anggota\nTim Koordinasi SPBE Nasional melakukan…",
+      "Pasal 15\nMenteri yang menyelenggarakan urusan pemerintahan di\nbidang perencanaan pembangunan nasional selaku ketua\ndewan pengarah penyelenggara Satu D…",
+      "Pasal 60\n(1) Setiap pimpinan Instansi Pusat mempunyai tugas\nmelakukan koordinasi dan menetapkan kebijakan\nSPBE di Instansi Pusat.\n(21 Setiap pimpinan…",
+      "(3) Tim Koordinasi SPBE Nasional mempunyai tugas\nmelakukan koordinasi dan penerapan kebijakan\nSPBE pada Instansi Pusat dan Pemerintah Daerah.\n(41 Tim…",
+      "(3) Tim Koordinasi SPBE Nasional mempunyai tugas\nmelakukan koordinasi dan penerapan kebijakan\nSPBE pada Instansi Pusat dan Pemerintah Daerah.\n(41 Tim…"
+    ],
+    "latency_s": 307.05
+  },
+  {
+    "id": "gt_053",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Domain mana yang mencapai indeks tertinggi pada Indeks SPBE Nasional 2024?",
+    "ground_truth": "Domain Layanan mencapai indeks tertinggi pada tahun 2024 dengan skor 3,78.",
+    "answer": "Catatan referensi: Poin di atas disintesis dari sumber [1], [2], [3], [4], [5].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Analisis Capaian Indeks Maturitas SPBE Nasional\n[2] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Analisis Capaian Indeks Maturitas SPBE Nasional\n[3] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[4] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[5] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 telah selesai dilaksanakan pada Desember 2024 dengan menghasilkan indeks maturitas…",
+      "Gambar 11. Perbandingan Nilai Capaian Tiap Domain 2023 dan 2024\n**Tabel 5. Nilai Indeks Domain Nasional 2024**\nNasional: Rerata; Kebijakan<br>Internal…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Tabel 5 di atas menggambarkan perbedaan nilai indeks nasional, termasuk rentang nilai maksimum da…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: ![](_page_41_Picture_0.jpeg)\n\n20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Tabel 5 di ata…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Domain Manajemen SPBE memiliki rata-rata indeks nasional terendah dengan skor 1.86, yang masuk da…"
+    ],
+    "latency_s": 338.12
+  },
+  {
+    "id": "gt_054",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Bagaimana tren capaian Domain Manajemen SPBE Nasional dari 2021 hingga 2024?",
+    "ground_truth": "Capaian Domain Manajemen SPBE Nasional menunjukkan tren peningkatan dari 1,23 (2021), 1,32 (2022), 1,66 (2023), hingga 1,86 (2024). Domain ini konsisten berada di posisi terendah dibanding domain lainnya.",
+    "answer": "Catatan referensi: Poin di atas disintesis dari sumber [1], [2], [3], [4], [5].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Analisis Capaian Indeks Maturitas SPBE Nasional\n[2] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[3] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[4] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[5] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 telah selesai dilaksanakan pada Desember 2024 dengan menghasilkan indeks maturitas…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Secara menyeluruh, meskipun terdapat tren peningkatan yang stabil, evaluasi SPBE di tahun 2024 me…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: | Deskripsi                    | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |\n|--------------…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Dapat kita lihat pada Tabel 4, nilai rata-rata tertinggi di tingkat nasional diraih oleh Domain L…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Tabel 5 di atas menggambarkan perbedaan nilai indeks nasional, termasuk rentang nilai maksimum da…"
+    ],
+    "latency_s": 338.77
+  },
+  {
+    "id": "gt_055",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Berapa banyak Instansi Pusat dan Pemerintah Daerah yang dievaluasi dalam Evaluasi SPBE 2024?",
+    "ground_truth": "Evaluasi SPBE 2024 dilaksanakan terhadap 615 IPPD yang terdiri dari 92 Instansi Pusat dan 523 Pemerintah Daerah.",
+    "answer": "Catatan referensi: Poin di atas disintesis dari sumber [1], [2], [3], [4], [5].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Struktur Penilaian Tingkat Kematangan SPBE\n[2] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[3] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[4] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[5] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Analisis Capaian Indeks Tingkat Kematangan SPBE Pemerintah Daerah",
+    "contexts": [
+      "Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 bertujuan untuk mengukur sejauh mana implementasi SPBE telah diterapkan di instansi…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Di sisi lain, Domain Manajemen SPBE mencatat rata-rata indeks terendah pada lokus Pemerintah Pusa…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: ![](_page_35_Picture_7.jpeg)\n\n![](_page_36_Picture_0.jpeg)\n\n<span id=\"page-36-1\"></span>**Tabel 3…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 bertujuan untuk mengukur sejau…",
+      "Hasil evaluasi SPBE pada tahun 2024 menunjukkan bahwa penerapan SPBE di Pemerintah Daerah berada pada tingkat yang setara dengan rerata nasional. Sela…"
+    ],
+    "latency_s": 329.23
+  }
+]
