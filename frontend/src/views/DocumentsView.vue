@@ -285,7 +285,6 @@ const stepperState = computed(() => {
 function stepClass(stepNum) {
   const s = stepperState.value
   if (s === 'done') return 'done'
-  if (s === 'idle') return 'idle'
   const active = s === 'step1' ? 1 : s === 'step2' ? 2 : 3
   if (stepNum < active) return 'done'
   if (stepNum === active) {

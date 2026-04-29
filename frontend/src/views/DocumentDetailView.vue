@@ -1,39 +1,48 @@
 <template>
   <div class="detail-page">
-    <!-- Header -->
-    <header class="page-header">
+    <!-- Topbar -->
+    <nav class="topbar">
+      <div class="topbar-brand">
+        <div class="topbar-logo">B</div>
+        <div>
+          <div class="topbar-title">SPBE Asisten</div>
+          <div class="topbar-subtitle">Badan Siber dan Sandi Negara</div>
+        </div>
+      </div>
+      <div class="topbar-nav">
+        <router-link to="/home" class="topbar-nav-link">Beranda</router-link>
+        <router-link to="/" class="topbar-nav-link">Chat</router-link>
+        <router-link to="/documents" class="topbar-nav-link active">Dokumen</router-link>
+      </div>
+    </nav>
+
+    <!-- Page header -->
+    <div class="page-header">
       <div class="header-content">
         <router-link to="/documents" class="back-link">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M19 12H5M12 19l-7-7 7-7"/>
           </svg>
+          Kembali
         </router-link>
         <div class="title-section">
-          <h1>{{ document?.document_title || 'Loading...' }}</h1>
+          <h1>{{ document?.document_title || 'Memuat...' }}</h1>
           <div class="doc-meta" v-if="document">
-            <span class="badge type">{{ document.doc_type }}</span>
-            <span class="badge status" :class="document.status">{{ document.status }}</span>
-            <span class="meta-item">{{ document.chunk_count }} chunks</span>
+            <span class="badge badge-info">{{ document.doc_type }}</span>
+            <span class="badge" :class="document.status === 'indexed' ? 'badge-ok' : 'badge-warn'">{{ document.status }}</span>
+            <span class="meta-item">{{ document.chunk_count }} chunk</span>
           </div>
         </div>
       </div>
       <div class="header-actions">
-        <button @click="confirmDeleteDocument" class="action-btn danger">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="3 6 5 6 21 6"/>
-            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
-          </svg>
+        <button @click="confirmDeleteDocument" class="btn-danger-outline">
           Hapus Dokumen
         </button>
-        <button @click="showAddModal = true" class="action-btn primary">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="12" y1="5" x2="12" y2="19"/>
-            <line x1="5" y1="12" x2="19" y2="12"/>
-          </svg>
-          Tambah Chunk
+        <button @click="showAddModal = true" class="btn-primary">
+          + Tambah Chunk
         </button>
       </div>
-    </header>
+    </div>
 
     <!-- Main Content -->
     <div class="main-content">
@@ -72,16 +81,19 @@
 
         <div class="chunks-list">
           <div 
-            v-for="chunk in chunks" 
+            v-for="(chunk, index) in chunks" 
             :key="chunk.id"
             class="chunk-card"
           >
             <div class="chunk-header">
               <div class="chunk-badges">
-                <span class="chunk-number">#{{ chunks.indexOf(chunk) + 1 }}</span>
+                <span class="chunk-number">#{{ index + 1 }}</span>
                 <span v-if="chunk.bab" class="badge bab">{{ extractBabShort(chunk.bab) }}</span>
                 <span v-if="chunk.pasal" class="badge pasal">{{ chunk.pasal }}</span>
-                <span v-if="chunk.ayat" class="badge ayat">Ayat ({{ chunk.ayat }})</span>
+                <span v-if="chunk.ayat" class="badge ayat">{{ formatAyatLabel(chunk.ayat) }}</span>
+                <span v-if="chunk.chunk_parts_total && Number(chunk.chunk_parts_total) > 1" class="badge part">
+                  Bagian {{ chunk.chunk_part || 1 }}/{{ chunk.chunk_parts_total }}
+                </span>
                 <span v-if="chunk.is_indexed" class="badge indexed">indexed</span>
               </div>
               <div class="chunk-actions">
@@ -136,8 +148,8 @@
         </div>
 
         <div class="modal-actions">
-          <button @click="closeModal" class="action-btn cancel">Batal</button>
-          <button @click="saveChunk" :disabled="saving" class="action-btn primary">
+          <button @click="closeModal" class="btn-cancel">Batal</button>
+          <button @click="saveChunk" :disabled="saving" class="btn-primary">
             {{ saving ? 'Menyimpan...' : (editingChunk ? 'Simpan Perubahan' : 'Tambah Chunk') }}
           </button>
         </div>
@@ -150,8 +162,8 @@
         <h3>Hapus Chunk?</h3>
         <p>Yakin ingin menghapus chunk #{{ deletingChunk.chunk_index + 1 }}?</p>
         <div class="modal-actions">
-          <button @click="deletingChunk = null" class="action-btn cancel">Batal</button>
-          <button @click="deleteChunk" :disabled="deleting" class="action-btn danger">
+          <button @click="deletingChunk = null" class="btn-cancel">Batal</button>
+          <button @click="deleteChunk" :disabled="deleting" class="btn-danger">
             {{ deleting ? 'Menghapus...' : 'Hapus' }}
           </button>
         </div>
@@ -165,8 +177,8 @@
         <p class="delete-warning">Yakin ingin menghapus dokumen "<strong>{{ document?.document_title }}</strong>"?</p>
         <p class="delete-info">Semua {{ document?.chunk_count || 0 }} chunks akan ikut terhapus. Aksi ini tidak dapat dibatalkan.</p>
         <div class="modal-actions">
-          <button @click="deletingDocument = false" class="action-btn cancel">Batal</button>
-          <button @click="deleteDocument" :disabled="deletingDocumentLoading" class="action-btn danger">
+          <button @click="deletingDocument = false" class="btn-cancel">Batal</button>
+          <button @click="deleteDocument" :disabled="deletingDocumentLoading" class="btn-danger">
             {{ deletingDocumentLoading ? 'Menghapus...' : 'Hapus Dokumen' }}
           </button>
         </div>
@@ -183,10 +195,16 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import {
+  deleteChunk as deleteChunkById,
+  deleteDocument as deleteDocumentById,
+  getDocument,
+  getDocumentChunks,
+  updateChunk
+} from '@/services/documentService'
 
 const route = useRoute()
 const router = useRouter()
-const API_BASE = 'http://localhost:8000'
 
 // State
 const docId = ref(route.params.doc_id)
@@ -227,31 +245,70 @@ function romanToInt(roman) {
   return result
 }
 
+function extractFirstNumber(value) {
+  if (value === null || value === undefined) return 0
+  const match = String(value).match(/\d+/)
+  return match ? parseInt(match[0], 10) : 0
+}
+
+function formatAyatLabel(ayat) {
+  if (!ayat) return ''
+  const text = String(ayat).trim()
+  if (!text) return ''
+  if (/^ayat\b/i.test(text)) return text
+  const number = extractFirstNumber(text)
+  return number > 0 ? `Ayat (${number})` : `Ayat ${text}`
+}
+
 // Sort chunks: BAB -> Pasal -> Ayat for peraturan, chunk_index for others
 function sortChunks(chunkList, docType) {
   return [...chunkList].sort((a, b) => {
     // For peraturan: sort by BAB -> Pasal -> Ayat
     if (docType === 'peraturan') {
       // Extract BAB Roman numeral
-      const babMatchA = a.bab?.match(/BAB\s+([IVXLCDM]+)/i)
-      const babMatchB = b.bab?.match(/BAB\s+([IVXLCDM]+)/i)
+      const babSourceA = a.bab || a.hierarchy || ''
+      const babSourceB = b.bab || b.hierarchy || ''
+      const babMatchA = babSourceA.match(/BAB\s+([IVXLCDM]+)/i)
+      const babMatchB = babSourceB.match(/BAB\s+([IVXLCDM]+)/i)
       const babA = romanToInt(babMatchA?.[1] || '')
       const babB = romanToInt(babMatchB?.[1] || '')
       if (babA !== babB) return babA - babB
 
       // Extract Pasal number
-      const pasalA = parseInt(a.pasal?.match(/\d+/)?.[0] || '0')
-      const pasalB = parseInt(b.pasal?.match(/\d+/)?.[0] || '0')
+      const pasalSourceA = a.pasal || a.hierarchy || ''
+      const pasalSourceB = b.pasal || b.hierarchy || ''
+      const pasalA = extractFirstNumber(pasalSourceA)
+      const pasalB = extractFirstNumber(pasalSourceB)
       if (pasalA !== pasalB) return pasalA - pasalB
 
       // Extract Ayat number
-      const ayatA = parseInt(a.ayat || '0')
-      const ayatB = parseInt(b.ayat || '0')
-      return ayatA - ayatB
+      const ayatA = extractFirstNumber(a.ayat)
+      const ayatB = extractFirstNumber(b.ayat)
+      if (ayatA !== ayatB) return ayatA - ayatB
+
+      // Keep split parts in natural order for long chunks
+      const partA = Number(a.chunk_part || 1)
+      const partB = Number(b.chunk_part || 1)
+      if (partA !== partB) return partA - partB
+
+      // Stable fallback to preserve original sequence
+      const indexA = Number(a.chunk_index || 0)
+      const indexB = Number(b.chunk_index || 0)
+      if (indexA !== indexB) return indexA - indexB
+
+      return Number(a.id || 0) - Number(b.id || 0)
     }
 
     // For non-peraturan: sort by chunk_index
-    return (a.chunk_index || 0) - (b.chunk_index || 0)
+    const indexA = Number(a.chunk_index || 0)
+    const indexB = Number(b.chunk_index || 0)
+    if (indexA !== indexB) return indexA - indexB
+
+    const partA = Number(a.chunk_part || 1)
+    const partB = Number(b.chunk_part || 1)
+    if (partA !== partB) return partA - partB
+
+    return Number(a.id || 0) - Number(b.id || 0)
   })
 }
 
@@ -270,10 +327,7 @@ function showToast(message, type = 'success') {
 
 async function loadDocument() {
   try {
-    const resp = await fetch(`${API_BASE}/api/documents/${docId.value}`)
-    if (resp.ok) {
-      document.value = await resp.json()
-    }
+    document.value = await getDocument(docId.value)
   } catch (e) {
     console.error('Load document error:', e)
   }
@@ -283,15 +337,12 @@ async function loadChunks() {
   loading.value = true
   try {
     // Load more chunks to ensure we have all for sorting
-    const resp = await fetch(`${API_BASE}/api/documents/${docId.value}/chunks?limit=500&offset=0`)
-    if (resp.ok) {
-      let rawChunks = await resp.json()
-      // Sort chunks based on document type
-      const docType = document.value?.doc_type || 'other'
-      chunks.value = sortChunks(rawChunks, docType)
-      offset.value = chunks.value.length
-      hasMore.value = rawChunks.length >= 500
-    }
+    const rawChunks = await getDocumentChunks(docId.value, 500, 0)
+    // Sort chunks based on document type
+    const docType = document.value?.doc_type || 'other'
+    chunks.value = sortChunks(rawChunks, docType)
+    offset.value = chunks.value.length
+    hasMore.value = rawChunks.length >= 500
   } catch (e) {
     console.error('Load chunks error:', e)
     showToast('Gagal memuat chunks', 'error')
@@ -303,15 +354,12 @@ async function loadChunks() {
 async function loadMore() {
   loadingMore.value = true
   try {
-    const resp = await fetch(`${API_BASE}/api/documents/${docId.value}/chunks?limit=${limit}&offset=${offset.value}`)
-    if (resp.ok) {
-      const more = await resp.json()
-      const docType = document.value?.doc_type || 'other'
-      // Add and re-sort all chunks
-      chunks.value = sortChunks([...chunks.value, ...more], docType)
-      offset.value += more.length
-      hasMore.value = more.length >= limit
-    }
+    const more = await getDocumentChunks(docId.value, limit, offset.value)
+    const docType = document.value?.doc_type || 'other'
+    // Add and re-sort all chunks
+    chunks.value = sortChunks([...chunks.value, ...more], docType)
+    offset.value += more.length
+    hasMore.value = more.length >= limit
   } catch (e) {
     console.error('Load more error:', e)
   } finally {
@@ -339,17 +387,10 @@ function confirmDeleteDocument() {
 async function deleteDocument() {
   deletingDocumentLoading.value = true
   try {
-    const resp = await fetch(`${API_BASE}/api/documents/${docId.value}`, {
-      method: 'DELETE'
-    })
-
-    if (!resp.ok) {
-      const error = await resp.json()
-      throw new Error(error.detail || 'Gagal menghapus dokumen')
-    }
+    await deleteDocumentById(docId.value)
 
     showToast('Dokumen berhasil dihapus')
-    
+
     // Redirect ke halaman daftar dokumen setelah 1 detik
     setTimeout(() => {
       router.push('/documents')
@@ -378,13 +419,7 @@ async function saveChunk() {
   try {
     if (editingChunk.value) {
       // Update existing chunk
-      const resp = await fetch(`${API_BASE}/api/documents/chunks/${editingChunk.value.id}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text: chunkForm.value.text })
-      })
-      
-      if (!resp.ok) throw new Error('Update gagal')
+      await updateChunk(editingChunk.value.id, chunkForm.value.text)
       
       // Update local state
       const idx = chunks.value.findIndex(c => c.id === editingChunk.value.id)
@@ -411,11 +446,7 @@ async function deleteChunk() {
 
   deleting.value = true
   try {
-    const resp = await fetch(`${API_BASE}/api/documents/chunks/${deletingChunk.value.id}`, {
-      method: 'DELETE'
-    })
-
-    if (!resp.ok) throw new Error('Delete gagal')
+    await deleteChunkById(deletingChunk.value.id)
 
     // Remove from local state
     chunks.value = chunks.value.filter(c => c.id !== deletingChunk.value.id)
@@ -437,130 +468,129 @@ onMounted(async () => {
 <style scoped>
 .detail-page {
   min-height: 100vh;
-  background: #1a1a2e;
-  color: #e4e4e7;
+  background: var(--color-cream);
 }
 
+/* Page header below topbar */
 .page-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
-  background: #16162a;
-  border-bottom: 1px solid #2a2a4a;
+  padding: 20px 32px 16px;
+  background: white;
+  border-bottom: 1px solid var(--color-border);
+  max-width: 100%;
 }
 
 .header-content {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 16px;
 }
 
 .back-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: #2a2a4a;
-  border-radius: 8px;
-  color: #a1a1aa;
-  transition: all 0.2s;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-family: var(--font-ui);
+  border: 1px solid var(--color-border);
+  padding: 5px 10px;
+  border-radius: 2px;
+  transition: all 0.15s;
+  white-space: nowrap;
 }
-
-.back-link:hover {
-  background: #3a3a5a;
-  color: #e4e4e7;
-}
+.back-link:hover { border-color: var(--color-navy); color: var(--color-navy); }
 
 .title-section h1 {
-  margin: 0;
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin: 0 0 6px;
 }
 
 .doc-meta {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
-}
-
-.badge {
-  padding: 0.125rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
-.badge.type {
-  background: #3a3a5a;
-  color: #a1a1aa;
-}
-
-.badge.status {
-  background: rgba(34, 197, 94, 0.2);
-  color: #22c55e;
-}
-
-.badge.status.uploaded,
-.badge.status.previewed {
-  background: rgba(234, 179, 8, 0.2);
-  color: #eab308;
+  gap: 8px;
 }
 
 .meta-item {
-  color: #71717a;
-  font-size: 0.875rem;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-family: var(--font-ui);
 }
 
 .header-actions {
   display: flex;
-  gap: 0.5rem;
+  gap: 8px;
 }
 
-.action-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.625rem 1rem;
+/* Buttons */
+.btn-primary {
+  background: var(--color-navy);
+  color: white;
   border: none;
-  border-radius: 6px;
-  font-size: 0.875rem;
-  font-weight: 500;
+  padding: 8px 16px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: var(--font-ui);
+  border-radius: 2px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background 0.15s;
 }
+.btn-primary:hover:not(:disabled) { background: var(--color-navy-hover); }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
 
-.action-btn.primary {
-  background: #6366f1;
-  color: white;
-}
-
-.action-btn.primary:hover {
-  background: #5558e3;
-}
-
-.action-btn.cancel {
+.btn-danger-outline {
   background: transparent;
-  border: 1px solid #3a3a5a;
-  color: #a1a1aa;
+  color: #c0392b;
+  border: 1px solid #c0392b;
+  padding: 7px 14px;
+  font-size: 11px;
+  font-family: var(--font-ui);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.15s;
 }
+.btn-danger-outline:hover { background: rgba(192, 57, 43, 0.08); }
 
-.action-btn.danger {
-  background: #ef4444;
+.btn-cancel {
+  background: transparent;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  padding: 7px 14px;
+  font-size: 11px;
+  font-family: var(--font-ui);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.btn-cancel:hover { border-color: var(--color-text-muted); }
+
+.btn-danger {
+  background: #c0392b;
   color: white;
+  border: none;
+  padding: 7px 16px;
+  font-size: 11px;
+  font-family: var(--font-ui);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.15s;
 }
+.btn-danger:hover:not(:disabled) { background: #a93226; }
+.btn-danger:disabled { opacity: 0.5; cursor: not-allowed; }
 
-.action-btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
+/* Main content */
 .main-content {
-  max-width: 1000px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 28px 32px;
 }
 
 .loading-state,
@@ -569,79 +599,76 @@ onMounted(async () => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem;
-  color: #71717a;
+  padding: 60px;
+  color: var(--color-text-muted);
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  font-family: var(--font-body);
+  font-style: italic;
 }
 
 .spinner {
-  width: 40px;
-  height: 40px;
-  border: 3px solid #3a3a5a;
-  border-top-color: #6366f1;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-gold);
   border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-.empty-state svg {
-  margin-bottom: 1rem;
-  opacity: 0.5;
-}
-
-.empty-state .action-btn {
-  margin-top: 1rem;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 12px;
 }
 
 .chunks-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
-  color: #71717a;
-  font-size: 0.875rem;
+  margin-bottom: 12px;
 }
 
 .chunks-info {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 10px;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-family: var(--font-ui);
 }
 
 .sort-indicator {
-  padding: 0.25rem 0.5rem;
-  background: #2a2a4a;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  color: #a1a1aa;
+  padding: 3px 8px;
+  background: var(--color-status-info-bg);
+  border: 1px solid var(--color-status-info-border);
+  border-radius: 2px;
+  font-size: 9px;
+  color: var(--color-status-info-text);
+  font-family: var(--font-ui);
+  letter-spacing: 0.3px;
 }
 
 .load-more-btn {
-  padding: 0.5rem 1rem;
-  background: #2a2a4a;
-  border: 1px solid #3a3a5a;
-  border-radius: 6px;
-  color: #e4e4e7;
-  font-size: 0.8125rem;
+  padding: 6px 14px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  color: var(--color-text-muted);
+  font-size: 11px;
+  font-family: var(--font-ui);
   cursor: pointer;
+  transition: all 0.15s;
 }
+.load-more-btn:hover { border-color: var(--color-navy); color: var(--color-navy); }
 
-.load-more-btn:hover {
-  background: #3a3a5a;
-}
-
+/* Chunks */
 .chunks-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 8px;
 }
 
 .chunk-card {
-  background: #16162a;
-  border: 1px solid #2a2a4a;
-  border-radius: 8px;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
   overflow: hidden;
 }
 
@@ -649,102 +676,82 @@ onMounted(async () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1rem;
-  background: #1a1a30;
-  border-bottom: 1px solid #2a2a4a;
+  padding: 8px 14px;
+  background: #faf9f7;
+  border-bottom: 1px solid var(--color-border-light);
 }
 
 .chunk-badges {
   display: flex;
-  gap: 0.5rem;
+  gap: 5px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .chunk-number {
-  background: #3a3a5a;
-  padding: 0.125rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
+  font-size: 9px;
   font-weight: 600;
-  color: #a1a1aa;
+  color: var(--color-text-muted);
+  font-family: var(--font-ui);
+  background: var(--color-border-light);
+  padding: 2px 7px;
+  border-radius: 2px;
 }
 
-.badge.bab {
-  background: #f59e0b;
-  color: #000;
-}
-
-.badge.pasal {
-  background: #6366f1;
-  color: white;
-}
-
-.badge.ayat {
-  background: #22c55e;
-  color: #000;
-}
-
-.badge.indexed {
-  background: rgba(34, 197, 94, 0.2);
-  color: #22c55e;
-}
+.badge.bab { background: #fdf8ee; color: #8b7355; border: 1px solid #e0c97a; font-size: 9px; padding: 2px 7px; border-radius: 2px; font-family: var(--font-ui); font-weight: 600; }
+.badge.pasal { background: var(--color-status-info-bg); color: var(--color-status-info-text); border: 1px solid var(--color-status-info-border); font-size: 9px; padding: 2px 7px; border-radius: 2px; font-family: var(--font-ui); font-weight: 600; }
+.badge.ayat { background: var(--color-status-ok-bg); color: var(--color-status-ok-text); border: 1px solid var(--color-status-ok-border); font-size: 9px; padding: 2px 7px; border-radius: 2px; font-family: var(--font-ui); font-weight: 600; }
+.badge.part { background: #eef2f9; color: #2c5282; border: 1px solid #b8cce4; font-size: 9px; padding: 2px 7px; border-radius: 2px; font-family: var(--font-ui); }
+.badge.indexed { background: var(--color-status-ok-bg); color: var(--color-status-ok-text); border: 1px solid var(--color-status-ok-border); font-size: 9px; padding: 2px 7px; border-radius: 2px; font-family: var(--font-ui); }
 
 .chunk-actions {
   display: flex;
-  gap: 0.25rem;
+  gap: 3px;
 }
 
 .icon-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   background: transparent;
-  border: none;
-  border-radius: 6px;
-  color: #71717a;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: var(--color-text-muted);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.15s;
 }
-
-.icon-btn:hover {
-  background: #2a2a4a;
-  color: #e4e4e7;
-}
-
-.icon-btn.delete:hover {
-  background: rgba(239, 68, 68, 0.2);
-  color: #ef4444;
-}
+.icon-btn:hover { border-color: var(--color-border); color: var(--color-navy); background: #eef2f9; }
+.icon-btn.delete:hover { border-color: #fcc; color: #c0392b; background: rgba(192,57,43,0.06); }
 
 .chunk-content {
-  padding: 1rem;
+  padding: 12px 14px;
 }
-
 .chunk-content p {
   margin: 0;
-  line-height: 1.6;
-  color: #d4d4d8;
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--color-text);
   white-space: pre-wrap;
 }
 
 .chunk-context {
-  padding: 0.75rem 1rem;
-  background: #14142a;
-  border-top: 1px solid #2a2a4a;
-  font-size: 0.8125rem;
-  color: #71717a;
+  padding: 8px 14px;
+  background: var(--color-cream-dark);
+  border-top: 1px solid var(--color-border-light);
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-family: var(--font-ui);
+  font-style: italic;
 }
 
 /* Modal */
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  inset: 0;
+  background: rgba(26, 58, 107, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -752,117 +759,82 @@ onMounted(async () => {
 }
 
 .modal {
-  background: #16162a;
-  border: 1px solid #2a2a4a;
-  border-radius: 12px;
-  padding: 1.5rem;
-  max-width: 600px;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  padding: 24px;
+  max-width: 580px;
   width: 90%;
   max-height: 80vh;
   overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(26, 58, 107, 0.15);
 }
 
 .modal h3 {
-  margin: 0 0 1.5rem;
-  font-size: 1.125rem;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin: 0 0 16px;
 }
 
 .modal p {
-  margin: 0 0 0.5rem;
-  color: #d4d4d8;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--color-text);
+  margin: 0 0 8px;
 }
 
-.delete-warning {
-  font-size: 0.9375rem;
-}
+.delete-warning strong { color: #c0392b; }
+.delete-info { font-size: 12px; color: var(--color-text-muted) !important; }
 
-.delete-warning strong {
-  color: #ef4444;
-}
-
-.delete-info {
-  font-size: 0.8125rem;
-  color: #71717a !important;
-}
-
-.form-group {
-  margin-bottom: 1rem;
-}
-
+.form-group { margin-bottom: 14px; }
 .form-group label {
   display: block;
-  margin-bottom: 0.5rem;
-  font-size: 0.875rem;
-  color: #a1a1aa;
+  margin-bottom: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-family: var(--font-ui);
 }
-
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 0.75rem;
-  background: #1a1a2e;
-  border: 1px solid #3a3a5a;
-  border-radius: 6px;
-  color: #e4e4e7;
-  font-size: 0.875rem;
-  font-family: inherit;
+  padding: 9px 12px;
+  background: #faf9f7;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  color: var(--color-text);
+  font-size: 13px;
+  font-family: var(--font-body);
   resize: vertical;
+  transition: border-color 0.2s, background 0.2s;
 }
-
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #6366f1;
+  border-color: var(--color-navy);
+  background: white;
 }
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.modal-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
-  margin-top: 1.5rem;
-}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 20px; }
 
 /* Toast */
 .toast {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  font-size: 0.875rem;
+  bottom: 24px;
+  right: 24px;
+  padding: 12px 20px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-family: var(--font-ui);
   z-index: 1001;
-  animation: slideIn 0.3s ease;
+  animation: slideInRight 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
-
-.toast.success {
-  background: #22c55e;
-  color: white;
-}
-
-.toast.error {
-  background: #ef4444;
-  color: white;
-}
-
-.toast.info {
-  background: #3b82f6;
-  color: white;
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+.toast.success { background: var(--color-navy); color: white; }
+.toast.error { background: #c0392b; color: white; }
+.toast.info { background: #8b7355; color: white; }
 </style>
