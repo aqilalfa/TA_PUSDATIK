@@ -132,23 +132,19 @@ class LangchainRAGEngine:
         """Get or create a ChatOllama instance."""
         if model_name not in self.llms:
             logger.info(f"[LLM] Creating ChatOllama: {model_name}")
-            # Qwen3.x / Qwen3.5.x menggunakan "thinking" mode by default.
-            # Mode ini menyebabkan chunk.content kosong selama fase reasoning.
-            # Disable dengan think=False agar token langsung di-yield.
             is_thinking_model = any(model_name.startswith(p) for p in ["qwen3", "qwen3.5"])
-            # langchain-ollama 1.0.1: parameter-nya adalah 'reasoning', bukan 'think'
-            # ini akan di-pass sebagai {"think": False} ke Ollama API options
-            extra_kwargs = {"reasoning": False} if is_thinking_model else {}
+            # langchain-ollama passes kwargs as Ollama model options, not top-level params.
+            # For thinking models we rely on stream_answer (direct httpx) which sets
+            # think=False at top-level. ChatOllama is only used for non-streaming paths.
             self.llms[model_name] = ChatOllama(
                 base_url=settings.OLLAMA_BASE_URL,
                 model=model_name,
                 temperature=0.1,
                 num_predict=2048,
-                timeout=600,  # 10 menit — model besar perlu waktu load awal
-                **extra_kwargs,
+                timeout=600,
             )
             if is_thinking_model:
-                logger.info(f"[LLM] Thinking mode DISABLED for {model_name}")
+                logger.info(f"[LLM] Note: ChatOllama path cannot disable thinking; use stream_answer for qwen3.x")
         return self.llms[model_name]
 
     # ------------------------------------------------------------------
@@ -1515,19 +1511,20 @@ class LangchainRAGEngine:
             user_content += f"\n\n{quality_guardrail}"
         ollama_messages.append({"role": "user", "content": user_content})
 
-        # Mirror ChatOllama options: temperature, num_predict, think (for qwen3.x)
         options: dict = {"temperature": 0.1, "num_predict": 2048}
+        # Ollama expects "think" at top-level, NOT inside options.
+        # Placing it in options is silently ignored, leaving thinking mode ON
+        # which causes 300-600s latency per query on qwen3/qwen3.5 models.
         is_thinking_model = any(model_name.startswith(p) for p in ["qwen3", "qwen3.5"])
-        if is_thinking_model:
-            options["think"] = False
+        extra_top_level: dict = {"think": False} if is_thinking_model else {}
 
         logger.info(
             f"[LLM] Streaming {model_name} via Ollama API "
-            f"({len(ollama_messages)} messages, context {len(context)} chars)..."
+            f"({len(ollama_messages)} messages, context {len(context)} chars, think={not is_thinking_model})..."
         )
 
         url = f"{settings.OLLAMA_BASE_URL}/api/chat"
-        payload = {"model": model_name, "messages": ollama_messages, "stream": True, "options": options}
+        payload = {"model": model_name, "messages": ollama_messages, "stream": True, "options": options, **extra_top_level}
 
         token_count = 0
         async with httpx.AsyncClient(timeout=600.0) as client:
