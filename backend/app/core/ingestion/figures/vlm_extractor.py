@@ -101,7 +101,7 @@ def extract_with_vlm(
         ],
         "stream": False,
         "think": False,
-        "options": {"temperature": 1.0, "top_k": 20, "num_predict": 800},
+        "options": {"temperature": 1.0, "top_k": 20, "num_predict": 4096},
     }
 
     url = f"{settings.OLLAMA_BASE_URL}/api/chat"

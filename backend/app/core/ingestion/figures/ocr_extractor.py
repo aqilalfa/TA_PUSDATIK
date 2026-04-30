@@ -15,9 +15,17 @@ _paddle_ocr_engine = None
 
 
 def _get_paddle_ocr():
-    """Lazy initialize PaddleOCR engine."""
+    """Lazy initialize PaddleOCR engine.
+
+    Falls back to the shared ocr_processor engine if PaddlePaddle's C++ runtime
+    (PDX) has already been initialized by another module, since PDX cannot be
+    initialized twice in the same process.
+    """
     global _paddle_ocr_engine
-    if _paddle_ocr_engine is None:
+    if _paddle_ocr_engine is not None:
+        return _paddle_ocr_engine
+
+    try:
         from paddleocr import PaddleOCR
         _paddle_ocr_engine = PaddleOCR(
             lang="id",
@@ -26,6 +34,17 @@ def _get_paddle_ocr():
             show_log=False,
         )
         logger.info("PaddleOCR engine initialized for figure extraction")
+    except Exception as e:
+        if "already" in str(e).lower() or "reinitialization" in str(e).lower():
+            # PDX runtime already initialized (by ocr.py import). Reuse shared engine.
+            logger.warning(f"PDX already initialized ({e}); reusing shared ocr_processor engine")
+            from app.core.ingestion.ocr import ocr_processor
+            if not ocr_processor._initialized:
+                ocr_processor.initialize()
+            _paddle_ocr_engine = ocr_processor.ocr_engine
+        else:
+            raise
+
     return _paddle_ocr_engine
 
 
