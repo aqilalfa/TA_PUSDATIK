@@ -32,10 +32,11 @@ WORKDIR /app
 # Copy requirements
 COPY requirements.txt requirements-dev.txt ./
 
-# Install Python dependencies
+# Install Python dependencies (split layers: prod first to cache heavy torch download separately from dev tools)
 RUN pip3 install --upgrade pip setuptools wheel && \
-    pip3 install -r requirements.txt && \
-    pip3 install -r requirements-dev.txt
+    pip3 install -r requirements.txt
+
+RUN pip3 install -r requirements-dev.txt
 
 # Copy scripts (app will be mounted as volume for hot-reload)
 COPY ./scripts /app/scripts
