@@ -87,8 +87,65 @@ def clean_text(text: str) -> str:
 # Advanced SPBE Lampiran Parsing
 # ---------------------------------------------------------------------------
 
+def _extract_lampiran_bab_sections(lampiran_text: str) -> List[Dict[str, str]]:
+    """Extract BAB narrative blocks from lampiran text."""
+    bab_pattern = re.compile(
+        r"^\s*(?:#+\s*)?(?:\*\*\s*)?BAB\s+([IVXLCDM]+)\b[ \t]*(.*)$",
+        re.MULTILINE | re.IGNORECASE,
+    )
+    matches = list(bab_pattern.finditer(lampiran_text or ""))
+    sections: List[Dict[str, str]] = []
+
+    if not matches:
+        return sections
+
+    for i, match in enumerate(matches):
+        start = match.end()
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(lampiran_text)
+
+        header_tail = (match.group(2) or "").strip(" -*:\t")
+        body_raw = (lampiran_text[start:end] or "").strip()
+        if not body_raw:
+            continue
+
+        body_lines = [line.strip() for line in body_raw.split("\n") if line.strip()]
+        if not body_lines:
+            continue
+
+        title = header_tail
+        body_lines_out = body_lines
+
+        # If title is on the next line after "BAB X", capture it as bab_judul.
+        if not title:
+            first_line = body_lines[0]
+            if (
+                len(first_line) <= 120
+                and not re.match(
+                    r"^(Domain|Aspek|Indikator)\s+\d+",
+                    first_line,
+                    re.IGNORECASE,
+                )
+            ):
+                title = first_line
+                body_lines_out = body_lines[1:] or [first_line]
+
+        body = "\n".join(body_lines_out).strip()
+        if not body:
+            continue
+
+        sections.append(
+            {
+                "bab_nomor": match.group(1).upper(),
+                "bab_judul": title,
+                "isi": body,
+            }
+        )
+
+    return sections
+
 def parse_spbe_lampiran(lampiran_text: str) -> Dict[str, Any]:
     """Parse the lampiran specifically looking for SPBE domains/aspek/indikator."""
+    narasi_bab = _extract_lampiran_bab_sections(lampiran_text)
     kuesioner = []
     
     # We look for Domain, Aspek, Indikator markers
@@ -176,7 +233,8 @@ def parse_spbe_lampiran(lampiran_text: str) -> Dict[str, Any]:
         
     return {
         "judul_lampiran": "LAMPIRAN",
-        "kuesioner_indikator": kuesioner
+        "narasi_bab": narasi_bab,
+        "kuesioner_indikator": kuesioner,
     }
 
 
@@ -193,7 +251,7 @@ _RE_BAGIAN = re.compile(
     re.MULTILINE | re.IGNORECASE,
 )
 _RE_PASAL = re.compile(
-    r"^\s*(?:#+\s*)?Pasal\s+(\d+)\s*(.*?)$",
+    r"^\s*(?:#+\s*)?(?:\*\*\s*)?Pasal\s+(\d+)\s*(?:\*\*)?\s*(.*?)\s*$",
     re.MULTILINE | re.IGNORECASE,
 )
 _RE_AYAT = re.compile(
@@ -680,7 +738,50 @@ def parse_laporan_spbe(text: str, metadata: Optional[Dict] = None, filename: str
             i = j
             continue
             
-        # --- Detecting Table Data ---
+        # --- Detecting 2024 Linearized Table Data ---
+        m_jenis = re.search(r"^Tabel\s+\d+\.\s*Hasil Evaluasi SPBE\s+(.+)$", line, re.IGNORECASE)
+        if m_jenis:
+            current_table_jenis = m_jenis.group(1).strip()
+            # The type will apply to the following linearized lines
+            i += 1
+            continue
+
+        m_row = re.search(r"Nama Instansi:\s*([^;]+);.*?D1:\s*([\d\,\.]+);.*?D2:\s*([\d\,\.]+);.*?D3:\s*([\d\,\.]+);.*?D4:\s*([\d\,\.]+);.*?Indeks:\s*([\d\,\.]+);.*?Predikat:\s*([^;]+)", line, re.IGNORECASE)
+        if m_row:
+            try:
+                nama_instansi = m_row.group(1).strip()
+                val1 = m_row.group(2).replace(',', '.')
+                val2 = m_row.group(3).replace(',', '.')
+                val3 = m_row.group(4).replace(',', '.')
+                val4 = m_row.group(5).replace(',', '.')
+                val5 = m_row.group(6).replace(',', '.')
+                predikat = m_row.group(7).strip()
+                
+                # Gunakan jenis dari tabel yang aktif, atau dari regex jika tidak ada
+                jenis = locals().get("current_table_jenis", "Instansi")
+                if "Kab." in nama_instansi or "Kabupaten" in nama_instansi: jenis = "Pemerintah Kabupaten"
+                elif "Kota" in nama_instansi: jenis = "Pemerintah Kota"
+                elif "Provinsi" in nama_instansi: jenis = "Pemerintah Provinsi"
+                
+                result["data_capaian_instansi"].append({
+                    "nama_instansi": nama_instansi,
+                    "jenis_instansi": jenis,
+                    "kategori_wilayah": "Nasional",
+                    "skor_domain": {
+                        "kebijakan_internal": float(val1),
+                        "tata_kelola": float(val2),
+                        "manajemen_spbe": float(val3),
+                        "layanan_spbe": float(val4)
+                    },
+                    "indeks_spbe_akhir": float(val5),
+                    "predikat": predikat
+                })
+            except ValueError:
+                pass
+            i += 1
+            continue
+
+        # --- Detecting 2023 Table Data ---
         if i + 7 < len(lines):
             try:
                 val1 = lines[i].replace(',', '.')

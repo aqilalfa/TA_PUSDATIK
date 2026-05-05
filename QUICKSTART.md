@@ -69,7 +69,7 @@ python scripts/download_models.py --verify
 
 Expected output:
 ```
-✓ LLM         : Present (models/llm/qwen-2.5-7b-instruct-q4_k_m.gguf)
+✓ LLM         : Present (models/llm/Qwen2.5-7B-Instruct-Q4_K_M.gguf)
 ✓ EMBEDDING   : Present (models/embeddings/indo-sentence-bert-base/)
 ✓ RERANKER    : Present (models/reranker/bge-reranker-base/)
 ```
@@ -259,6 +259,51 @@ docker-compose -f docker-compose.dev.yml up -d backend
    - Make changes dengan hot-reload
    - Test changes
    - Commit & push
+
+## 🧪 Regression Check Kualitas Jawaban
+
+### Canary baseline
+
+Baseline disimpan di `docs/evaluation/baselines/canary_baseline.json`. Buat ulang baseline setelah perubahan yang disengaja dan sudah diverifikasi:
+
+```bash
+# Backend harus berjalan. Timeout default 300 s per query (model lambat).
+python backend/scripts/eval_canary_baseline.py --force
+```
+
+### Jalankan regression check manual
+
+```bash
+python backend/scripts/eval_regression_check.py
+# Keluar 0 = semua canary stabil, keluar 1 = ada regresi
+```
+
+### Otomatis via hook
+
+Hook Claude Code terpasang di `.claude/settings.json`:
+- **PostToolUse** (`Edit`/`Write`) → menyentuh flag `.claude/_state/rag_dirty` bila file RAG core diubah.
+- **Stop** → jika flag ada, jalankan `eval_regression_check.py` lalu hapus flag.
+
+Tidak perlu tindakan manual — regression check berjalan otomatis di akhir sesi bila ada edit RAG.
+
+### Debug jawaban RAG
+
+Gunakan `rag_trace.py` untuk melihat detail tiap tahap retrieval:
+
+```bash
+# Query umum
+python backend/scripts/rag_trace.py --query "apa itu SPBE?"
+
+# Query dengan filter dokumen
+python backend/scripts/rag_trace.py --query "apa isi tabel 13?" --doc-id 1
+
+# Output JSON mentah
+python backend/scripts/rag_trace.py --query "apa isi pasal 5?" --doc-id 6 --json
+```
+
+Output mencakup 7 seksi: `classify_query`, `filter_resolution`, `vector_search`, `bm25_search`, `table_literal_search`, `rerank`, `final_context_and_answer`.
+
+Atau gunakan skill magnetic **rag-debug-answer** di dalam sesi Claude Code — ketik pertanyaan tentang mengapa jawaban salah dan skill akan memandu diagnosis step-by-step.
 
 ## 🆘 Butuh Bantuan?
 

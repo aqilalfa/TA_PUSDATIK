@@ -1,0 +1,882 @@
+[
+  {
+    "id": "gt_001",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Berapa nilai Indeks SPBE Nasional pada tahun 2024 dan apa predikatnya?",
+    "ground_truth": "Indeks SPBE Nasional pada tahun 2024 sebesar 3,12 (skala 1 hingga 5) dengan predikat \"Baik\". Capaian ini melampaui target yang ditetapkan sebesar 2,85 dan merupakan pertama kalinya Indeks SPBE Nasional mencapai nilai di atas 3.",
+    "answer": "Nilai Indeks SPBE Nasional pada tahun 2024 adalah 3,12 dengan predikat \"Baik\" [1].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Analisis Capaian Indeks Maturitas SPBE Nasional",
+    "contexts": [
+      "Gambar 11. Perbandingan Nilai Capaian Tiap Domain 2023 dan 2024\n**Tabel 5. Nilai Indeks Domain Nasional 2024**\nNasional: Rerata; Kebijakan<br>Internal…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: <span id=\"page-38-1\"></span>**Gambar 10. Lini Masa Pelaksanaan Evaluasi SPBE 2024**\n\n# <span id=\"…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Tahun 2024 ini talah menjadi tahun yang signifikan bagi pelaksanaan pemrintahan digital di Indone…",
+      "Tabel 5 di atas menggambarkan perbedaan nilai indeks nasional, termasuk rentang nilai maksimum dan minimum yang diperoleh oleh instansi pusat dan peme…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Partisipasi aktif dari 615 Instansi Pusat dan Pemerintah Daerah (IPPD) pada Evaluasi SPBE tahun 2…"
+    ],
+    "latency_s": 82.77
+  },
+  {
+    "id": "gt_002",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Instansi mana yang mendapatkan nilai Indeks SPBE tertinggi dari kategori Pemerintah Daerah pada evaluasi SPBE 2024?",
+    "ground_truth": "Pemerintah Kabupaten Banyuwangi meraih Indeks SPBE tertinggi pada kategori Pemerintah Daerah dengan skor 4,77 (predikat \"Memuaskan\"). Skor ini dicapai dengan nilai D1=5,00; D2=4,60; D3=4,18; D4=5,00.",
+    "answer": "Pemerintah Kabupaten Banyuwangi adalah instansi yang mendapatkan nilai Indeks SPBE tertinggi dari kategori Pemerintah Daerah pada Evaluasi SPBE 2024 dengan skor 4,77 [1]. Nilai tersebut menempatkan Pemerintah Kabupaten Banyuwangi dalam predikat \"Memuaskan\" yang merupakan predikat tertinggi [1].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: <span id=\"page-38-1\"></span>**Gambar 10. Lini Masa Pelaksanaan Evaluasi SPBE 2024**\n\n# <span id=\"…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Sementara itu, Domain Tata Kelola SPBE masuk ke dalam kategori \"Kurang\", dengan nilai rerata inde…",
+      "Gambar 11. Perbandingan Nilai Capaian Tiap Domain 2023 dan 2024\n**Tabel 5. Nilai Indeks Domain Nasional 2024**\nNasional: Rerata; Kebijakan<br>Internal…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Selanjutnya, Domain Tata Kelola SPBE di Instansi Pusat memiliki rata-rata indeks sebesar 3,53, ya…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: ![](_page_41_Picture_3.jpeg)\n\n![](_page_42_Picture_0.jpeg)\n\nDomain Kebijakan SPBE Internal berada…"
+    ],
+    "latency_s": 66.43
+  },
+  {
+    "id": "gt_003",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Kementerian apa yang mendapatkan nilai Indeks SPBE tertinggi di kategori Instansi Pusat pada evaluasi tahun 2024?",
+    "ground_truth": "Kementerian Komunikasi dan Informatika memperoleh nilai Indeks SPBE tertinggi pada kategori Instansi Pusat dengan skor 4,75 (predikat \"Memuaskan\"). Nilai per domain: D1=5,00; D2=5,00; D3=3,45; D4=5,00.",
+    "answer": "Berdasarkan dokumen yang tersedia, informasi mengenai kementerian yang mendapatkan nilai Indeks SPBE tertinggi di kategori Instansi Pusat pada evaluasi tahun 2024 tidak dapat diidentifikasi secara spesifik.\n\nDokumen menyatakan bahwa Indeks SPBE tertinggi di lokus Instansi Pusat diperoleh oleh Kementerian Komunikasi dan Informatika dengan skor 4,75 pada tahun 2024 [1]. Namun, dokumen juga mencatat bahwa rerata tingkat kematangan SPBE di Instansi Pusat mencapai nilai 3,71, yang merupakan nilai rata-rata dari 92 instansi pusat yang berpartisipasi, bukan nilai tertinggi spesifik per kementerian [5].\n\nMeskipun dokumen menyebutkan bahwa Kementerian Komunikasi dan Informatika meraih skor tertinggi di antara instansi pusat dengan predikat \"Memuaskan\" [1], dokumen tersebut tidak secara eksplisit membandingkan skor kementerian lain untuk menegaskan bahwa Kementerian Komunikasi dan Informatika adalah satu-satunya yang tertinggi dibandingkan instansi pusat lainnya, melainkan hanya menyatakan bahwa nilai tersebut adalah yang tertinggi yang diperoleh di lokus Instansi Pusat [1].\n\nOleh karena itu, berdasarkan fakta yang tersedia, Kementerian Komunikasi dan Informatika adalah instansi pusat yang mencatat nilai Indeks SPBE tertinggi dengan skor 4,75 [1].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[5] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: <span id=\"page-38-1\"></span>**Gambar 10. Lini Masa Pelaksanaan Evaluasi SPBE 2024**\n\n# <span id=\"…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: ![](_page_13_Figure_2.jpeg)\n\n![](_page_14_Picture_0.jpeg)\n\n### <span id=\"page-14-0\"></span>**SPBE…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Partisipasi aktif dari 615 Instansi Pusat dan Pemerintah Daerah (IPPD) pada Evaluasi SPBE tahun 2…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Tahun 2024 ini talah menjadi tahun yang signifikan bagi pelaksanaan pemrintahan digital di Indone…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Dari hasil evaluasi SPBE 2024, dapat kita lihat bahwa tiap tahunnya Indeks SPBE Nasional selalu m…"
+    ],
+    "latency_s": 94.36
+  },
+  {
+    "id": "gt_004",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Domain mana yang memiliki nilai indeks rata-rata tertinggi dan terendah secara nasional pada evaluasi SPBE 2024?",
+    "ground_truth": "Berdasarkan Tabel 5 Nilai Indeks Domain Nasional 2024: Domain Layanan SPBE memiliki nilai rata-rata tertinggi sebesar 3,78, sedangkan Domain Manajemen SPBE memiliki nilai rata-rata terendah sebesar 1,86. Domain Kebijakan Internal SPBE berada di angka 3,36 dan Domain Tata Kelola SPBE sebesar 2,62.",
+    "answer": "Berdasarkan dokumen yang tersedia, berikut adalah analisis mengenai domain dengan nilai indeks rata-rata tertinggi dan terendah secara nasional pada Evaluasi SPBE 2024:\n\nDomain Layanan SPBE memiliki nilai indeks rata-rata tertinggi secara nasional dengan skor 3,78 yang masuk dalam kategori \"Sangat Baik\" [4].\n\nSementara itu, Domain Manajemen SPBE memiliki nilai indeks rata-rata terendah secara nasional dengan skor 1,86 yang tergolong dalam kategori \"Kurang\" [4].\n\nReferensi Dokumen:\n[4] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Analisis Capaian Indeks Maturitas SPBE Nasional",
+    "contexts": [
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Sementara itu, Domain Tata Kelola SPBE masuk ke dalam kategori \"Kurang\", dengan nilai rerata inde…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Selanjutnya, Domain Tata Kelola SPBE di Instansi Pusat memiliki rata-rata indeks sebesar 3,53, ya…",
+      "Domain Manajemen SPBE memiliki rata-rata indeks nasional terendah dengan skor 1.86, yang masuk dalam kategori \"Kurang\". Domain Manajemen SPBE sendiri…",
+      "Gambar 11. Perbandingan Nilai Capaian Tiap Domain 2023 dan 2024\n**Tabel 5. Nilai Indeks Domain Nasional 2024**\nNasional: Rerata; Kebijakan<br>Internal…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Domain Layanan SPBE memperoleh rata-rata indeks tertinggi dengan skor 3,79, yang dikategorikan se…"
+    ],
+    "latency_s": 64.97
+  },
+  {
+    "id": "gt_005",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Bagaimana perkembangan nilai Indeks SPBE Nasional dari tahun 2018 sampai 2024?",
+    "ground_truth": "Perkembangan Indeks SPBE Nasional berdasarkan Tabel 4: 2018 = 1,98; 2019 = 2,18; 2020 = 2,26; 2021 = 2,24; 2022 = 2,34; 2023 = 2,79; 2024 = 3,12. Tren secara keseluruhan meningkat meskipun terjadi penurunan kecil pada 2021 dibanding 2020.",
+    "answer": "Nilai Indeks SPBE Nasional menunjukkan tren peningkatan yang stabil dan signifikan dari tahun 2018 hingga 2024. Pada tahun 2018, nilai indeks tersebut tercatat sebesar 1,98, kemudian meningkat menjadi 2,18 pada tahun 2019 [4]. Peningkatan berlanjut pada tahun 2020 dengan nilai 2,26, diikuti oleh sedikit penurunan menjadi 2,24 pada tahun 2021 [4]. Namun, tren positif kembali terlihat pada tahun 2022 dengan nilai 2,34, dan mengalami lonjakan signifikan pada tahun 2023 mencapai 2,79 [4]. Pada tahun 2024, nilai Indeks SPBE Nasional meningkat menjadi 3,12, yang merupakan capaian tertinggi dalam periode tersebut [1].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[4] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Partisipasi aktif dari 615 Instansi Pusat dan Pemerintah Daerah (IPPD) pada Evaluasi SPBE tahun 2…",
+      "Gambar 11. Perbandingan Nilai Capaian Tiap Domain 2023 dan 2024\n**Tabel 5. Nilai Indeks Domain Nasional 2024**\nNasional: Rerata; Kebijakan<br>Internal…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Tahun 2024 ini talah menjadi tahun yang signifikan bagi pelaksanaan pemrintahan digital di Indone…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: | Deskripsi                    | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |\n|--------------…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: <span id=\"page-11-0\"></span>**Gambar 1. Capaian Indeks SPBE Nasional Tahun 2018 – 2024**"
+    ],
+    "latency_s": 61.4
+  },
+  {
+    "id": "gt_006",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Berapa nilai Indeks SPBE rata-rata untuk Pemerintah Daerah pada tahun 2024 dan bagaimana rincian per domainnya?",
+    "ground_truth": "Indeks SPBE rata-rata Pemerintah Daerah pada 2024 sebesar 3,08 (predikat \"Baik\"). Rincian per domain: Domain Layanan = 3,79 (Sangat Baik); Domain Kebijakan = 3,33 (Baik); Domain Tata Kelola = 2,51 (Cukup); Domain Manajemen = 1,76 (Kurang).",
+    "answer": "Berdasarkan dokumen yang tersedia, berikut adalah informasi mengenai nilai Indeks SPBE rata-rata untuk Pemerintah Daerah pada tahun 2024 beserta rincian per domainnya:\n\nIndeks Tingkat Kematangan SPBE pada Pemerintah Daerah pada tahun 2024 mencapai 3,08 atau setara dengan predikat \"Baik\" [3]. Rincian nilai indeks per domainnya adalah sebagai berikut:\n\n* Domain Layanan: Memiliki nilai rerata indeks tertinggi sebesar 3,79 dengan predikat \"Sangat Baik\" [3].\n* Domain Kebijakan: Memiliki nilai rerata indeks sebesar 3,33 yang termasuk ke dalam predikat \"Baik\" [3].\n* Domain Tata Kelola: Memiliki nilai rerata 2,51 dengan predikat \"Cukup\" [3].\n* Domain Manajemen: Memiliki indeks 1,76 yang masuk ke dalam predikat \"Kurang\" [3].\n\nReferensi Dokumen:\n[3] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Domain Layanan, dengan indeks rata-rata tertinggi 3.78, mencakup dua aspek yaitu layanan administ…",
+      "Gambar 11. Perbandingan Nilai Capaian Tiap Domain 2023 dan 2024\n**Tabel 5. Nilai Indeks Domain Nasional 2024**\nNasional: Rerata; Kebijakan<br>Internal…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Secara keseluruhan, hasil evaluasi SPBE mengungkapkan bahwa penerapan SPBE di Instansi Pusat dapa…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Pada Instansi Pusat, Domain Kebijakan Internal SPBE mencatat rata-rata indeks sebesar 3,95, denga…",
+      "Tabel 5 di atas menggambarkan perbedaan nilai indeks nasional, termasuk rentang nilai maksimum dan minimum yang diperoleh oleh instansi pusat dan peme…"
+    ],
+    "latency_s": 66.95
+  },
+  {
+    "id": "gt_007",
+    "source_doc": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+    "doc_type": "pedoman_spbe",
+    "question": "Untuk siapa Pedoman Menteri PANRB Nomor 3 Tahun 2024 ini ditujukan?",
+    "ground_truth": "Pedoman Menteri PANRB Nomor 3 Tahun 2024 dimaksudkan untuk memberi panduan bagi: (1) Asesor Internal Instansi Pusat dan Pemerintah Daerah; (2) Asesor Eksternal; dan (3) Tim Pelaksanaan Pemantauan dan Evaluasi SPBE Kementerian PANRB yang terlibat dalam penyelenggaraan pemantauan dan evaluasi SPBE.",
+    "answer": "Pedoman Menteri Pendayagunaan Aparatur Negara dan Reformasi Birokrasi Republik Indonesia Nomor 3 Tahun 2024 ditujukan untuk memberikan panduan bagi Asesor Internal Instansi Pusat dan Pemerintah Daerah, Asesor Eksternal, serta Tim Pelaksanaan Pemantauan dan Evaluasi SPBE Kementerian PANRB [2].\n\nReferensi Dokumen:\n[2] PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024 | BAB I - PENDAHULUAN",
+    "contexts": [
+      "Sesuai dengan amanat Pasal 9 Peraturan Menteri PANRB No. 59 Tahun 2020, pelaksanaan Evaluasi Sistem Pemerintahan Berbasis Elektronik di tahun 2024 dil…",
+      "Pedoman Menteri ini dimaksudkan untuk memberi panduan bagi Asesor  Internal Instansi Pusat dan Pemerintah Daerah, Asesor Eksternal, dan Tim  Pelaksana…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 bertujuan untuk mengukur sejau…",
+      "Pedoman Menteri ini disusun agar memberikan penjelasan secara rinci dan  petunjuk yang jelas untuk kemudahan dalam melakukan penilaian, baik pada  tah…",
+      "1. Peraturan Presiden Nomor 95 Tahun 2018 tentang Sistem Pemerintahan  Berbasis Elektronik (Lembaran Negara Republik Indonesia Tahun 2018  Nomor 182);…"
+    ],
+    "latency_s": 43.11
+  },
+  {
+    "id": "gt_008",
+    "source_doc": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+    "doc_type": "pedoman_spbe",
+    "question": "Berapa jumlah indikator yang digunakan dalam kuesioner pemantauan dan evaluasi SPBE sesuai Pedoman Menteri PANRB Nomor 3 Tahun 2024?",
+    "ground_truth": "Kuesioner pemantauan dan evaluasi SPBE berdasarkan Pedoman Menteri PANRB Nomor 3 Tahun 2024 terdiri dari 47 (empat puluh tujuh) indikator dalam bentuk pertanyaan Tingkat Kematangan. Instrumen ini digunakan sebagai alat penilaian bagi Asesor Internal dan/atau responden pada Instansi Pusat atau Pemerintah Daerah.",
+    "answer": "Berdasarkan dokumen yang tersedia, berikut adalah rincian jumlah indikator dalam kuesioner pemantauan dan evaluasi SPBE:\n\n* Kuesioner pemantauan dan evaluasi SPBE terdiri dari 47 (empat puluh tujuh) indikator [1].\n* Indikator tersebut disusun dalam bentuk pertanyaan tingkat kematangan yang mencakup 4 (empat) Domain, 8 (delapan) Aspek, dan 47 (empat puluh tujuh) Indikator [2].\n* Instrumen ini digunakan sebagai alat penilaian bagi Asesor Internal dan/atau responden pada Instansi Pusat atau Pemerintah Daerah [1].\n\nReferensi Dokumen:\n[1] Pedoman Nomor 3 Tahun 2024 | BAB II - INSTRUMEN PEMANTAUAN DAN EVALUASI SPBE > A. Ketentuan Umum\n[2] Pedoman Nomor 3 Tahun 2024 | BAB II - INSTRUMEN PEMANTAUAN DAN EVALUASI SPBE > C. Pertanyaan Tingkat Kematangan",
+    "contexts": [
+      "Kuesioner pemantauan dan evaluasi SPBE merupakan instrumen untuk  mengumpulkan informasi penerapan SPBE di Instansi Pusat atau Pemerintah  Daerah. Kue…",
+      "Pertanyaan tingkat kematangan merupakan alat penilaian dalam  Pemantauan dan Evaluasi SPBE yang terdiri dari 4 (empat) Domain, 8 (delapan)  Aspek, dan…",
+      "Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 bertujuan untuk mengukur sejauh mana implementasi SPBE telah diterapkan di instansi…",
+      ".  Berdasarkan penjelasan dan data dukung yang disampaikan, maka  pengaturan tersebut <<belum/telah>> memenuhi kekuatan hukum  kebijakan mengikat seca…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Sesuai dengan amanat Pasal 9 Peraturan Menteri PANRB No. 59 Tahun 2020, pelaksanaan Evaluasi Sist…"
+    ],
+    "latency_s": 60.76
+  },
+  {
+    "id": "gt_009",
+    "source_doc": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+    "doc_type": "pedoman_spbe",
+    "question": "Apa saja tujuan dari Pedoman Menteri PANRB Nomor 3 Tahun 2024 tentang pemantauan dan evaluasi SPBE?",
+    "ground_truth": "Pedoman Menteri PANRB Nomor 3 Tahun 2024 bertujuan untuk: (a) memberikan panduan agar tercapai kesamaan pemahaman dan tindakan dalam proses penilaian pemantauan dan evaluasi SPBE; (b) memberikan petunjuk/tata cara dan kaidah dalam memberikan penjelasan pada proses penilaian; dan (c) menjamin kualitas dan memastikan tercapainya tujuan pelaksanaan pemantauan dan evaluasi SPBE secara sistematis.",
+    "answer": "Tujuan dari Pedoman Menteri Pendayagunaan Aparatur Negara dan Reformasi Birokrasi Republik Indonesia Nomor 3 Tahun 2024 dalam pelaksanaan pemantauan dan evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) adalah sebagai berikut:\n\n1. Memberikan panduan agar tercapai kesamaan pemahaman dan tindakan dalam proses penilaian pemantauan dan evaluasi SPBE [2].\n2. Memberikan petunjuk, tata cara, dan kaidah dalam memberikan penjelasan pada proses penilaian pemantauan dan evaluasi SPBE [2].\n3. Menjamin kualitas dan memastikan tercapainya tujuan pelaksanaan pemantauan dan evaluasi SPBE secara sistematis [2].\n\nSelain itu, pedoman ini juga dirancang untuk memastikan kesamaan pemahaman dan langkah dalam proses penilaian, memberikan petunjuk teknis serta kaidah penilaian, dan menjamin kualitas pelaksanaan pemantauan dan evaluasi SPBE secara sistematis [1].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Pemantauan & Evaluasi SPBE\n[2] PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024 | BAB I - PENDAHULUAN",
+    "contexts": [
+      "Sesuai dengan amanat Pasal 9 Peraturan Menteri PANRB No. 59 Tahun 2020, pelaksanaan Evaluasi Sistem Pemerintahan Berbasis Elektronik di tahun 2024 dil…",
+      "Pedoman Menteri ini dimaksudkan untuk memberi panduan bagi Asesor  Internal Instansi Pusat dan Pemerintah Daerah, Asesor Eksternal, dan Tim  Pelaksana…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 bertujuan untuk mengukur sejau…",
+      "Sistem  Pemerintahan  Berbasis  Elektronik  (SPBE)  merupakan  penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan  komunikasi dala…",
+      "Dalam pelaksanaan pemantauan dan evaluasi SPBE, Asesor diharapkan:  1. Menaati semua peraturan dan ketentuan yang berlaku;  2. Mendukung tujuan dan sa…"
+    ],
+    "latency_s": 60.64
+  },
+  {
+    "id": "gt_010",
+    "source_doc": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+    "doc_type": "pedoman_spbe",
+    "question": "Bagaimana perkembangan Indeks SPBE Nasional pada rentang 2021 sampai 2023 berdasarkan Pedoman Menteri PANRB Nomor 3 Tahun 2024?",
+    "ground_truth": "Berdasarkan Tabel 1 dalam Pedoman Menteri PANRB Nomor 3 Tahun 2024 (mengacu Permenpan 59/2020): Indeks SPBE Nasional 2021 = 2,24; 2022 = 2,34; 2023 = 2,79. Domain Layanan secara konsisten memiliki nilai tertinggi (2,81 â†’ 2,96 â†’ 3,47), sedangkan Domain Manajemen memiliki nilai terendah (1,23 â†’ 1,32 â†’ 1,66).",
+    "answer": "Berdasarkan Pedoman Menteri PANRB Nomor 3 Tahun 2024, perkembangan Indeks SPBE Nasional pada rentang tahun 2021 hingga 2023 menunjukkan tren peningkatan yang konsisten dari tahun ke tahun. Nilai Indeks SPBE Nasional pada tahun 2021 adalah 2,24, meningkat menjadi 2,34 pada tahun 2022, dan terus naik menjadi 2,79 pada tahun 2023 [3].\n\nSelain perkembangan indeks nasional secara keseluruhan, perkembangan pada masing-masing domain juga tercatat sebagai berikut:\n* Indeks Domain Kebijakan: Naik dari 2,21 (2021) menjadi 2,39 (2022) dan 2,94 (2023) [3].\n* Indeks Domain Tata Kelola: Turun dari 1,89 (2021) menjadi 1,85 (2022), kemudian naik signifikan menjadi 2,29 (2023) [3].\n* Indeks Domain Manajemen: Naik dari 1,23 (2021) menjadi 1,32 (2022) dan 1,66 (2023) [3].\n* Indeks Domain Layanan: Naik dari 2,81 (2021) menjadi 2,96 (2022) dan 3,47 (2023) [3].\n\nData perkembangan tersebut disajikan dalam Tabel 1 yang tercantum dalam Pedoman Nomor 3 Tahun 2024 [3].\n\nReferensi Dokumen:\n[3] Pedoman Nomor 3 Tahun 2024 | BAB I - PENDAHULUAN > A. Latar Belakang",
+    "contexts": [
+      "Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 telah selesai dilaksanakan pada Desember 2024 dengan menghasilkan indeks maturitas…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Partisipasi aktif dari 615 Instansi Pusat dan Pemerintah Daerah (IPPD) pada Evaluasi SPBE tahun 2…",
+      ". 59 Tahun 2020,  sebagaimana tergambar dalam tabel di bawah ini.           Tabel 1. Indeks SPBE Nasional (2021 – 2023)  Deskripsi  2021  2022  2023…",
+      ".   Dalam rangka memastikan penerapan SPBE yang menjadi peran  pembinaan dan pengawasan oleh Tim Koordinasi SPBE Nasional, maka  dilakukan kegiatan pe…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Sesuai dengan amanat Pasal 9 Peraturan Menteri PANRB No. 59 Tahun 2020, pelaksanaan Evaluasi Sist…"
+    ],
+    "latency_s": 91.88
+  },
+  {
+    "id": "gt_011",
+    "source_doc": "peraturan-bssn-no-8-tahun-2024.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa saja komponen Standar Audit Keamanan SPBE menurut Peraturan BSSN Nomor 8 Tahun 2024 Pasal 2?",
+    "ground_truth": "Berdasarkan Pasal 2 Peraturan BSSN Nomor 8 Tahun 2024, Standar Audit Keamanan SPBE terdiri atas 5 komponen: (a) objek Audit Keamanan SPBE; (b) pelaksana Audit Keamanan SPBE; (c) kriteria Audit Keamanan SPBE; (d) bukti Audit Keamanan SPBE; dan (e) kesimpulan Audit Keamanan SPBE.",
+    "answer": "Berdasarkan Peraturan Badan Siber dan Sandi Negara Nomor 68 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik, komponen Standar Audit Keamanan SPBE tercantum dalam Pasal 2 sebagai berikut:\n\nPasal 2\nStandar Audit Keamanan SPBE terdiri atas:\na. objek Audit Keamanan SPBE;\nb. pelaksana Audit Keamanan SPBE;\nc. kriteria Audit Keamanan SPBE;\nd. bukti Audit Keamanan SPBE; dan\ne. kesimpulan Audit Keamanan SPBE. [1]\n\nReferensi Dokumen:\n[1] Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik | BAB II > Kesatu -  > Pasal 2",
+    "contexts": [
+      "Pasal 2\nStandar Audit Keamanan SPBE terdiri atas: \na. \nobjek Audit Keamanan SPBE; \nb. \npelaksana Audit Keamanan SPBE; \nc. \nkriteria Audit Keamanan SPB…",
+      "Pasal 1\nDalam Peraturan Badan ini yang dimaksud dengan: \n1. \nSistem \nPemerintahan \nBerbasis \nElektronik \nyang \nselanjutnya disingkat SPBE adalah penye…",
+      "(1) Audit keamanan SPBE terdiri atas:\na. audit keamanan Infrastruktur SPBE Nasional;\nb. audit keamanan Infrastruktur SPBE Instansi\nPusat dan Pemerinta…",
+      "Indikator 31: Tingkat Kematangan Pelaksanaan Audit Keamanan  SPBE.\nDeskripsi: a. Audit  Keamanan  SPBE  Instansi  Pusat  dan  Pemerintah Daerah dilaks…",
+      "Pasal 10\n(1) Kriteria Audit Keamanan SPBE sebagaimana dimaksud \ndalam Pasal 2 huruf c meliputi hal pokok teknis pada: \na. \ntata kelola Keamanan SPBE;…"
+    ],
+    "latency_s": 42.72
+  },
+  {
+    "id": "gt_012",
+    "source_doc": "peraturan-bssn-no-8-tahun-2024.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa saja objek Audit Keamanan SPBE yang tercantum dalam Pasal 3 Peraturan BSSN Nomor 8 Tahun 2024?",
+    "ground_truth": "Berdasarkan Pasal 3 ayat (1) Peraturan BSSN Nomor 8 Tahun 2024, Objek Audit Keamanan SPBE terdiri atas: (a) Infrastruktur SPBE Nasional (meliputi Pusat Data Nasional, Jaringan Intra pemerintah, dan Sistem Penghubung Layanan pemerintah); (b) Infrastruktur SPBE Instansi Pusat dan Pemerintah Daerah; (c) Aplikasi Umum; dan (d) Aplikasi Khusus.",
+    "answer": "Berdasarkan Pasal 3 Peraturan Badan Siber dan Sandi Negara Nomor 8 Tahun 2024, objek Audit Keamanan SPBE sebagaimana dimaksud dalam Pasal 2 huruf a terdiri atas empat kategori utama sebagai berikut:\n\na. Infrastruktur SPBE Nasional [1].\nb. Infrastruktur SPBE Instansi Pusat dan Pemerintah Daerah [1].\nc. Aplikasi Umum [1].\nd. Aplikasi Khusus [1].\n\nSelain itu, objek Audit Keamanan SPBE sebagaimana dimaksud pada ayat (1) juga mencakup keamanan data dan informasi yang dikelola di dalamnya [1].\n\nReferensi Dokumen:\n[1] Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik | BAB II > Kedua -  > Pasal 3 > Ayat (1)-(4)",
+    "contexts": [
+      "Pasal 3\n(1) Objek Audit Keamanan SPBE sebagaimana dimaksud \ndalam Pasal 2 huruf a terdiri atas: \na. \nInfrastruktur SPBE Nasional;  \nb. \nInfrastruktur…",
+      "- 30 -  \n \nC. \nMATRIKS KOMPLEKSITAS TEKNOLOGI OBJEK AUDIT KEAMANAN \nSPBE \n \nIndikator \nTingkat Kompleksitas Teknologi \nSederhana \nSedang \nKompleks \nUM…",
+      "- 29 -  \n \nLAMPIRAN II \nPERATURAN BADAN SIBER DAN SANDI NEGARA \nNOMOR 8 TAHUN 2024 \nTENTANG  \nSTANDAR DAN TATA CARA PELAKSANAAN \nAUDIT KEAMANAN SISTEM…",
+      "Pasal 1\nDalam Peraturan Badan ini yang dimaksud dengan: \n1. \nSistem \nPemerintahan \nBerbasis \nElektronik \nyang \nselanjutnya disingkat SPBE adalah penye…",
+      "9 \nTersebar \n10 \nKompleks \nTerpusat \n10 \nTersebar \n10 \n* untuk 1 tim auditor (paling sedikit dua orang) untuk satu prosedur \npelaksanaan audit \n \n \nB.…"
+    ],
+    "latency_s": 45.28
+  },
+  {
+    "id": "gt_013",
+    "source_doc": "peraturan-bssn-no-8-tahun-2024.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa saja hal pokok teknis yang termasuk dalam Kriteria Audit Keamanan SPBE menurut Pasal 10 Peraturan BSSN Nomor 8 Tahun 2024?",
+    "ground_truth": "Berdasarkan Pasal 10 ayat (1) Peraturan BSSN Nomor 8 Tahun 2024, Kriteria Audit Keamanan SPBE meliputi hal pokok teknis pada: (a) tata kelola Keamanan SPBE; (b) manajemen Keamanan SPBE (meliputi perencanaan, pengembangan, pengoperasian, dan pemantauan); (c) fungsionalitas dan kinerja Keamanan SPBE; dan (d) aspek keamanan lainnya.",
+    "answer": "Pasal 10 Peraturan Badan Siber dan Sandi Negara Nomor 68 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik menetapkan hal pokok teknis yang menjadi kriteria Audit Keamanan SPBE sebagai berikut:\n\n(1) Kriteria Audit Keamanan SPBE meliputi hal pokok teknis pada:\na. tata kelola Keamanan SPBE;\nb. manajemen Keamanan SPBE;\nc. fungsionalitas dan kinerja Keamanan SPBE; dan\nd. aspek keamanan lainnya [1].\n\nSelain itu, hal pokok teknis sebagaimana dimaksud pada ayat (1) disusun dengan mempertimbangkan kebijakan makro terkait Keamanan SPBE dan pelindungan data pribadi, serta kebijakan meso terkait Keamanan SPBE dan pelindungan data pribadi [2].\n\nReferensi Dokumen:\n[1] Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik | BAB II > Keempat -  > Pasal 10 > Ayat (1)-(4)\n[2] Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik | BAB II > Keempat -  > Pasal 11 > Ayat (1)-(4)",
+    "contexts": [
+      "Pasal 10\n(1) Kriteria Audit Keamanan SPBE sebagaimana dimaksud \ndalam Pasal 2 huruf c meliputi hal pokok teknis pada: \na. \ntata kelola Keamanan SPBE;…",
+      "Pasal 11\n(1) Tata Kelola Keamanan SPBE sebagaimana dimaksud \ndalam Pasal 10 ayat (1) huruf a meliputi pemeriksaan \natas aktivitas: \na. \nevaluasi Keama…",
+      "(1) Manajemen Keamanan SPBE sebagaimana dimaksud \ndalam Pasal 10 ayat (1) huruf b meliputi pemeriksaan \nterhadap tahapan: \na. \nperencanaan Keamanan SP…",
+      "Pasal 1\nDalam Peraturan Badan ini yang dimaksud dengan: \n1. \nSistem \nPemerintahan \nBerbasis \nElektronik \nyang \nselanjutnya disingkat SPBE adalah penye…",
+      "(1) Penugasan sebagaimana dimaksud dalam Pasal 47 \nhuruf a diberikan kepada tim auditor Keamanan SPBE \npada LATIK pemerintah.\n(2) Tim auditor Keamanan…"
+    ],
+    "latency_s": 52.74
+  },
+  {
+    "id": "gt_014",
+    "source_doc": "peraturan-bssn-no-8-tahun-2024.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa saja informasi yang wajib dimuat dalam surat tugas tim auditor Keamanan SPBE berdasarkan Pasal 37 Peraturan BSSN Nomor 8 Tahun 2024?",
+    "ground_truth": "Berdasarkan Pasal 37 ayat (2) Peraturan BSSN Nomor 8 Tahun 2024, surat tugas tim auditor Keamanan SPBE paling sedikit memuat: (a) nama auditor Keamanan SPBE; (b) jabatan dalam tim auditor Keamanan SPBE; (c) nama Instansi Pusat atau Pemerintah Daerah yang diaudit; dan (d) lingkup Audit Keamanan SPBE.",
+    "answer": "Pasal 37 Ayat (2) Peraturan Badan Siber dan Sandi Negara Nomor 68 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik menetapkan bahwa surat tugas tim auditor Keamanan SPBE paling sedikit harus memuat informasi sebagai berikut:\n\na. nama auditor Keamanan SPBE [1].\nb. jabatan dalam tim auditor Keamanan SPBE [1].\nc. nama Instansi Pusat atau Pemerintah Daerah yang diaudit [1].\nd. lingkup Audit Keamanan SPBE [1].\n\nSurat tugas tersebut merupakan dokumen yang wajib disiapkan untuk pelaksanaan penugasan tim auditor sebagaimana diatur dalam Pasal 37 Ayat (1) [1].\n\nReferensi Dokumen:\n[1] Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik | BAB III > Kedua -  > Pasal 37 > Ayat (1)-(3)",
+    "contexts": [
+      "Pasal 37\n(1) Penugasan sebagaimana dimaksud dalam Pasal 36 \ndilaksanakan berdasarkan surat tugas tim auditor \nKeamanan SPBE.\n(2) Surat tugas tim audit…",
+      "(1) Masa berlaku surat tanda register dapat diperpanjang \ndengan mengajukan permohonan kepada Kepala Badan \npaling lambat 30 (tiga puluh) hari kalende…",
+      "Pasal 1\nDalam Peraturan Badan ini yang dimaksud dengan: \n1. \nSistem \nPemerintahan \nBerbasis \nElektronik \nyang \nselanjutnya disingkat SPBE adalah penye…",
+      "Pasal 65\n(1) Dalam hal permohonan pendaftaran sebagaimana \ndimaksud dalam Pasal 64 dinyatakan valid dan \nlengkap, Badan menerbitkan surat tanda regist…",
+      "(1) Penugasan sebagaimana dimaksud dalam Pasal 34 \nhuruf b diberikan oleh pimpinan LATIK Terakreditasi \nyang terdaftar kepada tim auditor Keamanan SPB…"
+    ],
+    "latency_s": 44.46
+  },
+  {
+    "id": "gt_015",
+    "source_doc": "peraturan-bssn-no-8-tahun-2024.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa yang dimaksud dengan LATIK Terakreditasi dalam Peraturan BSSN Nomor 8 Tahun 2024?",
+    "ground_truth": "Berdasarkan Pasal 1 Peraturan BSSN Nomor 8 Tahun 2024, LATIK (Lembaga Audit Teknologi Informasi dan Komunikasi) adalah lembaga yang melaksanakan Audit TIK, sedangkan LATIK Terakreditasi adalah badan hukum yang telah terakreditasi sebagai pelaksana Audit TIK.",
+    "answer": "Dalam Peraturan Badan Siber dan Sandi Negara Nomor 68 Tahun 2024, LATIK adalah lembaga yang melaksanakan Audit TIK [1]. LATIK Terakreditasi didefinisikan sebagai badan hukum yang telah terakreditasi sebagai pelaksana Audit TIK [2].\n\nReferensi Dokumen:\n[1] Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik | BAB I > Pasal 1\n[2] peraturan-bssn-no-8-tahun-2024 | BAB I > Pasal 1",
+    "contexts": [
+      "LATIK adalah lembaga yang melaksanakan Audit TIK. \n9. \nLATIK Terakreditasi adalah badan hukum yang telah \nterakreditasi sebagai pelaksana Audit TIK.…",
+      "kesesuaian antara teknologi informasi dan komunikasi \ndengan \nkriteria \ndan/atau \nstandar \nyang \ntelah \nditetapkan. \n5. \nBadan Siber dan Sandi Negara…",
+      "(1) Pendaftaran \nLATIK \nTerakreditasi \nsebagaimana \ndimaksud dalam Pasal 58 huruf a dilakukan oleh \npimpinan LATIK dengan mengajukan permohonan \npenda…",
+      "(1) Pendaftaran auditor Keamanan SPBE sebagaimana \ndimaksud dalam Pasal 58 huruf b dilakukan oleh \npimpinan LATIK dengan mengajukan permohonan \npendaf…",
+      "Pasal 60\n(1) Dalam hal permohonan pendaftaran sebagaimana \ndimaksud dalam Pasal 59 dinyatakan valid dan lengkap, \nBadan menerbitkan surat tanda regist…"
+    ],
+    "latency_s": 38.73
+  },
+  {
+    "id": "gt_016",
+    "source_doc": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa yang dimaksud Evaluasi SPBE dalam Peraturan Menteri PANRB Nomor 59 Tahun 2020?",
+    "ground_truth": "Berdasarkan Pasal 1 angka 3 Permenpan RB Nomor 59 Tahun 2020, Evaluasi SPBE adalah proses penilaian secara sistematis melalui verifikasi dan klarifikasi informasi yang dapat dilanjutkan dengan validasi informasi terhadap hasil Penilaian Mandiri untuk mengukur tingkat kematangan penerapan SPBE.",
+    "answer": "Dalam Peraturan Menteri PANRB Nomor 59 Tahun 2020, Evaluasi SPBE tidak didefinisikan secara terpisah, melainkan merupakan bagian dari proses Pemantauan SPBE yang mencakup proses penilaian secara sistematis melalui verifikasi informasi terhadap hasil Penilaian Mandiri untuk mengukur tingkat kematangan penerapan SPBE [2].\n\nPeraturan Menteri PANRB Nomor 59 Tahun 2020 mengatur mengenai tahap perencanaan, pelaksanaan, dan pelaporan atas pemantauan dan evaluasi SPBE yang telah dilakukan [1].\n\nTujuan dari evaluasi ini adalah untuk mengukur tingkat kematangan penerapan SPBE pada Instansi Pusat dan Pemerintah Daerah [1].\n\nHasil pelaksanaan pemantauan dan evaluasi SPBE diharapkan menjadi tolok ukur bagi Instansi Pusat dan Pemerintah Daerah untuk melakukan perbaikan pada aspek domain SPBE dimaksud [1].\n\nRuang lingkup pemantauan dan evaluasi SPBE mencakup domain kebijakan SPBE, tata kelola SPBE, manajemen SPBE, dan layanan SPBE [1].\n\nReferensi Dokumen:\n[1] Pedoman Nomor 3 Tahun 2024 | BAB I - PENDAHULUAN > A. Latar Belakang\n[2] Permenpan RB Nomor 59 Tahun 2020 | Pasal 1",
+    "contexts": [
+      ".   Dalam rangka memastikan penerapan SPBE yang menjadi peran  pembinaan dan pengawasan oleh Tim Koordinasi SPBE Nasional, maka  dilakukan kegiatan pe…",
+      "Pasal 1\nDalam Peraturan Menteri ini yang dimaksud dengan: \n1. \nSistem Pemerintahan Berbasis Elektronik selanjutnya \ndisingkat SPBE adalah penyelenggar…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 bertujuan untuk mengukur sejau…",
+      ". 59 Tahun 2020,  sebagaimana tergambar dalam tabel di bawah ini.           Tabel 1. Indeks SPBE Nasional (2021 – 2023)  Deskripsi  2021  2022  2023…",
+      "Sistem  Pemerintahan  Berbasis  Elektronik  (SPBE)  merupakan  penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan  komunikasi dala…"
+    ],
+    "latency_s": 62.9
+  },
+  {
+    "id": "gt_017",
+    "source_doc": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa saja domain yang digunakan dalam struktur penilaian tingkat kematangan SPBE menurut Permenpan RB Nomor 59 Tahun 2020?",
+    "ground_truth": "Berdasarkan Permenpan RB Nomor 59 Tahun 2020, struktur penilaian tingkat kematangan SPBE terdiri atas 4 domain: (1) Domain Kebijakan Internal SPBE (Indikator 1â€“10); (2) Domain Tata Kelola SPBE; (3) Domain Manajemen SPBE; dan (4) Domain Layanan SPBE. Setiap domain mencakup beberapa aspek, dan setiap aspek terdiri dari beberapa indikator.",
+    "answer": "Berdasarkan dokumen yang tersedia, berikut adalah rincian domain yang digunakan dalam struktur penilaian tingkat kematangan SPBE sesuai dengan ketentuan Peraturan Menteri Pendayagunaan Aparatur Negara dan Reformasi Birokrasi (Permenpan RB) Nomor 59 Tahun 2020:\n\nNomor Domain dan Nama Domain\n\n1. Domain 1: Kebijakan Internal SPBE [5]\n2. Domain 2: Tata Kelola SPBE [5]\n3. Domain 3: Manajemen SPBE [5]\n4. Domain 4: Layanan SPBE [5]\n\nStruktur penilaian tingkat kematangan SPBE terdiri atas domain, aspek, dan indikator, di mana sebuah domain terdiri dari satu atau beberapa aspek [4]. Penetapan bobot penilaian untuk masing-masing domain dilakukan dengan mempertimbangkan tingkat prioritas dan signifikansinya [1].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Struktur Penilaian Tingkat Kematangan SPBE\n[4] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[5] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+    "contexts": [
+      "Penetapan bobot penilaian Indeks SPBE dilakukan pada setiap level dalam struktur penilaian, yaitu domain, aspek, dan indikator, dengan mempertimbangka…",
+      "Pertanyaan tingkat kematangan merupakan alat penilaian dalam  Pemantauan dan Evaluasi SPBE yang terdiri dari 4 (empat) Domain, 8 (delapan)  Aspek, dan…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: | Domain/ Aspek/<br>Indikator | Deskripsi…",
+      "sumber daya SPBE.\n4 – Kolaborasi\nKriteria Tingkat Transaksi telah terpenuhi.\nLayanan SPBE diberikan melalui integrasi/kolaborasi\ndengan layanan SPBE l…",
+      "Aspek 8 - Layanan Publik Berbasis Elektronik\nIndikator 42\nTingkat Kematangan Layanan Pengaduan Pelayanan\nPublik\nIndikator 43\nTingkat Kematangan Layana…"
+    ],
+    "latency_s": 70.01
+  },
+  {
+    "id": "gt_018",
+    "source_doc": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa yang dimaksud dengan Asesor dalam Peraturan Menteri PANRB Nomor 59 Tahun 2020?",
+    "ground_truth": "Berdasarkan Pasal 1 angka 4 Permenpan RB Nomor 59 Tahun 2020, Asesor adalah seseorang yang melakukan penilaian atas penerapan SPBE. Tim Asesor Internal adalah sekelompok Asesor yang melakukan penilaian di instansinya sendiri.",
+    "answer": "Dalam Peraturan Menteri PANRB Nomor 59 Tahun 2020, Asesor didefinisikan sebagai seseorang yang melakukan penilaian atas penerapan Sistem Penilaian Kematangan Penerapan e-Government (SPBE) [1]. Asesor dapat bekerja dalam dua bentuk, yaitu Tim Asesor Internal yang terdiri dari pejabat atau pegawai di lingkungan Instansi Pusat dan Pemerintah Daerah [1], serta Tim Asesor Eksternal yang terdiri atas pegawai aparatur sipil negara, akademisi, dan/atau tenaga ahli [1]. Penilaian Mandiri yang dilakukan oleh Tim Asesor Internal ditetapkan oleh menteri pada kementerian, kepala lembaga pada lembaga pemerintah nonkementerian, sekretaris jenderal pada kesekretariatan lembaga negara, pimpinan pada lembaga nonstruktural, gubernur pada pemerintah daerah provinsi, atau bupati/walikota pada pemerintah daerah kabupaten/kota [2]. Tim Asesor Eksternal ditetapkan oleh Menteri dan memiliki tugas untuk melakukan Penilaian Dokumen, Penilaian Interviu, dan/atau Penilaian Visitasi [3].\n\nReferensi Dokumen:\n[1] Permenpan RB Nomor 59 Tahun 2020 | Pasal 1\n[2] Permenpan RB Nomor 59 Tahun 2020 | Pasal 4 > Ayat (1)-(3)\n[3] Permenpan RB Nomor 59 Tahun 2020 | BAB III - PROSES PEMANTAUAN DAN EVALUASI SPBE",
+    "contexts": [
+      "-3- \n \n \n3. \nEvaluasi \nSPBE \nadalah \nproses \npenilaian \nsecara \nsistematis melalui verifikasi dan klarifikasi informasi \nyang dapat dilanjutkan dengan…",
+      "Pasal 4\n(1) Penilaian Mandiri sebagaimana dimaksud dalam Pasal 3 \nayat (1) dan ayat (2) dilakukan oleh Tim Assesor internal.\n(2) Tim Asesor Internal s…",
+      "Evaluasi SPBE kepada Instansi Pusat dan Pemerintah Daerah\nterpilih sebagai lokus Pemantauan SPBE atau Evaluasi SPBE.\nb. Pembentukan Tim Asesor Ekstern…",
+      ". 59 Tahun 2020,  sebagaimana tergambar dalam tabel di bawah ini.           Tabel 1. Indeks SPBE Nasional (2021 – 2023)  Deskripsi  2021  2022  2023…",
+      "Instansi \nPusat/Pemerintah Daerah untuk memberikan jawaban \ndan penjelasan serta bukti pendukung atas pertanyaan \nyang diberikan oleh Asesor. \n8. \nPen…"
+    ],
+    "latency_s": 58.65
+  },
+  {
+    "id": "gt_019",
+    "source_doc": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+    "doc_type": "peraturan",
+    "question": "Berapa nilai tingkat kematangan maksimum (level 5 - Optimum) pada penilaian Layanan SPBE dalam Permenpan RB Nomor 59 Tahun 2020?",
+    "ground_truth": "Pada penilaian Layanan SPBE, Tingkat 5 (Optimum) didefinisikan sebagai kondisi di mana kriteria Tingkat Kolaborasi (level 4) telah terpenuhi dan Layanan SPBE telah dilakukan perbaikan dan peningkatan kualitas menyesuaikan perubahan kebutuhan di lingkungan internal dan eksternal.",
+    "answer": "Berdasarkan dokumen yang tersedia, informasi mengenai nilai numerik spesifik untuk tingkat kematangan \"Level 5 - Optimum\" pada penilaian Layanan SPBE tidak ditemukan secara eksplisit dalam konteks referensi yang diberikan.\n\nDokumen hanya menjelaskan rumus penghitungan indeks SPBE dan memberikan contoh nilai indeks domain serta predikat yang dihasilkan, namun tidak mencantumkan tabel atau daftar nilai numerik yang secara langsung mengaitkan predikat \"Optimum\" dengan angka tertentu untuk domain Layanan SPBE.\n\nBerikut adalah fakta yang tersedia mengenai struktur penilaian dan contoh nilai indeks:\n\n1. Rumus dan Komponen Penilaian\nIndeks SPBE dihitung berdasarkan penjumlahan perkalian antara nilai indeks domain dan bobot domain, sebagaimana tercantum dalam rumus berikut:\n$$Indeks\\ SPBE = \\sum_{j=1}^{n} ND_j \\times BD_j$$\ndi mana:\n* $ND_j$ adalah nilai indeks domain ke-$j$ [3].\n* $BD_j$ adalah nilai bobot domain ke-$j$ [3].\n\n2. Contoh Nilai Indeks dan Predikat\nDokumen menyajikan contoh penghitungan indeks SPBE pada Tabel 12 yang menghasilkan nilai indeks 3,28, namun tidak secara rinci memetakan setiap predikat (termasuk Level 5 - Optimum) ke angka spesifik untuk domain Layanan SPBE [3].\n\n3. Data Nilai Indeks Domain Lain\nDokumen menyajikan data nilai rata-rata indeks untuk beberapa domain, namun tidak menyebutkan nilai maksimum untuk domain Layanan SPBE secara spesifik:\n* Domain Kebijakan SPBE memiliki nilai indeks rata-rata 3,70 [3].\n* Domain Tata Kelola memiliki nilai indeks rata-rata 3,40 [3].\n* Domain Penerapan Manajemen memiliki nilai indeks rata-rata 3,00 [3].\n* Domain Layanan SPBE memiliki nilai indeks rata-rata 3,20 [3].\n\n4. Deskripsi Tingkat Kematangan Kapabilitas Layanan\nDokumen menjelaskan bahwa Tingkat Kematangan Kapabilitas Layanan merupakan pengukuran kemampuan organisasi pada suatu layanan, yaitu layanan administrasi pemerintahan berbasis elektronik dan layanan publik, namun tidak memberikan angka batas untuk predikat \"Optimum\" [4].\n\n5. Data Nilai Indeks dari Laporan Evaluasi 2024\nLaporan Evaluasi SPBE 2024 menyebutkan bahwa Domain Layanan SPBE memiliki rata-rata indeks nasional sebesar 3,20, namun tidak mencantumkan nilai maksimum yang dicapai oleh instansi tertentu untuk mencapai predikat \"Optimum\" [5].\n\nKarena dokumen hanya memberikan contoh perhitungan dan rata-rata nilai tanpa tabel definisi predikat lengkap (termasuk angka untuk Level 5), maka informasi mengenai nilai numerik spesifik untuk tingkat kematangan maksimum tersebut tidak dapat diungkapkan berdasarkan teks yang tersedia.\n\nReferensi Dokumen:\n[3] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[4] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[5] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "Penetapan bobot penilaian Indeks SPBE dilakukan pada setiap level dalam struktur penilaian, yaitu domain, aspek, dan indikator, dengan mempertimbangka…",
+      ".   Dalam rangka memastikan penerapan SPBE yang menjadi peran  pembinaan dan pengawasan oleh Tim Koordinasi SPBE Nasional, maka  dilakukan kegiatan pe…",
+      "indeks SPBE dihitung berdasarkan penjumlahan dari penghitungan\n𝑰𝒏𝒅𝒆𝒌𝒔 𝑺𝑷𝑩𝑬= ∑𝑁𝐷𝑗× 𝐵𝐷𝑗\n𝑛\n𝑗=1\n-24-\nperkalian antara nilai indeks domain dan bobot domain…",
+      "Proses penerapan SPBE sudah dilakukan sesuai\ndengan\nfungsi\nmanajemen\nyang\nsesuai\npedoman/standar dan diterapkan pada semua unit\nkerja dalam organisasi…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: ![](_page_41_Picture_3.jpeg)\n\n![](_page_42_Picture_0.jpeg)\n\nDomain Kebijakan SPBE Internal berada…"
+    ],
+    "latency_s": 124.13
+  },
+  {
+    "id": "gt_020",
+    "source_doc": "Perpres Nomor 82 Tahun 2023.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa yang dimaksud dengan Aplikasi SPBE Prioritas dalam Perpres Nomor 82 Tahun 2023?",
+    "ground_truth": "Berdasarkan Pasal 1 angka 6 Perpres Nomor 82 Tahun 2023, Aplikasi SPBE Prioritas adalah Aplikasi SPBE yang berdampak luas dan merupakan perwujudan nyata dari Layanan SPBE yang berkualitas dan tepercaya. Aplikasi SPBE Prioritas memiliki minimal 200.000 (dua ratus ribu) Pengguna SPBE atau target Pengguna SPBE.",
+    "answer": "Pasal 2 Ayat (1) dan (2) Peraturan Presiden Nomor 82 Tahun 2023 menjelaskan bahwa dalam rangka mencapai keterpaduan layanan digital nasional, Pemerintah melakukan percepatan transformasi digital melalui penyelenggaraan Aplikasi SPBE Prioritas dengan mengutamakan integrasi dan interoperabilitas [5].\n\nAplikasi SPBE Prioritas dapat berupa:\na. Aplikasi SPBE yang baru akan beroperasi atau akan dibangun; dan\nb. Aplikasi SPBE yang telah beroperasi atau akan dikembangkan, yang memiliki minimal 200.000 (dua ratus ribu) Pengguna SPBE atau target Pengguna SPBE [5].\n\nReferensi Dokumen:\n[5] PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 | BAB II > Pasal 2 > Ayat (1)",
+    "contexts": [
+      "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyeleng…",
+      "Sistem  Pemerintahan  Berbasis  Elektronik  (SPBE)  merupakan  penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan  komunikasi dala…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: ![](_page_19_Figure_3.jpeg)\n\n<span id=\"page-19-0\"></span>**Gambar 2. Proyeksi EGDI 2026-2030**\n\n!…",
+      "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyeleng…",
+      "(1) Dalam rangka mencapai keterpaduan layanan digital\nnasional, Pemerintah melakukan percepatan transformasi\ndigital melalui penyelenggaraan Aplikasi…"
+    ],
+    "latency_s": 47.04
+  },
+  {
+    "id": "gt_021",
+    "source_doc": "Perpres Nomor 82 Tahun 2023.pdf",
+    "doc_type": "peraturan",
+    "question": "Siapa yang ditugaskan untuk menyelenggarakan Aplikasi SPBE Prioritas dalam Perpres Nomor 82 Tahun 2023?",
+    "ground_truth": "Perpres Nomor 82 Tahun 2023 menugaskan Perum Peruri (Perusahaan Umum Percetakan Uang Republik Indonesia) untuk menyelenggarakan Aplikasi SPBE Prioritas. Perum Peruri adalah badan usaha milik negara yang seluruh modalnya dimiliki negara dan menyelenggarakan usaha pencetakan uang, dokumen sekuriti, jasa digital sekuriti, serta usaha lainnya.",
+    "answer": "Berdasarkan dokumen yang tersedia, Pemerintah menugaskan Perum Peruri untuk menyelenggarakan Aplikasi SPBE Prioritas.\n\nPasal 3 ayat (1) dalam Peraturan Presiden Nomor 82 Tahun 2023 menyatakan:\n\"Pemerintah sebagaimana dimaksud dalam Pasal 2 ayat (1) menugaskan Perum Peruri untuk penyelenggaraan Aplikasi SPBE Prioritas.\" [3]\n\nReferensi Dokumen:\n[3] PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 | BAB III > Pasal 3 > Ayat (1)",
+    "contexts": [
+      "Pasal 4\n(1) Dalam pelaksanaan penugasan penyelenggaraan Aplikasi\nSPBE Prioritas oleh Perum Peruri sebageimana dimaksud\ndalam Pasal 3 ayat (1), Tim Koo…",
+      "PERAN INSTANSI PEMERINTAH\nPasal l1\nKementerian/lembaga penanggung jawab Aplikasi SPBE\nPrioritas:\na. menyediakan data dan informasi yang dibutuhkan dal…",
+      "(1) Pemerintah sebagaimana dimaksud dalam Pasal 2\nayat (1) menugaskan Perum Peruri untuk penyelenggaraan\nAplikasi SPBE Prioritas.\n(21 Dalam melaksanal…",
+      "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyeleng…",
+      "(4) Kementerian/lembaga pen€mggung jawab Aplikasi SPBE\nPrioritas menentukan paling sedikit 1 (satu) cakupan\npenugasan sebagaimana dimaksud pada ayat (…"
+    ],
+    "latency_s": 38.33
+  },
+  {
+    "id": "gt_022",
+    "source_doc": "Perpres Nomor 82 Tahun 2023.pdf",
+    "doc_type": "peraturan",
+    "question": "Untuk sektor apa saja Aplikasi SPBE Prioritas diselenggarakan menurut Perpres Nomor 82 Tahun 2023?",
+    "ground_truth": "Berdasarkan Pasal 2 ayat (3) Perpres Nomor 82 Tahun 2023, Aplikasi SPBE Prioritas diselenggarakan untuk mendukung: (a) layanan pendidikan terintegrasi; (b) layanan kesehatan terintegrasi; (c) layanan bantuan sosial terintegrasi; (d) layanan administrasi kependudukan yang terintegrasi dengan layanan identitas kependudukan digital; dan sektor lainnya sesuai ketentuan.",
+    "answer": "Berdasarkan Peraturan Presiden Nomor 82 Tahun 2023, Aplikasi SPBE Prioritas diselenggarakan untuk mendukung sektor-sektor berikut:\n\n1. Layanan pendidikan terintegrasi, dengan penanggung jawab menteri yang urusan pemerintahan di bidang pendidikan [3].\n2. Layanan kesehatan terintegrasi, dengan penanggung jawab menteri yang urusan pemerintahan di bidang kesehatan [3].\n3. Layanan bantuan sosial terintegrasi, dengan penanggung jawab menteri yang menyelenggarakan urusan pemerintahan di bidang sosial [3].\n4. Layanan administrasi kependudukan yang terintegrasi dengan layanan identitas kependudukan digital, dengan penanggung jawab menteri yang urusan pemerintahan dalam negeri [3].\n\nReferensi Dokumen:\n[3] Perpres Nomor 82 Tahun 2023 | BAB II > Pasal 2 > Ayat (3)",
+    "contexts": [
+      "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyeleng…",
+      "Sistem  Pemerintahan  Berbasis  Elektronik  (SPBE)  merupakan  penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan  komunikasi dala…",
+      "(3) Aplikasi SPBE Prioritas diselenggarakan untuk\nmendukung:\na. layanan pendidikan terintegrasi, dengan penanggung\njawab menteri yang\nurusan\npemerinta…",
+      "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyeleng…",
+      "(1) Dalam rangka pelaksanaan penugasan sebasaimana\ndimaksud dalam Pasal 3 ayat (1), Perum Peruri dapat:\nurusan\nurusan\nSK No 132286 A\na. bekerja sama .…"
+    ],
+    "latency_s": 50.35
+  },
+  {
+    "id": "gt_023",
+    "source_doc": "Perpres Nomor 82 Tahun 2023.pdf",
+    "doc_type": "peraturan",
+    "question": "Bersumber dari mana pendanaan untuk penugasan Perum Peruri dalam Perpres Nomor 82 Tahun 2023?",
+    "ground_truth": "Berdasarkan Pasal 6 ayat (1) Perpres Nomor 82 Tahun 2023, pendanaan untuk penugasan Perum Peruri bersumber dari: (a) anggaran pendapatan dan belanja negara (APBN); dan/atau (b) sumber-sumber lain yang sah dan tidak mengikat sesuai dengan ketentuan peraturan perundang-undangan. Pendanaan APBN dialokasikan pada anggaran kementerian/lembaga penanggung jawab Aplikasi SPBE Prioritas.",
+    "answer": "Berdasarkan Pasal 6 ayat (1) dari Peraturan Presiden Nomor 82 Tahun 2023, pendanaan untuk penugasan Perum Peruri bersumber dari:\n\na. anggaran pendapatan dan belanja negara; dan/ atau\nb. sumber-sumber lain yang sah dan tidak mengikat sesuai dengan ketentuan peraturan perundang-undangan [1].\n\nSelain itu, pendanaan sebagaimana dimaksud pada ayat (1) huruf a dialokasikan pada anggaran pendapatan dan belanja negara kementerian/lembaga penanggung jawab Aplikasi SPBE Prioritas yang diprioritaskan untuk digunakan secara khusus sebagai pembayaran pelaksanaan penugasan Perum Peruri [1].\n\nReferensi Dokumen:\n[1] PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 | BAB III > Pasal 6 > Ayat (1)-(3)",
+    "contexts": [
+      "Pasal 6\n(1) Pendanaan untuk penugasan Perum Peruri sebagaimana\ndimaksud dalam Pasal 3 ayat (1) bersumber dari:\nSK No 132287A\na. anggaran . . .\n\n\nPRESI…",
+      "PRESIDEN\nREPUBLIK INDONESIA\n-3-\n10. Perusahaan Umum Percetakan Uang Republik Indonesia\nyang selanjutnya disebut Perum Peruri adalah badan\nusaha milik…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Mendukung layanan SPBE yang terintegrasi di seluruh institusi pemerintahan, Arsitektur SPBE Nasio…",
+      "PERAN INSTANSI PEMERINTAH\nPasal l1\nKementerian/lembaga penanggung jawab Aplikasi SPBE\nPrioritas:\na. menyediakan data dan informasi yang dibutuhkan dal…",
+      "Pasal 1\nO. . .\nSK No 132288 A\n\n\nPRESIDEN\nREPUBLIK INDONESIA\n-9-"
+    ],
+    "latency_s": 43.9
+  },
+  {
+    "id": "gt_024",
+    "source_doc": "Perpres Nomor 82 Tahun 2023.pdf",
+    "doc_type": "peraturan",
+    "question": "Kapan batas waktu peluncuran Aplikasi SPBE Prioritas yang baru dibangun menurut Perpres Nomor 82 Tahun 2023?",
+    "ground_truth": "Berdasarkan Pasal 2 ayat (4) dan (5) Perpres Nomor 82 Tahun 2023, Aplikasi SPBE Prioritas baru maupun yang sedang dikembangkan dari yang sudah beroperasi, keduanya harus telah diintegrasikan dan diluncurkan secara terpadu untuk pertama kalinya paling lambat pada triwulan III tahun 2024.",
+    "answer": "Berdasarkan dokumen yang tersedia, berikut adalah informasi mengenai batas waktu peluncuran Aplikasi SPBE Prioritas menurut Perpres Nomor 82 Tahun 2023:\n\nPasal 2 Ayat (4) dan Ayat (5)\n\nIsi Pasal:\n(4) Aplikasi SPBE Prioritas sebagaimana dimaksud pada ayat (2) huruf a telah diintegrasikan dan diluncurkan secara terpadu untuk pertama kalinya paling lambat pada triwulan III tahun 2024 [2].\n(5) Aplikasi SPBE Prioritas sebagaimana dimaksud pada ayat (2) huruf b telah diintegrasikan dan diluncurkan secara terpadu sebagai versi lebih lanjut paling lambat pada triwulan III tahun 2024 [2].\n\nPasal 2 Ayat (6)\n\nIsi Pasal:\n(6) Aplikasi SPBE Prioritas sebagaimana dimaksud pada ayat (4) dan ayat (5) tetap dikembangkan secara berkesinambungan setelah peluncuran [2].\n\nAnalisis Fakta:\nMenurut Perpres Nomor 82 Tahun 2023, batas waktu peluncuran Aplikasi SPBE Prioritas yang baru dibangun (baik untuk versi pertama maupun versi lebih lanjut) adalah paling lambat pada triwulan III tahun 2024 [2]. Setelah peluncuran tersebut, pengembangan aplikasi tersebut tetap dilakukan secara berkesinambungan [2].\n\nReferensi Dokumen:\n[2] PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 | BAB II > Pasal 2 > Ayat (4)-(6)",
+    "contexts": [
+      "Sistem  Pemerintahan  Berbasis  Elektronik  (SPBE)  merupakan  penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan  komunikasi dala…",
+      "Pasal 2\n(4) Aplikasi SPBE Prioritas sebagaimana dimaksud pada\nayat (2) huruf a telah diintegrasikan dan diluncurkan\nsecara terpadu untuk pertama kalin…",
+      "(1) Pembangunan dan/atau pengembangan Aplikasi\nUmum ditujukan untuk memberikan Layanan SPBE\nyang mendukung kegiatan pemerintahan di bidang:\na. perenca…",
+      "Mendukung layanan SPBE yang terintegrasi di seluruh institusi pemerintahan, Arsitektur SPBE Nasional ditetapkan melalui Peraturan Presiden Nomor 132 T…",
+      "(1) Untuk mendukung pengoperasian Aplikasi Umum\nsebagaimana dimaksud dalam Pasal 63, dilakukan\npembangunan dan/atau \npengembangan\nInfrastruktur SPBE N…"
+    ],
+    "latency_s": 70.25
+  },
+  {
+    "id": "gt_025",
+    "source_doc": "Perpres Nomor 95 Tahun 2018.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa yang dimaksud dengan SPBE menurut Perpres Nomor 95 Tahun 2018?",
+    "ground_truth": "Berdasarkan Pasal 1 angka 1 Perpres Nomor 95 Tahun 2018, Sistem Pemerintahan Berbasis Elektronik (SPBE) adalah penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan komunikasi untuk memberikan layanan kepada Pengguna SPBE.",
+    "answer": "Pasal 1 dalam Peraturan Presiden Nomor 95 Tahun 2018 memberikan definisi mengenai Sistem Pemerintahan Berbasis Elektronik (SPBE) sebagai berikut:\n\n\"Sistem Pemerintahan Berbasis Elektronik yang selanjutnya disingkat SPBE adalah penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan komunikasi untuk memberikan layanan kepada Pengguna SPBE.\" [1]\n\nSelain definisi utama tersebut, Pasal 1 juga menjelaskan bahwa SPBE merupakan komponen penting dalam reformasi birokrasi yang diatur dalam Peraturan Presiden Nomor 95 Tahun 2018 [3].\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 | BAB I > Pasal 1\n[3] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyeleng…",
+      "Sistem Pemerintahan Berbasis Elektronik (SPBE) bertujuan untuk menciptakan tata kelola pemerintahan yang bersih, efektif, transparan, dan akuntabel se…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Sistem Pemerintahan Berbasis Elektronik (SPBE) adalah sebuah pendekatan relevan dalam penyelengga…",
+      "Sistem  Pemerintahan  Berbasis  Elektronik  (SPBE)  merupakan  penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan  komunikasi dala…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 bertujuan untuk mengukur sejau…"
+    ],
+    "latency_s": 47.66
+  },
+  {
+    "id": "gt_026",
+    "source_doc": "Perpres Nomor 95 Tahun 2018.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa saja yang termasuk dalam Manajemen SPBE menurut Pasal 46 Perpres Nomor 95 Tahun 2018?",
+    "ground_truth": "Berdasarkan Pasal 46 ayat (1) Perpres Nomor 95 Tahun 2018, Manajemen SPBE meliputi 8 komponen: (a) manajemen risiko; (b) manajemen keamanan informasi; (c) manajemen data; (d) manajemen aset teknologi informasi dan komunikasi; (e) manajemen sumber daya manusia; (f) manajemen pengetahuan; (g) manajemen perubahan; dan (h) manajemen Layanan SPBE.",
+    "answer": "Pasal 46 Perpres Nomor 95 Tahun 2018 mengatur bahwa Manajemen SPBE meliputi delapan komponen utama sebagai berikut:\n\na. manajemen risiko [1];\nb. manajemen keamanan informasi [1];\nc. manajemen data [1];\nd. manajemen aset teknologi informasi dan komunikasi [1];\ne. manajemen sumber daya manusia [1];\nf. manajemen pengetahuan [1];\ng. manajemen perubahan [1]; dan\nh. manajemen Layanan SPBE [1].\n\nSelain itu, Pasal 46 ayat (2) menyatakan bahwa Instansi Pusat dan Pemerintah Daerah melaksanakan Manajemen SPBE sebagaimana dimaksud pada ayat (1) [2]. Pelaksanaan Manajemen SPBE tersebut berpedoman pada Standar Nasional Indonesia, atau jika Standar Nasional Indonesia belum tersedia, dapat berpedoman pada standar internasional [3].\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 | BAB III > Pasal 46 > Ayat (1)-(4)\n[2] Perpres Nomor 95 Tahun 2018 | BAB III > Pasal 46 > Ayat (2)-(5)\n[3] Perpres Nomor 95 Tahun 2018 | BAB I > Pasal 1",
+    "contexts": [
+      "Pasal 46\n(1) Manajemen SPBE meliputi:\na. manajemen risiko;\nb. manajemen keamanan informasi;\nc. manajemen data;\nd. manajemen aset teknologi informasi d…",
+      "Pasal 46\nayat (1) huruf c bertujuan untuk menjamin\nterwujudnya data yang akurat, mutakhir,\nterintegrasi, dan dapat diakses sebagai dasar\nperencanaan,…",
+      "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyeleng…",
+      "Pasal 46\nayat (1) huruf a bertujuan untuk menjamin\nkeberlangsungan SPBE dengan meminimalkan\ndampak risiko dalam SPBE.\n(2) Manajemen risiko dilakukan m…",
+      "(1) Manajemen sumber daya manusia sebagaimana\ndimaksud dalam Pasal 46 ayat (1) huruf e bertujuan\nuntuk menjamin keberlangsungan dan peningkatan\nmutu l…"
+    ],
+    "latency_s": 52.64
+  },
+  {
+    "id": "gt_027",
+    "source_doc": "Perpres Nomor 95 Tahun 2018.pdf",
+    "doc_type": "peraturan",
+    "question": "Siapa yang menjadi Ketua Tim Koordinasi SPBE Nasional berdasarkan Perpres Nomor 95 Tahun 2018?",
+    "ground_truth": "Berdasarkan Pasal 58 ayat (4) Perpres Nomor 95 Tahun 2018, Ketua Tim Koordinasi SPBE Nasional adalah menteri yang menyelenggarakan urusan pemerintahan di bidang aparatur negara (Menteri PANRB). Tim Koordinasi SPBE Nasional berada di bawah dan bertanggung jawab kepada Presiden.",
+    "answer": "Berdasarkan dokumen yang tersedia, informasi mengenai nama spesifik individu yang menjadi Ketua Tim Koordinasi SPBE Nasional tidak dapat ditemukan secara eksplisit dalam konteks referensi yang diberikan. Namun, dokumen tersebut menjelaskan secara rinci siapa yang memegang jabatan tersebut secara fungsional dan bagaimana tugasnya ditetapkan.\n\nPasal 21 Peraturan Presiden Nomor 82 Tahun 2023 menyatakan bahwa Menteri yang menyelenggarakan urusan pemerintahan di bidang aparatur negara selaku ketua Tim Koordinasi SPBE Nasional [1].\n\nSelain itu, Pasal 59 ayat (6) Peraturan Presiden Nomor 95 Tahun 2018 menegaskan bahwa tugas dan tata kerja Tim Koordinasi SPBE Nasional ditetapkan oleh Ketua Tim Koordinasi SPBE Nasional [2].\n\nPerlu dicatat bahwa dalam konteks referensi yang tersedia, terdapat perbedaan sumber regulasi yang mengatur komposisi dan penunjukan ketua:\n1. Peraturan Presiden Nomor 82 Tahun 2023 secara spesifik menyebutkan bahwa Menteri yang menyelenggarakan urusan pemerintahan di bidang aparatur negara bertindak sebagai ketua Tim Koordinasi SPBE Nasional [1].\n2. Peraturan Presiden Nomor 95 Tahun 2018 (Pasal 59 ayat (5) dan (6)) menyebutkan bahwa dalam melaksanakan tugas Tim Koordinasi SPBE Nasional dapat melibatkan menteri/kepala lembaga terkait, dan tugas serta tata kerja Tim Koordinasi SPBE Nasional ditetapkan oleh Ketua Tim Koordinasi SPBE Nasional, namun tidak secara eksplisit mencantumkan nama jabatan spesifik untuk ketua dalam teks yang dikutip [2].\n\nOleh karena itu, berdasarkan fakta yang tersedia dalam dokumen, posisi Ketua Tim Koordinasi SPBE Nasional diisi oleh Menteri yang menyelenggarakan urusan pemerintahan di bidang aparatur negara, sebagaimana diatur dalam Peraturan Presiden Nomor 82 Tahun 2023 [1].\n\nReferensi Dokumen:\n[1] Perpres Nomor 82 Tahun 2023 | BAB V > Pasal 21\n[2] Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik | BAB V > Pasal 59 > Ayat (5)-(6)",
+    "contexts": [
+      "Pasal 21\nMenteri yang menyelenggarakan urusErn pemerintahan di\nbidang aparatur negara selaku ketua Tim Koordinasi SPBE\nNasional, melaporkan kemajuan p…",
+      "Pasal 59\n(5) Dalam\n\n\nPRES I DEN\nREPUBLIK INDONESIA\n- 51 -\n(5) Dalam melaksanakan tugas Tim Koordinasi SPBE\nNasional dapat melibatkan menteri/kepala le…",
+      "Sistem  Pemerintahan  Berbasis  Elektronik  (SPBE)  merupakan  penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan  komunikasi dala…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 bertujuan untuk mengukur sejau…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Sistem Pemerintahan Berbasis Elektronik (SPBE) bertujuan untuk menciptakan tata kelola pemerintah…"
+    ],
+    "latency_s": 80.63
+  },
+  {
+    "id": "gt_028",
+    "source_doc": "Perpres Nomor 95 Tahun 2018.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa tujuan Manajemen Risiko SPBE menurut Pasal 47 Perpres Nomor 95 Tahun 2018?",
+    "ground_truth": "Berdasarkan Pasal 47 ayat (1) Perpres Nomor 95 Tahun 2018, Manajemen Risiko bertujuan untuk menjamin keberlangsungan SPBE dengan meminimalkan dampak risiko dalam SPBE. Manajemen risiko dilakukan melalui serangkaian proses identifikasi, analisis, pengendalian, pemantauan, dan evaluasi terhadap risiko dalam SPBE.",
+    "answer": "Pasal 47 Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik tidak secara eksplisit menyebutkan tujuan Manajemen Risiko SPBE dalam teks yang tersedia.\n\nPasal 47 hanya mengutip frasa \"Manajemen risiko sebagaimana dimaksud dalam\" tanpa melanjutkan isi ayat tersebut dalam dokumen yang diberikan [3].\n\nSebaliknya, tujuan Manajemen Risiko SPBE secara eksplisit tercantum dalam Pasal 46 Ayat (1) huruf a Perpres Nomor 95 Tahun 2018, yang menyatakan bahwa hal tersebut bertujuan untuk menjamin keberlangsungan SPBE dengan meminimalkan dampak risiko dalam SPBE [1].\n\nSelain itu, dalam Pedoman Menteri Nomor 3 Tahun 2024, tujuan Manajemen Risiko SPBE juga didefinisikan sebagai menjamin keberlangsungan SPBE dengan meminimalkan dampak risiko dalam SPBE [5].\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik | BAB III > Kedua -  > Pasal 46 > Ayat (2)-(5)\n[3] Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik | BAB III > Kedua -  > Pasal 47 > Ayat (1)\n[5] PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024 | Pedoman Nomor 3 Tahun 2024 > Lampiran Instrumen > Domain: Manajemen SPBE > Indikator 21: Tingkat Kematangan Penerapan Manajemen Risiko  SPBE. [Bagian 1/4]",
+    "contexts": [
+      "Pasal 46\nayat (1) huruf a bertujuan untuk menjamin\nkeberlangsungan SPBE dengan meminimalkan\ndampak risiko dalam SPBE.\n(2) Manajemen risiko dilakukan m…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Sistem Pemerintahan Berbasis Elektronik (SPBE) bertujuan untuk menciptakan tata kelola pemerintah…",
+      "Pasal 47\n(1) Manajemen risiko sebagaimana dimaksud dalam",
+      "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyeleng…",
+      "Indikator 21: Tingkat Kematangan Penerapan Manajemen Risiko  SPBE.\nDeskripsi: a. Manajemen  Risiko  SPBE  adalah  pendekatan  sistematis yang meliputi…"
+    ],
+    "latency_s": 58.46
+  },
+  {
+    "id": "gt_029",
+    "source_doc": "Perpres Nomor 95 Tahun 2018.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa saja unsur-unsur SPBE yang harus dipastikan keterpaduannya oleh Tata Kelola SPBE menurut Pasal 4 Perpres Nomor 95 Tahun 2018?",
+    "ground_truth": "Berdasarkan Pasal 4 ayat (2) Perpres Nomor 95 Tahun 2018, unsur-unsur SPBE meliputi 10 komponen: (a) Rencana Induk SPBE Nasional; (b) Arsitektur SPBE; (c) Peta Rencana SPBE; (d) rencana dan anggaran SPBE; (e) Proses Bisnis; (f) data dan informasi; (g) Infrastruktur SPBE; (h) Aplikasi SPBE; (i) Keamanan SPBE; dan (j) Layanan SPBE.",
+    "answer": "Pasal 4 Ayat (2) Peraturan Presiden Nomor 95 Tahun 2018 menetapkan unsur-unsur Sistem Pemerintahan Berbasis Elektronik (SPBE) yang menjadi cakupan Tata Kelola SPBE untuk memastikan keterpaduan. Berikut adalah rincian unsur-unsur tersebut:\n\na. Rencana Induk SPBE Nasional [1]\nb. Arsitektur SPBE [1]\nc. Peta Rencana SPBE [1]\nd. rencana dan anggaran SPBE [1]\ne. Proses Bisnis [1]\nf. data dan informasi [1]\ng. Infrastruktur SPBE [1]\nh. Aplikasi SPBE [1]\ni. Keamanan SPBE [1]\nj. Layanan SPBE [1]\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik | BAB II > Kesatu -  > Pasal 4 > Ayat (1)-(2)",
+    "contexts": [
+      "Pasal 4\n(1) Tata Kelola SPBE bertujuan untuk memastikan\npenerapan unsur-unsur SPBE secara terpadu.\n(2) Unsur-unsur .\n\n\nPRES I DEN\nREPUBLIK INDONESIA\n(…",
+      "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyeleng…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: - 1. Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE, yang menjadi dasar utama dalam penerapa…",
+      "Sistem  Pemerintahan  Berbasis  Elektronik  (SPBE)  merupakan  penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan  komunikasi dala…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Sistem Pemerintahan Berbasis Elektronik (SPBE) bertujuan untuk menciptakan tata kelola pemerintah…"
+    ],
+    "latency_s": 56.79
+  },
+  {
+    "id": "gt_030",
+    "source_doc": "Perpres Nomor 95 Tahun 2018.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa tujuan dan kandungan Arsitektur SPBE Nasional menurut Pasal 7 Perpres Nomor 95 Tahun 2018?",
+    "ground_truth": "Berdasarkan Pasal 7 Perpres Nomor 95 Tahun 2018, Arsitektur SPBE Nasional bertujuan untuk memberikan panduan dalam pelaksanaan integrasi Proses Bisnis, data dan informasi, Infrastruktur SPBE, Aplikasi SPBE, dan Keamanan SPBE untuk menghasilkan Layanan SPBE yang terpadu secara nasional. Arsitektur SPBE Nasional memuat referensi arsitektur dan domain arsitektur (Proses Bisnis, data dan informasi, Infrastruktur, Aplikasi, dan Keamanan SPBE).",
+    "answer": "Pasal 7\n\nIsi Pasal 7:\n(1) Arsitektur SPBE Nasional bertujuan untuk memberikan panduan dalam pelaksanaan integrasi Proses Bisnis, data dan informasi, Infrastruktur SPBE, Aplikasi SPBE, dan Keamanan SPBE untuk menghasilkan Layanan SPBE yang terpadu secara nasional [1].\n(2) Arsitektur SPBE Nasional memuat:\na. referensi arsitektur; dan\nb. domain arsitektur [1].\n(3) Referensi arsitektur sebagaimana dimaksud pada ayat (2) huruf a mendeskripsikan komponen dasar arsitektur baku yang digunakan sebagai acuan untuk penyusunan setiap domain arsitektur [1].\n(4) Domain arsitektur sebagaimana dimaksud pada ayat (2) huruf b mendeskripsikan substansi arsitektur yang memuat:\na. domain arsitektur Proses Bisnis;\nb. domain arsitektur data dan informasi;\nc. domain arsitektur Infrastruktur SPBE;\nd. domain arsitektur Aplikasi SPBE;\ne. domain arsitektur Keamanan SPBE; dan\nf. domain arsitektur Layanan SPBE [1].\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik | BAB II > Ketiga -  > Pasal 7 > Ayat (1)-(2)",
+    "contexts": [
+      "Pasal 7\n(1) Arsitektur SPBE Nasional bertujuan untuk\nmemberikan panduan dalam pelaksanaan integrasi\nProses Bisnis, data dan informasi, Infrastruktur\nS…",
+      "(1) Arsitektur SPBE Nasional disusun berdasarkan\nRencana Induk SPBE Nasional dan Rencana\nPembangunan Jangka Menengah Nasional.\n(2) Penyusunan Arsitekt…",
+      "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyeleng…",
+      "(1) Rencana Induk SPBE Nasional bertujuan untuk\nmemberikan arah SPBE yang terpadu dan\nberkesinambungan secara nasional.\n(2) Rencana Induk SPBE Nasiona…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Sistem Pemerintahan Berbasis Elektronik (SPBE) bertujuan untuk menciptakan tata kelola pemerintah…"
+    ],
+    "latency_s": 66.23
+  },
+  {
+    "id": "gt_031",
+    "source_doc": "Perpres Nomor 95 Tahun 2018.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa yang dimaksud dengan keamanan SPBE sebagai prinsip berdasarkan Pasal 2 Perpres Nomor 95 Tahun 2018?",
+    "ground_truth": "Berdasarkan Pasal 2 ayat (8) Perpres Nomor 95 Tahun 2018, prinsip Keamanan dalam SPBE merupakan kerahasiaan, keutuhan, ketersediaan, keaslian, dan kenirsangkalan (nonrepudiation) sumber daya yang mendukung SPBE.",
+    "answer": "Berdasarkan Pasal 2 Perpres Nomor 95 Tahun 2018, keamanan SPBE sebagai prinsip memiliki definisi sebagai berikut:\n\nPasal 2 Ayat (1) menetapkan bahwa SPBE dilaksanakan dengan prinsip yang mencakup unsur keamanan [1].\n\nPasal 2 Ayat (8) menjelaskan bahwa keamanan sebagaimana dimaksud pada ayat (1) huruf g merupakan kerahasiaan, keutuhan, ketersediaan, keaslian, dan kenirsangkalan (nonrepudiation) sumber daya yang mendukung SPBE [1].\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 | BAB I > Pasal 2 > Ayat (6)-(8)",
+    "contexts": [
+      "Pasal 2\n(6) Akuntabilitas sebagaimana dimaksud pada ayat (1)\nhuruf e merupakan kejelasan fungsi dan\npertanggungjawaban dari SPBE.\n(7) Interoperabilita…",
+      "(1) SPBE dilaksanakan dengan prinsip:\na. efektivitas;\nb. keterpaduan;\nc. kesinambungan;\nd. efisiensi;\ne. akuntabilitas;\nf. interoperabilitas;dan\ng. ke…",
+      "Pasal 41\n(1) Setiap Instansi Pusat dan Pemerintah Daerah harus\nmenerapkan Keamanan SPBE.\n(21 Dalam\n\n\nPRES I DEN\nREPUBLIK INDONESIA\n-33-\n(21 Dalam mene…",
+      "Pasal 1\nDalam Peraturan Badan ini yang dimaksud dengan: \n1. \nSistem \nPemerintahan \nBerbasis \nElektronik \nyang \nselanjutnya disingkat SPBE adalah penye…",
+      "Sistem  Pemerintahan  Berbasis  Elektronik  (SPBE)  merupakan  penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan  komunikasi dala…"
+    ],
+    "latency_s": 46.4
+  },
+  {
+    "id": "gt_032",
+    "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa kewajiban pendaftaran bagi Penyelenggara Sistem Elektronik (PSE) menurut Pasal 6 PP Nomor 71 Tahun 2019?",
+    "ground_truth": "Berdasarkan Pasal 6 PP Nomor 71 Tahun 2019: (1) Setiap Penyelenggara Sistem Elektronik wajib melakukan pendaftaran; (2) Kewajiban pendaftaran dilakukan sebelum Sistem Elektronik mulai digunakan oleh Pengguna; (3) Pendaftaran diajukan kepada Menteri melalui pelayanan perizinan berusaha terintegrasi secara elektronik.",
+    "answer": "Pasal 6 Peraturan Pemerintah Nomor 71 Tahun 2019 mengatur kewajiban pendaftaran bagi Penyelenggara Sistem Elektronik sebagai berikut:\n\nPasal 6\n(1) Setiap Penyelenggara Sistem Elektronik sebagaimana dimaksud dalam Pasal 2 ayat (2) wajib melakukan pendaftaran. [1]\n(2) Kewajiban melakukan pendaftaran bagi Penyelenggara Sistem Elektronik dilakukan sebelum Sistem Elektronik mulai digunakan oleh Pengguna Sistem Elektronik. [1]\n(3) Pendaftaran Penyelenggara Sistem Elektronik sebagaimana dimaksud pada ayat (1) diajukan kepada Menteri melalui pelayanan perizinan berusaha terintegrasi secara elektronik sesuai dengan ketentuan peraturan perundang-undangan. [1]\n(4) Ketentuan lebih lanjut mengenai pendaftaran Penyelenggara Sistem Elektronik sebagaimana dimaksud pada ayat (3) mengacu pada norma, standar, prosedur, dan kriteria yang diatur dengan Peraturan Menteri. [1]\n\nBerdasarkan ketentuan tersebut, kewajiban pendaftaran bagi Penyelenggara Sistem Elektronik adalah wajib dilakukan sebelum Sistem Elektronik mulai digunakan oleh Pengguna Sistem Elektronik, dan pendaftaran diajukan kepada Menteri melalui pelayanan perizinan berusaha terintegrasi secara elektronik.\n\nReferensi Dokumen:\n[1] PERATURAN PEMERINTAH REPUBLIK INDONESIA Tahun tentang PEI!ryELENGGARAAN SISTEM DAN TRANSAKSI ELEKTRONIK | BAB II > Kedua -  > Pasal 6 > Ayat (1)-(4)",
+    "contexts": [
+      "Pasal 6\n(1) Setiap Penyelenggara Sistem Elektronik sebagaimana\ndimaksud dalam Pasal 2 ayat (2) wajib melakukan\npendaftaran.\n(21 Kewajiban melakukan pe…",
+      "PENYELENGGARAAN SISTEM ELEKTRONI\nUmum\nPendaftaran Sistem Elektronik\nPerangkat Keras\nPerangkat Lunak\nTenaga Ahli\nTata Kelola Sistem Elektronik\nPengaman…",
+      "Pasal 5\nl\nAyat (1)\nKewajiban menggunakan Sertifikat Elektronik berlaku terhadap\nSSL Encryption.\nAyat (2)\nCukup jelas.\nAyat (3)\nKepemilikan Sertifrkat…",
+      "Pasal 30\n(1) Penyelenggara Sistem Elektronik wajib menyediakan litur\nsesuai dengan karakteristik Sistem Elektronik yang\ndigunakannya.\n(21 Fitur sebaga…",
+      "a. menggunakaa Sertifikat Elektronik yang dibuat oleh\njasa Penyelenggara Sertilikasi Elektronik Indonesia;\ndan\nb. Tanda Tangan Elektronik dan/atau seg…"
+    ],
+    "latency_s": 50.39
+  },
+  {
+    "id": "gt_033",
+    "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa yang dimaksud dengan Sistem Elektronik menurut Pasal 1 PP Nomor 71 Tahun 2019?",
+    "ground_truth": "Berdasarkan Pasal 1 angka 1 PP Nomor 71 Tahun 2019, Sistem Elektronik adalah serangkaian perangkat dan prosedur elektronik yang berfungsi mempersiapkan, mengumpulkan, mengolah, menganalisis, menyimpan, menampilkan, mengumumkan, mengirimkan, dan/atau menyebarkan Informasi Elektronik.",
+    "answer": "Berdasarkan dokumen yang tersedia, definisi lengkap mengenai \"Sistem Elektronik\" tidak dapat ditemukan dalam konteks referensi yang diberikan.\n\nDokumen yang tersedia hanya memuat definisi untuk istilah \"tenaga ahli\" dan \"perjanjian tingkat layanan (service level agreement)\" dalam Pasal 1, serta definisi terkait \"alamat domisili\" dalam Pasal 71, namun tidak memuat definisi untuk \"Sistem Elektronik\" secara langsung.\n\nBerikut adalah rincian isi dokumen yang tersedia terkait Pasal 1 PP Nomor 71 Tahun 2019:\n\nPasal 1\nIsi:\nAyat (1)\nYang dimaksud dengan \"tenaga ahli\" adalah tenaga yang memiliki pengetahuan dan keterampilan khusus dalam bidang Sistem Elektronik yang dapat dipertanggungjawabkan secara akademis maupun praktis. [1]\n\nAyat (2)\nCukup jelas. [1]\n\nAyat (2)\nHuruf a\nYang dimaksud dengan \"perjanjian tingkat layanan (service level agreement)\" adalah pernyataan mengenai tingkatan mutu layanan suatu Sistem Elektronik. [1]\n\nHuruf b\nCukup jelas. [1]\n\nHuruf c\nCukup jelas. [1]\n\nAyat (2)\nCukup jelas. [1]\n\nInformasi mengenai definisi \"Sistem Elektronik\" menurut Pasal 1 PP Nomor 71 Tahun 2019 tidak ditemukan dalam dokumen yang tersedia.\n\nReferensi Dokumen:\n[1] PP Nomor 71 Tahun 2019 | BAB XI > Pasal 1",
+    "contexts": [
+      "Pasal 1\nO\nAyat (1)\nYang dimaksud dengan \"tenaga ahli\" adalah tenaga yang memiliki\npengetahuan dan keterampilan khusus dalam bidang Sistem\nElektronik y…",
+      "Pasal 71\nAyat (1)\nCukup jelas.\nSK No 011764 A\nAyat(2) ...'\n\n\nPRESIDEN\nREPUBLIK ]NDONESTA\n-26-\nAyat (2)\nCukup jelas.\nAyat (s)\nCukup jelas.\nAyat (4)\nHur…",
+      "Pasal 71\n(l) Penyelenggara Sertilikasi Elektronik yang\nlayanan autentikasi situs web harus memiliki metode\nyang andal yang mampu mengidentilikasi Oran…",
+      "Pasal 19\nAyat (l)\nTata kelola Sistem Elektronik yang baik (IT Gouernanel mencakup\nproses perencanaan, pengimplementasian, pengoperasian,\npemeliharaan,…",
+      "Pasal 25\nPenyelenggara Sistem Elektronik wajib menampilkan kembali\nInformasi Elektronik dan/ atau Dokumen Elektronik secara\nutuh sesuai dengan format…"
+    ],
+    "latency_s": 60.69
+  },
+  {
+    "id": "gt_034",
+    "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa kewajiban Penyelenggara Sistem Elektronik terkait rekam jejak audit dalam PP Nomor 71 Tahun 2019?",
+    "ground_truth": "Berdasarkan Pasal 22 PP Nomor 71 Tahun 2019: (1) Penyelenggara Sistem Elektronik wajib menyediakan rekam jejak audit terhadap seluruh kegiatan penyelenggaraan Sistem Elektronik; (2) Rekam jejak audit digunakan untuk keperluan pengawasan, penegakan hukum, penyelesaian sengketa, verifikasi, pengujian, dan pemeriksaan lainnya.",
+    "answer": "Berdasarkan dokumen yang tersedia, berikut adalah kewajiban Penyelenggara Sistem Elektronik terkait rekam jejak audit dalam PP Nomor 71 Tahun 2019:\n\n1. Penyelenggara Sistem Elektronik wajib menyediakan rekam jejak audit terhadap seluruh kegiatan penyelenggaraan Sistem Elektronik [1].\n2. Rekam jejak audit tersebut digunakan untuk keperluan pengawasan, penegakan hukum, penyelesaian sengketa, verifikasi, pengujian, dan pemeriksaan lainnya [1].\n3. Mekanisme rekam jejak audit meliputi pemeliharaan log transaksi sesuai kebijakan retensi data penyelenggara [2].\n4. Penyelenggara harus memberikan notifikasi kepada konsumen apabila suatu transaksi telah berhasil dilakukan [2].\n5. Tersedianya fungsi jejak audit harus mampu mendeteksi usaha dan/atau terjadinya penyalahgunaan yang harus direview atau dievaluasi secara berkala [2].\n6. Dalam hal sistem pemrosesan dan jejak audit merupakan tanggung jawab pihak ketiga, proses jejak audit tersebut harus sesuai dengan standar yang ditetapkan oleh Penyelenggara Sistem Elektronik [2].\n7. Selain itu, rekam jejak audit juga mencakup pemeriksaan untuk keperluan mitigasi atau penanganan tanggap darurat (incident response) [2].\n\nReferensi Dokumen:\n[1] PERATURAN PEMERINTAH REPUBLIK INDONESIA Tahun tentang PEI!ryELENGGARAAN SISTEM DAN TRANSAKSI ELEKTRONIK | BAB II\n[2] PP Nomor 71 Tahun 2019 | BAB XI > Pasal 22",
+    "contexts": [
+      "PENYELENGGARAAN SISTEM ELEKTRONI\nUmum\nPendaftaran Sistem Elektronik\nPerangkat Keras\nPerangkat Lunak\nTenaga Ahli\nTata Kelola Sistem Elektronik\nPengaman…",
+      "Pasal 22\nAyat (1)\nMekanisme rekam jejak awdit (audit trail) meliputi:\na. memelihara log transaksi sesuai kebijakan retensi data\npenyelenggara, sesuai…",
+      "Pasal 25\nPenyelenggara Sistem Elektronik wajib menampilkan kembali\nInformasi Elektronik dan/ atau Dokumen Elektronik secara\nutuh sesuai dengan format…",
+      "Pasal 13\nPenyelenggara Sistem Elektronik harus memiliki kebijakan\ntata kelola, prosedur ker.ya pengoperasian, dan mekanisme\naudit yang dilakukan berka…",
+      "Pasal 34\n(1) Penyelenggara Sistem Elektronik wajib melakukan Uji\nKelaikan Sistem Elektronik.\n(21 Kewajiban sebagaimana dimaksud pada ayat (1) dapat\ndi…"
+    ],
+    "latency_s": 52.87
+  },
+  {
+    "id": "gt_035",
+    "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+    "doc_type": "peraturan",
+    "question": "Siapa saja yang termasuk Penyelenggara Sistem Elektronik Lingkup Privat menurut PP Nomor 71 Tahun 2019?",
+    "ground_truth": "Berdasarkan Pasal 2 ayat (5) PP Nomor 71 Tahun 2019, Penyelenggara Sistem Elektronik Lingkup Privat meliputi: (a) Penyelenggara yang diatur atau diawasi oleh Kementerian/Lembaga; dan (b) Penyelenggara yang memiliki portal, situs, atau aplikasi dalam jaringan melalui internet untuk menyediakan perdagangan barang/jasa, layanan transaksi keuangan, pengiriman muatan digital berbayar, atau layanan komunikasi berbayar.",
+    "answer": "Menurut PP Nomor 71 Tahun 2019, Penyelenggara Sistem Elektronik Lingkup Privat adalah penyelenggaraan Sistem Elektronik oleh Orang, Badan Usaha, dan masyarakat [3].\n\nReferensi Dokumen:\n[3] PERATURAN PEMERINTAH REPUBLIK INDONESIA Tahun tentang PEI!ryELENGGARAAN SISTEM DAN TRANSAKSI ELEKTRONIK | BAB I > Pasal 1",
+    "contexts": [
+      "Pasal 4\n1\n(1) Penyelenggaraan Transaksi Elektronik dapat dilakukan\ndalam lingkup publik ataupun privat.\nSK No 01'1708 A\n(2) Penyelenggaraan . . .\n\n\nPR…",
+      "Pasal 21\n(4) Ketentuan mengenai pengelolaan, pemrosesan, dan\npenyimpanan Sistem Elektronik dan Data Elektronik bagi\nPenyelenggara Sistem Elektronik Li…",
+      "yang \nmenyediakan, mengelola, dan/atau\nmengoperasikan Sistem Elektronik secara sendiri-sendiri\nmaupun bersama-sama kepada Pengguna Sistem\nElektronik u…",
+      "(1) Penyelenggara Sistem Elektronik Lingkup Privat dapat\nmelakukan pengelolaan, pemrosesan, dan/atau\npenyimpanan Sistem Elektronik dan Data Elektronik…",
+      "(1) Penyelenggaraan Sistem Elektronik dilaksanakan oleh\nPenyelenggara Sistem Elektronik.\n(21 Penyelenggara Sistem Elektronik sebagaimana dimaksud\npada…"
+    ],
+    "latency_s": 25.32
+  },
+  {
+    "id": "gt_036",
+    "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa tugas dan kewenangan Pemerintah dalam penyelenggaraan sistem dan transaksi elektronik menurut Pasal 9 PP Nomor 71 Tahun 2019?",
+    "ground_truth": "Berdasarkan Pasal 9 PP Nomor 71 Tahun 2019, peran Pemerintah dalam penyelenggaraan sistem dan Transaksi Elektronik meliputi: (a) memfasilitasi pemanfaatan Teknologi Informasi dan Transaksi Elektronik sesuai ketentuan perundang-undangan; dan (b) melindungi kepentingan umum dari segala jenis gangguan sebagai akibat penyalahgunaan Informasi Elektronik dan Transaksi Elektronik yang mengganggu ketertiban umum.",
+    "answer": "Pasal 9 Peraturan Pemerintah Nomor 71 Tahun 2019 mengatur peran Pemerintah dalam penyelenggaraan sistem dan transaksi elektronik sebagai berikut:\n\nNomor Pasal: Pasal 9\nSumber: [3]\n\nIsi Pasal:\nPeran Pemerintah dalam penyelenggaraan sistem dan transaksi elektronik meliputi:\na. memfasilitasi pemanfaatan Teknologi Informasi dan Transaksi Elektronik sesuai dengan ketentuan peraturan perundang-undangan;\nb. melindungi kepentingan umum dari segala jenis gangguan sebagai akibat penyalahgunaan Informasi Elektronik dan Transaksi Elektronik yang mengganggu ketertiban umum, sesuai dengan ketentuan peraturan perundang-undangan;\nc. melakukan pencegahan penyebarluasan dan penggunaan Informasi Elektronik dan/atau Dokumen Elektronik yang memiliki muatan yang dilarang sesuai dengan ketentuan peraturan perundang-undangan; dan\nd. menetapkan Instansi atau institusi yang memiliki Data Elektronik strategis yang wajib dilindungi. [3]\n\nReferensi Dokumen:\n[3] PERATURAN PEMERINTAH REPUBLIK INDONESIA Tahun tentang PEI!ryELENGGARAAN SISTEM DAN TRANSAKSI ELEKTRONIK | BAB VIII > Pasal 9",
+    "contexts": [
+      "Pasal 9\nl\nPeran Pemerintah untuk memfasilitasi pemanfaatan\nTeknologi Informasi dan Transaksi Elektronik sebagaimana\ndimaksud dalam Pasal 90 huruf a me…",
+      "Pasal 1\nDalam Peraturan Pemerintah ini yang dimaksud dengan:\nl. \nSistem Elektronik adalah serangkaian perangkat dan\nprosedur elektronik yang berfungsi…",
+      "Pasal 9\nO\nPeran Pemerintah dalam penyelenggaraan sistem dan\nTransaksi Elektronik meliputi :\na. memfasilitasi pemanfaatan Teknologi Informasi dan\nTrans…",
+      "Pasal 50\n(1) Dalam Penyelenggaraan Transaksi Elektronik para pihak\nharus menjamin:\na. pemberian data dan informasi yang benar; dan\nb. ketersediaan sar…",
+      "Sistem dan Transaksi Elektronik perlu disesuaikan dengan perkembangan\nteknologi dan kebutuhan masyarakat.\nPenetapan Peraturan Pemerintah ini dimaksudk…"
+    ],
+    "latency_s": 46.78
+  },
+  {
+    "id": "gt_037",
+    "source_doc": "Perpres Nomor 95 Tahun 2018.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa yang dimaksud dengan interoperabilitas dalam prinsip SPBE menurut Perpres Nomor 95 Tahun 2018?",
+    "ground_truth": "Berdasarkan Pasal 2 ayat (7) Perpres Nomor 95 Tahun 2018, Interoperabilitas merupakan koordinasi dan kolaborasi antar Proses Bisnis dan antar sistem elektronik, dalam rangka pertukaran data, informasi, atau Layanan SPBE.",
+    "answer": "Berdasarkan Peraturan Presiden Nomor 95 Tahun 2018, definisi interoperabilitas dalam prinsip Sistem Pemerintahan Berbasis Elektronik (SPBE) tercantum sebagai berikut:\n\nPasal 2 ayat (1) huruf f dan ayat (7) Perpres Nomor 95 Tahun 2018 menyatakan bahwa:\n\nPasal 2\n(1) SPBE dilaksanakan dengan prinsip:\na. efektivitas;\nb. keterpaduan;\nc. kesinambungan;\nd. efisiensi;\ne. akuntabilitas;\nf. interoperabilitas; dan\ng. keamanan.\n(7) Interoperabilitas sebagaimana dimaksud pada ayat (1) huruf f merupakan koordinasi dan kolaborasi antar Proses Bisnis dan antar sistem elektronik, dalam rangka pertukaran data, informasi, atau Layanan SPBE [3].\n\nDengan demikian, interoperabilitas dalam konteks Perpres Nomor 95 Tahun 2018 dipahami sebagai mekanisme koordinasi dan kolaborasi yang dilakukan antara berbagai proses bisnis serta antar sistem elektronik untuk mendukung pertukaran data, informasi, maupun layanan SPBE [3].\n\nReferensi Dokumen:\n[3] Perpres Nomor 95 Tahun 2018 | BAB I > Pasal 2 > Ayat (6)-(8)",
+    "contexts": [
+      "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyeleng…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Sistem Pemerintahan Berbasis Elektronik (SPBE) adalah sebuah pendekatan relevan dalam penyelengga…",
+      "Pasal 2\n(6) Akuntabilitas sebagaimana dimaksud pada ayat (1)\nhuruf e merupakan kejelasan fungsi dan\npertanggungjawaban dari SPBE.\n(7) Interoperabilita…",
+      "(1) SPBE dilaksanakan dengan prinsip:\na. efektivitas;\nb. keterpaduan;\nc. kesinambungan;\nd. efisiensi;\ne. akuntabilitas;\nf. interoperabilitas;dan\ng. ke…",
+      "Sistem  Pemerintahan  Berbasis  Elektronik  (SPBE)  merupakan  penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan  komunikasi dala…"
+    ],
+    "latency_s": 63.37
+  },
+  {
+    "id": "gt_038",
+    "source_doc": "peraturan-bssn-no-8-tahun-2024.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa yang dimaksud dengan Keamanan SPBE menurut Peraturan BSSN Nomor 8 Tahun 2024?",
+    "ground_truth": "Berdasarkan Pasal 1 angka 2 Peraturan BSSN Nomor 8 Tahun 2024, Keamanan SPBE adalah pengendalian keamanan yang terpadu dalam SPBE.",
+    "answer": "Menurut Peraturan Badan Siber dan Sandi Negara Nomor 8 Tahun 2024, Keamanan SPBE didefinisikan sebagai pengendalian keamanan yang terpadu dalam Sistem Pemerintahan Berbasis Elektronik [1].\n\nReferensi Dokumen:\n[1] Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik | BAB I > Pasal 1",
+    "contexts": [
+      "Pasal 1\nDalam Peraturan Badan ini yang dimaksud dengan: \n1. \nSistem \nPemerintahan \nBerbasis \nElektronik \nyang \nselanjutnya disingkat SPBE adalah penye…",
+      "(1) Pemeriksaan sebagaimana dimaksud dalam Pasal 12 \nayat (1) dilakukan untuk memastikan penerapan \npengendalian Keamanan SPBE yang terdiri atas: \na.…",
+      "- 29 -  \n \nLAMPIRAN II \nPERATURAN BADAN SIBER DAN SANDI NEGARA \nNOMOR 8 TAHUN 2024 \nTENTANG  \nSTANDAR DAN TATA CARA PELAKSANAAN \nAUDIT KEAMANAN SISTEM…",
+      "LAMPIRAN I \nPERATURAN BADAN SIBER DAN SANDI NEGARA \nNOMOR 8 TAHUN 2024 \nTENTANG  \nSTANDAR DAN TATA CARA PELAKSANAAN \nAUDIT KEAMANAN SISTEM PEMERINTAHA…",
+      "Pasal 11\n(1) Tata Kelola Keamanan SPBE sebagaimana dimaksud \ndalam Pasal 10 ayat (1) huruf a meliputi pemeriksaan \natas aktivitas: \na. \nevaluasi Keama…"
+    ],
+    "latency_s": 38.65
+  },
+  {
+    "id": "gt_039",
+    "source_doc": "Perpres Nomor 82 Tahun 2023.pdf",
+    "doc_type": "peraturan",
+    "question": "Bagaimana pelaporan pelaksanaan penugasan Perum Peruri dilakukan berdasarkan Perpres Nomor 82 Tahun 2023?",
+    "ground_truth": "Berdasarkan Pasal 20 ayat (1) dan (2) Perpres Nomor 82 Tahun 2023, Direksi Perum Peruri menyampaikan laporan pelaksanaan penugasan kepada Menteri yang menyelenggarakan urusan pemerintahan di bidang aparatur negara selaku Ketua Tim Koordinasi SPBE Nasional secara berkala setiap 3 (tiga) bulan dan/atau sewaktu-waktu apabila diperlukan. Laporan juga disampaikan kepada pejabat terkait lainnya.",
+    "answer": "Berdasarkan Perpres Nomor 82 Tahun 2023, pelaporan pelaksanaan penugasan oleh Perum Peruri dilakukan sebagai berikut:\n\nPasal 2 Ayat (1)\nDireksi Perum Peruri menyampaikan laporan pelaksanaan penugasan kepada menteri yang menyelenggarakan urusan pemerintahan di bidang aparatur negara selaku ketua Tim Koordinasi SPBE Nasional, secara berkala setiap 3 (tiga) bulan dan/atau sewaktu-waktu apabila diperlukan [1].\n\nPasal 2 Ayat (2)\nLaporan pelaksanaan penugasan sebagaimana dimaksud pada ayat (1) juga disampaikan kepada:\na. menteri yang menyelenggarakan urusan pemerintahan di bidang badan usaha milik negara [1];\nb. kepala lembaga yang menyelenggarakan urusan pemerintahan di bidang pengawasan keuangan negara dan pembangunan nasional [1].\n\nReferensi Dokumen:\n[1] PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 | BAB V > Pasal 2 > Ayat (1)-(2)",
+    "contexts": [
+      "Pasal 2\nO\n(1) Direksi Perum Peruri menyampaikan laporan pelaksanaan\npenugasan kepada menteri yang menyelenggarakan\nurusan pemerintahan di bidang apara…",
+      "PERAN INSTANSI PEMERINTAH\nPasal l1\nKementerian/lembaga penanggung jawab Aplikasi SPBE\nPrioritas:\na. menyediakan data dan informasi yang dibutuhkan dal…",
+      "Mendukung layanan SPBE yang terintegrasi di seluruh institusi pemerintahan, Arsitektur SPBE Nasional ditetapkan melalui Peraturan Presiden Nomor 132 T…",
+      "(1) Dalam rangka pelaksanaan penugasan sebasaimana\ndimaksud dalam Pasal 3 ayat (1), Perum Peruri dapat:\nurusan\nurusan\nSK No 132286 A\na. bekerja sama .…",
+      "PRESIDEN\nREPUBLIK INDONESIA\n-3-\n10. Perusahaan Umum Percetakan Uang Republik Indonesia\nyang selanjutnya disebut Perum Peruri adalah badan\nusaha milik…"
+    ],
+    "latency_s": 47.11
+  },
+  {
+    "id": "gt_040",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Apa saja dasar regulasi yang digunakan dalam pelaksanaan Evaluasi SPBE tahun 2024?",
+    "ground_truth": "Evaluasi SPBE 2024 dilakukan berdasarkan tiga regulasi utama: (1) Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE, yang menjadi dasar utama penerapan sistem pemerintahan berbasis elektronik; (2) Peraturan Menteri PANRB Nomor 59 Tahun 2020 tentang Pemantauan dan Evaluasi SPBE; dan (3) Pedoman Menteri PANRB Nomor 3 Tahun 2024 sebagai panduan teknis evaluasi.",
+    "answer": "Dasar regulasi yang digunakan dalam pelaksanaan Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 meliputi:\n\n1. Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE, yang menjadi dasar utama dalam penerapan sistem pemerintahan berbasis elektronik [1].\n2. Peraturan Menteri PANRB Nomor 59 Tahun 2020, yang mengatur proses pemantauan dan evaluasi SPBE untuk menjamin keterpaduan dan efektivitas implementasinya [1].\n3. Pedoman Menteri PANRB Nomor 3 Tahun 2024, yang memberikan petunjuk teknis mengenai tata cara pemantauan dan evaluasi SPBE secara lebih rinci [1].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: ![](_page_35_Picture_7.jpeg)\n\n![](_page_36_Picture_0.jpeg)\n\n<span id=\"page-36-1\"></span>**Tabel 3…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 bertujuan untuk mengukur sejau…",
+      "Pasal 1\nDalam Peraturan Badan ini yang dimaksud dengan: \n1. \nSistem \nPemerintahan \nBerbasis \nElektronik \nyang \nselanjutnya disingkat SPBE adalah penye…",
+      "Sistem  Pemerintahan  Berbasis  Elektronik  (SPBE)  merupakan  penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan  komunikasi dala…",
+      "Sesuai dengan amanat Pasal 9 Peraturan Menteri PANRB No. 59 Tahun 2020, pelaksanaan Evaluasi Sistem Pemerintahan Berbasis Elektronik di tahun 2024 dil…"
+    ],
+    "latency_s": 58.05
+  },
+  {
+    "id": "gt_041",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Berapa bobot Domain Layanan SPBE dalam penilaian Indeks SPBE?",
+    "ground_truth": "Bobot Domain Layanan SPBE adalah 45,5%, merupakan bobot terbesar dari 4 domain SPBE.",
+    "answer": "Berdasarkan dokumen yang tersedia, bobot Domain Layanan SPBE dalam penilaian Indeks SPBE adalah 45,50% [2].\n\nReferensi Dokumen:\n[2] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+    "contexts": [
+      "Penetapan bobot penilaian Indeks SPBE dilakukan pada setiap level dalam struktur penilaian, yaitu domain, aspek, dan indikator, dengan mempertimbangka…",
+      "Aspek 8 - Layanan Publik Berbasis Elektronik\nIndikator 42\nTingkat Kematangan Layanan Pengaduan Pelayanan\nPublik\nIndikator 43\nTingkat Kematangan Layana…",
+      "Bobot\n(%)\nDomain 1\nKebijakan Internal SPBE\n13,00\nDomain 2\nTata Kelola SPBE\n25,00\nDomain 3\nManajemen SPBE\n16,50\nDomain 4\nLayanan SPBE\n45,50\nTotal Bobot…",
+      "indeks SPBE dihitung berdasarkan penjumlahan dari penghitungan\n𝑰𝒏𝒅𝒆𝒌𝒔 𝑺𝑷𝑩𝑬= ∑𝑁𝐷𝑗× 𝐵𝐷𝑗\n𝑛\n𝑗=1\n-24-\nperkalian antara nilai indeks domain dan bobot domain…",
+      "Peta Rencana\nSPBE Instansi\nPusat/\nPemerintah\nDaerah\n4\n2,50\n10,00\nIndikator 13\nTingkat\nKematangan\nKeterpaduan\nRencana dan\nAnggaran SPBE\n3\n2,50\n7,50\nInd…"
+    ],
+    "latency_s": 44.85
+  },
+  {
+    "id": "gt_042",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Berapa bobot Domain Manajemen SPBE dalam penilaian Indeks SPBE?",
+    "ground_truth": "Bobot Domain Manajemen SPBE adalah 13%, merupakan bobot terkecil dari 4 domain SPBE.",
+    "answer": "Berdasarkan dokumen yang tersedia, bobot Domain Manajemen SPBE dalam penilaian Indeks SPBE adalah 16,50% [2].\n\nReferensi Dokumen:\n[2] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+    "contexts": [
+      "Penetapan bobot penilaian Indeks SPBE dilakukan pada setiap level dalam struktur penilaian, yaitu domain, aspek, dan indikator, dengan mempertimbangka…",
+      "Aspek 8 - Layanan Publik Berbasis Elektronik\nIndikator 42\nTingkat Kematangan Layanan Pengaduan Pelayanan\nPublik\nIndikator 43\nTingkat Kematangan Layana…",
+      "Bobot\n(%)\nDomain 1\nKebijakan Internal SPBE\n13,00\nDomain 2\nTata Kelola SPBE\n25,00\nDomain 3\nManajemen SPBE\n16,50\nDomain 4\nLayanan SPBE\n45,50\nTotal Bobot…",
+      "indeks SPBE dihitung berdasarkan penjumlahan dari penghitungan\n𝑰𝒏𝒅𝒆𝒌𝒔 𝑺𝑷𝑩𝑬= ∑𝑁𝐷𝑗× 𝐵𝐷𝑗\n𝑛\n𝑗=1\n-24-\nperkalian antara nilai indeks domain dan bobot domain…",
+      "Peta Rencana\nSPBE Instansi\nPusat/\nPemerintah\nDaerah\n4\n2,50\n10,00\nIndikator 13\nTingkat\nKematangan\nKeterpaduan\nRencana dan\nAnggaran SPBE\n3\n2,50\n7,50\nInd…"
+    ],
+    "latency_s": 43.04
+  },
+  {
+    "id": "gt_043",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Apa kriteria Tingkat Kematangan Optimum dalam kapabilitas proses SPBE?",
+    "ground_truth": "Tingkat Optimum: kriteria Tingkat Terpadu dan Terukur telah terpenuhi, dan proses penerapan SPBE telah dilakukan peningkatan kualitas secara berkesinambungan berdasarkan hasil reviu dan evaluasi.",
+    "answer": "Berdasarkan dokumen yang tersedia, kriteria Tingkat Kematangan Optimum dalam kapabilitas proses SPBE adalah sebagai berikut:\n\n1. Proses penerapan SPBE telah dilakukan peningkatan kualitas secara berkesinambungan berdasarkan hasil reviu dan evaluasi [2].\n2. Kriteria tingkat Terpadu dan Terukur telah terpenuhi [2].\n\nInformasi mengenai definisi detail dari tingkat \"Terukur\" atau \"Optimum\" secara spesifik tidak dijelaskan lebih lanjut dalam dokumen yang diberikan, namun kriteria utamanya terkait dengan peningkatan kualitas berkelanjutan dan pencapaian tingkat kematangan Terpadu dan Terukur [2].\n\nReferensi Dokumen:\n[2] Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE > LAMPIRAN",
+    "contexts": [
+      "kemampuan organisasi pada suatu proses dan akan digunakan untuk\npengukuran tingkat kematangan kebijakan, tata kelola, dan manajemen\nSPBE. Tingkat kema…",
+      "Proses penerapan SPBE sudah dilakukan sesuai\ndengan\nfungsi\nmanajemen\nyang\nsesuai\npedoman/standar dan diterapkan pada semua unit\nkerja dalam organisasi…",
+      "Nilai indeks yang merepresentasikan tingkat kematangan penerapan\nSPBE dikelompokkan berdasarkan predikat seperti tertera pada Tabel 10\ndi bawah ini.\nT…",
+      "Domain 3\n:\nManajemen SPBE\nAspek 5\n:\nPenerapan Manajemen SPBE\nIndikator 25\n:\nTingkat Kematangan Penerapan Kompetensi Sumber Daya\nManusia\nPertanyaan\n:\nA…",
+      "Indikator 25: Tingkat Kematangan Kompetensi Sumber Daya  Manusia.\nDeskripsi: a. Pemenuhan kompetensi Sumber Daya Manusia  SPBE bertujuan untuk menjami…"
+    ],
+    "latency_s": 52.74
+  },
+  {
+    "id": "gt_044",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Pada tingkat kematangan kapabilitas proses berapa SPBE diukur kontribusinya pada kinerja organisasi?",
+    "ground_truth": "Pada Tingkat 4 (Terpadu dan Terukur): proses penerapan SPBE yang terpadu telah berkontribusi pada kinerja organisasi dan dapat diukur melalui kegiatan reviu dan evaluasi.",
+    "answer": "SPBE diukur kontribusinya pada kinerja organisasi pada tingkat kematangan kapabilitas proses Terdefinisi. Pada tingkat ini, proses penerapan SPBE yang terpadu telah berkontribusi pada kinerja organisasi, dan kinerja tersebut dapat diukur melalui kegiatan reviu dan evaluasi pada setiap proses penerapan SPBE [1].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Model Capability Maturity Model tersebut digunakan untuk mengevaluasi tingkat kematangan dalam ka…",
+      "Proses penerapan SPBE sudah dilakukan sesuai\ndengan\nfungsi\nmanajemen\nyang\nsesuai\npedoman/standar dan diterapkan pada semua unit\nkerja dalam organisasi…",
+      "kemampuan organisasi pada suatu proses dan akan digunakan untuk\npengukuran tingkat kematangan kebijakan, tata kelola, dan manajemen\nSPBE. Tingkat kema…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: **1. Rintisan 2. Terkelola 5. Optimum 4. Terpadu dan Terukur 3. Terdefinisi** Pelaksanaan proses…",
+      "Model); dan\n6) Tingkat\nkematangan\nmanajemen\nkeamanan\ninformasi\n(Information Security Management Maturity Model).\nb. E-Government Maturity Models merup…"
+    ],
+    "latency_s": 41.6
+  },
+  {
+    "id": "gt_045",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Apa kriteria Tingkat Kematangan Layanan SPBE pada level Transaksi?",
+    "ground_truth": "Tingkat Transaksi: kriteria Tingkat Interaksi telah terpenuhi, dan layanan SPBE diberikan melalui satu kesatuan transaksi operasi dengan menggunakan beberapa sumber daya SPBE, mencakup validasi data, analitik data, dan mekanisme persetujuan.",
+    "answer": "Berdasarkan dokumen yang tersedia, kriteria Tingkat Kematangan Layanan SPBE pada level Transaksi adalah sebagai berikut:\n\n1. Layanan SPBE diberikan melalui satu kesatuan transaksi operasi dengan menggunakan beberapa sumber daya SPBE [1].\n2. Kriteria ini terpenuhi apabila Kriteria Tingkat Interaksi telah dipenuhi sebelumnya [1].\n3. Pada konteks Layanan Publik Berbasis Elektronik, level Transaksi mencakup pemberian layanan transaksi kepada pengguna terkait kegiatan pemerintah, seperti otomasi alur kerja, transaksi basis data, dan validasi data [4].\n\nReferensi Dokumen:\n[1] Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE > LAMPIRAN\n[4] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+    "contexts": [
+      "pengukuran\ntingkat\nkematangan\nlayanan\nSPBE\nyaitu\nlayanan\nadministrasi pemerintahan berbasis elektronik dan layanan publik\nberbasis elektronik. Tingkat…",
+      "sumber daya SPBE.\n4 – Kolaborasi\nKriteria Tingkat Transaksi telah terpenuhi.\nLayanan SPBE diberikan melalui integrasi/kolaborasi\ndengan layanan SPBE l…",
+      "Penetapan bobot penilaian Indeks SPBE dilakukan pada setiap level dalam struktur penilaian, yaitu domain, aspek, dan indikator, dengan mempertimbangka…",
+      "-76-\nDomain 4\n:\nLayanan SPBE\nAspek 8\n:\nLayanan Publik Berbasis Elektronik\nIndikator 46 :\nTingkat Kematangan Layanan Publik Sektor 2\nPertanyaan\n:\nApaka…",
+      "Domain 3\n:\nManajemen SPBE\nAspek 5\n:\nPenerapan Manajemen SPBE\nIndikator 25\n:\nTingkat Kematangan Penerapan Kompetensi Sumber Daya\nManusia\nPertanyaan\n:\nA…"
+    ],
+    "latency_s": 49.53
+  },
+  {
+    "id": "gt_046",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Bagaimana hierarki Struktur Penilaian Tingkat Kematangan SPBE?",
+    "ground_truth": "Struktur penilaian SPBE terdiri atas 3 level: (1) domain — area penerapan SPBE yang dinilai; (2) aspek — area spesifik dalam domain; (3) indikator — informasi spesifik dari aspek yang dinilai. Sebuah domain terdiri dari satu atau beberapa aspek, dan sebuah aspek terdiri dari beberapa indikator.",
+    "answer": "Hierarki Struktur Penilaian Tingkat Kematangan SPBE terdiri dari tiga level utama, yaitu domain, aspek, dan indikator [1]. Domain merupakan area penerapan SPBE yang dinilai, sedangkan aspek adalah area spesifik penerapan SPBE yang dinilai [3]. Setiap domain terdiri dari satu atau beberapa aspek, dan setiap aspek terdiri dari beberapa indikator [1]. Indikator merupakan informasi spesifik dari aspek penerapan SPBE yang dinilai [1].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Struktur Penilaian Tingkat Kematangan SPBE\n[3] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "Struktur penilaian tingkat kematangan penerapan SPBE terdiri atas:\n- 1. domain, merupakan area penerapan SPBE yang dinilai;\n- 2. aspek, merupakan area…",
+      "Penetapan bobot penilaian Indeks SPBE dilakukan pada setiap level dalam struktur penilaian, yaitu domain, aspek, dan indikator, dengan mempertimbangka…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: ![](_page_29_Picture_0.jpeg)\n\n![](_page_29_Figure_1.jpeg)\n\n<span id=\"page-29-1\"></span>**Gambar 5…",
+      "sumber daya SPBE.\n4 – Kolaborasi\nKriteria Tingkat Transaksi telah terpenuhi.\nLayanan SPBE diberikan melalui integrasi/kolaborasi\ndengan layanan SPBE l…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: ![](_page_29_Picture_9.jpeg)\n\n![](_page_30_Picture_0.jpeg)\n\n![](_page_30_Figure_1.jpeg)\n\n<span id…"
+    ],
+    "latency_s": 50.15
+  },
+  {
+    "id": "gt_047",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Berapa bobot Aspek Penerapan Manajemen SPBE?",
+    "ground_truth": "Bobot Aspek Penerapan Manajemen SPBE adalah 12%.",
+    "answer": "Berdasarkan dokumen yang tersedia, bobot Aspek Penerapan Manajemen SPBE adalah 12,00%.\n\nInformasi ini dapat dilihat pada Tabel 8 yang memuat rincian Bobot Aspek dalam Permenpan RB Nomor 59 Tahun 2020 [2].\n\nReferensi Dokumen:\n[2] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+    "contexts": [
+      "Aspek 8 - Layanan Publik Berbasis Elektronik\nIndikator 42\nTingkat Kematangan Layanan Pengaduan Pelayanan\nPublik\nIndikator 43\nTingkat Kematangan Layana…",
+      "Bobot\n(%)\nDomain 1\nKebijakan Internal SPBE\n13,00\nDomain 2\nTata Kelola SPBE\n25,00\nDomain 3\nManajemen SPBE\n16,50\nDomain 4\nLayanan SPBE\n45,50\nTotal Bobot…",
+      "Peta Rencana\nSPBE Instansi\nPusat/\nPemerintah\nDaerah\n4\n2,50\n10,00\nIndikator 13\nTingkat\nKematangan\nKeterpaduan\nRencana dan\nAnggaran SPBE\n3\n2,50\n7,50\nInd…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: | Domain                     | Aspek                                                    | No. Ind…",
+      "Domain 3\n:\nManajemen SPBE\nAspek 5\n:\nPenerapan Manajemen SPBE\nIndikator 25\n:\nTingkat Kematangan Penerapan Kompetensi Sumber Daya\nManusia\nPertanyaan\n:\nA…"
+    ],
+    "latency_s": 48.16
+  },
+  {
+    "id": "gt_048",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Mana yang lebih besar bobotnya antara Aspek Layanan Administrasi Pemerintahan dan Aspek Layanan Publik berbasis Elektronik?",
+    "ground_truth": "Aspek Layanan Administrasi Pemerintahan Berbasis Elektronik mempunyai bobot 27,5%, lebih besar dari Aspek Layanan Publik Berbasis Elektronik yang berbobot 18%.",
+    "answer": "Berdasarkan dokumen yang tersedia, bobot spesifik untuk masing-masing aspek tersebut tidak disebutkan secara terpisah dalam konteks yang diberikan.\n\nDokumen [2] menyajikan Tabel 8 yang memuat bobot untuk \"Aspek 7 Layanan Administrasi Pemerintahan Berbasis Elektronik\" sebesar 27,50% dan \"Aspek 8 Layanan Publik Berbasis Elektronik\" sebesar 18,00%, namun dokumen tersebut tidak secara eksplisit menamai kedua aspek tersebut dengan nama lengkap yang sama persis seperti dalam pertanyaan (\"Aspek Layanan Administrasi Pemerintahan\" dan \"Aspek Layanan Publik berbasis Elektronik\") dalam satu kalimat perbandingan langsung.\n\nDokumen [1] dan [3] menjelaskan bahwa Domain Layanan terdiri dari dua aspek, yaitu layanan administrasi pemerintahan berbasis elektronik dan layanan publik berbasis elektronik, serta menyebutkan bahwa Domain Layanan memiliki indeks rata-rata tertinggi, namun tidak mencantumkan rincian bobot persentase untuk setiap aspek secara terpisah dalam teks naratif tersebut.\n\nDokumen [5] mendefinisikan bahwa Layanan SPBE terdiri atas layanan administrasi pemerintahan berbasis elektronik dan layanan publik berbasis elektronik, namun tidak memberikan informasi mengenai bobot masing-masing aspek tersebut.\n\nOleh karena itu, meskipun data numerik tersedia dalam Tabel 8 dari dokumen [2], deskripsi nama aspek dalam tabel tersebut (\"Aspek 7\" dan \"Aspek 8\") tidak secara langsung mencerminkan penamaan singkat yang digunakan dalam pertanyaan Anda, sehingga perbandingan langsung berdasarkan nama aspek tersebut tidak dapat dikonfirmasi sepenuhnya hanya dari teks naratif yang tersedia.\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[2] Permenpan RB Nomor 59 Tahun 2020 | BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE\n[3] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[5] Perpres Nomor 95 Tahun 2018 | BAB II > Pasal 42 > Ayat (1)-(4)",
+    "contexts": [
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Domain Layanan, dengan indeks rata-rata tertinggi 3.78, mencakup dua aspek yaitu layanan administ…",
+      "Bobot\n(%)\nDomain 1\nKebijakan Internal SPBE\n13,00\nDomain 2\nTata Kelola SPBE\n25,00\nDomain 3\nManajemen SPBE\n16,50\nDomain 4\nLayanan SPBE\n45,50\nTotal Bobot…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Domain Layanan SPBE memperoleh rata-rata indeks tertinggi dengan skor 3,79, yang dikategorikan se…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Domain Layanan SPBE memperoleh rata-rata indeks tertinggi, yakni 4,15 yang setara dengan kategori…",
+      "(1) Layanan SPBE terdiri atas:\na. layanan administrasi pemerintahan berbasis\nelektronik; dan\nb. layanan publik berbasis elektronik.\n(2) Layanan admini…"
+    ],
+    "latency_s": 69.13
+  },
+  {
+    "id": "gt_049",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Berapa nilai Indeks SPBE Nasional pada tahun 2018?",
+    "ground_truth": "Nilai Indeks SPBE Nasional pada tahun 2018 adalah 1,98.",
+    "answer": "Berdasarkan dokumen yang tersedia, nilai Indeks SPBE Nasional pada tahun 2018 tercatat sebesar 2.50 [3].\n\nReferensi Dokumen:\n[3] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Analisis Capaian Indeks Maturitas SPBE Nasional",
+    "contexts": [
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: | Tabel 1. Daftar Domain, Aspek, Domain Pemantauan dan Evaluasi SPBE22 |    |\n|------------------…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: | Gambar 1. Capaian Indeks SPBE Nasional Tahun 2018 –<br>2024             | 3  |\n|---------------…",
+      "Gambar 11. Perbandingan Nilai Capaian Tiap Domain 2023 dan 2024\n**Tabel 5. Nilai Indeks Domain Nasional 2024**\nNasional: Rerata; Kebijakan<br>Internal…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: ![](_page_41_Picture_3.jpeg)\n\n![](_page_42_Picture_0.jpeg)\n\nDomain Kebijakan SPBE Internal berada…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Domain Layanan SPBE memperoleh rata-rata indeks tertinggi dengan skor 3,79, yang dikategorikan se…"
+    ],
+    "latency_s": 49.28
+  },
+  {
+    "id": "gt_050",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Pada tahun berapa Indeks SPBE Nasional pertama kali melampaui nilai 3?",
+    "ground_truth": "Tahun 2024 adalah pertama kalinya Indeks SPBE Nasional mencapai nilai di atas 3, yaitu 3,12.",
+    "answer": "Berdasarkan dokumen yang tersedia, Indeks SPBE Nasional pertama kali melampaui nilai 3 pada tahun 2024.\n\nPada tahun 2024, Indeks Maturitas SPBE nasional mencapai skor 3,12, yang merupakan pencapaian pertama kalinya indeks nasional berada di atas angka 3 [2]. Capaian ini melampaui target yang telah ditetapkan sebesar 2,85 [2].\n\nReferensi Dokumen:\n[2] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: | No | Nama Instansi                           | D1   | D2   | D3   | D4   | Indeks | Predikat |…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 telah selesai dilaksanakan pad…",
+      "Dari hasil Evaluasi SPBE 2024, dapat disimpulkan bahwa penerapan SPBE di Indonesia telah menunjukkan kemajuan signifikan dibandingkan tahun-tahun sebe…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Tahun 2024 ini talah menjadi tahun yang signifikan bagi pelaksanaan pemrintahan digital di Indone…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Partisipasi aktif dari 615 Instansi Pusat dan Pemerintah Daerah (IPPD) pada Evaluasi SPBE tahun 2…"
+    ],
+    "latency_s": 47.99
+  },
+  {
+    "id": "gt_051",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Berapa target peringkat EGDI Indonesia pada periode 2025-2029 dan 2045?",
+    "ground_truth": "Indonesia menargetkan masuk ke dalam 50 besar peringkat EGDI pada periode 2025-2029 dan 20 besar pada 2045.",
+    "answer": "Berdasarkan dokumen yang tersedia, berikut adalah target peringkat E-Government Development Index (EGDI) Indonesia:\n\n1. Periode 2025–2029: Indonesia menargetkan masuk ke dalam 50 besar dunia [1].\n2. Periode 2045: Indonesia menargetkan masuk ke dalam 20 besar dunia [1].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: ![](_page_18_Picture_2.jpeg)\n\n20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Dalam kerangka…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: pembangunan sistem keamanan digital yang terpadu, serta peningkatan kapabilitas sumber daya manus…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Laporan Pelaksanaan Evaluasi SPBE 2024 ini menyajikan kondisi terkini mengenai penerapan, integra…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Pada tahun 2024, target persentase Instansi Pusat dan Pemerintah Daerah (IPPD) yang mencapai Ting…",
+      "Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 telah selesai dilaksanakan pada Desember 2024 dengan menghasilkan indeks maturitas…"
+    ],
+    "latency_s": 54.99
+  },
+  {
+    "id": "gt_052",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Siapa saja anggota Tim Koordinasi SPBE Nasional?",
+    "ground_truth": "Tim Koordinasi SPBE Nasional terdiri dari Kementerian PPN/Bappenas, Kementerian Kominfo, Kementerian Keuangan, Kementerian Dalam Negeri, Badan Siber dan Sandi Negara (BSSN), dan Badan Riset dan Inovasi Nasional (BRIN).",
+    "answer": "Berdasarkan dokumen yang tersedia, berikut adalah informasi mengenai anggota Tim Koordinasi SPBE Nasional:\n\nMenurut Pasal 14 Perpres Nomor 82 Tahun 2023, Menteri yang menyelenggarakan urusan pemerintahan di bidang komunikasi dan informatika bertindak sebagai anggota Tim Koordinasi SPBE Nasional [1].\n\nPasal 15 Perpres Nomor 82 Tahun 2023 menyebutkan bahwa Menteri yang menyelenggarakan urusan pemerintahan di bidang perencanaan pembangunan nasional juga bertindak sebagai anggota Tim Koordinasi SPBE Nasional [2].\n\nSelanjutnya, Pasal 17 Perpres Nomor 82 Tahun 2023 mengidentifikasi Menteri yang menyelenggarakan urusan pemerintahan di bidang keuangan negara sebagai anggota Tim Koordinasi SPBE Nasional [5].\n\nTerakhir, Pasal 59 Perpres Nomor 95 Tahun 2018 menetapkan bahwa anggota Tim Koordinasi SPBE Nasional mencakup Menteri yang menyelenggarakan urusan pemerintahan di bidang aparatur negara, menteri di bidang negeri, menteri di bidang keuangan, menteri di bidang komunikasi dan informatika, menteri di bidang perencanaan pembangunan nasional, kepala lembaga yang menyelenggarakan tugas pemerintahan di bidang keamanan siber, serta kepala lembaga pemerintah non kementerian yang menyelenggarakan tugas pemerintahan di bidang pengkajian dan penerapan teknologi [4].\n\nReferensi Dokumen:\n[1] Perpres Nomor 82 Tahun 2023 | BAB IV > Pasal 14\n[2] Perpres Nomor 82 Tahun 2023 | BAB IV > Pasal 15\n[4] Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik | BAB V > Pasal 59 > Ayat (3)\n[5] Perpres Nomor 82 Tahun 2023 | BAB IV > Pasal 17",
+    "contexts": [
+      "Pasal 14\nMenteri yang menyelenggarakan urusan pemerintahan di\nbidang komunikasi dan informatika selaku anggota\nTim Koordinasi SPBE Nasional melakukan…",
+      "Pasal 15\nMenteri yang menyelenggarakan urusan pemerintahan di\nbidang perencanaan pembangunan nasional selaku ketua\ndewan pengarah penyelenggara Satu D…",
+      "Pasal 60\n(1) Setiap pimpinan Instansi Pusat mempunyai tugas\nmelakukan koordinasi dan menetapkan kebijakan\nSPBE di Instansi Pusat.\n(21 Setiap pimpinan…",
+      "(3) Tim Koordinasi SPBE Nasional mempunyai tugas\nmelakukan koordinasi dan penerapan kebijakan\nSPBE pada Instansi Pusat dan Pemerintah Daerah.\n(41 Tim…",
+      "Pasal 17\nMenteri yang menyelenggarakan urusan pemerintahan di\nbidang keuangan negara selaku anggota Tim Koordinasi SPBE\nNasional memberikan fasilitasi…"
+    ],
+    "latency_s": 61.04
+  },
+  {
+    "id": "gt_053",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Domain mana yang mencapai indeks tertinggi pada Indeks SPBE Nasional 2024?",
+    "ground_truth": "Domain Layanan mencapai indeks tertinggi pada tahun 2024 dengan skor 3,78.",
+    "answer": "Berdasarkan dokumen yang tersedia, domain yang mencapai indeks tertinggi pada Indeks SPBE Nasional tahun 2024 adalah Domain Layanan SPBE dengan nilai rerata 3,78 [1]. Nilai ini juga dikonfirmasi sebagai rata-rata tertinggi dengan skor 3,79 dalam laporan evaluasi yang sama [2]. Domain ini disandang predikat \"Sangat Baik\" dan merupakan domain dengan nilai indeks tertinggi dibandingkan dengan domain Kebijakan (3,36), Tata Kelola (2,62), dan Manajemen (1,86) [5].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Analisis Capaian Indeks Maturitas SPBE Nasional\n[2] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[5] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "Gambar 11. Perbandingan Nilai Capaian Tiap Domain 2023 dan 2024\n**Tabel 5. Nilai Indeks Domain Nasional 2024**\nNasional: Rerata; Kebijakan<br>Internal…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Domain Layanan SPBE memperoleh rata-rata indeks tertinggi dengan skor 3,79, yang dikategorikan se…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Sementara itu, Domain Tata Kelola SPBE masuk ke dalam kategori \"Kurang\", dengan nilai rerata inde…",
+      "Domain Manajemen SPBE memiliki rata-rata indeks nasional terendah dengan skor 1.86, yang masuk dalam kategori \"Kurang\". Domain Manajemen SPBE sendiri…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: | Deskripsi                    | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |\n|--------------…"
+    ],
+    "latency_s": 48.68
+  },
+  {
+    "id": "gt_054",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Bagaimana tren capaian Domain Manajemen SPBE Nasional dari 2021 hingga 2024?",
+    "ground_truth": "Capaian Domain Manajemen SPBE Nasional menunjukkan tren peningkatan dari 1,23 (2021), 1,32 (2022), 1,66 (2023), hingga 1,86 (2024). Domain ini konsisten berada di posisi terendah dibanding domain lainnya.",
+    "answer": "Berdasarkan dokumen yang tersedia, tren capaian Domain Manajemen SPBE Nasional dari tahun 2021 hingga 2024 menunjukkan peningkatan yang konsisten setiap tahunnya. Nilai indeks capaian Domain Manajemen pada tahun 2021 adalah 1,23, meningkat menjadi 1,32 pada tahun 2022, kemudian naik lagi menjadi 1,66 pada tahun 2023, dan mencapai 1,86 pada tahun 2024 [1]. Meskipun tren peningkatan ini terlihat stabil, capaian Domain Manajemen masih berada di posisi paling rendah dibandingkan domain lainnya dan belum berhasil keluar dari predikat \"Kurang\" pada tahun 2024 [4].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Analisis Capaian Indeks Maturitas SPBE Nasional\n[4] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 telah selesai dilaksanakan pada Desember 2024 dengan menghasilkan indeks maturitas…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Secara menyeluruh, meskipun terdapat tren peningkatan yang stabil, evaluasi SPBE di tahun 2024 me…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: | Deskripsi                    | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |\n|--------------…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Tabel 5 di atas menggambarkan perbedaan nilai indeks nasional, termasuk rentang nilai maksimum da…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: <span id=\"page-11-0\"></span>**Gambar 1. Capaian Indeks SPBE Nasional Tahun 2018 – 2024**"
+    ],
+    "latency_s": 64.3
+  },
+  {
+    "id": "gt_055",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Berapa banyak Instansi Pusat dan Pemerintah Daerah yang dievaluasi dalam Evaluasi SPBE 2024?",
+    "ground_truth": "Evaluasi SPBE 2024 dilaksanakan terhadap 615 IPPD yang terdiri dari 92 Instansi Pusat dan 523 Pemerintah Daerah.",
+    "answer": "Berdasarkan dokumen yang tersedia, jumlah spesifik Instansi Pusat dan Pemerintah Daerah yang dievaluasi dalam Evaluasi SPBE 2024 tidak disebutkan secara eksplisit dalam konteks yang diberikan. Dokumen hanya menyatakan bahwa evaluasi dilakukan pada berbagai Instansi Pusat dan Pemerintah Daerah di Indonesia [2], serta mencakup Instansi Pusat dan Pemerintah Daerah (IPPD) [1].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf\n[2] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | 20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "contexts": [
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Di sisi lain, Domain Manajemen SPBE mencatat rata-rata indeks terendah pada lokus Pemerintah Pusa…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: # <span id=\"page-12-0\"></span>**Disclaimer**\n\nLaporan Evaluasi Sistem Pemerintahan Berbasis Elekt…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: ![](_page_35_Picture_7.jpeg)\n\n![](_page_36_Picture_0.jpeg)\n\n<span id=\"page-36-1\"></span>**Tabel 3…",
+      "Sistem  Pemerintahan  Berbasis  Elektronik  (SPBE)  merupakan  penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan  komunikasi dala…",
+      "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf: Sistem Pemerintahan Berbasis Elektronik (SPBE) bertujuan untuk menciptakan tata kelola pemerintah…"
+    ],
+    "latency_s": 46.32
+  }
+]

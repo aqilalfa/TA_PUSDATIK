@@ -10,12 +10,16 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
+  test: {
+    environment: 'happy-dom',
+    globals: true,
+  },
   server: {
     host: '0.0.0.0',
     port: 5173,
     proxy: {
       '/api': {
-        target: 'http://backend:8000',
+        target: process.env.VITE_BACKEND_PROXY ?? 'http://localhost:8000',
         changeOrigin: true
       }
     }

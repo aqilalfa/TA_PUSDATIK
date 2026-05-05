@@ -263,11 +263,12 @@ def detect_document_type(filename: str, text: str) -> str:
 
 
 def _bm25_search_text(text: str, metadata: Dict[str, Any]) -> str:
-    """Compose lexical text for BM25 using content and structural metadata."""
+    """Compose BM25 search text from chunk content + structural metadata only.
+
+    Excludes document-level fields (judul_dokumen, filename, doc_type) that are
+    identical across all chunks of a document and degrade BM25 IDF scores.
+    """
     fields = [
-        metadata.get("document_title") or metadata.get("judul_dokumen", ""),
-        metadata.get("filename", ""),
-        metadata.get("doc_type", ""),
         metadata.get("hierarchy", ""),
         metadata.get("context_header", ""),
         metadata.get("bab", ""),
@@ -571,12 +572,15 @@ class DocumentManager:
             "raw_text": chunk.chunk_text or "",
             "context_header": meta.get("context_header", ""),
             "document_title": meta.get("document_title", ""),
+            "hierarchy": meta.get("hierarchy", ""),
             "filename": meta.get("filename", ""),
             "doc_type": meta.get("doc_type", ""),
             "bab": str(meta.get("bab", "")),
             "bagian": str(meta.get("bagian", "")),
             "pasal": str(meta.get("pasal", "")),
             "ayat": str(meta.get("ayat", "")),
+            "chunk_part": meta.get("chunk_part"),
+            "chunk_parts_total": meta.get("chunk_parts_total"),
             "parent_pasal_text": meta.get("parent_pasal_text", ""),
             "is_parent": meta.get("is_parent", False),
             "chunk_type": chunk.chunk_type or meta.get("chunk_type", "text"),
@@ -673,6 +677,21 @@ class DocumentManager:
     def update_document(self, doc_id: str, **kwargs) -> bool:
         """Update document fields by doc_id via ORM."""
         from app.models.db_models import Document
+
+        def _normalize_value(column: str, value: Any) -> Any:
+            """Normalize incoming values to match ORM column types."""
+            if column == "processed_at" and isinstance(value, str):
+                try:
+                    return datetime.fromisoformat(value)
+                except ValueError:
+                    logger.warning(
+                        "update_document: invalid processed_at format for doc_id={} value={}",
+                        doc_id,
+                        value,
+                    )
+                    return value
+            return value
+
         # Map legacy field names ke ORM column names
         field_mapping = {
             "file_path": "file_path",
@@ -694,7 +713,7 @@ class DocumentManager:
             for k, v in kwargs.items():
                 orm_col = field_mapping.get(k, k)
                 if hasattr(doc, orm_col):
-                    setattr(doc, orm_col, v)
+                    setattr(doc, orm_col, _normalize_value(orm_col, v))
             db.commit()
             return True
         except Exception as e:
@@ -745,6 +764,7 @@ class DocumentManager:
             for i, chunk in enumerate(chunks):
                 meta = {
                     "context_header": chunk.get("context_header", ""),
+                    "hierarchy": chunk.get("hierarchy", ""),
                     "document_title": chunk.get("document_title", ""),
                     "filename": chunk.get("filename", ""),
                     "doc_type": chunk.get("doc_type", ""),
@@ -758,6 +778,8 @@ class DocumentManager:
                     "table_context": chunk.get("table_context", ""),
                     "original_table": chunk.get("original_table", ""),
                     "chunk_type": chunk.get("chunk_type", "text"),
+                    "chunk_part": chunk.get("chunk_part"),
+                    "chunk_parts_total": chunk.get("chunk_parts_total"),
                 }
                 new_chunk = Chunk(
                     document_id=doc.id,
@@ -933,7 +955,81 @@ class DocumentManager:
             "status": "uploaded",
         }
 
-    def preview_chunks(self, doc_id: str) -> Dict[str, Any]:
+    def _apply_figure_pipeline(
+        self,
+        pdf_path,
+        chunks,
+        doc_title,
+        filename,
+        doc_type,
+    ):
+        """Run figure extraction pipeline; append figure chunks to existing list.
+
+        Idempotent via figures.json cache.
+        """
+        from app.core.ingestion.figures import process_figures
+        from app.core.ingestion.structured_chunker import (
+            inject_figure_summaries,
+            make_figure_chunks,
+        )
+        from pathlib import Path as _Path
+
+        pdf_path = _Path(pdf_path)
+
+        # Locate existing Marker markdown without importing pdf_processor (avoids PaddleOCR double-init)
+        def _find_marker_md(stem: str) -> _Path | None:
+            from app.core.ingestion import marker_converter as _mc
+            output_dir = _mc.marker_converter.output_dir
+            norm = lambda s: "".join(c for c in s.lower() if c.isalnum())
+            stem_norm = norm(stem)
+            for folder in output_dir.iterdir():
+                if not folder.is_dir():
+                    continue
+                fname = folder.name
+                fname_no_hash = fname[9:] if len(fname) > 9 and fname[8] == "_" and all(c in "0123456789abcdefABCDEF" for c in fname[:8]) else fname
+                if stem.lower() in fname.lower() or stem_norm in norm(fname) or stem_norm in norm(fname_no_hash):
+                    md = folder / f"{fname}.md"
+                    if md.exists():
+                        return md
+                    for md in folder.glob("*.md"):
+                        return md
+            return None
+
+        md_path = _find_marker_md(_Path(pdf_path).stem) or _find_marker_md(_Path(filename).stem)
+        if not md_path:
+            logger.warning("Figure pipeline skipped: no Marker markdown found")
+            return chunks
+        md_path_str = str(md_path)
+
+        md_path = _Path(md_path_str)
+        output_dir = _Path(md_path_str).parent
+        marker_md = md_path.read_text(encoding="utf-8")
+
+        figures = process_figures(
+            pdf_path=pdf_path,
+            marker_md=marker_md,
+            output_dir=output_dir,
+            use_cache=True,
+        )
+
+        enriched_md = inject_figure_summaries(marker_md, figures)
+        if enriched_md != marker_md:
+            md_path.write_text(enriched_md, encoding="utf-8")
+            logger.info(f"Updated markdown with figure summaries: {md_path}")
+
+        figure_chunks = make_figure_chunks(
+            figures,
+            doc_title=doc_title,
+            filename=filename,
+            doc_type=doc_type,
+        )
+        logger.info(
+            f"Figure pipeline: {len(figures)} figures processed, "
+            f"{len(figure_chunks)} figure chunks added"
+        )
+        return chunks + figure_chunks
+
+    def preview_chunks(self, doc_id: str, use_figure_pipeline: bool = False) -> Dict[str, Any]:
         """Extract and preview chunks without indexing."""
 
         doc = self.get_document(doc_id)
@@ -1017,6 +1113,7 @@ class DocumentManager:
                             "text": chunk.get("text", ""),
                             "raw_text": chunk.get("text", ""),
                             "context_header": hierarchy or doc_title,
+                            "hierarchy": hierarchy,
                             "document_title": meta.get("judul_dokumen", doc_title),
                             "filename": doc["original_filename"],
                             "doc_type": meta.get("doc_type", detected_type),
@@ -1024,6 +1121,8 @@ class DocumentManager:
                             "bagian": meta.get("bagian", ""),
                             "pasal": meta.get("pasal", ""),
                             "ayat": meta.get("ayat", ""),
+                            "chunk_part": meta.get("chunk_part"),
+                            "chunk_parts_total": meta.get("chunk_parts_total"),
                             "parent_pasal_text": "",
                             "is_parent": True,
                             "chunk_type": chunk.get("chunk_type", "text"),
@@ -1056,6 +1155,7 @@ class DocumentManager:
                             "text": chunk["text"],
                             "raw_text": chunk["text"],
                             "context_header": chunk["metadata"].get("section", doc_title),
+                            "hierarchy": chunk["metadata"].get("hierarchy", ""),
                             "document_title": doc_title,
                             "filename": doc["original_filename"],
                             "doc_type": detected_type,
@@ -1063,6 +1163,8 @@ class DocumentManager:
                             "bagian": "",
                             "pasal": "",
                             "ayat": "",
+                            "chunk_part": chunk["metadata"].get("chunk_part"),
+                            "chunk_parts_total": chunk["metadata"].get("chunk_parts_total"),
                             "parent_pasal_text": "",
                             "is_parent": True,
                             "chunk_type": chunk["metadata"].get("chunk_type", "section"),
@@ -1093,6 +1195,7 @@ class DocumentManager:
                             "text": chunk["text"],
                             "raw_text": chunk["text"],
                             "context_header": meta.get("hierarchy", doc_title),
+                            "hierarchy": meta.get("hierarchy", ""),
                             "document_title": doc_title,
                             "filename": doc["original_filename"],
                             "doc_type": detected_type,
@@ -1100,6 +1203,8 @@ class DocumentManager:
                             "bagian": meta.get("bagian", ""),
                             "pasal": meta.get("pasal", ""),
                             "ayat": meta.get("ayat", ""),
+                            "chunk_part": meta.get("chunk_part"),
+                            "chunk_parts_total": meta.get("chunk_parts_total"),
                             "parent_pasal_text": "",
                             "is_parent": True,
                             "chunk_type": meta.get("section_type", "pasal"),
@@ -1122,6 +1227,16 @@ class DocumentManager:
                 text=text,
                 doc_title=doc_title,
                 filename=doc["original_filename"],
+            )
+
+        # Apply figure extraction pipeline (opt-in)
+        if use_figure_pipeline and chunks:
+            chunks = self._apply_figure_pipeline(
+                pdf_path=file_path,
+                chunks=chunks,
+                doc_title=doc_title,
+                filename=doc["original_filename"],
+                doc_type=detected_type,
             )
 
         # Save chunks to database (preview stage)
@@ -1276,6 +1391,9 @@ class DocumentManager:
                         "ayat": chunk.get("ayat", ""),
                         "parent_pasal_text": chunk.get("parent_pasal_text", ""),
                         "is_parent": chunk.get("is_parent", False),
+                        "hierarchy": chunk.get("hierarchy", ""),
+                        "chunk_part": chunk.get("chunk_part"),
+                        "chunk_parts_total": chunk.get("chunk_parts_total"),
                         "doc_id": doc_id,
                         "chunk_type": chunk.get("chunk_type", "text"),
                         "section": chunk.get("section", ""),
@@ -1371,6 +1489,9 @@ class DocumentManager:
                                 "pasal": chunk.get("pasal", ""),
                                 "ayat": chunk.get("ayat", ""),
                                 "bab": chunk.get("bab", ""),
+                                "hierarchy": chunk.get("hierarchy", ""),
+                                "chunk_part": chunk.get("chunk_part"),
+                                "chunk_parts_total": chunk.get("chunk_parts_total"),
                                 "parent_pasal_text": chunk.get("parent_pasal_text", ""),
                                 "is_parent": chunk.get("is_parent", False),
                                 "doc_id": doc["doc_id"],
@@ -1552,7 +1673,9 @@ class DocumentManager:
         Scans Qdrant collection for unique documents and creates
         records in SQLite for documents not yet tracked.
         """
+        import hashlib
         import httpx
+        from sqlalchemy import or_
         from app.models.db_models import Document
 
         qdrant_url = settings.QDRANT_URL
@@ -1592,21 +1715,55 @@ class DocumentManager:
 
                 # Extract unique documents
                 for point in points:
-                    payload = point.get("payload", {})
-                    doc_title = payload.get("document_title", "")
-                    filename = payload.get("filename", "")
-                    doc_type = payload.get("doc_type", "other")
+                    payload = point.get("payload", {}) or {}
+                    nested_meta = payload.get("metadata", {})
+                    if not isinstance(nested_meta, dict):
+                        nested_meta = {}
 
-                    if doc_title and doc_title not in all_docs:
-                        all_docs[doc_title] = {
-                            "document_title": doc_title,
-                            "filename": filename or doc_title,
+                    doc_title = (
+                        payload.get("document_title")
+                        or nested_meta.get("document_title")
+                        or payload.get("filename")
+                        or nested_meta.get("filename")
+                        or ""
+                    )
+                    filename = (
+                        payload.get("filename")
+                        or nested_meta.get("filename")
+                        or doc_title
+                    )
+                    doc_type = (
+                        payload.get("doc_type")
+                        or nested_meta.get("doc_type")
+                        or "other"
+                    )
+
+                    # Prefer explicit doc identifier when available.
+                    # Fallback to title/filename so mixed legacy payloads still aggregate.
+                    doc_key = (
+                        str(
+                            payload.get("doc_id")
+                            or nested_meta.get("doc_id")
+                            or payload.get("document_id")
+                            or nested_meta.get("document_id")
+                            or doc_title
+                            or filename
+                        )
+                        .strip()
+                    )
+
+                    if not doc_key:
+                        continue
+
+                    if doc_key not in all_docs:
+                        all_docs[doc_key] = {
+                            "document_title": doc_title or filename or doc_key,
+                            "filename": filename or doc_title or doc_key,
                             "doc_type": doc_type,
                             "chunk_count": 0,
                         }
 
-                    if doc_title:
-                        all_docs[doc_title]["chunk_count"] += 1
+                    all_docs[doc_key]["chunk_count"] += 1
 
                 # Next page
                 offset = result.get("next_page_offset")
@@ -1618,28 +1775,69 @@ class DocumentManager:
             # Insert into DB via ORM (skip jika sudah ada berdasarkan document_title)
             db = self._get_db()
             imported = 0
+            updated = 0
             skipped = 0
 
             try:
-                for doc_title, info in all_docs.items():
+                for doc_key, info in all_docs.items():
                     # Check jika sudah ada
                     existing = db.query(Document).filter(
-                        Document.document_title == doc_title
+                        Document.document_title == info["document_title"]
                     ).first()
 
+                    if not existing and info["filename"]:
+                        existing = (
+                            db.query(Document)
+                            .filter(
+                                or_(
+                                    Document.filename == info["filename"],
+                                    Document.original_filename == info["filename"],
+                                )
+                            )
+                            .first()
+                        )
+
                     if existing:
-                        skipped += 1
+                        changed = False
+
+                        if int(existing.chunk_count or 0) != int(info["chunk_count"]):
+                            existing.chunk_count = int(info["chunk_count"])
+                            changed = True
+
+                        # Keep metadata aligned with what is currently present in Qdrant.
+                        if existing.doc_type != info["doc_type"]:
+                            existing.doc_type = info["doc_type"]
+                            changed = True
+
+                        if existing.filename != info["filename"]:
+                            existing.filename = info["filename"]
+                            changed = True
+
+                        if existing.original_filename != info["filename"]:
+                            existing.original_filename = info["filename"]
+                            changed = True
+
+                        if existing.status != "indexed":
+                            existing.status = "indexed"
+                            changed = True
+
+                        if changed:
+                            updated += 1
+                        else:
+                            skipped += 1
                         continue
 
-                    # Generate doc_id dari title hash
-                    doc_id = f"legacy_{abs(hash(doc_title)) % 100000:05d}"
+                    # Generate stable legacy doc_id from document title.
+                    doc_hash = hashlib.sha1(doc_key.encode("utf-8")).hexdigest()[:12]
+                    doc_id = f"legacy_{doc_hash}"
 
                     # Insert via ORM
                     new_doc = Document(
                         doc_id=doc_id,
                         filename=info["filename"],
+                        original_path="",
                         original_filename=info["filename"],
-                        document_title=doc_title,
+                        document_title=info["document_title"],
                         doc_type=info["doc_type"],
                         file_size=0,
                         file_path="",
@@ -1653,11 +1851,14 @@ class DocumentManager:
             finally:
                 db.close()
 
-            logger.info(f"Sync complete: {imported} imported, {skipped} skipped")
+            logger.info(
+                f"Sync complete: {imported} imported, {updated} updated, {skipped} skipped"
+            )
 
             return {
                 "total_in_qdrant": len(all_docs),
                 "imported": imported,
+                "updated": updated,
                 "skipped": skipped,
                 "status": "success",
             }
@@ -1667,6 +1868,7 @@ class DocumentManager:
             return {
                 "total_in_qdrant": 0,
                 "imported": 0,
+                "updated": 0,
                 "skipped": 0,
                 "status": "error",
                 "error": str(e),

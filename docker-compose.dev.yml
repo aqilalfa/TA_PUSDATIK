@@ -3,7 +3,7 @@ version: '3.8'
 services:
   # Qdrant Vector Database
   qdrant:
-    image: qdrant/qdrant:v1.12.0
+    image: qdrant/qdrant:v1.16.2
     container_name: spbe-qdrant
     ports:
       - "6333:6333"
@@ -16,7 +16,7 @@ services:
     networks:
       - spbe-network
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:6333/healthz"]
+      test: ["CMD", "grpc_health_probe", "-addr=:6334"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -31,56 +31,53 @@ services:
       - "8000:8000"
     volumes:
       # Models (read-only)
-      - ./models:/app/models:ro
-      
-      # Data directories
-      - ./data:/app/data
-      - ./database:/app/database
+      - ./backend/models:/app/models:ro
+
+      # Data directory (DB, BM25 index, marker output, documents)
+      - ./backend/data:/app/data
       - ./logs/backend:/app/logs
-      
+
       # HOT-RELOAD: Mount source code for development
       - ./backend/app:/app/app
       - ./backend/scripts:/app/scripts
       - ./backend/tests:/app/tests
-      
+
       # Don't mount Python cache
       - /app/app/__pycache__
     environment:
       # Qdrant
       - QDRANT_URL=http://qdrant:6333
-      - QDRANT_COLLECTION=spbe_documents
-      
-      # Models
-      - MODEL_PATH=/app/models/llm/qwen-2.5-7b-instruct-q4_k_m.gguf
-      - MODEL_N_GPU_LAYERS=35
-      - MODEL_N_CTX=8192
-      - MODEL_N_BATCH=512
-      - MODEL_TEMP=0.1
-      
+      - QDRANT_COLLECTION=document_chunks
+
+      # Embeddings
       - EMBEDDING_MODEL=firqaaa/indo-sentence-bert-base
       - EMBEDDING_CACHE_DIR=/app/models/embeddings
       - EMBEDDING_DEVICE=cpu
-      
+
+      # Reranker
       - RERANKER_MODEL=BAAI/bge-reranker-base
       - RERANKER_CACHE_DIR=/app/models/reranker
       - RERANKER_DEVICE=cpu
       - RERANKER_TOP_K=10
-      
-      # Database
-      - DATABASE_URL=sqlite:////app/database/spbe_rag.db
-      
+
+      # Database (correct container path)
+      - DATABASE_URL=sqlite:////app/data/spbe_rag.db
+
       # API
       - API_HOST=0.0.0.0
       - API_PORT=8000
-      - CORS_ORIGINS=http://localhost,http://localhost:80,http://localhost:5173,http://localhost:3000
-      
+      - CORS_ORIGINS=${CORS_ORIGINS:-http://localhost,http://localhost:80,http://localhost:5173,http://localhost:3000}
+
+      # Ollama (runs on host, accessed via host.docker.internal)
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+
       # Development settings
       - ENVIRONMENT=development
       - DEBUG=true
       - LOG_LEVEL=DEBUG
       - LOG_DIR=/app/logs
       - RELOAD=true
-      
+
       # GPU
       - CUDA_VISIBLE_DEVICES=0
     depends_on:
@@ -89,6 +86,12 @@ services:
     restart: unless-stopped
     networks:
       - spbe-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
     deploy:
       resources:
         reservations:
@@ -113,10 +116,12 @@ services:
       - ./frontend/vite.config.js:/app/vite.config.js
       - /app/node_modules  # Don't mount node_modules
     environment:
-      - VITE_API_URL=http://localhost:8000
+      - VITE_API_URL=${VITE_API_URL:-http://localhost:8000}
+      - VITE_BACKEND_PROXY=http://backend:8000
       - NODE_ENV=development
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
     restart: unless-stopped
     networks:
       - spbe-network

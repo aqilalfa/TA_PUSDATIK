@@ -1,0 +1,59 @@
+# Stage 1: builder — install all Python packages
+FROM nvidia/cuda:12.6.3-cudnn-devel-ubuntu22.04 AS builder
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1 \
+    DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y \
+    python3.10 \
+    python3-pip \
+    python3-dev \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /build
+
+COPY requirements.txt .
+
+RUN pip3 install --upgrade pip setuptools wheel && \
+    pip3 install --no-cache-dir -r requirements.txt
+
+# Stage 2: runtime — lean image with only what's needed to run
+FROM nvidia/cuda:12.6.3-cudnn-runtime-ubuntu22.04
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y \
+    python3.10 \
+    python3-pip \
+    curl \
+    libgomp1 \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
+    libglib2.0-0 \
+    libgl1-mesa-glx \
+    tesseract-ocr \
+    tesseract-ocr-ind \
+    poppler-utils \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy installed packages from builder (preserves .pth files and namespace packages)
+COPY --from=builder /usr/local/lib/python3.10/dist-packages /usr/local/lib/python3.10/dist-packages
+
+WORKDIR /app
+
+# Copy application code (no hot-reload in prod)
+COPY ./app /app/app
+COPY ./scripts/migrations /app/scripts/migrations
+
+# Create runtime directories
+RUN mkdir -p /app/logs /app/models /app/data
+
+EXPOSE 8000
+
+CMD ["python3", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "2"]
