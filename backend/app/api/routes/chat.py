@@ -482,79 +482,19 @@ async def chat_stream(request: ChatRequest, db: Session = Depends(get_db)):
                 None, langchain_engine.load_history, session_id
             )
 
-            # 4. Stream LLM answer token by token
-            async def collect_answer(user_query: str) -> str:
-                collected = ""
-                async for token in langchain_engine.stream_answer(
-                    query=user_query,
-                    context=context,
-                    history=history,
-                    model_name=model,
-                    query_type=query_type,
-                ):
-                    collected += token
-                return collected
-
+            # 4. Stream LLM answer token by token — langsung ke client
+            # Collect full text sambil streaming untuk quality check & DB save
             full_response = ""
             selected_quality: Dict[str, Any] = {}
 
-            first_response = await collect_answer(request.message)
-            first_quality = _build_answer_quality_report(
+            async for token in langchain_engine.stream_answer(
                 query=request.message,
                 context=context,
-                answer=first_response,
-                source_count=len(sources_for_response),
-            )
-
-            candidate_pool = [(first_response, first_quality)]
-
-            _retry_limit = MAX_QUALITY_RETRY_ATTEMPTS if request.max_quality_retries is None else request.max_quality_retries
-            for attempt in range(1, _retry_limit + 1):
-                current_best_response, current_best_quality = max(
-                    candidate_pool,
-                    key=lambda item: _quality_rank_key(item[1]),
-                )
-
-                if not current_best_quality.get("needs_retry"):
-                    break
-
-                retry_query = _build_retry_query(
-                    original_query=request.message,
-                    quality_report=current_best_quality,
-                )
-                retry_response = await collect_answer(retry_query)
-                retry_quality = _build_answer_quality_report(
-                    query=request.message,
-                    context=context,
-                    answer=retry_response,
-                    source_count=len(sources_for_response),
-                )
-                candidate_pool.append((retry_response, retry_quality))
-
-                logger.info(
-                    "[Chat] Quality retry attempt "
-                    f"{attempt}/{MAX_QUALITY_RETRY_ATTEMPTS} produced score {retry_quality['score']}"
-                )
-
-            full_response, selected_quality = max(
-                candidate_pool,
-                key=lambda item: _quality_rank_key(item[1]),
-            )
-
-            if len(candidate_pool) > 1:
-                base_quality = candidate_pool[0][1]
-                if _quality_rank_key(selected_quality) > _quality_rank_key(base_quality):
-                    logger.info(
-                        "[Chat] Final answer selected from retry candidates "
-                        f"(base score {base_quality['score']} -> selected {selected_quality['score']})"
-                    )
-                else:
-                    logger.info(
-                        "[Chat] Retry candidates did not outperform base answer; "
-                        f"keeping base score {base_quality['score']}"
-                    )
-
-            for token in _chunk_text(full_response):
+                history=history,
+                model_name=model,
+                query_type=query_type,
+            ):
+                full_response += token
                 yield f"event: token\ndata: {json.dumps({'t': token}, ensure_ascii=False)}\n\n"
 
             # Fallback: Jika LLM gagal memberikan inline sitasi (kasus model kecil qwen3.5:4b/7b)
@@ -565,7 +505,16 @@ async def chat_stream(request: ChatRequest, db: Session = Depends(get_db)):
                 full_response += postfix
                 yield f"event: token\ndata: {json.dumps({'t': postfix}, ensure_ascii=False)}\n\n"
 
-            # 5. Post-process jawaban: validasi sitasi, plain text emphasis, dan peta referensi
+            # 5. Post-streaming: quality check & post-process
+            # selected_quality diisi setelah streaming selesai (tidak blocking streaming)
+            selected_quality = _build_answer_quality_report(
+                query=request.message,
+                context=context,
+                answer=full_response,
+                source_count=len(sources_for_response),
+            )
+
+            # Post-process jawaban: validasi sitasi, plain text emphasis, dan peta referensi
             full_response = sanitize_citations(full_response, len(sources_for_response))
             full_response = strip_markdown_emphasis(full_response)
             full_response = append_citation_reference_block(full_response, sources_for_response)

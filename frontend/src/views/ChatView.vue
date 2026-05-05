@@ -313,7 +313,7 @@ async function sendMessage() {
   messages.value.push({ role: 'user', content: userMessage, timestamp: userHhmm })
 
   const loadingIdx = messages.value.length
-  messages.value.push({ role: 'assistant', loading: true, loadingText: 'Mencari dokumen relevan...' })
+  messages.value.push({ role: 'assistant', loading: true, loadingText: 'Menganalisa pertanyaan...' })
 
   await nextTick()
   scrollToBottom()
@@ -344,11 +344,12 @@ async function sendMessage() {
           messages.value[loadingIdx] = {
             role: 'assistant',
             loading: true,
-            loadingText: `Ditemukan ${data.count} dokumen, menyusun jawaban...`
+            loadingText: `Ditemukan ${data.count} dokumen, sedang menjawab...`
           }
         },
         onToken: async (data) => {
           streamedContent += data.t
+          // Langsung tampilkan konten begitu token pertama tiba — hapus loading state
           messages.value[loadingIdx] = { role: 'assistant', content: streamedContent, streaming: true }
           throttledScroll()
         },
