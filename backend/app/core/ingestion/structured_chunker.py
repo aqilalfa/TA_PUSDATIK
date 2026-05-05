@@ -688,17 +688,27 @@ def chunk_laporan_spbe(doc: Dict[str, Any]) -> List[Dict[str, Any]]:
         indeks = inst.get("indeks_spbe_akhir", 0)
         predikat = inst.get("predikat", "")
 
+        jenis = inst.get("jenis_instansi", "")
+        kategori = inst.get("kategori_wilayah", "")
+        tahun = doc.get("metadata_dokumen", {}).get("tahun_evaluasi", "")
+
         candidate = (
-            f"Instansi: {nama}\n"
-            f"- Indeks Akhir: {indeks} ({predikat})\n"
-            f"- Domain Kebijakan Internal: {skor.get('kebijakan_internal', 0)}\n"
-            f"- Domain Tata Kelola: {skor.get('tata_kelola', 0)}\n"
-            f"- Domain Manajemen: {skor.get('manajemen_spbe', 0)}\n"
-            f"- Domain Layanan: {skor.get('layanan_spbe', 0)}\n"
+            f"Laporan Pelaksanaan Evaluasi SPBE Tahun {tahun}. "
+            f"Instansi: {nama} ({jenis}, Kategori Wilayah: {kategori}). "
+            f"Indeks SPBE Akhir: {indeks} (Predikat: {predikat}). "
+            f"Rincian Nilai Domain: Kebijakan Internal ({skor.get('kebijakan_internal', 0)}), "
+            f"Tata Kelola ({skor.get('tata_kelola', 0)}), "
+            f"Manajemen SPBE ({skor.get('manajemen_spbe', 0)}), "
+            f"Layanan SPBE ({skor.get('layanan_spbe', 0)})."
         )
 
         meta = {
             **base_meta,
+            "tahun_evaluasi": tahun,
+            "nama_instansi": nama,
+            "jenis_instansi": jenis,
+            "indeks_spbe": indeks,
+            "predikat": predikat,
             "bagian": "Data Capaian Instansi",
             "hierarchy": f"{judul} > Data Capaian Instansi"
         }
