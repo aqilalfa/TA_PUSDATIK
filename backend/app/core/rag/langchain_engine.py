@@ -35,12 +35,14 @@ from app.config import settings
 
 
 def classify_query(query: str) -> str:
-    """Classify query type for routing: 'table', 'pasal', or 'general'."""
+    """Classify query type for routing: 'table', 'pasal', 'ranking', or 'general'."""
     q = (query or "").lower()
     if re.search(r'\btabel\b|\btable\b', q):
         return "table"
     if re.search(r'\bpasal\b|\bayat\b|\bperpres\b|\bpermenpan\b|\bpp\s*\d+\b|\bse\s+menteri\b', q):
         return "pasal"
+    if re.search(r'\b(?:tertinggi|terendah|peringkat|ranking|top|bottom|urutan|terbaik|terburuk)\b', q):
+        return "ranking"
     return "general"
 
 
@@ -1214,6 +1216,85 @@ class LangchainRAGEngine:
             logger.warning(f"Reranker failed at runtime, fallback to RRF-only: {e}")
             return docs[:top_k]
 
+    def _get_ranking_context(self, query: str) -> str:
+        """Handle ranking queries via metadata scroll, bypassing vector search."""
+        if not self.client:
+            return ""
+
+        q = (query or "").lower()
+        tahun = "2024" if "2024" in q else ("2023" if "2023" in q else "")
+        jenis = ""
+        if "lpnk" in q or "lembaga pemerintah non kementerian" in q:
+            jenis = "Lembaga Pemerintah Non Kementerian (LPNK)"
+        elif "kementerian" in q:
+            jenis = "Kementerian"
+        elif "kota" in q:
+            jenis = "Pemerintah Kota"
+        elif "kabupaten" in q:
+            jenis = "Pemerintah Kabupaten"
+        elif "provinsi" in q:
+            jenis = "Pemerintah Provinsi"
+
+        # Scroll Qdrant
+        all_laporan = []
+        offset = None
+        while True:
+            results, next_offset = self.client.scroll(
+                collection_name=self.collection_name,
+                limit=250,
+                offset=offset,
+                with_payload=True,
+                with_vectors=False
+            )
+            for r in results:
+                meta = (r.payload or {}).get("metadata", {})
+                doc_type = meta.get("doc_type", "")
+                if "laporan" in str(doc_type).lower():
+                    all_laporan.append({
+                        "tahun": str(meta.get("tahun_evaluasi") or ""),
+                        "nama": str(meta.get("nama_instansi") or ""),
+                        "jenis": str(meta.get("jenis_instansi") or "").lower(),
+                        "indeks": meta.get("indeks_spbe"),
+                        "predikat": str(meta.get("predikat") or "")
+                    })
+            if next_offset is None or len(results) < 250:
+                break
+            offset = next_offset
+
+        # Filter
+        filtered = all_laporan
+        if tahun:
+            filtered = [x for x in filtered if x["tahun"] == tahun]
+        if jenis:
+            filtered = [x for x in filtered if jenis.lower() in x["jenis"]]
+
+        if not filtered:
+            return ""
+
+        def to_float(v):
+            try: return float(v)
+            except: return -1.0
+
+        filtered = sorted(filtered, key=lambda x: to_float(x["indeks"]), reverse=True)
+        
+        # Build context
+        context_parts = []
+        
+        # Add Top 10
+        context_parts.append(f"Berikut adalah data 10 instansi dengan nilai tertinggi untuk {jenis or 'Semua Instansi'} tahun {tahun or 'Semua Tahun'}:")
+        for i, x in enumerate(filtered[:10], 1):
+            context_parts.append(f"{i}. {x['nama']} | Indeks: {x['indeks']} | Predikat: {x['predikat']}")
+            
+        context_parts.append("")
+        
+        # Add Bottom 10
+        context_parts.append(f"Berikut adalah data 10 instansi dengan nilai terendah untuk {jenis or 'Semua Instansi'} tahun {tahun or 'Semua Tahun'}:")
+        for i, x in enumerate(reversed(filtered[-10:]), 1):
+            context_parts.append(f"{len(filtered) - i + 1}. {x['nama']} | Indeks: {x['indeks']} | Predikat: {x['predikat']}")
+
+        return "\n".join(context_parts)
+
+
     def retrieve_context(
         self,
         query: str,
@@ -1336,6 +1417,14 @@ class LangchainRAGEngine:
 
         # 3. Format context string (single source of truth)
         context = self._format_context(docs)
+        
+        # Inject ranking context if needed
+        if query_type == "ranking":
+            ranking_ctx = self._get_ranking_context(query)
+            if ranking_ctx:
+                context = f"=== DATA RANKING ===\n{ranking_ctx}\n\n=== KONTEKS DOKUMEN TAMBAHAN ===\n{context}"
+                logger.info(f"[Retrieval] Injected ranking context ({len(ranking_ctx)} chars)")
+                
         logger.info(f"[Retrieval] Context ready ({len(context)} chars)")
 
         # 4. Build sources list for UI
@@ -1434,7 +1523,18 @@ class LangchainRAGEngine:
             # page_content adalah isi teks chunk (field 'text' dari Qdrant via content_payload_key)
             isi = doc.page_content or ""
             parent_context = str(meta.get("parent_pasal_text") or "").strip()
-            if parent_context and meta.get("ayat") and parent_context not in isi:
+            table_ctx = str(meta.get("table_context") or "").strip()
+            chunk_type = str(meta.get("chunk_type") or "text").lower()
+
+            # Table chunks: inject surrounding paragraph context so LLM
+            # understands what the table represents
+            if chunk_type == "table" and table_ctx and table_ctx not in isi:
+                if len(table_ctx) > 1000:
+                    table_ctx = table_ctx[:1000].rstrip() + "..."
+                lines.append(
+                    f"[{i}] Sumber: {ref}\nKonteks Tabel:\n{table_ctx}\nIsi Tabel:\n{isi}\n---\n"
+                )
+            elif parent_context and meta.get("ayat") and parent_context not in isi:
                 if len(parent_context) > 1500:
                     parent_context = parent_context[:1500].rstrip() + "..."
                 lines.append(
