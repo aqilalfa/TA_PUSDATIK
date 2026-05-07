@@ -16,11 +16,15 @@ export function stripReferenceBlock(text) {
 }
 
 /**
- * Replace [N] tokens in rendered HTML with styled citation span elements.
+ * Replace [N] tokens in rendered HTML with interactive citation button elements.
  * Must be called AFTER marked.parse() so we only target text nodes, not code.
+ * Produces <button> instead of <span> to allow click event delegation in MessageBubble.
  */
 export function injectCitationSpans(html) {
-  return html.replace(/\[(\d+)\]/g, '<span class="citation">$1</span>')
+  return html.replace(
+    /\[(\d+)\]/g,
+    '<button class="citation" data-citation-id="$1" type="button">$1</button>'
+  )
 }
 
 /**

@@ -30,7 +30,12 @@
             <span></span><span></span><span></span>
           </div>
           <template v-else>
-            <div class="msg-text" v-html="formattedContent"></div>
+            <div
+              class="msg-text"
+              v-html="formattedContent"
+              @click="handleCitationClick"
+              @mouseleave="handleCitationMouseleave"
+            ></div>
             <span v-if="message.streaming" class="streaming-cursor"></span>
 
             <div v-if="showSources" class="source-cards">
@@ -40,6 +45,13 @@
                 :source="source"
               />
             </div>
+
+            <CitationPopup
+              ref="popupRef"
+              :source="popupSource"
+              :anchor-rect="popupAnchorRect"
+              @close="popupSource = null"
+            />
 
             <div v-if="showValidationWarnings" class="validation-warnings">
               <div class="validation-title">⚠ Peringatan Validasi</div>
@@ -66,6 +78,7 @@
 import { computed, ref } from 'vue'
 import SourceCard from './SourceCard.vue'
 import MessageActions from './MessageActions.vue'
+import CitationPopup from './CitationPopup.vue'
 import { formatMessageContent } from '@/utils/messageFormatter.js'
 
 const props = defineProps({
@@ -73,6 +86,11 @@ const props = defineProps({
 })
 
 const warningDismissed = ref(false)
+
+// Citation popup state
+const popupRef = ref(null)
+const popupSource = ref(null)
+const popupAnchorRect = ref(null)
 
 const formattedContent = computed(() => formatMessageContent(props.message.content))
 
@@ -85,6 +103,24 @@ const showValidationWarnings = computed(() => {
   const w = props.message.validation?.warnings
   return Array.isArray(w) && w.length > 0 && !props.message.streaming
 })
+
+function handleCitationClick(event) {
+  const btn = event.target.closest('button.citation')
+  if (!btn) return
+
+  const citationId = parseInt(btn.dataset.citationId, 10)
+  const sources = props.message.sources || []
+  const matched = sources.find(s => s.id === citationId)
+  if (!matched?.doc_id) return
+
+  popupSource.value = matched
+  popupAnchorRect.value = btn.getBoundingClientRect()
+  popupRef.value?.show()
+}
+
+function handleCitationMouseleave() {
+  popupRef.value?.scheduleClose()
+}
 </script>
 
 <style scoped>
@@ -197,7 +233,7 @@ const showValidationWarnings = computed(() => {
 .msg-text :deep(li) { margin-bottom: 4px; }
 .msg-text :deep(code) { font-size: 12px; background: #f0ece4; padding: 1px 5px; border-radius: 2px; }
 .msg-text :deep(pre) { background: #f0ece4; padding: 12px; border-radius: 3px; overflow-x: auto; margin: 8px 0; }
-.msg-text :deep(.citation) {
+.msg-text :deep(button.citation) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -212,7 +248,14 @@ const showValidationWarnings = computed(() => {
   font-family: var(--font-ui);
   vertical-align: middle;
   margin: 0 1px;
-  cursor: default;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.msg-text :deep(button.citation:hover) {
+  background: #d4e4f7;
+  border-color: var(--color-navy);
 }
 
 /* Streaming cursor */
