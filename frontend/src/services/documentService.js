@@ -1,4 +1,4 @@
-import api, { getErrorMessage } from './api'
+import api, { API_BASE_URL, getErrorMessage } from './api'
 
 export async function uploadDocument(file, onProgress) {
   try {
@@ -97,5 +97,28 @@ export async function deleteDocument(docId) {
     return data
   } catch (error) {
     throw new Error(getErrorMessage(error, 'Failed to delete document'))
+  }
+}
+
+/**
+ * Returns a direct URL to open/download the original PDF for a document.
+ * Gunakan sebagai href atau window.open — bukan fetch.
+ */
+export function getDocumentFileUrl(docId) {
+  return `${API_BASE_URL}/api/rag/documents/by-doc-id/${docId}/file`
+}
+
+/**
+ * Fetch a single chunk by doc_id + chunk_index.
+ * Digunakan oleh CitationPopup untuk menampilkan preview teks chunk.
+ */
+export async function getChunkByIndex(docId, chunkIndex) {
+  try {
+    const { data } = await api.get(
+      `/api/rag/documents/by-doc-id/${docId}/chunks/${chunkIndex}`
+    )
+    return data
+  } catch (error) {
+    throw new Error(getErrorMessage(error, 'Failed to fetch chunk'))
   }
 }
