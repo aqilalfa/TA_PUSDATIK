@@ -80,10 +80,11 @@
         </div>
 
         <div class="chunks-list">
-          <div 
-            v-for="(chunk, index) in chunks" 
+          <div
+            v-for="(chunk, index) in chunks"
             :key="chunk.id"
             class="chunk-card"
+            :class="{ highlighted: highlightChunkIndex === chunk.chunk_index }"
           >
             <div class="chunk-header">
               <div class="chunk-badges">
@@ -193,7 +194,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import {
   deleteChunk as deleteChunkById,
@@ -224,6 +225,9 @@ const deletingDocumentLoading = ref(false)
 const saving = ref(false)
 const deleting = ref(false)
 const toast = ref(null)
+
+// Highlight chunk dari query param ?highlight=<chunk_index>
+const highlightChunkIndex = ref(null)
 
 const chunkForm = ref({
   text: '',
@@ -462,6 +466,15 @@ async function deleteChunk() {
 onMounted(async () => {
   await loadDocument()
   await loadChunks()
+
+  // Baca query param ?highlight=chunk_index dan scroll ke chunk yang dikutip
+  const highlightParam = route.query.highlight
+  if (highlightParam !== undefined && highlightParam !== '') {
+    highlightChunkIndex.value = parseInt(highlightParam, 10)
+    await nextTick()
+    const el = document.querySelector('.chunk-card.highlighted')
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
 })
 </script>
 
@@ -670,6 +683,18 @@ onMounted(async () => {
   border: 1px solid var(--color-border);
   border-radius: 3px;
   overflow: hidden;
+}
+
+.chunk-card.highlighted {
+  border-color: var(--color-gold);
+  border-left: 3px solid var(--color-gold);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.20);
+  animation: highlightFade 2.5s ease forwards;
+}
+
+@keyframes highlightFade {
+  0%   { background: #fdf8ee; }
+  100% { background: white; }
 }
 
 .chunk-header {
