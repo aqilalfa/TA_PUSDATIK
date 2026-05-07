@@ -185,6 +185,30 @@ class LangchainRAGEngine:
         backend_root = Path(__file__).resolve().parents[3]
         return backend_root / "data" / "bm25_index.pkl"
 
+    def _validate_bm25_payload(self, data: Any) -> None:
+        """Validate BM25 payload structure to guard against corrupted/tampered data."""
+        if not isinstance(data, dict):
+            raise ValueError("BM25 payload must be a dict")
+
+        required_keys = ("bm25", "documents", "doc_ids", "corpus_texts")
+        missing = [k for k in required_keys if k not in data]
+        if missing:
+            raise ValueError(f"BM25 payload missing keys: {', '.join(missing)}")
+
+        if not isinstance(data["documents"], list):
+            raise ValueError("BM25 documents must be a list")
+        if not isinstance(data["doc_ids"], list):
+            raise ValueError("BM25 doc_ids must be a list")
+        if not isinstance(data["corpus_texts"], list):
+            raise ValueError("BM25 corpus_texts must be a list")
+
+        if not (len(data["documents"]) == len(data["doc_ids"]) == len(data["corpus_texts"])):
+            raise ValueError("BM25 payload list lengths do not match")
+
+        bm25 = data["bm25"]
+        if bm25 is None or not hasattr(bm25, "get_scores"):
+            raise ValueError("BM25 object invalid or missing get_scores")
+
     def _load_bm25(self, force: bool = False):
         """Load/reload BM25 index from disk if available."""
         path = self._bm25_index_path()
@@ -205,6 +229,7 @@ class LangchainRAGEngine:
         try:
             with path.open("rb") as f:
                 data = pickle.load(f)
+            self._validate_bm25_payload(data)
             self._bm25 = data.get("bm25")
             self._bm25_docs = data.get("documents", [])
             self._bm25_loaded = True
@@ -1340,16 +1365,11 @@ class LangchainRAGEngine:
             doc_id=doc_id,
         )
 
-        # Fallback: if doc_id filter returned 0 results, retry without filter
+        # Doc-scoped retrieval must not fall back to unscoped search
         if qdrant_filter is not None and not docs:
             logger.warning(
                 f"[Retrieval] doc_id filter returned 0 results for doc_id='{doc_id}', "
-                "falling back to unscoped retrieval"
-            )
-            docs = self._run_hybrid_retrieval(
-                query=query,
-                search_queries=expanded_queries,
-                final_top_k=final_top_k,
+                "returning empty result set"
             )
 
         # Table completeness safety-net: if anchor-based coverage is low, retry once
@@ -1463,6 +1483,7 @@ class LangchainRAGEngine:
             sources.append({
                 "id": i,
                 "doc_id": str(meta.get("doc_id") or meta.get("document_id") or ""),
+                "chunk_index": self._safe_int(meta.get("chunk_index")),
                 "document": citation_title,
                 "document_short": doc_title,
                 "citation_title": citation_title,

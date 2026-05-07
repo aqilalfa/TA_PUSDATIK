@@ -2,7 +2,6 @@
   <div
     class="source-card-wrapper"
     :class="{ clickable: source.doc_id }"
-    @click="openDocument"
   >
     <div class="source-card">
       <div class="source-num">
@@ -14,19 +13,38 @@
     <div class="source-expand">
       <p v-if="source.snippet" class="expand-snippet">{{ source.snippet }}</p>
       <p v-if="source.hierarchy_path" class="expand-path">{{ source.hierarchy_path }}</p>
-      <span v-if="source.doc_id" class="expand-link">🔗 Buka dokumen ↗</span>
+      <div v-if="source.doc_id" class="expand-actions">
+        <button class="action-btn pdf" @click.stop="openPdf">
+          📄 Buka PDF ↗
+        </button>
+        <button class="action-btn ctx" @click.stop="openContext">
+          🔍 Lihat Konteks →
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { getDocumentFileUrl } from '@/services/documentService'
+
 const props = defineProps({
   source: { type: Object, required: true }
 })
 
-function openDocument() {
+function openPdf() {
   if (props.source.doc_id) {
-    window.open(`/documents/${props.source.doc_id}`, '_blank', 'noopener,noreferrer')
+    window.open(getDocumentFileUrl(props.source.doc_id), '_blank', 'noopener,noreferrer')
+  }
+}
+
+function openContext() {
+  if (props.source.doc_id) {
+    const chunkIdx = props.source.chunk_index ?? ''
+    const url = chunkIdx !== ''
+      ? `/documents/${props.source.doc_id}?highlight=${chunkIdx}`
+      : `/documents/${props.source.doc_id}`
+    window.open(url, '_blank', 'noopener,noreferrer')
   }
 }
 </script>
@@ -39,7 +57,7 @@ function openDocument() {
 }
 
 .source-card-wrapper.clickable {
-  cursor: pointer;
+  cursor: default;
 }
 
 .source-card {
@@ -121,11 +139,37 @@ function openDocument() {
   margin: 0 0 6px;
 }
 
-.expand-link {
+/* Dua tombol aksi menggantikan expand-link lama */
+.expand-actions {
+  display: flex;
+  gap: 5px;
+  margin-top: 2px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 4px 6px;
   font-size: 9px;
-  color: var(--color-navy);
-  font-weight: 600;
   font-family: var(--font-ui);
-  display: block;
+  font-weight: 600;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+  background: white;
+  color: var(--color-text-muted);
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.action-btn.pdf:hover {
+  border-color: var(--color-navy);
+  color: var(--color-navy);
+  background: #eef2f9;
+}
+
+.action-btn.ctx:hover {
+  border-color: var(--color-gold);
+  color: #8b7355;
+  background: #fdf8ee;
 }
 </style>
