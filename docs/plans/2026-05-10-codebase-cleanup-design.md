@@ -30,11 +30,6 @@ The goal of this task is to clean up the Pusdatik repository to prepare it for s
     - `test_upload.py`
     - `trace_result.txt`
     - `nul`
-    - `.agent/`
-    - `.claude/`
-    - `.superpowers/`
-    - `.planning/`
-    - `edited/`
     - `.pytest_cache/`
     - `.ruff_cache/`
 

@@ -27,16 +27,16 @@ Run: `git add . ; git commit -m "chore: remove root summary files and test scrip
 
 ---
 
-### Task 2: Clean Root Metadata and AI Directories
+### Task 2: Clean Cache Directories
 
 **Directories:**
-- Delete: `.agent/`, `.claude/`, `.superpowers/`, `.planning/`, `edited/`, `.pytest_cache/`, `.ruff_cache/`
+- Delete: `.pytest_cache/`, `.ruff_cache/`
 
 **Step 1: Delete directories**
-Run: `powershell -Command "rm -Recurse -Force .agent, .claude, .superpowers, .planning, edited, .pytest_cache, .ruff_cache -ErrorAction SilentlyContinue"`
+Run: `powershell -Command "rm -Recurse -Force .pytest_cache, .ruff_cache -ErrorAction SilentlyContinue"`
 
 **Step 2: Commit cleanup**
-Run: `git add . ; git commit -m "chore: remove AI metadata and temporary directories"`
+Run: `git add . ; git commit -m "chore: remove temporary cache directories"`
 
 ---
 
