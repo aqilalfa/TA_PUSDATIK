@@ -58,6 +58,20 @@ backend/database/*.db
 backend/qdrant_storage/
 backend/logs/
 
+# Root folders
+qdrant_bin/
+qdrant_storage/
+models/
+logs/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.agent/
+.planning/
+.claude/
+.superpowers/
+
+
 # Windows reserved files
 backend/nul
 nul
