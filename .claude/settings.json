@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://localhost*)",
+      "Bash(curl -v http://localhost*)",
+      "Bash(curl -s -X POST \"http://localhost*)",
+      "Bash(curl -s -X POST http://localhost*)",
+      "Bash(pdftotext *)",
+      "Bash(ollama list)",
+      "Bash(ollama show *)",
+      "Bash(ollama ps)",
+      "Bash(npm run dev *)",
+      "Bash(npm run build)",
+      "Bash(npm run lint *)",
+      "Bash(wc -l *)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python d:/aqil/pusdatik/.claude/hooks/rag_mark_dirty.py"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python d:/aqil/pusdatik/.claude/hooks/rag_run_regression.py"
+          }
+        ]
+      }
+    ]
+  }
+}
