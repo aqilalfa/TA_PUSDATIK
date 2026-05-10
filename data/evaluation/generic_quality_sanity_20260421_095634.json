@@ -1,0 +1,73 @@
+{
+  "generated_at": "2026-04-21T09:56:34.389610",
+  "endpoint": "http://localhost:8000/api/chat/stream",
+  "model": "qwen3.5:4b",
+  "summary": {
+    "total": 4,
+    "pass": 4,
+    "fail": 0,
+    "failed_ids": []
+  },
+  "results": [
+    {
+      "id": "Q1_DEFINISI_SPBE",
+      "query": "Apa definisi SPBE menurut Peraturan Menteri PAN RB Nomor 59 Tahun 2020?",
+      "verdict": "PASS",
+      "answer_len": 534,
+      "source_count": 8,
+      "citation_count": 2,
+      "negative_hits": [],
+      "quality_score": 22,
+      "needs_retry": false,
+      "retry_reasons": [],
+      "focus_coverage": 1.0,
+      "notes": [],
+      "preview": "Berdasarkan Pasal 1 Peraturan Menteri PANRB Nomor 59 Tahun 2020, Sistem Pemerintahan Berbasis Elektronik (SPBE) didefinisikan sebagai penyelenggaraan pemerintahan dengan memanfaatkan teknologi informasi dan komunikasi un"
+    },
+    {
+      "id": "Q2_DAFTAR_DOMAIN",
+      "query": "Sebutkan domain-domain dalam evaluasi SPBE berdasarkan dokumen yang tersedia.",
+      "verdict": "PASS",
+      "answer_len": 1125,
+      "source_count": 8,
+      "citation_count": 12,
+      "negative_hits": [],
+      "quality_score": 27,
+      "needs_retry": false,
+      "retry_reasons": [],
+      "focus_coverage": 1.0,
+      "notes": [],
+      "preview": "Berdasarkan dokumen yang tersedia, terdapat dua jenis domain yang relevan dalam konteks evaluasi dan arsitektur SPBE, yaitu Domain Evaluasi SPBE dan Domain Arsitektur SPBE.  Berikut adalah rincian domain-domain tersebut:"
+    },
+    {
+      "id": "Q3_PERBANDINGAN",
+      "query": "Jelaskan perbedaan utama antara pemantauan SPBE dan evaluasi SPBE.",
+      "verdict": "PASS",
+      "answer_len": 1350,
+      "source_count": 8,
+      "citation_count": 7,
+      "negative_hits": [],
+      "quality_score": 27,
+      "needs_retry": false,
+      "retry_reasons": [],
+      "focus_coverage": 1.0,
+      "notes": [],
+      "preview": "Berdasarkan dokumen yang tersedia, perbedaan utama antara Pemantauan SPBE dan Evaluasi SPBE terletak pada aktivitas yang dilakukan pada tahap pelaksanaan dan tahap pelaporan, sedangkan pada tahap persiapan keduanya memil"
+    },
+    {
+      "id": "Q4_INDIKATOR_KEBIJAKAN",
+      "query": "Sebutkan indikator pada Domain Kebijakan SPBE secara ringkas.",
+      "verdict": "PASS",
+      "answer_len": 1492,
+      "source_count": 8,
+      "citation_count": 8,
+      "negative_hits": [],
+      "quality_score": 28,
+      "needs_retry": false,
+      "retry_reasons": [],
+      "focus_coverage": 1.0,
+      "notes": [],
+      "preview": "Berdasarkan dokumen yang tersedia, berikut adalah rincian indikator pada Domain Kebijakan SPBE secara ringkas:  Domain Kebijakan SPBE Menurut struktur penilaian tingkat kemataman SPBE, Domain Kebijakan SPBE terdiri dari "
+    }
+  ]
+}

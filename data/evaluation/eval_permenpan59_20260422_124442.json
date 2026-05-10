@@ -1,0 +1,281 @@
+{
+  "metadata": {
+    "ground_truth_id": "GT-PERMENPAN-RB-59-2020",
+    "model": "qwen3:4b",
+    "timestamp": "20260422_124442",
+    "total": 8,
+    "passed": 0,
+    "failed": 8,
+    "avg_combined_score": 0.0,
+    "threshold": 0.75
+  },
+  "results": [
+    {
+      "id": "GT-001",
+      "question": "Apa definisi dari Sistem Pemerintahan Berbasis Elektronik (SPBE) menurut Peraturan Menteri ini?",
+      "expected": "SPBE adalah penyelenggaraan pemerintahan dengan memanfaatkan teknologi informasi dan komunikasi untuk memberikan layanan kepada Instansi Pusat, Pemerintah Daerah, pegawai Aparatur Sipil Negara, perorangan, masyarakat, pelaku usaha, dan pihak lain yang memanfaatkan layanan SPBE.",
+      "rag_answer": "",
+      "sources": [],
+      "primary_score": 0.0,
+      "secondary_score": 0.0,
+      "combined_score": 0.0,
+      "passed": false,
+      "primary_hits": [],
+      "primary_miss": [
+        "SPBE",
+        "penyelenggaraan pemerintahan",
+        "teknologi informasi dan komunikasi",
+        "layanan"
+      ],
+      "secondary_hits": [],
+      "secondary_miss": [
+        "Instansi Pusat",
+        "Pemerintah Daerah",
+        "Aparatur Sipil Negara",
+        "pelaku usaha"
+      ],
+      "topic": "definisi",
+      "difficulty": "mudah",
+      "evidence": {
+        "article": "Pasal 1 angka 1",
+        "chapter": null,
+        "page": 2,
+        "table": null
+      },
+      "api_status": "ok"
+    },
+    {
+      "id": "GT-002",
+      "question": "Sebutkan 3 (tiga) tujuan dari dilaksanakannya Pemantauan dan Evaluasi SPBE!",
+      "expected": "Tiga tujuan Pemantauan dan Evaluasi SPBE: (1) Mengukur capaian kemajuan penerapan SPBE pada Instansi Pusat dan Pemerintah Daerah. (2) Meningkatkan kualitas penerapan SPBE pada Instansi Pusat dan Pemerintah Daerah. (3) Meningkatkan kualitas pelayanan publik pada Instansi Pusat dan Pemerintah Daerah.",
+      "rag_answer": "",
+      "sources": [],
+      "primary_score": 0.0,
+      "secondary_score": 0.0,
+      "combined_score": 0.0,
+      "passed": false,
+      "primary_hits": [],
+      "primary_miss": [
+        "mengukur capaian",
+        "meningkatkan kualitas penerapan",
+        "meningkatkan kualitas pelayanan publik"
+      ],
+      "secondary_hits": [],
+      "secondary_miss": [
+        "pemantauan",
+        "evaluasi",
+        "Instansi Pusat",
+        "Pemerintah Daerah"
+      ],
+      "topic": "tujuan",
+      "difficulty": "mudah",
+      "evidence": {
+        "article": "Pasal 2 ayat (2)",
+        "chapter": null,
+        "page": "4-5",
+        "table": null
+      },
+      "api_status": "ok"
+    },
+    {
+      "id": "GT-003",
+      "question": "Apa perbedaan utama aktivitas pada tahap pelaksanaan antara Pemantauan SPBE dan Evaluasi SPBE?",
+      "expected": "Pemantauan SPBE dilakukan dengan aktivitas Penilaian Mandiri dan Penilaian Dokumen. Sedangkan, Evaluasi SPBE dilakukan dengan aktivitas Penilaian Mandiri, Penilaian Dokumen, dan Penilaian Interviu. Dalam hal diperlukan penilaian lebih lanjut, Evaluasi SPBE dapat dilanjutkan dengan aktivitas Penilaian Visitasi.",
+      "rag_answer": "",
+      "sources": [],
+      "primary_score": 0.0,
+      "secondary_score": 0.0,
+      "combined_score": 0.0,
+      "passed": false,
+      "primary_hits": [],
+      "primary_miss": [
+        "Penilaian Mandiri",
+        "Penilaian Dokumen",
+        "Penilaian Interviu",
+        "Penilaian Visitasi"
+      ],
+      "secondary_hits": [],
+      "secondary_miss": [
+        "pemantauan",
+        "evaluasi",
+        "perbedaan"
+      ],
+      "topic": "mekanisme pelaksanaan",
+      "difficulty": "sedang",
+      "evidence": {
+        "article": "Pasal 3 ayat (1), (2), dan (3)",
+        "chapter": null,
+        "page": 5,
+        "table": null
+      },
+      "api_status": "ok"
+    },
+    {
+      "id": "GT-004",
+      "question": "Sebutkan 5 (lima) tingkatan dalam pengukuran tingkat kematangan kapabilitas layanan beserta urutannya!",
+      "expected": "Tingkat kematangan kapabilitas layanan diukur dengan 5 (lima) tingkatan yaitu informasi (Tingkat 1), interaksi (Tingkat 2), transaksi (Tingkat 3), kolaborasi (Tingkat 4), dan optimum (Tingkat 5).",
+      "rag_answer": "",
+      "sources": [],
+      "primary_score": 0.0,
+      "secondary_score": 0.0,
+      "combined_score": 0.0,
+      "passed": false,
+      "primary_hits": [],
+      "primary_miss": [
+        "informasi",
+        "interaksi",
+        "transaksi",
+        "kolaborasi",
+        "optimum"
+      ],
+      "secondary_hits": [],
+      "secondary_miss": [
+        "tingkat kematangan",
+        "kapabilitas layanan",
+        "5 tingkatan"
+      ],
+      "topic": "model tingkat kematangan",
+      "difficulty": "sedang",
+      "evidence": {
+        "article": null,
+        "chapter": "Bab II Bagian A (Model Tingkat Kematangan), poin 3",
+        "page": 13,
+        "table": "Tabel 2"
+      },
+      "api_status": "ok"
+    },
+    {
+      "id": "GT-005",
+      "question": "Berapakah nilai persentase bobot yang diberikan untuk Aspek 8, yaitu Layanan Publik Berbasis Elektronik?",
+      "expected": "18,00 %",
+      "rag_answer": "",
+      "sources": [],
+      "primary_score": 0.0,
+      "secondary_score": 0.0,
+      "combined_score": 0.0,
+      "passed": false,
+      "primary_hits": [],
+      "primary_miss": [
+        "18",
+        "18,00",
+        "persen",
+        "bobot"
+      ],
+      "secondary_hits": [],
+      "secondary_miss": [
+        "Aspek 8",
+        "Layanan Publik Berbasis Elektronik"
+      ],
+      "topic": "bobot aspek penilaian",
+      "difficulty": "mudah",
+      "evidence": {
+        "article": null,
+        "chapter": "Bab II",
+        "page": 18,
+        "table": "Tabel 8 Bobot Aspek"
+      },
+      "api_status": "ok"
+    },
+    {
+      "id": "GT-006",
+      "question": "Jika sebuah Instansi Pusat mendapatkan total perhitungan nilai Indeks SPBE sebesar 3,28, predikat apa yang didapatkan oleh instansi tersebut?",
+      "expected": "Baik",
+      "rag_answer": "",
+      "sources": [],
+      "primary_score": 0.0,
+      "secondary_score": 0.0,
+      "combined_score": 0.0,
+      "passed": false,
+      "primary_hits": [],
+      "primary_miss": [
+        "Baik",
+        "predikat"
+      ],
+      "secondary_hits": [],
+      "secondary_miss": [
+        "2,6",
+        "3,5",
+        "indeks SPBE",
+        "3,28"
+      ],
+      "topic": "predikat penilaian",
+      "difficulty": "sedang",
+      "evidence": {
+        "article": null,
+        "chapter": "Bab II",
+        "page": 24,
+        "table": "Tabel 13 Predikat Penilaian SPBE"
+      },
+      "api_status": "ok"
+    },
+    {
+      "id": "GT-007",
+      "question": "Siapa saja pihak-pihak yang dapat menjadi unsur anggota Tim Asesor Eksternal yang ditetapkan oleh Menteri?",
+      "expected": "Anggota Tim Asesor Eksternal dapat terdiri atas: (1) Unsur ASN yaitu pejabat/pegawai yang berasal dari Kementerian, Instansi Pusat, dan/atau Pemerintah Daerah. (2) Unsur akademisi yang berasal dari perguruan tinggi. (3) Unsur tenaga ahli yang berasal dari institusi lain.",
+      "rag_answer": "",
+      "sources": [],
+      "primary_score": 0.0,
+      "secondary_score": 0.0,
+      "combined_score": 0.0,
+      "passed": false,
+      "primary_hits": [],
+      "primary_miss": [
+        "ASN",
+        "akademisi",
+        "perguruan tinggi",
+        "tenaga ahli"
+      ],
+      "secondary_hits": [],
+      "secondary_miss": [
+        "Tim Asesor Eksternal",
+        "Kementerian",
+        "institusi lain"
+      ],
+      "topic": "tim asesor",
+      "difficulty": "sedang",
+      "evidence": {
+        "article": null,
+        "chapter": "Bab III Bagian B, poin 1.b (Pembentukan Tim Asesor Eksternal)",
+        "page": 81,
+        "table": null
+      },
+      "api_status": "ok"
+    },
+    {
+      "id": "GT-008",
+      "question": "Berdasarkan Kuesioner Pemantauan dan Evaluasi SPBE, apa kriteria yang harus dipenuhi agar Indikator 42 (Layanan Pengaduan Pelayanan Publik) dapat mencapai Tingkat Kematangan 3?",
+      "expected": "Kriteria tingkat 2 telah terpenuhi dan Layanan Pengaduan Pelayanan Publik Berbasis Elektronik memberikan layanan transaksi kepada pengguna terkait pengaduan pelayanan publik seperti otomasi alur kerja, transaksi basis data, validasi data, mekanisme persetujuan, dan analitik data.",
+      "rag_answer": "",
+      "sources": [],
+      "primary_score": 0.0,
+      "secondary_score": 0.0,
+      "combined_score": 0.0,
+      "passed": false,
+      "primary_hits": [],
+      "primary_miss": [
+        "kriteria tingkat 2 terpenuhi",
+        "layanan transaksi",
+        "otomasi alur kerja",
+        "transaksi basis data",
+        "validasi data"
+      ],
+      "secondary_hits": [],
+      "secondary_miss": [
+        "Indikator 42",
+        "pengaduan",
+        "tingkat kematangan 3",
+        "mekanisme persetujuan",
+        "analitik data"
+      ],
+      "topic": "kuesioner evaluasi",
+      "difficulty": "sulit",
+      "evidence": {
+        "article": null,
+        "chapter": "Bab II, Indikator 42 (Tingkat Kematangan Layanan Pengaduan Pelayanan Publik), Kriteria Tingkat 3",
+        "page": 72,
+        "table": null
+      },
+      "api_status": "ok"
+    }
+  ]
+}

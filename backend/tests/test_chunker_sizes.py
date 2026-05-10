@@ -115,3 +115,30 @@ def test_append_chunk_with_limit_respects_custom_max_size():
     assert len(chunks_small) > 1, (
         "Teks 1000 char dengan max_size=400 seharusnya dipecah jadi >1 chunk."
     )
+
+
+def test_peraturan_ayat_chunks_include_pasal_prefix(monkeypatch):
+    """
+    Semua chunk ayat harus mengandung prefix "Pasal N".
+    Test ini HARUS GAGAL sebelum perbaikan CR-04.
+    """
+    import app.core.ingestion.structured_chunker as sc
+
+    # Force early buffer flush to reveal missing prefix on intermediate chunks.
+    monkeypatch.setattr(sc, "MAX_CHUNK_SIZE_PERATURAN", 80)
+    monkeypatch.setattr(sc, "CHUNK_OVERLAP_PERATURAN", 0)
+
+    ayat1 = "A" * 60
+    ayat2 = "B" * 60
+    doc = _make_peraturan_doc([ayat1, ayat2])
+    chunks = chunk_peraturan(doc)
+
+    pasal_chunks = [
+        c for c in chunks if c.get("metadata", {}).get("pasal") == "Pasal 1"
+    ]
+    assert pasal_chunks, "Tidak ada chunk Pasal 1"
+
+    for chunk in pasal_chunks:
+        assert "Pasal 1" in chunk["text"], (
+            "Semua chunk ayat harus mengandung prefix 'Pasal 1' di teksnya."
+        )

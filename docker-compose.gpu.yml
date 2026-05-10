@@ -1,0 +1,22 @@
+# GPU Override — merge ini dengan dev atau prod compose jika host memiliki NVIDIA GPU
+#
+# Cara pakai untuk dev:
+#   docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml up
+#
+# Cara pakai untuk prod:
+#   docker compose -f docker-compose.prod.yml -f docker-compose.gpu.yml up
+
+services:
+  backend:
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+    deploy:
+      resources:
+        limits:
+          memory: 8G
+        reservations:
+          memory: 4G
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

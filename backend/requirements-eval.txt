@@ -1,0 +1,7 @@
+# Evaluation dependencies — hanya dibutuhkan untuk script evaluasi RAG
+# Install terpisah: pip install -r requirements-eval.txt
+#
+# JANGAN masukkan ke Dockerfile.dev kecuali memang butuh menjalankan evaluasi di container
+
+ragas==0.2.15
+datasets==4.8.4

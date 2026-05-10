@@ -1,4 +1,20 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://localhost*)",
+      "Bash(curl -v http://localhost*)",
+      "Bash(curl -s -X POST \"http://localhost*)",
+      "Bash(curl -s -X POST http://localhost*)",
+      "Bash(pdftotext *)",
+      "Bash(ollama list)",
+      "Bash(ollama show *)",
+      "Bash(ollama ps)",
+      "Bash(npm run dev *)",
+      "Bash(npm run build)",
+      "Bash(npm run lint *)",
+      "Bash(wc -l *)"
+    ]
+  },
   "hooks": {
     "PostToolUse": [
       {

@@ -29,17 +29,13 @@ def main():
 
     logger.info(f"Re-ingesting doc {args.doc_id}: {doc.get('original_filename')}")
 
-    # Step 1: preview chunks with figure pipeline
+    # Step 1: preview_chunks runs full figure pipeline and saves ALL chunks to SQLite internally.
+    # It returns only up to 50 for display — do NOT call save_chunks again with that truncated list.
     preview = manager.preview_chunks(args.doc_id, use_figure_pipeline=True)
-    chunks = preview.get("chunks", [])
-    figure_chunks = [c for c in chunks if c.get("chunk_type") == "figure"]
-    logger.info(f"Generated {len(chunks)} chunks total, {len(figure_chunks)} figure chunks")
+    total = preview.get("total_chunks", 0)
+    logger.info(f"Generated {total} total chunks (preview_chunks already saved them to SQLite)")
 
-    # Step 2: save chunks (replaces existing)
-    saved = manager.save_chunks(args.doc_id, chunks)
-    logger.info(f"Saved {saved} chunks to SQLite")
-
-    # Step 3: index in Qdrant + BM25
+    # Step 2: index in Qdrant + BM25 (reads from SQLite, so sees the full chunk set)
     result = manager.index_document(args.doc_id)
     logger.success(f"Indexing result: {result}")
 

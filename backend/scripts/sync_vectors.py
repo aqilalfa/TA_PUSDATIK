@@ -17,6 +17,7 @@ import json
 
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, VectorParams, PointStruct
+from app.core.ingestion.document_manager import DocumentManager
 import uuid
 
 
@@ -38,6 +39,7 @@ def sync_vectors(force_rebuild: bool = False):
         client = QdrantClient(
             url=settings.QDRANT_URL,
             timeout=60,  # 60 second timeout
+            check_compatibility=False,
         )
 
         # Check if collection exists
@@ -64,10 +66,15 @@ def sync_vectors(force_rebuild: bool = False):
             logger.info("Deleting old collection...")
             client.delete_collection(settings.QDRANT_COLLECTION, timeout=30)
 
-        # Initialize embedding model
-        from app.core.rag.embeddings import embedding_manager
-
-        embed_dim = embedding_manager.get_embedding_dim()
+        # Initialize embedding model via DocumentManager (avoids sentence_transformers dependency).
+        manager = DocumentManager()
+        model, tokenizer = manager.get_embedding_model()
+        if model is None or tokenizer is None:
+            raise RuntimeError("Embedding model not available for sync_vectors")
+        probe_vec = manager.generate_embedding("dim probe")
+        if not probe_vec:
+            raise RuntimeError("Failed to generate embedding probe vector")
+        embed_dim = len(probe_vec)
         logger.info(f"Embedding dimension: {embed_dim}")
 
         # Create new collection
@@ -107,7 +114,12 @@ def sync_vectors(force_rebuild: bool = False):
 
             # Generate embeddings
             logger.info(f"  Generating embeddings for {len(texts)} chunks...")
-            embeddings = embedding_manager.embed_texts(texts)
+            embeddings = []
+            for text in texts:
+                emb = manager.generate_embedding(text)
+                if emb is None:
+                    raise RuntimeError("Failed to generate embedding during sync")
+                embeddings.append(emb)
 
             # Create points
             points = []

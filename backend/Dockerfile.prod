@@ -44,6 +44,8 @@ RUN apt-get update && apt-get install -y \
 
 # Copy installed packages from builder (preserves .pth files and namespace packages)
 COPY --from=builder /usr/local/lib/python3.10/dist-packages /usr/local/lib/python3.10/dist-packages
+# Copy entry-point scripts (uvicorn, gunicorn, etc.) from builder
+COPY --from=builder /usr/local/bin /usr/local/bin
 
 WORKDIR /app
 

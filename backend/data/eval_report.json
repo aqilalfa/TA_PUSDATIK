@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-04-26T21:00:43.736715",
+  "total_questions": 2,
+  "evaluated": 2,
+  "failed": 0,
+  "avg_latency_s": 92.94,
+  "metrics": {
+    "semantic_similarity": {
+      "avg": 0.8797,
+      "description": "Cosine similarity embedding jawaban vs ground truth (0–1, lebih tinggi lebih baik)"
+    },
+    "context_recall": {
+      "avg": 0.4796,
+      "description": "Fraksi token kunci ground truth yang muncul di context yang di-retrieve (0–1)"
+    },
+    "answer_coverage": {
+      "avg": 0.5706,
+      "description": "Fraksi token kunci ground truth yang muncul di jawaban (0–1)"
+    }
+  },
+  "by_doc_type": {
+    "laporan": {
+      "semantic_similarity": 0.8797,
+      "context_recall": 0.4796,
+      "answer_coverage": 0.5706
+    }
+  },
+  "per_question": [
+    {
+      "id": "gt_001",
+      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+      "doc_type": "laporan",
+      "question": "Berapa nilai Indeks SPBE Nasional pada tahun 2024 dan apa predikatnya?",
+      "ground_truth": "Indeks SPBE Nasional pada tahun 2024 sebesar 3,12 (skala 1 hingga 5) dengan predikat \"Baik\". Capaian ini melampaui target yang ditetapkan sebesar 2,85 dan merupakan pertama kalinya Indeks SPBE Nasional mencapai nilai di atas 3.",
+      "answer": "Nilai Indeks SPBE Nasional pada tahun 2024 adalah 3.12 [5]. Predikat untuk nilai ini adalah \"Baik\" [3][4].",
+      "contexts": [
+        "Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 telah selesai dilaksanakan pada Desember 2024 dengan menghasilkan indeks maturitas…",
+        "Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 telah selesai dilaksanakan pada Desember 2024 dengan menghasilkan indeks maturitas…",
+        "Gambar 11. Perbandingan Nilai Capaian Tiap Domain 2023 dan 2024\n**Tabel 5. Nilai Indeks Domain Nasional 2024**\nNasional: Rerata; Kebijakan<br>Internal…",
+        "Gambar 11. Perbandingan Nilai Capaian Tiap Domain 2023 dan 2024\n**Tabel 5. Nilai Indeks Domain Nasional 2024**\nNasional: Rerata; Kebijakan<br>Internal…",
+        "Indeks Tingkat Kematangan SPBE pada Pemerintah Daerah pada tahun 2024 mencapai 3,08 atau setara dengan predikat \"Baik\". Sebagaimana direpresentasikan…"
+      ],
+      "latency_s": 109.65,
+      "scores": {
+        "semantic_similarity": 0.8583,
+        "context_recall": 0.5217,
+        "answer_coverage": 0.3913
+      }
+    },
+    {
+      "id": "gt_002",
+      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+      "doc_type": "laporan",
+      "question": "Instansi mana yang mendapatkan nilai Indeks SPBE tertinggi dari kategori Pemerintah Daerah pada evaluasi SPBE 2024?",
+      "ground_truth": "Pemerintah Kabupaten Banyuwangi meraih Indeks SPBE tertinggi pada kategori Pemerintah Daerah dengan skor 4,77 (predikat \"Memuaskan\"). Skor ini dicapai dengan nilai D1=5,00; D2=4,60; D3=4,18; D4=5,00.",
+      "answer": "Instansi Pemerintah Kabupaten Banyuwangi mendapatkan nilai Indeks SPBE tertinggi dari kategori Pemerintah Daerah pada evaluasi SPBE 2024 dengan skor 4,77 [5].",
+      "contexts": [
+        "Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 telah selesai dilaksanakan pada Desember 2024 dengan menghasilkan indeks maturitas…",
+        "Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE) tahun 2024 telah selesai dilaksanakan pada Desember 2024 dengan menghasilkan indeks maturitas…",
+        "Gambar 11. Perbandingan Nilai Capaian Tiap Domain 2023 dan 2024\n**Tabel 5. Nilai Indeks Domain Nasional 2024**\nNasional: Rerata; Kebijakan<br>Internal…",
+        "Gambar 11. Perbandingan Nilai Capaian Tiap Domain 2023 dan 2024\n**Tabel 5. Nilai Indeks Domain Nasional 2024**\nNasional: Rerata; Kebijakan<br>Internal…",
+        "Sedangkan pada Pemerintah Daerah, capaian indeks sebesar 3,08 menunjukkan bahwa penerapan SPBE masih berada pada level yang relatif sejalan dengan cap…"
+      ],
+      "latency_s": 76.24,
+      "scores": {
+        "semantic_similarity": 0.9011,
+        "context_recall": 0.4375,
+        "answer_coverage": 0.75
+      }
+    }
+  ]
+}

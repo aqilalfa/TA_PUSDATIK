@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-04-27T19:50:07.686629",
+  "framework": "RAGAS 0.2.x",
+  "llm_judge": "qwen2.5:7b-instruct",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "total_evaluated": 2,
+  "averages": {
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.7005,
+    "context_precision": 1.0,
+    "context_recall": 0.75
+  },
+  "by_doc_type": {
+    "laporan": {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7005,
+      "context_precision": 1.0,
+      "context_recall": 0.75
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)"
+  },
+  "per_question": [
+    {
+      "id": "gt_001",
+      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+      "doc_type": "laporan",
+      "question": "Berapa nilai Indeks SPBE Nasional pada tahun 2024 dan apa predikatnya?",
+      "answer": "Nilai Indeks SPBE Nasional pada tahun 2024 adalah 3.12 [5]. Predikat untuk nilai ini adalah \"Baik\" [3][4].",
+      "ground_truth": "Indeks SPBE Nasional pada tahun 2024 sebesar 3,12 (skala 1 hingga 5) dengan predikat \"Baik\". Capaian ini melampaui target yang ditetapkan sebesar 2,85 dan merupakan pertama kalinya Indeks SPBE Nasiona...",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7951310650176748,
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "id": "gt_002",
+      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+      "doc_type": "laporan",
+      "question": "Instansi mana yang mendapatkan nilai Indeks SPBE tertinggi dari kategori Pemerintah Daerah pada evaluasi SPBE 2024?",
+      "answer": "Instansi Pemerintah Kabupaten Banyuwangi mendapatkan nilai Indeks SPBE tertinggi dari kategori Pemerintah Daerah pada evaluasi SPBE 2024 dengan skor 4,77 [5].",
+      "ground_truth": "Pemerintah Kabupaten Banyuwangi meraih Indeks SPBE tertinggi pada kategori Pemerintah Daerah dengan skor 4,77 (predikat \"Memuaskan\"). Skor ini dicapai dengan nilai D1=5,00; D2=4,60; D3=4,18; D4=5,00.",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6057894474524423,
+        "context_precision": 0.99999999995,
+        "context_recall": 0.5
+      }
+    }
+  ]
+}

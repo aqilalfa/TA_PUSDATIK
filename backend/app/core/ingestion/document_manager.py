@@ -27,6 +27,9 @@ UPLOADS_DIR.mkdir(parents=True, exist_ok=True)
 # Max file size: 50MB
 MAX_FILE_SIZE = 50 * 1024 * 1024
 
+# Max chunks indexed per document (warn if exceeded)
+MAX_INDEX_CHUNKS = 10000
+
 
 # ============== PDF Extraction ==============
 
@@ -450,52 +453,145 @@ def split_legal_document(
             if chunks:
                 return chunks
 
-    # Fallback: split by paragraphs
+    # Fallback: split by paragraphs with table-aware parenting
     paragraphs = re.split(r"\n\n+", text)
     current_chunk = []
     current_size = 0
     chunk_index = 0
 
-    for para in paragraphs:
+    # --- Helpers for table detection & context ---
+    def _is_table_paragraph(p: str) -> bool:
+        """Detect markdown table: multiple rows with | delimiters."""
+        lines = p.strip().split("\n")
+        pipe_lines = sum(1 for l in lines if l.count("|") >= 2)
+        return pipe_lines >= 2
+
+    def _extract_table_label(p: str, preceding: str = "") -> str:
+        """Extract 'Tabel N. Title' from a paragraph or its predecessor."""
+        # Check inside table paragraph first (some tables have caption rows)
+        for source in [p, preceding]:
+            m = re.search(
+                r"(?:\*\*\s*)?(?:Tabel|Table)\s+(\d{1,3})\.?\s*([^\n|*]{0,80})",
+                source,
+                re.IGNORECASE,
+            )
+            if m:
+                num = m.group(1)
+                title = m.group(2).strip().rstrip("*").strip()
+                return f"Tabel {num}. {title}" if title else f"Tabel {num}"
+        return ""
+
+    def _find_section_heading(idx: int) -> str:
+        """Walk backwards through paragraphs to find the nearest heading."""
+        for j in range(idx - 1, max(idx - 5, -1), -1):
+            p = paragraphs[j].strip()
+            # Markdown heading (## ...) or bold heading (**...**)
+            heading_m = re.match(
+                r"^(?:#{1,4}\s+|\*\*\s*)(.{5,120})(?:\s*\*\*)?$", p
+            )
+            if heading_m:
+                return heading_m.group(1).strip().rstrip("*").strip()
+            # Standalone 'Tabel N. ...' as section heading
+            tbl_m = re.match(
+                r"^(?:\*\*\s*)?(?:Tabel|Table)\s+\d{1,3}\.?\s*.+",
+                p,
+                re.IGNORECASE,
+            )
+            if tbl_m:
+                return p.strip().strip("*").strip()
+        return ""
+
+    # First pass: build raw chunks (same paragraph grouping logic)
+    raw_chunks = []  # list of {"paras": [...], "para_indexes": [...]}
+    current_paras = []
+    current_indexes = []
+
+    for pi, para in enumerate(paragraphs):
         para = para.strip()
         if not para:
             continue
 
         para_size = len(para)
 
-        if current_size + para_size > max_chunk_size and current_chunk:
-            chunk_text = f"{doc_title}: " + "\n\n".join(current_chunk)
-            chunks.append(
-                {
-                    "text": chunk_text,
-                    "raw_text": "\n\n".join(current_chunk),
-                    "context_header": doc_title,
-                    "document_title": doc_title,
-                    "filename": filename,
-                    "doc_type": doc_type,
-                    "bab": "",
-                    "bagian": "",
-                    "pasal": "",
-                    "ayat": "",
-                    "parent_pasal_text": "",
-                    "is_parent": True,
-                    "chunk_index": chunk_index,
-                }
-            )
-            chunk_index += 1
-            current_chunk = []
+        if current_size + para_size > max_chunk_size and current_paras:
+            raw_chunks.append({"paras": current_paras, "para_indexes": current_indexes})
+            current_paras = []
+            current_indexes = []
             current_size = 0
 
-        current_chunk.append(para)
+        current_paras.append(para)
+        current_indexes.append(pi)
         current_size += para_size
 
-    if current_chunk:
-        chunk_text = f"{doc_title}: " + "\n\n".join(current_chunk)
+    if current_paras:
+        raw_chunks.append({"paras": current_paras, "para_indexes": current_indexes})
+
+    # Second pass: enrich each raw chunk with table parenting metadata
+    for ci, rc in enumerate(raw_chunks):
+        paras = rc["paras"]
+        para_idxs = rc["para_indexes"]
+        raw_text = "\n\n".join(paras)
+
+        is_table = any(_is_table_paragraph(p) for p in paras)
+
+        # Build context header, table_context, and parent text
+        context_header = doc_title
+        table_context = ""
+        parent_text = ""
+        chunk_type = "text"
+        table_label = ""
+
+        if is_table:
+            chunk_type = "table"
+            first_para_idx = para_idxs[0] if para_idxs else 0
+
+            # Find table label from this chunk or surrounding paragraphs
+            preceding_text = ""
+            if ci > 0:
+                preceding_text = "\n\n".join(raw_chunks[ci - 1]["paras"])
+            table_label = _extract_table_label(raw_text, preceding_text)
+
+            # Find section heading from original paragraph list
+            section = _find_section_heading(first_para_idx)
+
+            # Build enriched context header
+            header_parts = [doc_title]
+            if section and section != doc_title:
+                header_parts.append(section)
+            if table_label and table_label not in section:
+                header_parts.append(table_label)
+            context_header = " > ".join(header_parts)
+
+            # table_context: combine preceding paragraph + following paragraph
+            # so LLM has explanation of what the table shows
+            context_pieces = []
+            if ci > 0:
+                prev_text = "\n\n".join(raw_chunks[ci - 1]["paras"])
+                # Take last 500 chars of previous chunk as context
+                context_pieces.append(prev_text[-500:])
+            if ci + 1 < len(raw_chunks):
+                next_text = "\n\n".join(raw_chunks[ci + 1]["paras"])
+                # Take first 500 chars of next chunk as context
+                context_pieces.append(next_text[:500])
+            table_context = "\n\n".join(context_pieces)
+
+            # parent_text: full preceding chunk for parent expansion
+            if ci > 0:
+                parent_text = "\n\n".join(raw_chunks[ci - 1]["paras"])
+
+            # Prepend table label to chunk text for better searchability
+            if table_label:
+                chunk_text = f"{context_header}: {table_label}\n{raw_text}"
+            else:
+                chunk_text = f"{context_header}: {raw_text}"
+        else:
+            chunk_text = f"{doc_title}: {raw_text}"
+
         chunks.append(
             {
                 "text": chunk_text,
-                "raw_text": "\n\n".join(current_chunk),
-                "context_header": doc_title,
+                "raw_text": raw_text,
+                "context_header": context_header,
                 "document_title": doc_title,
                 "filename": filename,
                 "doc_type": doc_type,
@@ -503,11 +599,15 @@ def split_legal_document(
                 "bagian": "",
                 "pasal": "",
                 "ayat": "",
-                "parent_pasal_text": "",
-                "is_parent": True,
+                "parent_pasal_text": parent_text,
+                "is_parent": not bool(parent_text),
                 "chunk_index": chunk_index,
+                "chunk_type": chunk_type,
+                "table_context": table_context,
+                "section": context_header if is_table else "",
             }
         )
+        chunk_index += 1
 
     return chunks
 
@@ -1431,9 +1531,16 @@ class DocumentManager:
         if not doc:
             raise ValueError(f"Document not found: {doc_id}")
 
-        chunks = self.get_chunks(doc_id, limit=10000)
+        chunks = self.get_chunks(doc_id, limit=MAX_INDEX_CHUNKS)
         if not chunks:
             raise ValueError("No chunks to index. Run preview first.")
+
+        total_chunks = self.get_chunk_count(doc_id)
+        if total_chunks and total_chunks > len(chunks):
+            logger.warning(
+                f"Indexing truncated for doc_id={doc_id}: "
+                f"total_chunks={total_chunks}, indexed={len(chunks)} (limit={MAX_INDEX_CHUNKS})"
+            )
 
         logger.info(f"Indexing {len(chunks)} chunks for document: {doc_id}")
 
@@ -1478,7 +1585,16 @@ class DocumentManager:
 
         for doc in all_docs:
             if doc.get("status") == "indexed":
-                chunks = self.get_chunks(doc["doc_id"], limit=10000)
+                chunks = self.get_chunks(doc["doc_id"], limit=MAX_INDEX_CHUNKS)
+                reported_count = doc.get("chunk_count") or 0
+                if not reported_count:
+                    reported_count = self.get_chunk_count(doc["doc_id"])
+                if reported_count and reported_count > len(chunks):
+                    logger.warning(
+                        "BM25 rebuild truncated for doc_id={}: total_chunks={}, indexed={} (limit={})".format(
+                            doc["doc_id"], reported_count, len(chunks), MAX_INDEX_CHUNKS
+                        )
+                    )
                 for chunk in chunks:
                     all_chunks.append(
                         {
@@ -1495,6 +1611,10 @@ class DocumentManager:
                                 "parent_pasal_text": chunk.get("parent_pasal_text", ""),
                                 "is_parent": chunk.get("is_parent", False),
                                 "doc_id": doc["doc_id"],
+                                   "filename": chunk.get("filename", ""),
+                                   "is_table": chunk.get("is_table", False),
+                                   "table_label": chunk.get("table_label", ""),
+                                   "table_context": chunk.get("table_context", ""),
                             },
                         }
                     )

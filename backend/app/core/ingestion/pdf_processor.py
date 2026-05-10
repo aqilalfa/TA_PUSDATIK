@@ -65,13 +65,21 @@ class DocumentProcessor:
         if marker_converter.is_available():
             try:
                 logger.info("Attempting Marker conversion...")
-                text, markdown_path, used_marker = marker_converter.convert(
-                    pdf_path, save_output=True
-                )
+                conversion_result = marker_converter.convert(pdf_path, save_output=True)
 
-                if used_marker:
+                # Backward-safe handling if converter return type changes.
+                if isinstance(conversion_result, tuple):
+                    text, markdown_path, used_marker = conversion_result
+                    if used_marker and text:
+                        logger.success("Marker conversion successful")
+                        return text, markdown_path, "marker"
+                elif conversion_result.success and conversion_result.text:
                     logger.success("Marker conversion successful")
-                    return text, markdown_path, "marker"
+                    return (
+                        conversion_result.text,
+                        conversion_result.output_path,
+                        conversion_result.method or "marker",
+                    )
 
             except MarkerConversionError as e:
                 logger.warning(f"Marker conversion failed: {e}")
@@ -91,6 +99,56 @@ class DocumentProcessor:
             logger.info(f"OCR result saved to: {ocr_output_path}")
 
         return text, None, method
+
+    @staticmethod
+    def _find_marker_markdown_path(filename: str) -> Optional[str]:
+        """Find marker markdown cache path, including hash-prefixed folders."""
+        def _normalize_name(value: str) -> str:
+            return "".join(ch for ch in value.lower() if ch.isalnum())
+
+        stem = Path(filename).stem
+        output_dir = marker_converter.output_dir
+        normalized_stem = _normalize_name(stem)
+
+        exact = output_dir / stem / f"{stem}.md"
+        if exact.exists():
+            return str(exact)
+
+        stem_lower = stem.lower()
+        try:
+            for folder in output_dir.iterdir():
+                if not folder.is_dir():
+                    continue
+
+                folder_name = folder.name
+                folder_no_hash = folder_name
+                if len(folder_name) > 9 and folder_name[8] == "_":
+                    possible_hash = folder_name[:8]
+                    if all(c in "0123456789abcdefABCDEF" for c in possible_hash):
+                        folder_no_hash = folder_name[9:]
+
+                normalized_folder = _normalize_name(folder_name)
+                normalized_folder_no_hash = _normalize_name(folder_no_hash)
+                name_matches = (
+                    stem_lower in folder_name.lower()
+                    or normalized_stem in normalized_folder
+                    or normalized_stem in normalized_folder_no_hash
+                )
+
+                if not name_matches:
+                    continue
+
+                candidate = folder / f"{folder.name}.md"
+                if candidate.exists():
+                    return str(candidate)
+
+                # Fallback: return first markdown file if naming differs.
+                for md_file in folder.glob("*.md"):
+                    return str(md_file)
+        except Exception as e:
+            logger.debug(f"Error scanning marker cache: {e}")
+
+        return None
 
     @staticmethod
     def process_document(
@@ -178,7 +236,11 @@ class DocumentProcessor:
             # STEP 3: JSON → Chunks (≤600 chars)
             logger.info("STEP 3: Structured chunking (max 600 chars)...")
 
-            chunks = chunk_document(doc_structure)
+            md_fallback_path = markdown_path or DocumentProcessor._find_marker_markdown_path(filename)
+            if md_fallback_path:
+                logger.info(f"Markdown source detected for fallback: {md_fallback_path}")
+
+            chunks = chunk_document(doc_structure, md_file_path=md_fallback_path)
 
             result["steps_completed"].append("chunking")
             result["chunk_count"] = len(chunks)

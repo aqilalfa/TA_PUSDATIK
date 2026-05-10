@@ -40,7 +40,7 @@ from llama_index.llms.llama_cpp import LlamaCPP
 
 # LlamaIndex wraps llama-cpp-python untuk integration
 llm = LlamaCPP(
-    model_path="/app/models/llm/qwen-2.5-7b-instruct-q4_k_m.gguf",
+    model_path="/app/models/llm/Qwen2.5-7B-Instruct-Q4_K_M.gguf",
     n_gpu_layers=35,  # GTX 1650: offload 35 layers ke GPU
     n_ctx=8192,       # Context window
     temperature=0.1,
@@ -85,7 +85,7 @@ from llama_index.vector_stores.qdrant import QdrantVectorStore
 # LlamaIndex provides Qdrant wrapper
 vector_store = QdrantVectorStore(
     client=qdrant_client,
-    collection_name="spbe_documents"
+    collection_name="document_chunks"
 )
 
 # Seamless integration dengan query engines
@@ -243,7 +243,7 @@ LlamaIndex + llama-cpp-python:
 ```python
 # Q4_K_M: 4-bit quantization, ~4.37GB
 # Perfect untuk GTX 1650 4GB VRAM
-model_path = "qwen-2.5-7b-instruct-q4_k_m.gguf"
+model_path = "Qwen2.5-7B-Instruct-Q4_K_M.gguf"
 ```
 
 Ollama: Less granular quantization control

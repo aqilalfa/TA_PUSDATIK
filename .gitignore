@@ -80,3 +80,4 @@ nul
 # Claude Code ephemeral state (dirty flags, session stamps)
 .claude/_state/*
 !.claude/_state/.gitkeep
+.superpowers/

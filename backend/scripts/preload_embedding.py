@@ -62,7 +62,7 @@ try:
 
     print("\n" + "=" * 60)
     print("SUCCESS! Embedding model is ready.")
-    print("You can now start the server with: start_backend.bat")
+    print("You can now start the server with: start_full.bat")
     print("=" * 60)
 
 except Exception as e:

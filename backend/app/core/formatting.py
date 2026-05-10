@@ -1,82 +1,18 @@
 """
 Shared formatting utilities for SPBE RAG citation/source display.
 
-Used by all server variants (server_full, server_hybrid, server_ultra)
-to ensure consistent citation formatting with full hierarchy.
+Used by server routes to ensure consistent citation cleanup/source shaping.
 
 Functions:
-    format_context_with_parent: Format chunks with source list for LLM context
     extract_sources: Extract hierarchical source info for frontend display
     sanitize_citations: Remove invalid citation numbers from LLM answer
     filter_used_sources: Filter to only actually-cited sources
+    strip_markdown_emphasis: Remove markdown emphasis markers from text
+    append_citation_reference_block: Append human-readable citation-to-title map
 """
 
 import re
 from typing import List, Dict
-
-
-def format_context_with_parent(chunks: List[Dict], max_chars: int = 6000) -> str:
-    """Format chunks dengan daftar sumber eksplisit di awal.
-
-    Format:
-    DAFTAR SUMBER YANG TERSEDIA:
-    [1] Perpres Nomor 95 Tahun 2018
-    [2] Laporan Evaluasi SPBE 2024
-
-    DETAIL DOKUMEN:
-    [1] Dokumen: Perpres 95/2018 | Pasal 8 Ayat (1)
-    Isi: <teks dokumen>
-    """
-    if not chunks:
-        return "Tidak ada dokumen yang ditemukan."
-
-    # Step 1: Buat daftar sumber ringkas di awal
-    source_list = ["DAFTAR SUMBER YANG TERSEDIA:"]
-    for i, c in enumerate(chunks, 1):
-        meta = c.get("metadata", {})
-        doc_title = meta.get("document_title", "Dokumen")
-        source_list.append(f"[{i}] {doc_title}")
-
-    source_summary = "\n".join(source_list)
-    source_summary += f"\n\nPENTING: Gunakan HANYA nomor sumber [1] sampai [{len(chunks)}] di atas. Jangan gunakan nomor lain.\n"
-    source_summary += "\nDETAIL DOKUMEN:\n"
-
-    # Step 2: Format detail dokumen
-    parts = []
-    total = len(source_summary)
-
-    for i, c in enumerate(chunks, 1):
-        meta = c.get("metadata", {})
-        doc_title = meta.get("document_title", "Dokumen")
-        pasal = meta.get("pasal", "")
-        ayat = meta.get("ayat", "")
-        parent_context = c.get("parent_context", "")
-        raw_text = c.get("text", "")
-
-        # Header sederhana
-        ref_parts = [f"[{i}] Dokumen: {doc_title}"]
-        if pasal:
-            ref_parts.append(f"{pasal}")
-            if ayat:
-                ref_parts.append(f"Ayat ({ayat})")
-
-        header = " | ".join(ref_parts)
-
-        # Jika ada parent context, gabungkan
-        if parent_context and c.get("has_parent"):
-            content = f"{parent_context[:1200]}"
-        else:
-            content = raw_text
-
-        text = f"{header}\nIsi: {content}\n"
-
-        if total + len(text) > max_chars:
-            break
-
-        parts.append(text)
-        total += len(text)
-
-    return source_summary + "\n".join(parts)
 
 
 def extract_sources(chunks: List[Dict]) -> List[Dict]:
@@ -168,6 +104,76 @@ def sanitize_citations(answer: str, valid_source_count: int) -> str:
     sanitized = re.sub(r" +,", ",", sanitized)
 
     return sanitized.strip()
+
+
+def strip_markdown_emphasis(text: str) -> str:
+    """Remove markdown emphasis markers to keep legal answers plain/formal."""
+    if not text:
+        return ""
+    cleaned = text.replace("**", "")
+    cleaned = cleaned.replace("__", "")
+    cleaned = re.sub(r"  +", " ", cleaned)
+    return cleaned
+
+
+def _extract_citation_ids(answer: str) -> List[int]:
+    """Extract citation ids while preserving first appearance order."""
+    ids: List[int] = []
+    seen = set()
+    for match in re.findall(r"\[(\d+)\]", answer or ""):
+        try:
+            cid = int(match)
+        except ValueError:
+            continue
+        if cid not in seen:
+            seen.add(cid)
+            ids.append(cid)
+    return ids
+
+
+def append_citation_reference_block(
+    answer: str,
+    sources: List[Dict],
+    max_items: int = 8,
+) -> str:
+    """Append a citation map so [n] references are explicitly tied to document titles."""
+    base_answer = (answer or "").strip()
+    if not base_answer or not sources:
+        return base_answer
+
+    if re.search(r"(?im)^referensi\s+dokumen\s*:", base_answer):
+        return base_answer
+
+    cited_ids = _extract_citation_ids(base_answer)
+    if not cited_ids:
+        cited_ids = [int(s.get("id")) for s in sources[: min(3, len(sources))] if s.get("id")]
+    else:
+        cited_ids = sorted(cited_ids)
+
+    source_by_id = {}
+    for src in sources:
+        src_id = src.get("id")
+        if isinstance(src_id, int):
+            source_by_id[src_id] = src
+
+    lines = ["Referensi Dokumen:"]
+    for cid in cited_ids[: max_items]:
+        src = source_by_id.get(cid)
+        if not src:
+            continue
+
+        title = str(src.get("citation_title") or src.get("document") or "Dokumen").strip()
+        section = str(src.get("section") or "").strip()
+
+        if section:
+            lines.append(f"[{cid}] {title} | {section}")
+        else:
+            lines.append(f"[{cid}] {title}")
+
+    if len(lines) == 1:
+        return base_answer
+
+    return f"{base_answer}\n\n" + "\n".join(lines)
 
 
 def filter_used_sources(answer: str, sources: List[Dict]) -> List[Dict]:

@@ -386,7 +386,7 @@ docker-compose -f docker-compose.dev.yml exec backend \
 # Open Qdrant dashboard
 http://localhost:6333/dashboard
 
-# Check collection 'spbe_documents'
+# Check collection 'document_chunks'
 # Should see indexed chunks dari 3 dokumen
 ```
 

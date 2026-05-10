@@ -1,0 +1,96 @@
+{
+  "generated_at": "2026-04-20T12:03:20.615696",
+  "endpoint": "http://localhost:8000/api/chat/stream",
+  "model": "qwen3.5:4b",
+  "summary": {
+    "total": 4,
+    "passed": 3,
+    "failed": 1,
+    "correct_failed": 1,
+    "complete_failed": 1,
+    "failed_tables": [
+      9
+    ],
+    "top_failure_reasons": [
+      [
+        "jawaban memuat frasa unavailable",
+        1
+      ]
+    ]
+  },
+  "conclusion": "Sebagian jawaban tabel belum konsisten benar dan lengkap. Tabel yang perlu follow-up: T9. Penyebab dominan: jawaban memuat frasa unavailable (1x). Kesimpulan: masih perlu tuning retrieval/ranking/format jawaban pada tabel gagal sebelum dapat dianggap stabil penuh.",
+  "results": [
+    {
+      "table": 6,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 6? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "PASS",
+      "is_correct": true,
+      "is_complete": true,
+      "answer_len": 1821,
+      "source_count": 8,
+      "permenpan_source_count": 8,
+      "list_items": 9,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "notes": [],
+      "preview": "Berdasarkan dokumen yang tersedia, isi dari Tabel 6 pada Peraturan Menteri PAN RB Nomor 59 Tahun 2020 adalah daftar indikator yang terdapat pada Domain Layanan SPBE.  Poin utamanya secara ringkas namun lengkap adalah sebagai berikut:  1. Ob"
+    },
+    {
+      "table": 7,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 7? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "PASS",
+      "is_correct": true,
+      "is_complete": true,
+      "answer_len": 1248,
+      "source_count": 8,
+      "permenpan_source_count": 7,
+      "list_items": 7,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "notes": [],
+      "preview": "Berdasarkan dokumen yang diberikan, isi dari Tabel 7 pada Peraturan Nomor 59 Tahun 2020 adalah Bobot Domain dalam struktur penilaian tingkat kematangan Sistem Pemerintahan Berbasis Elektronik (SPBE). Tabel ini memuat nilai persentase bobot "
+    },
+    {
+      "table": 8,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 8? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "PASS",
+      "is_correct": true,
+      "is_complete": true,
+      "answer_len": 3386,
+      "source_count": 8,
+      "permenpan_source_count": 8,
+      "list_items": 24,
+      "negative_hits": [],
+      "expected_hits": 2,
+      "expected_total": 2,
+      "other_table_refs": [],
+      "notes": [],
+      "preview": "Berdasarkan dokumen yang tersedia, isi dari Tabel 8 dalam Peraturan Menteri PAN RB Nomor 59 Tahun 2020 adalah sebagai berikut:  1. Tabel 8 Bobot Aspek pada Domain Tata Kelola SPBE Tabel ini menyajikan bobot penilaian untuk setiap aspek yang"
+    },
+    {
+      "table": 9,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 9? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 2025,
+      "source_count": 8,
+      "permenpan_source_count": 7,
+      "list_items": 9,
+      "negative_hits": [
+        "tidak tercantum"
+      ],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "notes": [
+        "jawaban memuat frasa unavailable"
+      ],
+      "preview": "Berdasarkan dokumen yang tersedia, isi dari Tabel 9 dalam Peraturan Menteri PANRB Nomor 59 Tahun 2020 berfokus pada Bobot Indikator pada Domain Kebijakan SPBE [1].  Poin utama dari Tabel 9 yang tersedia adalah sebagai berikut:  1. Objek Tab"
+    }
+  ]
+}

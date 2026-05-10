@@ -1,0 +1,303 @@
+{
+  "generated_at": "2026-04-21T08:56:04.483555",
+  "endpoint": "http://localhost:8000/api/chat/stream",
+  "model": "qwen3.5:4b",
+  "summary": {
+    "total": 14,
+    "passed": 0,
+    "failed": 14,
+    "correct_failed": 14,
+    "complete_failed": 14,
+    "failed_tables": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "top_failure_reasons": [
+      [
+        "SSE complete event tidak ditemukan",
+        14
+      ]
+    ]
+  },
+  "conclusion": "Sebagian jawaban tabel belum konsisten benar dan lengkap. Tabel yang perlu follow-up: T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14. Penyebab dominan: SSE complete event tidak ditemukan (14x). Kesimpulan: masih perlu tuning retrieval/ranking/format jawaban pada tabel gagal sebelum dapat dianggap stabil penuh.",
+  "results": [
+    {
+      "table": 1,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 1? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 0,
+      "source_count": 0,
+      "permenpan_source_count": 0,
+      "list_items": 0,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    },
+    {
+      "table": 2,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 2? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 0,
+      "source_count": 0,
+      "permenpan_source_count": 0,
+      "list_items": 0,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    },
+    {
+      "table": 3,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 3? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 0,
+      "source_count": 0,
+      "permenpan_source_count": 0,
+      "list_items": 0,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    },
+    {
+      "table": 4,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 4? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 0,
+      "source_count": 0,
+      "permenpan_source_count": 0,
+      "list_items": 0,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    },
+    {
+      "table": 5,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 5? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 0,
+      "source_count": 0,
+      "permenpan_source_count": 0,
+      "list_items": 0,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    },
+    {
+      "table": 6,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 6? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 0,
+      "source_count": 0,
+      "permenpan_source_count": 0,
+      "list_items": 0,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    },
+    {
+      "table": 7,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 7? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 0,
+      "source_count": 0,
+      "permenpan_source_count": 0,
+      "list_items": 0,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    },
+    {
+      "table": 8,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 8? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 0,
+      "source_count": 0,
+      "permenpan_source_count": 0,
+      "list_items": 0,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 2,
+      "other_table_refs": [],
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    },
+    {
+      "table": 9,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 9? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 0,
+      "source_count": 0,
+      "permenpan_source_count": 0,
+      "list_items": 0,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    },
+    {
+      "table": 10,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 10? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 0,
+      "source_count": 0,
+      "permenpan_source_count": 0,
+      "list_items": 0,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 2,
+      "other_table_refs": [],
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    },
+    {
+      "table": 11,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 11? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 0,
+      "source_count": 0,
+      "permenpan_source_count": 0,
+      "list_items": 0,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    },
+    {
+      "table": 12,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 12? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 0,
+      "source_count": 0,
+      "permenpan_source_count": 0,
+      "list_items": 0,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 2,
+      "other_table_refs": [],
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    },
+    {
+      "table": 13,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 13? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 0,
+      "source_count": 0,
+      "permenpan_source_count": 0,
+      "list_items": 0,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 4,
+      "other_table_refs": [],
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    },
+    {
+      "table": 14,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 14? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 0,
+      "source_count": 0,
+      "permenpan_source_count": 0,
+      "list_items": 0,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 3,
+      "other_table_refs": [],
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    }
+  ]
+}

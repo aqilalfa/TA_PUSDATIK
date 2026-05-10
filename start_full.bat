@@ -25,4 +25,4 @@ echo Frontend: http://localhost:5173
 echo Health check: http://localhost:8000/api/health
 echo.
 
-python -m uvicorn app.api.server_full:app --host 0.0.0.0 --port 8000
+venv\Scripts\python.exe -m uvicorn app.main:app --host 0.0.0.0 --port 8000

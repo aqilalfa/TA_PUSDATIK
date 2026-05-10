@@ -1,0 +1,94 @@
+{
+  "generated_at": "2026-04-21T09:00:41.482913",
+  "endpoint": "http://localhost:8000/api/chat/stream",
+  "model": "qwen3.5:4b",
+  "summary": {
+    "total": 4,
+    "pass": 0,
+    "fail": 4,
+    "failed_ids": [
+      "Q1_DEFINISI_SPBE",
+      "Q2_DAFTAR_DOMAIN",
+      "Q3_PERBANDINGAN",
+      "Q4_INDIKATOR_KEBIJAKAN"
+    ]
+  },
+  "results": [
+    {
+      "id": "Q1_DEFINISI_SPBE",
+      "query": "Apa definisi SPBE menurut Peraturan Menteri PAN RB Nomor 59 Tahun 2020?",
+      "verdict": "FAIL",
+      "answer_len": 0,
+      "source_count": 0,
+      "citation_count": 0,
+      "negative_hits": [],
+      "quality_score": null,
+      "needs_retry": null,
+      "retry_reasons": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "focus_coverage": 0,
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    },
+    {
+      "id": "Q2_DAFTAR_DOMAIN",
+      "query": "Sebutkan domain-domain dalam evaluasi SPBE berdasarkan dokumen yang tersedia.",
+      "verdict": "FAIL",
+      "answer_len": 0,
+      "source_count": 0,
+      "citation_count": 0,
+      "negative_hits": [],
+      "quality_score": null,
+      "needs_retry": null,
+      "retry_reasons": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "focus_coverage": 0,
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    },
+    {
+      "id": "Q3_PERBANDINGAN",
+      "query": "Jelaskan perbedaan utama antara pemantauan SPBE dan evaluasi SPBE.",
+      "verdict": "FAIL",
+      "answer_len": 0,
+      "source_count": 0,
+      "citation_count": 0,
+      "negative_hits": [],
+      "quality_score": null,
+      "needs_retry": null,
+      "retry_reasons": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "focus_coverage": 0,
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    },
+    {
+      "id": "Q4_INDIKATOR_KEBIJAKAN",
+      "query": "Sebutkan indikator pada Domain Kebijakan SPBE secara ringkas.",
+      "verdict": "FAIL",
+      "answer_len": 0,
+      "source_count": 0,
+      "citation_count": 0,
+      "negative_hits": [],
+      "quality_score": null,
+      "needs_retry": null,
+      "retry_reasons": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "focus_coverage": 0,
+      "notes": [
+        "SSE complete event tidak ditemukan"
+      ],
+      "preview": ""
+    }
+  ]
+}

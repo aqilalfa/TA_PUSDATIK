@@ -18,6 +18,5 @@ ipython==8.19.0
 # Monitoring
 watchdog==3.0.0
 
-# Evaluation (scripts only, not used in app/)
-ragas==0.2.15
-datasets==4.8.4
+# Evaluation (scripts only) — install terpisah via: pip install -r requirements-eval.txt
+# ragas dan datasets dipindah ke requirements-eval.txt agar tidak membebani image dev

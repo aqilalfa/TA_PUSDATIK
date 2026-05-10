@@ -4,11 +4,14 @@ Health check endpoint
 
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
+from sqlalchemy import text
 from app.database import get_db
 from app.models.schemas import HealthResponse
 from app.config import settings
+from app.api.routes.models import get_default_model
 from qdrant_client import QdrantClient
 import httpx
+import os
 
 router = APIRouter()
 
@@ -22,7 +25,7 @@ async def health_check(db: Session = Depends(get_db)):
 
     # Check database
     try:
-        db.execute("SELECT 1")
+        db.execute(text("SELECT 1"))
         services["database"] = "healthy"
     except Exception as e:
         services["database"] = f"unhealthy: {str(e)}"
@@ -35,13 +38,29 @@ async def health_check(db: Session = Depends(get_db)):
     except Exception as e:
         services["qdrant"] = f"unhealthy: {str(e)}"
 
-    # Check if models exist
-    import os
-
-    if os.path.exists(settings.MODEL_PATH):
-        services["llm_model"] = "present"
-    else:
-        services["llm_model"] = "missing"
+    # Check default LLM model availability (Ollama-first).
+    try:
+        default_model = get_default_model()
+        response = httpx.get(f"{settings.OLLAMA_BASE_URL}/api/tags", timeout=10)
+        if response.status_code == 200:
+            data = response.json()
+            available_models = {
+                str(m.get("name", "")).strip() for m in data.get("models", [])
+            }
+            if default_model in available_models:
+                services["llm_model"] = "present"
+            else:
+                services["llm_model"] = (
+                    f"missing: default model '{default_model}' not found in Ollama"
+                )
+        else:
+            services["llm_model"] = f"unhealthy: Ollama HTTP {response.status_code}"
+    except Exception as e:
+        # Legacy fallback for direct file-based LLM setups.
+        if os.path.exists(settings.MODEL_PATH):
+            services["llm_model"] = "present"
+        else:
+            services["llm_model"] = f"unhealthy: {str(e)}"
 
     return HealthResponse(
         status="healthy"

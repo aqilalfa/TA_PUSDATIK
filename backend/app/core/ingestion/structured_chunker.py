@@ -441,6 +441,8 @@ def chunk_peraturan(doc: Dict[str, Any]) -> List[Dict[str, Any]]:
                         if buffer_text:
                             ayat_label = f"Ayat ({buffer_ayat_range[0]})" if len(buffer_ayat_range) == 1 else f"Ayat ({buffer_ayat_range[0]})-({buffer_ayat_range[-1]})"
                             complete_text = f"{pasal_isi}\n{buffer_text}" if pasal_isi else buffer_text
+                            if pasal_nomor and pasal_nomor != "intro":
+                                complete_text = f"Pasal {pasal_nomor}\n{complete_text}"
                             for piece in split_text_with_overlap(complete_text, MAX_CHUNK_SIZE_PERATURAN, CHUNK_OVERLAP_PERATURAN):
                                 chunks.append({
                                     "text": piece,

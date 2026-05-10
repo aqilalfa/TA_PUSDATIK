@@ -89,9 +89,9 @@ Sistem ini menggunakan teknologi RAG (Retrieval-Augmented Generation) yang mengg
 ### Frontend
 - **Framework**: Vue.js 3
 - **Build Tool**: Vite
-- **State Management**: Pinia
-- **Styling**: Tailwind CSS
-- **HTTP Client**: Axios
+- **State Management**: Vue reactive state (Pinia planned)
+- **Styling**: Vanilla CSS (modular component styles)
+- **HTTP Client**: Axios + Fetch (SSE streaming)
 
 ### Infrastructure
 - **Containerization**: Docker + Docker Compose
@@ -275,8 +275,8 @@ spbe-rag-system/
 │   └── src/
 │       ├── components/        # Vue components
 │       ├── views/             # Page views
-│       ├── stores/            # Pinia stores
-│       └── services/          # API client
+│       ├── stores/            # State stores (currently placeholder)
+│       └── services/          # Centralized API service layer
 ├── data/                      # Data storage
 │   ├── documents/             # Original PDFs
 │   ├── ocr_output/            # OCR results

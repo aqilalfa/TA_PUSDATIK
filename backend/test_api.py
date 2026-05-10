@@ -282,7 +282,7 @@ def main():
     # Check server
     if not check_server():
         print("\n[FAIL] Server not running. Start with:")
-        print("    cd backend && python -m uvicorn app.api.server_full:app --port 8000")
+        print("    cd backend && venv\\Scripts\\python.exe -m uvicorn app.main:app --port 8000")
         return False
 
     # Test 1: List documents

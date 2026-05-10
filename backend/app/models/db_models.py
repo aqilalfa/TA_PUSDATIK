@@ -78,17 +78,24 @@ class Document(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     filename = Column(String, nullable=False)
-    original_path = Column(String, nullable=False)
+    original_path = Column(String, nullable=True)  # path where file is stored
     doc_type = Column(String, nullable=True)  # 'peraturan', 'audit', 'other'
-    status = Column(
-        String, default="pending"
-    )  # 'pending', 'processing', 'completed', 'failed'
+    status = Column(String, default="pending")  # 'pending', 'uploaded', 'indexed', 'failed'
     ocr_needed = Column(Boolean, default=False)
-    doc_metadata = Column(Text, nullable=True)  # JSON metadata (renamed from metadata)
+    doc_metadata = Column(Text, nullable=True)  # JSON metadata
     uploaded_by = Column(Integer, ForeignKey("users.id"), nullable=True)
     uploaded_at = Column(DateTime, default=datetime.utcnow)
     processed_at = Column(DateTime, nullable=True)
     error_message = Column(Text, nullable=True)
+
+    # === Kolom tambahan dibutuhkan DocumentManager (Phase 1 consolidation) ===
+    # doc_id: UUID text identifier dipakai oleh DocumentManager sebagai primary key lookup
+    doc_id = Column(String, unique=True, nullable=True, index=True)
+    document_title = Column(String, nullable=True)   # Judul dokumen human-readable
+    original_filename = Column(String, nullable=True) # Nama file asli dari user upload
+    file_size = Column(Integer, default=0)            # Ukuran file dalam bytes
+    file_path = Column(String, nullable=True)         # Path file lengkap di disk
+    chunk_count = Column(Integer, default=0)          # Jumlah chunk yang tersimpan
 
     # Relationships
     chunks = relationship(
@@ -105,10 +112,11 @@ class Chunk(Base):
     document_id = Column(Integer, ForeignKey("documents.id"), nullable=False)
     chunk_text = Column(Text, nullable=False)
     chunk_index = Column(Integer, nullable=False)
-    chunk_metadata = Column(
-        Text, nullable=True
-    )  # JSON metadata (renamed from metadata)
+    chunk_metadata = Column(Text, nullable=True)  # JSON: bab, pasal, ayat, context_header, dll
     created_at = Column(DateTime, default=datetime.utcnow)
+
+    # === Kolom tambahan untuk rich metadata (Phase 1) ===
+    chunk_type = Column(String, default="text", nullable=True)  # 'pasal', 'table', 'section', dll
 
     # Relationships
     document = relationship("Document", back_populates="chunks")

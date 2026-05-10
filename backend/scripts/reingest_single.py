@@ -60,6 +60,10 @@ def reingest_single(pdf_path: str):
     db.commit()
     db.refresh(document)
     
+    from app.core.rag.langchain_engine import langchain_engine
+    if not langchain_engine._initialized:
+        langchain_engine.initialize()
+        
     # 3. Process
     result = processor.process_document(
         pdf_path=str(path_obj),
@@ -78,6 +82,9 @@ def reingest_single(pdf_path: str):
     db.close()
 
 if __name__ == "__main__":
-    target_pdf = r"D:\aqil\pusdatik\data\documents\audit\20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf"
+    if len(sys.argv) > 1:
+        target_pdf = sys.argv[1]
+    else:
+        target_pdf = r"D:\aqil\pusdatik\data\documents\audit\20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf"
     logger.info(f"Re-ingesting single file: {target_pdf}")
     reingest_single(target_pdf)

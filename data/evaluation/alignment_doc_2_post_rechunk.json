@@ -1,0 +1,124 @@
+{
+  "document": {
+    "id": 2,
+    "filename": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+    "status": "completed",
+    "doc_type": "pedoman_spbe",
+    "db_chunk_count": 1215,
+    "api_chunk_count": 1215,
+    "source_pdf": "D:\\aqil\\pusdatik\\data\\documents\\pedoman\\PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf"
+  },
+  "source_marker_counts": {
+    "bab": 5,
+    "pasal": 11,
+    "domain": 6,
+    "indikator": 92
+  },
+  "chunk_text_marker_counts": {
+    "bab": 0,
+    "pasal": 16,
+    "domain": 2,
+    "indikator": 104
+  },
+  "chunk_metadata_non_empty": {
+    "bab": 245,
+    "pasal": 0,
+    "domain": 0,
+    "indikator": 0
+  },
+  "source_bab_labels": [
+    "BAB I",
+    "BAB II",
+    "BAB III",
+    "BAB IV",
+    "BAB V"
+  ],
+  "chunk_bab_labels": [
+    "BAB I - PENDAHULUAN",
+    "BAB II - INSTRUMEN PEMANTAUAN DAN EVALUASI SPBE",
+    "BAB III - TATA CARA DAN KAIDAH PENILAIAN PEMANTAUAN DAN EVALUASI SPBE",
+    "BAB IV - ETIKA ASESOR PEMANTAUAN DAN EVALUASI SPBE",
+    "BAB V - PENUTUP"
+  ],
+  "source_bab_labels_normalized": [
+    "BAB I",
+    "BAB II",
+    "BAB III",
+    "BAB IV",
+    "BAB V"
+  ],
+  "chunk_bab_labels_normalized": [
+    "BAB I",
+    "BAB II",
+    "BAB III",
+    "BAB IV",
+    "BAB V"
+  ],
+  "missing_bab_labels": [],
+  "assessment": {
+    "bab_alignment": "ok",
+    "overall": "ok"
+  },
+  "sample_chunks": [
+    {
+      "chunk_index": 0,
+      "bab": "BAB I - PENDAHULUAN",
+      "pasal": "",
+      "text_prefix": "Sistem  Pemerintahan  Berbasis  Elektronik  (SPBE)  merupakan  penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan  komunikasi dalam rangka meningkatkan kualitas"
+    },
+    {
+      "chunk_index": 1,
+      "bab": "BAB I - PENDAHULUAN",
+      "pasal": "",
+      "text_prefix": "Indonesia Nomor 95 Tahun  2018 tentang Sistem Pemerintahan Berbasis Elektronik (Perpres SPBE).  Pelaksanaan SPBE menjadi fondasi serta sebagai pengungkit (enabler) dari  reformasi "
+    },
+    {
+      "chunk_index": 2,
+      "bab": "BAB I - PENDAHULUAN",
+      "pasal": "",
+      "text_prefix": "yang integratif, dinamis, transparan, dan inovatif pada Instansi  Pusat dan Pemerintah Daerah.    SALINAN    Upaya untuk mendorong perkembangan keterpaduan penerapan SPBE  pada Ins"
+    },
+    {
+      "chunk_index": 3,
+      "bab": "BAB I - PENDAHULUAN",
+      "pasal": "",
+      "text_prefix": "digital pada Instansi Pusat dan Pemerintah Daerah  harus selaras dengan Arsitektur SPBE Nasional. Selain itu, pada tahun 2023  telah ditetapkan Peraturan Presiden Nomor 82 Tahun 20"
+    },
+    {
+      "chunk_index": 4,
+      "bab": "BAB I - PENDAHULUAN",
+      "pasal": "",
+      "text_prefix": "oleh Tim Koordinasi SPBE Nasional, maka  dilakukan kegiatan pemantauan dan evaluasi SPBE. Pada tahun 2020, Menteri  Pendayagunaan Aparatur Negara dan Reformasi Birokrasi (PANRB) Se"
+    },
+    {
+      "chunk_index": 5,
+      "bab": "BAB I - PENDAHULUAN",
+      "pasal": "",
+      "text_prefix": "PANRB Nomor 59 Tahun 2020 tentang Pemantauan dan  Evaluasi Sistem Pemerintahan Berbasis Elektronik. Dengan adanya Peraturan  Menteri sebagaimana dimaksud, diharapkan penerapan SPBE"
+    },
+    {
+      "chunk_index": 6,
+      "bab": "BAB I - PENDAHULUAN",
+      "pasal": "",
+      "text_prefix": "pelaksanaan, dan pelaporan atas pemantauan dan  evaluasi penerapan SPBE yang telah dilakukan. Selain itu, Peraturan Menteri  tersebut juga mengatur ruang lingkup pemantauan dan eva"
+    },
+    {
+      "chunk_index": 7,
+      "bab": "BAB I - PENDAHULUAN",
+      "pasal": "",
+      "text_prefix": "dapat menggambarkan hasil penyelenggaraan SPBE baik  pada Instansi Pusat maupun Pemerintah Daerah.  Hasil pelaksanaan pemantauan dan evaluasi SPBE diharapkan menjadi  tolok ukur ba"
+    },
+    {
+      "chunk_index": 8,
+      "bab": "BAB I - PENDAHULUAN",
+      "pasal": "",
+      "text_prefix": "PANRB No. 59 Tahun 2020,  sebagaimana tergambar dalam tabel di bawah ini.           Tabel 1. Indeks SPBE Nasional (2021 – 2023)  Deskripsi  2021  2022  2023  Indeks SPBE  Nasional "
+    },
+    {
+      "chunk_index": 9,
+      "bab": "BAB I - PENDAHULUAN",
+      "pasal": "",
+      "text_prefix": "sebagaimana dimaksud  secara umum menunjukkan peningkatan dari tahun ke tahun, namun  dinamika perkembangan strategis penyelarasan implementasinya terdapat  Indeks Domain yang masi"
+    }
+  ]
+}

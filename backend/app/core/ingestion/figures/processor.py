@@ -164,11 +164,16 @@ def process_figures(
         page_order.setdefault(img.page, []).append(img.figure_id)
 
     results: List[FigureExtraction] = []
+    seen_hashes: set = set()  # prevent identical background images from creating duplicate entries
     for img in images:
         h = image_hash(img.image_path)
         if h in cache_by_hash:
-            logger.debug(f"Cache hit: {img.figure_id}")
-            results.append(cache_by_hash[h])
+            if h not in seen_hashes:
+                logger.debug(f"Cache hit: {img.figure_id}")
+                results.append(cache_by_hash[h])
+                seen_hashes.add(h)
+            else:
+                logger.debug(f"  {img.figure_id} → duplicate image (hash already seen), skipped")
             continue
 
         order_in_page = page_order[img.page].index(img.figure_id)

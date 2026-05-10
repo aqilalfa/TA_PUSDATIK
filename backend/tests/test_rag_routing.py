@@ -62,3 +62,38 @@ def test_build_doc_filter_without_doc_id():
     engine = LangchainRAGEngine.__new__(LangchainRAGEngine)
     assert engine._build_doc_filter(None) is None
     assert engine._build_doc_filter("") is None
+
+
+def test_doc_scoped_retrieval_does_not_fallback(monkeypatch):
+    """
+    Doc-scoped retrieval must NOT fallback to unscoped search.
+    This test should fail before CR-01 fix and pass after.
+    """
+    import app.core.rag.langchain_engine as le
+    from app.core.rag.langchain_engine import LangchainRAGEngine
+
+    engine = LangchainRAGEngine.__new__(LangchainRAGEngine)
+    engine._initialized = True
+    engine.top_k = 4
+
+    # Force a doc filter to be present
+    monkeypatch.setattr(engine, "_build_doc_filter", lambda d: object())
+    monkeypatch.setattr(le, "expand_query", lambda q: [q])
+    monkeypatch.setattr(le, "classify_query", lambda q: "general")
+
+    calls = []
+
+    def fake_run_hybrid_retrieval(**kwargs):
+        calls.append(kwargs)
+        return []
+
+    monkeypatch.setattr(engine, "_run_hybrid_retrieval", fake_run_hybrid_retrieval)
+
+    engine.retrieve_context("apa itu spbe?", doc_id="doc-123")
+
+    assert len(calls) == 1, (
+        "Doc-scoped retrieval should not fallback to unscoped search when empty."
+    )
+    assert calls[0].get("qdrant_filter") is not None, (
+        "First retrieval must be doc-scoped (qdrant_filter present)."
+    )

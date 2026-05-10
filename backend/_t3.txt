@@ -1,0 +1,27 @@
+event: retrieval
+data: {"count": 4}
+
+event: token
+data: {"t": "Berdasarkan konteks referensi yang tersedia, berikut adalah rincian isi dari **Tabel 13** yang tercantum dalam dokumen:\n\n**Tabel 13. Hasil Evaluasi SPBE Instansi Pusat** [1]\n\n*   *"}
+
+event: token
+data: {"t": "*Sekretariat Kabinet**\n    *   Nilai D1: 3,10 [1]\n    *   Nilai D2: 2,40 [1]\n    *   Nilai D3: 1,73 [1]\n    *   Nilai D4: 3,54 [1]\n    *   Indeks: 2,90 [1]\n    *   Predikat: Baik ["}
+
+event: token
+data: {"t": "1]\n\n*   **Kejaksaan Agung**\n    *   Nilai D1: 5,00 [1]\n    *   Nilai D2: 4,00 [1]\n    *   Nilai D3: 3,27 [1]\n    *   Nilai D4: 4,26 [1]\n    *   Indeks: 4,13 [1]\n    *   Predikat: S"}
+
+event: token
+data: {"t": "angat Baik [1]\n\n*   **Sekretariat Jenderal Majelis Permusyawaratan Rakyat**\n    *   Nilai D1: 3,20 [1]\n    *   Nilai D2: 2,80 [1]\n    *   Nilai D3: 1,64 [1]\n    *   Nilai D4: 3,55 "}
+
+event: token
+data: {"t": "[1]\n    *   Indeks: 3,00 [1]\n    *   Predikat: Baik [1]\n\n*   **Sekretariat Jenderal Dewan Perwakilan Rakyat**\n    *   Nilai D1: 4,70 [1]\n    *   Nilai D2: 4,00 [1]\n    *   Nilai D3"}
+
+event: token
+data: {"t": ": 3,64 [1]\n    *   Nilai D4: 4,45 [1]\n    *   Indeks: 4,23 [1]\n    *   Predikat: Memuaskan [1]\n\nInformasi di atas diambil dari **Tabel 13. Hasil Evaluasi SPBE Instansi Pusat** yang"}
+
+event: token
+data: {"t": " terdapat dalam Laporan Pelaksanaan Evaluasi SPBE 2024 [1]."}
+
+event: complete
+data: {"session_id": "e502c85f-1767-44eb-b179-6cb0dd10b86d", "answer": "Berdasarkan konteks referensi yang tersedia, berikut adalah rincian isi dari Tabel 13 yang tercantum dalam dokumen:\n\nTabel 13. Hasil Evaluasi SPBE Instansi Pusat [1]\n\n* Sekretariat Kabinet\n * Nilai D1: 3,10 [1]\n * Nilai D2: 2,40 [1]\n * Nilai D3: 1,73 [1]\n * Nilai D4: 3,54 [1]\n * Indeks: 2,90 [1]\n * Predikat: Baik [1]\n\n* Kejaksaan Agung\n * Nilai D1: 5,00 [1]\n * Nilai D2: 4,00 [1]\n * Nilai D3: 3,27 [1]\n * Nilai D4: 4,26 [1]\n * Indeks: 4,13 [1]\n * Predikat: Sangat Baik [1]\n\n* Sekretariat Jenderal Majelis Permusyawaratan Rakyat\n * Nilai D1: 3,20 [1]\n * Nilai D2: 2,80 [1]\n * Nilai D3: 1,64 [1]\n * Nilai D4: 3,55 [1]\n * Indeks: 3,00 [1]\n * Predikat: Baik [1]\n\n* Sekretariat Jenderal Dewan Perwakilan Rakyat\n * Nilai D1: 4,70 [1]\n * Nilai D2: 4,00 [1]\n * Nilai D3: 3,64 [1]\n * Nilai D4: 4,45 [1]\n * Indeks: 4,23 [1]\n * Predikat: Memuaskan [1]\n\nInformasi di atas diambil dari Tabel 13. Hasil Evaluasi SPBE Instansi Pusat yang terdapat dalam Laporan Pelaksanaan Evaluasi SPBE 2024 [1].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024 | Hasil Evaluasi SPBE Instansi Pusat", "sources": [{"id": 1, "document": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024", "document_short": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024", "citation_title": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024", "citation_label": "[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024", "section": "Hasil Evaluasi SPBE Instansi Pusat", "pasal": "", "ayat": "", "context_header": "", "hierarchy_path": "", "score": 0.005210170987993479}, {"id": 2, "document": "Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik", "document_short": "Peraturan 59 Tahun 2020", "citation_title": "Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik", "citation_label": "[2] Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik", "section": "BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE > LAMPIRAN", "pasal": "", "ayat": "", "context_header": "", "hierarchy_path": "", "score": 0.001224983367137611}, {"id": 3, "document": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024", "document_short": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024", "citation_title": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024", "citation_label": "[3] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024", "section": "Daftar Tabel", "pasal": "", "ayat": "", "context_header": "", "hierarchy_path": "", "score": 3.7319146940717474e-05}, {"id": 4, "document": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024", "document_short": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024", "citation_title": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024", "citation_label": "[4] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024", "section": "Daftar Tabel", "pasal": "", "ayat": "", "context_header": "", "hierarchy_path": "", "score": 3.7298228562576696e-05}], "timing": {"total_ms": 154371}, "model_used": "qwen3.5:4b", "validation": {"is_valid": true, "has_citations": true, "warnings": [], "confidence": "high", "citation_count": 26, "metadata_audit": {"enabled": true, "is_consistent": true, "checked_segments": 0, "checked_claims": 0, "mismatch_count": 0, "unverifiable_count": 0, "mismatches": [], "unverifiable": []}}, "quality_check": {"score": 28, "needs_retry": false, "retry_reasons": [], "focus_coverage": 1.0, "has_unavailable_claim": false, "unavailable_triggers_active": []}}
+

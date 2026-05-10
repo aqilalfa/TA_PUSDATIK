@@ -6,6 +6,7 @@ from fastapi import APIRouter, HTTPException, UploadFile, File, Query
 from pydantic import BaseModel
 from typing import Optional, List, Dict, Any
 from loguru import logger
+from app.config import settings
 
 router = APIRouter(prefix="/api/documents", tags=["Documents"])
 
@@ -28,10 +29,13 @@ class ChunkResponse(BaseModel):
     text: str
     raw_text: Optional[str] = None
     context_header: Optional[str] = None
+    hierarchy: Optional[str] = None
     bab: Optional[str] = None
     bagian: Optional[str] = None
     pasal: Optional[str] = None
     ayat: Optional[str] = None
+    chunk_part: Optional[int] = None
+    chunk_parts_total: Optional[int] = None
     is_parent: bool = False
     is_indexed: bool = False
 
@@ -151,15 +155,16 @@ async def get_document(doc_id: str):
 @router.get("/{doc_id}/chunks", response_model=List[ChunkResponse])
 async def get_chunks(doc_id: str, limit: int = 50, offset: int = 0):
     try:
-        from app.core.database import get_chunks, get_document
+        from app.core.ingestion.document_manager import get_document_manager
         import httpx
 
-        doc = get_document(doc_id)
+        manager = get_document_manager()
+        doc = manager.get_document(doc_id)
         if not doc:
             raise HTTPException(404, f"Dokumen tidak ditemukan: {doc_id}")
 
-        # First try to get from SQLite
-        chunks = get_chunks(doc_id, limit=limit, offset=offset)
+        # First try to get from SQLite via ORM
+        chunks = manager.get_chunks(doc_id, limit=limit, offset=offset)
 
         # If no chunks in SQLite and doc is legacy (indexed), get from Qdrant
         if not chunks and doc.get("status") == "indexed":
@@ -167,8 +172,8 @@ async def get_chunks(doc_id: str, limit: int = 50, offset: int = 0):
             if document_title:
                 try:
                     # Query Qdrant by document_title
-                    qdrant_url = "http://localhost:6333"
-                    collection_name = "document_chunks"
+                    qdrant_url = settings.QDRANT_URL
+                    collection_name = settings.QDRANT_COLLECTION
 
                     resp = httpx.post(
                         f"{qdrant_url}/collections/{collection_name}/points/scroll",
@@ -210,10 +215,13 @@ async def get_chunks(doc_id: str, limit: int = 50, offset: int = 0):
                                 context_header=p.get("payload", {}).get(
                                     "context_header", ""
                                 ),
+                                hierarchy=p.get("payload", {}).get("hierarchy", ""),
                                 bab=p.get("payload", {}).get("bab", ""),
                                 bagian=p.get("payload", {}).get("bagian", ""),
                                 pasal=p.get("payload", {}).get("pasal", ""),
                                 ayat=p.get("payload", {}).get("ayat", ""),
+                                chunk_part=p.get("payload", {}).get("chunk_part"),
+                                chunk_parts_total=p.get("payload", {}).get("chunk_parts_total"),
                                 is_parent=bool(p.get("payload", {}).get("is_parent")),
                                 is_indexed=True,
                             )
@@ -229,10 +237,13 @@ async def get_chunks(doc_id: str, limit: int = 50, offset: int = 0):
                 text=c["text"],
                 raw_text=c.get("raw_text"),
                 context_header=c.get("context_header"),
+                hierarchy=c.get("hierarchy"),
                 bab=c.get("bab"),
                 bagian=c.get("bagian"),
                 pasal=c.get("pasal"),
                 ayat=c.get("ayat"),
+                chunk_part=c.get("chunk_part"),
+                chunk_parts_total=c.get("chunk_parts_total"),
                 is_parent=bool(c.get("is_parent")),
                 is_indexed=bool(c.get("is_indexed")),
             )
@@ -248,9 +259,10 @@ async def get_chunks(doc_id: str, limit: int = 50, offset: int = 0):
 @router.put("/chunks/{chunk_id}", response_model=MessageResponse)
 async def update_chunk(chunk_id: int, request: ChunkUpdateRequest):
     try:
-        from app.core.database import update_chunk
+        from app.core.ingestion.document_manager import get_document_manager
 
-        success = update_chunk(chunk_id, request.text)
+        manager = get_document_manager()
+        success = manager.update_chunk(chunk_id, request.text)
         if not success:
             raise HTTPException(404, f"Chunk tidak ditemukan: {chunk_id}")
         return MessageResponse(message=f"Chunk {chunk_id} diperbarui")
@@ -264,9 +276,10 @@ async def update_chunk(chunk_id: int, request: ChunkUpdateRequest):
 @router.delete("/chunks/{chunk_id}", response_model=MessageResponse)
 async def delete_single_chunk(chunk_id: int):
     try:
-        from app.core.database import delete_chunk
+        from app.core.ingestion.document_manager import get_document_manager
 
-        success = delete_chunk(chunk_id)
+        manager = get_document_manager()
+        success = manager.delete_chunk(chunk_id)
         if not success:
             raise HTTPException(404, f"Chunk tidak ditemukan: {chunk_id}")
         return MessageResponse(message=f"Chunk {chunk_id} dihapus")
@@ -294,6 +307,7 @@ async def delete_document(doc_id: str):
 class SyncResponse(BaseModel):
     total_in_qdrant: int
     imported: int
+    updated: int = 0
     skipped: int
     status: str
     error: Optional[str] = None

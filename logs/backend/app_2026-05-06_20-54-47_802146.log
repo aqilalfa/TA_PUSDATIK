@@ -1,0 +1,33 @@
+2026-05-06 20:54:47.830 | INFO     | app.main:lifespan:40 - 🚀 Starting SPBE RAG System...
+2026-05-06 20:54:47.831 | INFO     | app.main:lifespan:41 - Environment: development
+2026-05-06 20:54:47.831 | INFO     | app.main:lifespan:42 - Debug mode: True
+2026-05-06 20:54:47.872 | SUCCESS  | app.main:lifespan:47 - ✓ Database initialized
+2026-05-06 20:54:47.874 | DEBUG    | migration_001:run:56 - Migration 001: documents table sudah up-to-date
+2026-05-06 20:54:47.875 | DEBUG    | migration_001:run:75 - Migration 001: chunks table sudah up-to-date
+2026-05-06 20:54:47.894 | INFO     | app.main:lifespan:77 - ✓ Default user exists (id=1)
+2026-05-06 20:54:47.896 | INFO     | app.main:lifespan:87 - ⏳ Pre-loading embedding model (this may take 30-60s)...
+2026-05-06 20:54:47.897 | INFO     | app.core.rag.langchain_engine:initialize:98 - Loading embedding model & connecting to Qdrant...
+2026-05-06 20:54:58.794 | WARNING  | app.core.rag.langchain_engine:_load_bm25:239 - Failed to load BM25 index: BM25 payload missing keys: doc_ids, corpus_texts
+2026-05-06 20:54:58.806 | SUCCESS  | app.core.rag.langchain_engine:initialize:117 - Embedding model & Qdrant ready.
+2026-05-06 20:54:58.807 | SUCCESS  | app.main:lifespan:89 - ✓ RAG engine ready
+2026-05-06 20:54:58.807 | SUCCESS  | app.main:lifespan:93 - ✓ Application startup complete
+2026-05-06 20:55:24.603 | INFO     | app.core.ingestion.document_manager:preview_chunks:1144 - Extracting text from: D:\aqil\pusdatik\data\documents\peraturan\Perpres Nomor 82 Tahun 2023.pdf
+2026-05-06 20:55:29.080 | INFO     | app.core.ingestion.marker_converter:is_available:245 - Marker library is available
+2026-05-06 20:55:29.080 | INFO     | app.core.ingestion.document_manager:extract_text_from_pdf:93 - Ekstraksi dengan Marker: Perpres Nomor 82 Tahun 2023.pdf
+2026-05-06 20:55:29.512 | DEBUG    | app.core.ingestion.marker_converter:convert:385 - GPU Memory: 4096MB free / 4096MB total
+2026-05-06 20:55:29.512 | INFO     | app.core.ingestion.marker_converter:_run_marker_conversion:453 - Loading Marker models (pertama kali mungkin lambat)...
+2026-05-06 20:56:11.513 | INFO     | app.core.ingestion.marker_converter:_run_marker_conversion:463 - Converting 13 halaman...
+2026-05-06 20:57:21.805 | ERROR    | app.core.ingestion.marker_converter:convert:419 - Marker error (attempt 1): vram_insufficient
+  Detail: CUDA out of memory. Tried to allocate 186.00 MiB. GPU 0 has a total capacity of 4.00 GiB of which 0 bytes is free. Of the allocated memory 5.02 GiB is allocated by PyTorch, and 235.33 MiB is reserved 
+  File: Perpres Nomor 82 Tahun 2023.pdf (13 pages, 1.0MB)
+  Elapsed: 112.7s
+2026-05-06 20:57:21.840 | INFO     | app.core.ingestion.marker_converter:convert:378 - Retry attempt 1/2
+2026-05-06 20:57:27.002 | DEBUG    | app.core.ingestion.marker_converter:clear_gpu_memory:133 - Cleared GPU memory cache
+2026-05-06 20:57:32.032 | DEBUG    | app.core.ingestion.marker_converter:convert:385 - GPU Memory: -906MB free / 4096MB total
+2026-05-06 20:57:32.383 | ERROR    | app.core.ingestion.marker_converter:convert:419 - Marker error (attempt 2): unknown
+  Detail: The paging file is too small for this operation to complete. (os error 1455)
+  File: Perpres Nomor 82 Tahun 2023.pdf (13 pages, 1.0MB)
+  Elapsed: 123.3s
+2026-05-06 20:57:32.393 | INFO     | app.core.ingestion.marker_converter:convert:378 - Retry attempt 2/2
+2026-05-06 20:57:33.982 | DEBUG    | app.core.ingestion.marker_converter:clear_gpu_memory:133 - Cleared GPU memory cache
+2026-05-06 20:57:38.984 | DEBUG    | app.core.ingestion.marker_converter:convert:385 - GPU Memory: 254MB free / 4096MB total

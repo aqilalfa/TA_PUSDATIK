@@ -1,0 +1,9 @@
+## Summary
+- Mengupdate parser SPBE untuk mengekstrak data capaian instansi dari tabel rekapitulasi Laporan 2024.
+- Menambahkan kapabilitas query ranking (`tertinggi`, `terendah`, dll.) untuk menjawab pertanyaan analitik nilai instansi.
+- Mengeksekusi re-ingest laporan 2024 sehingga 594 instansi berhasil diekstrak indeks SPBE-nya.
+
+## Test Plan
+- [x] Laporan 2024 masuk ke vector store sebagai `laporan_spbe` dengan metadata `indeks_spbe` lengkap.
+- [x] Test `test_parse_laporan_2024_extracts_capaian` pada modul ingest.
+- [x] RAG merespons query tertinggi/terendah dengan menampilkan data ranking instansi yang disuntikkan secara dinamis (bukan vector search murni).

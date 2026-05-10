@@ -1,0 +1,353 @@
+{
+  "generated_at": "2026-04-21T09:53:11.995562",
+  "endpoint": "http://localhost:8000/api/chat/stream",
+  "model": "qwen3.5:4b",
+  "summary": {
+    "total": 14,
+    "passed": 9,
+    "failed": 5,
+    "correct_failed": 5,
+    "complete_failed": 5,
+    "failed_tables": [
+      2,
+      4,
+      5,
+      6,
+      9
+    ],
+    "top_failure_reasons": [
+      [
+        "jawaban memuat frasa unavailable",
+        5
+      ]
+    ]
+  },
+  "conclusion": "Sebagian jawaban tabel belum konsisten benar dan lengkap. Tabel yang perlu follow-up: T2, T4, T5, T6, T9. Penyebab dominan: jawaban memuat frasa unavailable (5x). Kesimpulan: masih perlu tuning retrieval/ranking/format jawaban pada tabel gagal sebelum dapat dianggap stabil penuh.",
+  "results": [
+    {
+      "table": 1,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 1? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "PASS",
+      "is_correct": true,
+      "is_complete": true,
+      "answer_len": 3037,
+      "source_count": 8,
+      "permenpan_source_count": 5,
+      "list_items": 12,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [
+        11,
+        14
+      ],
+      "quality_score": 23,
+      "focus_coverage": 1.0,
+      "unavailable_triggers_active": [],
+      "unavailable_trigger_phrases": [],
+      "notes": [],
+      "preview": "Berdasarkan dokumen yang diberikan, isi dari Tabel 1 dalam Peraturan Menteri PANRB Nomor 59 Tahun 2020 mengenai Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik memiliki dua konteks utama yang tercantum dalam referensi:  1. T"
+    },
+    {
+      "table": 2,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 2? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 1373,
+      "source_count": 8,
+      "permenpan_source_count": 5,
+      "list_items": 5,
+      "negative_hits": [
+        "tidak tercantum"
+      ],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "quality_score": 21,
+      "focus_coverage": 1.0,
+      "unavailable_triggers_active": [],
+      "unavailable_trigger_phrases": [],
+      "notes": [
+        "jawaban memuat frasa unavailable"
+      ],
+      "preview": "Berdasarkan dokumen Peraturan 59 Tahun 2020, isi dari Tabel 2 adalah Kriteria Tingkat Kematangan Kapabilitas Layanan. Tabel ini menjelaskan bahwa tingkat kematangan kapabilitas layanan diukur dengan 5 (lima) tingkatan, yaitu informasi, inte"
+    },
+    {
+      "table": 3,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 3? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "PASS",
+      "is_correct": true,
+      "is_complete": true,
+      "answer_len": 1748,
+      "source_count": 8,
+      "permenpan_source_count": 4,
+      "list_items": 8,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "quality_score": 21,
+      "focus_coverage": 1.0,
+      "unavailable_triggers_active": [],
+      "unavailable_trigger_phrases": [],
+      "notes": [],
+      "preview": "Berdasarkan dokumen yang diberikan, isi Tabel 3 pada Peraturan 59 Tahun 2020 adalah daftar indikator pada Domain Kebijakan SPBE, yang secara spesifik mencantumkan Aspek 1 (Kebijakan Internal Tata Kelola SPBE) beserta indikator-indikatornya."
+    },
+    {
+      "table": 4,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 4? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 1251,
+      "source_count": 8,
+      "permenpan_source_count": 7,
+      "list_items": 3,
+      "negative_hits": [
+        "tidak tersedia"
+      ],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "quality_score": 20,
+      "focus_coverage": 1.0,
+      "unavailable_triggers_active": [],
+      "unavailable_trigger_phrases": [],
+      "notes": [
+        "jawaban memuat frasa unavailable"
+      ],
+      "preview": "Berdasarkan dokumen Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik, isi dari Tabel 4 yang tersedia dalam konteks adalah Daftar Indikator pada Domain Tata Kelola SPBE [1].  Berikut adalah rinc"
+    },
+    {
+      "table": 5,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 5? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 1601,
+      "source_count": 8,
+      "permenpan_source_count": 8,
+      "list_items": 6,
+      "negative_hits": [
+        "tidak tersedia"
+      ],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "quality_score": 23,
+      "focus_coverage": 1.0,
+      "unavailable_triggers_active": [],
+      "unavailable_trigger_phrases": [],
+      "notes": [
+        "jawaban memuat frasa unavailable"
+      ],
+      "preview": "Berdasarkan dokumen yang diberikan, isi dari Tabel 5 pada Peraturan Menteri PAN RB Nomor 59 Tahun 2020 adalah daftar indikator pada Domain Manajemen SPBE. Berikut adalah rincian poin utamanya secara lengkap:  * Tabel 5 secara spesifik memua"
+    },
+    {
+      "table": 6,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 6? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 1684,
+      "source_count": 8,
+      "permenpan_source_count": 8,
+      "list_items": 11,
+      "negative_hits": [
+        "tidak tersedia"
+      ],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "quality_score": 22,
+      "focus_coverage": 1.0,
+      "unavailable_triggers_active": [],
+      "unavailable_trigger_phrases": [],
+      "notes": [
+        "jawaban memuat frasa unavailable"
+      ],
+      "preview": "Berdasarkan dokumen Peraturan 59 Tahun 2020, isi dari Tabel 6 yang tersedia dalam konteks adalah daftar indikator pada Domain Layanan SPBE. Berikut adalah rincian poin utamanya secara lengkap:  * Tabel 6 memuat daftar indikator yang digunak"
+    },
+    {
+      "table": 7,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 7? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "PASS",
+      "is_correct": true,
+      "is_complete": true,
+      "answer_len": 1289,
+      "source_count": 8,
+      "permenpan_source_count": 7,
+      "list_items": 10,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "quality_score": 21,
+      "focus_coverage": 1.0,
+      "unavailable_triggers_active": [],
+      "unavailable_trigger_phrases": [],
+      "notes": [],
+      "preview": "Berdasarkan dokumen yang diberikan, isi dari Tabel 7 dalam Peraturan 59 Tahun 2020 adalah Bobot Domain pada struktur penilaian tingkat kematangan Sistem Pemerintahan Berbasis Elektronik (SPBE). Tabel ini menyajikan nilai persentase bobot un"
+    },
+    {
+      "table": 8,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 8? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "PASS",
+      "is_correct": true,
+      "is_complete": true,
+      "answer_len": 3054,
+      "source_count": 8,
+      "permenpan_source_count": 8,
+      "list_items": 21,
+      "negative_hits": [],
+      "expected_hits": 2,
+      "expected_total": 2,
+      "other_table_refs": [
+        11
+      ],
+      "quality_score": 34,
+      "focus_coverage": 1.0,
+      "unavailable_triggers_active": [],
+      "unavailable_trigger_phrases": [],
+      "notes": [],
+      "preview": "Berdasarkan dokumen yang diberikan, isi dari Tabel 8 pada Peraturan Menteri PAN RB Nomor 59 Tahun 2020 bervariasi tergantung pada bab yang merujuk, namun secara spesifik dalam konteks pertanyaan mengenai rincian tahap kegiatan, Tabel 8 yang"
+    },
+    {
+      "table": 9,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 9? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "FAIL",
+      "is_correct": false,
+      "is_complete": false,
+      "answer_len": 2093,
+      "source_count": 8,
+      "permenpan_source_count": 7,
+      "list_items": 9,
+      "negative_hits": [
+        "tidak tercantum"
+      ],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "quality_score": 23,
+      "focus_coverage": 1.0,
+      "unavailable_triggers_active": [],
+      "unavailable_trigger_phrases": [],
+      "notes": [
+        "jawaban memuat frasa unavailable"
+      ],
+      "preview": "Berdasarkan dokumen yang tersedia, isi dari Tabel 9 dalam Peraturan Menteri PANRB Nomor 59 Tahun 2020 adalah mengenai Bobot Indikator pada Domain Kebijakan [1].  Poin utama dari Tabel 9 tersebut adalah sebagai berikut:  1. Objek Tabel: Tabe"
+    },
+    {
+      "table": 10,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 10? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "PASS",
+      "is_correct": true,
+      "is_complete": true,
+      "answer_len": 2349,
+      "source_count": 8,
+      "permenpan_source_count": 6,
+      "list_items": 7,
+      "negative_hits": [],
+      "expected_hits": 1,
+      "expected_total": 2,
+      "other_table_refs": [
+        14
+      ],
+      "quality_score": 34,
+      "focus_coverage": 1.0,
+      "unavailable_triggers_active": [],
+      "unavailable_trigger_phrases": [],
+      "notes": [],
+      "preview": "Berdasarkan dokumen Peraturan 59 Tahun 2020, isi dari Tabel 10 yang tersedia dalam konteks merujuk pada Contoh Penghitungan Indeks Aspek, bukan tahap-tahap kegiatan. Berikut adalah rincian poin utamanya berdasarkan bagian tabel yang tersedi"
+    },
+    {
+      "table": 11,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 11? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "PASS",
+      "is_correct": true,
+      "is_complete": true,
+      "answer_len": 2287,
+      "source_count": 8,
+      "permenpan_source_count": 8,
+      "list_items": 9,
+      "negative_hits": [],
+      "expected_hits": 0,
+      "expected_total": 0,
+      "other_table_refs": [],
+      "quality_score": 23,
+      "focus_coverage": 1.0,
+      "unavailable_triggers_active": [],
+      "unavailable_trigger_phrases": [],
+      "notes": [],
+      "preview": "Berdasarkan dokumen Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik, isi dari Tabel 11 yang tersedia dalam konteks adalah Contoh Penghitungan Indeks Domain [2].  Berikut adalah rincian poin ut"
+    },
+    {
+      "table": 12,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 12? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "PASS",
+      "is_correct": true,
+      "is_complete": true,
+      "answer_len": 2018,
+      "source_count": 8,
+      "permenpan_source_count": 8,
+      "list_items": 9,
+      "negative_hits": [],
+      "expected_hits": 1,
+      "expected_total": 2,
+      "other_table_refs": [
+        14
+      ],
+      "quality_score": 34,
+      "focus_coverage": 1.0,
+      "unavailable_triggers_active": [],
+      "unavailable_trigger_phrases": [],
+      "notes": [],
+      "preview": "Berdasarkan dokumen Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik, isi dari Tabel 12 yang tercantum pada konteks adalah Contoh Penghitungan Indeks SPBE [1].  Berikut adalah rincian poin utam"
+    },
+    {
+      "table": 13,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 13? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "PASS",
+      "is_correct": true,
+      "is_complete": true,
+      "answer_len": 1100,
+      "source_count": 8,
+      "permenpan_source_count": 8,
+      "list_items": 5,
+      "negative_hits": [],
+      "expected_hits": 4,
+      "expected_total": 4,
+      "other_table_refs": [],
+      "quality_score": 19,
+      "focus_coverage": 1.0,
+      "unavailable_triggers_active": [],
+      "unavailable_trigger_phrases": [],
+      "notes": [],
+      "preview": "Berdasarkan dokumen Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik, isi dari Tabel 13 yang tersedia dalam konteks adalah Predikat Penilaian SPBE yang mengaitkan nilai indeks dengan tingkat ke"
+    },
+    {
+      "table": 14,
+      "query": "Pada Permenpan RB Nomor 59 Tahun 2020, apa isi dari Tabel 14? Jelaskan poin utamanya secara ringkas namun lengkap.",
+      "verdict": "PASS",
+      "is_correct": true,
+      "is_complete": true,
+      "answer_len": 1109,
+      "source_count": 8,
+      "permenpan_source_count": 8,
+      "list_items": 7,
+      "negative_hits": [],
+      "expected_hits": 1,
+      "expected_total": 3,
+      "other_table_refs": [],
+      "quality_score": 30,
+      "focus_coverage": 1.0,
+      "unavailable_triggers_active": [],
+      "unavailable_trigger_phrases": [],
+      "notes": [
+        "keyword penting tabel belum cukup terpenuhi"
+      ],
+      "preview": "Berdasarkan dokumen yang tersedia, isi dari Tabel 14 pada Peraturan Menteri PAN RB Nomor 59 Tahun 2020 adalah Perbandingan Pemantauan dan Evaluasi SPBE [1].  Tabel tersebut membandingkan dua kegiatan utama, yaitu Pemantauan SPBE dan Evaluas"
+    }
+  ]
+}
