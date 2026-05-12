@@ -41,6 +41,7 @@ def init_database():
         Document,
         Chunk,
         EvaluationResult,
+        AuditLog,
     )
 
     Base.metadata.create_all(bind=engine)

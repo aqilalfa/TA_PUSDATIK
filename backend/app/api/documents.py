@@ -77,232 +77,92 @@ class MessageResponse(BaseModel):
     success: bool = True
 
 
+from fastapi import APIRouter, HTTPException, UploadFile, File, Query, Depends
+
 def get_manager():
     from app.core.ingestion.document_manager import get_document_manager
-
     return get_document_manager()
 
-
 @router.post("/upload", response_model=UploadResponse)
-async def upload_document(file: UploadFile = File(...)):
+async def upload_document(
+    file: UploadFile = File(...), 
+    manager=Depends(get_manager)
+):
     filename = file.filename or "document.pdf"
     if not filename.lower().endswith(".pdf"):
         raise HTTPException(400, "Hanya file PDF yang didukung")
     try:
         content = await file.read()
-        manager = get_manager()
         result = manager.upload_file(content, filename)
-        logger.info(f"Uploaded: {result['doc_id']} - {filename}")
         return UploadResponse(**result)
     except ValueError as e:
         raise HTTPException(400, str(e))
-    except Exception as e:
-        logger.error(f"Upload error: {e}")
-        raise HTTPException(500, f"Gagal mengupload: {e}")
-
 
 @router.post("/{doc_id}/preview", response_model=PreviewResponse)
-async def preview_chunks(doc_id: str):
+async def preview_chunks(doc_id: str, manager=Depends(get_manager)):
     try:
-        manager = get_manager()
         result = manager.preview_chunks(doc_id)
-        logger.info(f"Preview: {doc_id} - {result['total_chunks']} chunks")
         return PreviewResponse(**result)
     except ValueError as e:
         raise HTTPException(404, str(e))
-    except Exception as e:
-        logger.error(f"Preview error: {e}")
-        raise HTTPException(500, f"Gagal preview: {e}")
-
 
 @router.post("/{doc_id}/save", response_model=IndexResponse)
-async def save_document(doc_id: str):
+async def save_document(doc_id: str, manager=Depends(get_manager)):
     try:
-        manager = get_manager()
         result = manager.index_document(doc_id)
-        logger.info(f"Indexed: {doc_id} - {result['chunks_indexed']} chunks")
         return IndexResponse(**result)
     except ValueError as e:
         raise HTTPException(404, str(e))
-    except Exception as e:
-        logger.error(f"Index error: {e}")
-        raise HTTPException(500, f"Gagal index: {e}")
-
 
 @router.get("", response_model=List[DocumentResponse])
-async def list_documents():
-    try:
-        manager = get_manager()
-        docs = manager.list_documents()
-        return [DocumentResponse(**d) for d in docs]
-    except Exception as e:
-        logger.error(f"List error: {e}")
-        raise HTTPException(500, f"Gagal list: {e}")
-
+async def list_documents(manager=Depends(get_manager)):
+    return [DocumentResponse(**d) for d in manager.list_documents()]
 
 @router.get("/{doc_id}")
-async def get_document(doc_id: str):
+async def get_document(doc_id: str, manager=Depends(get_manager)):
     try:
-        manager = get_manager()
         return manager.get_document_detail(doc_id)
     except ValueError as e:
         raise HTTPException(404, str(e))
-    except Exception as e:
-        logger.error(f"Get doc error: {e}")
-        raise HTTPException(500, f"Gagal get: {e}")
-
 
 @router.get("/{doc_id}/chunks", response_model=List[ChunkResponse])
-async def get_chunks(doc_id: str, limit: int = 50, offset: int = 0):
+async def get_chunks(
+    doc_id: str, 
+    limit: int = 50, 
+    offset: int = 0, 
+    manager=Depends(get_manager)
+):
+    """Get chunks for a document. Handles both SQLite and Qdrant fallback automatically."""
     try:
-        from app.core.ingestion.document_manager import get_document_manager
-        import httpx
-
-        manager = get_document_manager()
-        doc = manager.get_document(doc_id)
-        if not doc:
-            raise HTTPException(404, f"Dokumen tidak ditemukan: {doc_id}")
-
-        # First try to get from SQLite via ORM
         chunks = manager.get_chunks(doc_id, limit=limit, offset=offset)
-
-        # If no chunks in SQLite and doc is legacy (indexed), get from Qdrant
-        if not chunks and doc.get("status") == "indexed":
-            document_title = doc.get("document_title", "")
-            if document_title:
-                try:
-                    # Query Qdrant by document_title
-                    qdrant_url = settings.QDRANT_URL
-                    collection_name = settings.QDRANT_COLLECTION
-
-                    resp = httpx.post(
-                        f"{qdrant_url}/collections/{collection_name}/points/scroll",
-                        json={
-                            "filter": {
-                                "must": [
-                                    {
-                                        "key": "document_title",
-                                        "match": {"value": document_title},
-                                    }
-                                ]
-                            },
-                            "limit": limit,
-                            "offset": offset,
-                            "with_payload": True,
-                            "with_vector": False,
-                        },
-                        timeout=30,
-                    )
-
-                    if resp.status_code == 200:
-                        points = resp.json().get("result", {}).get("points", [])
-
-                        # Sort points by chunk_index from payload (if available)
-                        # This ensures correct ordering even though Qdrant doesn't guarantee order
-                        sorted_points = sorted(
-                            points,
-                            key=lambda p: p.get("payload", {}).get(
-                                "chunk_index", 999999
-                            ),
-                        )
-
-                        return [
-                            ChunkResponse(
-                                id=i,
-                                chunk_index=p.get("payload", {}).get("chunk_index", i),
-                                text=p.get("payload", {}).get("text", ""),
-                                raw_text=p.get("payload", {}).get("raw_text", ""),
-                                context_header=p.get("payload", {}).get(
-                                    "context_header", ""
-                                ),
-                                hierarchy=p.get("payload", {}).get("hierarchy", ""),
-                                bab=p.get("payload", {}).get("bab", ""),
-                                bagian=p.get("payload", {}).get("bagian", ""),
-                                pasal=p.get("payload", {}).get("pasal", ""),
-                                ayat=p.get("payload", {}).get("ayat", ""),
-                                chunk_part=p.get("payload", {}).get("chunk_part"),
-                                chunk_parts_total=p.get("payload", {}).get("chunk_parts_total"),
-                                is_parent=bool(p.get("payload", {}).get("is_parent")),
-                                is_indexed=True,
-                            )
-                            for i, p in enumerate(sorted_points)
-                        ]
-                except Exception as e:
-                    logger.warning(f"Qdrant query failed: {e}")
-
-        return [
-            ChunkResponse(
-                id=c["id"],
-                chunk_index=c["chunk_index"],
-                text=c["text"],
-                raw_text=c.get("raw_text"),
-                context_header=c.get("context_header"),
-                hierarchy=c.get("hierarchy"),
-                bab=c.get("bab"),
-                bagian=c.get("bagian"),
-                pasal=c.get("pasal"),
-                ayat=c.get("ayat"),
-                chunk_part=c.get("chunk_part"),
-                chunk_parts_total=c.get("chunk_parts_total"),
-                is_parent=bool(c.get("is_parent")),
-                is_indexed=bool(c.get("is_indexed")),
-            )
-            for c in chunks
-        ]
+        if not chunks:
+            # Check if document exists at all
+            if not manager.get_document(doc_id):
+                raise HTTPException(404, f"Dokumen tidak ditemukan: {doc_id}")
+            return []
+            
+        return [ChunkResponse(**c) for c in chunks]
     except HTTPException:
         raise
     except Exception as e:
         logger.error(f"Get chunks error: {e}")
-        raise HTTPException(500, f"Gagal get chunks: {e}")
-
+        raise HTTPException(500, f"Gagal mengambil data chunk: {e}")
 
 @router.put("/chunks/{chunk_id}", response_model=MessageResponse)
-async def update_chunk(chunk_id: int, request: ChunkUpdateRequest):
-    try:
-        from app.core.ingestion.document_manager import get_document_manager
-
-        manager = get_document_manager()
-        success = manager.update_chunk(chunk_id, request.text)
-        if not success:
-            raise HTTPException(404, f"Chunk tidak ditemukan: {chunk_id}")
-        return MessageResponse(message=f"Chunk {chunk_id} diperbarui")
-    except HTTPException:
-        raise
-    except Exception as e:
-        logger.error(f"Update chunk error: {e}")
-        raise HTTPException(500, f"Gagal update: {e}")
-
+async def update_chunk(
+    chunk_id: int, 
+    request: ChunkUpdateRequest, 
+    manager=Depends(get_manager)
+):
+    if not manager.update_chunk(chunk_id, request.text):
+        raise HTTPException(404, f"Chunk {chunk_id} tidak ditemukan")
+    return MessageResponse(message=f"Chunk {chunk_id} diperbarui")
 
 @router.delete("/chunks/{chunk_id}", response_model=MessageResponse)
-async def delete_single_chunk(chunk_id: int):
-    try:
-        from app.core.ingestion.document_manager import get_document_manager
-
-        manager = get_document_manager()
-        success = manager.delete_chunk(chunk_id)
-        if not success:
-            raise HTTPException(404, f"Chunk tidak ditemukan: {chunk_id}")
-        return MessageResponse(message=f"Chunk {chunk_id} dihapus")
-    except HTTPException:
-        raise
-    except Exception as e:
-        logger.error(f"Delete chunk error: {e}")
-        raise HTTPException(500, f"Gagal delete: {e}")
-
-
-@router.delete("/{doc_id}", response_model=DeleteResponse)
-async def delete_document(doc_id: str):
-    try:
-        manager = get_manager()
-        result = manager.delete_document(doc_id)
-        logger.info(f"Deleted: {doc_id}")
-        return DeleteResponse(**result)
-    except ValueError as e:
-        raise HTTPException(404, str(e))
-    except Exception as e:
-        logger.error(f"Delete error: {e}")
-        raise HTTPException(500, f"Gagal delete: {e}")
-
+async def delete_single_chunk(chunk_id: int, manager=Depends(get_manager)):
+    if not manager.delete_chunk(chunk_id):
+        raise HTTPException(404, f"Chunk {chunk_id} tidak ditemukan")
+    return MessageResponse(message=f"Chunk {chunk_id} dihapus")
 
 class SyncResponse(BaseModel):
     total_in_qdrant: int
@@ -311,17 +171,18 @@ class SyncResponse(BaseModel):
     skipped: int
     status: str
     error: Optional[str] = None
-
+@router.delete("/{doc_id}", response_model=DeleteResponse)
+async def delete_document(doc_id: str, manager=Depends(get_manager)):
+    try:
+        result = manager.delete_document(doc_id)
+        return DeleteResponse(**result)
+    except ValueError as e:
+        raise HTTPException(404, str(e))
 
 @router.post("/sync", response_model=SyncResponse)
-async def sync_from_qdrant():
-    """Sync documents from Qdrant to SQLite.
-
-    Scans existing Qdrant collection and imports document metadata
-    to SQLite for display in the document management UI.
-    """
+async def sync_from_qdrant(manager=Depends(get_manager)):
+    """Sync documents from Qdrant to SQLite."""
     try:
-        manager = get_manager()
         result = manager.sync_from_qdrant()
         return SyncResponse(**result)
     except Exception as e:

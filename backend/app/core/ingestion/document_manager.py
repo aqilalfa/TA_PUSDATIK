@@ -604,6 +604,8 @@ def split_legal_document(
                 "chunk_index": chunk_index,
                 "chunk_type": chunk_type,
                 "table_context": table_context,
+                "table_label": table_label,
+                "is_table": is_table,
                 "section": context_header if is_table else "",
             }
         )
@@ -656,38 +658,54 @@ class DocumentManager:
         }
 
     @staticmethod
-    def _chunk_to_dict(chunk, chunk_metadata: dict = None) -> Dict[str, Any]:
-        """Convert ORM Chunk object ke dict format yang kompatibel dengan callers."""
-        meta = chunk_metadata or {}
-        if not meta and chunk.chunk_metadata:
+    def _chunk_to_dict(chunk=None, payload: dict = None) -> Dict[str, Any]:
+        """Unified mapper from ORM Chunk or Qdrant Payload to a standard dictionary."""
+        data = payload or {}
+        if chunk:
+            data = {
+                "id": chunk.id,
+                "chunk_index": chunk.chunk_index,
+                "text": chunk.chunk_text or "",
+                "raw_text": chunk.chunk_text or "",
+                "is_indexed": True,
+            }
+            if chunk.chunk_metadata:
+                try:
+                    import json
+                    meta = json.loads(chunk.chunk_metadata)
+                    data.update(meta)
+                except Exception:
+                    pass
+        
+        def _to_int(val, default=None):
             try:
-                import json
-                meta = json.loads(chunk.chunk_metadata)
-            except Exception:
-                meta = {}
+                return int(val) if val is not None else default
+            except (ValueError, TypeError):
+                return default
+
+        # Standardize field names and types
         return {
-            "id": chunk.id,
-            "chunk_index": chunk.chunk_index,
-            "text": chunk.chunk_text or "",
-            "raw_text": chunk.chunk_text or "",
-            "context_header": meta.get("context_header", ""),
-            "document_title": meta.get("document_title", ""),
-            "hierarchy": meta.get("hierarchy", ""),
-            "filename": meta.get("filename", ""),
-            "doc_type": meta.get("doc_type", ""),
-            "bab": str(meta.get("bab", "")),
-            "bagian": str(meta.get("bagian", "")),
-            "pasal": str(meta.get("pasal", "")),
-            "ayat": str(meta.get("ayat", "")),
-            "chunk_part": meta.get("chunk_part"),
-            "chunk_parts_total": meta.get("chunk_parts_total"),
-            "parent_pasal_text": meta.get("parent_pasal_text", ""),
-            "is_parent": meta.get("is_parent", False),
-            "chunk_type": chunk.chunk_type or meta.get("chunk_type", "text"),
-            "section": meta.get("section", ""),
-            "table_context": meta.get("table_context", ""),
-            "original_table": meta.get("original_table", ""),
-            "is_indexed": True,
+            "id": data.get("id", 0),
+            "chunk_index": _to_int(data.get("chunk_index"), 0),
+            "text": data.get("text") or data.get("chunk_text") or "",
+            "raw_text": data.get("raw_text") or data.get("text") or "",
+            "context_header": data.get("context_header", ""),
+            "document_title": data.get("document_title", ""),
+            "hierarchy": data.get("hierarchy", ""),
+            "filename": data.get("filename", ""),
+            "doc_type": data.get("doc_type", ""),
+            "bab": str(data.get("bab", "")),
+            "bagian": str(data.get("bagian", "")),
+            "pasal": str(data.get("pasal", "")),
+            "ayat": str(data.get("ayat", "")),
+            "chunk_part": _to_int(data.get("chunk_part")),
+            "chunk_parts_total": _to_int(data.get("chunk_parts_total")),
+            "parent_pasal_text": data.get("parent_pasal_text", ""),
+            "is_parent": bool(data.get("is_parent", False)),
+            "chunk_type": data.get("chunk_type", "text"),
+            "section": data.get("section", ""),
+            "table_context": data.get("table_context", ""),
+            "is_indexed": data.get("is_indexed", True),
         }
 
     # ── Document CRUD (ORM) ───────────────────────────────────────
@@ -875,6 +893,8 @@ class DocumentManager:
                     "parent_pasal_text": chunk.get("parent_pasal_text", ""),
                     "is_parent": chunk.get("is_parent", False),
                     "section": chunk.get("section", ""),
+                    "is_table": chunk.get("is_table", False),
+                    "table_label": chunk.get("table_label", ""),
                     "table_context": chunk.get("table_context", ""),
                     "original_table": chunk.get("original_table", ""),
                     "chunk_type": chunk.get("chunk_type", "text"),
@@ -902,29 +922,78 @@ class DocumentManager:
             db.close()
 
     def get_chunks(self, doc_id: str, limit: int = 100, offset: int = 0) -> List[Dict[str, Any]]:
-        """Get chunks for a document via ORM."""
+        """Get chunks for a document via ORM with automatic fallback to Qdrant for legacy docs."""
         from app.models.db_models import Document, Chunk
         db = self._get_db()
         try:
-            doc = db.query(Document).filter(Document.doc_id == doc_id).first()
-            if not doc and doc_id.isdigit():
-                doc = db.query(Document).filter(Document.id == int(doc_id)).first()
-            if not doc:
+            doc_obj = db.query(Document).filter(Document.doc_id == doc_id).first()
+            if not doc_obj and doc_id.isdigit():
+                doc_obj = db.query(Document).filter(Document.id == int(doc_id)).first()
+            
+            if not doc_obj:
                 return []
+
+            # 1. Try SQLite first
             chunks = (
                 db.query(Chunk)
-                .filter(Chunk.document_id == doc.id)
+                .filter(Chunk.document_id == doc_obj.id)
                 .order_by(Chunk.chunk_index)
                 .limit(limit)
                 .offset(offset)
                 .all()
             )
-            return [self._chunk_to_dict(c) for c in chunks]
+            if chunks:
+                return [self._chunk_to_dict(chunk=c) for c in chunks]
+
+            # 2. Fallback to Qdrant if document is "indexed" but has no local chunks
+            if doc_obj.status == "indexed":
+                return self._get_chunks_from_qdrant(doc_obj.document_title, limit, offset)
+            
+            return []
         except Exception as e:
-            logger.warning(f"get_chunks ORM error: {e}")
+            logger.warning(f"get_chunks error: {e}")
             return []
         finally:
             db.close()
+
+    def _get_chunks_from_qdrant(self, document_title: str, limit: int, offset: int) -> List[Dict[str, Any]]:
+        """Private helper to fetch chunks directly from Qdrant by document title."""
+        if not document_title:
+            return []
+        
+        import httpx
+        try:
+            resp = httpx.post(
+                f"{settings.QDRANT_URL}/collections/{settings.QDRANT_COLLECTION}/points/scroll",
+                json={
+                    "filter": {
+                        "must": [{"key": "document_title", "match": {"value": document_title}}]
+                    },
+                    "limit": limit,
+                    "offset": offset,
+                    "with_payload": True,
+                },
+                timeout=20,
+            )
+            if resp.status_code != 200:
+                return []
+
+            points = resp.json().get("result", {}).get("points", [])
+            # Qdrant scroll doesn't guarantee order, so we sort by chunk_index manually
+            sorted_points = sorted(
+                points, 
+                key=lambda p: p.get("payload", {}).get("chunk_index", 999)
+            )
+
+            results = []
+            for i, p in enumerate(sorted_points):
+                payload = p.get("payload", {})
+                # Use i as fallback ID if Qdrant point ID is not integer
+                results.append(self._chunk_to_dict(payload={**payload, "id": i}))
+            return results
+        except Exception as e:
+            logger.error(f"Qdrant fallback fetch failed: {e}")
+            return []
 
     def get_chunk_count(self, doc_id: str) -> int:
         """Get chunk count for a document via ORM."""
@@ -1497,6 +1566,8 @@ class DocumentManager:
                         "doc_id": doc_id,
                         "chunk_type": chunk.get("chunk_type", "text"),
                         "section": chunk.get("section", ""),
+                        "is_table": chunk.get("is_table", False),
+                        "table_label": chunk.get("table_label", ""),
                         "table_context": chunk.get("table_context", ""),
                         "original_table": chunk.get("original_table", ""),
                     },

@@ -49,19 +49,17 @@ describe('SourceCard', () => {
     expect(wrapper.find('.expand-snippet').exists()).toBe(false)
   })
 
-  it('calls window.open with correct URL on click when doc_id present', async () => {
+  it('calls window.open with correct context URL on click when doc_id present', async () => {
     vi.spyOn(window, 'open').mockImplementation(() => null)
     const wrapper = mount(SourceCard, { props: { source: baseSource } })
-    await wrapper.find('.source-card-wrapper').trigger('click')
+    await wrapper.find('.action-btn.ctx').trigger('click')
     expect(window.open).toHaveBeenCalledWith('/documents/doc-abc', '_blank', 'noopener,noreferrer')
   })
 
-  it('does not call window.open when doc_id is empty', async () => {
-    vi.spyOn(window, 'open').mockImplementation(() => null)
+  it('does not render context button when doc_id is empty', async () => {
     const wrapper = mount(SourceCard, {
       props: { source: { ...baseSource, doc_id: '' } }
     })
-    await wrapper.find('.source-card-wrapper').trigger('click')
-    expect(window.open).not.toHaveBeenCalled()
+    expect(wrapper.find('.action-btn.ctx').exists()).toBe(false)
   })
 })

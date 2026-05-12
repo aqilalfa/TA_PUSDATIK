@@ -12,6 +12,7 @@ from app.config import settings
 from app.api.routes import health, users, sessions, chat, models
 from app.api.documents import router as doc_mgmt_router
 from app.api.rag_documents import router as rag_doc_router
+from app.api.auth_routes import router as auth_router
 from app.database import init_database, SessionLocal
 
 # Silence noisy SQLAlchemy SQL logging
@@ -38,16 +39,16 @@ logger.add(
 async def lifespan(app: FastAPI):
     """Lifespan context manager for startup and shutdown events"""
     # Startup
-    logger.info("🚀 Starting SPBE RAG System...")
+    logger.info("[START] Starting SPBE RAG System...")
     logger.info(f"Environment: {settings.ENVIRONMENT}")
     logger.info(f"Debug mode: {settings.DEBUG}")
 
     # Initialize database (ORM create_all)
     try:
         init_database()
-        logger.success("✓ Database initialized")
+        logger.success("[OK] Database initialized")
     except Exception as e:
-        logger.error(f"✗ Database initialization failed: {e}")
+        logger.error(f"[FAIL] Database initialization failed: {e}")
 
     # Jalankan schema migrations (idempotent — aman dipanggil setiap startup)
     try:
@@ -61,7 +62,7 @@ async def lifespan(app: FastAPI):
         _db_path = str(_engine.url).replace("sqlite:///", "").replace("sqlite://", "")
         _migration.run(_db_path)
     except Exception as e:
-        logger.warning(f"⚠ Schema migration warning: {e}")
+        logger.warning(f"[WARN] Schema migration warning: {e}")
 
     # Pastikan default user (id=1) ada — dibutuhkan oleh chat session system
     try:
@@ -73,25 +74,56 @@ async def lifespan(app: FastAPI):
                 default_user = User(id=1, name="Default User", email=None)
                 db.add(default_user)
                 db.commit()
-                logger.success("✓ Default user created (id=1)")
+                logger.success("[OK] Default user created (id=1)")
             else:
-                logger.info("✓ Default user exists (id=1)")
+                logger.info("[OK] Default user exists (id=1)")
+                
+            # Create Test Users for JWT Auth
+            from app.auth.local_authenticator import get_password_hash
+            test_pwd_hash = get_password_hash('password123')
+            
+            admin_user = db.query(User).filter(User.email == "admin@bssn.go.id").first()
+            if not admin_user:
+                admin_user = User(
+                    name="Admin PUSDATIK", 
+                    email="admin@bssn.go.id",
+                    hashed_password=test_pwd_hash,
+                    roles='["admin_pusdatik"]',
+                    department="PUSDATIK"
+                )
+                db.add(admin_user)
+                db.commit()
+                logger.success("[OK] Test user created: admin@bssn.go.id (pw: password123)")
+                
+            eval_user = db.query(User).filter(User.email == "evaluator@bssn.go.id").first()
+            if not eval_user:
+                eval_user = User(
+                    name="Evaluator SPBE", 
+                    email="evaluator@bssn.go.id",
+                    hashed_password=test_pwd_hash,
+                    roles='["evaluator_spbe"]',
+                    department="DEPUTI_EVALUASI"
+                )
+                db.add(eval_user)
+                db.commit()
+                logger.success("[OK] Test user created: evaluator@bssn.go.id (pw: password123)")
+                
         finally:
             db.close()
     except Exception as e:
-        logger.warning(f"⚠ Could not ensure default user: {e}")
+        logger.warning(f"[WARN] Could not ensure default user: {e}")
 
     # Pre-load embedding model & Qdrant connection in background thread
     # This prevents the first chat request from blocking the async event loop
     try:
         from app.core.rag.langchain_engine import langchain_engine
-        logger.info("⏳ Pre-loading embedding model (this may take 30-60s)...")
+        logger.info("[WAIT] Pre-loading embedding model (this may take 30-60s)...")
         await langchain_engine.preload()
-        logger.success("✓ RAG engine ready")
+        logger.success("[OK] RAG engine ready")
     except Exception as e:
-        logger.warning(f"⚠ RAG engine preload failed (will retry on first request): {e}")
+        logger.warning(f"[WARN] RAG engine preload failed (will retry on first request): {e}")
 
-    logger.success("✓ Application startup complete")
+    logger.success("[OK] Application startup complete")
 
     yield
 
@@ -119,6 +151,7 @@ app.add_middleware(
 )
 
 # Include routers
+app.include_router(auth_router, prefix="/api/auth", tags=["Auth"])
 app.include_router(health.router, prefix="/api", tags=["Health"])
 app.include_router(users.router, prefix="/api/users", tags=["Users"])
 app.include_router(sessions.router, prefix="/api/sessions", tags=["Sessions"])

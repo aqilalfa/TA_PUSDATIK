@@ -1,80 +1,106 @@
 ---
 phase: manual-code-review
-reviewed: 2026-05-06T00:00:00Z
+reviewed: 2026-05-11T00:00:00Z
 depth: standard
-files_reviewed: 5
+files_reviewed: 7
 files_reviewed_list:
   - backend/app/core/rag/langchain_engine.py
+  - backend/app/core/rag/engine/retrievers.py
+  - backend/app/core/rag/engine/context_stitching.py
+  - backend/app/core/rag/engine/rankers.py
   - backend/app/core/ingestion/document_manager.py
-  - backend/app/core/rag/prompts.py
   - backend/app/api/routes/chat.py
-  - backend/app/core/ingestion/structured_chunker.py
+  - backend/app/core/rag/prompts.py
 findings:
   critical: 1
-  warning: 5
+  warning: 4
   info: 0
-  total: 6
+  total: 5
 status: issues_found
 ---
 # Phase manual-code-review: Code Review Report
 
-**Reviewed:** 2026-05-06T00:00:00Z  
+**Reviewed:** 2026-05-11T00:00:00Z  
 **Depth:** standard  
-**Files Reviewed:** 5  
+**Files Reviewed:** 7  
 **Status:** issues_found
 
 ## Summary
 
-Reviewed core RAG retrieval, ingestion, prompts, and chat streaming. Found one critical data-scoping bug and multiple retrieval-quality regressions in BM25 metadata and peraturan chunking.
+Reviewed retrieval and citation flow after modularization. Found one critical doc scoping mismatch plus four warning-level issues that can cause table retrieval drift, citation mislabeling after stitching, missing neighbors in multi-doc pools, and citation validation false negatives.
 
 ## Critical Issues
 
-### CR-01: Doc-scoped retrieval filter mismatches Qdrant payload
+### CR-01: Doc-scoped filters target the wrong payload field
 
-**File:** `backend/app/core/rag/langchain_engine.py:172-182`
-**Issue:** `_build_doc_filter` targets `metadata.document_id` (numeric DB id), but ingestion stores `doc_id` as a top-level payload field. The filter matches zero points, triggering the unscoped fallback path (lines 1343-1347) and returning cross-document context when a `doc_id` was provided.
+**File:** `backend/app/core/rag/langchain_engine.py:143-148`  
+**File:** `backend/app/core/rag/engine/retrievers.py:81-86`  
+**File:** `backend/app/core/rag/engine/retrievers.py:140-142`  
+**File:** `backend/app/core/ingestion/document_manager.py:1540-1557`
+
+**Issue:** Retrieval filters use `document_id`, while Qdrant payloads store `doc_id`. When a document filter is requested, the filter matches zero points, letting cross-document candidates into RRF and producing incorrect citations for scoped queries.
+
 **Fix:**
 ```python
-# Option A: filter by doc_id string (payload top-level)
-return Filter(must=[FieldCondition(key="doc_id", match=MatchValue(value=doc_id))])
-
-# Option B: store document_id in payload during ingestion, then keep metadata.document_id
+# Align filters to payload keys and allow legacy fallback if needed.
+Filter(must=[FieldCondition(key="doc_id", match=MatchValue(value=str(doc_id)))])
+# Optionally add a should-condition for document_id to support legacy payloads.
 ```
 
 ## Warnings
 
-### WR-01: BM25 doc-scoped filtering drops all results
+### WR-01: Table metadata is computed but not persisted; literal search targets the wrong field
 
-**File:** `backend/app/core/rag/langchain_engine.py:167,294`
-**Issue:** `_resolve_doc_target` returns the stored filename (`row.filename`), but `_bm25_search` filters chunks by `metadata["filename"]`. BM25 metadata does not include `filename` in `_rebuild_bm25_index`, so doc-scoped BM25 queries always empty out.
-**Fix:** Use `doc_id` for BM25 filtering, or include both `filename` and `original_filename` in BM25 metadata and compare against the correct field.
+**File:** `backend/app/core/ingestion/document_manager.py:535-608`  
+**File:** `backend/app/core/ingestion/document_manager.py:335-352`  
+**File:** `backend/app/core/ingestion/document_manager.py:1539-1560`  
+**File:** `backend/app/core/rag/engine/retrievers.py:81-84`  
+**File:** `backend/app/core/rag/engine/rankers.py:116-129`
 
-### WR-02: BM25 metadata omits table-specific fields used by ranking
+**Issue:** `table_label` and `is_table` are derived but never persisted into chunk metadata or Qdrant payloads, so the table-aware boost in `RAGRanker` never triggers. Additionally, `table_literal_search` tries an exact match against `table_context`, which is stored as surrounding prose, not the literal label (for example, `Tabel 13`). This combination makes table queries drift into non-table chunks and can produce missing or wrong citations.
 
-**File:** `backend/app/core/ingestion/document_manager.py:1588-1596`
-**Issue:** `_rebuild_bm25_index` only stores a minimal metadata set and drops `chunk_type`, `is_table`, `table_label`, `table_context`, etc. `_table_literal_search` and `_query_metadata_boost` rely on these flags (langchain_engine.py:373,1121), so table boosting never triggers for BM25 docs.
-**Fix:** Persist table-related fields into BM25 metadata (at least `chunk_type`, `is_table`, `table_label`, `table_context`).
+**Fix:**
+- Persist `is_table` and `table_label` in chunk dicts, `chunk_metadata`, BM25 metadata, and Qdrant payloads.
+- Change literal search to match `table_label` (or use `MatchText` on `text`/`context_header`).
 
-### WR-03: Inconsistent "Pasal" prefix on peraturan ayat chunks
+### WR-02: Neighbor stitching can merge cross-section text under a single citation
 
-**File:** `backend/app/core/ingestion/structured_chunker.py:441-462`
-**Issue:** Intermediate ayat buffers are flushed without a "Pasal X" prefix, while the final buffer includes it. Early chunks lose explicit Pasal context in their text, reducing retrieval for Pasal-specific queries.
-**Fix:** Prepend `Pasal {pasal_nomor}` consistently for all buffer flushes.
+**File:** `backend/app/core/rag/engine/context_stitching.py:143-164`
 
-### WR-04: Hard 10,000-chunk limits cause silent truncation
+**Issue:** Neighbor chunks are merged into one document while retaining only the center metadata. If a neighboring chunk crosses into another Pasal/section, citations in the merged context can point to the wrong Pasal or hierarchy label.
 
-**File:** `backend/app/core/ingestion/document_manager.py:1531,1578`
-**Issue:** Both `index_document` and `_rebuild_bm25_index` cap chunks at 10,000 without warning. Large documents silently lose tail chunks in Qdrant/BM25.
-**Fix:** Paginate chunk retrieval or warn/abort when `total_chunks > limit`.
+**Fix:**
+- Only stitch neighbors that share the same `pasal`/`context_header`/`hierarchy`.
+- Or keep neighbors as separate docs and update sources accordingly.
 
-### WR-05: Unvalidated pickle load of BM25 index
+### WR-03: Global neighbor index pruning can drop valid neighbors across multiple docs
 
-**File:** `backend/app/core/rag/langchain_engine.py:207`
-**Issue:** `pickle.load` executes arbitrary code if the BM25 index file is tampered. In a shared environment this is a security risk.
-**Fix:** Restrict file permissions and validate file origin/hash, or switch to a safer serialization format.
+**File:** `backend/app/core/rag/engine/context_stitching.py:26-36`
+
+**Issue:** Neighbor indices are computed globally and center indices are removed across all documents. When one doc's center index matches another doc's neighbor index, the neighbor is removed for both, reducing context coverage and potentially omitting citations.
+
+**Fix:**
+- Track neighbor indices per `doc_id` or filter per document rather than using a global set.
+
+### WR-04: Citation validation counts duplicate source lines, masking invalid citations
+
+**File:** `backend/app/core/rag/langchain_engine.py:212-234`  
+**File:** `backend/app/core/rag/prompts.py:556`
+
+**Issue:** Context formatting prints `[n]` entries in both the summary and detail sections. `validate_answer` counts these lines to determine `context_sources`, which effectively doubles the source count and can allow out-of-range citations to pass validation.
+
+**Fix:**
+- Use `len(sources)` directly for validation, or de-duplicate source indices from context before counting.
+
+## Missing Tests
+
+- Doc-scoped retrieval: verify that vector, table-literal, and indicator-literal searches honor `doc_id` and never return cross-document chunks.
+- Table queries: ensure `table_label`/`is_table` are persisted and that table literal search hits the intended chunks.
+- Stitching boundaries: confirm that stitched contexts do not mix Pasal/section metadata, and that sources remain accurate.
+- Citation validation: assert that citations beyond the real source count are flagged even when context contains multiple `[n]` sections.
 
 ---
 
-_Reviewed: 2026-05-06T00:00:00Z_  
+_Reviewed: 2026-05-11T00:00:00Z_  
 _Reviewer: the agent (gsd-code-reviewer)_  
 _Depth: standard_

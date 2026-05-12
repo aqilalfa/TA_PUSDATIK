@@ -1,0 +1,125 @@
+# Bootstrap LDIF for BSSN LDAP Directory
+# Creates BSSN organization structure with test users and groups
+
+# Organization
+dn: dc=bssn,dc=go,dc=id
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: Badan Siber dan Sandi Negara
+dc: bssn
+
+# Base OU for Users
+dn: ou=Users,dc=bssn,dc=go,dc=id
+objectClass: top
+objectClass: organizationalUnit
+ou: Users
+description: BSSN Users
+
+# Base OU for Groups
+dn: ou=Groups,dc=bssn,dc=go,dc=id
+objectClass: top
+objectClass: organizationalUnit
+ou: Groups
+description: BSSN Groups
+
+# ============================================================
+# GROUPS
+# ============================================================
+
+# Admin_PUSDATIK Group
+dn: cn=Admin_PUSDATIK,ou=Groups,dc=bssn,dc=go,dc=id
+objectClass: top
+objectClass: groupOfNames
+cn: Admin_PUSDATIK
+description: PUSDATIK Administrators
+member: cn=admin,ou=Users,dc=bssn,dc=go,dc=id
+
+# Evaluator_SPBE Group
+dn: cn=Evaluator_SPBE,ou=Groups,dc=bssn,dc=go,dc=id
+objectClass: top
+objectClass: groupOfNames
+cn: Evaluator_SPBE
+description: SPBE Evaluators
+member: cn=evaluator,ou=Users,dc=bssn,dc=go,dc=id
+
+# Staf_PUSDATIK Group
+dn: cn=Staf_PUSDATIK,ou=Groups,dc=bssn,dc=go,dc=id
+objectClass: top
+objectClass: groupOfNames
+cn: Staf_PUSDATIK
+description: PUSDATIK Staff
+member: cn=staff,ou=Users,dc=bssn,dc=go,dc=id
+member: cn=evaluator,ou=Users,dc=bssn,dc=go,dc=id
+
+# Manager_Evaluasi Group
+dn: cn=Manager_Evaluasi,ou=Groups,dc=bssn,dc=go,dc=id
+objectClass: top
+objectClass: groupOfNames
+cn: Manager_Evaluasi
+description: Evaluation Managers
+member: cn=admin,ou=Users,dc=bssn,dc=go,dc=id
+
+# ============================================================
+# USERS
+# ============================================================
+
+# Admin User - Member of Admin_PUSDATIK and Manager_Evaluasi
+dn: cn=admin,ou=Users,dc=bssn,dc=go,dc=id
+objectClass: top
+objectClass: inetOrgPerson
+cn: admin
+sn: Administrator
+givenName: Administrator
+displayName: Administrator BSSN
+uid: admin
+mail: admin@bssn.go.id
+userPassword: AdminPassword123!
+department: IT Security
+employeeID: EMP001
+description: BSSN System Administrator
+
+# Evaluator User - Member of Evaluator_SPBE and Staf_PUSDATIK
+dn: cn=evaluator,ou=Users,dc=bssn,dc=go,dc=id
+objectClass: top
+objectClass: inetOrgPerson
+cn: evaluator
+sn: Evaluator
+givenName: Evaluator
+displayName: Evaluator SPBE
+uid: evaluator
+mail: evaluator@bssn.go.id
+userPassword: EvaluatorPass123!
+department: Evaluation Division
+employeeID: EMP002
+description: SPBE Evaluator
+
+# Staff User - Member of Staf_PUSDATIK
+dn: cn=staff,ou=Users,dc=bssn,dc=go,dc=id
+objectClass: top
+objectClass: inetOrgPerson
+cn: staff
+sn: Staff
+givenName: Staff
+displayName: Staff PUSDATIK
+uid: staff
+mail: staff@bssn.go.id
+userPassword: StaffPass123!
+department: Operations
+employeeID: EMP003
+description: PUSDATIK Staff Member
+
+# Test User - No group memberships
+dn: cn=testuser,ou=Users,dc=bssn,dc=go,dc=id
+objectClass: top
+objectClass: inetOrgPerson
+cn: testuser
+sn: Test
+givenName: Test
+displayName: Test User
+uid: testuser
+mail: testuser@bssn.go.id
+userPassword: TestPass123!
+department: Testing Division
+employeeID: EMP999
+description: Test User for Integration Testing

@@ -20,6 +20,24 @@ class Settings(BaseSettings):
     DEBUG: bool = True
     RELOAD: bool = True
 
+    # Authentication provider selection
+    AUTH_PROVIDER: str = "local"
+    LDAP_ENABLED: bool = False
+    LDAP_FALLBACK_TO_LOCAL: bool = True
+
+    # LDAP / Active Directory
+    LDAP_SERVER_URL: str = "ldap://ad.bssn.go.id:389"
+    LDAP_BASE_DN: str = "dc=bssn,dc=go,dc=id"
+    LDAP_DOMAIN: str = "bssn.go.id"
+    LDAP_TIMEOUT: int = 10
+    LDAP_RETRY_COUNT: int = 2
+
+    # Authentication & JWT
+    JWT_SECRET_KEY: str = "local-development-secret-key-change-in-prod-12345"
+    JWT_ALGORITHM: str = "HS256"
+    JWT_ACCESS_TOKEN_EXPIRE_HOURS: int = 8
+    JWT_REFRESH_TOKEN_EXPIRE_DAYS: int = 7
+
     # Qdrant
     QDRANT_URL: str = "http://localhost:6333"
     QDRANT_HOST: str = "localhost"  # For docker-compose
@@ -34,7 +52,7 @@ class Settings(BaseSettings):
     OLLAMA_BASE_URL: str = "http://localhost:11434"
     DEFAULT_MODEL_FILE: str = "data/default_model.json"
     MODEL_N_GPU_LAYERS: int = 35
-    MODEL_N_CTX: int = 8192
+    MODEL_N_CTX: int = 4096
     MODEL_N_BATCH: int = 512
     MODEL_TEMP: float = 0.1
     MODEL_TOP_P: float = 0.95
@@ -59,8 +77,8 @@ class Settings(BaseSettings):
     DATABASE_URL: str = "sqlite:////app/database/spbe_rag.db"
 
     # RAG Configuration
-    VECTOR_SEARCH_TOP_K: int = 20
-    BM25_TOP_K: int = 20
+    VECTOR_SEARCH_TOP_K: int = 12
+    BM25_TOP_K: int = 12
     HYBRID_ALPHA: float = 0.6
     RETRIEVAL_TOP_K: int = 10
     CHUNK_SIZE: int = 600

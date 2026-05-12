@@ -553,7 +553,8 @@ def validate_answer(answer: str, context: str, sources: Optional[List[Dict]] = N
         result["confidence"] = "low"
 
     # Check citation numbers are valid
-    context_sources = len(re.findall(r"^\[\d+\]", context, re.MULTILINE))
+    citation_matches = [int(n) for n in re.findall(r"^\[(\d+)\]", context, re.MULTILINE)]
+    context_sources = max(citation_matches) if citation_matches else 0
     for cite in citations:
         if int(cite) > context_sources:
             result["warnings"].append(

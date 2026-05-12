@@ -60,8 +60,9 @@ describe('injectCitationSpans', () => {
     const html = '<p>Pasal ini jelas [1] dan didukung [2].</p>'
     const result = injectCitationSpans(html)
 
-    expect(result).toContain('<span class="citation">1</span>')
-    expect(result).toContain('<span class="citation">2</span>')
+    expect(result).toContain('<button class="citation"')
+    expect(result).toContain('data-citation-id="1"')
+    expect(result).toContain('data-citation-id="2"')
     expect(result).not.toContain('[1]')
     expect(result).not.toContain('[2]')
   })

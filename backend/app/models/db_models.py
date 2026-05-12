@@ -25,6 +25,11 @@ class User(Base):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, nullable=False)
     email = Column(String, unique=True, nullable=True)
+    hashed_password = Column(String, nullable=True)
+    roles = Column(String, default="[]")  # JSON string of roles
+    department = Column(String, nullable=True)
+    auth_provider = Column(String, default="local")
+    external_id = Column(String, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
     last_active = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
@@ -32,6 +37,13 @@ class User(Base):
     sessions = relationship(
         "Session", back_populates="user", cascade="all, delete-orphan"
     )
+
+class TokenBlacklist(Base):
+    """Stores invalidated JWT tokens until their natural expiration"""
+    __tablename__ = "token_blacklist"
+
+    jti = Column(String, primary_key=True)
+    expires_at = Column(DateTime, nullable=False)
 
 
 class Session(Base):
@@ -134,3 +146,20 @@ class EvaluationResult(Base):
     score = Column(Float, nullable=True)
     notes = Column(Text, nullable=True)
     evaluated_at = Column(DateTime, default=datetime.utcnow)
+
+
+class AuditLog(Base):
+    """Audit logging model - tracks all security-relevant events"""
+
+    __tablename__ = "audit_logs"
+
+    id = Column(Integer, primary_key=True, index=True)
+    event_type = Column(String, nullable=False)  # LOGIN_ATTEMPT, LOGIN_SUCCESS, LOGIN_FAILURE, PBAC_DENIAL, TOKEN_REFRESH, LOGOUT, etc.
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=True)  # NULL if not yet authenticated
+    username = Column(String, nullable=False)  # Email or LDAP DN for traceability
+    action = Column(String, nullable=False)  # 'login', 'refresh', 'access_denied', etc.
+    resource = Column(String, nullable=False)  # API endpoint or resource accessed
+    status = Column(String, nullable=False)  # 'success', 'failure', 'denied', 'pending'
+    ip_address = Column(String, nullable=True)  # Client IP for geolocation/abuse detection
+    details = Column(Text, nullable=True)  # JSON: provider, reason, attempt_count, etc.
+    timestamp = Column(DateTime, default=datetime.utcnow, index=True)  # Indexed for range queries
