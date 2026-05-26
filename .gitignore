@@ -33,6 +33,7 @@ dist/
 
 # Environment
 .env
+.env.cloudflare
 .env.local
 .env.*.local
 

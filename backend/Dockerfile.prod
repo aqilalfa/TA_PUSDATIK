@@ -1,5 +1,5 @@
 # Stage 1: builder — install all Python packages
-FROM nvidia/cuda:12.6.3-cudnn-devel-ubuntu22.04 AS builder
+FROM python:3.10-slim-bookworm AS builder
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
@@ -7,29 +7,25 @@ ENV PYTHONUNBUFFERED=1 \
     DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y \
-    python3.10 \
-    python3-pip \
-    python3-dev \
     build-essential \
+    gcc \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /build
 
 COPY requirements.txt .
 
-RUN pip3 install --upgrade pip setuptools wheel && \
-    pip3 install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip setuptools wheel && \
+    pip install --no-cache-dir -r requirements.txt
 
 # Stage 2: runtime — lean image with only what's needed to run
-FROM nvidia/cuda:12.6.3-cudnn-runtime-ubuntu22.04
+FROM python:3.10-slim-bookworm
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y \
-    python3.10 \
-    python3-pip \
     curl \
     libgomp1 \
     libsm6 \
@@ -42,9 +38,8 @@ RUN apt-get update && apt-get install -y \
     poppler-utils \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy installed packages from builder (preserves .pth files and namespace packages)
-COPY --from=builder /usr/local/lib/python3.10/dist-packages /usr/local/lib/python3.10/dist-packages
-# Copy entry-point scripts (uvicorn, gunicorn, etc.) from builder
+# Copy installed packages and entry-point scripts from builder.
+COPY --from=builder /usr/local/lib/python3.10/site-packages /usr/local/lib/python3.10/site-packages
 COPY --from=builder /usr/local/bin /usr/local/bin
 
 WORKDIR /app
@@ -58,4 +53,4 @@ RUN mkdir -p /app/logs /app/models /app/data
 
 EXPOSE 8000
 
-CMD ["python3", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "2"]
+CMD ["python", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "2"]

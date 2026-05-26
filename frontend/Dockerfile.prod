@@ -1,13 +1,14 @@
 # Stage 1: build Vue app
-FROM node:18-alpine AS builder
+FROM node:22-alpine AS builder
 
 WORKDIR /app
 
 COPY package*.json ./
 RUN npm ci
 
-# Accept build-time API URL (injected by compose build args or CI/CD)
-ARG VITE_API_URL=http://localhost:8000
+# Accept build-time API URL (injected by compose build args or CI/CD).
+# Leave empty for same-origin deployment behind nginx/Cloudflare Tunnel.
+ARG VITE_API_URL=
 ENV VITE_API_URL=$VITE_API_URL
 
 COPY . .

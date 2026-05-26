@@ -12,7 +12,8 @@ services:
     networks:
       - spbe-network
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:6333/healthz"]
+      # qdrant/qdrant image does not include curl/wget; use bash TCP check.
+      test: ["CMD-SHELL", "bash -c '</dev/tcp/localhost/6333'"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -49,16 +50,6 @@ services:
       timeout: 10s
       retries: 5
       start_period: 60s
-    deploy:
-      resources:
-        limits:
-          memory: 8G
-        reservations:
-          memory: 4G
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
 
   # Frontend (nginx serving Vue build)
   frontend:
@@ -66,7 +57,9 @@ services:
       context: ./frontend
       dockerfile: Dockerfile.prod
       args:
-        VITE_API_URL: ${VITE_API_URL:-http://localhost:80}
+        # Empty means the frontend uses the browser's current origin.
+        # This is the safest default for Cloudflare Tunnel because /api is proxied by nginx.
+        VITE_API_URL: ${VITE_API_URL:-}
     container_name: spbe-frontend-prod
     ports:
       - "80:80"
