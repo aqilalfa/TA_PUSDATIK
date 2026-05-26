@@ -4,6 +4,7 @@ import uuid
 import json
 from fastapi import APIRouter, Depends, HTTPException, status, Response, Request
 from fastapi.security import OAuth2PasswordRequestForm
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 from loguru import logger
 
@@ -18,6 +19,69 @@ from app.dependencies.auth_dependencies import get_current_user
 from app.core.audit_service import get_audit_logger, AuditEventType
 
 router = APIRouter()
+
+REFRESH_COOKIE_NAME = "refresh_token"
+REFRESH_COOKIE_PATH = "/api/auth/refresh"
+
+
+def _cookie_secure() -> bool:
+    return settings.ENVIRONMENT.lower() == "production"
+
+
+def _set_refresh_cookie(response: Response, refresh_token: str) -> None:
+    secure = _cookie_secure()
+    response.set_cookie(
+        key=REFRESH_COOKIE_NAME,
+        value=refresh_token,
+        httponly=True,
+        secure=secure,
+        samesite="strict" if secure else "lax",
+        max_age=settings.JWT_REFRESH_TOKEN_EXPIRE_DAYS * 24 * 60 * 60,
+        path=REFRESH_COOKIE_PATH,
+    )
+
+
+def _clear_refresh_cookie(response: Response) -> None:
+    response.delete_cookie(REFRESH_COOKIE_NAME, path=REFRESH_COOKIE_PATH)
+
+
+def _build_access_token_data(user: User, roles: list[str], session_id: str) -> dict[str, Any]:
+    return {
+        "sub": user.email,
+        "username": user.name,
+        "roles": roles,
+        "dept": user.department or "",
+        "sid": session_id,
+        "auth_provider": user.auth_provider or "local",
+    }
+
+
+def _build_refresh_token_data(user: User, session_id: str) -> dict[str, Any]:
+    return {
+        "sub": user.email,
+        "sid": session_id,
+    }
+
+
+def _is_token_blacklisted(db: Session, jti: str | None) -> bool:
+    if not jti:
+        return True
+    return db.query(TokenBlacklist).filter(TokenBlacklist.jti == jti).first() is not None
+
+
+def _blacklist_token(db: Session, jti: str | None, exp: int | None) -> None:
+    if not jti or not exp:
+        return
+
+    blacklist_entry = TokenBlacklist(
+        jti=jti,
+        expires_at=datetime.fromtimestamp(exp, tz=timezone.utc),
+    )
+    db.add(blacklist_entry)
+    try:
+        db.commit()
+    except IntegrityError:
+        db.rollback()
 
 @router.post("/login")
 def login_for_access_token(
@@ -94,29 +158,13 @@ def login_for_access_token(
 
     # Generate tokens
     access_token = jwt_manager.create_access_token(
-        data={
-            "sub": user.email,
-            "username": user.name,
-            "roles": roles,
-            "dept": user.department or "",
-            "sid": session_id,
-            "auth_provider": user.auth_provider or "local",
-        }
+        data=_build_access_token_data(user, roles, session_id)
     )
     refresh_token = jwt_manager.create_refresh_token(
-        data={"sub": user.email, "sid": session_id}
+        data=_build_refresh_token_data(user, session_id)
     )
     
-    # Set HttpOnly cookie for refresh token
-    cookie_secure = settings.ENVIRONMENT.lower() == "production"
-    response.set_cookie(
-        key="refresh_token",
-        value=refresh_token,
-        httponly=True,
-        secure=cookie_secure,
-        samesite="strict" if cookie_secure else "lax",
-        max_age=7 * 24 * 60 * 60 # 7 days
-    )
+    _set_refresh_cookie(response, refresh_token)
     
     logger.info(f"User {user.email} logged in successfully")
     
@@ -156,12 +204,14 @@ def refresh_token(request: Request, response: Response, db: Session = Depends(ge
     client_ip = request.client.host if request.client else "unknown"
     audit_logger = get_audit_logger(session=db)
     
-    refresh_token_cookie = request.cookies.get("refresh_token")
+    refresh_token_cookie = request.cookies.get(REFRESH_COOKIE_NAME)
     if not refresh_token_cookie:
         raise HTTPException(status_code=401, detail="Refresh token missing")
         
     payload = jwt_manager.verify_token(refresh_token_cookie)
     if not payload or payload.get("type") != "refresh":
+        raise HTTPException(status_code=401, detail="Invalid refresh token")
+    if _is_token_blacklisted(db, payload.get("jti")):
         raise HTTPException(status_code=401, detail="Invalid refresh token")
         
     # Check if user still exists
@@ -169,11 +219,18 @@ def refresh_token(request: Request, response: Response, db: Session = Depends(ge
     user = db.query(User).filter(User.email == email).first()
     if not user:
         raise HTTPException(status_code=401, detail="User not found")
+    session_id = payload.get("sid") or str(uuid.uuid4())
+    roles = parse_roles(user.roles)
         
     # Generate new access token
     new_access_token = jwt_manager.create_access_token(
-        data={"sub": user.email, "roles": user.roles}
+        data=_build_access_token_data(user, roles, session_id)
     )
+    new_refresh_token = jwt_manager.create_refresh_token(
+        data=_build_refresh_token_data(user, session_id)
+    )
+    _blacklist_token(db, payload.get("jti"), payload.get("exp"))
+    _set_refresh_cookie(response, new_refresh_token)
     
     # Log token refresh
     audit_logger.log_event(
@@ -209,17 +266,11 @@ def logout(
         token = auth_header.split(" ")[1]
         payload = jwt_manager.verify_token(token)
         if payload and "jti" in payload:
-            # Blacklist the token until it expires
-            jti = payload["jti"]
-            exp = datetime.fromtimestamp(payload["exp"], tz=timezone.utc)
-            
-            blacklist_entry = TokenBlacklist(jti=jti, expires_at=exp)
-            db.add(blacklist_entry)
-            db.commit()
-            logger.info(f"Token jti={jti} blacklisted for user {current_user.email}")
-            
+            _blacklist_token(db, payload.get("jti"), payload.get("exp"))
+            logger.info(f"Token jti={payload.get('jti')} blacklisted for user {current_user.email}")
+             
     # Clear the refresh cookie
-    response.delete_cookie("refresh_token")
+    _clear_refresh_cookie(response)
     
     # Log logout
     audit_logger.log_event(

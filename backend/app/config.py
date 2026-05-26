@@ -2,9 +2,13 @@
 Configuration management for SPBE RAG System
 """
 
+from pydantic import model_validator
 from pydantic_settings import BaseSettings
 from typing import List
 from pathlib import Path
+
+
+DEFAULT_JWT_SECRET_KEY = "local-development-secret-key-change-in-prod-12345"
 
 
 class Settings(BaseSettings):
@@ -33,7 +37,7 @@ class Settings(BaseSettings):
     LDAP_RETRY_COUNT: int = 2
 
     # Authentication & JWT
-    JWT_SECRET_KEY: str = "local-development-secret-key-change-in-prod-12345"
+    JWT_SECRET_KEY: str = DEFAULT_JWT_SECRET_KEY
     JWT_ALGORITHM: str = "HS256"
     JWT_ACCESS_TOKEN_EXPIRE_HOURS: int = 8
     JWT_REFRESH_TOKEN_EXPIRE_DAYS: int = 7
@@ -108,6 +112,19 @@ class Settings(BaseSettings):
 
     # CUDA
     CUDA_VISIBLE_DEVICES: str = "0"
+
+    @model_validator(mode="after")
+    def validate_production_secrets(self):
+        if self.ENVIRONMENT.lower() == "production":
+            if self.JWT_SECRET_KEY == DEFAULT_JWT_SECRET_KEY:
+                raise ValueError(
+                    "JWT_SECRET_KEY must be overridden in production. "
+                    "Generate one with: python -c \"import secrets; print(secrets.token_urlsafe(32))\""
+                )
+            if len(self.JWT_SECRET_KEY) < 32:
+                raise ValueError("JWT_SECRET_KEY must be at least 32 characters in production")
+
+        return self
 
     @property
     def cors_origins_list(self) -> List[str]:

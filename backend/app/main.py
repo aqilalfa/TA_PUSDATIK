@@ -54,13 +54,17 @@ async def lifespan(app: FastAPI):
     try:
         import importlib.util
         from pathlib import Path as _Path
-        _mig_path = _Path(__file__).parent.parent / "scripts" / "migrations" / "001_add_doc_metadata_columns.py"
-        _spec = importlib.util.spec_from_file_location("migration_001", _mig_path)
-        _migration = importlib.util.module_from_spec(_spec)
-        _spec.loader.exec_module(_migration)
         from app.database import engine as _engine
         _db_path = str(_engine.url).replace("sqlite:///", "").replace("sqlite://", "")
-        _migration.run(_db_path)
+
+        _migrations_dir = _Path(__file__).parent.parent / "scripts" / "migrations"
+        for _mig_path in sorted(_migrations_dir.glob("[0-9][0-9][0-9]_*.py")):
+            _module_name = f"migration_{_mig_path.stem}"
+            _spec = importlib.util.spec_from_file_location(_module_name, _mig_path)
+            _migration = importlib.util.module_from_spec(_spec)
+            _spec.loader.exec_module(_migration)
+            if hasattr(_migration, "run"):
+                _migration.run(_db_path)
     except Exception as e:
         logger.warning(f"[WARN] Schema migration warning: {e}")
 

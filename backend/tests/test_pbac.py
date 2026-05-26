@@ -2,7 +2,9 @@ import sys
 from pathlib import Path
 import pytest
 from fastapi import HTTPException, status
+from fastapi import Depends, FastAPI
 from fastapi.security import HTTPAuthorizationCredentials
+from fastapi.testclient import TestClient
 
 # Add backend to path
 sys.path.append(str(Path(__file__).parent.parent))
@@ -53,6 +55,32 @@ def test_get_current_user_valid_token():
     assert user is not None
     assert user.email == "admin@bssn.go.id"
 
+
+def test_get_current_user_rejects_blacklisted_token():
+    token = jwt_manager.create_access_token({"sub": "admin@bssn.go.id", "roles": ["admin_pusdatik"]})
+    payload = jwt_manager.verify_token(token)
+    creds = HTTPAuthorizationCredentials(scheme="Bearer", credentials=token)
+
+    class MockBlacklistDB:
+        def __init__(self, current_model=None):
+            self.current_model = current_model
+
+        def query(self, model):
+            return MockBlacklistDB(current_model=model)
+
+        def filter(self, *args):
+            return self
+
+        def first(self):
+            if self.current_model == TokenBlacklist:
+                return TokenBlacklist(jti=payload["jti"])
+            return MockUser("admin@bssn.go.id", ["admin_pusdatik"])
+
+    with pytest.raises(HTTPException) as excinfo:
+        get_current_user(creds, MockBlacklistDB())
+
+    assert excinfo.value.status_code == status.HTTP_401_UNAUTHORIZED
+
 def test_require_roles():
     """Test PBAC require_roles dependency"""
     user = MockUser("admin@bssn.go.id", ["admin_pusdatik"])
@@ -67,3 +95,15 @@ def test_require_roles():
     with pytest.raises(HTTPException) as excinfo:
         dep_fail(user)
     assert excinfo.value.status_code == status.HTTP_403_FORBIDDEN
+
+
+def test_endpoint_with_required_role_rejects_unauthenticated_request():
+    app = FastAPI()
+
+    @app.get("/admin")
+    def admin_route(_user=Depends(require_roles(["admin_pusdatik"]))):
+        return {"ok": True}
+
+    client = TestClient(app)
+    response = client.get("/admin")
+    assert response.status_code == status.HTTP_401_UNAUTHORIZED

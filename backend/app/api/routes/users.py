@@ -5,6 +5,7 @@ User management endpoints
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.database import get_db
+from app.dependencies.auth_dependencies import get_current_user, require_roles
 from app.models.db_models import User
 from app.models.schemas import UserCreate, UserResponse
 from datetime import datetime
@@ -14,7 +15,7 @@ router = APIRouter()
 
 
 @router.post("/", response_model=UserResponse)
-def create_user(user: UserCreate, db: Session = Depends(get_db)):
+def create_user(user: UserCreate, db: Session = Depends(get_db), _admin=Depends(require_roles(["admin_pusdatik"]))):
     """Create a new user"""
     # Check if user with same email already exists
     if user.email:
@@ -33,8 +34,10 @@ def create_user(user: UserCreate, db: Session = Depends(get_db)):
 
 
 @router.get("/{user_id}", response_model=UserResponse)
-def get_user(user_id: int, db: Session = Depends(get_db)):
+def get_user(user_id: int, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     """Get user by ID"""
+    if user_id != current_user.id:
+        raise HTTPException(status_code=403, detail="Operation not permitted")
     user = db.query(User).filter(User.id == user_id).first()
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
@@ -47,7 +50,7 @@ def get_user(user_id: int, db: Session = Depends(get_db)):
 
 
 @router.get("/", response_model=List[UserResponse])
-def list_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+def list_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db), _admin=Depends(require_roles(["admin_pusdatik"]))):
     """List all users"""
     users = db.query(User).offset(skip).limit(limit).all()
     return users
