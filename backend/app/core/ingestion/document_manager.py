@@ -87,40 +87,60 @@ def extract_text_from_pdf(pdf_path: Path, return_details: bool = False):
             marker_converter,
             MarkerConversionError,
             MarkerErrorType,
+            MarkerConfig,
+            get_gpu_memory_info,
+            get_pdf_info,
         )
 
         if marker_converter.is_available():
-            logger.info(f"Ekstraksi dengan Marker: {pdf_path.name}")
-
-            try:
-                conversion_result = marker_converter.convert(
-                    str(pdf_path), save_output=True
+            pdf_info = get_pdf_info(pdf_path)
+            gpu_info = get_gpu_memory_info()
+            if (
+                pdf_info.get("valid")
+                and pdf_info.get("pages", 0) > MarkerConfig.LARGE_PDF_THRESHOLD
+                and not gpu_info.get("available")
+            ):
+                result.warning = (
+                    f"PDF besar ({pdf_info['pages']} halaman) diproses dengan metode alternatif "
+                    "karena GPU tidak tersedia."
                 )
+                logger.warning(
+                    "Skipping Marker for large PDF without GPU: "
+                    f"{pdf_path.name} ({pdf_info['pages']} pages)"
+                )
+                marker_error_type = MarkerErrorType.VRAM_INSUFFICIENT
+            else:
+                logger.info(f"Ekstraksi dengan Marker: {pdf_path.name}")
 
-                if (
-                    conversion_result.success
-                    and len(conversion_result.text.strip()) > 100
-                ):
-                    result.text = conversion_result.text.strip()
-                    result.method = conversion_result.method
-                    result.success = True
-                    result.warning = conversion_result.warning
-                    result.stats.update(conversion_result.stats)
-
-                    logger.success(
-                        f"Marker berhasil: {len(result.text):,} chars, "
-                        f"method={result.method}"
+                try:
+                    conversion_result = marker_converter.convert(
+                        str(pdf_path), save_output=True
                     )
 
-                    return result if return_details else result.text
-                else:
-                    logger.warning(
-                        "Marker return text tidak cukup, mencoba fallback..."
-                    )
-                    marker_error_type = MarkerErrorType.UNKNOWN
-            finally:
-                # Always unload Marker models to free GPU memory for Ollama
-                marker_converter.unload_models()
+                    if (
+                        conversion_result.success
+                        and len(conversion_result.text.strip()) > 100
+                    ):
+                        result.text = conversion_result.text.strip()
+                        result.method = conversion_result.method
+                        result.success = True
+                        result.warning = conversion_result.warning
+                        result.stats.update(conversion_result.stats)
+
+                        logger.success(
+                            f"Marker berhasil: {len(result.text):,} chars, "
+                            f"method={result.method}"
+                        )
+
+                        return result if return_details else result.text
+                    else:
+                        logger.warning(
+                            "Marker return text tidak cukup, mencoba fallback..."
+                        )
+                        marker_error_type = MarkerErrorType.UNKNOWN
+                finally:
+                    # Always unload Marker models to free GPU memory for Ollama
+                    marker_converter.unload_models()
 
     except MarkerConversionError as e:
         marker_error_type = e.error_type

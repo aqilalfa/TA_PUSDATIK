@@ -16,6 +16,7 @@ from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
 
 from app.database import get_db
+from app.dependencies.auth_dependencies import get_current_user
 from app.models.db_models import Document, Chunk
 
 router = APIRouter(prefix="/api/rag/documents", tags=["RAG Documents"])
@@ -46,7 +47,11 @@ def _find_document(doc_id_param: str, db: Session) -> Document:
 
 
 @router.get("/by-doc-id/{doc_id}/file")
-def serve_document_file(doc_id: str, db: Session = Depends(get_db)):
+def serve_document_file(
+    doc_id: str,
+    db: Session = Depends(get_db),
+    _user=Depends(get_current_user),
+):
     """
     Serve the original PDF file for a document.
     Mendukung doc_id UUID (baru) maupun integer ID (legacy).
@@ -68,7 +73,12 @@ def serve_document_file(doc_id: str, db: Session = Depends(get_db)):
 
 
 @router.get("/by-doc-id/{doc_id}/chunks/{chunk_index}")
-def get_chunk_by_index(doc_id: str, chunk_index: int, db: Session = Depends(get_db)):
+def get_chunk_by_index(
+    doc_id: str,
+    chunk_index: int,
+    db: Session = Depends(get_db),
+    _user=Depends(get_current_user),
+):
     """
     Get a single chunk by document identifier and chunk_index.
     Mendukung doc_id UUID (baru) maupun integer ID (legacy).

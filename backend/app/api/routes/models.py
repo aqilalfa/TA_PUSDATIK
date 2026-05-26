@@ -3,10 +3,11 @@ from pathlib import Path
 from typing import List
 
 import httpx
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query
 from loguru import logger
 
 from app.config import settings
+from app.dependencies.auth_dependencies import get_current_user, require_roles
 from app.models.schemas import ModelInfo
 
 router = APIRouter()
@@ -74,7 +75,7 @@ def get_default_model() -> str:
 
 
 @router.get("/", response_model=List[ModelInfo])
-async def list_models():
+async def list_models(_user=Depends(get_current_user)):
     """List available Ollama models."""
     models = get_ollama_models()
     if not models:
@@ -83,13 +84,13 @@ async def list_models():
 
 
 @router.get("/default")
-async def get_default():
+async def get_default(_user=Depends(get_current_user)):
     """Get current default model."""
     return {"model": get_default_model()}
 
 
 @router.post("/default")
-async def set_default(model: str = Query(...)):
+async def set_default(model: str = Query(...), _admin=Depends(require_roles(["admin_pusdatik"]))):
     """Set default model."""
     global _default_model
 

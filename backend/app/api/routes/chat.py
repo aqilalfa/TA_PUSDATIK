@@ -6,7 +6,9 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import StreamingResponse
 from sqlalchemy.orm import Session
 from app.database import get_db
+from app.dependencies.auth_dependencies import get_current_user
 from app.models.db_models import Session as DBSession, Conversation
+from app.models.db_models import User
 from app.models.schemas import ChatRequest, ChatResponse, ConversationMessage
 from app.core.rag.langchain_engine import langchain_engine, classify_query
 from app.core.rag.prompts import validate_answer
@@ -37,7 +39,7 @@ QUALITY_DEBUG = os.getenv("QUALITY_DEBUG", "").strip() == "1"
 
 
 @router.get("/debug/retrieval")
-async def debug_retrieval(query: str):
+async def debug_retrieval(query: str, current_user: User = Depends(get_current_user)):
     """Debug endpoint to see what chunks are actually retrieved."""
     try:
         results = langchain_engine.retrieve_context(query)
@@ -56,13 +58,20 @@ async def debug_retrieval(query: str):
         return {"error": str(e)}
 
 @router.post("/", response_model=ChatResponse)
-async def chat(request: ChatRequest, db: Session = Depends(get_db)):
+async def chat(
+    request: ChatRequest,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
     """
     Chat endpoint - currently a placeholder
     Will be integrated with RAG pipeline in future implementation
     """
     # Verify session exists
-    session = db.query(DBSession).filter(DBSession.id == request.session_id).first()
+    session = db.query(DBSession).filter(
+        DBSession.id == request.session_id,
+        DBSession.user_id == current_user.id,
+    ).first()
     if not session:
         raise HTTPException(status_code=404, detail="Session not found")
 
@@ -95,7 +104,11 @@ async def chat(request: ChatRequest, db: Session = Depends(get_db)):
     return ChatResponse(response=response_text, sources=[], latency_ms=latency)
 
 @router.post("/stream")
-async def chat_stream(request: ChatRequest, db: Session = Depends(get_db)):
+async def chat_stream(
+    request: ChatRequest,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
     """
     Chat endpoint with SSE streaming.
     
@@ -115,13 +128,16 @@ async def chat_stream(request: ChatRequest, db: Session = Depends(get_db)):
 
             if not session_id:
                 new_session_id = str(uuid.uuid4())
-                new_session = DBSession(id=new_session_id, user_id=1, title="New Conversation")
+                new_session = DBSession(id=new_session_id, user_id=current_user.id, title="New Conversation")
                 db.add(new_session)
                 db.flush()
                 session_id = new_session.id  # simpan ke local var, bukan request.session_id
                 db.commit()
 
-            session = db.query(DBSession).filter(DBSession.id == session_id).first()
+            session = db.query(DBSession).filter(
+                DBSession.id == session_id,
+                DBSession.user_id == current_user.id,
+            ).first()
             if not session:
                 yield f"event: error\ndata: {json.dumps({'error': 'Session not found'})}\n\n"
                 return
@@ -291,11 +307,17 @@ async def chat_stream(request: ChatRequest, db: Session = Depends(get_db)):
 
 @router.get("/history/{session_id}", response_model=List[ConversationMessage])
 def get_conversation_history(
-    session_id: str, limit: int = 50, db: Session = Depends(get_db)
+    session_id: str,
+    limit: int = 50,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
 ):
     """Get conversation history for a session"""
     # Verify session exists
-    session = db.query(DBSession).filter(DBSession.id == session_id).first()
+    session = db.query(DBSession).filter(
+        DBSession.id == session_id,
+        DBSession.user_id == current_user.id,
+    ).first()
     if not session:
         raise HTTPException(status_code=404, detail="Session not found")
 

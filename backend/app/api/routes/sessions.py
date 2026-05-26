@@ -5,6 +5,7 @@ Session management endpoints
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.database import get_db
+from app.dependencies.auth_dependencies import get_current_user
 from app.models.db_models import Session as DBSession, User
 from app.models.schemas import SessionCreate, SessionResponse
 from datetime import datetime
@@ -15,10 +16,14 @@ router = APIRouter()
 
 
 @router.post("/", response_model=SessionResponse)
-def create_session(session_data: SessionCreate, db: Session = Depends(get_db)):
+def create_session(
+    session_data: SessionCreate,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
     """Create a new conversation session"""
     # Verify user exists
-    user = db.query(User).filter(User.id == session_data.user_id).first()
+    user = db.query(User).filter(User.id == current_user.id).first()
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
 
@@ -26,7 +31,7 @@ def create_session(session_data: SessionCreate, db: Session = Depends(get_db)):
     session_id = str(uuid.uuid4())
     db_session = DBSession(
         id=session_id,
-        user_id=session_data.user_id,
+        user_id=current_user.id,
         title=session_data.title or "New Conversation",
     )
     db.add(db_session)
@@ -37,9 +42,16 @@ def create_session(session_data: SessionCreate, db: Session = Depends(get_db)):
 
 
 @router.get("/{session_id}", response_model=SessionResponse)
-def get_session(session_id: str, db: Session = Depends(get_db)):
+def get_session(
+    session_id: str,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
     """Get session by ID"""
-    session = db.query(DBSession).filter(DBSession.id == session_id).first()
+    session = db.query(DBSession).filter(
+        DBSession.id == session_id,
+        DBSession.user_id == current_user.id,
+    ).first()
     if not session:
         raise HTTPException(status_code=404, detail="Session not found")
 
@@ -47,11 +59,15 @@ def get_session(session_id: str, db: Session = Depends(get_db)):
 
 
 @router.get("/user/{user_id}", response_model=List[SessionResponse])
-def list_user_sessions(user_id: int, db: Session = Depends(get_db)):
+def list_user_sessions(
+    user_id: int,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
     """List all sessions for a user"""
     sessions = (
         db.query(DBSession)
-        .filter(DBSession.user_id == user_id, DBSession.is_active == True)
+        .filter(DBSession.user_id == current_user.id, DBSession.is_active == True)
         .order_by(DBSession.updated_at.desc())
         .all()
     )
@@ -60,11 +76,15 @@ def list_user_sessions(user_id: int, db: Session = Depends(get_db)):
 
 
 @router.get("/", response_model=List[SessionResponse])
-def list_all_sessions(limit: int = 50, db: Session = Depends(get_db)):
+def list_all_sessions(
+    limit: int = 50,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
     """List all sessions (defaults to user 1 for demo purposes)"""
     sessions = (
         db.query(DBSession)
-        .filter(DBSession.user_id == 1, DBSession.is_active == True)
+        .filter(DBSession.user_id == current_user.id, DBSession.is_active == True)
         .order_by(DBSession.updated_at.desc())
         .limit(limit)
         .all()
@@ -74,9 +94,17 @@ def list_all_sessions(limit: int = 50, db: Session = Depends(get_db)):
 
 
 @router.put("/{session_id}/title")
-def update_session_title(session_id: str, title: str, db: Session = Depends(get_db)):
+def update_session_title(
+    session_id: str,
+    title: str,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
     """Update session title"""
-    session = db.query(DBSession).filter(DBSession.id == session_id).first()
+    session = db.query(DBSession).filter(
+        DBSession.id == session_id,
+        DBSession.user_id == current_user.id,
+    ).first()
     if not session:
         raise HTTPException(status_code=404, detail="Session not found")
 
@@ -88,9 +116,16 @@ def update_session_title(session_id: str, title: str, db: Session = Depends(get_
 
 
 @router.delete("/{session_id}")
-def delete_session(session_id: str, db: Session = Depends(get_db)):
+def delete_session(
+    session_id: str,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
     """Delete (deactivate) a session"""
-    session = db.query(DBSession).filter(DBSession.id == session_id).first()
+    session = db.query(DBSession).filter(
+        DBSession.id == session_id,
+        DBSession.user_id == current_user.id,
+    ).first()
     if not session:
         raise HTTPException(status_code=404, detail="Session not found")
 

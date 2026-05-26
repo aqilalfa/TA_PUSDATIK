@@ -7,6 +7,7 @@ from pydantic import BaseModel
 from typing import Optional, List, Dict, Any
 from loguru import logger
 from app.config import settings
+from app.dependencies.auth_dependencies import get_current_user, require_roles
 
 router = APIRouter(prefix="/api/documents", tags=["Documents"])
 
@@ -86,7 +87,8 @@ def get_manager():
 @router.post("/upload", response_model=UploadResponse)
 async def upload_document(
     file: UploadFile = File(...), 
-    manager=Depends(get_manager)
+    manager=Depends(get_manager),
+    _admin=Depends(require_roles(["admin_pusdatik"])),
 ):
     filename = file.filename or "document.pdf"
     if not filename.lower().endswith(".pdf"):
@@ -99,7 +101,7 @@ async def upload_document(
         raise HTTPException(400, str(e))
 
 @router.post("/{doc_id}/preview", response_model=PreviewResponse)
-async def preview_chunks(doc_id: str, manager=Depends(get_manager)):
+async def preview_chunks(doc_id: str, manager=Depends(get_manager), _user=Depends(get_current_user)):
     try:
         result = manager.preview_chunks(doc_id)
         return PreviewResponse(**result)
@@ -107,7 +109,11 @@ async def preview_chunks(doc_id: str, manager=Depends(get_manager)):
         raise HTTPException(404, str(e))
 
 @router.post("/{doc_id}/save", response_model=IndexResponse)
-async def save_document(doc_id: str, manager=Depends(get_manager)):
+async def save_document(
+    doc_id: str,
+    manager=Depends(get_manager),
+    _admin=Depends(require_roles(["admin_pusdatik"])),
+):
     try:
         result = manager.index_document(doc_id)
         return IndexResponse(**result)
@@ -115,11 +121,11 @@ async def save_document(doc_id: str, manager=Depends(get_manager)):
         raise HTTPException(404, str(e))
 
 @router.get("", response_model=List[DocumentResponse])
-async def list_documents(manager=Depends(get_manager)):
+async def list_documents(manager=Depends(get_manager), _user=Depends(get_current_user)):
     return [DocumentResponse(**d) for d in manager.list_documents()]
 
 @router.get("/{doc_id}")
-async def get_document(doc_id: str, manager=Depends(get_manager)):
+async def get_document(doc_id: str, manager=Depends(get_manager), _user=Depends(get_current_user)):
     try:
         return manager.get_document_detail(doc_id)
     except ValueError as e:
@@ -130,7 +136,8 @@ async def get_chunks(
     doc_id: str, 
     limit: int = 50, 
     offset: int = 0, 
-    manager=Depends(get_manager)
+    manager=Depends(get_manager),
+    _user=Depends(get_current_user),
 ):
     """Get chunks for a document. Handles both SQLite and Qdrant fallback automatically."""
     try:
@@ -152,14 +159,19 @@ async def get_chunks(
 async def update_chunk(
     chunk_id: int, 
     request: ChunkUpdateRequest, 
-    manager=Depends(get_manager)
+    manager=Depends(get_manager),
+    _admin=Depends(require_roles(["admin_pusdatik"])),
 ):
     if not manager.update_chunk(chunk_id, request.text):
         raise HTTPException(404, f"Chunk {chunk_id} tidak ditemukan")
     return MessageResponse(message=f"Chunk {chunk_id} diperbarui")
 
 @router.delete("/chunks/{chunk_id}", response_model=MessageResponse)
-async def delete_single_chunk(chunk_id: int, manager=Depends(get_manager)):
+async def delete_single_chunk(
+    chunk_id: int,
+    manager=Depends(get_manager),
+    _admin=Depends(require_roles(["admin_pusdatik"])),
+):
     if not manager.delete_chunk(chunk_id):
         raise HTTPException(404, f"Chunk {chunk_id} tidak ditemukan")
     return MessageResponse(message=f"Chunk {chunk_id} dihapus")
@@ -172,7 +184,11 @@ class SyncResponse(BaseModel):
     status: str
     error: Optional[str] = None
 @router.delete("/{doc_id}", response_model=DeleteResponse)
-async def delete_document(doc_id: str, manager=Depends(get_manager)):
+async def delete_document(
+    doc_id: str,
+    manager=Depends(get_manager),
+    _admin=Depends(require_roles(["admin_pusdatik"])),
+):
     try:
         result = manager.delete_document(doc_id)
         return DeleteResponse(**result)
@@ -180,7 +196,7 @@ async def delete_document(doc_id: str, manager=Depends(get_manager)):
         raise HTTPException(404, str(e))
 
 @router.post("/sync", response_model=SyncResponse)
-async def sync_from_qdrant(manager=Depends(get_manager)):
+async def sync_from_qdrant(manager=Depends(get_manager), _admin=Depends(require_roles(["admin_pusdatik"]))):
     """Sync documents from Qdrant to SQLite."""
     try:
         result = manager.sync_from_qdrant()
