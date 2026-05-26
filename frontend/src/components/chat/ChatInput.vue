@@ -23,8 +23,18 @@
         </label>
 
         <button
+          v-if="isLoading"
+          type="button"
+          class="stop-btn"
+          @click="$emit('stop')"
+        >
+          Stop
+        </button>
+
+        <button
+          v-else
           type="submit"
-          :disabled="!modelValue.trim() || isLoading"
+          :disabled="!modelValue.trim()"
           class="send-btn"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -49,7 +59,7 @@ const props = defineProps({
   useRag: { type: Boolean, default: true }
 })
 
-const emit = defineEmits(['update:modelValue', 'update:useRag', 'send'])
+const emit = defineEmits(['update:modelValue', 'update:useRag', 'send', 'stop'])
 
 const inputField = ref(null)
 const isFocused = ref(false)
@@ -192,6 +202,26 @@ textarea:disabled {
   color: white;
   transition: background 0.15s;
   flex-shrink: 0;
+}
+
+.stop-btn {
+  min-width: 52px;
+  height: 32px;
+  background: #8b2d2d;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: background 0.15s;
+}
+
+.stop-btn:hover {
+  background: #a33a3a;
 }
 
 .send-btn:hover:not(:disabled) {

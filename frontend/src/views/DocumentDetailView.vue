@@ -1,20 +1,6 @@
 <template>
   <div class="detail-page">
-    <!-- Topbar -->
-    <nav class="topbar">
-      <div class="topbar-brand">
-        <div class="topbar-logo">B</div>
-        <div>
-          <div class="topbar-title">SPBE Asisten</div>
-          <div class="topbar-subtitle">Badan Siber dan Sandi Negara</div>
-        </div>
-      </div>
-      <div class="topbar-nav">
-        <router-link to="/home" class="topbar-nav-link">Beranda</router-link>
-        <router-link to="/" class="topbar-nav-link">Chat</router-link>
-        <router-link to="/documents" class="topbar-nav-link active">Dokumen</router-link>
-      </div>
-    </nav>
+    <AppHeader active="documents" />
 
     <!-- Page header -->
     <div class="page-header">
@@ -196,6 +182,7 @@
 <script setup>
 import { ref, onMounted, nextTick } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import AppHeader from '@/components/layout/AppHeader.vue'
 import {
   deleteChunk as deleteChunkById,
   deleteDocument as deleteDocumentById,

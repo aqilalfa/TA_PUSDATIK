@@ -26,15 +26,15 @@
 </template>
 
 <script setup>
-import { getDocumentFileUrl } from '@/services/documentService'
+import { openDocumentFile } from '@/services/documentService'
 
 const props = defineProps({
   source: { type: Object, required: true }
 })
 
-function openPdf() {
+async function openPdf() {
   if (props.source.doc_id) {
-    window.open(getDocumentFileUrl(props.source.doc_id), '_blank', 'noopener,noreferrer')
+    await openDocumentFile(props.source.doc_id)
   }
 }
 

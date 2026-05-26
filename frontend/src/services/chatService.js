@@ -1,4 +1,4 @@
-import api, { API_BASE_URL, getErrorMessage } from './api'
+import api, { API_BASE_URL, authenticatedFetch, getErrorMessage } from './api'
 
 export async function getModels() {
   try {
@@ -85,11 +85,12 @@ export async function checkHealth() {
   }
 }
 
-export async function streamChat(payload, handlers = {}) {
-  const response = await fetch(`${API_BASE_URL}/api/chat/stream`, {
+export async function streamChat(payload, handlers = {}, options = {}) {
+  const response = await authenticatedFetch(`${API_BASE_URL}/api/chat/stream`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload)
+    body: JSON.stringify(payload),
+    signal: options.signal
   })
 
   if (!response.ok) {

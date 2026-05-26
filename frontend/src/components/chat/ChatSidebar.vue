@@ -354,11 +354,11 @@ function onModelChange(event) {
 }
 
 .sidebar-footer {
-  padding: 10px 14px 12px;
+  padding: 10px 14px 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .sidebar-footer-link {
@@ -380,9 +380,10 @@ function onModelChange(event) {
 
 .model-selector {
   display: flex;
-  align-items: center;
-  gap: 6px;
-  padding-top: 4px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
+  padding-top: 8px;
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
@@ -396,22 +397,35 @@ function onModelChange(event) {
 }
 
 .model-select {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 10px;
-  padding: 4px 6px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(201, 168, 76, 0.28);
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 11px;
+  padding: 8px 28px 8px 10px;
   border-radius: 2px;
   font-family: var(--font-ui);
   cursor: pointer;
   min-width: 0;
+  line-height: 1.2;
+}
+
+.model-select:hover,
+.model-select:focus {
+  border-color: rgba(201, 168, 76, 0.65);
+  outline: none;
+}
+
+.model-select option {
+  background: var(--color-navy-dark);
+  color: #ffffff;
 }
 
 .collapse-btn {
   position: absolute;
-  bottom: 16px;
-  right: 10px;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.35);
@@ -421,11 +435,12 @@ function onModelChange(event) {
   align-items: center;
   border-radius: 2px;
   transition: color 0.15s, background 0.15s;
+  z-index: 3;
 }
 
 .collapsed .collapse-btn {
   right: 50%;
-  transform: translateX(50%);
+  transform: translate(50%, -50%);
 }
 
 .collapse-btn:hover {

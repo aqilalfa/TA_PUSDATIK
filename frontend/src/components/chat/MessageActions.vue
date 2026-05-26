@@ -3,6 +3,12 @@
     <button class="action-btn copy-btn" @click="copyContent">
       {{ copied === 'ok' ? '✓ Tersalin!' : copied === 'fail' ? '✗ Gagal' : '📋 Salin' }}
     </button>
+    <button v-if="canRegenerate" class="action-btn" @click="$emit('regenerate')">
+      ↻ Regenerate
+    </button>
+    <button v-if="canEditRetry" class="action-btn" @click="$emit('edit-retry')">
+      ✎ Edit & retry
+    </button>
     <button v-if="hasWarning" class="action-btn dismiss-btn" @click="$emit('dismiss-warning')">
       ✕
     </button>
@@ -14,16 +20,30 @@ import { ref } from 'vue'
 
 const props = defineProps({
   content: { type: String, required: true },
-  hasWarning: { type: Boolean, default: false }
+  hasWarning: { type: Boolean, default: false },
+  canRegenerate: { type: Boolean, default: false },
+  canEditRetry: { type: Boolean, default: false }
 })
 
-defineEmits(['dismiss-warning'])
+defineEmits(['dismiss-warning', 'regenerate', 'edit-retry'])
 
 const copied = ref(null) // null | 'ok' | 'fail'
 
 async function copyContent() {
   try {
-    await navigator.clipboard.writeText(props.content)
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(props.content)
+    } else {
+      const textarea = document.createElement('textarea')
+      textarea.value = props.content
+      textarea.setAttribute('readonly', '')
+      textarea.style.position = 'fixed'
+      textarea.style.opacity = '0'
+      document.body.appendChild(textarea)
+      textarea.select()
+      document.execCommand('copy')
+      document.body.removeChild(textarea)
+    }
     copied.value = 'ok'
   } catch {
     copied.value = 'fail'

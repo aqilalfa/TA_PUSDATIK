@@ -1,4 +1,9 @@
-import api, { API_BASE_URL, getErrorMessage } from './api'
+import api, {
+  API_BASE_URL,
+  LONG_DOCUMENT_OPERATION_TIMEOUT_MS,
+  authenticatedFetch,
+  getErrorMessage
+} from './api'
 
 export async function uploadDocument(file, onProgress) {
   try {
@@ -19,7 +24,9 @@ export async function uploadDocument(file, onProgress) {
 
 export async function previewDocument(docId) {
   try {
-    const { data } = await api.post(`/api/documents/${docId}/preview`)
+    const { data } = await api.post(`/api/documents/${docId}/preview`, undefined, {
+      timeout: LONG_DOCUMENT_OPERATION_TIMEOUT_MS
+    })
     return data
   } catch (error) {
     throw new Error(getErrorMessage(error, 'Preview failed'))
@@ -28,7 +35,9 @@ export async function previewDocument(docId) {
 
 export async function saveDocument(docId) {
   try {
-    const { data } = await api.post(`/api/documents/${docId}/save`)
+    const { data } = await api.post(`/api/documents/${docId}/save`, undefined, {
+      timeout: LONG_DOCUMENT_OPERATION_TIMEOUT_MS
+    })
     return data
   } catch (error) {
     throw new Error(getErrorMessage(error, 'Indexing failed'))
@@ -106,6 +115,18 @@ export async function deleteDocument(docId) {
  */
 export function getDocumentFileUrl(docId) {
   return `${API_BASE_URL}/api/rag/documents/by-doc-id/${docId}/file`
+}
+
+export async function openDocumentFile(docId) {
+  const response = await authenticatedFetch(getDocumentFileUrl(docId))
+  if (!response.ok) {
+    throw new Error(`Failed to open PDF: HTTP ${response.status}`)
+  }
+
+  const blob = await response.blob()
+  const url = URL.createObjectURL(blob)
+  window.open(url, '_blank', 'noopener,noreferrer')
+  setTimeout(() => URL.revokeObjectURL(url), 60_000)
 }
 
 /**

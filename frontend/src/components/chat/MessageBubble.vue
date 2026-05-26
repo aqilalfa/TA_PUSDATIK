@@ -66,7 +66,11 @@
           v-if="!message.loading && !message.streaming"
           :content="message.content || ''"
           :has-warning="showValidationWarnings"
+          :can-regenerate="canRegenerate"
+          :can-edit-retry="canEditRetry"
           @dismiss-warning="warningDismissed = true"
+          @regenerate="$emit('regenerate')"
+          @edit-retry="$emit('edit-retry')"
         />
       </div>
     </div>
@@ -82,8 +86,12 @@ import CitationPopup from './CitationPopup.vue'
 import { formatMessageContent } from '@/utils/messageFormatter.js'
 
 const props = defineProps({
-  message: { type: Object, required: true }
+  message: { type: Object, required: true },
+  canRegenerate: { type: Boolean, default: false },
+  canEditRetry: { type: Boolean, default: false }
 })
+
+defineEmits(['regenerate', 'edit-retry'])
 
 const warningDismissed = ref(false)
 

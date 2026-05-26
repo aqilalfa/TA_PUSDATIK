@@ -15,24 +15,12 @@
     />
 
     <div class="chat-main">
-      <!-- Topbar -->
-      <nav class="topbar">
-        <div class="topbar-brand">
-          <div class="topbar-logo">B</div>
-          <div>
-            <div class="topbar-title">SPBE Asisten</div>
-            <div class="topbar-subtitle">Badan Siber dan Sandi Negara</div>
-          </div>
-        </div>
-        <div class="topbar-nav">
-          <router-link to="/home" class="topbar-nav-link">Beranda</router-link>
-          <router-link to="/" class="topbar-nav-link active">Chat</router-link>
-          <router-link to="/documents" class="topbar-nav-link">Dokumen</router-link>
-          <div class="status-dot" :class="connectionStatus">
-            {{ connectionStatus === 'connected' ? 'Terhubung' : connectionStatus === 'disconnected' ? 'Terputus' : 'Menghubungkan...' }}
-          </div>
-        </div>
-      </nav>
+      <AppHeader
+        active="chat"
+        :status="connectionStatus"
+        :show-clear-chat="Boolean(messages.length || currentSessionId)"
+        @clear-chat="clearCurrentChat"
+      />
 
       <!-- Messages -->
       <div class="messages-area" ref="messagesContainer" @scroll="onMessagesScroll">
@@ -55,6 +43,10 @@
           v-for="(msg, idx) in messages"
           :key="idx"
           :message="msg"
+          :can-regenerate="canRegenerateMessage(idx)"
+          :can-edit-retry="canEditRetryMessage(idx)"
+          @regenerate="regenerateFrom(idx)"
+          @edit-retry="editRetryFrom(idx)"
         />
       </div>
 
@@ -70,6 +62,7 @@
         :use-rag="useRag"
         @update:use-rag="useRag = $event"
         @send="sendMessage"
+        @stop="stopGeneration"
       />
     </div>
   </div>
@@ -77,6 +70,7 @@
 
 <script setup>
 import { ref, onMounted, nextTick } from 'vue'
+import AppHeader from '@/components/layout/AppHeader.vue'
 import ChatSidebar from '@/components/chat/ChatSidebar.vue'
 import ChatInput from '@/components/chat/ChatInput.vue'
 import MessageBubble from '@/components/chat/MessageBubble.vue'
@@ -106,6 +100,7 @@ const models = ref([])
 const selectedModel = ref('qwen2.5:3b')
 const useRag = ref(true)
 const showScrollTop = ref(false)
+const activeAbortController = ref(null)
 
 // Refs
 const messagesContainer = ref(null)
@@ -221,6 +216,7 @@ async function checkServerHealth() {
 }
 
 async function createNewChat() {
+  if (isLoading.value) stopGeneration()
   currentSessionId.value = null
   messages.value = []
   await nextTick()
@@ -232,6 +228,7 @@ function toggleSidebar() {
 }
 
 async function loadSession(sessionId) {
+  if (isLoading.value) stopGeneration()
   try {
     const [session, history] = await Promise.all([
       getSession(sessionId),
@@ -275,6 +272,27 @@ async function deleteSession(sessionId) {
   }
 }
 
+async function clearCurrentChat() {
+  if (!confirm('Hapus percakapan saat ini?')) return
+  if (isLoading.value) stopGeneration()
+
+  try {
+    if (currentSessionId.value) {
+      const sessionId = currentSessionId.value
+      await deleteSessionService(sessionId)
+      sessions.value = sessions.value.filter((s) => s.id !== sessionId)
+    }
+    currentSessionId.value = null
+    messages.value = []
+    inputMessage.value = ''
+    await nextTick()
+    chatInputRef.value?.resetInputHeight()
+    chatInputRef.value?.focusInput()
+  } catch (error) {
+    console.error('Failed to clear current chat:', error)
+  }
+}
+
 async function handleRenameSession({ id, title }) {
   const session = sessions.value.find(s => s.id === id)
   if (!session) {
@@ -303,17 +321,28 @@ async function sendMessage() {
   if (!inputMessage.value.trim() || isLoading.value) return
 
   const userMessage = inputMessage.value.trim()
-  const isStartingNewSession = !currentSessionId.value
-  const generatedTitle = generateSessionTitleFromMessage(userMessage)
   inputMessage.value = ''
   chatInputRef.value?.resetInputHeight()
 
-  const nowUser = new Date()
-  const userHhmm = `${String(nowUser.getHours()).padStart(2, '0')}:${String(nowUser.getMinutes()).padStart(2, '0')}`
-  messages.value.push({ role: 'user', content: userMessage, timestamp: userHhmm })
+  await submitChatMessage(userMessage, { appendUser: true })
+}
 
-  const loadingIdx = messages.value.length
-  messages.value.push({ role: 'assistant', loading: true, loadingText: 'Menganalisa pertanyaan...' })
+async function submitChatMessage(userMessage, options = {}) {
+  if (!userMessage.trim() || isLoading.value) return
+
+  const appendUser = options.appendUser !== false
+  const assistantIndex = Number.isInteger(options.assistantIndex) ? options.assistantIndex : null
+  const isStartingNewSession = !currentSessionId.value
+  const generatedTitle = generateSessionTitleFromMessage(userMessage)
+
+  if (appendUser) {
+    const nowUser = new Date()
+    const userHhmm = `${String(nowUser.getHours()).padStart(2, '0')}:${String(nowUser.getMinutes()).padStart(2, '0')}`
+    messages.value.push({ role: 'user', content: userMessage, timestamp: userHhmm })
+  }
+
+  const loadingIdx = assistantIndex ?? messages.value.length
+  messages.value.splice(loadingIdx, 0, { role: 'assistant', loading: true, loadingText: 'Menganalisa pertanyaan...' })
 
   await nextTick()
   scrollToBottom()
@@ -326,9 +355,12 @@ async function sendMessage() {
     if (now - lastScroll > 150) { lastScroll = now; scrollToBottom() }
   }
 
+  let streamedContent = ''
+  let pendingValidation = null
+  const abortController = new AbortController()
+  activeAbortController.value = abortController
+
   try {
-    let streamedContent = ''
-    let pendingValidation = null
 
     await streamChat(
       {
@@ -393,19 +425,72 @@ async function sendMessage() {
             content: `Error: ${data.error}. Pastikan server backend berjalan.`
           }
         }
-      }
+      },
+      { signal: abortController.signal }
     )
   } catch (error) {
-    console.error('Chat error:', error)
-    messages.value[loadingIdx] = {
-      role: 'assistant',
-      content: `Error: ${error.message}. Pastikan server backend berjalan.`
+    if (abortController.signal.aborted || error.name === 'AbortError') {
+      messages.value[loadingIdx] = {
+        role: 'assistant',
+        content: streamedContent
+          ? `${streamedContent}\n\n_Respons dihentikan oleh pengguna._`
+          : 'Respons dihentikan oleh pengguna.',
+        cancelled: true
+      }
+    } else {
+      console.error('Chat error:', error)
+      messages.value[loadingIdx] = {
+        role: 'assistant',
+        content: `Error: ${error.message}. Pastikan server backend berjalan.`
+      }
     }
   } finally {
     isLoading.value = false
+    if (activeAbortController.value === abortController) {
+      activeAbortController.value = null
+    }
     await nextTick()
     scrollToBottom()
   }
+}
+
+function stopGeneration() {
+  activeAbortController.value?.abort()
+}
+
+function findPreviousUserIndex(fromIndex) {
+  for (let i = fromIndex - 1; i >= 0; i -= 1) {
+    if (messages.value[i]?.role === 'user') return i
+  }
+  return -1
+}
+
+function canRegenerateMessage(index) {
+  return !isLoading.value && messages.value[index]?.role === 'assistant' && findPreviousUserIndex(index) !== -1
+}
+
+function canEditRetryMessage(index) {
+  return canRegenerateMessage(index)
+}
+
+async function regenerateFrom(index) {
+  if (!canRegenerateMessage(index)) return
+  const userIndex = findPreviousUserIndex(index)
+  const prompt = messages.value[userIndex].content
+  messages.value.splice(index, 1)
+  await submitChatMessage(prompt, { appendUser: false, assistantIndex: index })
+}
+
+async function editRetryFrom(index) {
+  if (!canEditRetryMessage(index)) return
+  const userIndex = findPreviousUserIndex(index)
+  const currentPrompt = messages.value[userIndex].content
+  const editedPrompt = window.prompt('Edit pertanyaan lalu jalankan ulang:', currentPrompt)
+  if (!editedPrompt || !editedPrompt.trim() || editedPrompt.trim() === currentPrompt.trim()) return
+
+  messages.value.splice(userIndex)
+  inputMessage.value = ''
+  await submitChatMessage(editedPrompt.trim(), { appendUser: true })
 }
 
 function sendSampleQuestion(question) {

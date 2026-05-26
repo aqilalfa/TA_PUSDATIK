@@ -37,7 +37,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import { getChunkByIndex, getDocumentFileUrl } from '@/services/documentService'
+import { getChunkByIndex, openDocumentFile } from '@/services/documentService'
 
 const props = defineProps({
   /** Source object dari message.sources yang cocok dengan citation ID */
@@ -116,9 +116,9 @@ function cancelClose() {
   clearTimeout(closeTimer)
 }
 
-function openPdf() {
+async function openPdf() {
   if (props.source?.doc_id) {
-    window.open(getDocumentFileUrl(props.source.doc_id), '_blank', 'noopener,noreferrer')
+    await openDocumentFile(props.source.doc_id)
   }
 }
 
