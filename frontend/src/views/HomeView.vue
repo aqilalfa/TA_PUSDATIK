@@ -1,20 +1,6 @@
 <template>
   <div class="home-view">
-    <!-- Topbar (using global .topbar classes) -->
-    <nav class="topbar">
-      <div class="topbar-brand">
-        <div class="topbar-logo">B</div>
-        <div>
-          <div class="topbar-title">SPBE Asisten</div>
-          <div class="topbar-subtitle">Badan Siber dan Sandi Negara</div>
-        </div>
-      </div>
-      <div class="topbar-nav">
-        <router-link to="/home" class="topbar-nav-link active">Beranda</router-link>
-        <router-link to="/" class="topbar-nav-link">Chat</router-link>
-        <router-link to="/documents" class="topbar-nav-link">Dokumen</router-link>
-      </div>
-    </nav>
+    <AppHeader active="home" />
 
     <!-- Hero section -->
     <div class="hero">
@@ -99,6 +85,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import AppHeader from '@/components/layout/AppHeader.vue'
 import { checkHealth } from '@/services/chatService'
 import { listDocuments } from '@/services/documentService'
 import api from '@/services/api'

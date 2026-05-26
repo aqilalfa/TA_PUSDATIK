@@ -2,13 +2,21 @@ const TOKEN_KEY = 'spbe_access_token'
 
 let memoryToken = null
 
+function storageAvailable(method) {
+  return typeof localStorage !== 'undefined' && typeof localStorage[method] === 'function'
+}
+
 export const setAccessToken = (token) => {
   memoryToken = token || null
 
   if (token) {
-    localStorage.setItem(TOKEN_KEY, token)
+    if (storageAvailable('setItem')) {
+      localStorage.setItem(TOKEN_KEY, token)
+    }
   } else {
-    localStorage.removeItem(TOKEN_KEY)
+    if (storageAvailable('removeItem')) {
+      localStorage.removeItem(TOKEN_KEY)
+    }
   }
 }
 
@@ -17,10 +25,16 @@ export const getAccessToken = () => {
     return memoryToken
   }
 
+  if (!storageAvailable('getItem')) {
+    return null
+  }
+
   return localStorage.getItem(TOKEN_KEY)
 }
 
 export const clearAccessToken = () => {
   memoryToken = null
-  localStorage.removeItem(TOKEN_KEY)
+  if (storageAvailable('removeItem')) {
+    localStorage.removeItem(TOKEN_KEY)
+  }
 }

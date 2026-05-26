@@ -4,6 +4,7 @@ import HomeView from './views/HomeView.vue'
 import DocumentsView from './views/DocumentsView.vue'
 import DocumentDetailView from './views/DocumentDetailView.vue'
 import LoginView from './views/LoginView.vue'
+import LogoutView from './views/LogoutView.vue'
 import { isAuthenticated } from '@/services/auth'
 
 const router = createRouter({
@@ -13,6 +14,12 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: LoginView,
+      meta: { requiresAuth: false }
+    },
+    {
+      path: '/logout',
+      name: 'logout',
+      component: LogoutView,
       meta: { requiresAuth: false }
     },
     {

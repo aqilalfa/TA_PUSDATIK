@@ -87,9 +87,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { login } from '@/services/auth'
+import { SESSION_EXPIRED_NOTICE_KEY } from '@/services/api'
 
 const router = useRouter()
 const route = useRoute()
@@ -98,6 +99,16 @@ const email = ref('')
 const password = ref('')
 const errorMsg = ref('')
 const loading = ref(false)
+
+onMounted(() => {
+  const sessionNotice = window.sessionStorage.getItem(SESSION_EXPIRED_NOTICE_KEY)
+  if (sessionNotice) {
+    errorMsg.value = sessionNotice
+    window.sessionStorage.removeItem(SESSION_EXPIRED_NOTICE_KEY)
+  } else if (route.query.reason === 'session-expired') {
+    errorMsg.value = 'Sesi Anda telah berakhir. Silakan login kembali.'
+  }
+})
 
 const handleLogin = async () => {
   errorMsg.value = ''
