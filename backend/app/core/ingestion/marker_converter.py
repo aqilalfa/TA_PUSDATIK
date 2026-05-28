@@ -46,6 +46,15 @@ class MarkerConfig:
     # File size limits
     MAX_FILE_SIZE_MB = 100  # Max file size to process
 
+    # CPU Marker is slow and has caused production worker hangs in Docker.
+    # Keep it opt-in; normal deployments should fallback to pdfplumber/PyMuPDF
+    # when CUDA/GPU is unavailable.
+    ALLOW_CPU_MARKER = os.getenv("SPBE_ALLOW_MARKER_CPU", "false").lower() in {
+        "1",
+        "true",
+        "yes",
+    }
+
 
 # ============== Error Types ==============
 
@@ -175,6 +184,31 @@ def get_pdf_info(pdf_path: Path) -> Dict[str, Any]:
             info["error"] = str(e2)
 
     return info
+
+
+def should_skip_marker(pdf_path: Path) -> Tuple[bool, str, Dict[str, Any]]:
+    """Return whether Marker should be skipped for this runtime/PDF.
+
+    Marker is useful for tables, but in the production container it may run on
+    CPU and block a Uvicorn worker for minutes. Skipping CPU Marker keeps upload
+    preview/indexing responsive and lets the existing fallback extractors run.
+    """
+    pdf_path = Path(pdf_path)
+    pdf_info = get_pdf_info(pdf_path)
+    gpu_info = get_gpu_memory_info()
+    details = {"pdf_info": pdf_info, "gpu_info": gpu_info}
+
+    if not pdf_info.get("valid"):
+        return False, "PDF validity must be handled by Marker preflight", details
+
+    if not gpu_info.get("available") and not MarkerConfig.ALLOW_CPU_MARKER:
+        return (
+            True,
+            "GPU tidak tersedia; Marker CPU dinonaktifkan agar upload/preview tidak hang",
+            details,
+        )
+
+    return False, "", details
 
 
 def classify_error(exception: Exception) -> MarkerErrorType:

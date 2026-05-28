@@ -105,6 +105,14 @@ class Settings(BaseSettings):
     SESSION_MAX_HISTORY: int = 10
     SESSION_TIMEOUT: int = 3600
 
+    # Redis-backed security controls
+    REDIS_URL: str = "redis://localhost:6379/0"
+    REDIS_ENABLED: bool = False
+    FAILED_LOGIN_RATE_LIMIT: int = 5
+    FAILED_LOGIN_RATE_WINDOW_SECONDS: int = 60
+    CHAT_RATE_LIMIT: int = 10
+    CHAT_RATE_WINDOW_SECONDS: int = 60
+
     # Logging
     LOG_LEVEL: str = "INFO"
     LOG_DIR: str = "/app/logs"

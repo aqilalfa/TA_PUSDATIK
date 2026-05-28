@@ -15,7 +15,11 @@ from datetime import datetime
 from loguru import logger
 from sqlalchemy.orm import Session
 
-from app.core.ingestion.marker_converter import marker_converter, MarkerConversionError
+from app.core.ingestion.marker_converter import (
+    marker_converter,
+    MarkerConversionError,
+    should_skip_marker,
+)
 from app.core.ingestion.ocr import ocr_processor
 from app.core.ingestion.json_structure_parser import parse_document, detect_doc_type
 from app.core.ingestion.structured_chunker import chunk_document
@@ -64,6 +68,15 @@ class DocumentProcessor:
         # Try Marker first (better for tables and structure)
         if marker_converter.is_available():
             try:
+                skip_marker, skip_reason, skip_details = should_skip_marker(Path(pdf_path))
+                if skip_marker:
+                    pages = skip_details.get("pdf_info", {}).get("pages", 0)
+                    logger.warning(
+                        "Skipping Marker: "
+                        f"{skip_reason}; file={filename}; pages={pages}"
+                    )
+                    raise MarkerConversionError(skip_reason)
+
                 logger.info("Attempting Marker conversion...")
                 conversion_result = marker_converter.convert(pdf_path, save_output=True)
 

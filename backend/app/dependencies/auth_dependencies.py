@@ -8,6 +8,8 @@ from loguru import logger
 from app.database import get_db
 from app.models.db_models import User, TokenBlacklist
 from app.auth.jwt_manager import jwt_manager
+from app.auth.token_revocation import token_revocation_store
+from app.core.security_metrics import security_metrics
 
 security = HTTPBearer(auto_error=False)
 
@@ -17,6 +19,7 @@ def get_current_user(
 ) -> User:
     """Validate token and return current user"""
     if credentials is None:
+        security_metrics.increment("http.401", endpoint="auth/dependency")
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Not authenticated",
@@ -28,6 +31,7 @@ def get_current_user(
     # Verify token
     payload = jwt_manager.verify_token(token)
     if not payload:
+        security_metrics.increment("http.401", endpoint="auth/dependency")
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Could not validate credentials",
@@ -37,8 +41,9 @@ def get_current_user(
     # Check if token is blacklisted
     jti = payload.get("jti")
     is_blacklisted = db.query(TokenBlacklist).filter(TokenBlacklist.jti == jti).first()
-    if is_blacklisted:
+    if is_blacklisted or token_revocation_store.is_revoked(jti):
         logger.warning(f"Attempt to use blacklisted token jti={jti}")
+        security_metrics.increment("http.401", endpoint="auth/dependency")
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Token has been revoked",
@@ -46,6 +51,7 @@ def get_current_user(
         
     email = payload.get("sub")
     if email is None:
+        security_metrics.increment("http.401", endpoint="auth/dependency")
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Token missing subject claim",
@@ -53,6 +59,7 @@ def get_current_user(
         
     user = db.query(User).filter(User.email == email).first()
     if user is None:
+        security_metrics.increment("http.401", endpoint="auth/dependency")
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="User not found",
@@ -75,6 +82,7 @@ def require_roles(required_roles: List[str]) -> Callable:
         has_role = any(role in user_roles for role in required_roles)
         if not has_role:
             logger.warning(f"PBAC Denied: User {user.email} missing roles {required_roles}")
+            security_metrics.increment("http.403", endpoint="auth/roles")
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
                 detail=f"Operation not permitted. Required roles: {required_roles}"

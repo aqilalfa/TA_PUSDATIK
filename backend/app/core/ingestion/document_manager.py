@@ -90,12 +90,23 @@ def extract_text_from_pdf(pdf_path: Path, return_details: bool = False):
             MarkerConfig,
             get_gpu_memory_info,
             get_pdf_info,
+            should_skip_marker,
         )
 
         if marker_converter.is_available():
             pdf_info = get_pdf_info(pdf_path)
             gpu_info = get_gpu_memory_info()
-            if (
+            skip_marker, skip_reason, skip_details = should_skip_marker(pdf_path)
+            if skip_marker:
+                result.warning = skip_reason
+                logger.warning(
+                    "Skipping Marker: "
+                    f"{skip_reason}; file={pdf_path.name}; "
+                    f"pages={pdf_info.get('pages', 0)}"
+                )
+                marker_error_type = MarkerErrorType.VRAM_INSUFFICIENT
+                result.stats.update(skip_details)
+            elif (
                 pdf_info.get("valid")
                 and pdf_info.get("pages", 0) > MarkerConfig.LARGE_PDF_THRESHOLD
                 and not gpu_info.get("available")

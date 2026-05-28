@@ -2,16 +2,22 @@
 Chat endpoints - placeholder for RAG integration
 """
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request, status
 from fastapi.responses import StreamingResponse
 from sqlalchemy.orm import Session
 from app.database import get_db
 from app.dependencies.auth_dependencies import get_current_user
+from app.auth.login_rate_limiter import chat_rate_limiter
+from app.core.security_metrics import security_metrics
 from app.models.db_models import Session as DBSession, Conversation
 from app.models.db_models import User
 from app.models.schemas import ChatRequest, ChatResponse, ConversationMessage
 from app.core.rag.langchain_engine import langchain_engine, classify_query
 from app.core.rag.prompts import validate_answer
+from app.core.rag.structured_facts import (
+    find_structured_fact_answer,
+    format_structured_fact_answer,
+)
 from app.core.formatting import (
     sanitize_citations,
     strip_markdown_emphasis,
@@ -29,6 +35,26 @@ import uuid
 import re
 
 router = APIRouter()
+
+
+def _chat_rate_limit_key(request: Request, current_user: User | None) -> str:
+    if current_user and current_user.id is not None:
+        return f"user:{current_user.id}"
+    client_ip = request.client.host if request.client else "unknown"
+    return f"ip:{client_ip}"
+
+
+def _enforce_chat_rate_limit(request: Request, current_user: User | None, endpoint: str) -> None:
+    key = _chat_rate_limit_key(request, current_user)
+    retry_after = chat_rate_limiter.get_retry_after(key)
+    if retry_after is not None:
+        security_metrics.increment("http.429", endpoint=endpoint)
+        raise HTTPException(
+            status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+            detail="Too many chatbot requests. Please try again later.",
+            headers={"Retry-After": str(retry_after)},
+        )
+    chat_rate_limiter.record_failure(key)
 
 from app.core.rag.quality_check import (
     build_answer_quality_report,
@@ -59,6 +85,7 @@ async def debug_retrieval(query: str, current_user: User = Depends(get_current_u
 
 @router.post("/", response_model=ChatResponse)
 async def chat(
+    http_request: Request,
     request: ChatRequest,
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
@@ -67,6 +94,8 @@ async def chat(
     Chat endpoint - currently a placeholder
     Will be integrated with RAG pipeline in future implementation
     """
+    _enforce_chat_rate_limit(http_request, current_user, "chat")
+
     # Verify session exists
     session = db.query(DBSession).filter(
         DBSession.id == request.session_id,
@@ -105,6 +134,7 @@ async def chat(
 
 @router.post("/stream")
 async def chat_stream(
+    http_request: Request,
     request: ChatRequest,
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
@@ -118,6 +148,7 @@ async def chat_stream(
       3. Stream LLM answer token by token
       4. Save assistant response to DB
     """
+    _enforce_chat_rate_limit(http_request, current_user, "chat/stream")
     model = request.model or get_default_model()
 
     async def event_generator():
@@ -153,6 +184,64 @@ async def chat_stream(
             db.commit()
 
             start_time = time.perf_counter()
+
+            structured_fact = find_structured_fact_answer(request.message)
+            if request.use_rag and structured_fact:
+                sources_for_response = structured_fact.sources
+                full_response = format_structured_fact_answer(structured_fact)
+
+                yield f"event: retrieval\ndata: {json.dumps({'count': len(sources_for_response), 'mode': 'structured_fact'})}\n\n"
+                yield f"event: token\ndata: {json.dumps({'t': full_response}, ensure_ascii=False)}\n\n"
+
+                latency = int((time.perf_counter() - start_time) * 1000)
+                assistant_message = Conversation(
+                    session_id=session_id,
+                    role="assistant",
+                    content=full_response,
+                    sources=json.dumps(sources_for_response),
+                    timestamp=datetime.utcnow(),
+                    latency_ms=latency,
+                )
+                db.add(assistant_message)
+                session.updated_at = datetime.utcnow()
+                try:
+                    db.commit()
+                except Exception as save_error:
+                    db.rollback()
+                    logger.warning(
+                        "Structured fact response was generated but conversation save failed: {}".format(
+                            save_error
+                        )
+                    )
+
+                complete_data = {
+                    "session_id": session_id,
+                    "answer": full_response,
+                    "sources": sources_for_response,
+                    "timing": {"total_ms": latency},
+                    "model_used": "structured-fact-index",
+                    "validation": {
+                        "is_valid": True,
+                        "has_citations": True,
+                        "warnings": [],
+                        "confidence": "high",
+                        "citation_count": 1,
+                    },
+                    "quality_check": {
+                        "score": 100,
+                        "needs_retry": False,
+                        "retry_reasons": [],
+                        "focus_coverage": 1.0,
+                        "has_unavailable_claim": False,
+                        "unavailable_triggers_active": [],
+                    },
+                    "structured_fact": {
+                        "matched_nomor": structured_fact.nomor,
+                        "score": structured_fact.score,
+                    },
+                }
+                yield f"event: complete\ndata: {json.dumps(complete_data, ensure_ascii=False)}\n\n"
+                return
 
             # 2. Retrieve context (offload ke thread pool agar tidak block event loop)
             import asyncio
