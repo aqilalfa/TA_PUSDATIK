@@ -1,0 +1,1763 @@
+[
+  {
+    "ground_truth": {
+      "nomor": 11,
+      "pertanyaan": "Apa yang dimaksud dengan Pemantauan SPBE?",
+      "jawaban": "Penilaian secara sistematis melalui verifikasi informasi atas Penilaian Mandiri untuk mengukur kematangan penerapan SPBE.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Pasal 1 Angka 2, Halaman 2"
+    },
+    "retrieval": {
+      "query": "Apa yang dimaksud dengan Pemantauan SPBE?",
+      "query_type": "general",
+      "source_count": 5,
+      "docs": [
+        {
+          "content": "Pasal 1\nDalam Peraturan Badan ini yang dimaksud dengan: \n1. \nSistem \nPemerintahan \nBerbasis \nElektronik \nyang \nselanjutnya disingkat SPBE adalah penyelenggaraan \npemerintahan yang memanfaatkan teknologi informasi \ndan komunikasi untuk memberikan layanan kepada \npengguna sistem pemerintahan berbasis elektronik. \n2. \nKeamanan SPBE adalah pengendalian keamanan yang \nterpadu dalam SPBE. \n3. \nAudit Keamanan SPBE adalah audit teknologi informasi \ndan komunikasi cakupan keamanan SPBE. \n4. \nAudit Teknol",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+            "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "peraturan-bssn-no-8-tahun-2024.pdf",
+            "bab": "BAB I",
+            "pasal": "Pasal 1",
+            "bagian": "",
+            "ayat": "",
+            "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I > Pasal 1",
+            "document_id": 3,
+            "chunk_id": 422,
+            "rrf_score": 0.043565911212970036,
+            "rerank_base_score": 0.043565911212970036,
+            "query_boost": 3.5500000000000003,
+            "rerank_score": 3.5935659112129703
+          }
+        },
+        {
+          "content": "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyelenggaraan\npemerintahan yang memanfaatkan teknologi informasi\ndan komunikasi untuk memberikan layanan kepada\npengguna SPBE.\n2. Satu Data Indonesia adalah kebijakan tata kelola data\npemerintah sebagaimana dimaksud dalam Peraturan\nPresiden mengenai Satu Data Indonesia.\n3. Layanan SPBE adalah keluaran yang dihasilkan oleh\nI (satu) atau beberapa fungsi apl",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+            "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL",
+            "filename": "Perpres Nomor 82 Tahun 2023.pdf",
+            "bab": "BAB I",
+            "pasal": "Pasal 1",
+            "bagian": "",
+            "ayat": "",
+            "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB I > Pasal 1",
+            "document_id": 5,
+            "chunk_id": 828,
+            "rrf_score": 0.031009615384615385,
+            "rerank_base_score": 0.031009615384615385,
+            "query_boost": 3.5500000000000003,
+            "rerank_score": 3.5810096153846156
+          }
+        },
+        {
+          "content": "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyelenggaraan\npemerintahan yang memanfaatkan teknologi\ninformasi dan komunikasi untuk memberikan\nlayanan kepada Pengguna SPBE.\n2. Tata Kelola SPBE adalah kerangka kerja yang\nmemastikan terlaksananya pengaturan, pengarahan,\ndan pengendalian dalam penerapan SPBE secara\nterpadu.\n3. Manajemen SPBE adalah serangkaian proses untuk\nmencapai penerapan SPBE yang e",
+          "metadata": {
+            "document_title": "Perpres Nomor 95 Tahun 2018.pdf",
+            "context_header": "",
+            "pasal": "Pasal 1",
+            "ayat": "",
+            "bab": "BAB I",
+            "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB I > Pasal 1",
+            "chunk_part": null,
+            "chunk_parts_total": null,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "6",
+            "filename": "Perpres Nomor 95 Tahun 2018.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 12.927362530334602,
+            "rrf_score": 0.016129032258064516,
+            "rerank_base_score": 0.016129032258064516,
+            "query_boost": 3.5500000000000003,
+            "rerank_score": 3.5661290322580648
+          }
+        },
+        {
+          "content": "peraturan bssn no 8 tahun 2024 > BAB I KETENTUAN UMUM > Pasal 1: Dalam Peraturan Badan ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyelenggaraan\npemerintahan yang memanfaatkan teknologi informasi\ndan komunikasi untuk memberikan layanan kepada\npengguna sistem pemerintahan berbasis elektronik.\n2. Keamanan SPBE adalah pengendalian keamanan yang\nterpadu dalam SPBE.\n3. Audit Keamanan SPBE adalah audit teknologi informasi\ndan komunikasi",
+          "metadata": {
+            "document_title": "peraturan bssn no 8 tahun 2024",
+            "context_header": "peraturan bssn no 8 tahun 2024 > BAB I KETENTUAN UMUM > Pasal 1",
+            "pasal": "Pasal 1",
+            "ayat": "",
+            "bab": "BAB I KETENTUAN UMUM",
+            "hierarchy": "",
+            "chunk_part": null,
+            "chunk_parts_total": null,
+            "parent_pasal_text": "",
+            "is_parent": true,
+            "doc_id": "4799624e",
+            "filename": "peraturan-bssn-no-8-tahun-2024.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 10.813397524296736,
+            "rrf_score": 0.011904761904761904,
+            "rerank_base_score": 0.011904761904761904,
+            "query_boost": 3.5500000000000003,
+            "rerank_score": 3.561904761904762
+          }
+        },
+        {
+          "content": "Pasal 1\nDalam Peraturan Menteri ini yang dimaksud dengan: \n1. \nSistem Pemerintahan Berbasis Elektronik selanjutnya \ndisingkat SPBE adalah penyelenggaraan pemerintahan \ndengan \nmemanfaatkan \nteknologi \ninformasi \ndan \nkomunikasi \nuntuk \nmemberikan \nlayanan \nkepada \nInstansi Pusat, Pemerintah Daerah, pegawai Aparatur \nSipil Negara, perorangan, masyarakat, pelaku usaha, \ndan pihak lain yang memanfaatkan layanan SPBE.  \n2. \nPemantauan SPBE adalah proses penilaian secara \nsistematis melalui verifikas",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "Peraturan 59 Tahun 2020",
+            "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "bab": "",
+            "pasal": "Pasal 1",
+            "bagian": "",
+            "ayat": "",
+            "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 1",
+            "document_id": 4,
+            "chunk_id": 535,
+            "rrf_score": 0.05921255389769664,
+            "rerank_base_score": 0.05921255389769664,
+            "query_boost": 3.0500000000000003,
+            "rerank_score": 3.109212553897697
+          }
+        }
+      ]
+    },
+    "retrieval_eval": {
+      "expected": {
+        "doc_checks": [
+          "59",
+          "2020"
+        ],
+        "pasal": "1",
+        "ayat": null,
+        "angka": "2"
+      },
+      "doc_at_1": false,
+      "doc_at_3": false,
+      "doc_at_6": true,
+      "section_at_1": true,
+      "section_at_3": true,
+      "section_at_6": true,
+      "top_sections": [
+        {
+          "document": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+          "section": "Pasal 1",
+          "boost": 3.5500000000000003,
+          "score": 3.5935659112129703
+        },
+        {
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 1",
+          "boost": 3.5500000000000003,
+          "score": 3.5810096153846156
+        },
+        {
+          "document": "Perpres Nomor 95 Tahun 2018.pdf",
+          "section": "Pasal 1",
+          "boost": 3.5500000000000003,
+          "score": 3.5661290322580648
+        },
+        {
+          "document": "peraturan bssn no 8 tahun 2024",
+          "section": "peraturan bssn no 8 tahun 2024 > BAB I KETENTUAN UMUM > Pasal 1",
+          "boost": 3.5500000000000003,
+          "score": 3.561904761904762
+        },
+        {
+          "document": "Peraturan 59 Tahun 2020",
+          "section": "Pasal 1",
+          "boost": 3.0500000000000003,
+          "score": 3.109212553897697
+        }
+      ],
+      "latency_wall_ms": 451
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 12,
+      "pertanyaan": "Apa definisi Evaluasi SPBE?",
+      "jawaban": "Penilaian sistematis via verifikasi, klarifikasi, serta validasi terhadap Penilaian Mandiri guna mengukur kematangan SPBE.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Pasal 1 Angka 3, Halaman 3"
+    },
+    "retrieval": {
+      "query": "Apa definisi Evaluasi SPBE?",
+      "query_type": "general",
+      "source_count": 5,
+      "docs": [
+        {
+          "content": "Pasal 1\nDalam Peraturan Badan ini yang dimaksud dengan: \n1. \nSistem \nPemerintahan \nBerbasis \nElektronik \nyang \nselanjutnya disingkat SPBE adalah penyelenggaraan \npemerintahan yang memanfaatkan teknologi informasi \ndan komunikasi untuk memberikan layanan kepada \npengguna sistem pemerintahan berbasis elektronik. \n2. \nKeamanan SPBE adalah pengendalian keamanan yang \nterpadu dalam SPBE. \n3. \nAudit Keamanan SPBE adalah audit teknologi informasi \ndan komunikasi cakupan keamanan SPBE. \n4. \nAudit Teknol",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+            "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "peraturan-bssn-no-8-tahun-2024.pdf",
+            "bab": "BAB I",
+            "pasal": "Pasal 1",
+            "bagian": "",
+            "ayat": "",
+            "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I > Pasal 1",
+            "document_id": 3,
+            "chunk_id": 422,
+            "rrf_score": 0.05949501504336028,
+            "rerank_base_score": 0.05949501504336028,
+            "query_boost": 3.5500000000000003,
+            "rerank_score": 3.6094950150433607
+          }
+        },
+        {
+          "content": "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyelenggaraan\npemerintahan yang memanfaatkan teknologi\ninformasi dan komunikasi untuk memberikan\nlayanan kepada Pengguna SPBE.\n2. Tata Kelola SPBE adalah kerangka kerja yang\nmemastikan terlaksananya pengaturan, pengarahan,\ndan pengendalian dalam penerapan SPBE secara\nterpadu.\n3. Manajemen SPBE adalah serangkaian proses untuk\nmencapai penerapan SPBE yang e",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018",
+            "tentang": "SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "Perpres Nomor 95 Tahun 2018.pdf",
+            "bab": "BAB I",
+            "pasal": "Pasal 1",
+            "bagian": "",
+            "ayat": "",
+            "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB I > Pasal 1",
+            "document_id": 6,
+            "chunk_id": 870,
+            "rrf_score": 0.04602469811022035,
+            "rerank_base_score": 0.04602469811022035,
+            "query_boost": 3.5500000000000003,
+            "rerank_score": 3.5960246981102206
+          }
+        },
+        {
+          "content": "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyelenggaraan\npemerintahan yang memanfaatkan teknologi informasi\ndan komunikasi untuk memberikan layanan kepada\npengguna SPBE.\n2. Satu Data Indonesia adalah kebijakan tata kelola data\npemerintah sebagaimana dimaksud dalam Peraturan\nPresiden mengenai Satu Data Indonesia.\n3. Layanan SPBE adalah keluaran yang dihasilkan oleh\nI (satu) atau beberapa fungsi apl",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+            "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL",
+            "filename": "Perpres Nomor 82 Tahun 2023.pdf",
+            "bab": "BAB I",
+            "pasal": "Pasal 1",
+            "bagian": "",
+            "ayat": "",
+            "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB I > Pasal 1",
+            "document_id": 5,
+            "chunk_id": 828,
+            "rrf_score": 0.04252600430416069,
+            "rerank_base_score": 0.04252600430416069,
+            "query_boost": 3.5500000000000003,
+            "rerank_score": 3.592526004304161
+          }
+        },
+        {
+          "content": "-3- \n \n \n3. \nEvaluasi \nSPBE \nadalah \nproses \npenilaian \nsecara \nsistematis melalui verifikasi dan klarifikasi informasi \nyang dapat dilanjutkan dengan validasi informasi \nterhadap hasil Penilaian Mandiri untuk mengukur \ntingkat kematangan penerapan SPBE. \n4. \nAsesor adalah seseorang yang melakukan penilaian atas \npenerapan SPBE. \n5. \nTim Asesor Internal adalah sekelompok Asesor yang \nterdiri dari pejabat/pegawai di lingkungan Instansi \nPusat dan Pemerintah Daerah. \n6. \nTim Asesor Eksternal adala",
+          "metadata": {
+            "document_title": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "context_header": "",
+            "pasal": "Pasal 1",
+            "ayat": "",
+            "bab": "",
+            "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 1",
+            "chunk_part": null,
+            "chunk_parts_total": null,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "4",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 12.551456618704085,
+            "rrf_score": 0.015873015873015872,
+            "rerank_base_score": 0.015873015873015872,
+            "query_boost": 2.1500000000000004,
+            "rerank_score": 2.165873015873016
+          }
+        },
+        {
+          "content": "Pasal 1\n1\n(6) Reviu Arsitektur SPBE Instansi Pusat sebagaimana\ndimaksud pada ayat (5) dilakukan berdasarkan:\na. perubahan Arsitektur SPBE Nasional;\nb. hasil pemantauan dan evaluasi SPBE di Instansi\nPusat;\nc. perubahan pada unsur SPBE Instansi Pusat\nsebagaimana dimaksud dalam Pasal 4 ayat (21\nhuruf d sampai dengan huruf j; atau\nd. perubahan rencana strategis Instansi Pusat.\n(7) Reviu Arsitektur SPBE Instansi Pusat sebagaimana\ndimaksud pada ayat (5) dilakukan oleh pimpinan\nInstansi Pusat masing-ma",
+          "metadata": {
+            "document_title": "Perpres Nomor 95 Tahun 2018.pdf",
+            "context_header": "",
+            "pasal": "Pasal 1",
+            "ayat": "Ayat (6)-(7)",
+            "bab": "BAB II",
+            "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB II > Ketiga -  > Pasal 1 > Ayat (6)-(7)",
+            "chunk_part": null,
+            "chunk_parts_total": null,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "6",
+            "filename": "Perpres Nomor 95 Tahun 2018.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 15.863800111462325,
+            "rrf_score": 0.013513513513513514,
+            "rerank_base_score": 0.013513513513513514,
+            "query_boost": 2.0,
+            "rerank_score": 2.0135135135135136
+          }
+        }
+      ]
+    },
+    "retrieval_eval": {
+      "expected": {
+        "doc_checks": [
+          "59",
+          "2020"
+        ],
+        "pasal": "1",
+        "ayat": null,
+        "angka": "3"
+      },
+      "doc_at_1": false,
+      "doc_at_3": false,
+      "doc_at_6": true,
+      "section_at_1": true,
+      "section_at_3": true,
+      "section_at_6": true,
+      "top_sections": [
+        {
+          "document": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+          "section": "Pasal 1",
+          "boost": 3.5500000000000003,
+          "score": 3.6094950150433607
+        },
+        {
+          "document": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018",
+          "section": "Pasal 1",
+          "boost": 3.5500000000000003,
+          "score": 3.5960246981102206
+        },
+        {
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 1",
+          "boost": 3.5500000000000003,
+          "score": 3.592526004304161
+        },
+        {
+          "document": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+          "section": "Pasal 1",
+          "boost": 2.1500000000000004,
+          "score": 2.165873015873016
+        },
+        {
+          "document": "Perpres Nomor 95 Tahun 2018.pdf",
+          "section": "Pasal 1",
+          "boost": 2.0,
+          "score": 2.0135135135135136
+        }
+      ],
+      "latency_wall_ms": 380
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 13,
+      "pertanyaan": "Siapa yang berhak melakukan Penilaian Dokumen?",
+      "jawaban": "Tim Asesor Eksternal.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Pasal 1 Angka 9, Halaman 3"
+    },
+    "retrieval": {
+      "query": "Siapa yang berhak melakukan Penilaian Dokumen?",
+      "query_type": "general",
+      "source_count": 5,
+      "docs": [
+        {
+          "content": "yang diselenggarakan oleh Kementerian;\n2) melakukan Penilaian Dokumen, Penilaian Interviu, dan/atau\nPenilaian Visitasi;\n3) melakukan konsolidasi, analisis, dan finalisasi penilaian; dan\n4) memberikan\nrekomendasi\natau\nsaran\nperbaikan\nkepada\nKementerian atas hasil Pemantauan dan Evaluasi SPBE;\n5) menyusun\nlaporan\nanggota\nTim\nAsesor\nEksternal\ndan\nmenyampaikannya kepada Kementerian.\n2. Tahap Persiapan pada Instansi Pusat dan Pemerintah Daerah\na. Aktivitas Persiapan\nAktivitas pada tahap persiapan yan",
+          "metadata": {
+            "document_title": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "context_header": "",
+            "pasal": "",
+            "ayat": "",
+            "bab": "BAB III - PROSES PEMANTAUAN DAN EVALUASI SPBE",
+            "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB III - PROSES PEMANTAUAN DAN EVALUASI SPBE [Bagian 9/24]",
+            "chunk_part": 9,
+            "chunk_parts_total": 24,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "4",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 7.493236543483379,
+            "rrf_score": 0.013333333333333334,
+            "rerank_base_score": 0.013333333333333334,
+            "query_boost": 0.7,
+            "rerank_score": 0.7133333333333333
+          }
+        },
+        {
+          "content": "catatan yang diperlukan untuk klarifikasi pada Penilaian Interviu.\n3. Penilaian Interviu.\nPenilaian Interviu dilakukan oleh Tim Asesor Eksternal dengan\nmelakukan tanya jawab kepada Tim Asesor Internal dan/atau\nResponden sebagai bentuk klarifikasi atas hasil Penilaian Dokumen.\nUntuk setiap indikator penilaian yang dilakukan klarifikasi, Tim Asesor\nEksternal memberikan nilai tingkat kematangan dan penjelasannya\nberdasarkan hasil interviu dengan Tim Asesor Internal dan/atau\nResponden.\n4. Penilaian ",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "Peraturan 59 Tahun 2020",
+            "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "bagian": "LAMPIRAN",
+            "bab": "BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+            "pasal": "",
+            "ayat": "",
+            "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 38/139]",
+            "chunk_part": 38,
+            "chunk_parts_total": 139,
+            "document_id": 4,
+            "chunk_id": 594,
+            "rrf_score": 0.0315136476426799,
+            "rerank_base_score": 0.0315136476426799,
+            "query_boost": 0.35,
+            "rerank_score": 0.38151364764267987
+          }
+        },
+        {
+          "content": "Instansi \nPusat/Pemerintah Daerah untuk memberikan jawaban \ndan penjelasan serta bukti pendukung atas pertanyaan \nyang diberikan oleh Asesor. \n8. \nPenilaian Mandiri adalah penilaian yang dilakukan oleh \nTim Asesor Internal pada penerapan SPBE Instansi \nPusat dan Pemerintah Daerah. \n9. \nPenilaian Dokumen adalah penilaian berdasarkan \ndokumen Penilaian Mandiri yang dilakukan oleh Tim \nAsesor Eksternal untuk verifikasi informasi. \n10. Penilaian Interviu adalah penilaian dengan melakukan \ntanya-jawa",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "Peraturan 59 Tahun 2020",
+            "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "bab": "",
+            "pasal": "Pasal 1",
+            "bagian": "",
+            "ayat": "",
+            "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 1",
+            "document_id": 4,
+            "chunk_id": 537,
+            "rrf_score": 0.030117753623188408,
+            "rerank_base_score": 0.030117753623188408,
+            "query_boost": 0.35,
+            "rerank_score": 0.3801177536231884
+          }
+        },
+        {
+          "content": "masing berdasarkan informasi yang diperoleh dari Responden berupa\npenjelasan, dokumen, dan bukti pendukung lain. Untuk setiap indikator\npenilaian, Tim Asesor Internal memberikan nilai tingkat kematangan\ndan penjelasannya berdasarkan bukti pendukung yang diperoleh, serta\nmenyertakan bukti pendukung tersebut.\n2. Penilaian Dokumen.\nPenilaian Dokumen dilakukan oleh Tim Asesor Eksternal untuk menilai\npenerapan SPBE pada Instansi Pusat dan Pemerintah Daerah dengan\nmelakukan verifikasi dokumen berupa j",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "Peraturan 59 Tahun 2020",
+            "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "bagian": "LAMPIRAN",
+            "bab": "BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+            "pasal": "",
+            "ayat": "",
+            "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 37/139]",
+            "chunk_part": 37,
+            "chunk_parts_total": 139,
+            "document_id": 4,
+            "chunk_id": 593,
+            "rrf_score": 0.028373015873015873,
+            "rerank_base_score": 0.028373015873015873,
+            "query_boost": 0.35,
+            "rerank_score": 0.37837301587301586
+          }
+        },
+        {
+          "content": "menjadi lokus Penilaian Visitasi, maka Tim Asesor Internal dan\nResponden mempersiapkan bukti pendukung dan memberikan\npenjelasan atas penerapan SPBE yang ditanyakan oleh Tim Asesor\nEksternal.\nDalam pelaksanaan Pemantauan SPBE, Instansi Pusat dan\nPemerintah Daerah melakukan aktivitas Penilaian Mandiri, sedangkan\ndalam pelaksanaan Evaluasi SPBE, Instansi Pusat dan Pemerintah\nDaerah melakukan aktivitas Penilaian Mandiri, Penilaian Interviu,\ndan/atau Penilaian Visitasi.\nD. Tahap Pelaksanaan di Kemen",
+          "metadata": {
+            "document_title": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "context_header": "",
+            "pasal": "",
+            "ayat": "",
+            "bab": "BAB III - PROSES PEMANTAUAN DAN EVALUASI SPBE",
+            "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB III - PROSES PEMANTAUAN DAN EVALUASI SPBE [Bagian 19/24]",
+            "chunk_part": 19,
+            "chunk_parts_total": 24,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "4",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 8.635288429905799,
+            "rrf_score": 0.015873015873015872,
+            "rerank_base_score": 0.015873015873015872,
+            "query_boost": 0.35,
+            "rerank_score": 0.36587301587301585
+          }
+        }
+      ]
+    },
+    "retrieval_eval": {
+      "expected": {
+        "doc_checks": [
+          "59",
+          "2020"
+        ],
+        "pasal": "1",
+        "ayat": null,
+        "angka": "9"
+      },
+      "doc_at_1": true,
+      "doc_at_3": true,
+      "doc_at_6": true,
+      "section_at_1": false,
+      "section_at_3": true,
+      "section_at_6": true,
+      "top_sections": [
+        {
+          "document": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+          "section": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB III - PROSES PEMANTAUAN DAN EVALUASI SPBE [Bagian 9/24]",
+          "boost": 0.7,
+          "score": 0.7133333333333333
+        },
+        {
+          "document": "Peraturan 59 Tahun 2020",
+          "section": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 38/139]",
+          "boost": 0.35,
+          "score": 0.38151364764267987
+        },
+        {
+          "document": "Peraturan 59 Tahun 2020",
+          "section": "Pasal 1",
+          "boost": 0.35,
+          "score": 0.3801177536231884
+        },
+        {
+          "document": "Peraturan 59 Tahun 2020",
+          "section": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 37/139]",
+          "boost": 0.35,
+          "score": 0.37837301587301586
+        },
+        {
+          "document": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+          "section": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB III - PROSES PEMANTAUAN DAN EVALUASI SPBE [Bagian 19/24]",
+          "boost": 0.35,
+          "score": 0.36587301587301585
+        }
+      ],
+      "latency_wall_ms": 137
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 14,
+      "pertanyaan": "Apa yang dimaksud dengan Penilaian Visitasi?",
+      "jawaban": "Pengamatan langsung oleh Tim Asesor Eksternal di lokasi untuk melakukan validasi informasi.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Pasal 1 Angka 11, Halaman 3"
+    },
+    "retrieval": {
+      "query": "Apa yang dimaksud dengan Penilaian Visitasi?",
+      "query_type": "general",
+      "source_count": 5,
+      "docs": [
+        {
+          "content": "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyelenggaraan\npemerintahan yang memanfaatkan teknologi\ninformasi dan komunikasi untuk memberikan\nlayanan kepada Pengguna SPBE.\n2. Tata Kelola SPBE adalah kerangka kerja yang\nmemastikan terlaksananya pengaturan, pengarahan,\ndan pengendalian dalam penerapan SPBE secara\nterpadu.\n3. Manajemen SPBE adalah serangkaian proses untuk\nmencapai penerapan SPBE yang e",
+          "metadata": {
+            "document_title": "Perpres Nomor 95 Tahun 2018.pdf",
+            "context_header": "",
+            "pasal": "Pasal 1",
+            "ayat": "",
+            "bab": "BAB I",
+            "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB I > Pasal 1",
+            "chunk_part": null,
+            "chunk_parts_total": null,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "6",
+            "filename": "Perpres Nomor 95 Tahun 2018.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 9.562263791389494,
+            "rrf_score": 0.012345679012345678,
+            "rerank_base_score": 0.012345679012345678,
+            "query_boost": 3.5500000000000003,
+            "rerank_score": 3.562345679012346
+          }
+        },
+        {
+          "content": "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyelenggaraan\npemerintahan yang memanfaatkan teknologi informasi\ndan komunikasi untuk memberikan layanan kepada\npengguna SPBE.\n2. Satu Data Indonesia adalah kebijakan tata kelola data\npemerintah sebagaimana dimaksud dalam Peraturan\nPresiden mengenai Satu Data Indonesia.\n3. Layanan SPBE adalah keluaran yang dihasilkan oleh\nI (satu) atau beberapa fungsi apl",
+          "metadata": {
+            "document_title": "Perpres Nomor 82 Tahun 2023.pdf",
+            "context_header": "",
+            "pasal": "Pasal 1",
+            "ayat": "",
+            "bab": "BAB I",
+            "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB I > Pasal 1",
+            "chunk_part": null,
+            "chunk_parts_total": null,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "5",
+            "filename": "Perpres Nomor 82 Tahun 2023.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 9.174058440740728,
+            "rrf_score": 0.011764705882352941,
+            "rerank_base_score": 0.011764705882352941,
+            "query_boost": 3.5500000000000003,
+            "rerank_score": 3.561764705882353
+          }
+        },
+        {
+          "content": "Pasal 1\nDalam Peraturan Badan ini yang dimaksud dengan: \n1. \nSistem \nPemerintahan \nBerbasis \nElektronik \nyang \nselanjutnya disingkat SPBE adalah penyelenggaraan \npemerintahan yang memanfaatkan teknologi informasi \ndan komunikasi untuk memberikan layanan kepada \npengguna sistem pemerintahan berbasis elektronik. \n2. \nKeamanan SPBE adalah pengendalian keamanan yang \nterpadu dalam SPBE. \n3. \nAudit Keamanan SPBE adalah audit teknologi informasi \ndan komunikasi cakupan keamanan SPBE. \n4. \nAudit Teknol",
+          "metadata": {
+            "document_title": "peraturan-bssn-no-8-tahun-2024.pdf",
+            "context_header": "",
+            "pasal": "Pasal 1",
+            "ayat": "",
+            "bab": "BAB I",
+            "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I > Pasal 1",
+            "chunk_part": null,
+            "chunk_parts_total": null,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "3",
+            "filename": "peraturan-bssn-no-8-tahun-2024.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 8.916799524520542,
+            "rrf_score": 0.011111111111111112,
+            "rerank_base_score": 0.011111111111111112,
+            "query_boost": 3.5500000000000003,
+            "rerank_score": 3.5611111111111113
+          }
+        },
+        {
+          "content": "Instansi \nPusat/Pemerintah Daerah untuk memberikan jawaban \ndan penjelasan serta bukti pendukung atas pertanyaan \nyang diberikan oleh Asesor. \n8. \nPenilaian Mandiri adalah penilaian yang dilakukan oleh \nTim Asesor Internal pada penerapan SPBE Instansi \nPusat dan Pemerintah Daerah. \n9. \nPenilaian Dokumen adalah penilaian berdasarkan \ndokumen Penilaian Mandiri yang dilakukan oleh Tim \nAsesor Eksternal untuk verifikasi informasi. \n10. Penilaian Interviu adalah penilaian dengan melakukan \ntanya-jawa",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "Peraturan 59 Tahun 2020",
+            "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "bab": "",
+            "pasal": "Pasal 1",
+            "bagian": "",
+            "ayat": "",
+            "hierarchy": "Peraturan 59 Tahun 2020 > Pasal 1",
+            "document_id": 4,
+            "chunk_id": 537,
+            "rrf_score": 0.04692957315908136,
+            "rerank_base_score": 0.04692957315908136,
+            "query_boost": 2.1500000000000004,
+            "rerank_score": 2.196929573159082
+          }
+        },
+        {
+          "content": "dalam pengoperasian Sistem Elektronik.\n14. Uji Kelaikan Sistem Elektronik adalah suatu rangkaian\nproses penilaian secara objektif terhadap setiap\nkomponen Sistem Elektronik, baik dilakukan secara\nmandiri dan/atau dilakukan oleh institusi yang\nberwenang dan berkompeten.\n15. Akses adalah kegiatan melakukan interaksi dengan\nSistem Elektronik yang berdiri sendiri atau dalam\njaringan.\nSK No 01 1685 A\n16. Penyelenggaraan . . .",
+          "metadata": {
+            "document_title": "PP Nomor 71 Tahun 2019.pdf",
+            "context_header": "",
+            "pasal": "Pasal 1",
+            "ayat": "",
+            "bab": "BAB I",
+            "hierarchy": "PERATURAN PEMERINTAH REPUBLIK INDONESIA  Tahun > BAB I > Pasal 1",
+            "chunk_part": null,
+            "chunk_parts_total": null,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "7",
+            "filename": "PP Nomor 71 Tahun 2019.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 11.440942584462128,
+            "rrf_score": 0.013333333333333334,
+            "rerank_base_score": 0.013333333333333334,
+            "query_boost": 1.6500000000000001,
+            "rerank_score": 1.6633333333333336
+          }
+        }
+      ]
+    },
+    "retrieval_eval": {
+      "expected": {
+        "doc_checks": [
+          "59",
+          "2020"
+        ],
+        "pasal": "1",
+        "ayat": null,
+        "angka": "11"
+      },
+      "doc_at_1": false,
+      "doc_at_3": false,
+      "doc_at_6": true,
+      "section_at_1": false,
+      "section_at_3": false,
+      "section_at_6": true,
+      "top_sections": [
+        {
+          "document": "Perpres Nomor 95 Tahun 2018.pdf",
+          "section": "Pasal 1",
+          "boost": 3.5500000000000003,
+          "score": 3.562345679012346
+        },
+        {
+          "document": "Perpres Nomor 82 Tahun 2023.pdf",
+          "section": "Pasal 1",
+          "boost": 3.5500000000000003,
+          "score": 3.561764705882353
+        },
+        {
+          "document": "peraturan-bssn-no-8-tahun-2024.pdf",
+          "section": "Pasal 1",
+          "boost": 3.5500000000000003,
+          "score": 3.5611111111111113
+        },
+        {
+          "document": "Peraturan 59 Tahun 2020",
+          "section": "Pasal 1",
+          "boost": 2.1500000000000004,
+          "score": 2.196929573159082
+        },
+        {
+          "document": "PP Nomor 71 Tahun 2019.pdf",
+          "section": "Pasal 1",
+          "boost": 1.6500000000000001,
+          "score": 1.6633333333333336
+        }
+      ],
+      "latency_wall_ms": 205
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 15,
+      "pertanyaan": "Apa tujuan utama dilakukannya Pemantauan dan Evaluasi SPBE?",
+      "jawaban": "Mengukur kemajuan, meningkatkan kualitas penerapan SPBE, dan meningkatkan kualitas pelayanan publik di pemerintahan.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Pasal 2 Ayat (2), Halaman 4-5"
+    },
+    "retrieval": {
+      "query": "Apa tujuan utama dilakukannya Pemantauan dan Evaluasi SPBE?",
+      "query_type": "general",
+      "source_count": 5,
+      "docs": [
+        {
+          "content": "Evaluasi SPBE secara daring (online); dan\nc) melaporkan hasil sementara pengisian Penilaian Mandiri\nkepada\npenanggung\njawab\nuntuk\nmendapatkan\nsaran\nperbaikan atau persetujuan.\n4) Anggota Tim Asesor Internal memiliki tugas:\na) melakukan bimbingan teknis mengenai konsep, metodologi,\ndan proses Pemantauan dan Evaluasi SPBE, serta substansi\nindikator penilaian kepada unit kerja/perangkat daerah;\nb) melakukan\npenyiapan\nbukti\npendukung\ndari\nsetiap\npertanyaan;\n-84-\nc) melaksanakan Penilaian Mandiri pad",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "Peraturan 59 Tahun 2020",
+            "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "bagian": "LAMPIRAN",
+            "bab": "BAB III - PROSES PEMANTAUAN DAN EVALUASI SPBE",
+            "pasal": "",
+            "ayat": "",
+            "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB III - PROSES PEMANTAUAN DAN EVALUASI SPBE [Bagian 14/24]",
+            "chunk_part": 14,
+            "chunk_parts_total": 24,
+            "document_id": 4,
+            "chunk_id": 709,
+            "rrf_score": 0.04259049773755656,
+            "rerank_base_score": 0.04259049773755656,
+            "query_boost": 0.7,
+            "rerank_score": 0.7425904977375565
+          }
+        },
+        {
+          "content": "Kuesioner pemantauan dan evaluasi SPBE merupakan instrumen untuk  mengumpulkan informasi penerapan SPBE di Instansi Pusat atau Pemerintah  Daerah. Kuesioner pemantauan dan evaluasi SPBE disajikan dalam bentuk  pertanyaan Tingkat Kematangan yang terdiri dari 47 (empat puluh tujuh)  indikator. Instrumen tersebut selanjutnya akan digunakan sebagai alat  penilaian bagi Asesor Internal dan/atau responden pada Instansi Pusat atau  Pemerintah Daerah.   Dalam pelaksanaan pemantauan dan evaluasi SPBE, ku",
+          "metadata": {
+            "doc_type": "pedoman_spbe",
+            "judul_dokumen": "Pedoman Nomor 3 Tahun 2024",
+            "filename": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+            "bab": "BAB II - INSTRUMEN PEMANTAUAN DAN EVALUASI SPBE",
+            "bagian": "A. Ketentuan Umum",
+            "hierarchy": "Pedoman Nomor 3 Tahun 2024 > BAB II - INSTRUMEN PEMANTAUAN DAN EVALUASI SPBE > A. Ketentuan Umum",
+            "document_id": 2,
+            "chunk_id": 121,
+            "rrf_score": 0.03931924491775837,
+            "rerank_base_score": 0.03931924491775837,
+            "query_boost": 0.7,
+            "rerank_score": 0.7393192449177584
+          }
+        },
+        {
+          "content": "secara efisien, efektif, dan objektif, perlu disusun pedoman Pemantauan dan\nEvaluasi SPBE yang dapat dipahami oleh semua pihak di Instansi Pusat dan\nPemerintah Daerah. Pedoman Pemantauan dan Evaluasi SPBE mengatur\nmetode penilaian serta proses persiapan, pelaksanaan, dan pelaporan\npelaksanaan Pemantauan dan Evaluasi SPBE pada Instansi Pusat dan\nPemerintah Daerah.\nB. Sistematika Pedoman\nPedoman Pemantauan dan Evaluasi SPBE disusun dalam empat bab, yaitu:\n1. Bab I Pendahuluan, memuat latar belakan",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "Peraturan 59 Tahun 2020",
+            "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "bagian": "LAMPIRAN",
+            "bab": "BAB I - PENDAHULUAN",
+            "pasal": "",
+            "ayat": "",
+            "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB I - PENDAHULUAN [Bagian 4/5]",
+            "chunk_part": 4,
+            "chunk_parts_total": 5,
+            "document_id": 4,
+            "chunk_id": 555,
+            "rrf_score": 0.031024531024531024,
+            "rerank_base_score": 0.031024531024531024,
+            "query_boost": 0.7,
+            "rerank_score": 0.731024531024531
+          }
+        },
+        {
+          "content": "berkontribusi dalam penerapan sistem, proses, dan prosedur kerja yang\ntransparan, efektif, efisien, dan terukur sehingga tata kelola pemerintahan\nberbasis elektronik dapat diwujudkan.\nPedoman Pemantauan dan Evaluasi SPBE ini ditetapkan agar setiap\nInstansi Pusat dan Pemerintah Daerah memiliki acuan dalam melaksanakan\nPemantauan dan Evaluasi SPBE di lingkungannya masing-masing.\nMENTERI PENDAYAGUNAAN APARATUR\nNEGARA DAN REFORMASI BIROKRASI\nREPUBLIK INDONESIA,\nTJAHJO KUMOLO\nttd",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "Peraturan 59 Tahun 2020",
+            "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "bagian": "LAMPIRAN",
+            "bab": "BAB IV - PENUTUP",
+            "pasal": "",
+            "ayat": "",
+            "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB IV - PENUTUP [Bagian 3/3]",
+            "chunk_part": 3,
+            "chunk_parts_total": 3,
+            "document_id": 4,
+            "chunk_id": 722,
+            "rrf_score": 0.029957522915269395,
+            "rerank_base_score": 0.029957522915269395,
+            "query_boost": 0.7,
+            "rerank_score": 0.7299575229152694
+          }
+        },
+        {
+          "content": "Dalam pelaksanaan pemantauan dan evaluasi SPBE, Asesor diharapkan:  1. Menaati semua peraturan dan ketentuan yang berlaku;  2. Mendukung tujuan dan sasaran pelaksanaan pemantauan dan evaluasi  SPBE;  3. Menunjukkan komitmen dalam segala hal berkaitan dengan profesi dalam  melaksanakan tugas;  4. Melaksanakan tugasnya secara jujur, teliti, bertanggung jawab dan  bersungguh-sungguh;  5. Berani dan bertanggung jawab dalam mengungkapkan seluruh fakta yang  diketahuinya berdasarkan bukti pemantauan d",
+          "metadata": {
+            "doc_type": "pedoman_spbe",
+            "judul_dokumen": "Pedoman Nomor 3 Tahun 2024",
+            "filename": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+            "bab": "BAB IV - ETIKA ASESOR PEMANTAUAN DAN EVALUASI SPBE",
+            "bagian": "C. Aturan Perilaku Sebagai Asesor dalam Pemantauan dan Evaluasi SPBE",
+            "hierarchy": "Pedoman Nomor 3 Tahun 2024 > BAB IV - ETIKA ASESOR PEMANTAUAN DAN EVALUASI SPBE > C. Aturan Perilaku Sebagai Asesor dalam Pemantauan dan Evaluasi SPBE",
+            "document_id": 2,
+            "chunk_id": 179,
+            "rrf_score": 0.029910714285714284,
+            "rerank_base_score": 0.029910714285714284,
+            "query_boost": 0.7,
+            "rerank_score": 0.7299107142857142
+          }
+        }
+      ]
+    },
+    "retrieval_eval": {
+      "expected": {
+        "doc_checks": [
+          "59",
+          "2020"
+        ],
+        "pasal": "2",
+        "ayat": "2",
+        "angka": null
+      },
+      "doc_at_1": true,
+      "doc_at_3": true,
+      "doc_at_6": true,
+      "section_at_1": false,
+      "section_at_3": false,
+      "section_at_6": false,
+      "top_sections": [
+        {
+          "document": "Peraturan 59 Tahun 2020",
+          "section": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB III - PROSES PEMANTAUAN DAN EVALUASI SPBE [Bagian 14/24]",
+          "boost": 0.7,
+          "score": 0.7425904977375565
+        },
+        {
+          "document": "Pedoman Nomor 3 Tahun 2024",
+          "section": "Pedoman Nomor 3 Tahun 2024 > BAB II - INSTRUMEN PEMANTAUAN DAN EVALUASI SPBE > A. Ketentuan Umum",
+          "boost": 0.7,
+          "score": 0.7393192449177584
+        },
+        {
+          "document": "Peraturan 59 Tahun 2020",
+          "section": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB I - PENDAHULUAN [Bagian 4/5]",
+          "boost": 0.7,
+          "score": 0.731024531024531
+        },
+        {
+          "document": "Peraturan 59 Tahun 2020",
+          "section": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB IV - PENUTUP [Bagian 3/3]",
+          "boost": 0.7,
+          "score": 0.7299575229152694
+        },
+        {
+          "document": "Pedoman Nomor 3 Tahun 2024",
+          "section": "Pedoman Nomor 3 Tahun 2024 > BAB IV - ETIKA ASESOR PEMANTAUAN DAN EVALUASI SPBE > C. Aturan Perilaku Sebagai Asesor dalam Pemantauan dan Evaluasi SPBE",
+          "boost": 0.7,
+          "score": 0.7299107142857142
+        }
+      ],
+      "latency_wall_ms": 270
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 16,
+      "pertanyaan": "Sebutkan 5 tingkatan kematangan kapabilitas proses SPBE!",
+      "jawaban": "Tingkat Rintisan, Terkelola, Terdefinisi, Terpadu dan Terukur, serta Optimum.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Lampiran I, Tabel 1, Halaman 13"
+    },
+    "retrieval": {
+      "query": "Sebutkan 5 tingkatan kematangan kapabilitas proses SPBE!",
+      "query_type": "general",
+      "source_count": 5,
+      "docs": [
+        {
+          "content": "kemampuan organisasi pada suatu proses dan akan digunakan untuk\npengukuran tingkat kematangan kebijakan, tata kelola, dan manajemen\nSPBE. Tingkat kematangan kapabilitas proses diukur dengan 5 (lima)\ntingkatan yaitu rintisan, terkelola, terdefinisi, terpadu dan terukur, dan\noptimum. Kriteria tingkat kematangan kapabilitas proses dapat dilihat\npada Tabel 1.\nTabel 1 Kriteria Tingkat Kematangan Kapabilitas Proses\nTingkat\nKriteria\n1 – Rintisan\nProses penerapan SPBE dilakukan tanpa perencanaan\ndan sew",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "Peraturan 59 Tahun 2020",
+            "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "bagian": "LAMPIRAN",
+            "bab": "BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+            "pasal": "",
+            "ayat": "",
+            "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 4/139]",
+            "chunk_part": 4,
+            "chunk_parts_total": 139,
+            "document_id": 4,
+            "chunk_id": 560,
+            "rrf_score": 0.06478893337698204,
+            "rerank_base_score": 0.06478893337698204,
+            "query_boost": 0.35,
+            "rerank_score": 0.414788933376982
+          }
+        },
+        {
+          "content": "pengukuran\ntingkat\nkematangan\nlayanan\nSPBE\nyaitu\nlayanan\nadministrasi pemerintahan berbasis elektronik dan layanan publik\nberbasis elektronik. Tingkat kematangan kapabilitas layanan diukur\ndengan 5 (lima) tingkatan yaitu informasi, interaksi, transaksi,\nkolaborasi, dan optimum. Kriteria tingkat kematangan kapabilitas\nlayanan dapat dilihat pada Tabel 2.\nTabel 2 Kriteria Tingkat Kematangan Kapabilitas Layanan\nTingkat\nKriteria\n1 – Informasi\nLayanan SPBE diberikan dalam bentuk informasi satu\narah.\n2",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "Peraturan 59 Tahun 2020",
+            "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "bagian": "LAMPIRAN",
+            "bab": "BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+            "pasal": "",
+            "ayat": "",
+            "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 6/139]",
+            "chunk_part": 6,
+            "chunk_parts_total": 139,
+            "document_id": 4,
+            "chunk_id": 562,
+            "rrf_score": 0.048915917503966164,
+            "rerank_base_score": 0.048915917503966164,
+            "query_boost": 0.35,
+            "rerank_score": 0.39891591750396616
+          }
+        },
+        {
+          "content": "Proses penerapan SPBE sudah dilakukan sesuai\ndengan\nfungsi\nmanajemen\nyang\nsesuai\npedoman/standar dan diterapkan pada semua unit\nkerja dalam organisasi.\n4 – Terpadu\ndan Terukur\nKriteria tingkat Terdefinisi telah terpenuhi.\nProses\npenerapan\nSPBE\nyang\nterpadu\ntelah\nberkontribusi\npada\nkinerja\norganisasi.\nKinerja\npenerapan SPBE dapat diukur melalui kegiatan reviu\ndan evaluasi pada setiap proses penerapan SPBE.\n-13-\n5 – Optimum\nKriteria tingkat Terpadu dan Terukur telah terpenuhi.\nProses penerapan SPB",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "Peraturan 59 Tahun 2020",
+            "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "bagian": "LAMPIRAN",
+            "bab": "BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+            "pasal": "",
+            "ayat": "",
+            "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 5/139]",
+            "chunk_part": 5,
+            "chunk_parts_total": 139,
+            "document_id": 4,
+            "chunk_id": 561,
+            "rrf_score": 0.04524201288907172,
+            "rerank_base_score": 0.04524201288907172,
+            "query_boost": 0.35,
+            "rerank_score": 0.3952420128890717
+          }
+        },
+        {
+          "content": "Tingkat 3:\n- Kriteria: Kriteria tingkat 2 telah terpenuhi dan kompetensi  Sumber Daya Manusia SPBE telah terpenuhi      seluruhnya (kompetensi di bidang Proses Bisnis  Pemerintahan,  Arsitektur  SPBE,  Data  dan  Informasi, Keamanan SPBE, Aplikasi SPBE, dan  Infrastruktur SPBE).  Kriteria  pemenuhan  Level  Instansi Pusat/Pemerintah Daerah telah menerapkan  Manajemen SDM SPBE yang memuat serangkaian  proses  manajemen  SDM  SPBE  mulai  dari  perencanaan,  pengembangan,  pembinaan,  dan  pendaya",
+          "metadata": {
+            "doc_type": "pedoman_spbe",
+            "judul_dokumen": "Pedoman Nomor 3 Tahun 2024",
+            "filename": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+            "domain": "Kebijakan SPBE",
+            "indikator": "Tingkat Kematangan Kompetensi Sumber Daya  Manusia.",
+            "hierarchy": "Pedoman Nomor 3 Tahun 2024 > Lampiran Instrumen > Domain: Kebijakan SPBE > Indikator 25: Tingkat Kematangan Kompetensi Sumber Daya  Manusia. [Bagian 3/5]",
+            "chunk_part": 3,
+            "chunk_parts_total": 5,
+            "document_id": 2,
+            "chunk_id": 296,
+            "rrf_score": 0.031746031746031744,
+            "rerank_base_score": 0.031746031746031744,
+            "query_boost": 0.35,
+            "rerank_score": 0.3817460317460317
+          }
+        },
+        {
+          "content": "peningkatan kualitas secara berkesinambungan berdasarkan\nhasil reviu dan evaluasi. Dampak perubahan dari perbaikan atau\npeningkatan kualitas proses tata kelola dan manajemen SPBE\ndapat diantisipasi dengan menerapkan manajemen perubahan.\n2. Kriteria Tingkat Kematangan Kapabilitas Layanan\nPengukuran kapabilitas layanan mencakup pengukuran tingkat\nkematangan\npada\nlayanan\nadministrasi\npemerintahan\nberbasis\nelektronik dan layanan publik berbasis elektronik. Kriteria tingkat\nkematangan kapabilitas lay",
+          "metadata": {
+            "document_title": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "context_header": "",
+            "pasal": "",
+            "ayat": "",
+            "bab": "BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+            "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 32/139]",
+            "chunk_part": 32,
+            "chunk_parts_total": 139,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "4",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 10.719741484900766,
+            "rrf_score": 0.031054405392392875,
+            "rerank_base_score": 0.031054405392392875,
+            "query_boost": 0.35,
+            "rerank_score": 0.3810544053923929
+          }
+        }
+      ]
+    },
+    "retrieval_eval": {
+      "expected": {
+        "doc_checks": [
+          "59",
+          "2020"
+        ],
+        "pasal": null,
+        "ayat": null,
+        "angka": null
+      },
+      "doc_at_1": true,
+      "doc_at_3": true,
+      "doc_at_6": true,
+      "section_at_1": false,
+      "section_at_3": false,
+      "section_at_6": false,
+      "top_sections": [
+        {
+          "document": "Peraturan 59 Tahun 2020",
+          "section": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 4/139]",
+          "boost": 0.35,
+          "score": 0.414788933376982
+        },
+        {
+          "document": "Peraturan 59 Tahun 2020",
+          "section": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 6/139]",
+          "boost": 0.35,
+          "score": 0.39891591750396616
+        },
+        {
+          "document": "Peraturan 59 Tahun 2020",
+          "section": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 5/139]",
+          "boost": 0.35,
+          "score": 0.3952420128890717
+        },
+        {
+          "document": "Pedoman Nomor 3 Tahun 2024",
+          "section": "Pedoman Nomor 3 Tahun 2024 > Lampiran Instrumen > Domain: Kebijakan SPBE > Indikator 25: Tingkat Kematangan Kompetensi Sumber Daya  Manusia. [Bagian 3/5]",
+          "boost": 0.35,
+          "score": 0.3817460317460317
+        },
+        {
+          "document": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+          "section": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 32/139]",
+          "boost": 0.35,
+          "score": 0.3810544053923929
+        }
+      ],
+      "latency_wall_ms": 273
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 17,
+      "pertanyaan": "Apa yang mendefinisikan SPBE Tingkat 1 (Rintisan)?",
+      "jawaban": "Proses penerapan SPBE dilakukan tanpa perencanaan yang matang dan secara sewaktu-waktu.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Lampiran I, Tabel 1, Halaman 13"
+    },
+    "retrieval": {
+      "query": "Apa yang mendefinisikan SPBE Tingkat 1 (Rintisan)?",
+      "query_type": "general",
+      "source_count": 5,
+      "docs": [
+        {
+          "content": "Pasal 1\nDalam Peraturan Badan ini yang dimaksud dengan: \n1. \nSistem \nPemerintahan \nBerbasis \nElektronik \nyang \nselanjutnya disingkat SPBE adalah penyelenggaraan \npemerintahan yang memanfaatkan teknologi informasi \ndan komunikasi untuk memberikan layanan kepada \npengguna sistem pemerintahan berbasis elektronik. \n2. \nKeamanan SPBE adalah pengendalian keamanan yang \nterpadu dalam SPBE. \n3. \nAudit Keamanan SPBE adalah audit teknologi informasi \ndan komunikasi cakupan keamanan SPBE. \n4. \nAudit Teknol",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+            "tentang": "STANDAR DAN TATA CARA PELAKSANAAN AUDIT KEAMANAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "peraturan-bssn-no-8-tahun-2024.pdf",
+            "bab": "BAB I",
+            "pasal": "Pasal 1",
+            "bagian": "",
+            "ayat": "",
+            "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I > Pasal 1",
+            "document_id": 3,
+            "chunk_id": 422,
+            "rrf_score": 0.06304297364748185,
+            "rerank_base_score": 0.06304297364748185,
+            "query_boost": 3.5500000000000003,
+            "rerank_score": 3.6130429736474823
+          }
+        },
+        {
+          "content": "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyelenggaraan\npemerintahan yang memanfaatkan teknologi informasi\ndan komunikasi untuk memberikan layanan kepada\npengguna SPBE.\n2. Satu Data Indonesia adalah kebijakan tata kelola data\npemerintah sebagaimana dimaksud dalam Peraturan\nPresiden mengenai Satu Data Indonesia.\n3. Layanan SPBE adalah keluaran yang dihasilkan oleh\nI (satu) atau beberapa fungsi apl",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+            "tentang": "PERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN DIGITAL NASIONAL",
+            "filename": "Perpres Nomor 82 Tahun 2023.pdf",
+            "bab": "BAB I",
+            "pasal": "Pasal 1",
+            "bagian": "",
+            "ayat": "",
+            "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB I > Pasal 1",
+            "document_id": 5,
+            "chunk_id": 828,
+            "rrf_score": 0.045642921146953404,
+            "rerank_base_score": 0.045642921146953404,
+            "query_boost": 3.5500000000000003,
+            "rerank_score": 3.5956429211469536
+          }
+        },
+        {
+          "content": "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyelenggaraan\npemerintahan yang memanfaatkan teknologi\ninformasi dan komunikasi untuk memberikan\nlayanan kepada Pengguna SPBE.\n2. Tata Kelola SPBE adalah kerangka kerja yang\nmemastikan terlaksananya pengaturan, pengarahan,\ndan pengendalian dalam penerapan SPBE secara\nterpadu.\n3. Manajemen SPBE adalah serangkaian proses untuk\nmencapai penerapan SPBE yang e",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018",
+            "tentang": "SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "Perpres Nomor 95 Tahun 2018.pdf",
+            "bab": "BAB I",
+            "pasal": "Pasal 1",
+            "bagian": "",
+            "ayat": "",
+            "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB I > Pasal 1",
+            "document_id": 6,
+            "chunk_id": 870,
+            "rrf_score": 0.027984344422700584,
+            "rerank_base_score": 0.027984344422700584,
+            "query_boost": 3.5500000000000003,
+            "rerank_score": 3.577984344422701
+          }
+        },
+        {
+          "content": "PERKA BSSN NOMOR 2 TAHUN 2023: - 2 -\nBAB I\nKETENTUAN UMUM\nPasal 1\nDalam Peraturan Kepala Badan ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyelenggaraan\npemerintahan yang memanfaatkan teknologi informasi\ndan komunikasi untuk memberikan layanan kepada\npengguna sistem pemerintahan berbasis elektronik.\n2. Teknologi Informasi dan Komunikasi yang selanjutnya\ndisingkat TIK adalah segala kegiatan yang terkait dengan\npemrosesan, pengelola",
+          "metadata": {
+            "document_title": "PERKA BSSN NOMOR 2 TAHUN 2023",
+            "context_header": "PERKA BSSN NOMOR 2 TAHUN 2023",
+            "pasal": "",
+            "ayat": "",
+            "bab": "",
+            "hierarchy": "",
+            "chunk_part": null,
+            "chunk_parts_total": null,
+            "parent_pasal_text": "",
+            "is_parent": true,
+            "doc_id": "9cd441c8",
+            "filename": "PERKA BSSN NOMOR 2 TAHUN 2023.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 19.40402612353457,
+            "rrf_score": 0.013157894736842105,
+            "rerank_base_score": 0.013157894736842105,
+            "query_boost": 1.9,
+            "rerank_score": 1.913157894736842
+          }
+        },
+        {
+          "content": "PERKA BSSN NOMOR 2 TAHUN 2023: - 2 -\nBAB I\nKETENTUAN UMUM\nPasal 1\nDalam Peraturan Kepala Badan ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyelenggaraan\npemerintahan yang memanfaatkan teknologi informasi\ndan komunikasi untuk memberikan layanan kepada\npengguna sistem pemerintahan berbasis elektronik.\n2. Teknologi Informasi dan Komunikasi yang selanjutnya\ndisingkat TIK adalah segala kegiatan yang terkait dengan\npemrosesan, pengelola",
+          "metadata": {
+            "document_title": "PERKA BSSN NOMOR 2 TAHUN 2023",
+            "context_header": "PERKA BSSN NOMOR 2 TAHUN 2023",
+            "pasal": "",
+            "ayat": "",
+            "bab": "",
+            "hierarchy": "",
+            "chunk_part": null,
+            "chunk_parts_total": null,
+            "parent_pasal_text": "",
+            "is_parent": true,
+            "doc_id": "e1a7636b",
+            "filename": "PERKA BSSN NOMOR 2 TAHUN 2023.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 19.40402612353457,
+            "rrf_score": 0.012987012987012988,
+            "rerank_base_score": 0.012987012987012988,
+            "query_boost": 1.9,
+            "rerank_score": 1.9129870129870128
+          }
+        }
+      ]
+    },
+    "retrieval_eval": {
+      "expected": {
+        "doc_checks": [
+          "59",
+          "2020"
+        ],
+        "pasal": null,
+        "ayat": null,
+        "angka": null
+      },
+      "doc_at_1": false,
+      "doc_at_3": false,
+      "doc_at_6": false,
+      "section_at_1": false,
+      "section_at_3": false,
+      "section_at_6": false,
+      "top_sections": [
+        {
+          "document": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+          "section": "Pasal 1",
+          "boost": 3.5500000000000003,
+          "score": 3.6130429736474823
+        },
+        {
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 1",
+          "boost": 3.5500000000000003,
+          "score": 3.5956429211469536
+        },
+        {
+          "document": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018",
+          "section": "Pasal 1",
+          "boost": 3.5500000000000003,
+          "score": 3.577984344422701
+        },
+        {
+          "document": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "section": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "boost": 1.9,
+          "score": 1.913157894736842
+        },
+        {
+          "document": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "section": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "boost": 1.9,
+          "score": 1.9129870129870128
+        }
+      ],
+      "latency_wall_ms": 351
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 18,
+      "pertanyaan": "Berapa persentase bobot penilaian untuk Domain Layanan SPBE?",
+      "jawaban": "Sebesar 45,50%.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Lampiran I, Tabel 7, Halaman 17"
+    },
+    "retrieval": {
+      "query": "Berapa persentase bobot penilaian untuk Domain Layanan SPBE?",
+      "query_type": "general",
+      "source_count": 5,
+      "docs": [
+        {
+          "content": ".a.Pergub-Tatakelola- SPBE.pdf  21.b.SK-Manrisk-SPBE.pdf Penerapan Manajemen Risiko  SPBEtelah dilakukan reviu/evaluasi melalui data dukung:    Tingkat  Kriteria  *Penjelasan  20.c.Reviu-Manrisk_SPBE.pdf  Dari beberapa rekomendasi, telah ditindaklanjuti dengan  beberapa penyempurnaan sebagaimana pada data dukung  berikut:  20.d.Progres-Manrisk_SPBE.pdf (FAKTA).   Penerapan Manajemen Risiko SPBE telah dilaksanakan  secara terprogram dan menyeluruh, dan dilakukan  reviu/evaluasi serta perbaikan- p",
+          "metadata": {
+            "document_title": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+            "context_header": "",
+            "pasal": "",
+            "ayat": "",
+            "bab": "BAB III - TATA CARA DAN KAIDAH PENILAIAN PEMANTAUAN DAN EVALUASI SPBE",
+            "hierarchy": "Pedoman Nomor 3 Tahun 2024 > BAB III - TATA CARA DAN KAIDAH PENILAIAN PEMANTAUAN DAN EVALUASI SPBE > B. Tata Cara dan Kaidah Penilaian Mandiri Bagi Asesor Internal",
+            "chunk_part": null,
+            "chunk_parts_total": null,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "2",
+            "filename": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 7.688516071624571,
+            "rrf_score": 0.0125,
+            "rerank_base_score": 0.0125,
+            "query_boost": 0.7,
+            "rerank_score": 0.7124999999999999
+          }
+        },
+        {
+          "content": "Tingkat 2:\n- Kriteria: Kriteria tingkat 1 telah terpenuhi dan Layanan  Kinerja Pegawai Berbasis Elektronik memberikan  layanan interaksi terkait kinerja pegawai seperti  pencarian  informasi,  pengunggahan  dan  pengunduhan dokumen.  Kriteria  pemenuhan  Level  Instansi Pusat/Pemerintah Daerah sudah memiliki  Layanan Kinerja Pegawai Berbasis Elektronik yang  menyediakan  layanan  interaksi  seperti  mencari  informasi dan mengunduh e-dokumen terkait kinerja  pegawai seperti daftar penilaian kine",
+          "metadata": {
+            "document_title": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+            "context_header": "",
+            "pasal": "",
+            "ayat": "",
+            "bab": "",
+            "hierarchy": "Pedoman Nomor 3 Tahun 2024 > Lampiran Instrumen > Domain: Layanan SPBE > Indikator 41: Tingkat Kematangan Layanan Kinerja Pegawai. [Bagian 2/6]",
+            "chunk_part": 2,
+            "chunk_parts_total": 6,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "2",
+            "filename": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 8.246020832582193,
+            "rrf_score": 0.026875901875901876,
+            "rerank_base_score": 0.026875901875901876,
+            "query_boost": 0.35,
+            "rerank_score": 0.37687590187590186
+          }
+        },
+        {
+          "content": "Indikator 41: Tingkat Kematangan Layanan Kinerja Pegawai.\nDeskripsi: a. Kinerja Pegawai adalah serangkaian proses untuk  menghasilkan pengelolaan kinerja pegawai Instansi  Pusat/Pemerintah Daerah yang efektif, efisien, dan  akuntabel.  b. Layanan  Kinerja  Pegawai  Instansi  Pusat/Pemerintah Daerah Berbasis Elektronik yang  dimaksud merupakan keluaran yang dihasilkan 1  (satu) atau lebih aplikasi yang memberikan nilai  manfaat dalam pengelolaan kinerja pegawai di  Instansi Pusat dan/atau Pemerin",
+          "metadata": {
+            "document_title": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+            "context_header": "",
+            "pasal": "",
+            "ayat": "",
+            "bab": "",
+            "hierarchy": "Pedoman Nomor 3 Tahun 2024 > Lampiran Instrumen > Domain: Layanan SPBE > Indikator 41: Tingkat Kematangan Layanan Kinerja Pegawai. [Bagian 1/6]",
+            "chunk_part": 1,
+            "chunk_parts_total": 6,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "2",
+            "filename": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 7.527999382681077,
+            "rrf_score": 0.023000660938532716,
+            "rerank_base_score": 0.023000660938532716,
+            "query_boost": 0.35,
+            "rerank_score": 0.3730006609385327
+          }
+        },
+        {
+          "content": ". Namun, terdapat beberapa temuan yang muncul dari penilaian ini, terutama dalam domain Manajemen SPBE, yang menunjukkan nilai rerata indeks yang paling kecil. Hal ini menjadi titik tumpuan perhatian yang memperlihatkan perlunya perbaikan dan peningkatan dalam penerapan Manajemen SPBE guna memastikan bahwa Laporan Pelaksanaan Evaluasi SPBE Tahun 2023 fondasi administrasi pemerintahan berbasis teknologi dapat berjalan secara optimal. Perlu diingat bahwa penilaian terhadap Domain Manajemen SPBE ba",
+          "metadata": {
+            "document_title": "LAPORAN EVALUASI SPBE KemenpanRB 2023.pdf",
+            "context_header": "",
+            "pasal": "",
+            "ayat": "",
+            "bab": "",
+            "hierarchy": "Laporan Evaluasi SPBE Tahun 2023 > Ringkasan Eksekutif > Kesimpulan Evaluasi",
+            "chunk_part": null,
+            "chunk_parts_total": null,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "10",
+            "filename": "LAPORAN EVALUASI SPBE KemenpanRB 2023.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 10.526249387207383,
+            "rrf_score": 0.015151515151515152,
+            "rerank_base_score": 0.015151515151515152,
+            "query_boost": 0.35,
+            "rerank_score": 0.3651515151515151
+          }
+        },
+        {
+          "content": "sumber daya SPBE.\n4 – Kolaborasi\nKriteria Tingkat Transaksi telah terpenuhi.\nLayanan SPBE diberikan melalui integrasi/kolaborasi\ndengan layanan SPBE lain.\n5 – Optimum\nKriteria Tingkat Kolaborasi telah terpenuhi.\nLayanan SPBE telah dilakukan perbaikan dan\npeningkatan\nkualitas\nmenyesuaikan\nperubahan\nkebutuhan di lingkungan internal dan eksternal.\n-14-\nB. Metode Penilaian Tingkat Kematangan SPBE\n1. Struktur Penilaian Tingkat Kematangan SPBE\nStruktur penilaian tingkat kematangan penerapan SPBE terdi",
+          "metadata": {
+            "document_title": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "context_header": "",
+            "pasal": "",
+            "ayat": "",
+            "bab": "BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+            "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 7/139]",
+            "chunk_part": 7,
+            "chunk_parts_total": 139,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "4",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 8.915933681093058,
+            "rrf_score": 0.014084507042253521,
+            "rerank_base_score": 0.014084507042253521,
+            "query_boost": 0.35,
+            "rerank_score": 0.3640845070422535
+          }
+        }
+      ]
+    },
+    "retrieval_eval": {
+      "expected": {
+        "doc_checks": [
+          "59",
+          "2020"
+        ],
+        "pasal": null,
+        "ayat": null,
+        "angka": null
+      },
+      "doc_at_1": false,
+      "doc_at_3": false,
+      "doc_at_6": true,
+      "section_at_1": false,
+      "section_at_3": false,
+      "section_at_6": false,
+      "top_sections": [
+        {
+          "document": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+          "section": "Pedoman Nomor 3 Tahun 2024 > BAB III - TATA CARA DAN KAIDAH PENILAIAN PEMANTAUAN DAN EVALUASI SPBE > B. Tata Cara dan Kaidah Penilaian Mandiri Bagi Asesor Internal",
+          "boost": 0.7,
+          "score": 0.7124999999999999
+        },
+        {
+          "document": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+          "section": "Pedoman Nomor 3 Tahun 2024 > Lampiran Instrumen > Domain: Layanan SPBE > Indikator 41: Tingkat Kematangan Layanan Kinerja Pegawai. [Bagian 2/6]",
+          "boost": 0.35,
+          "score": 0.37687590187590186
+        },
+        {
+          "document": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+          "section": "Pedoman Nomor 3 Tahun 2024 > Lampiran Instrumen > Domain: Layanan SPBE > Indikator 41: Tingkat Kematangan Layanan Kinerja Pegawai. [Bagian 1/6]",
+          "boost": 0.35,
+          "score": 0.3730006609385327
+        },
+        {
+          "document": "LAPORAN EVALUASI SPBE KemenpanRB 2023.pdf",
+          "section": "Laporan Evaluasi SPBE Tahun 2023 > Ringkasan Eksekutif > Kesimpulan Evaluasi",
+          "boost": 0.35,
+          "score": 0.3651515151515151
+        },
+        {
+          "document": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+          "section": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 7/139]",
+          "boost": 0.35,
+          "score": 0.3640845070422535
+        }
+      ],
+      "latency_wall_ms": 220
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 19,
+      "pertanyaan": "Predikat apa yang disematkan pada rentang nilai indeks SPBE 3,5 hingga kurang dari 4,2?",
+      "jawaban": "Sangat Baik.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Lampiran I, Tabel 13, Halaman 24"
+    },
+    "retrieval": {
+      "query": "Predikat apa yang disematkan pada rentang nilai indeks SPBE 3,5 hingga kurang dari 4,2?",
+      "query_type": "general",
+      "source_count": 5,
+      "docs": [
+        {
+          "content": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2023. Instansi: Pemerintah Kab. Mimika (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 1.0 (Predikat: Kurang). Rincian Nilai Domain: Kebijakan Internal (1.0), Tata Kelola (1.0), Manajemen SPBE (1.0), Layanan SPBE (1.0).",
+          "metadata": {
+            "doc_type": "audit",
+            "judul_dokumen": "Laporan Evaluasi SPBE Tahun 2023",
+            "filename": "LAPORAN EVALUASI SPBE KemenpanRB 2023.pdf",
+            "tahun_evaluasi": "2023",
+            "nama_instansi": "Pemerintah Kab. Mimika",
+            "jenis_instansi": "Pemerintah Kabupaten",
+            "indeks_spbe": 1.0,
+            "predikat": "Kurang",
+            "bagian": "Data Capaian Instansi",
+            "hierarchy": "Laporan Evaluasi SPBE Tahun 2023 > Data Capaian Instansi",
+            "document_id": 10,
+            "chunk_id": 2268,
+            "rrf_score": 0.042885538234375443,
+            "rerank_base_score": 0.042885538234375443,
+            "query_boost": 0.7,
+            "rerank_score": 0.7428855382343754
+          }
+        },
+        {
+          "content": "indeks SPBE dihitung berdasarkan penjumlahan dari penghitungan\n𝑰𝒏𝒅𝒆𝒌𝒔 𝑺𝑷𝑩𝑬= ∑𝑁𝐷𝑗× 𝐵𝐷𝑗\n𝑛\n𝑗=1\n-24-\nperkalian antara nilai indeks domain dan bobot domain. Rumus\npenghitungan nilai indeks SPBE dijabarkan sebagai berikut:\ndimana:\n• NDj adalah nilai indeks domain ke-j;\n• BDj adalah nilai bobot domain ke-j.\nContoh penghitungan indeks SPBE dapat dilihat pada Tabel 9 di\nbawah ini.\nTabel 12 Contoh Penghitungan Indeks SPBE\nNomor\nDomain\nNama Domain\nNilai Indeks\nDomain ND\nBobot\nDomain\nBD (%)\nND x BD\n(%)\nDoma",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "Peraturan 59 Tahun 2020",
+            "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "bagian": "LAMPIRAN",
+            "bab": "BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+            "pasal": "",
+            "ayat": "",
+            "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 25/139]",
+            "chunk_part": 25,
+            "chunk_parts_total": 139,
+            "document_id": 4,
+            "chunk_id": 581,
+            "rrf_score": 0.03252247488101534,
+            "rerank_base_score": 0.03252247488101534,
+            "query_boost": 0.7,
+            "rerank_score": 0.7325224748810153
+          }
+        },
+        {
+          "content": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah Kab. Mimika (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 2.33 (Predikat: Cukup). Rincian Nilai Domain: Kebijakan Internal (3.0), Tata Kelola (1.5), Manajemen SPBE (1.0), Layanan SPBE (3.07).",
+          "metadata": {
+            "doc_type": "laporan_spbe",
+            "judul_dokumen": "Laporan Evaluasi SPBE Tahun 2024",
+            "filename": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+            "tahun_evaluasi": "2024",
+            "nama_instansi": "Pemerintah Kab. Mimika",
+            "jenis_instansi": "Pemerintah Kabupaten",
+            "indeks_spbe": 2.33,
+            "predikat": "Cukup",
+            "bagian": "Data Capaian Instansi",
+            "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+            "document_id": 12,
+            "chunk_id": 2859,
+            "rrf_score": 0.032018442622950824,
+            "rerank_base_score": 0.032018442622950824,
+            "query_boost": 0.7,
+            "rerank_score": 0.7320184426229508
+          }
+        },
+        {
+          "content": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2023. Instansi: Pemerintah Kab. Mappi (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 1.8 (Predikat: Cukup). Rincian Nilai Domain: Kebijakan Internal (1.9), Tata Kelola (1.6), Manajemen SPBE (1.0), Layanan SPBE (2.17).",
+          "metadata": {
+            "doc_type": "audit",
+            "judul_dokumen": "Laporan Evaluasi SPBE Tahun 2023",
+            "filename": "LAPORAN EVALUASI SPBE KemenpanRB 2023.pdf",
+            "tahun_evaluasi": "2023",
+            "nama_instansi": "Pemerintah Kab. Mappi",
+            "jenis_instansi": "Pemerintah Kabupaten",
+            "indeks_spbe": 1.8,
+            "predikat": "Cukup",
+            "bagian": "Data Capaian Instansi",
+            "hierarchy": "Laporan Evaluasi SPBE Tahun 2023 > Data Capaian Instansi",
+            "document_id": 10,
+            "chunk_id": 2264,
+            "rrf_score": 0.03149801587301587,
+            "rerank_base_score": 0.03149801587301587,
+            "query_boost": 0.7,
+            "rerank_score": 0.7314980158730158
+          }
+        },
+        {
+          "content": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah Kab. Mamasa (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 2.01 (Predikat: Cukup). Rincian Nilai Domain: Kebijakan Internal (2.1), Tata Kelola (1.2), Manajemen SPBE (1.0), Layanan SPBE (2.79).",
+          "metadata": {
+            "doc_type": "laporan_spbe",
+            "judul_dokumen": "Laporan Evaluasi SPBE Tahun 2024",
+            "filename": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+            "tahun_evaluasi": "2024",
+            "nama_instansi": "Pemerintah Kab. Mamasa",
+            "jenis_instansi": "Pemerintah Kabupaten",
+            "indeks_spbe": 2.01,
+            "predikat": "Cukup",
+            "bagian": "Data Capaian Instansi",
+            "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+            "document_id": 12,
+            "chunk_id": 2773,
+            "rrf_score": 0.02904040404040404,
+            "rerank_base_score": 0.02904040404040404,
+            "query_boost": 0.7,
+            "rerank_score": 0.729040404040404
+          }
+        }
+      ]
+    },
+    "retrieval_eval": {
+      "expected": {
+        "doc_checks": [
+          "59",
+          "2020"
+        ],
+        "pasal": null,
+        "ayat": null,
+        "angka": null
+      },
+      "doc_at_1": false,
+      "doc_at_3": true,
+      "doc_at_6": true,
+      "section_at_1": false,
+      "section_at_3": false,
+      "section_at_6": false,
+      "top_sections": [
+        {
+          "document": "Laporan Evaluasi SPBE Tahun 2023",
+          "section": "Laporan Evaluasi SPBE Tahun 2023 > Data Capaian Instansi",
+          "boost": 0.7,
+          "score": 0.7428855382343754
+        },
+        {
+          "document": "Peraturan 59 Tahun 2020",
+          "section": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 25/139]",
+          "boost": 0.7,
+          "score": 0.7325224748810153
+        },
+        {
+          "document": "Laporan Evaluasi SPBE Tahun 2024",
+          "section": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "boost": 0.7,
+          "score": 0.7320184426229508
+        },
+        {
+          "document": "Laporan Evaluasi SPBE Tahun 2023",
+          "section": "Laporan Evaluasi SPBE Tahun 2023 > Data Capaian Instansi",
+          "boost": 0.7,
+          "score": 0.7314980158730158
+        },
+        {
+          "document": "Laporan Evaluasi SPBE Tahun 2024",
+          "section": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "boost": 0.7,
+          "score": 0.729040404040404
+        }
+      ],
+      "latency_wall_ms": 296
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 20,
+      "pertanyaan": "Apa predikat SPBE untuk nilai indeks di bawah 1,8?",
+      "jawaban": "Predikat Kurang.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Lampiran I, Tabel 13, Halaman 24"
+    },
+    "retrieval": {
+      "query": "Apa predikat SPBE untuk nilai indeks di bawah 1,8?",
+      "query_type": "general",
+      "source_count": 5,
+      "docs": [
+        {
+          "content": "indeks SPBE dihitung berdasarkan penjumlahan dari penghitungan\n𝑰𝒏𝒅𝒆𝒌𝒔 𝑺𝑷𝑩𝑬= ∑𝑁𝐷𝑗× 𝐵𝐷𝑗\n𝑛\n𝑗=1\n-24-\nperkalian antara nilai indeks domain dan bobot domain. Rumus\npenghitungan nilai indeks SPBE dijabarkan sebagai berikut:\ndimana:\n• NDj adalah nilai indeks domain ke-j;\n• BDj adalah nilai bobot domain ke-j.\nContoh penghitungan indeks SPBE dapat dilihat pada Tabel 9 di\nbawah ini.\nTabel 12 Contoh Penghitungan Indeks SPBE\nNomor\nDomain\nNama Domain\nNilai Indeks\nDomain ND\nBobot\nDomain\nBD (%)\nND x BD\n(%)\nDoma",
+          "metadata": {
+            "doc_type": "peraturan",
+            "judul_dokumen": "Peraturan 59 Tahun 2020",
+            "tentang": "PEMANTAUAN DAN EVALUASI  SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK",
+            "filename": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+            "bagian": "LAMPIRAN",
+            "bab": "BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+            "pasal": "",
+            "ayat": "",
+            "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 25/139]",
+            "chunk_part": 25,
+            "chunk_parts_total": 139,
+            "document_id": 4,
+            "chunk_id": 581,
+            "rrf_score": 0.03252247488101534,
+            "rerank_base_score": 0.03252247488101534,
+            "query_boost": 0.35,
+            "rerank_score": 0.3825224748810153
+          }
+        },
+        {
+          "content": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah Kab. Mesuji (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 3.99 (Predikat: Sangat Baik). Rincian Nilai Domain: Kebijakan Internal (4.7), Tata Kelola (4.0), Manajemen SPBE (2.18), Layanan SPBE (4.44).",
+          "metadata": {
+            "doc_type": "laporan_spbe",
+            "judul_dokumen": "Laporan Evaluasi SPBE Tahun 2024",
+            "filename": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+            "tahun_evaluasi": "2024",
+            "nama_instansi": "Pemerintah Kab. Mesuji",
+            "jenis_instansi": "Pemerintah Kabupaten",
+            "indeks_spbe": 3.99,
+            "predikat": "Sangat Baik",
+            "bagian": "Data Capaian Instansi",
+            "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+            "document_id": 12,
+            "chunk_id": 2525,
+            "rrf_score": 0.03200204813108039,
+            "rerank_base_score": 0.03200204813108039,
+            "query_boost": 0.35,
+            "rerank_score": 0.38200204813108035
+          }
+        },
+        {
+          "content": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah Kab. Mimika (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 2.33 (Predikat: Cukup). Rincian Nilai Domain: Kebijakan Internal (3.0), Tata Kelola (1.5), Manajemen SPBE (1.0), Layanan SPBE (3.07).",
+          "metadata": {
+            "doc_type": "laporan_spbe",
+            "judul_dokumen": "Laporan Evaluasi SPBE Tahun 2024",
+            "filename": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+            "tahun_evaluasi": "2024",
+            "nama_instansi": "Pemerintah Kab. Mimika",
+            "jenis_instansi": "Pemerintah Kabupaten",
+            "indeks_spbe": 2.33,
+            "predikat": "Cukup",
+            "bagian": "Data Capaian Instansi",
+            "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+            "document_id": 12,
+            "chunk_id": 2859,
+            "rrf_score": 0.03177805800756621,
+            "rerank_base_score": 0.03177805800756621,
+            "query_boost": 0.35,
+            "rerank_score": 0.3817780580075662
+          }
+        },
+        {
+          "content": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2023. Instansi: Pemerintah Kab. Mimika (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 1.0 (Predikat: Kurang). Rincian Nilai Domain: Kebijakan Internal (1.0), Tata Kelola (1.0), Manajemen SPBE (1.0), Layanan SPBE (1.0).",
+          "metadata": {
+            "doc_type": "audit",
+            "judul_dokumen": "Laporan Evaluasi SPBE Tahun 2023",
+            "filename": "LAPORAN EVALUASI SPBE KemenpanRB 2023.pdf",
+            "tahun_evaluasi": "2023",
+            "nama_instansi": "Pemerintah Kab. Mimika",
+            "jenis_instansi": "Pemerintah Kabupaten",
+            "indeks_spbe": 1.0,
+            "predikat": "Kurang",
+            "bagian": "Data Capaian Instansi",
+            "hierarchy": "Laporan Evaluasi SPBE Tahun 2023 > Data Capaian Instansi",
+            "document_id": 10,
+            "chunk_id": 2268,
+            "rrf_score": 0.031009615384615385,
+            "rerank_base_score": 0.031009615384615385,
+            "query_boost": 0.35,
+            "rerank_score": 0.38100961538461536
+          }
+        },
+        {
+          "content": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2023. Instansi: Lembaga Administrasi Negara (Kementerian, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 3.66 (Predikat: Sangat Baik). Rincian Nilai Domain: Kebijakan Internal (3.8), Tata Kelola (3.6), Manajemen SPBE (2.73), Layanan SPBE (4.0).",
+          "metadata": {
+            "doc_type": "audit",
+            "judul_dokumen": "Laporan Evaluasi SPBE Tahun 2023",
+            "filename": "LAPORAN EVALUASI SPBE KemenpanRB 2023.pdf",
+            "tahun_evaluasi": "2023",
+            "nama_instansi": "Lembaga Administrasi Negara",
+            "jenis_instansi": "Kementerian",
+            "indeks_spbe": 3.66,
+            "predikat": "Sangat Baik",
+            "bagian": "Data Capaian Instansi",
+            "hierarchy": "Laporan Evaluasi SPBE Tahun 2023 > Data Capaian Instansi",
+            "document_id": 10,
+            "chunk_id": 1945,
+            "rrf_score": 0.029910714285714284,
+            "rerank_base_score": 0.029910714285714284,
+            "query_boost": 0.35,
+            "rerank_score": 0.37991071428571427
+          }
+        }
+      ]
+    },
+    "retrieval_eval": {
+      "expected": {
+        "doc_checks": [
+          "59",
+          "2020"
+        ],
+        "pasal": null,
+        "ayat": null,
+        "angka": null
+      },
+      "doc_at_1": true,
+      "doc_at_3": true,
+      "doc_at_6": true,
+      "section_at_1": false,
+      "section_at_3": false,
+      "section_at_6": false,
+      "top_sections": [
+        {
+          "document": "Peraturan 59 Tahun 2020",
+          "section": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 25/139]",
+          "boost": 0.35,
+          "score": 0.3825224748810153
+        },
+        {
+          "document": "Laporan Evaluasi SPBE Tahun 2024",
+          "section": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "boost": 0.35,
+          "score": 0.38200204813108035
+        },
+        {
+          "document": "Laporan Evaluasi SPBE Tahun 2024",
+          "section": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "boost": 0.35,
+          "score": 0.3817780580075662
+        },
+        {
+          "document": "Laporan Evaluasi SPBE Tahun 2023",
+          "section": "Laporan Evaluasi SPBE Tahun 2023 > Data Capaian Instansi",
+          "boost": 0.35,
+          "score": 0.38100961538461536
+        },
+        {
+          "document": "Laporan Evaluasi SPBE Tahun 2023",
+          "section": "Laporan Evaluasi SPBE Tahun 2023 > Data Capaian Instansi",
+          "boost": 0.35,
+          "score": 0.37991071428571427
+        }
+      ],
+      "latency_wall_ms": 218
+    }
+  }
+]

@@ -1,0 +1,113 @@
+[
+  {
+    "ground_truth": {
+      "nomor": 40,
+      "pertanyaan": "Instansi pemerintah daerah mana yang meraih nilai SPBE tertinggi di tahun 2024?",
+      "jawaban": "Pemerintah Kabupaten Banyuwangi dengan skor kepuasan 4,77.",
+      "sitasi": "Laporan Evaluasi SPBE Tahun 2024, Analisis Capaian Indeks Maturitas SPBE Nasional, Halaman 30"
+    },
+    "chatbot": {
+      "session_id": "02aaa824-ddd0-4e1b-9183-c3838518719e",
+      "answer": "Berdasarkan dokumen yang tersedia, instansi pemerintah daerah yang meraih nilai Indeks SPBE tertinggi di tahun 2024 adalah Pemerintah Daerah di DKI Jakarta dengan nilai 4,53 [1]. Nilai ini juga tercatat pada data untuk Badan Pusat Statistik [2], Pemerintah Daerah di Papua Barat Daya [3], Pemerintah Kab. Sleman [4], Pemerintah Kab. Kudus [5], dan Pemerintah Kab. Sragen [6].\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024\n[2] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024\n[3] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024\n[4] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024\n[5] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024\n[6] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "12",
+          "document": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "document_short": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "section": "",
+          "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "score": 99.76,
+          "snippet": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah D.I.<br>Yogyakarta (Pemerintah Daerah di DKI Jakarta60: Tabel 54. Hasil Evaluasi SPBE Pemerintah Daerah di Papua Barat Daya; Kolom2: ..."
+        },
+        {
+          "id": 2,
+          "doc_id": "12",
+          "document": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "document_short": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "section": "",
+          "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "score": 99.62,
+          "snippet": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Badan Pusat Statistik (Pemerintah Daerah di DKI Jakarta60: Tabel 54. Hasil Evaluasi SPBE Pemerintah Daerah di Papua Barat Daya; Kolom2: 82, Kate..."
+        },
+        {
+          "id": 3,
+          "doc_id": "12",
+          "document": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "document_short": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "section": "",
+          "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "score": 99.48,
+          "snippet": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Badan Intelijen Negara (Pemerintah Daerah di DKI Jakarta60: Tabel 54. Hasil Evaluasi SPBE Pemerintah Daerah di Papua Barat Daya; Kolom2: 82, Kat..."
+        },
+        {
+          "id": 4,
+          "doc_id": "12",
+          "document": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "document_short": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "section": "",
+          "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "score": 99.34,
+          "snippet": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah Kab. Sleman (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 4.3 (Predikat: Memuaskan). Rincian Nilai Domain: K..."
+        },
+        {
+          "id": 5,
+          "doc_id": "12",
+          "document": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "document_short": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "section": "",
+          "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "score": 99.2,
+          "snippet": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah Kab. Kudus (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 4.23 (Predikat: Memuaskan). Rincian Nilai Domain: K..."
+        },
+        {
+          "id": 6,
+          "doc_id": "12",
+          "document": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "document_short": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "section": "",
+          "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "score": 99.06,
+          "snippet": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah Kab. Sragen (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 4.34 (Predikat: Memuaskan). Rincian Nilai Domain: ..."
+        }
+      ],
+      "timing": {
+        "total_ms": 23077
+      },
+      "model_used": "qwen3.5:4b",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 6,
+        "metadata_audit": {
+          "enabled": true,
+          "is_consistent": true,
+          "checked_segments": 0,
+          "checked_claims": 0,
+          "mismatch_count": 0,
+          "unverifiable_count": 0,
+          "mismatches": [],
+          "unverifiable": []
+        }
+      },
+      "quality_check": {
+        "score": 22,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "latency_wall_ms": 23405
+    },
+    "evaluation": {
+      "verdict": "SALAH",
+      "answer_overlap": 0.2,
+      "citation_match": true,
+      "source_count": 6,
+      "notes": "cakupan kata kunci 20%; nilai numerik tidak cocok"
+    }
+  }
+]

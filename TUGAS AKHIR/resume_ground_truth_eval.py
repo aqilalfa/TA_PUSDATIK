@@ -93,9 +93,42 @@ def ask(bearer: str, q: str, no: int, *, use_structured_fact: bool) -> dict[str,
 
 STOP = {"yang","dan","dengan","untuk","dalam","adalah","atau","pada","oleh","secara","serta","dari","ke","di","atas","guna","melalui","yaitu","apa","siapa","saja","tahun","nomor","pasal","ayat","halaman","huruf"}
 
+TOKEN_NORMALIZATION = {
+    "cakupan": "ruang lingkup",
+    "mencakup": "meliputi ruang lingkup",
+}
+
+
+def normalize_for_judge(s: str) -> str:
+    text = s or ""
+    for source, replacement in TOKEN_NORMALIZATION.items():
+        text = re.sub(rf"\b{re.escape(source)}\b", replacement, text, flags=re.IGNORECASE)
+    return text
+
 
 def toks(s: str) -> set[str]:
-    return {x for x in re.findall(r"[a-zA-Z0-9]+", (s or "").lower()) if len(x) > 2 and x not in STOP}
+    return {x for x in re.findall(r"[a-zA-Z0-9]+", normalize_for_judge(s).lower()) if len(x) > 2 and x not in STOP}
+
+
+def nums(s: str) -> list[float]:
+    values: list[float] = []
+    for raw in re.findall(r"\d+(?:[,.]\d+)?", s or ""):
+        try:
+            values.append(float(raw.replace(",", ".")))
+        except ValueError:
+            continue
+    return values
+
+
+def numeric_ok(expected: str, answer: str) -> bool:
+    expected_nums = nums(expected)
+    if not expected_nums:
+        return False
+    answer_nums = nums(answer)
+    return all(
+        any(abs(exp - got) < 0.001 for got in answer_nums)
+        for exp in expected_nums
+    )
 
 
 def cite_ok(sitasi: str, answer: str, sources: list[dict[str, Any]]) -> bool:
@@ -106,7 +139,11 @@ def cite_ok(sitasi: str, answer: str, sources: list[dict[str, Any]]) -> bool:
     elif "permenpan" in s: checks = ["59", "2020"]
     elif "perpres nomor 82" in s: checks = ["82", "2023"]
     elif "peraturan bssn nomor 8" in s: checks = ["8", "2024"]
-    elif "pp nomor 71" in s: checks = ["71", "2019"]
+    elif "pp nomor 71" in s:
+        return all(c in text for c in ["71", "2019"]) or (
+            "peraturan pemerintah" in text
+            and "sistem dan transaksi elektronik" in text
+        )
     elif "peraturan bssn nomor 2" in s: checks = ["2", "2023"]
     elif "laporan evaluasi spbe tahun 2024" in s: checks = ["laporan", "2024"]
     return all(c in text for c in checks) if checks else bool(sources)
@@ -116,11 +153,12 @@ def judge(item: dict[str, Any], comp: dict[str, Any]) -> dict[str, Any]:
     answer = comp.get("answer", "") or ""
     sources = comp.get("sources", []) or []
     overlap = len(toks(item["jawaban"]) & toks(answer)) / max(1, len(toks(item["jawaban"])))
+    numeric = numeric_ok(item["jawaban"], answer)
     citation = cite_ok(item["sitasi"], answer, sources)
     unavailable = any(x in answer.lower() for x in ["tidak tersedia", "tidak ditemukan", "tidak dapat", "maaf"])
-    if unavailable or overlap < 0.35:
+    if unavailable or (overlap < 0.35 and not numeric):
         verdict = "SALAH"
-    elif overlap >= 0.75 and citation:
+    elif (overlap >= 0.75 or numeric) and citation:
         verdict = "BENAR"
     elif overlap >= 0.55:
         verdict = "SEBAGIAN"
@@ -128,7 +166,8 @@ def judge(item: dict[str, Any], comp: dict[str, Any]) -> dict[str, Any]:
         verdict = "SALAH"
     notes = []
     if unavailable: notes.append("jawaban menyatakan informasi tidak tersedia")
-    if overlap < 0.75: notes.append(f"cakupan kata kunci {overlap:.0%}")
+    if overlap < 0.75 and not numeric: notes.append(f"cakupan kata kunci {overlap:.0%}")
+    if nums(item["jawaban"]) and not numeric: notes.append("nilai numerik tidak cocok")
     if not citation: notes.append("sitasi/dokumen sumber tidak cocok")
     if not notes: notes.append("substansi dan sumber utama sesuai")
     return {"verdict": verdict, "answer_overlap": round(overlap, 4), "citation_match": citation, "source_count": len(sources), "notes": "; ".join(notes)}

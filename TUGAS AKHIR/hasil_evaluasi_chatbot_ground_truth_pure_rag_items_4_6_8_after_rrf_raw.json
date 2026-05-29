@@ -1,0 +1,352 @@
+[
+  {
+    "ground_truth": {
+      "nomor": 4,
+      "pertanyaan": "Apa yang dimaksud dengan Keamanan SPBE menurut Perpres 95 Tahun 2018?",
+      "jawaban": "Pengendalian keamanan yang terpadu di dalam pelaksanaan SPBE.",
+      "sitasi": "Perpres Nomor 95 Tahun 2018, Pasal 1 Angka 24, Halaman 5"
+    },
+    "chatbot": {
+      "session_id": "869e4bb9-903b-4674-bf86-50e709d9f1b2",
+      "answer": "Pasal 24\n\nDalam Peraturan Presiden Nomor 95 Tahun 2018, yang dimaksud dengan Keamanan SPBE adalah pengendalian keamanan yang terpadu dalam SPBE [6].\n\nPasal tersebut secara spesifik mendefinisikan istilah tersebut sebagai berikut:\n\n* Keamanan SPBE adalah pengendalian keamanan yang terpadu dalam SPBE [6].\n\nReferensi Dokumen:\n[6] Perpres Nomor 95 Tahun 2018 | Pasal 1",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 1",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB I > Pasal 1",
+          "score": 99.76,
+          "snippet": "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyelenggaraan\npemerintahan yang memanfaatkan teknologi\nin..."
+        },
+        {
+          "id": 2,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 1",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB I > Pasal 1",
+          "score": 99.62,
+          "snippet": "perencanaan pembangunan SPBE secara nasional\nuntuk jangka waktu 20 (dua puluh) tahun.\n6. Arsitektur SPBE adalah kerangka dasar yang\nmendeskripsikan integrasi proses bisnis, data dan\ninformasi, infrast..."
+        },
+        {
+          "id": 3,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 1",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB I > Pasal 1",
+          "score": 99.48,
+          "snippet": "PRES I DEN\nREPUBLIK INDONESIA\n-3-\n8. Arsitektur SPBE Instansi Pusat adalah Arsitektur\nSPBE yang diterapkan di instansi pusat.\n9. Arsitektur SPBE Pemerintah Daerah adalah Arsitektur\nSPBE yang diterapka..."
+        },
+        {
+          "id": 4,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 1",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB I > Pasal 1",
+          "score": 99.34,
+          "snippet": "23. Aplikasi Khusus adalah Aplikasi SPBE yang\ndibangun, dikembangkan, digunakan, dan dikelola\noleh instansi pusat atau pemerintah daerah tertentu\nuntuk memenuhi kebutuhan khusus yang bukan\nkebutuhan i..."
+        },
+        {
+          "id": 5,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 1",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB I > Pasal 1",
+          "score": 99.2,
+          "snippet": "PRES I DEN\nREPUELIK INDONESIA\n-4-\n18. Pusat Data adalah fasilitas yang digunakan untuk\npenempatan sistem elektronik dan komponen terkait\nlainnya untuk keperluan penempatan, penyimpanan\ndan pengolahan ..."
+        },
+        {
+          "id": 6,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 1",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB I > Pasal 1",
+          "score": 99.06,
+          "snippet": "tugas dan fungsi instansi pusat dan pemerintah\ndaerah masing-masing.\n15. Infrastruktur SPBE adalah semua perangkat keras,\nperangkat lunak, dan fasilitas yang menjadi\npenunjang utama untuk menjalankan ..."
+        }
+      ],
+      "timing": {
+        "total_ms": 78229
+      },
+      "model_used": "qwen3.5:4b",
+      "validation": {
+        "is_valid": false,
+        "has_citations": true,
+        "warnings": [
+          "Kemungkinan Pasal yang tidak ada di konteks: 24",
+          "Re-check sitasi menemukan mismatch Pasal/Ayat terhadap metadata sumber yang dirujuk."
+        ],
+        "confidence": "low",
+        "citation_count": 2,
+        "metadata_audit": {
+          "enabled": true,
+          "is_consistent": false,
+          "checked_segments": 1,
+          "checked_claims": 1,
+          "mismatch_count": 1,
+          "unverifiable_count": 0,
+          "mismatches": [
+            {
+              "type": "pasal",
+              "citations": [
+                6
+              ],
+              "claimed": [
+                "24"
+              ],
+              "allowed": [
+                "1"
+              ],
+              "snippet": "Pasal 24"
+            }
+          ],
+          "unverifiable": []
+        }
+      },
+      "quality_check": {
+        "score": 19,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 0.8333,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "latency_wall_ms": 78641
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 0.8,
+      "citation_match": true,
+      "source_count": 6,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 6,
+      "pertanyaan": "Apa saja prinsip-prinsip dalam pelaksanaan SPBE?",
+      "jawaban": "Efektivitas, keterpaduan, kesinambungan, efisiensi, akuntabilitas, interoperabilitas, dan keamanan.",
+      "sitasi": "Perpres Nomor 95 Tahun 2018, Pasal 2 Ayat (1), Halaman 5"
+    },
+    "chatbot": {
+      "session_id": "ba201378-7b62-4a46-b11f-7287b69f4272",
+      "answer": "Prinsip-prinsip pelaksanaan Sistem Pemerintahan Berbasis Elektronik (SPBE) sebagaimana diatur dalam Perpres Nomor 95 Tahun 2018 adalah sebagai berikut:\n\n1. Efektivitas, yang merupakan optimalisasi pemanfaatan sumber daya yang mendukung SPBE yang berhasil guna sesuai dengan kebutuhan [1].\n2. Keterpaduan, yang merupakan pengintegrasian sumber daya yang mendukung SPBE [1].\n3. Kesinambungan, yang merupakan keberlanjutan SPBE secara terencana, bertahap, dan terus menerus sesuai dengan perkembangannya [1].\n4. Efisiensi, yang merupakan optimalisasi pemanfaatan sumber daya yang mendukung SPBE yang tepat guna [1].\n5. Akuntabilitas [1].\n6. Interoperabilitas [1].\n7. Keamanan [1].\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 | Pasal 2",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 2",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB I > Pasal 2 > Ayat (1)-(6)",
+          "score": 99.22,
+          "snippet": "(1) SPBE dilaksanakan dengan prinsip:\na. efektivitas;\nb. keterpaduan;\nc. kesinambungan;\nd. efisiensi;\ne. akuntabilitas;\nf. interoperabilitas;dan\ng. keamanan.\n(2) Efektivitas sebagaimana dimaksud pada ..."
+        },
+        {
+          "id": 2,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 4",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB II > Kesatu -  > Pasal 4 > Ayat (1)-(2)",
+          "score": 78.09,
+          "snippet": "Pasal 4\n(1) Tata Kelola SPBE bertujuan untuk memastikan\npenerapan unsur-unsur SPBE secara terpadu.\n(2) Unsur-unsur .\n\n\nPRES I DEN\nREPUBLIK INDONESIA\n(2) Unsur-unsur SPBE sebagaimana dimaksud pada ayat..."
+        },
+        {
+          "id": 3,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 54",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB III > Kesembilan -  > Pasal 54 > Ayat (5)-(8)",
+          "score": 77.83,
+          "snippet": "Pasal 54\n(5) Pengelolaan Aplikasi SPBE sebagaimana dimaksud\npada ayat (21 merupakan kegiatan pembangunan\ndan pengembangan aplikasi yang berpedoman pada\nmetodologi pembangunan dan pengembangan\nAplikasi..."
+        },
+        {
+          "id": 4,
+          "doc_id": "4",
+          "document": "Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Peraturan 59 Tahun 2020",
+          "section": "BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+          "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 46/139]",
+          "score": 77.68,
+          "snippet": "Aspek 1\n:\nKebijakan Internal Tata Kelola SPBE\nIndikator 4 :\nTingkat Kematangan Kebijakan Internal Pembangunan\nAplikasi SPBE\nPertanyaan :\nApakah Instansi Pusat/Pemerintah Daerah memiliki\nkebijakan inte..."
+        },
+        {
+          "id": 5,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 45",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB II > Kesebelas -  > Pasal 45 > Ayat (1)-(3)",
+          "score": 77.53,
+          "snippet": "Pasal 45\n(1) Integrasi Layanan SPBE merupakan proses\nmenghubungkan dan menyatukan beberapa\nLayanan SPBE ke dalam satu kesatuan alur kerja\nLayanan SPBE.\n(21 Instansi\n\n\nPRES I DEN\nREPUBLIK INDONESIA\n-36..."
+        },
+        {
+          "id": 6,
+          "doc_id": "9cd441c8",
+          "document": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "document_short": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "section": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "hierarchy": "",
+          "score": 77.39,
+          "snippet": "PERKA BSSN NOMOR 2 TAHUN 2023: - 174 -\nLAMPIRAN IX\nPERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA\nNOMOR 2 TAHUN 2023\nTENTANG\nPENYELENGGARAAN SISTEM PEMERINTAHAN\nBERBASIS ELEKTRONIK DI LINGKUNGAN BADAN ..."
+        }
+      ],
+      "timing": {
+        "total_ms": 45234
+      },
+      "model_used": "qwen3.5:4b",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 7,
+        "metadata_audit": {
+          "enabled": true,
+          "is_consistent": true,
+          "checked_segments": 0,
+          "checked_claims": 0,
+          "mismatch_count": 0,
+          "unverifiable_count": 0,
+          "mismatches": [],
+          "unverifiable": []
+        }
+      },
+      "quality_check": {
+        "score": 24,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "latency_wall_ms": 45709
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 6,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 8,
+      "pertanyaan": "Apa saja yang mencakup unsur-unsur SPBE?",
+      "jawaban": "Rencana Induk Nasional, Arsitektur, Peta Rencana, rencana dan anggaran, proses bisnis, data dan informasi, infrastruktur, aplikasi, keamanan, dan layanan SPBE.",
+      "sitasi": "Perpres Nomor 95 Tahun 2018, Pasal 4 Ayat (2), Halaman 7"
+    },
+    "chatbot": {
+      "session_id": "fc46145b-eea1-4e95-b428-2f1a98732463",
+      "answer": "Unsur-unsur Sistem Pemerintahan Berbasis Elektronik (SPBE) sebagaimana diatur dalam Pasal 4 Perpres Nomor 95 Tahun 2018 meliputi:\n\n1. Rencana Induk SPBE Nasional [1].\n2. Arsitektur SPBE [1].\n3. Peta Rencana SPBE [1].\n4. Rencana dan anggaran SPBE [1].\n5. Proses Bisnis [1].\n6. Data dan informasi [1].\n7. Infrastruktur SPBE [1].\n8. Aplikasi SPBE [1].\n9. Keamanan SPBE [1].\n10. Layanan SPBE [1].\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik | Pasal 4",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 4",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB II > Kesatu -  > Pasal 4 > Ayat (1)-(2)",
+          "score": 90.84,
+          "snippet": "Pasal 4\n(1) Tata Kelola SPBE bertujuan untuk memastikan\npenerapan unsur-unsur SPBE secara terpadu.\n(2) Unsur-unsur .\n\n\nPRES I DEN\nREPUBLIK INDONESIA\n(2) Unsur-unsur SPBE sebagaimana dimaksud pada ayat..."
+        },
+        {
+          "id": 2,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 4",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > Pasal 4",
+          "score": 82.04,
+          "snippet": "Pasal 4\nayat (1) Undang-Undang Dasar Negara Republik\nIndonesia Tahun 1945;\nMEMUTUSKAN:\nPERATURAN PRESIDEN TENTANG\nPEMERINTAHAN BERBASIS ELEKTRONIK.\nSISTEM\nb\nC\nMenetapkan\nBABI.\n\n\nPRES I DEN\nREPUBLIK IN..."
+        },
+        {
+          "id": 3,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 45",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB II > Kesebelas -  > Pasal 45 > Ayat (1)-(3)",
+          "score": 77.79,
+          "snippet": "Pasal 45\n(1) Integrasi Layanan SPBE merupakan proses\nmenghubungkan dan menyatukan beberapa\nLayanan SPBE ke dalam satu kesatuan alur kerja\nLayanan SPBE.\n(21 Instansi\n\n\nPRES I DEN\nREPUBLIK INDONESIA\n-36..."
+        },
+        {
+          "id": 4,
+          "doc_id": "4",
+          "document": "Peraturan 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Peraturan 59 Tahun 2020",
+          "section": "BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+          "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 46/139]",
+          "score": 77.64,
+          "snippet": "Aspek 1\n:\nKebijakan Internal Tata Kelola SPBE\nIndikator 4 :\nTingkat Kematangan Kebijakan Internal Pembangunan\nAplikasi SPBE\nPertanyaan :\nApakah Instansi Pusat/Pemerintah Daerah memiliki\nkebijakan inte..."
+        },
+        {
+          "id": 5,
+          "doc_id": "3",
+          "document": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+          "section": "Pasal 1",
+          "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I > Pasal 1",
+          "score": 77.5,
+          "snippet": "Pasal 1\nDalam Peraturan Badan ini yang dimaksud dengan: \n1. \nSistem \nPemerintahan \nBerbasis \nElektronik \nyang \nselanjutnya disingkat SPBE adalah penyelenggaraan \npemerintahan yang memanfaatkan teknolo..."
+        },
+        {
+          "id": 6,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 42",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB II > Kesebelas -  > Pasal 42 > Ayat (1)-(4)",
+          "score": 77.34,
+          "snippet": "(1) Layanan SPBE terdiri atas:\na. layanan administrasi pemerintahan berbasis\nelektronik; dan\nb. layanan publik berbasis elektronik.\n(2) Layanan administrasi pemerintahan berbasis\nelektronik sebagaiman..."
+        }
+      ],
+      "timing": {
+        "total_ms": 37487
+      },
+      "model_used": "qwen3.5:4b",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 10,
+        "metadata_audit": {
+          "enabled": true,
+          "is_consistent": true,
+          "checked_segments": 1,
+          "checked_claims": 1,
+          "mismatch_count": 0,
+          "unverifiable_count": 0,
+          "mismatches": [],
+          "unverifiable": []
+        }
+      },
+      "quality_check": {
+        "score": 22,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "latency_wall_ms": 37845
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 6,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  }
+]

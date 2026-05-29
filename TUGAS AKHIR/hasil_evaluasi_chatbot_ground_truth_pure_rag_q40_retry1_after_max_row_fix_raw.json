@@ -1,0 +1,113 @@
+[
+  {
+    "ground_truth": {
+      "nomor": 40,
+      "pertanyaan": "Instansi pemerintah daerah mana yang meraih nilai SPBE tertinggi di tahun 2024?",
+      "jawaban": "Pemerintah Kabupaten Banyuwangi dengan skor kepuasan 4,77.",
+      "sitasi": "Laporan Evaluasi SPBE Tahun 2024, Analisis Capaian Indeks Maturitas SPBE Nasional, Halaman 30"
+    },
+    "chatbot": {
+      "session_id": "4c6f8282-3aac-43d4-aae2-f11765021757",
+      "answer": "Berdasarkan dokumen yang tersedia, tidak dapat ditentukan instansi pemerintah daerah mana yang meraih nilai SPBE tertinggi di tahun 2024 karena data yang disajikan hanya mencakup sebagian instansi dan tidak menyertakan daftar lengkap atau perbandingan nilai antar instansi.\n\nDokumen yang diberikan menyajikan data capaian instansi sebagai berikut:\n1. Pemerintah Daerah di Yogyakarta memiliki Indeks SPBE Akhir 4,53 [1].\n2. Badan Pusat Statistik memiliki Indeks SPBE Akhir 4,53 [2].\n3. Badan Intelijen Negara memiliki Indeks SPBE Akhir 4,2 [3].\n4. Pemerintah Kabupaten Sleman memiliki Indeks SPBE Akhir 4,3 [4].\n5. Pemerintah Kabupaten Kudus memiliki Indeks SPBE Akhir 4,23 [5].\n6. Pemerintah Kabupaten Sragen memiliki Indeks SPBE Akhir 4,34 [6].\n\nMeskipun beberapa instansi memiliki nilai yang sama (4,53), dokumen tidak membandingkan instansi lain yang mungkin memiliki nilai lebih tinggi di luar daftar yang dicantumkan. Oleh karena itu, informasi mengenai instansi dengan nilai tertinggi secara mutlak tidak dapat diidentifikasi dari konteks yang diberikan.\n\nReferensi Dokumen:\n[1] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024\n[2] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024\n[3] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024\n[4] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024\n[5] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024\n[6] 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "12",
+          "document": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "document_short": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "section": "",
+          "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "score": 99.76,
+          "snippet": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah D.I.<br>Yogyakarta (Pemerintah Daerah di DKI Jakarta60: Tabel 54. Hasil Evaluasi SPBE Pemerintah Daerah di Papua Barat Daya; Kolom2: ..."
+        },
+        {
+          "id": 2,
+          "doc_id": "12",
+          "document": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "document_short": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "section": "",
+          "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "score": 99.62,
+          "snippet": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Badan Pusat Statistik (Pemerintah Daerah di DKI Jakarta60: Tabel 54. Hasil Evaluasi SPBE Pemerintah Daerah di Papua Barat Daya; Kolom2: 82, Kate..."
+        },
+        {
+          "id": 3,
+          "doc_id": "12",
+          "document": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "document_short": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "section": "",
+          "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "score": 99.48,
+          "snippet": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Badan Intelijen Negara (Pemerintah Daerah di DKI Jakarta60: Tabel 54. Hasil Evaluasi SPBE Pemerintah Daerah di Papua Barat Daya; Kolom2: 82, Kat..."
+        },
+        {
+          "id": 4,
+          "doc_id": "12",
+          "document": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "document_short": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "section": "",
+          "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "score": 99.34,
+          "snippet": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah Kab. Sleman (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 4.3 (Predikat: Memuaskan). Rincian Nilai Domain: K..."
+        },
+        {
+          "id": 5,
+          "doc_id": "12",
+          "document": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "document_short": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "section": "",
+          "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "score": 99.2,
+          "snippet": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah Kab. Kudus (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 4.23 (Predikat: Memuaskan). Rincian Nilai Domain: K..."
+        },
+        {
+          "id": 6,
+          "doc_id": "12",
+          "document": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "document_short": "20250313 Laporan Pelaksanaan Evaluasi SPBE 2024",
+          "section": "",
+          "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "score": 99.06,
+          "snippet": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah Kab. Sragen (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 4.34 (Predikat: Memuaskan). Rincian Nilai Domain: ..."
+        }
+      ],
+      "timing": {
+        "total_ms": 50791
+      },
+      "model_used": "qwen3.5:4b",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 6,
+        "metadata_audit": {
+          "enabled": true,
+          "is_consistent": true,
+          "checked_segments": 0,
+          "checked_claims": 0,
+          "mismatch_count": 0,
+          "unverifiable_count": 0,
+          "mismatches": [],
+          "unverifiable": []
+        }
+      },
+      "quality_check": {
+        "score": 27,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "latency_wall_ms": 51134
+    },
+    "evaluation": {
+      "verdict": "SALAH",
+      "answer_overlap": 0.4,
+      "citation_match": true,
+      "source_count": 6,
+      "notes": "jawaban menyatakan informasi tidak tersedia; cakupan kata kunci 40%; nilai numerik tidak cocok"
+    }
+  }
+]

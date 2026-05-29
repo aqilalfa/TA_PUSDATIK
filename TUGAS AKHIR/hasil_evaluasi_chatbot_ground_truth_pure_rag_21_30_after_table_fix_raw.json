@@ -1,0 +1,1116 @@
+[
+  {
+    "ground_truth": {
+      "nomor": 21,
+      "pertanyaan": "Apa yang dimaksud dengan Aplikasi SPBE Prioritas?",
+      "jawaban": "Aplikasi SPBE berdampak luas yang merupakan wujud nyata layanan SPBE berkualitas dan tepercaya.",
+      "sitasi": "Perpres Nomor 82 Tahun 2023, Pasal 1 Angka 6, Halaman 2"
+    },
+    "chatbot": {
+      "session_id": "b5c7902a-b563-4157-b197-cf0f613b9ace",
+      "answer": "Aplikasi SPBE Prioritas adalah Aplikasi SPBE yang berdampak luas dan merupakan perwujudan nyata dari Layanan SPBE yang berkualitas dan tepercaya [5].\n\nReferensi Dokumen:\n[5] PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 | Pasal 1",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 1",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB I > Pasal 1",
+          "score": 99.76,
+          "snippet": "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyelenggaraan\npemerintahan yang memanfaatkan teknologi in..."
+        },
+        {
+          "id": 2,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 1",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB I > Pasal 1",
+          "score": 99.62,
+          "snippet": "Pasal 1\nDalam Peraturan Presiden ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyelenggaraan\npemerintahan yang memanfaatkan teknologi\nin..."
+        },
+        {
+          "id": 3,
+          "doc_id": "3",
+          "document": "peraturan-bssn-no-8-tahun-2024",
+          "document_short": "peraturan-bssn-no-8-tahun-2024",
+          "section": "Pasal 1",
+          "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I > Pasal 1",
+          "score": 99.48,
+          "snippet": "Pasal 1\nDalam Peraturan Badan ini yang dimaksud dengan: \n1. \nSistem \nPemerintahan \nBerbasis \nElektronik \nyang \nselanjutnya disingkat SPBE adalah penyelenggaraan \npemerintahan yang memanfaatkan teknolo..."
+        },
+        {
+          "id": 4,
+          "doc_id": "4799624e",
+          "document": "peraturan bssn no 8 tahun 2024",
+          "document_short": "peraturan bssn no 8 tahun 2024",
+          "section": "peraturan bssn no 8 tahun 2024 > BAB I KETENTUAN UMUM > Pasal 1",
+          "hierarchy": "",
+          "score": 99.34,
+          "snippet": "peraturan bssn no 8 tahun 2024 > BAB I KETENTUAN UMUM > Pasal 1: Dalam Peraturan Badan ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penye..."
+        },
+        {
+          "id": 5,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 1",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB I > Pasal 1",
+          "score": 99.2,
+          "snippet": "5. Aplikasi SPBE adalah satu atau sekumpulan program\nkomputer dan prosedur yang dirancang untuk melakukan\ntugas atau fungsi Layanan SPBE.\n6. Aplikasi SPBE Prioritas adalah Aplikasi SPBE yang\nberdampak..."
+        },
+        {
+          "id": 6,
+          "doc_id": "9cd441c8",
+          "document": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "document_short": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "section": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "hierarchy": "",
+          "score": 90.66,
+          "snippet": "PERKA BSSN NOMOR 2 TAHUN 2023: PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA\nNOMOR 2 TAHUN 2023\nTENTANG\nPENYELENGGARAAN SISTEM PEMERINTAHAN BERBASIS ELEKTRONIK\nDI LINGKUNGAN BADAN SIBER DAN SANDI NEGA..."
+        }
+      ],
+      "timing": {
+        "total_ms": 31679
+      },
+      "model_used": "qwen3.5:4b",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1,
+        "metadata_audit": {
+          "enabled": true,
+          "is_consistent": true,
+          "checked_segments": 0,
+          "checked_claims": 0,
+          "mismatch_count": 0,
+          "unverifiable_count": 0,
+          "mismatches": [],
+          "unverifiable": []
+        }
+      },
+      "quality_check": {
+        "score": 17,
+        "needs_retry": true,
+        "retry_reasons": [
+          "jawaban terlalu ringkas"
+        ],
+        "focus_coverage": 0.75,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "latency_wall_ms": 31994
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 0.9,
+      "citation_match": true,
+      "source_count": 6,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 22,
+      "pertanyaan": "Berapa minimal target pengguna agar sebuah aplikasi beroperasi disebut Aplikasi SPBE Prioritas?",
+      "jawaban": "Minimal 200.000 pengguna SPBE.",
+      "sitasi": "Perpres Nomor 82 Tahun 2023, Pasal 2 Ayat (2) Huruf b, Halaman 3"
+    },
+    "chatbot": {
+      "session_id": "720e02cd-c9a2-48f1-8fd0-68c834717e5f",
+      "answer": "Sebuah aplikasi yang baru akan beroperasi atau akan dibangun disebut Aplikasi SPBE Prioritas jika memiliki minimal 200.000 (dua ratus ribu) pengguna SPBE atau target pengguna SPBE [1].\n\nReferensi Dokumen:\n[1] PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 | Pasal 2",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 2",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB II > Pasal 2 > Ayat (1)",
+          "score": 78.39,
+          "snippet": "(1) Dalam rangka mencapai keterpaduan layanan digital\nnasional, Pemerintah melakukan percepatan transformasi\ndigital melalui penyelenggaraan Aplikasi SPBE Prioritas\ndengan mengutamakan integrasi dan i..."
+        },
+        {
+          "id": 2,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 6",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 6 > Ayat (1)-(3)",
+          "score": 78.17,
+          "snippet": "(1) Kementerian/lembaga penanggung jawab Aplikasi SPBE\nPrioritas dapat melakukan pengakhiran Aplikasi SPBE\nyang telah beroperasi sebelum Peraturan Presiden ini\ndiundangkan.\n(21 Pengakhiran Aplikasi SP..."
+        },
+        {
+          "id": 3,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 3",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 3 > Ayat (4)-(5)",
+          "score": 77.95,
+          "snippet": "(4) Kementerian/lembaga pen€mggung jawab Aplikasi SPBE\nPrioritas menentukan paling sedikit 1 (satu) cakupan\npenugasan sebagaimana dimaksud pada ayat (3), dengan\nmemperhatikan:\na. kebutuhan kementerian..."
+        },
+        {
+          "id": 4,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 3",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 3 > Ayat (5)-(6)",
+          "score": 77.68,
+          "snippet": "Pasal 3\n(5) Dalam hal kementerian/lembaga penanggung jawab\nAplikasi SPBE Prioritas sed€rng dalam proses melakukan\npembangunan Aplikasi SPBE Prioritas, selain penugasan\nsebagaimana dimaksud pada ayat (..."
+        },
+        {
+          "id": 5,
+          "doc_id": "4799624e",
+          "document": "peraturan bssn no 8 tahun 2024",
+          "document_short": "peraturan bssn no 8 tahun 2024",
+          "section": "peraturan bssn no 8 tahun 2024 > BAB I KETENTUAN UMUM > Pasal 1",
+          "hierarchy": "",
+          "score": 77.52,
+          "snippet": "peraturan bssn no 8 tahun 2024 > BAB I KETENTUAN UMUM > Pasal 1: Dalam Peraturan Badan ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penye..."
+        },
+        {
+          "id": 6,
+          "doc_id": "4",
+          "document": "Permenpan RB Nomor 59 Tahun 2020",
+          "document_short": "Permenpan RB Nomor 59 Tahun 2020",
+          "section": "BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+          "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 33/139]",
+          "score": 77.37,
+          "snippet": "layanan, tautan, atau referensi informasi yang diberikan oleh Instansi\nPusat/Pemerintah Daerah.\nb. Tingkat Interaksi\n1) Kriteria Tingkat Informasi telah terpenuhi.\n2) Sistem elektronik/sistem aplikasi..."
+        }
+      ],
+      "timing": {
+        "total_ms": 25418
+      },
+      "model_used": "qwen3.5:4b",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1,
+        "metadata_audit": {
+          "enabled": true,
+          "is_consistent": true,
+          "checked_segments": 0,
+          "checked_claims": 0,
+          "mismatch_count": 0,
+          "unverifiable_count": 0,
+          "mismatches": [],
+          "unverifiable": []
+        }
+      },
+      "quality_check": {
+        "score": 20,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "latency_wall_ms": 25745
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 6,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 23,
+      "pertanyaan": "Siapa lembaga yang secara khusus ditugaskan pemerintah untuk menyelenggarakan Aplikasi SPBE Prioritas?",
+      "jawaban": "Perum Peruri.",
+      "sitasi": "Perpres Nomor 82 Tahun 2023, Pasal 3 Ayat (1), Halaman 5"
+    },
+    "chatbot": {
+      "session_id": "774409ee-3af8-44b6-a5f0-fe302cf91967",
+      "answer": "Berdasarkan dokumen yang diberikan, kementerian/lembaga yang ditugaskan pemerintah untuk menyelenggarakan Aplikasi SPBE Prioritas adalah kementerian/lembaga yang memiliki urusan pemerintahan di bidang pendidikan, kesehatan, sosial, dan administrasi kependudukan [3]. Selain itu, Perum Peruri juga ditugaskan untuk melakukan pelaksanaan kendali mutu, pendampingan teknis, dan fasilitasi pengintegrasian terhadap Aplikasi SPBE Prioritas yang sedang dalam proses pembangunan [2].\n\nReferensi Dokumen:\n[2] PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 | Pasal 3\n[3] PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 | Pasal 2",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 6",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 6 > Ayat (1)-(3)",
+          "score": 78.31,
+          "snippet": "(1) Kementerian/lembaga penanggung jawab Aplikasi SPBE\nPrioritas dapat melakukan pengakhiran Aplikasi SPBE\nyang telah beroperasi sebelum Peraturan Presiden ini\ndiundangkan.\n(21 Pengakhiran Aplikasi SP..."
+        },
+        {
+          "id": 2,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 3",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 3 > Ayat (5)-(6)",
+          "score": 77.95,
+          "snippet": "Pasal 3\n(5) Dalam hal kementerian/lembaga penanggung jawab\nAplikasi SPBE Prioritas sed€rng dalam proses melakukan\npembangunan Aplikasi SPBE Prioritas, selain penugasan\nsebagaimana dimaksud pada ayat (..."
+        },
+        {
+          "id": 3,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 2",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB II > Pasal 2 > Ayat (3)",
+          "score": 77.81,
+          "snippet": "(3) Aplikasi SPBE Prioritas diselenggarakan untuk\nmendukung:\na. layanan pendidikan terintegrasi, dengan penanggung\njawab menteri yang\nurusan\npemerintahan di bidang pendidikan;\nb. layanan kesehatan ter..."
+        },
+        {
+          "id": 4,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 10",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 10 > Ayat (1)-(3)",
+          "score": 77.66,
+          "snippet": "Pasal 10\n(1) Kementerian/lembaga penanggung jawab Aplikasi SPBE\nPrioritas merupakan pemegang hak kekayaan intelektual\natas Aplikasi SPBE Prioritas yang dibangun dan\ndikembangkan dalam rangka pelaksana..."
+        },
+        {
+          "id": 5,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 3",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 3 > Ayat (4)-(5)",
+          "score": 77.52,
+          "snippet": "(4) Kementerian/lembaga pen€mggung jawab Aplikasi SPBE\nPrioritas menentukan paling sedikit 1 (satu) cakupan\npenugasan sebagaimana dimaksud pada ayat (3), dengan\nmemperhatikan:\na. kebutuhan kementerian..."
+        },
+        {
+          "id": 6,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "BAB IV",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB IV",
+          "score": 77.37,
+          "snippet": "PERAN INSTANSI PEMERINTAH\nPasal l1\nKementerian/lembaga penanggung jawab Aplikasi SPBE\nPrioritas:\na. menyediakan data dan informasi yang dibutuhkan dalam\npelaksanaan penugas€rn sebagaimana yang tertuan..."
+        }
+      ],
+      "timing": {
+        "total_ms": 29651
+      },
+      "model_used": "qwen3.5:4b",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 2,
+        "metadata_audit": {
+          "enabled": true,
+          "is_consistent": true,
+          "checked_segments": 0,
+          "checked_claims": 0,
+          "mismatch_count": 0,
+          "unverifiable_count": 0,
+          "mismatches": [],
+          "unverifiable": []
+        }
+      },
+      "quality_check": {
+        "score": 22,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "latency_wall_ms": 29986
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 6,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 24,
+      "pertanyaan": "Kapan batas akhir pertama kali Aplikasi SPBE Prioritas harus diluncurkan secara terpadu?",
+      "jawaban": "Triwulan III tahun 2024.",
+      "sitasi": "Perpres Nomor 82 Tahun 2023, Pasal 2 Ayat (4), Halaman 4"
+    },
+    "chatbot": {
+      "session_id": "e01f9d37-10c0-45e3-9dd6-9087df3f3564",
+      "answer": "Batas akhir pertama kali peluncuran terpadu Aplikasi SPBE Prioritas adalah paling lambat pada triwulan III tahun 2024 [1].\n\nReferensi Dokumen:\n[1] PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 | Pasal 2",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 2",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB II > Pasal 2 > Ayat (4)-(6)",
+          "score": 78.37,
+          "snippet": "Pasal 2\n(4) Aplikasi SPBE Prioritas sebagaimana dimaksud pada\nayat (2) huruf a telah diintegrasikan dan diluncurkan\nsecara terpadu untuk pertama kalinya paling lambat pada\ntriwulan III tahun 2024.\n(5)..."
+        },
+        {
+          "id": 2,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 3",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 3 > Ayat (5)-(6)",
+          "score": 78.18,
+          "snippet": "Pasal 3\n(5) Dalam hal kementerian/lembaga penanggung jawab\nAplikasi SPBE Prioritas sed€rng dalam proses melakukan\npembangunan Aplikasi SPBE Prioritas, selain penugasan\nsebagaimana dimaksud pada ayat (..."
+        },
+        {
+          "id": 3,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 2",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB II > Pasal 2 > Ayat (1)",
+          "score": 77.94,
+          "snippet": "(1) Dalam rangka mencapai keterpaduan layanan digital\nnasional, Pemerintah melakukan percepatan transformasi\ndigital melalui penyelenggaraan Aplikasi SPBE Prioritas\ndengan mengutamakan integrasi dan i..."
+        },
+        {
+          "id": 4,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 6",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 6 > Ayat (1)-(3)",
+          "score": 77.8,
+          "snippet": "(1) Kementerian/lembaga penanggung jawab Aplikasi SPBE\nPrioritas dapat melakukan pengakhiran Aplikasi SPBE\nyang telah beroperasi sebelum Peraturan Presiden ini\ndiundangkan.\n(21 Pengakhiran Aplikasi SP..."
+        },
+        {
+          "id": 5,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 3",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 3 > Ayat (3)",
+          "score": 77.63,
+          "snippet": "(3) Dengan memperhatikan peruulcangan solusi tepat guna\nsebagaimana dimaksud pada ayat (2) huruf c, penugas€rn\nsebagaimana dimaksud pada ayat (1) terdiri atas:\na. perencanaan penyelenggaraan Aplikasi ..."
+        },
+        {
+          "id": 6,
+          "doc_id": "5",
+          "document": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "document_short": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023",
+          "section": "Pasal 10",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG PERCEPATAN 82 Tahun 2023 > BAB III > Pasal 10 > Ayat (1)-(3)",
+          "score": 77.39,
+          "snippet": "Pasal 10\n(1) Kementerian/lembaga penanggung jawab Aplikasi SPBE\nPrioritas merupakan pemegang hak kekayaan intelektual\natas Aplikasi SPBE Prioritas yang dibangun dan\ndikembangkan dalam rangka pelaksana..."
+        }
+      ],
+      "timing": {
+        "total_ms": 17724
+      },
+      "model_used": "qwen3.5:4b",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1,
+        "metadata_audit": {
+          "enabled": true,
+          "is_consistent": true,
+          "checked_segments": 0,
+          "checked_claims": 0,
+          "mismatch_count": 0,
+          "unverifiable_count": 0,
+          "mismatches": [],
+          "unverifiable": []
+        }
+      },
+      "quality_check": {
+        "score": 20,
+        "needs_retry": true,
+        "retry_reasons": [
+          "jawaban terlalu ringkas"
+        ],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "latency_wall_ms": 18061
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 6,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 25,
+      "pertanyaan": "Apa yang dimaksud dengan Audit Keamanan SPBE?",
+      "jawaban": "Audit teknologi informasi dan komunikasi dengan ruang lingkup khusus pada keamanan SPBE.",
+      "sitasi": "Peraturan BSSN Nomor 8 Tahun 2024, Pasal 1 Angka 3, Halaman 1-2"
+    },
+    "chatbot": {
+      "session_id": "611237b5-5422-4be0-a5de-7ec0076911b5",
+      "answer": "Berdasarkan dokumen yang diberikan, berikut adalah penjelasan mengenai Audit Keamanan SPBE:\n\nAudit Keamanan SPBE didefinisikan sebagai audit teknologi informasi dan komunikasi yang mencakup cakupan keamanan Sistem Pemerintahan Berbasis Elektronik [1]. Secara lebih rinci, Audit Keamanan SPBE adalah pengendalian keamanan yang terpadu dalam SPBE yang dilakukan melalui proses audit teknologi informasi dan komunikasi [2]. Dalam konteks peraturan yang sama, Audit Keamanan SPBE merupakan bagian dari Standar Audit Keamanan SPBE yang mencakup objek, pelaksana, kriteria, bukti, dan kesimpulan audit [3].\n\nDefinisi ini konsisten di berbagai sumber peraturan, termasuk Peraturan Badan Siber dan Sandi Negara Nomor 6 Tahun 2024 [1], Peraturan BSSN Nomor 8 Tahun 2024 [2], serta Peraturan Kepala Badan Siber dan Sandi Negara Nomor 2 Tahun 2023 [4].\n\nReferensi Dokumen:\n[1] Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik | Pasal 1\n[2] peraturan bssn no 8 tahun 2024 | peraturan bssn no 8 tahun 2024 > BAB I KETENTUAN UMUM > Pasal 1\n[3] peraturan bssn no 8 tahun 2024 | peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Kesatu > Pasal 2\n[4] PERKA BSSN NOMOR 2 TAHUN 2023 | PERKA BSSN NOMOR 2 TAHUN 2023",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "3",
+          "document": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+          "section": "Pasal 1",
+          "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I > Pasal 1",
+          "score": 99.76,
+          "snippet": "Pasal 1\nDalam Peraturan Badan ini yang dimaksud dengan: \n1. \nSistem \nPemerintahan \nBerbasis \nElektronik \nyang \nselanjutnya disingkat SPBE adalah penyelenggaraan \npemerintahan yang memanfaatkan teknolo..."
+        },
+        {
+          "id": 2,
+          "doc_id": "4799624e",
+          "document": "peraturan bssn no 8 tahun 2024",
+          "document_short": "peraturan bssn no 8 tahun 2024",
+          "section": "peraturan bssn no 8 tahun 2024 > BAB I KETENTUAN UMUM > Pasal 1",
+          "hierarchy": "",
+          "score": 99.62,
+          "snippet": "peraturan bssn no 8 tahun 2024 > BAB I KETENTUAN UMUM > Pasal 1: Dalam Peraturan Badan ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penye..."
+        },
+        {
+          "id": 3,
+          "doc_id": "4799624e",
+          "document": "peraturan bssn no 8 tahun 2024",
+          "document_short": "peraturan bssn no 8 tahun 2024",
+          "section": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Kesatu > Pasal 2",
+          "hierarchy": "",
+          "score": 99.48,
+          "snippet": "peraturan bssn no 8 tahun 2024 > BAB I KETENTUAN UMUM > Pasal 1: Dalam Peraturan Badan ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penye..."
+        },
+        {
+          "id": 4,
+          "doc_id": "9cd441c8",
+          "document": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "document_short": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "section": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "hierarchy": "",
+          "score": 90.69,
+          "snippet": "PERKA BSSN NOMOR 2 TAHUN 2023: - 2 -\nBAB I\nKETENTUAN UMUM\nPasal 1\nDalam Peraturan Kepala Badan ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adal..."
+        },
+        {
+          "id": 5,
+          "doc_id": "e1a7636b",
+          "document": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "document_short": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "section": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "hierarchy": "",
+          "score": 90.55,
+          "snippet": "PERKA BSSN NOMOR 2 TAHUN 2023: - 2 -\nBAB I\nKETENTUAN UMUM\nPasal 1\nDalam Peraturan Kepala Badan ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adal..."
+        },
+        {
+          "id": 6,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 1",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB I > Pasal 1",
+          "score": 88.44,
+          "snippet": "23. Aplikasi Khusus adalah Aplikasi SPBE yang\ndibangun, dikembangkan, digunakan, dan dikelola\noleh instansi pusat atau pemerintah daerah tertentu\nuntuk memenuhi kebutuhan khusus yang bukan\nkebutuhan i..."
+        }
+      ],
+      "timing": {
+        "total_ms": 63162
+      },
+      "model_used": "qwen3.5:4b",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 6,
+        "metadata_audit": {
+          "enabled": true,
+          "is_consistent": true,
+          "checked_segments": 0,
+          "checked_claims": 0,
+          "mismatch_count": 0,
+          "unverifiable_count": 0,
+          "mismatches": [],
+          "unverifiable": []
+        }
+      },
+      "quality_check": {
+        "score": 23,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 0.75,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "latency_wall_ms": 63499
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 0.8889,
+      "citation_match": true,
+      "source_count": 6,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 26,
+      "pertanyaan": "Apa sajakah yang dapat menjadi objek dari Audit Keamanan SPBE?",
+      "jawaban": "Infrastruktur SPBE Nasional, Infrastruktur Instansi Pusat/Daerah, Aplikasi Umum, dan Aplikasi Khusus.",
+      "sitasi": "Peraturan BSSN Nomor 8 Tahun 2024, Pasal 3 Ayat (1), Halaman 3"
+    },
+    "chatbot": {
+      "session_id": "e9e89095-677f-479a-9d3d-3783c8cbefb4",
+      "answer": "Berdasarkan dokumen yang tersedia, objek dari Audit Keamanan SPBE meliputi:\n\n1. Infrastruktur SPBE Nasional [4].\n2. Infrastruktur SPBE Instansi Pusat dan Pemerintah Daerah [4].\n3. Aplikasi Umum [4].\n4. Aplikasi Khusus [4].\n\nSelain itu, dalam konteks pelaksanaan audit, objek yang diperiksa juga mencakup teknologi dalam objek Audit Keamanan SPBE yang harus dipertimbangkan terkait kompleksitasnya [2].\n\nReferensi Dokumen:\n[2] Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik | Pasal 71\n[4] Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik | Pasal 58",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "3",
+          "document": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+          "section": "BAB II",
+          "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II",
+          "score": 78.22,
+          "snippet": "STANDAR AUDIT KEAMANAN SPBE\nUmum\nObjek Audit Keamanan SPBE\nPelaksana Audit Keamanan SPBE\nKriteria Audit Keamanan SPBE\nBukti Audit Keamanan SPBE\nKesimpulan Audit Keamanan SPBE"
+        },
+        {
+          "id": 2,
+          "doc_id": "3",
+          "document": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+          "section": "Pasal 71",
+          "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kelima -  > Pasal 71 > Ayat (1)-(2)",
+          "score": 78.05,
+          "snippet": "Pasal 71\n(1) Alat bantu Audit Keamanan SPBE sebagaimana \ndimaksud dalam Pasal 68 ayat (2) huruf c merupakan \nperangkat teknologi yang digunakan auditor Keamanan \nSPBE dalam pelaksanaan pengujian kontr..."
+        },
+        {
+          "id": 3,
+          "doc_id": "4799624e",
+          "document": "peraturan bssn no 8 tahun 2024",
+          "document_short": "peraturan bssn no 8 tahun 2024",
+          "section": "peraturan bssn no 8 tahun 2024 > BAB III TATA CARA AUDIT KEAMANAN SPBE > Bagian Kelima > Pasal 71 > Ayat (2)",
+          "hierarchy": "",
+          "score": 77.9,
+          "snippet": "peraturan bssn no 8 tahun 2024 > BAB III TATA CARA AUDIT KEAMANAN SPBE > Bagian Kelima > Pasal 71 > Ayat (1): (1) Alat bantu Audit Keamanan SPBE sebagaimana\ndimaksud dalam Pasal 68 ayat (2) huruf c me..."
+        },
+        {
+          "id": 4,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 58",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB IV > Keempat -  > Pasal 58 > Ayat (1)",
+          "score": 77.69,
+          "snippet": "(1) Audit keamanan SPBE terdiri atas:\na. audit keamanan Infrastruktur SPBE Nasional;\nb. audit keamanan Infrastruktur SPBE Instansi\nPusat dan Pemerintah Daerah;\nc. audit keamanan Aplikasi Umum; dan\nd. ..."
+        },
+        {
+          "id": 5,
+          "doc_id": "3",
+          "document": "peraturan-bssn-no-8-tahun-2024",
+          "document_short": "peraturan-bssn-no-8-tahun-2024",
+          "section": "",
+          "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > Lampiran",
+          "score": 77.54,
+          "snippet": "- 29 -  \n \nLAMPIRAN II \nPERATURAN BADAN SIBER DAN SANDI NEGARA \nNOMOR 8 TAHUN 2024 \nTENTANG  \nSTANDAR DAN TATA CARA PELAKSANAAN \nAUDIT KEAMANAN SISTEM PEMERINTAHAN \nBERBASIS ELEKTRONIK \n \nMATRIKS OBJE..."
+        },
+        {
+          "id": 6,
+          "doc_id": "3",
+          "document": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+          "section": "Pasal 1",
+          "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB I > Pasal 1",
+          "score": 77.4,
+          "snippet": "Pasal 1\nDalam Peraturan Badan ini yang dimaksud dengan: \n1. \nSistem \nPemerintahan \nBerbasis \nElektronik \nyang \nselanjutnya disingkat SPBE adalah penyelenggaraan \npemerintahan yang memanfaatkan teknolo..."
+        }
+      ],
+      "timing": {
+        "total_ms": 37262
+      },
+      "model_used": "qwen3.5:4b",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 5,
+        "metadata_audit": {
+          "enabled": true,
+          "is_consistent": true,
+          "checked_segments": 0,
+          "checked_claims": 0,
+          "mismatch_count": 0,
+          "unverifiable_count": 0,
+          "mismatches": [],
+          "unverifiable": []
+        }
+      },
+      "quality_check": {
+        "score": 22,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "latency_wall_ms": 37581
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 6,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 27,
+      "pertanyaan": "Siapa entitas yang bertugas sebagai Pelaksana Audit Keamanan SPBE?",
+      "jawaban": "LATIK cakupan Keamanan SPBE yang meliputi LATIK pemerintah maupun LATIK Terakreditasi yang terdaftar.",
+      "sitasi": "Peraturan BSSN Nomor 8 Tahun 2024, Pasal 4 Ayat (1) dan (2), Halaman 4"
+    },
+    "chatbot": {
+      "session_id": "f178c6f9-fe14-4506-be23-24f1b7983b09",
+      "answer": "Berdasarkan dokumen yang diberikan, entitas yang bertugas sebagai Pelaksana Audit Keamanan SPBE adalah LATIK cakupan Keamanan SPBE, yang terdiri dari LATIK pemerintah atau LATIK Terakreditasi yang terdaftar [5].\n\nReferensi Dokumen:\n[5] Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik | Pasal 4",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "3",
+          "document": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+          "section": "BAB II",
+          "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II",
+          "score": 78.24,
+          "snippet": "STANDAR AUDIT KEAMANAN SPBE\nUmum\nObjek Audit Keamanan SPBE\nPelaksana Audit Keamanan SPBE\nKriteria Audit Keamanan SPBE\nBukti Audit Keamanan SPBE\nKesimpulan Audit Keamanan SPBE"
+        },
+        {
+          "id": 2,
+          "doc_id": "3",
+          "document": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+          "section": "BAB III",
+          "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III",
+          "score": 78.08,
+          "snippet": "TATA CARA AUDIT KEAMANAN SPBE\nUmum\nPelaksanaan Audit Keamanan SPBE \n \nParagraf 1 \nUmum\nPelaporan Audit Keamanan SPBE\nTindak Lanjut Audit Keamanan SPBE\nPendaftaran Pelaksana Audit Keamanan SPBE \n \nPara..."
+        },
+        {
+          "id": 3,
+          "doc_id": "3",
+          "document": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+          "section": "Pasal 23",
+          "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Kesatu -  > Pasal 23",
+          "score": 77.93,
+          "snippet": "Pasal 23\nAudit Keamanan SPBE dilaksanakan melalui: \na. \npelaksanaan Audit Keamanan SPBE;  \nb. \npelaporan Audit Keamanan SPBE; \nc. \ntindak lanjut Audit Keamanan SPBE; \nd. \npendaftaran pelaksana Audit K..."
+        },
+        {
+          "id": 4,
+          "doc_id": "3",
+          "document": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+          "section": "Pasal 2",
+          "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Kesatu -  > Pasal 2",
+          "score": 77.65,
+          "snippet": "Pasal 2\nStandar Audit Keamanan SPBE terdiri atas: \na. \nobjek Audit Keamanan SPBE; \nb. \npelaksana Audit Keamanan SPBE; \nc. \nkriteria Audit Keamanan SPBE; \nd. \nbukti Audit Keamanan SPBE; dan \ne. \nkesimp..."
+        },
+        {
+          "id": 5,
+          "doc_id": "3",
+          "document": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+          "section": "Pasal 4",
+          "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Ketiga -  > Pasal 4 > Ayat (1)-(2)",
+          "score": 77.39,
+          "snippet": "Pasal 4\n(1) Pelaksana \nAudit \nKeamanan \nSPBE \nsebagaimana \ndimaksud dalam Pasal 2 huruf b yaitu LATIK cakupan \nKeamanan SPBE.\n(2) LATIK \ncakupan \nKeamanan \nSPBE \nsebagaimana \ndimaksud pada ayat (1) te..."
+        },
+        {
+          "id": 6,
+          "doc_id": "4799624e",
+          "document": "peraturan bssn no 8 tahun 2024",
+          "document_short": "peraturan bssn no 8 tahun 2024",
+          "section": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Kesatu > Pasal 2",
+          "hierarchy": "",
+          "score": 77.24,
+          "snippet": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Kesatu > Pasal 2: Standar Audit Keamanan SPBE terdiri atas:\na. objek Audit Keamanan SPBE;\nb. pelaksana Audit Keamanan SPBE;..."
+        }
+      ],
+      "timing": {
+        "total_ms": 18052
+      },
+      "model_used": "qwen3.5:4b",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1,
+        "metadata_audit": {
+          "enabled": true,
+          "is_consistent": true,
+          "checked_segments": 0,
+          "checked_claims": 0,
+          "mismatch_count": 0,
+          "unverifiable_count": 0,
+          "mismatches": [],
+          "unverifiable": []
+        }
+      },
+      "quality_check": {
+        "score": 20,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "latency_wall_ms": 18386
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 0.8,
+      "citation_match": true,
+      "source_count": 6,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 28,
+      "pertanyaan": "Aspek apa saja yang harus dipenuhi oleh bukti Audit Keamanan SPBE?",
+      "jawaban": "Bukti audit harus memenuhi aspek kecukupan dan aspek ketepatan.",
+      "sitasi": "Peraturan BSSN Nomor 8 Tahun 2024, Pasal 17 Ayat (1), Halaman 11"
+    },
+    "chatbot": {
+      "session_id": "6e5b4098-179d-44a0-837c-3c7c9c12e257",
+      "answer": "Berdasarkan dokumen yang tersedia, bukti Audit Keamanan Sistem Pemerintahan Berbasis Elektronik (SPBE) harus memenuhi dua aspek utama, yaitu kecukupan dan ketepatan [1][2].\n\nBerikut adalah rincian aspek yang harus dipenuhi:\n\n* Kecukupan: Aspek ini merupakan ukuran kuantitas bukti Audit Keamanan SPBE yang dipengaruhi oleh penilaian auditor Keamanan SPBE atas risiko Audit Keamanan SPBE dan kualitas bukti Audit Keamanan SPBE [1][2].\n* Ketepatan: Aspek ini merupakan ukuran kualitas bukti Audit Keamanan SPBE yang harus relevan, valid, dan andal untuk mendukung hasil Audit Keamanan SPBE [1][2].\n\nReferensi Dokumen:\n[1] Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik | Pasal 17\n[2] peraturan bssn no 8 tahun 2024 | peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Kelima > Pasal 17 > Ayat (1)",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "3",
+          "document": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+          "section": "Pasal 17",
+          "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Kelima -  > Pasal 17 > Ayat (1)-(3)",
+          "score": 81.19,
+          "snippet": "Pasal 17\n(1) Bukti Audit Keamanan SPBE sebagaimana dimaksud \ndalam Pasal 2 huruf d harus memenuhi aspek: \na. \nkecukupan; dan  \nb. \nketepatan.\n(2) Kecukupan sebagaimana dimaksud pada ayat (1) huruf \na ..."
+        },
+        {
+          "id": 2,
+          "doc_id": "4799624e",
+          "document": "peraturan bssn no 8 tahun 2024",
+          "document_short": "peraturan bssn no 8 tahun 2024",
+          "section": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Kelima > Pasal 17 > Ayat (1)",
+          "hierarchy": "",
+          "score": 81.03,
+          "snippet": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Keempat > Pasal 16 > Ayat (2): (2) Kebijakan mikro sebagaimana dimaksud pada ayat (1)\nmerupakan kebijakan internal Instansi..."
+        },
+        {
+          "id": 3,
+          "doc_id": "4",
+          "document": "Permenpan RB Nomor 59 Tahun 2020",
+          "document_short": "Permenpan RB Nomor 59 Tahun 2020",
+          "section": "",
+          "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > Domain 3: Manajemen SPBE > Aspek 6: Pelaksanaan Audit TIK > Indikator 31: Tingkat Kematangan Pelaksanaan Audit Keamanan SPBE [Bagian 2/2]",
+          "score": 80.72,
+          "snippet": "Tingkat 4: Kriteria tingkat 3 telah terpenuhi dan kegiatan Audit Keamanan dilaksanakan oleh auditor TIK/Sistem Keamanan Informasi eksternal yang memiliki sertifikasi auditor TIK/Sistem Keamanan Inform..."
+        },
+        {
+          "id": 4,
+          "doc_id": "e1a7636b",
+          "document": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "document_short": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "section": "PERKA BSSN NOMOR 2 TAHUN 2023",
+          "hierarchy": "",
+          "score": 80.52,
+          "snippet": "PERKA BSSN NOMOR 2 TAHUN 2023: - 209 -\njika sesuai dengan desain kontrol, maka tim Audit Keamanan\nSPBE melakukan prosedur pengujian terinci efektivitas kontrol\nkeamanan SPBE dengan cakupan uji petik y..."
+        },
+        {
+          "id": 5,
+          "doc_id": "4",
+          "document": "Permenpan RB Nomor 59 Tahun 2020",
+          "document_short": "Permenpan RB Nomor 59 Tahun 2020",
+          "section": "BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+          "hierarchy": "Peraturan 59 Tahun 2020 > LAMPIRAN > BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE [Bagian 102/139]",
+          "score": 80.38,
+          "snippet": "eksternal yang memiliki sertifikasi auditor TIK/Sistem Keamanan\nInformasi.\n5\nKriteria tingkat 4 telah terpenuhi dan hasil audit Keamanan SPBE\ntelah ditindaklanjuti melalui perbaikan penerapan Keamanan..."
+        },
+        {
+          "id": 6,
+          "doc_id": "6",
+          "document": "Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 55",
+          "hierarchy": "PERATURAN PRESIDEN TENTANG 95 Tahun 2018 > BAB IV > Kesatu -  > Pasal 55 > Ayat (1)",
+          "score": 80.23,
+          "snippet": "(1) Audit Teknologi Informasi dan Komunikasi terdiri\natas:\na. audit Infrastruktur SPBE'\nb. audit\n\n\nPRES I DEN\nREPUBLIK INDONESIA\n-45-\nb. audit Aplikasi SPBE; dan\nc. audit Keamanan SPBE.\n{21 Audit Tekn..."
+        }
+      ],
+      "timing": {
+        "total_ms": 42911
+      },
+      "model_used": "qwen3.5:4b",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 6,
+        "metadata_audit": {
+          "enabled": true,
+          "is_consistent": true,
+          "checked_segments": 0,
+          "checked_claims": 0,
+          "mismatch_count": 0,
+          "unverifiable_count": 0,
+          "mismatches": [],
+          "unverifiable": []
+        }
+      },
+      "quality_check": {
+        "score": 24,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "latency_wall_ms": 43245
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 6,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 29,
+      "pertanyaan": "Apa tiga konklusi akhir dari Audit Keamanan SPBE?",
+      "jawaban": "Memadai, perlu peningkatan, atau tidak memadai.",
+      "sitasi": "Peraturan BSSN Nomor 8 Tahun 2024, Pasal 19 Ayat (4), Halaman 12"
+    },
+    "chatbot": {
+      "session_id": "cadcab89-2f0a-4f3f-a9b4-d08548138334",
+      "answer": "Berdasarkan dokumen yang diberikan, tiga konklusi akhir dari Audit Keamanan SPBE adalah:\n\n1. Memadai [1].\n2. Perlu peningkatan [1].\n3. Tidak memadai [1].\n\nKonklusi Audit Keamanan SPBE sebagaimana dimaksud dalam Pasal 19 terdiri atas tiga kategori tersebut [2]. Pemberian konklusi Audit Keamanan SPBE mengacu pada matriks konklusi Audit Keamanan SPBE yang tercantum dalam Lampiran I [5].\n\nReferensi Dokumen:\n[1] Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik | Pasal 19\n[2] peraturan bssn no 8 tahun 2024 | peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Keenam > Pasal 19 > Ayat (3)\n[5] peraturan bssn no 8 tahun 2024 | peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Keenam > Pasal 19 > Ayat (5)",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "3",
+          "document": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+          "section": "Pasal 19",
+          "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB II > Keenam -  > Pasal 19 > Ayat (1)-(5)",
+          "score": 78.23,
+          "snippet": "(1) Kesimpulan Audit Keamanan SPBE sebagaimana \ndimaksud dalam Pasal 2 huruf e dinyatakan secara \njelas.\n(2) Kesimpulan Audit Keamanan SPBE sebagaimana \ndimaksud pada ayat (1) diberikan pada setiap pr..."
+        },
+        {
+          "id": 2,
+          "doc_id": "4799624e",
+          "document": "peraturan bssn no 8 tahun 2024",
+          "document_short": "peraturan bssn no 8 tahun 2024",
+          "section": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Keenam > Pasal 19 > Ayat (3)",
+          "hierarchy": "",
+          "score": 78.06,
+          "snippet": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Keenam > Pasal 19 > Ayat (2): (2) Kesimpulan Audit Keamanan SPBE sebagaimana\ndimaksud pada ayat (1) diberikan pada setiap p..."
+        },
+        {
+          "id": 3,
+          "doc_id": "3",
+          "document": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+          "section": "BAB III",
+          "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III",
+          "score": 77.82,
+          "snippet": "TATA CARA AUDIT KEAMANAN SPBE\nUmum\nPelaksanaan Audit Keamanan SPBE \n \nParagraf 1 \nUmum\nPelaporan Audit Keamanan SPBE\nTindak Lanjut Audit Keamanan SPBE\nPendaftaran Pelaksana Audit Keamanan SPBE \n \nPara..."
+        },
+        {
+          "id": 4,
+          "doc_id": "3",
+          "document": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik",
+          "document_short": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024",
+          "section": "Pasal 54",
+          "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > BAB III > Ketiga -  > Pasal 54 > Ayat (1)",
+          "score": 77.68,
+          "snippet": "(1) Pelaporan \nAudit \nKeamanan \nSPBE \nsebagaimana \ndimaksud dalam Pasal 23 huruf b dilakukan dengan \ncara:  \na. \nketua tim Auditor Keamanan SPBE menyusun \nrancangan laporan hasil Audit Keamanan SPBE \n..."
+        },
+        {
+          "id": 5,
+          "doc_id": "4799624e",
+          "document": "peraturan bssn no 8 tahun 2024",
+          "document_short": "peraturan bssn no 8 tahun 2024",
+          "section": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Keenam > Pasal 19 > Ayat (5)",
+          "hierarchy": "",
+          "score": 77.54,
+          "snippet": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Keenam > Pasal 19 > Ayat (5): (5) Pemberian konklusi Audit Keamanan SPBE\nsebagaimana dimaksud pada ayat (4) mengacu pada\nma..."
+        },
+        {
+          "id": 6,
+          "doc_id": "3",
+          "document": "peraturan-bssn-no-8-tahun-2024",
+          "document_short": "peraturan-bssn-no-8-tahun-2024",
+          "section": "",
+          "hierarchy": "Peraturan Badan Siber dan Sandi Negara Nomor 6 8 Tahun 2024 > Lampiran",
+          "score": 77.4,
+          "snippet": "LAMPIRAN I \nPERATURAN BADAN SIBER DAN SANDI NEGARA \nNOMOR 8 TAHUN 2024 \nTENTANG  \nSTANDAR DAN TATA CARA PELAKSANAAN \nAUDIT KEAMANAN SISTEM PEMERINTAHAN \nBERBASIS ELEKTRONIK \n \nMATRIKS KONKLUSI AUDIT K..."
+        }
+      ],
+      "timing": {
+        "total_ms": 38960
+      },
+      "model_used": "qwen3.5:4b",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 5,
+        "metadata_audit": {
+          "enabled": true,
+          "is_consistent": true,
+          "checked_segments": 1,
+          "checked_claims": 1,
+          "mismatch_count": 0,
+          "unverifiable_count": 0,
+          "mismatches": [],
+          "unverifiable": []
+        }
+      },
+      "quality_check": {
+        "score": 22,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "latency_wall_ms": 39269
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 6,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 30,
+      "pertanyaan": "Siapa saja pihak yang termasuk dalam Penyelenggara Sistem Elektronik Lingkup Publik?",
+      "jawaban": "Instansi dan institusi yang ditunjuk oleh Instansi, tidak termasuk otoritas sektor keuangan.",
+      "sitasi": "PP Nomor 71 Tahun 2019, Pasal 2 Ayat (3) dan (4), Halaman 7"
+    },
+    "chatbot": {
+      "session_id": "ffe821ee-83f1-4c03-a2cd-b378549f969d",
+      "answer": "Berdasarkan dokumen yang diberikan, pihak yang termasuk dalam Penyelenggara Sistem Elektronik Lingkup Publik adalah:\n\n1. Instansi [2].\n2. Institusi yang ditunjuk oleh Instansi [2].\n\nPenting untuk dicatat bahwa Penyelenggara Sistem Elektronik Lingkup Publik yang merupakan otoritas pengatur dan pengawas sektor keuangan tidak termasuk dalam kategori ini [2].\n\nReferensi Dokumen:\n[2] PERATURAN PEMERINTAH REPUBLIK INDONESIA Tahun tentang PEI!ryELENGGARAAN SISTEM DAN TRANSAKSI ELEKTRONIK | Pasal 2",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "7",
+          "document": "PERATURAN PEMERINTAH REPUBLIK INDONESIA Tahun tentang PEI!ryELENGGARAAN SISTEM DAN TRANSAKSI ELEKTRONIK",
+          "document_short": "PERATURAN PEMERINTAH REPUBLIK INDONESIA Tahun",
+          "section": "Pasal 1",
+          "hierarchy": "PERATURAN PEMERINTAH REPUBLIK INDONESIA  Tahun > BAB I > Pasal 1",
+          "score": 81.09,
+          "snippet": "yang \nmenyediakan, mengelola, dan/atau\nmengoperasikan Sistem Elektronik secara sendiri-sendiri\nmaupun bersama-sama kepada Pengguna Sistem\nElektronik untuk keperluair dirinya dan/ atau keperluan\npihak ..."
+        },
+        {
+          "id": 2,
+          "doc_id": "7",
+          "document": "PERATURAN PEMERINTAH REPUBLIK INDONESIA Tahun tentang PEI!ryELENGGARAAN SISTEM DAN TRANSAKSI ELEKTRONIK",
+          "document_short": "PERATURAN PEMERINTAH REPUBLIK INDONESIA Tahun",
+          "section": "Pasal 2",
+          "hierarchy": "PERATURAN PEMERINTAH REPUBLIK INDONESIA  Tahun > BAB II > Kesatu -  > Pasal 2 > Ayat (1)-(4)",
+          "score": 80.95,
+          "snippet": "(1) Penyelenggaraan Sistem Elektronik dilaksanakan oleh\nPenyelenggara Sistem Elektronik.\n(21 Penyelenggara Sistem Elektronik sebagaimana dimaksud\npada ayat (1) meliputi:\na. Penyelenggara Sistem Elektr..."
+        },
+        {
+          "id": 3,
+          "doc_id": "7",
+          "document": "PERATURAN PEMERINTAH REPUBLIK INDONESIA Tahun tentang PEI!ryELENGGARAAN SISTEM DAN TRANSAKSI ELEKTRONIK",
+          "document_short": "PERATURAN PEMERINTAH REPUBLIK INDONESIA Tahun",
+          "section": "Pasal 21",
+          "hierarchy": "PERATURAN PEMERINTAH REPUBLIK INDONESIA  Tahun > BAB II > Keenam -  > Pasal 21 > Ayat (1)-(3)",
+          "score": 80.78,
+          "snippet": "(1) Penyelenggara Sistem Elektronik Lingkup Privat dapat\nmelakukan pengelolaan, pemrosesan, dan/atau\npenyimpanan Sistem Elektronik dan Data Elektronik di\nwilayah Indonesia dan/atau di luar wilayah Ind..."
+        },
+        {
+          "id": 4,
+          "doc_id": "7",
+          "document": "PERATURAN PEMERINTAH REPUBLIK INDONESIA Tahun tentang PEI!ryELENGGARAAN SISTEM DAN TRANSAKSI ELEKTRONIK",
+          "document_short": "PERATURAN PEMERINTAH REPUBLIK INDONESIA Tahun",
+          "section": "Pasal 9",
+          "hierarchy": "PERATURAN PEMERINTAH REPUBLIK INDONESIA  Tahun > BAB II > Keempat -  > Pasal 9 > Ayat (5)-(6)",
+          "score": 80.64,
+          "snippet": "Pasal 9\n(5) Penyelenggara Sist6m Elektronik Lingkup Publik wajib\nmenjamin kerahasiaan kode sumber Perangkat Lunak\nyang digunakan dan hanya digunakan untuk\nkepentingan Penyelenggara Sistem Elektronik L..."
+        },
+        {
+          "id": 5,
+          "doc_id": "7",
+          "document": "PERATURAN PEMERINTAH REPUBLIK INDONESIA Tahun tentang PEI!ryELENGGARAAN SISTEM DAN TRANSAKSI ELEKTRONIK",
+          "document_short": "PERATURAN PEMERINTAH REPUBLIK INDONESIA Tahun",
+          "section": "Pasal 20",
+          "hierarchy": "PERATURAN PEMERINTAH REPUBLIK INDONESIA  Tahun > BAB II > Keenam -  > Pasal 20 > Ayat (1)-(3)",
+          "score": 80.5,
+          "snippet": "(1) Penyelenggara Sistem Elektronik Lingkup Publik wajib\nmemiliki rencana keberlangsungan kegiatan untuk\nmenanggulangi gangguan atau bencana sesuai dengan\nrisiko dari dampak yang ditimbulkannya.\n(21 P..."
+        },
+        {
+          "id": 6,
+          "doc_id": "7",
+          "document": "PERATURAN PEMERINTAH REPUBLIK INDONESIA Tahun tentang PEI!ryELENGGARAAN SISTEM DAN TRANSAKSI ELEKTRONIK",
+          "document_short": "PERATURAN PEMERINTAH REPUBLIK INDONESIA Tahun",
+          "section": "Pasal 9",
+          "hierarchy": "PERATURAN PEMERINTAH REPUBLIK INDONESIA  Tahun > BAB II > Keempat -  > Pasal 9 > Ayat (1)-(4)",
+          "score": 80.35,
+          "snippet": "(1) Pengembang yang menyediakan Perangkat Lunak yang\nkhusus dikembangkan untuk Penyelenggara Sistem\nElektronik Lingkup Publik wajib menyerahkan kode\nsumber dan dokumentasi atas Perangkat Lunak kepada\n..."
+        }
+      ],
+      "timing": {
+        "total_ms": 29115
+      },
+      "model_used": "qwen3.5:4b",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 3,
+        "metadata_audit": {
+          "enabled": true,
+          "is_consistent": true,
+          "checked_segments": 0,
+          "checked_claims": 0,
+          "mismatch_count": 0,
+          "unverifiable_count": 0,
+          "mismatches": [],
+          "unverifiable": []
+        }
+      },
+      "quality_check": {
+        "score": 22,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "latency_wall_ms": 29430
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 6,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  }
+]

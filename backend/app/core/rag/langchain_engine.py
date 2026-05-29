@@ -177,17 +177,19 @@ class LangchainRAGEngine:
         # 2. Parallel Search (Vector + BM25 + Table Literal + Indicator Literal)
         # Vector search: scoped to doc_id when provided — prevents cross-doc contamination in RRF pool
         qdrant_filter = self._build_qdrant_filter(doc_id)
-        v_docs = []
+        ranked_lists: List[List[Document]] = []
         for sq in search_queries:
-            v_docs.extend(self.retriever.vector_search(sq, candidate_k, qdrant_filter))
+            ranked_lists.append(self.retriever.vector_search(sq, candidate_k, qdrant_filter))
             
-        b_docs = self.retriever.bm25_search(query, candidate_k * 2, self._bm25_docs, doc_id)
-        l_docs = self.retriever.table_literal_search(query, self.collection_name, doc_id)
-        i_docs = self.retriever.indicator_literal_search(query, self.collection_name, doc_id)
+        for sq in search_queries:
+            ranked_lists.append(self.retriever.bm25_search(sq, candidate_k * 2, self._bm25_docs, doc_id))
+        for sq in search_queries:
+            ranked_lists.append(self.retriever.table_literal_search(sq, self.collection_name, doc_id))
+            ranked_lists.append(self.retriever.indicator_literal_search(sq, self.collection_name, doc_id))
 
         # 3. Hybrid Fusion (RRF)
         # Combine results from all search paths
-        candidates = self.ranker.rrf_fusion([v_docs, b_docs, l_docs, i_docs], max_candidates=max(40, candidate_k * 2))
+        candidates = self.ranker.rrf_fusion(ranked_lists, max_candidates=max(100, candidate_k * 4))
         
         # 4. Context Stitching (±1 neighbor chunks for better coherence)
         expanded_docs = self.stitcher.expand_docs_with_neighbor_context(candidates, self.collection_name)

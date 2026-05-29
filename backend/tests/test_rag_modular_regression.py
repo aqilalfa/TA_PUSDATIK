@@ -216,14 +216,37 @@ class TestLangchainEngineDocIdFilter:
             engine.retrieve_context("test query", top_k=5, doc_id=None)
 
         vector_call = engine.retriever.vector_search.call_args_list[0]
-        bm25_call = engine.retriever.bm25_search.call_args
+        bm25_call = engine.retriever.bm25_search.call_args_list[0]
         rrf_call = engine.ranker.rrf_fusion.call_args
         rerank_call = engine.ranker.rerank.call_args
 
         assert vector_call.args[1] == 15
         assert bm25_call.args[1] == 30
-        assert rrf_call.kwargs["max_candidates"] >= 40
+        assert rrf_call.kwargs["max_candidates"] >= 100
         assert rerank_call.args[2] == 5
+
+    def test_retrieve_context_uses_expanded_queries_for_bm25(self):
+        """BM25 should receive legal-anchor expanded queries, not only the original query."""
+        engine = self._build_engine()
+
+        with patch("app.core.rag.langchain_engine.expand_query", return_value=["original", "legal anchor"]):
+            engine.retrieve_context("original", top_k=5, doc_id=None)
+
+        bm25_queries = [call.args[0] for call in engine.retriever.bm25_search.call_args_list]
+        assert bm25_queries == ["original", "legal anchor"]
+
+    def test_retrieve_context_uses_expanded_queries_for_literal_searches(self):
+        """Implicit table anchors should reach literal table search, not just vector/BM25."""
+        engine = self._build_engine()
+
+        with patch("app.core.rag.langchain_engine.expand_query", return_value=["original", "Tabel 13 anchor"]):
+            engine.retrieve_context("original", top_k=5, doc_id=None)
+
+        table_queries = [call.args[0] for call in engine.retriever.table_literal_search.call_args_list]
+        indicator_queries = [call.args[0] for call in engine.retriever.indicator_literal_search.call_args_list]
+
+        assert table_queries == ["original", "Tabel 13 anchor"]
+        assert indicator_queries == ["original", "Tabel 13 anchor"]
 
     def test_build_qdrant_filter_returns_none_for_no_doc_id(self):
         """_build_qdrant_filter(None) must return None (no filter = global search)."""

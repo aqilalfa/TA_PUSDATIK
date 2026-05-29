@@ -1,0 +1,192 @@
+[
+  {
+    "ground_truth": {
+      "nomor": 40,
+      "pertanyaan": "Instansi pemerintah daerah mana yang meraih nilai SPBE tertinggi di tahun 2024?",
+      "jawaban": "Pemerintah Kabupaten Banyuwangi dengan skor kepuasan 4,77.",
+      "sitasi": "Laporan Evaluasi SPBE Tahun 2024, Analisis Capaian Indeks Maturitas SPBE Nasional, Halaman 30"
+    },
+    "retrieval": {
+      "query": "Instansi pemerintah daerah mana yang meraih nilai SPBE tertinggi di tahun 2024?",
+      "query_type": "general",
+      "source_count": 5,
+      "docs": [
+        {
+          "content": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah Kab.<br>Banyuwangi (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 4.77 (Predikat: Memuaskan). Rincian Nilai Domain: Kebijakan Internal (5.0), Tata Kelola (4.6), Manajemen SPBE (4.18), Layanan SPBE (5.0).",
+          "metadata": {
+            "document_title": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+            "context_header": "",
+            "pasal": "",
+            "ayat": "",
+            "bab": "",
+            "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+            "chunk_part": null,
+            "chunk_parts_total": null,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "12",
+            "filename": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 18.374750750374663,
+            "rrf_score": 0.013888888888888888,
+            "rerank_base_score": 0.013888888888888888,
+            "query_boost": 6.2,
+            "rerank_score": 6.2138888888888895
+          }
+        },
+        {
+          "content": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah D.I.<br>Yogyakarta (Pemerintah Daerah di DKI Jakarta60: Tabel 54. Hasil Evaluasi SPBE Pemerintah Daerah di Papua Barat Daya; Kolom2: 82, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 4.53 (Predikat: Memuaskan). Rincian Nilai Domain: Kebijakan Internal (5.0), Tata Kelola (4.8), Manajemen SPBE (3.64), Layanan SPBE (4.58).",
+          "metadata": {
+            "document_title": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+            "context_header": "",
+            "pasal": "",
+            "ayat": "",
+            "bab": "",
+            "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+            "chunk_part": null,
+            "chunk_parts_total": null,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "12",
+            "filename": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 14.937656965159011,
+            "rrf_score": 0.05839862844836137,
+            "rerank_base_score": 0.05839862844836137,
+            "query_boost": 3.0,
+            "rerank_score": 3.0583986284483613
+          }
+        },
+        {
+          "content": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Badan Pusat Statistik (Pemerintah Daerah di DKI Jakarta60: Tabel 54. Hasil Evaluasi SPBE Pemerintah Daerah di Papua Barat Daya; Kolom2: 82, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 4.53 (Predikat: Memuaskan). Rincian Nilai Domain: Kebijakan Internal (4.7), Tata Kelola (4.7), Manajemen SPBE (3.36), Layanan SPBE (4.81).",
+          "metadata": {
+            "document_title": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+            "context_header": "",
+            "pasal": "",
+            "ayat": "",
+            "bab": "",
+            "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+            "chunk_part": null,
+            "chunk_parts_total": null,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "12",
+            "filename": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 14.694642468210874,
+            "rrf_score": 0.03869471209354074,
+            "rerank_base_score": 0.03869471209354074,
+            "query_boost": 3.0,
+            "rerank_score": 3.0386947120935406
+          }
+        },
+        {
+          "content": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah Kab. Sleman (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 4.3 (Predikat: Memuaskan). Rincian Nilai Domain: Kebijakan Internal (4.2), Tata Kelola (4.2), Manajemen SPBE (3.27), Layanan SPBE (4.75).",
+          "metadata": {
+            "document_title": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+            "context_header": "",
+            "pasal": "",
+            "ayat": "",
+            "bab": "",
+            "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+            "chunk_part": null,
+            "chunk_parts_total": null,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "12",
+            "filename": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 17.28966012036627,
+            "rrf_score": 0.028298204527712725,
+            "rerank_base_score": 0.028298204527712725,
+            "query_boost": 3.0,
+            "rerank_score": 3.028298204527713
+          }
+        },
+        {
+          "content": "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah Kab. Kudus (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 4.23 (Predikat: Memuaskan). Rincian Nilai Domain: Kebijakan Internal (3.8), Tata Kelola (3.9), Manajemen SPBE (3.27), Layanan SPBE (4.88).",
+          "metadata": {
+            "document_title": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+            "context_header": "",
+            "pasal": "",
+            "ayat": "",
+            "bab": "",
+            "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+            "chunk_part": null,
+            "chunk_parts_total": null,
+            "parent_pasal_text": "",
+            "is_parent": false,
+            "doc_id": "12",
+            "filename": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+            "is_table": false,
+            "table_label": "",
+            "table_context": "",
+            "bm25_score": 17.28966012036627,
+            "rrf_score": 0.027893738140417457,
+            "rerank_base_score": 0.027893738140417457,
+            "query_boost": 3.0,
+            "rerank_score": 3.0278937381404174
+          }
+        }
+      ]
+    },
+    "retrieval_eval": {
+      "expected": {
+        "doc_checks": [
+          "laporan",
+          "2024"
+        ],
+        "pasal": null,
+        "ayat": null,
+        "angka": null
+      },
+      "doc_at_1": true,
+      "doc_at_3": true,
+      "doc_at_6": true,
+      "section_at_1": false,
+      "section_at_3": false,
+      "section_at_6": false,
+      "top_sections": [
+        {
+          "document": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+          "section": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "boost": 6.2,
+          "score": 6.2138888888888895
+        },
+        {
+          "document": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+          "section": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "boost": 3.0,
+          "score": 3.0583986284483613
+        },
+        {
+          "document": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+          "section": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "boost": 3.0,
+          "score": 3.0386947120935406
+        },
+        {
+          "document": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+          "section": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "boost": 3.0,
+          "score": 3.028298204527713
+        },
+        {
+          "document": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+          "section": "Laporan Evaluasi SPBE Tahun 2024 > Data Capaian Instansi",
+          "boost": 3.0,
+          "score": 3.0278937381404174
+        }
+      ],
+      "latency_wall_ms": 669
+    }
+  }
+]
