@@ -163,8 +163,10 @@ class LangchainRAGEngine:
             return {"context": "", "sources": [], "raw_docs": []}
 
         query_type = classify_query(query)
-        # Technical queries need more context candidates
+        # Technical/legal queries need a broader candidate pool before final rerank.
+        # The LLM still receives only top_k docs; this only improves retrieval recall.
         k = int(top_k or (8 if query_type in ["table", "indikator"] else 5))
+        candidate_k = max(k * 3, 15)
         
         logger.info(f"[Retrieval] Processing '{query[:50]}...' (type: {query_type})")
 
@@ -177,15 +179,15 @@ class LangchainRAGEngine:
         qdrant_filter = self._build_qdrant_filter(doc_id)
         v_docs = []
         for sq in search_queries:
-            v_docs.extend(self.retriever.vector_search(sq, k, qdrant_filter))
+            v_docs.extend(self.retriever.vector_search(sq, candidate_k, qdrant_filter))
             
-        b_docs = self.retriever.bm25_search(query, k * 2, self._bm25_docs, doc_id)
+        b_docs = self.retriever.bm25_search(query, candidate_k * 2, self._bm25_docs, doc_id)
         l_docs = self.retriever.table_literal_search(query, self.collection_name, doc_id)
         i_docs = self.retriever.indicator_literal_search(query, self.collection_name, doc_id)
 
         # 3. Hybrid Fusion (RRF)
         # Combine results from all search paths
-        candidates = self.ranker.rrf_fusion([v_docs, b_docs, l_docs, i_docs], max_candidates=25)
+        candidates = self.ranker.rrf_fusion([v_docs, b_docs, l_docs, i_docs], max_candidates=max(40, candidate_k * 2))
         
         # 4. Context Stitching (±1 neighbor chunks for better coherence)
         expanded_docs = self.stitcher.expand_docs_with_neighbor_context(candidates, self.collection_name)

@@ -68,7 +68,12 @@ class TestContextStitcherNeighborFetch:
             flt = call_kwargs.kwargs.get("scroll_filter")
 
         assert flt is not None, "scroll_filter must be provided"
-        keys_used = [c.key for c in flt.must if hasattr(c, "key")]
+        keys_used = []
+        for cond in (flt.should or []):
+            if hasattr(cond, "must") and cond.must:
+                keys_used.extend([c.key for c in cond.must if hasattr(c, "key")])
+            elif hasattr(cond, "key"):
+                keys_used.append(cond.key)
         assert "doc_id" in keys_used, (
             f"Filter must use key='doc_id', got keys: {keys_used}. "
             "Bug: code uses 'payload.doc_id' which never matches Qdrant flat payload."
@@ -91,7 +96,12 @@ class TestContextStitcherNeighborFetch:
             flt = call_kwargs.args[1] if call_kwargs.args else None
 
         assert flt is not None
-        keys_used = [c.key for c in flt.must if hasattr(c, "key")]
+        keys_used = []
+        for cond in (flt.should or []):
+            if hasattr(cond, "must") and cond.must:
+                keys_used.extend([c.key for c in cond.must if hasattr(c, "key")])
+            elif hasattr(cond, "key"):
+                keys_used.append(cond.key)
         assert "chunk_index" in keys_used, (
             f"Filter must use key='chunk_index', got: {keys_used}"
         )
@@ -197,6 +207,23 @@ class TestLangchainEngineDocIdFilter:
             engine.retrieve_context("test query", top_k=5, doc_id=None)
 
         assert engine.retriever.vector_search.called, "vector_search should always be called"
+
+    def test_retrieve_context_uses_broader_candidate_pool_before_final_rerank(self):
+        """Legal reranking needs more candidates than the final top_k sent to the LLM."""
+        engine = self._build_engine()
+
+        with patch("app.core.rag.langchain_engine.expand_query", return_value=["test query"]):
+            engine.retrieve_context("test query", top_k=5, doc_id=None)
+
+        vector_call = engine.retriever.vector_search.call_args_list[0]
+        bm25_call = engine.retriever.bm25_search.call_args
+        rrf_call = engine.ranker.rrf_fusion.call_args
+        rerank_call = engine.ranker.rerank.call_args
+
+        assert vector_call.args[1] == 15
+        assert bm25_call.args[1] == 30
+        assert rrf_call.kwargs["max_candidates"] >= 40
+        assert rerank_call.args[2] == 5
 
     def test_build_qdrant_filter_returns_none_for_no_doc_id(self):
         """_build_qdrant_filter(None) must return None (no filter = global search)."""
