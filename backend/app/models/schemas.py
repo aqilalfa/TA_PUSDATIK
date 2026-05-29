@@ -65,6 +65,7 @@ class ChatRequest(BaseModel):
     message: str
     model: Optional[str] = None
     use_rag: bool = True
+    use_structured_fact: bool = False
     top_k: int = 5
     max_tokens: int = 2048
     document_id: Optional[str] = None

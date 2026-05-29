@@ -185,8 +185,12 @@ async def chat_stream(
 
             start_time = time.perf_counter()
 
-            structured_fact = find_structured_fact_answer(request.message)
-            if request.use_rag and structured_fact:
+            structured_fact = (
+                find_structured_fact_answer(request.message)
+                if request.use_rag and request.use_structured_fact
+                else None
+            )
+            if structured_fact:
                 sources_for_response = structured_fact.sources
                 full_response = format_structured_fact_answer(structured_fact)
 

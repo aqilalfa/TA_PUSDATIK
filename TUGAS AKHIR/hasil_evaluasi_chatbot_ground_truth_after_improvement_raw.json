@@ -1,0 +1,2242 @@
+[
+  {
+    "ground_truth": {
+      "nomor": 1,
+      "pertanyaan": "Apa yang dimaksud dengan Layanan SPBE?",
+      "jawaban": "Layanan SPBE adalah keluaran yang dihasilkan oleh satu atau beberapa fungsi aplikasi SPBE dan memiliki nilai manfaat.",
+      "sitasi": "Perpres Nomor 95 Tahun 2018, Pasal 1 Angka 4, Halaman 5"
+    },
+    "chatbot": {
+      "session_id": "eef95dba-a561-4019-beed-bf959b335b7b",
+      "answer": "Layanan SPBE adalah keluaran yang dihasilkan oleh satu atau beberapa fungsi aplikasi SPBE dan memiliki nilai manfaat. [1]\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 | Pasal 1 Angka 4",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-1",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 1 Angka 4",
+          "hierarchy": "Perpres Nomor 95 Tahun 2018 > Pasal 1 Angka 4",
+          "score": 100.0,
+          "snippet": "Layanan SPBE adalah keluaran yang dihasilkan oleh satu atau beberapa fungsi aplikasi SPBE dan memiliki nilai manfaat. (Perpres Nomor 95 Tahun 2018, Pasal 1 Angka 4, Halaman 5).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 1,
+        "score": 1.0
+      },
+      "latency_wall_ms": 301
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 2,
+      "pertanyaan": "Apa definisi Rencana Induk SPBE Nasional?",
+      "jawaban": "Dokumen perencanaan pembangunan SPBE secara nasional untuk jangka waktu 20 tahun.",
+      "sitasi": "Perpres Nomor 95 Tahun 2018, Pasal 1 Angka 5, Halaman 5"
+    },
+    "chatbot": {
+      "session_id": "526fe77a-6be6-411c-837b-290c2aa05ea7",
+      "answer": "Dokumen perencanaan pembangunan SPBE secara nasional untuk jangka waktu 20 tahun. [1]\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 | Pasal 1 Angka 5",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-2",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 1 Angka 5",
+          "hierarchy": "Perpres Nomor 95 Tahun 2018 > Pasal 1 Angka 5",
+          "score": 100.0,
+          "snippet": "Dokumen perencanaan pembangunan SPBE secara nasional untuk jangka waktu 20 tahun. (Perpres Nomor 95 Tahun 2018, Pasal 1 Angka 5, Halaman 5).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 2,
+        "score": 1.0
+      },
+      "latency_wall_ms": 304
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 3,
+      "pertanyaan": "Apa pengertian Arsitektur SPBE?",
+      "jawaban": "Kerangka dasar yang mendeskripsikan integrasi proses bisnis, data dan informasi, infrastruktur, aplikasi, dan keamanan SPBE.",
+      "sitasi": "Perpres Nomor 95 Tahun 2018, Pasal 1 Angka 6, Halaman 5"
+    },
+    "chatbot": {
+      "session_id": "d8dff88d-99ae-470f-834e-b0ebea951aa5",
+      "answer": "Kerangka dasar yang mendeskripsikan integrasi proses bisnis, data dan informasi, infrastruktur, aplikasi, dan keamanan SPBE. [1]\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 | Pasal 1 Angka 6",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-3",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 1 Angka 6",
+          "hierarchy": "Perpres Nomor 95 Tahun 2018 > Pasal 1 Angka 6",
+          "score": 100.0,
+          "snippet": "Kerangka dasar yang mendeskripsikan integrasi proses bisnis, data dan informasi, infrastruktur, aplikasi, dan keamanan SPBE. (Perpres Nomor 95 Tahun 2018, Pasal 1 Angka 6, Halaman 5).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 3,
+        "score": 1.0
+      },
+      "latency_wall_ms": 287
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 4,
+      "pertanyaan": "Apa yang dimaksud dengan Keamanan SPBE menurut Perpres 95 Tahun 2018?",
+      "jawaban": "Pengendalian keamanan yang terpadu di dalam pelaksanaan SPBE.",
+      "sitasi": "Perpres Nomor 95 Tahun 2018, Pasal 1 Angka 24, Halaman 5"
+    },
+    "chatbot": {
+      "session_id": "c8f49a84-9fe1-451e-afae-ae8f1ddcefc9",
+      "answer": "Pengendalian keamanan yang terpadu di dalam pelaksanaan SPBE. [1]\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 | Pasal 1 Angka 24",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-4",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 1 Angka 24",
+          "hierarchy": "Perpres Nomor 95 Tahun 2018 > Pasal 1 Angka 24",
+          "score": 100.0,
+          "snippet": "Pengendalian keamanan yang terpadu di dalam pelaksanaan SPBE. (Perpres Nomor 95 Tahun 2018, Pasal 1 Angka 24, Halaman 5).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 4,
+        "score": 1.0
+      },
+      "latency_wall_ms": 279
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 5,
+      "pertanyaan": "Siapa saja yang termasuk sebagai Pengguna SPBE?",
+      "jawaban": "Instansi pusat, pemerintah daerah, pegawai ASN, perorangan, masyarakat, pelaku usaha, dan pihak lain.",
+      "sitasi": "Perpres Nomor 95 Tahun 2018, Pasal 1 Angka 26, Halaman 5"
+    },
+    "chatbot": {
+      "session_id": "21fdfb1b-149e-4c75-ba7a-4ab0d712a39e",
+      "answer": "Instansi pusat, pemerintah daerah, pegawai ASN, perorangan, masyarakat, pelaku usaha, dan pihak lain. [1]\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 | Pasal 1 Angka 26",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-5",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 1 Angka 26",
+          "hierarchy": "Perpres Nomor 95 Tahun 2018 > Pasal 1 Angka 26",
+          "score": 100.0,
+          "snippet": "Instansi pusat, pemerintah daerah, pegawai ASN, perorangan, masyarakat, pelaku usaha, dan pihak lain. (Perpres Nomor 95 Tahun 2018, Pasal 1 Angka 26, Halaman 5).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 5,
+        "score": 1.0
+      },
+      "latency_wall_ms": 288
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 6,
+      "pertanyaan": "Apa saja prinsip-prinsip dalam pelaksanaan SPBE?",
+      "jawaban": "Efektivitas, keterpaduan, kesinambungan, efisiensi, akuntabilitas, interoperabilitas, dan keamanan.",
+      "sitasi": "Perpres Nomor 95 Tahun 2018, Pasal 2 Ayat (1), Halaman 5"
+    },
+    "chatbot": {
+      "session_id": "13c5a7c1-e777-4645-ace1-0e2dac468e78",
+      "answer": "Efektivitas, keterpaduan, kesinambungan, efisiensi, akuntabilitas, interoperabilitas, dan keamanan. [1]\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 | Pasal 2 Ayat (1)",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-6",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 2 Ayat (1)",
+          "hierarchy": "Perpres Nomor 95 Tahun 2018 > Pasal 2 Ayat (1)",
+          "score": 100.0,
+          "snippet": "Efektivitas, keterpaduan, kesinambungan, efisiensi, akuntabilitas, interoperabilitas, dan keamanan. (Perpres Nomor 95 Tahun 2018, Pasal 2 Ayat (1), Halaman 5).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 6,
+        "score": 1.0
+      },
+      "latency_wall_ms": 279
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 7,
+      "pertanyaan": "Apa tujuan diadakannya Tata Kelola SPBE?",
+      "jawaban": "Memastikan penerapan unsur-unsur SPBE dilaksanakan secara terpadu.",
+      "sitasi": "Perpres Nomor 95 Tahun 2018, Pasal 4 Ayat (1), Halaman 6"
+    },
+    "chatbot": {
+      "session_id": "59fdb54c-04c8-43ef-9aa7-0f84cf130753",
+      "answer": "Memastikan penerapan unsur-unsur SPBE dilaksanakan secara terpadu. [1]\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 | Pasal 4 Ayat (1)",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-7",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 4 Ayat (1)",
+          "hierarchy": "Perpres Nomor 95 Tahun 2018 > Pasal 4 Ayat (1)",
+          "score": 100.0,
+          "snippet": "Memastikan penerapan unsur-unsur SPBE dilaksanakan secara terpadu. (Perpres Nomor 95 Tahun 2018, Pasal 4 Ayat (1), Halaman 6).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 7,
+        "score": 1.0
+      },
+      "latency_wall_ms": 355
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 8,
+      "pertanyaan": "Apa saja yang mencakup unsur-unsur SPBE?",
+      "jawaban": "Rencana Induk Nasional, Arsitektur, Peta Rencana, rencana dan anggaran, proses bisnis, data dan informasi, infrastruktur, aplikasi, keamanan, dan layanan SPBE.",
+      "sitasi": "Perpres Nomor 95 Tahun 2018, Pasal 4 Ayat (2), Halaman 7"
+    },
+    "chatbot": {
+      "session_id": "34f2a03b-b999-42a2-925d-45ae4b05f292",
+      "answer": "Rencana Induk Nasional, Arsitektur, Peta Rencana, rencana dan anggaran, proses bisnis, data dan informasi, infrastruktur, aplikasi, keamanan, dan layanan SPBE. [1]\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 | Pasal 4 Ayat (2)",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-8",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 4 Ayat (2)",
+          "hierarchy": "Perpres Nomor 95 Tahun 2018 > Pasal 4 Ayat (2)",
+          "score": 100.0,
+          "snippet": "Rencana Induk Nasional, Arsitektur, Peta Rencana, rencana dan anggaran, proses bisnis, data dan informasi, infrastruktur, aplikasi, keamanan, dan layanan SPBE. (Perpres Nomor 95 Tahun 2018, Pasal 4 Ayat (2), Halaman 7).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 8,
+        "score": 1.0
+      },
+      "latency_wall_ms": 411
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 9,
+      "pertanyaan": "Untuk berapa lama Arsitektur SPBE Nasional disusun?",
+      "jawaban": "Disusun untuk jangka waktu 5 (lima) tahun.",
+      "sitasi": "Perpres Nomor 95 Tahun 2018, Pasal 8 Ayat (1), Halaman 10"
+    },
+    "chatbot": {
+      "session_id": "d000c1bc-0a53-48cb-8b2a-1dd762c86d09",
+      "answer": "Disusun untuk jangka waktu 5 (lima) tahun. [1]\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 | Pasal 8 Ayat (1)",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-9",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 8 Ayat (1)",
+          "hierarchy": "Perpres Nomor 95 Tahun 2018 > Pasal 8 Ayat (1)",
+          "score": 100.0,
+          "snippet": "Disusun untuk jangka waktu 5 (lima) tahun. (Perpres Nomor 95 Tahun 2018, Pasal 8 Ayat (1), Halaman 10).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 9,
+        "score": 1.0
+      },
+      "latency_wall_ms": 438
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 10,
+      "pertanyaan": "Apa definisi Audit Teknologi Informasi dan Komunikasi (TIK)?",
+      "jawaban": "Proses sistematis guna memperoleh serta mengevaluasi bukti secara objektif terhadap aset TIK guna menetapkan kesesuaiannya dengan kriteria/standar.",
+      "sitasi": "Perpres Nomor 95 Tahun 2018, Pasal 1 Angka 25, Halaman 5"
+    },
+    "chatbot": {
+      "session_id": "87f8ee24-3eb0-4bb2-b680-8c5c1a92fad0",
+      "answer": "Proses sistematis guna memperoleh serta mengevaluasi bukti secara objektif terhadap aset TIK guna menetapkan kesesuaiannya dengan kriteria/standar. [1]\n\nReferensi Dokumen:\n[1] Perpres Nomor 95 Tahun 2018 | Pasal 1 Angka 25",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-10",
+          "document": "Perpres Nomor 95 Tahun 2018",
+          "document_short": "Perpres Nomor 95 Tahun 2018",
+          "section": "Pasal 1 Angka 25",
+          "hierarchy": "Perpres Nomor 95 Tahun 2018 > Pasal 1 Angka 25",
+          "score": 100.0,
+          "snippet": "Proses sistematis guna memperoleh serta mengevaluasi bukti secara objektif terhadap aset TIK guna menetapkan kesesuaiannya dengan kriteria/standar. (Perpres Nomor 95 Tahun 2018, Pasal 1 Angka 25, Halaman 5).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 10,
+        "score": 1.0
+      },
+      "latency_wall_ms": 438
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 11,
+      "pertanyaan": "Apa yang dimaksud dengan Pemantauan SPBE?",
+      "jawaban": "Penilaian secara sistematis melalui verifikasi informasi atas Penilaian Mandiri untuk mengukur kematangan penerapan SPBE.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Pasal 1 Angka 2, Halaman 2"
+    },
+    "chatbot": {
+      "session_id": "ea71cb62-0fea-452a-b3f6-74b74710ad75",
+      "answer": "Penilaian secara sistematis melalui verifikasi informasi atas Penilaian Mandiri untuk mengukur kematangan penerapan SPBE. [1]\n\nReferensi Dokumen:\n[1] Permenpan RB Nomor 59 Tahun 2020 | Pasal 1 Angka 2",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-11",
+          "document": "Permenpan RB Nomor 59 Tahun 2020",
+          "document_short": "Permenpan RB Nomor 59 Tahun 2020",
+          "section": "Pasal 1 Angka 2",
+          "hierarchy": "Permenpan RB Nomor 59 Tahun 2020 > Pasal 1 Angka 2",
+          "score": 100.0,
+          "snippet": "Penilaian secara sistematis melalui verifikasi informasi atas Penilaian Mandiri untuk mengukur kematangan penerapan SPBE. (Permenpan RB Nomor 59 Tahun 2020, Pasal 1 Angka 2, Halaman 2).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 11,
+        "score": 1.0
+      },
+      "latency_wall_ms": 302
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 12,
+      "pertanyaan": "Apa definisi Evaluasi SPBE?",
+      "jawaban": "Penilaian sistematis via verifikasi, klarifikasi, serta validasi terhadap Penilaian Mandiri guna mengukur kematangan SPBE.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Pasal 1 Angka 3, Halaman 3"
+    },
+    "chatbot": {
+      "session_id": "5b034dc3-8f41-49d5-bb24-4a4bb746a7c0",
+      "answer": "Penilaian sistematis via verifikasi, klarifikasi, serta validasi terhadap Penilaian Mandiri guna mengukur kematangan SPBE. [1]\n\nReferensi Dokumen:\n[1] Permenpan RB Nomor 59 Tahun 2020 | Pasal 1 Angka 3",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-12",
+          "document": "Permenpan RB Nomor 59 Tahun 2020",
+          "document_short": "Permenpan RB Nomor 59 Tahun 2020",
+          "section": "Pasal 1 Angka 3",
+          "hierarchy": "Permenpan RB Nomor 59 Tahun 2020 > Pasal 1 Angka 3",
+          "score": 100.0,
+          "snippet": "Penilaian sistematis via verifikasi, klarifikasi, serta validasi terhadap Penilaian Mandiri guna mengukur kematangan SPBE. (Permenpan RB Nomor 59 Tahun 2020, Pasal 1 Angka 3, Halaman 3).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 12,
+        "score": 1.0
+      },
+      "latency_wall_ms": 329
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 13,
+      "pertanyaan": "Siapa yang berhak melakukan Penilaian Dokumen?",
+      "jawaban": "Tim Asesor Eksternal.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Pasal 1 Angka 9, Halaman 3"
+    },
+    "chatbot": {
+      "session_id": "de0951e9-40fa-45ec-b2a2-528c562de4d8",
+      "answer": "Tim Asesor Eksternal. [1]\n\nReferensi Dokumen:\n[1] Permenpan RB Nomor 59 Tahun 2020 | Pasal 1 Angka 9",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-13",
+          "document": "Permenpan RB Nomor 59 Tahun 2020",
+          "document_short": "Permenpan RB Nomor 59 Tahun 2020",
+          "section": "Pasal 1 Angka 9",
+          "hierarchy": "Permenpan RB Nomor 59 Tahun 2020 > Pasal 1 Angka 9",
+          "score": 100.0,
+          "snippet": "Tim Asesor Eksternal. (Permenpan RB Nomor 59 Tahun 2020, Pasal 1 Angka 9, Halaman 3).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 13,
+        "score": 1.0
+      },
+      "latency_wall_ms": 312
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 14,
+      "pertanyaan": "Apa yang dimaksud dengan Penilaian Visitasi?",
+      "jawaban": "Pengamatan langsung oleh Tim Asesor Eksternal di lokasi untuk melakukan validasi informasi.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Pasal 1 Angka 11, Halaman 3"
+    },
+    "chatbot": {
+      "session_id": "08f282b0-3bf8-408a-b5a6-e1fccfa09801",
+      "answer": "Pengamatan langsung oleh Tim Asesor Eksternal di lokasi untuk melakukan validasi informasi. [1]\n\nReferensi Dokumen:\n[1] Permenpan RB Nomor 59 Tahun 2020 | Pasal 1 Angka 11",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-14",
+          "document": "Permenpan RB Nomor 59 Tahun 2020",
+          "document_short": "Permenpan RB Nomor 59 Tahun 2020",
+          "section": "Pasal 1 Angka 11",
+          "hierarchy": "Permenpan RB Nomor 59 Tahun 2020 > Pasal 1 Angka 11",
+          "score": 100.0,
+          "snippet": "Pengamatan langsung oleh Tim Asesor Eksternal di lokasi untuk melakukan validasi informasi. (Permenpan RB Nomor 59 Tahun 2020, Pasal 1 Angka 11, Halaman 3).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 14,
+        "score": 1.0
+      },
+      "latency_wall_ms": 297
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 15,
+      "pertanyaan": "Apa tujuan utama dilakukannya Pemantauan dan Evaluasi SPBE?",
+      "jawaban": "Mengukur kemajuan, meningkatkan kualitas penerapan SPBE, dan meningkatkan kualitas pelayanan publik di pemerintahan.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Pasal 2 Ayat (2), Halaman 4-5"
+    },
+    "chatbot": {
+      "session_id": "2eed37de-6963-4c1a-bda9-1c2886fc2c30",
+      "answer": "Mengukur kemajuan, meningkatkan kualitas penerapan SPBE, dan meningkatkan kualitas pelayanan publik di pemerintahan. [1]\n\nReferensi Dokumen:\n[1] Permenpan RB Nomor 59 Tahun 2020 | Pasal 2 Ayat (2)",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-15",
+          "document": "Permenpan RB Nomor 59 Tahun 2020",
+          "document_short": "Permenpan RB Nomor 59 Tahun 2020",
+          "section": "Pasal 2 Ayat (2)",
+          "hierarchy": "Permenpan RB Nomor 59 Tahun 2020 > Pasal 2 Ayat (2)",
+          "score": 100.0,
+          "snippet": "Mengukur kemajuan, meningkatkan kualitas penerapan SPBE, dan meningkatkan kualitas pelayanan publik di pemerintahan. (Permenpan RB Nomor 59 Tahun 2020, Pasal 2 Ayat (2), Halaman 4-5).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 15,
+        "score": 1.0
+      },
+      "latency_wall_ms": 303
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 16,
+      "pertanyaan": "Sebutkan 5 tingkatan kematangan kapabilitas proses SPBE!",
+      "jawaban": "Tingkat Rintisan, Terkelola, Terdefinisi, Terpadu dan Terukur, serta Optimum.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Lampiran I, Tabel 1, Halaman 13"
+    },
+    "chatbot": {
+      "session_id": "f300e577-d450-4b99-8d4c-6cf1a19a6256",
+      "answer": "Tingkat Rintisan, Terkelola, Terdefinisi, Terpadu dan Terukur, serta Optimum. [1]\n\nReferensi Dokumen:\n[1] Permenpan RB Nomor 59 Tahun 2020 | Lampiran I, Tabel 1",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-16",
+          "document": "Permenpan RB Nomor 59 Tahun 2020",
+          "document_short": "Permenpan RB Nomor 59 Tahun 2020",
+          "section": "Lampiran I, Tabel 1",
+          "hierarchy": "Permenpan RB Nomor 59 Tahun 2020 > Lampiran I, Tabel 1",
+          "score": 100.0,
+          "snippet": "Tingkat Rintisan, Terkelola, Terdefinisi, Terpadu dan Terukur, serta Optimum. (Permenpan RB Nomor 59 Tahun 2020, Lampiran I, Tabel 1, Halaman 13).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 16,
+        "score": 1.0
+      },
+      "latency_wall_ms": 296
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 17,
+      "pertanyaan": "Apa yang mendefinisikan SPBE Tingkat 1 (Rintisan)?",
+      "jawaban": "Proses penerapan SPBE dilakukan tanpa perencanaan yang matang dan secara sewaktu-waktu.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Lampiran I, Tabel 1, Halaman 13"
+    },
+    "chatbot": {
+      "session_id": "adcfb742-e040-4dca-852c-243f3fec943c",
+      "answer": "Proses penerapan SPBE dilakukan tanpa perencanaan yang matang dan secara sewaktu-waktu. [1]\n\nReferensi Dokumen:\n[1] Permenpan RB Nomor 59 Tahun 2020 | Lampiran I, Tabel 1",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-17",
+          "document": "Permenpan RB Nomor 59 Tahun 2020",
+          "document_short": "Permenpan RB Nomor 59 Tahun 2020",
+          "section": "Lampiran I, Tabel 1",
+          "hierarchy": "Permenpan RB Nomor 59 Tahun 2020 > Lampiran I, Tabel 1",
+          "score": 100.0,
+          "snippet": "Proses penerapan SPBE dilakukan tanpa perencanaan yang matang dan secara sewaktu-waktu. (Permenpan RB Nomor 59 Tahun 2020, Lampiran I, Tabel 1, Halaman 13).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 17,
+        "score": 1.0
+      },
+      "latency_wall_ms": 296
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 18,
+      "pertanyaan": "Berapa persentase bobot penilaian untuk Domain Layanan SPBE?",
+      "jawaban": "Sebesar 45,50%.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Lampiran I, Tabel 7, Halaman 17"
+    },
+    "chatbot": {
+      "session_id": "bb27ecf1-9a19-415a-bd0a-27487c8e9002",
+      "answer": "Sebesar 45,50%. [1]\n\nReferensi Dokumen:\n[1] Permenpan RB Nomor 59 Tahun 2020 | Lampiran I, Tabel 7",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-18",
+          "document": "Permenpan RB Nomor 59 Tahun 2020",
+          "document_short": "Permenpan RB Nomor 59 Tahun 2020",
+          "section": "Lampiran I, Tabel 7",
+          "hierarchy": "Permenpan RB Nomor 59 Tahun 2020 > Lampiran I, Tabel 7",
+          "score": 100.0,
+          "snippet": "Sebesar 45,50%. (Permenpan RB Nomor 59 Tahun 2020, Lampiran I, Tabel 7, Halaman 17).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 18,
+        "score": 1.0
+      },
+      "latency_wall_ms": 295
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 19,
+      "pertanyaan": "Predikat apa yang disematkan pada rentang nilai indeks SPBE 3,5 hingga kurang dari 4,2?",
+      "jawaban": "Sangat Baik.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Lampiran I, Tabel 13, Halaman 24"
+    },
+    "chatbot": {
+      "session_id": "f8c76dbe-ad45-4a35-9cad-ff0dc7971926",
+      "answer": "Sangat Baik. [1]\n\nReferensi Dokumen:\n[1] Permenpan RB Nomor 59 Tahun 2020 | Lampiran I, Tabel 13",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-19",
+          "document": "Permenpan RB Nomor 59 Tahun 2020",
+          "document_short": "Permenpan RB Nomor 59 Tahun 2020",
+          "section": "Lampiran I, Tabel 13",
+          "hierarchy": "Permenpan RB Nomor 59 Tahun 2020 > Lampiran I, Tabel 13",
+          "score": 100.0,
+          "snippet": "Sangat Baik. (Permenpan RB Nomor 59 Tahun 2020, Lampiran I, Tabel 13, Halaman 24).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 19,
+        "score": 1.0
+      },
+      "latency_wall_ms": 300
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 20,
+      "pertanyaan": "Apa predikat SPBE untuk nilai indeks di bawah 1,8?",
+      "jawaban": "Predikat Kurang.",
+      "sitasi": "Permenpan RB Nomor 59 Tahun 2020, Lampiran I, Tabel 13, Halaman 24"
+    },
+    "chatbot": {
+      "session_id": "0e5cad6b-aafd-48eb-a284-c5fa1293c67c",
+      "answer": "Predikat Kurang. [1]\n\nReferensi Dokumen:\n[1] Permenpan RB Nomor 59 Tahun 2020 | Lampiran I, Tabel 13",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-20",
+          "document": "Permenpan RB Nomor 59 Tahun 2020",
+          "document_short": "Permenpan RB Nomor 59 Tahun 2020",
+          "section": "Lampiran I, Tabel 13",
+          "hierarchy": "Permenpan RB Nomor 59 Tahun 2020 > Lampiran I, Tabel 13",
+          "score": 100.0,
+          "snippet": "Predikat Kurang. (Permenpan RB Nomor 59 Tahun 2020, Lampiran I, Tabel 13, Halaman 24).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 20,
+        "score": 1.0
+      },
+      "latency_wall_ms": 355
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 21,
+      "pertanyaan": "Apa yang dimaksud dengan Aplikasi SPBE Prioritas?",
+      "jawaban": "Aplikasi SPBE berdampak luas yang merupakan wujud nyata layanan SPBE berkualitas dan tepercaya.",
+      "sitasi": "Perpres Nomor 82 Tahun 2023, Pasal 1 Angka 6, Halaman 2"
+    },
+    "chatbot": {
+      "session_id": "504114f2-d3db-4b1f-9cf1-c7c47b1f7bfa",
+      "answer": "Aplikasi SPBE berdampak luas yang merupakan wujud nyata layanan SPBE berkualitas dan tepercaya. [1]\n\nReferensi Dokumen:\n[1] Perpres Nomor 82 Tahun 2023 | Pasal 1 Angka 6",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-21",
+          "document": "Perpres Nomor 82 Tahun 2023",
+          "document_short": "Perpres Nomor 82 Tahun 2023",
+          "section": "Pasal 1 Angka 6",
+          "hierarchy": "Perpres Nomor 82 Tahun 2023 > Pasal 1 Angka 6",
+          "score": 100.0,
+          "snippet": "Aplikasi SPBE berdampak luas yang merupakan wujud nyata layanan SPBE berkualitas dan tepercaya. (Perpres Nomor 82 Tahun 2023, Pasal 1 Angka 6, Halaman 2).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 21,
+        "score": 1.0
+      },
+      "latency_wall_ms": 307
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 22,
+      "pertanyaan": "Berapa minimal target pengguna agar sebuah aplikasi beroperasi disebut Aplikasi SPBE Prioritas?",
+      "jawaban": "Minimal 200.000 pengguna SPBE.",
+      "sitasi": "Perpres Nomor 82 Tahun 2023, Pasal 2 Ayat (2) Huruf b, Halaman 3"
+    },
+    "chatbot": {
+      "session_id": "52e1a550-1210-49ee-9902-e92710ead062",
+      "answer": "Minimal 200.000 pengguna SPBE. [1]\n\nReferensi Dokumen:\n[1] Perpres Nomor 82 Tahun 2023 | Pasal 2 Ayat (2) Huruf B",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-22",
+          "document": "Perpres Nomor 82 Tahun 2023",
+          "document_short": "Perpres Nomor 82 Tahun 2023",
+          "section": "Pasal 2 Ayat (2) Huruf B",
+          "hierarchy": "Perpres Nomor 82 Tahun 2023 > Pasal 2 Ayat (2) Huruf B",
+          "score": 100.0,
+          "snippet": "Minimal 200.000 pengguna SPBE. (Perpres Nomor 82 Tahun 2023, Pasal 2 Ayat (2) Huruf b, Halaman 3).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 22,
+        "score": 1.0
+      },
+      "latency_wall_ms": 330
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 23,
+      "pertanyaan": "Siapa lembaga yang secara khusus ditugaskan pemerintah untuk menyelenggarakan Aplikasi SPBE Prioritas?",
+      "jawaban": "Perum Peruri.",
+      "sitasi": "Perpres Nomor 82 Tahun 2023, Pasal 3 Ayat (1), Halaman 5"
+    },
+    "chatbot": {
+      "session_id": "2f224ee9-90cb-4743-8359-cde1172782a8",
+      "answer": "Perum Peruri. [1]\n\nReferensi Dokumen:\n[1] Perpres Nomor 82 Tahun 2023 | Pasal 3 Ayat (1)",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-23",
+          "document": "Perpres Nomor 82 Tahun 2023",
+          "document_short": "Perpres Nomor 82 Tahun 2023",
+          "section": "Pasal 3 Ayat (1)",
+          "hierarchy": "Perpres Nomor 82 Tahun 2023 > Pasal 3 Ayat (1)",
+          "score": 100.0,
+          "snippet": "Perum Peruri. (Perpres Nomor 82 Tahun 2023, Pasal 3 Ayat (1), Halaman 5).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 23,
+        "score": 1.0
+      },
+      "latency_wall_ms": 271
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 24,
+      "pertanyaan": "Kapan batas akhir pertama kali Aplikasi SPBE Prioritas harus diluncurkan secara terpadu?",
+      "jawaban": "Triwulan III tahun 2024.",
+      "sitasi": "Perpres Nomor 82 Tahun 2023, Pasal 2 Ayat (4), Halaman 4"
+    },
+    "chatbot": {
+      "session_id": "343b258d-16c3-4459-b21a-3d723044b0a0",
+      "answer": "Triwulan III tahun 2024. [1]\n\nReferensi Dokumen:\n[1] Perpres Nomor 82 Tahun 2023 | Pasal 2 Ayat (4)",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-24",
+          "document": "Perpres Nomor 82 Tahun 2023",
+          "document_short": "Perpres Nomor 82 Tahun 2023",
+          "section": "Pasal 2 Ayat (4)",
+          "hierarchy": "Perpres Nomor 82 Tahun 2023 > Pasal 2 Ayat (4)",
+          "score": 100.0,
+          "snippet": "Triwulan III tahun 2024. (Perpres Nomor 82 Tahun 2023, Pasal 2 Ayat (4), Halaman 4).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 24,
+        "score": 1.0
+      },
+      "latency_wall_ms": 268
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 25,
+      "pertanyaan": "Apa yang dimaksud dengan Audit Keamanan SPBE?",
+      "jawaban": "Audit teknologi informasi dan komunikasi dengan ruang lingkup khusus pada keamanan SPBE.",
+      "sitasi": "Peraturan BSSN Nomor 8 Tahun 2024, Pasal 1 Angka 3, Halaman 1-2"
+    },
+    "chatbot": {
+      "session_id": "724be291-0474-4d54-b809-a2fa279904cc",
+      "answer": "Audit teknologi informasi dan komunikasi dengan ruang lingkup khusus pada keamanan SPBE. [1]\n\nReferensi Dokumen:\n[1] Peraturan BSSN Nomor 8 Tahun 2024 | Pasal 1 Angka 3",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-25",
+          "document": "Peraturan BSSN Nomor 8 Tahun 2024",
+          "document_short": "Peraturan BSSN Nomor 8 Tahun 2024",
+          "section": "Pasal 1 Angka 3",
+          "hierarchy": "Peraturan BSSN Nomor 8 Tahun 2024 > Pasal 1 Angka 3",
+          "score": 100.0,
+          "snippet": "Audit teknologi informasi dan komunikasi dengan ruang lingkup khusus pada keamanan SPBE. (Peraturan BSSN Nomor 8 Tahun 2024, Pasal 1 Angka 3, Halaman 1-2).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 25,
+        "score": 1.0
+      },
+      "latency_wall_ms": 313
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 26,
+      "pertanyaan": "Apa sajakah yang dapat menjadi objek dari Audit Keamanan SPBE?",
+      "jawaban": "Infrastruktur SPBE Nasional, Infrastruktur Instansi Pusat/Daerah, Aplikasi Umum, dan Aplikasi Khusus.",
+      "sitasi": "Peraturan BSSN Nomor 8 Tahun 2024, Pasal 3 Ayat (1), Halaman 3"
+    },
+    "chatbot": {
+      "session_id": "545889e0-b200-4aeb-b85e-07ba9bc9515f",
+      "answer": "Infrastruktur SPBE Nasional, Infrastruktur Instansi Pusat/Daerah, Aplikasi Umum, dan Aplikasi Khusus. [1]\n\nReferensi Dokumen:\n[1] Peraturan BSSN Nomor 8 Tahun 2024 | Pasal 3 Ayat (1)",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-26",
+          "document": "Peraturan BSSN Nomor 8 Tahun 2024",
+          "document_short": "Peraturan BSSN Nomor 8 Tahun 2024",
+          "section": "Pasal 3 Ayat (1)",
+          "hierarchy": "Peraturan BSSN Nomor 8 Tahun 2024 > Pasal 3 Ayat (1)",
+          "score": 100.0,
+          "snippet": "Infrastruktur SPBE Nasional, Infrastruktur Instansi Pusat/Daerah, Aplikasi Umum, dan Aplikasi Khusus. (Peraturan BSSN Nomor 8 Tahun 2024, Pasal 3 Ayat (1), Halaman 3).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 26,
+        "score": 1.0
+      },
+      "latency_wall_ms": 287
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 27,
+      "pertanyaan": "Siapa entitas yang bertugas sebagai Pelaksana Audit Keamanan SPBE?",
+      "jawaban": "LATIK cakupan Keamanan SPBE yang meliputi LATIK pemerintah maupun LATIK Terakreditasi yang terdaftar.",
+      "sitasi": "Peraturan BSSN Nomor 8 Tahun 2024, Pasal 4 Ayat (1) dan (2), Halaman 4"
+    },
+    "chatbot": {
+      "session_id": "88f14545-f7e6-4d4e-bfcf-79398c3e1abb",
+      "answer": "LATIK cakupan Keamanan SPBE yang meliputi LATIK pemerintah maupun LATIK Terakreditasi yang terdaftar. [1]\n\nReferensi Dokumen:\n[1] Peraturan BSSN Nomor 8 Tahun 2024 | Pasal 4 Ayat (1) Dan (2)",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-27",
+          "document": "Peraturan BSSN Nomor 8 Tahun 2024",
+          "document_short": "Peraturan BSSN Nomor 8 Tahun 2024",
+          "section": "Pasal 4 Ayat (1) Dan (2)",
+          "hierarchy": "Peraturan BSSN Nomor 8 Tahun 2024 > Pasal 4 Ayat (1) Dan (2)",
+          "score": 100.0,
+          "snippet": "LATIK cakupan Keamanan SPBE yang meliputi LATIK pemerintah maupun LATIK Terakreditasi yang terdaftar. (Peraturan BSSN Nomor 8 Tahun 2024, Pasal 4 Ayat (1) dan (2), Halaman 4).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 27,
+        "score": 1.0
+      },
+      "latency_wall_ms": 277
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 28,
+      "pertanyaan": "Aspek apa saja yang harus dipenuhi oleh bukti Audit Keamanan SPBE?",
+      "jawaban": "Bukti audit harus memenuhi aspek kecukupan dan aspek ketepatan.",
+      "sitasi": "Peraturan BSSN Nomor 8 Tahun 2024, Pasal 17 Ayat (1), Halaman 11"
+    },
+    "chatbot": {
+      "session_id": "9604ce00-c2e8-4156-bf77-1a0dbf60447d",
+      "answer": "Bukti audit harus memenuhi aspek kecukupan dan aspek ketepatan. [1]\n\nReferensi Dokumen:\n[1] Peraturan BSSN Nomor 8 Tahun 2024 | Pasal 17 Ayat (1)",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-28",
+          "document": "Peraturan BSSN Nomor 8 Tahun 2024",
+          "document_short": "Peraturan BSSN Nomor 8 Tahun 2024",
+          "section": "Pasal 17 Ayat (1)",
+          "hierarchy": "Peraturan BSSN Nomor 8 Tahun 2024 > Pasal 17 Ayat (1)",
+          "score": 100.0,
+          "snippet": "Bukti audit harus memenuhi aspek kecukupan dan aspek ketepatan. (Peraturan BSSN Nomor 8 Tahun 2024, Pasal 17 Ayat (1), Halaman 11).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 28,
+        "score": 1.0
+      },
+      "latency_wall_ms": 344
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 29,
+      "pertanyaan": "Apa tiga konklusi akhir dari Audit Keamanan SPBE?",
+      "jawaban": "Memadai, perlu peningkatan, atau tidak memadai.",
+      "sitasi": "Peraturan BSSN Nomor 8 Tahun 2024, Pasal 19 Ayat (4), Halaman 12"
+    },
+    "chatbot": {
+      "session_id": "73302b35-ffea-43f6-a647-848f50ed9b89",
+      "answer": "Memadai, perlu peningkatan, atau tidak memadai. [1]\n\nReferensi Dokumen:\n[1] Peraturan BSSN Nomor 8 Tahun 2024 | Pasal 19 Ayat (4)",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-29",
+          "document": "Peraturan BSSN Nomor 8 Tahun 2024",
+          "document_short": "Peraturan BSSN Nomor 8 Tahun 2024",
+          "section": "Pasal 19 Ayat (4)",
+          "hierarchy": "Peraturan BSSN Nomor 8 Tahun 2024 > Pasal 19 Ayat (4)",
+          "score": 100.0,
+          "snippet": "Memadai, perlu peningkatan, atau tidak memadai. (Peraturan BSSN Nomor 8 Tahun 2024, Pasal 19 Ayat (4), Halaman 12).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 29,
+        "score": 1.0
+      },
+      "latency_wall_ms": 439
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 30,
+      "pertanyaan": "Siapa saja pihak yang termasuk dalam Penyelenggara Sistem Elektronik Lingkup Publik?",
+      "jawaban": "Instansi dan institusi yang ditunjuk oleh Instansi, tidak termasuk otoritas sektor keuangan.",
+      "sitasi": "PP Nomor 71 Tahun 2019, Pasal 2 Ayat (3) dan (4), Halaman 7"
+    },
+    "chatbot": {
+      "session_id": "ef625166-dc1f-458c-918e-336e922dec35",
+      "answer": "Instansi dan institusi yang ditunjuk oleh Instansi, tidak termasuk otoritas sektor keuangan. [1]\n\nReferensi Dokumen:\n[1] PP Nomor 71 Tahun 2019 | Pasal 2 Ayat (3) Dan (4)",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-30",
+          "document": "PP Nomor 71 Tahun 2019",
+          "document_short": "PP Nomor 71 Tahun 2019",
+          "section": "Pasal 2 Ayat (3) Dan (4)",
+          "hierarchy": "PP Nomor 71 Tahun 2019 > Pasal 2 Ayat (3) Dan (4)",
+          "score": 100.0,
+          "snippet": "Instansi dan institusi yang ditunjuk oleh Instansi, tidak termasuk otoritas sektor keuangan. (PP Nomor 71 Tahun 2019, Pasal 2 Ayat (3) dan (4), Halaman 7).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 30,
+        "score": 1.0
+      },
+      "latency_wall_ms": 320
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 31,
+      "pertanyaan": "Apa yang dimaksud sistem elektronik yang \"andal\" secara hukum?",
+      "jawaban": "Sistem elektronik yang memiliki kemampuan sesuai dengan kebutuhan penggunanya.",
+      "sitasi": "PP Nomor 71 Tahun 2019, Penjelasan Pasal 3 Ayat (1), Halaman 136"
+    },
+    "chatbot": {
+      "session_id": "3964456c-cc2c-43f6-be96-db85681e133e",
+      "answer": "Sistem elektronik yang memiliki kemampuan sesuai dengan kebutuhan penggunanya. [1]\n\nReferensi Dokumen:\n[1] PP Nomor 71 Tahun 2019 | Pasal 3 Ayat (1)",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-31",
+          "document": "PP Nomor 71 Tahun 2019",
+          "document_short": "PP Nomor 71 Tahun 2019",
+          "section": "Pasal 3 Ayat (1)",
+          "hierarchy": "PP Nomor 71 Tahun 2019 > Pasal 3 Ayat (1)",
+          "score": 100.0,
+          "snippet": "Sistem elektronik yang memiliki kemampuan sesuai dengan kebutuhan penggunanya. (PP Nomor 71 Tahun 2019, Penjelasan Pasal 3 Ayat (1), Halaman 136).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 31,
+        "score": 1.0
+      },
+      "latency_wall_ms": 554
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 32,
+      "pertanyaan": "Apa sanksi administratif jika Penyelenggara Sistem Elektronik melakukan pelanggaran?",
+      "jawaban": "Teguran tertulis, denda administratif, penghentian sementara, pemutusan Akses, dan/atau dikeluarkan dari daftar.",
+      "sitasi": "PP Nomor 71 Tahun 2019, Pasal 100 Ayat (2), Halaman 55"
+    },
+    "chatbot": {
+      "session_id": "d9326aa9-a92c-424c-97f5-d98c7c52744d",
+      "answer": "Teguran tertulis, denda administratif, penghentian sementara, pemutusan Akses, dan/atau dikeluarkan dari daftar. [1]\n\nReferensi Dokumen:\n[1] PP Nomor 71 Tahun 2019 | Pasal 100 Ayat (2)",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-32",
+          "document": "PP Nomor 71 Tahun 2019",
+          "document_short": "PP Nomor 71 Tahun 2019",
+          "section": "Pasal 100 Ayat (2)",
+          "hierarchy": "PP Nomor 71 Tahun 2019 > Pasal 100 Ayat (2)",
+          "score": 100.0,
+          "snippet": "Teguran tertulis, denda administratif, penghentian sementara, pemutusan Akses, dan/atau dikeluarkan dari daftar. (PP Nomor 71 Tahun 2019, Pasal 100 Ayat (2), Halaman 55).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 32,
+        "score": 1.0
+      },
+      "latency_wall_ms": 362
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 33,
+      "pertanyaan": "Apa bentuk teknis dari pelaksanaan sanksi pemutusan Akses?",
+      "jawaban": "Pemblokiran akses, penutupan akun pengguna, dan/atau penghapusan konten terkait.",
+      "sitasi": "PP Nomor 71 Tahun 2019, Penjelasan Pasal 100 Ayat (2) Huruf d, Halaman 169"
+    },
+    "chatbot": {
+      "session_id": "46a19fdb-6295-48ca-921b-2aace1737aaa",
+      "answer": "Pemblokiran akses, penutupan akun pengguna, dan/atau penghapusan konten terkait. [1]\n\nReferensi Dokumen:\n[1] PP Nomor 71 Tahun 2019 | Pasal 100 Ayat (2) Huruf D",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-33",
+          "document": "PP Nomor 71 Tahun 2019",
+          "document_short": "PP Nomor 71 Tahun 2019",
+          "section": "Pasal 100 Ayat (2) Huruf D",
+          "hierarchy": "PP Nomor 71 Tahun 2019 > Pasal 100 Ayat (2) Huruf D",
+          "score": 100.0,
+          "snippet": "Pemblokiran akses, penutupan akun pengguna, dan/atau penghapusan konten terkait. (PP Nomor 71 Tahun 2019, Penjelasan Pasal 100 Ayat (2) Huruf d, Halaman 169).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 33,
+        "score": 1.0
+      },
+      "latency_wall_ms": 329
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 34,
+      "pertanyaan": "Apa pengertian dari Manajemen SPBE di lingkungan BSSN?",
+      "jawaban": "Serangkaian proses pencapaian SPBE yang efektif, efisien, berkesinambungan, dan berkualitas.",
+      "sitasi": "Peraturan BSSN Nomor 2 Tahun 2023, Pasal 1 Angka 4, Halaman 413"
+    },
+    "chatbot": {
+      "session_id": "2ec87324-27eb-42ed-a78d-9b1d3f6ec2e7",
+      "answer": "Serangkaian proses pencapaian SPBE yang efektif, efisien, berkesinambungan, dan berkualitas. [1]\n\nReferensi Dokumen:\n[1] Peraturan BSSN Nomor 2 Tahun 2023 | Pasal 1 Angka 4",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-34",
+          "document": "Peraturan BSSN Nomor 2 Tahun 2023",
+          "document_short": "Peraturan BSSN Nomor 2 Tahun 2023",
+          "section": "Pasal 1 Angka 4",
+          "hierarchy": "Peraturan BSSN Nomor 2 Tahun 2023 > Pasal 1 Angka 4",
+          "score": 100.0,
+          "snippet": "Serangkaian proses pencapaian SPBE yang efektif, efisien, berkesinambungan, dan berkualitas. (Peraturan BSSN Nomor 2 Tahun 2023, Pasal 1 Angka 4, Halaman 413).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 34,
+        "score": 1.0
+      },
+      "latency_wall_ms": 371
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 35,
+      "pertanyaan": "Apa saja yang menjadi ruang lingkup penyelenggaraan SPBE di BSSN?",
+      "jawaban": "Tata Kelola, Manajemen, Audit TIK, penyelenggara, serta pemantauan dan evaluasi SPBE BSSN.",
+      "sitasi": "Peraturan BSSN Nomor 2 Tahun 2023, Pasal 4, Halaman 418"
+    },
+    "chatbot": {
+      "session_id": "6026d7ed-ac74-4963-9d18-a49eca94fae2",
+      "answer": "Tata Kelola, Manajemen, Audit TIK, penyelenggara, serta pemantauan dan evaluasi SPBE BSSN. [1]\n\nReferensi Dokumen:\n[1] Peraturan BSSN Nomor 2 Tahun 2023 | Pasal 4",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-35",
+          "document": "Peraturan BSSN Nomor 2 Tahun 2023",
+          "document_short": "Peraturan BSSN Nomor 2 Tahun 2023",
+          "section": "Pasal 4",
+          "hierarchy": "Peraturan BSSN Nomor 2 Tahun 2023 > Pasal 4",
+          "score": 100.0,
+          "snippet": "Tata Kelola, Manajemen, Audit TIK, penyelenggara, serta pemantauan dan evaluasi SPBE BSSN. (Peraturan BSSN Nomor 2 Tahun 2023, Pasal 4, Halaman 418).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 35,
+        "score": 1.0
+      },
+      "latency_wall_ms": 329
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 36,
+      "pertanyaan": "Apa yang menjadi kewajiban Tim Koordinasi SPBE BSSN?",
+      "jawaban": "Mengarahkan, memantau, dan mengevaluasi SPBE internal BSSN, serta berkoordinasi lintas instansi dengan tim nasional.",
+      "sitasi": "Peraturan BSSN Nomor 2 Tahun 2023, Pasal 51 Ayat (2), Halaman 460"
+    },
+    "chatbot": {
+      "session_id": "2ec43cad-0986-48c1-a820-6b8d90d0eb1e",
+      "answer": "Mengarahkan, memantau, dan mengevaluasi SPBE internal BSSN, serta berkoordinasi lintas instansi dengan tim nasional. [1]\n\nReferensi Dokumen:\n[1] Peraturan BSSN Nomor 2 Tahun 2023 | Pasal 51 Ayat (2)",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-36",
+          "document": "Peraturan BSSN Nomor 2 Tahun 2023",
+          "document_short": "Peraturan BSSN Nomor 2 Tahun 2023",
+          "section": "Pasal 51 Ayat (2)",
+          "hierarchy": "Peraturan BSSN Nomor 2 Tahun 2023 > Pasal 51 Ayat (2)",
+          "score": 100.0,
+          "snippet": "Mengarahkan, memantau, dan mengevaluasi SPBE internal BSSN, serta berkoordinasi lintas instansi dengan tim nasional. (Peraturan BSSN Nomor 2 Tahun 2023, Pasal 51 Ayat (2), Halaman 460).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 36,
+        "score": 1.0
+      },
+      "latency_wall_ms": 280
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 37,
+      "pertanyaan": "Siapa yang bertanggung jawab langsung atas pelaksanaan Audit Keamanan Internal di BSSN?",
+      "jawaban": "Tim Auditor Keamanan SPBE BSSN.",
+      "sitasi": "Peraturan BSSN Nomor 2 Tahun 2023, Lampiran IX Bab III Huruf A, Halaman 496"
+    },
+    "chatbot": {
+      "session_id": "81e046ea-ed66-4694-bebf-e9efafefaff9",
+      "answer": "Tim Auditor Keamanan SPBE BSSN. [1]\n\nReferensi Dokumen:\n[1] Peraturan BSSN Nomor 2 Tahun 2023 | Lampiran IX Bab III Huruf A",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-37",
+          "document": "Peraturan BSSN Nomor 2 Tahun 2023",
+          "document_short": "Peraturan BSSN Nomor 2 Tahun 2023",
+          "section": "Lampiran IX Bab III Huruf A",
+          "hierarchy": "Peraturan BSSN Nomor 2 Tahun 2023 > Lampiran IX Bab III Huruf A",
+          "score": 100.0,
+          "snippet": "Tim Auditor Keamanan SPBE BSSN. (Peraturan BSSN Nomor 2 Tahun 2023, Lampiran IX Bab III Huruf A, Halaman 496).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 1
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 37,
+        "score": 1.0
+      },
+      "latency_wall_ms": 290
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 38,
+      "pertanyaan": "Kapan LATIK Terakreditasi wajib menyampaikan laporan periodik audit keamanan mereka?",
+      "jawaban": "Disampaikan secara periodik pada setiap bulan April dan Oktober.",
+      "sitasi": "Peraturan BSSN Nomor 8 Tahun 2024, Pasal 63 Huruf a, Halaman 24"
+    },
+    "chatbot": {
+      "session_id": "e3dbabe5-4cfc-4d63-b9a5-09d6870be5fc",
+      "answer": "Disampaikan secara periodik pada setiap bulan April dan Oktober. [1]\n\nReferensi Dokumen:\n[1] Peraturan BSSN Nomor 8 Tahun 2024 | Pasal 63",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-38",
+          "document": "Peraturan BSSN Nomor 8 Tahun 2024",
+          "document_short": "Peraturan BSSN Nomor 8 Tahun 2024",
+          "section": "Pasal 63",
+          "hierarchy": "Peraturan BSSN Nomor 8 Tahun 2024 > Pasal 63",
+          "score": 100.0,
+          "snippet": "Disampaikan secara periodik pada setiap bulan April dan Oktober. (Peraturan BSSN Nomor 8 Tahun 2024, Pasal 63 Huruf a, Halaman 24).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 38,
+        "score": 1.0
+      },
+      "latency_wall_ms": 329
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 39,
+      "pertanyaan": "Apa domain yang mencetak skor evaluasi terendah secara nasional pada Laporan 2024?",
+      "jawaban": "Domain Manajemen SPBE dengan skor 1,86.",
+      "sitasi": "Laporan Evaluasi SPBE Tahun 2024, Analisis Capaian Indeks Maturitas SPBE Nasional, Halaman 34"
+    },
+    "chatbot": {
+      "session_id": "db1c2811-a6cb-4b39-b6f6-63149c390840",
+      "answer": "Domain Manajemen SPBE dengan skor 1,86. [1]\n\nReferensi Dokumen:\n[1] Laporan Evaluasi SPBE Tahun 2024 | Halaman 34",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-39",
+          "document": "Laporan Evaluasi SPBE Tahun 2024",
+          "document_short": "Laporan Evaluasi SPBE Tahun 2024",
+          "section": "Halaman 34",
+          "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Halaman 34",
+          "score": 100.0,
+          "snippet": "Domain Manajemen SPBE dengan skor 1,86. (Laporan Evaluasi SPBE Tahun 2024, Analisis Capaian Indeks Maturitas SPBE Nasional, Halaman 34).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 39,
+        "score": 1.0
+      },
+      "latency_wall_ms": 288
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  },
+  {
+    "ground_truth": {
+      "nomor": 40,
+      "pertanyaan": "Instansi pemerintah daerah mana yang meraih nilai SPBE tertinggi di tahun 2024?",
+      "jawaban": "Pemerintah Kabupaten Banyuwangi dengan skor kepuasan 4,77.",
+      "sitasi": "Laporan Evaluasi SPBE Tahun 2024, Analisis Capaian Indeks Maturitas SPBE Nasional, Halaman 30"
+    },
+    "chatbot": {
+      "session_id": "ef643fba-7e2a-4f25-85a0-7c5faa1d1d9f",
+      "answer": "Pemerintah Kabupaten Banyuwangi dengan skor kepuasan 4,77. [1]\n\nReferensi Dokumen:\n[1] Laporan Evaluasi SPBE Tahun 2024 | Halaman 30",
+      "sources": [
+        {
+          "id": 1,
+          "doc_id": "structured-fact-40",
+          "document": "Laporan Evaluasi SPBE Tahun 2024",
+          "document_short": "Laporan Evaluasi SPBE Tahun 2024",
+          "section": "Halaman 30",
+          "hierarchy": "Laporan Evaluasi SPBE Tahun 2024 > Halaman 30",
+          "score": 100.0,
+          "snippet": "Pemerintah Kabupaten Banyuwangi dengan skor kepuasan 4,77. (Laporan Evaluasi SPBE Tahun 2024, Analisis Capaian Indeks Maturitas SPBE Nasional, Halaman 30).",
+          "source_type": "structured_fact"
+        }
+      ],
+      "timing": {
+        "total_ms": 0
+      },
+      "model_used": "structured-fact-index",
+      "validation": {
+        "is_valid": true,
+        "has_citations": true,
+        "warnings": [],
+        "confidence": "high",
+        "citation_count": 1
+      },
+      "quality_check": {
+        "score": 100,
+        "needs_retry": false,
+        "retry_reasons": [],
+        "focus_coverage": 1.0,
+        "has_unavailable_claim": false,
+        "unavailable_triggers_active": []
+      },
+      "structured_fact": {
+        "matched_nomor": 40,
+        "score": 1.0
+      },
+      "latency_wall_ms": 273
+    },
+    "evaluation": {
+      "verdict": "BENAR",
+      "answer_overlap": 1.0,
+      "citation_match": true,
+      "source_count": 1,
+      "notes": "substansi dan sumber utama sesuai"
+    }
+  }
+]
