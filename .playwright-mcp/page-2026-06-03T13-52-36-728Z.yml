@@ -1,0 +1,393 @@
+- generic [ref=e33]:
+  - complementary [ref=e34]:
+    - generic [ref=e35]:
+      - generic [ref=e36]: Asisten Hukum SPBE
+      - button "Chat Baru" [ref=e37] [cursor=pointer]:
+        - img [ref=e38]
+        - generic [ref=e39]: Chat Baru
+    - generic [ref=e40]:
+      - generic [ref=e41]: HARI INI
+      - generic [ref=e42] [cursor=pointer]:
+        - generic [ref=e44]: Bagaimana hubungan audit SPBE dengan evaluasi SPBE
+        - button "Ubah nama" [ref=e45]:
+          - img [ref=e46]
+        - button "Hapus sesi" [ref=e49]:
+          - img [ref=e50]
+      - generic [ref=e53] [cursor=pointer]:
+        - generic [ref=e55]: Apa saja dokumen yang perlu disiapkan untuk tata
+        - button "Ubah nama" [ref=e56]:
+          - img [ref=e57]
+        - button "Hapus sesi" [ref=e60]:
+          - img [ref=e61]
+      - generic [ref=e64]: 7 HARI LALU
+      - generic [ref=e65] [cursor=pointer]:
+        - generic [ref=e67]: Apa saja domain dalam SPBE
+        - button "Ubah nama" [ref=e68]:
+          - img [ref=e69]
+        - button "Hapus sesi" [ref=e72]:
+          - img [ref=e73]
+      - generic [ref=e76] [cursor=pointer]:
+        - generic [ref=e78]: Jelaskan tentang Perpres 95 Tahun 2018 tentang SPBE
+        - button "Ubah nama" [ref=e79]:
+          - img [ref=e80]
+        - button "Hapus sesi" [ref=e83]:
+          - img [ref=e84]
+      - generic [ref=e87] [cursor=pointer]:
+        - generic [ref=e89]: Apa itu SPBE
+        - button "Ubah nama" [ref=e90]:
+          - img [ref=e91]
+        - button "Hapus sesi" [ref=e94]:
+          - img [ref=e95]
+      - generic [ref=e98] [cursor=pointer]:
+        - generic [ref=e100]: Tolong jelaskan tentang SPBE secara singkat
+        - button "Ubah nama" [ref=e101]:
+          - img [ref=e102]
+        - button "Hapus sesi" [ref=e105]:
+          - img [ref=e106]
+      - generic [ref=e109] [cursor=pointer]:
+        - generic [ref=e111]: "Evaluasi Ground Truth #40"
+        - button "Ubah nama" [ref=e112]:
+          - img [ref=e113]
+        - button "Hapus sesi" [ref=e116]:
+          - img [ref=e117]
+      - generic [ref=e120] [cursor=pointer]:
+        - generic [ref=e122]: "Evaluasi Ground Truth #40"
+        - button "Ubah nama" [ref=e123]:
+          - img [ref=e124]
+        - button "Hapus sesi" [ref=e127]:
+          - img [ref=e128]
+      - generic [ref=e131] [cursor=pointer]:
+        - generic [ref=e133]: "Evaluasi Ground Truth #40"
+        - button "Ubah nama" [ref=e134]:
+          - img [ref=e135]
+        - button "Hapus sesi" [ref=e138]:
+          - img [ref=e139]
+      - generic [ref=e142] [cursor=pointer]:
+        - generic [ref=e144]: "Evaluasi Ground Truth #40"
+        - button "Ubah nama" [ref=e145]:
+          - img [ref=e146]
+        - button "Hapus sesi" [ref=e149]:
+          - img [ref=e150]
+      - generic [ref=e153] [cursor=pointer]:
+        - generic [ref=e155]: "Evaluasi Ground Truth #37"
+        - button "Ubah nama" [ref=e156]:
+          - img [ref=e157]
+        - button "Hapus sesi" [ref=e160]:
+          - img [ref=e161]
+      - generic [ref=e164] [cursor=pointer]:
+        - generic [ref=e166]: "Evaluasi Ground Truth #40"
+        - button "Ubah nama" [ref=e167]:
+          - img [ref=e168]
+        - button "Hapus sesi" [ref=e171]:
+          - img [ref=e172]
+      - generic [ref=e175] [cursor=pointer]:
+        - generic [ref=e177]: "Evaluasi Ground Truth #39"
+        - button "Ubah nama" [ref=e178]:
+          - img [ref=e179]
+        - button "Hapus sesi" [ref=e182]:
+          - img [ref=e183]
+      - generic [ref=e186] [cursor=pointer]:
+        - generic [ref=e188]: "Evaluasi Ground Truth #38"
+        - button "Ubah nama" [ref=e189]:
+          - img [ref=e190]
+        - button "Hapus sesi" [ref=e193]:
+          - img [ref=e194]
+      - generic [ref=e197] [cursor=pointer]:
+        - generic [ref=e199]: "Evaluasi Ground Truth #36"
+        - button "Ubah nama" [ref=e200]:
+          - img [ref=e201]
+        - button "Hapus sesi" [ref=e204]:
+          - img [ref=e205]
+      - generic [ref=e208] [cursor=pointer]:
+        - generic [ref=e210]: "Evaluasi Ground Truth #35"
+        - button "Ubah nama" [ref=e211]:
+          - img [ref=e212]
+        - button "Hapus sesi" [ref=e215]:
+          - img [ref=e216]
+      - generic [ref=e219] [cursor=pointer]:
+        - generic [ref=e221]: "Evaluasi Ground Truth #34"
+        - button "Ubah nama" [ref=e222]:
+          - img [ref=e223]
+        - button "Hapus sesi" [ref=e226]:
+          - img [ref=e227]
+      - generic [ref=e230] [cursor=pointer]:
+        - generic [ref=e232]: "Evaluasi Ground Truth #33"
+        - button "Ubah nama" [ref=e233]:
+          - img [ref=e234]
+        - button "Hapus sesi" [ref=e237]:
+          - img [ref=e238]
+      - generic [ref=e241] [cursor=pointer]:
+        - generic [ref=e243]: "Evaluasi Ground Truth #32"
+        - button "Ubah nama" [ref=e244]:
+          - img [ref=e245]
+        - button "Hapus sesi" [ref=e248]:
+          - img [ref=e249]
+      - generic [ref=e252] [cursor=pointer]:
+        - generic [ref=e254]: "Evaluasi Ground Truth #31"
+        - button "Ubah nama" [ref=e255]:
+          - img [ref=e256]
+        - button "Hapus sesi" [ref=e259]:
+          - img [ref=e260]
+      - generic [ref=e263] [cursor=pointer]:
+        - generic [ref=e265]: "Evaluasi Ground Truth #40"
+        - button "Ubah nama" [ref=e266]:
+          - img [ref=e267]
+        - button "Hapus sesi" [ref=e270]:
+          - img [ref=e271]
+      - generic [ref=e274] [cursor=pointer]:
+        - generic [ref=e276]: "Evaluasi Ground Truth #39"
+        - button "Ubah nama" [ref=e277]:
+          - img [ref=e278]
+        - button "Hapus sesi" [ref=e281]:
+          - img [ref=e282]
+      - generic [ref=e285] [cursor=pointer]:
+        - generic [ref=e287]: "Evaluasi Ground Truth #38"
+        - button "Ubah nama" [ref=e288]:
+          - img [ref=e289]
+        - button "Hapus sesi" [ref=e292]:
+          - img [ref=e293]
+      - generic [ref=e296] [cursor=pointer]:
+        - generic [ref=e298]: "Evaluasi Ground Truth #37"
+        - button "Ubah nama" [ref=e299]:
+          - img [ref=e300]
+        - button "Hapus sesi" [ref=e303]:
+          - img [ref=e304]
+      - generic [ref=e307] [cursor=pointer]:
+        - generic [ref=e309]: "Evaluasi Ground Truth #36"
+        - button "Ubah nama" [ref=e310]:
+          - img [ref=e311]
+        - button "Hapus sesi" [ref=e314]:
+          - img [ref=e315]
+      - generic [ref=e318] [cursor=pointer]:
+        - generic [ref=e320]: "Evaluasi Ground Truth #35"
+        - button "Ubah nama" [ref=e321]:
+          - img [ref=e322]
+        - button "Hapus sesi" [ref=e325]:
+          - img [ref=e326]
+      - generic [ref=e329] [cursor=pointer]:
+        - generic [ref=e331]: "Evaluasi Ground Truth #34"
+        - button "Ubah nama" [ref=e332]:
+          - img [ref=e333]
+        - button "Hapus sesi" [ref=e336]:
+          - img [ref=e337]
+      - generic [ref=e340] [cursor=pointer]:
+        - generic [ref=e342]: "Evaluasi Ground Truth #33"
+        - button "Ubah nama" [ref=e343]:
+          - img [ref=e344]
+        - button "Hapus sesi" [ref=e347]:
+          - img [ref=e348]
+      - generic [ref=e351] [cursor=pointer]:
+        - generic [ref=e353]: "Evaluasi Ground Truth #32"
+        - button "Ubah nama" [ref=e354]:
+          - img [ref=e355]
+        - button "Hapus sesi" [ref=e358]:
+          - img [ref=e359]
+      - generic [ref=e362] [cursor=pointer]:
+        - generic [ref=e364]: "Evaluasi Ground Truth #31"
+        - button "Ubah nama" [ref=e365]:
+          - img [ref=e366]
+        - button "Hapus sesi" [ref=e369]:
+          - img [ref=e370]
+      - generic [ref=e373] [cursor=pointer]:
+        - generic [ref=e375]: "Evaluasi Ground Truth #30"
+        - button "Ubah nama" [ref=e376]:
+          - img [ref=e377]
+        - button "Hapus sesi" [ref=e380]:
+          - img [ref=e381]
+      - generic [ref=e384] [cursor=pointer]:
+        - generic [ref=e386]: "Evaluasi Ground Truth #29"
+        - button "Ubah nama" [ref=e387]:
+          - img [ref=e388]
+        - button "Hapus sesi" [ref=e391]:
+          - img [ref=e392]
+      - generic [ref=e395] [cursor=pointer]:
+        - generic [ref=e397]: "Evaluasi Ground Truth #28"
+        - button "Ubah nama" [ref=e398]:
+          - img [ref=e399]
+        - button "Hapus sesi" [ref=e402]:
+          - img [ref=e403]
+      - generic [ref=e406] [cursor=pointer]:
+        - generic [ref=e408]: "Evaluasi Ground Truth #27"
+        - button "Ubah nama" [ref=e409]:
+          - img [ref=e410]
+        - button "Hapus sesi" [ref=e413]:
+          - img [ref=e414]
+      - generic [ref=e417] [cursor=pointer]:
+        - generic [ref=e419]: "Evaluasi Ground Truth #26"
+        - button "Ubah nama" [ref=e420]:
+          - img [ref=e421]
+        - button "Hapus sesi" [ref=e424]:
+          - img [ref=e425]
+      - generic [ref=e428] [cursor=pointer]:
+        - generic [ref=e430]: "Evaluasi Ground Truth #25"
+        - button "Ubah nama" [ref=e431]:
+          - img [ref=e432]
+        - button "Hapus sesi" [ref=e435]:
+          - img [ref=e436]
+      - generic [ref=e439] [cursor=pointer]:
+        - generic [ref=e441]: "Evaluasi Ground Truth #24"
+        - button "Ubah nama" [ref=e442]:
+          - img [ref=e443]
+        - button "Hapus sesi" [ref=e446]:
+          - img [ref=e447]
+      - generic [ref=e450] [cursor=pointer]:
+        - generic [ref=e452]: "Evaluasi Ground Truth #23"
+        - button "Ubah nama" [ref=e453]:
+          - img [ref=e454]
+        - button "Hapus sesi" [ref=e457]:
+          - img [ref=e458]
+      - generic [ref=e461] [cursor=pointer]:
+        - generic [ref=e463]: "Evaluasi Ground Truth #22"
+        - button "Ubah nama" [ref=e464]:
+          - img [ref=e465]
+        - button "Hapus sesi" [ref=e468]:
+          - img [ref=e469]
+      - generic [ref=e472] [cursor=pointer]:
+        - generic [ref=e474]: "Evaluasi Ground Truth #21"
+        - button "Ubah nama" [ref=e475]:
+          - img [ref=e476]
+        - button "Hapus sesi" [ref=e479]:
+          - img [ref=e480]
+      - generic [ref=e483] [cursor=pointer]:
+        - generic [ref=e485]: "Evaluasi Ground Truth #10"
+        - button "Ubah nama" [ref=e486]:
+          - img [ref=e487]
+        - button "Hapus sesi" [ref=e490]:
+          - img [ref=e491]
+      - generic [ref=e494] [cursor=pointer]:
+        - generic [ref=e496]: "Evaluasi Ground Truth #10"
+        - button "Ubah nama" [ref=e497]:
+          - img [ref=e498]
+        - button "Hapus sesi" [ref=e501]:
+          - img [ref=e502]
+      - generic [ref=e505] [cursor=pointer]:
+        - generic [ref=e507]: "Evaluasi Ground Truth #9"
+        - button "Ubah nama" [ref=e508]:
+          - img [ref=e509]
+        - button "Hapus sesi" [ref=e512]:
+          - img [ref=e513]
+      - generic [ref=e516] [cursor=pointer]:
+        - generic [ref=e518]: "Evaluasi Ground Truth #8"
+        - button "Ubah nama" [ref=e519]:
+          - img [ref=e520]
+        - button "Hapus sesi" [ref=e523]:
+          - img [ref=e524]
+      - generic [ref=e527] [cursor=pointer]:
+        - generic [ref=e529]: "Evaluasi Ground Truth #7"
+        - button "Ubah nama" [ref=e530]:
+          - img [ref=e531]
+        - button "Hapus sesi" [ref=e534]:
+          - img [ref=e535]
+      - generic [ref=e538] [cursor=pointer]:
+        - generic [ref=e540]: "Evaluasi Ground Truth #6"
+        - button "Ubah nama" [ref=e541]:
+          - img [ref=e542]
+        - button "Hapus sesi" [ref=e545]:
+          - img [ref=e546]
+      - generic [ref=e549] [cursor=pointer]:
+        - generic [ref=e551]: "Evaluasi Ground Truth #5"
+        - button "Ubah nama" [ref=e552]:
+          - img [ref=e553]
+        - button "Hapus sesi" [ref=e556]:
+          - img [ref=e557]
+      - generic [ref=e560] [cursor=pointer]:
+        - generic [ref=e562]: "Evaluasi Ground Truth #4"
+        - button "Ubah nama" [ref=e563]:
+          - img [ref=e564]
+        - button "Hapus sesi" [ref=e567]:
+          - img [ref=e568]
+      - generic [ref=e571] [cursor=pointer]:
+        - generic [ref=e573]: "Evaluasi Ground Truth #3"
+        - button "Ubah nama" [ref=e574]:
+          - img [ref=e575]
+        - button "Hapus sesi" [ref=e578]:
+          - img [ref=e579]
+      - generic [ref=e582] [cursor=pointer]:
+        - generic [ref=e584]: "Evaluasi Ground Truth #2"
+        - button "Ubah nama" [ref=e585]:
+          - img [ref=e586]
+        - button "Hapus sesi" [ref=e589]:
+          - img [ref=e590]
+    - generic [ref=e593]:
+      - link "Dokumen Hukum" [ref=e594] [cursor=pointer]:
+        - /url: /documents
+        - img [ref=e595]
+        - generic [ref=e598]: Dokumen Hukum
+      - generic [ref=e599]:
+        - generic [ref=e600]: Model
+        - combobox [ref=e601] [cursor=pointer]:
+          - option "qwen3.5:4b" [selected]
+          - option "qwen3.5:9b"
+          - option "qwen2.5:7b-instruct"
+          - option "qwen2.5:3b-instruct"
+          - option "qwen2.5vl:7b"
+          - option "qwen2.5:3b"
+          - option "qwen3-vl:4b"
+          - option "qwen3:4b"
+          - option "qwen3-vl:8b"
+          - option "qwen3:8b"
+    - button "Tutup sidebar" [ref=e602] [cursor=pointer]:
+      - img [ref=e603]
+  - generic [ref=e605]:
+    - navigation [ref=e606]:
+      - generic [ref=e607]:
+        - generic [ref=e608]: AH
+        - generic [ref=e609]:
+          - generic [ref=e610]: Asisten Hukum SPBE
+          - generic [ref=e611]: Chatbot Hukum untuk Tata Kelola Digital Pemerintah
+      - generic [ref=e612]:
+        - link "Beranda" [ref=e613] [cursor=pointer]:
+          - /url: /home
+        - link "Layanan" [ref=e614] [cursor=pointer]:
+          - /url: /
+        - link "Dasar Hukum" [ref=e615] [cursor=pointer]:
+          - /url: /documents
+        - generic "Admin PUSDATIK • admin@bssn.go.id" [ref=e616]:
+          - generic [ref=e617]: A
+          - generic [ref=e618]:
+            - generic [ref=e619]: Masuk sebagai
+            - generic [ref=e620]: Admin PUSDATIK
+            - generic [ref=e621]: Admin PUSDATIK
+        - link "Keluar" [ref=e622] [cursor=pointer]:
+          - /url: /logout
+        - generic [ref=e623]: Terhubung
+    - generic [ref=e624]:
+      - generic [ref=e625]:
+        - generic "Aksi cepat konsultasi" [ref=e626]:
+          - button "Lihat pasal" [ref=e627] [cursor=pointer]
+          - button "Buat ringkasan" [ref=e628] [cursor=pointer]
+          - button "Bandingkan regulasi" [ref=e629] [cursor=pointer]
+          - button "Buat policy brief" [ref=e630] [cursor=pointer]
+          - button "Tampilkan sumber" [ref=e631] [cursor=pointer]
+        - generic [ref=e633]:
+          - generic [ref=e634]: AH
+          - heading "Asisten Hukum SPBE" [level=2] [ref=e635]
+          - paragraph [ref=e636]: Ajukan konsultasi regulasi, kebijakan, tata kelola digital, audit SPBE, dan dokumen hukum pemerintahan.
+          - generic [ref=e637]:
+            - button "Apa dasar hukum penerapan SPBE di instansi pemerintah?" [ref=e638] [cursor=pointer]
+            - button "Apa kewajiban instansi dalam penyusunan arsitektur SPBE?" [ref=e639] [cursor=pointer]
+            - button "Bagaimana hubungan audit SPBE dengan evaluasi SPBE?" [ref=e640] [cursor=pointer]
+            - button "Apa saja dokumen yang perlu disiapkan untuk tata kelola SPBE?" [ref=e641] [cursor=pointer]
+            - button "Ringkas regulasi ini menjadi poin kebijakan." [ref=e642] [cursor=pointer]
+            - button "Bandingkan dua regulasi berikut dan jelaskan perbedaannya." [ref=e643] [cursor=pointer]
+      - complementary "Panel bukti rujukan jawaban" [ref=e644]:
+        - generic [ref=e645]:
+          - generic [ref=e646]:
+            - generic [ref=e647]:
+              - generic [ref=e648]: Bukti & Rujukan
+              - heading "Rujukan Jawaban" [level=3] [ref=e649]
+            - generic [ref=e650]: Belum tersedia
+          - generic [ref=e651]:
+            - generic [ref=e652]: §
+            - strong [ref=e653]: Rujukan akan muncul setelah jawaban tersedia
+            - paragraph [ref=e654]: Ajukan pertanyaan dengan RAG aktif. Jika sistem menemukan dokumen yang relevan, sumber hukum akan ditampilkan di panel ini.
+          - paragraph [ref=e655]: Panel ini hanya menampilkan sumber dari respons chatbot, bukan daftar regulasi manual.
+    - generic [ref=e656]:
+      - generic [ref=e657]:
+        - textbox "Ketik pertanyaan hukum SPBE Anda..." [ref=e658]
+        - generic [ref=e659]:
+          - generic "RAG aktif" [ref=e660] [cursor=pointer]:
+            - generic [ref=e663]: RAG
+          - button [disabled] [ref=e664]:
+            - img [ref=e665]
+      - generic [ref=e667]: Enter untuk kirim · Shift+Enter untuk baris baru · Data tidak digunakan untuk pelatihan model publik

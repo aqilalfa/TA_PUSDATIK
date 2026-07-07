@@ -1,0 +1,2667 @@
+[
+  {
+    "time": "2026-06-09T11:00:40.330625",
+    "start": 0,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_007": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T11:01:45.398553",
+    "start": 0,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_00_02_attempt2_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T11:02:41.655126",
+    "start": 2,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_02_04_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T11:03:30.478046",
+    "start": 4,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T11:04:31.295990",
+    "start": 6,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_06_08_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T11:05:33.169540",
+    "start": 8,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_08_10_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_035": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T11:06:39.932824",
+    "start": 8,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_08_10_attempt2_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_035": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T11:11:36.316712",
+    "start": 8,
+    "limit": 2,
+    "model": "openai/gpt-oss-120b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_08_10_attempt3_4metrics_groq_openai_gpt-oss-120b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T11:13:29.011629",
+    "start": 10,
+    "limit": 1,
+    "model": "openai/gpt-oss-120b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_10_11_4metrics_groq_openai_gpt-oss-120b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T11:59:29.750276",
+    "start": 0,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_007": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T12:00:37.667737",
+    "start": 0,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_00_02_attempt2_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T12:01:35.834400",
+    "start": 2,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_02_04_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T12:02:24.794618",
+    "start": 4,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T12:03:24.685893",
+    "start": 6,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_06_08_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T12:04:20.087789",
+    "start": 8,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_08_10_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T12:04:55.677032",
+    "start": 10,
+    "limit": 1,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_10_11_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T12:36:12.076623",
+    "start": 0,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T12:42:40.412595",
+    "start": 2,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_02_04_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T12:49:56.659005",
+    "start": 4,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_021": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T12:51:01.091742",
+    "start": 4,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_attempt2_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T12:51:42.260549",
+    "start": 6,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_06_08_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T12:52:37.038206",
+    "start": 8,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_08_10_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T12:53:14.137077",
+    "start": 10,
+    "limit": 1,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_10_11_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_037": [
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T12:54:55.502487",
+    "start": 10,
+    "limit": 1,
+    "model": "openai/gpt-oss-120b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_10_11_attempt2_4metrics_groq_openai_gpt-oss-120b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T14:29:24.347577",
+    "start": 0,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T14:35:35.208973",
+    "start": 2,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_02_04_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_004": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T14:41:33.271742",
+    "start": 2,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_02_04_attempt2_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_004": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T14:42:35.387674",
+    "start": 2,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_02_04_attempt3_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T14:43:51.406923",
+    "start": 4,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_005": [
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_006": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T14:49:19.183473",
+    "start": 4,
+    "limit": 2,
+    "model": "openai/gpt-oss-120b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_attempt2_4metrics_groq_openai_gpt-oss-120b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_006": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T14:52:16.231786",
+    "start": 4,
+    "limit": 2,
+    "model": "groq/compound",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_attempt3_4metrics_groq_groq_compound.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_005": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_006": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T14:56:11.905829",
+    "start": 4,
+    "limit": 2,
+    "model": "llama-3.3-70b-versatile",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_attempt4_4metrics_groq_llama-3.3-70b-versatile.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_006": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T14:58:34.629442",
+    "start": 5,
+    "limit": 1,
+    "model": "openai/gpt-oss-20b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_05_06_retry_4metrics_groq_openai_gpt-oss-20b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_006": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T15:00:45.418606",
+    "start": 5,
+    "limit": 1,
+    "model": "openai/gpt-oss-20b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_05_06_retry_4metrics_groq_openai_gpt-oss-20b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_006": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T15:04:23.068308",
+    "start": 5,
+    "limit": 1,
+    "model": "llama-3.1-8b-instant",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_05_06_retry_4metrics_groq_llama-3.1-8b-instant.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_006": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T15:07:39.960542",
+    "start": 5,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_05_06_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_006": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T16:26:56.917638",
+    "start": 0,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_001": [
+        "faithfulness"
+      ],
+      "gt_002": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T16:34:27.108157",
+    "start": 0,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_00_02_attempt2_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T16:35:34.099617",
+    "start": 2,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_02_04_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_003": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_004": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T16:36:36.815101",
+    "start": 2,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_02_04_attempt2_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-09T16:37:21.250358",
+    "start": 4,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_005": [
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_006": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T16:43:09.459611",
+    "start": 4,
+    "limit": 2,
+    "model": "openai/gpt-oss-120b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_attempt2_4metrics_groq_openai_gpt-oss-120b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_006": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T16:46:07.781755",
+    "start": 4,
+    "limit": 2,
+    "model": "groq/compound",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_attempt3_4metrics_groq_groq_compound.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_005": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_006": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T16:49:07.530732",
+    "start": 4,
+    "limit": 2,
+    "model": "llama-3.3-70b-versatile",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_attempt4_4metrics_groq_llama-3.3-70b-versatile.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_006": [
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T16:51:09.009505",
+    "start": 5,
+    "limit": 1,
+    "model": "openai/gpt-oss-20b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_05_06_retry_4metrics_groq_openai_gpt-oss-20b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_006": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T16:52:46.733943",
+    "start": 5,
+    "limit": 1,
+    "model": "openai/gpt-oss-20b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_05_06_retry_4metrics_groq_openai_gpt-oss-20b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_006": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T16:56:25.217485",
+    "start": 5,
+    "limit": 1,
+    "model": "llama-3.1-8b-instant",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_05_06_retry_4metrics_groq_llama-3.1-8b-instant.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_006": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T17:01:06.224079",
+    "start": 5,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_05_06_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_006": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T17:08:51.488915",
+    "start": 6,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_06_08_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_007": [
+        "context_precision",
+        "context_recall",
+        "faithfulness"
+      ],
+      "gt_008": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T17:15:50.008800",
+    "start": 6,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_06_08_attempt2_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_007": [
+        "context_precision",
+        "context_recall",
+        "faithfulness"
+      ],
+      "gt_008": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T17:20:05.511962",
+    "start": 6,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_06_07_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_007": [
+        "context_precision",
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T17:24:08.367107",
+    "start": 6,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_06_07_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_007": [
+        "context_precision",
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T17:27:34.482210",
+    "start": 7,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_07_08_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_008": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T17:31:06.777491",
+    "start": 7,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_07_08_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_008": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T17:33:37.471511",
+    "start": 8,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_08_10_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_009": [
+        "context_precision",
+        "context_recall",
+        "faithfulness"
+      ],
+      "gt_010": [
+        "context_precision",
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T17:36:20.607038",
+    "start": 8,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_08_10_attempt2_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_009": [
+        "context_precision",
+        "context_recall",
+        "faithfulness"
+      ],
+      "gt_010": [
+        "context_precision",
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T17:37:35.521636",
+    "start": 8,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_08_09_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_009": [
+        "context_precision",
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T17:39:00.866355",
+    "start": 8,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_08_09_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_009": [
+        "context_precision",
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T17:40:02.103744",
+    "start": 9,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_09_10_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_010": [
+        "context_precision",
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T17:41:30.574817",
+    "start": 9,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_09_10_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_010": [
+        "context_precision",
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T17:47:43.942085",
+    "start": 10,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_10_12_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_011": [
+        "context_recall",
+        "faithfulness"
+      ],
+      "gt_012": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T17:53:35.790561",
+    "start": 10,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_10_12_attempt2_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_011": [
+        "context_recall",
+        "faithfulness"
+      ],
+      "gt_012": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T17:56:50.072781",
+    "start": 10,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_10_11_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_011": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:00:32.056297",
+    "start": 10,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_10_11_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_011": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:03:15.002279",
+    "start": 11,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_11_12_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_012": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:06:30.095860",
+    "start": 11,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_11_12_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_012": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:12:59.762230",
+    "start": 12,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_12_14_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_013": [
+        "context_recall",
+        "faithfulness"
+      ],
+      "gt_014": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:19:28.893414",
+    "start": 12,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_12_14_attempt2_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_013": [
+        "context_recall",
+        "faithfulness"
+      ],
+      "gt_014": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:22:36.577046",
+    "start": 12,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_12_13_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_013": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:24:33.894473",
+    "start": 12,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_12_13_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_013": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:25:00.392993",
+    "start": 13,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_13_14_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_014": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:26:33.021375",
+    "start": 14,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_14_16_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_015": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_016": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:27:01.501636",
+    "start": 14,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_14_15_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_015": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:28:31.871480",
+    "start": 15,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_15_16_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_016": [
+        "context_precision",
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:29:52.753107",
+    "start": 16,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_16_18_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_017": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_018": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:30:18.912407",
+    "start": 16,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_16_17_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_017": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:32:31.609262",
+    "start": 17,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_17_18_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_018": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:33:15.114255",
+    "start": 18,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_18_20_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_019": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_020": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:35:21.380942",
+    "start": 18,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_18_19_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_019": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:36:43.611330",
+    "start": 19,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_19_20_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_020": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:37:28.270683",
+    "start": 20,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_20_22_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_021": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_022": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:39:06.210603",
+    "start": 20,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_20_21_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_021": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:39:30.644872",
+    "start": 21,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_21_22_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_022": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:40:43.910682",
+    "start": 22,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_22_24_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_023": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_024": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:41:11.058944",
+    "start": 22,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_22_23_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_023": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:42:13.727798",
+    "start": 23,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_23_24_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_024": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:43:55.239557",
+    "start": 24,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_24_26_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_025": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_026": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:44:19.131903",
+    "start": 24,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_24_25_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_025": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:45:44.452971",
+    "start": 25,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_25_26_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_026": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:46:23.890525",
+    "start": 26,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_26_28_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_027": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_028": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:46:47.852220",
+    "start": 26,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_26_27_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_027": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:47:35.406549",
+    "start": 27,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_27_28_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_028": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:49:43.139794",
+    "start": 28,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_28_30_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_029": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_030": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:50:50.636109",
+    "start": 28,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_28_29_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_029": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:51:16.831567",
+    "start": 29,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_29_30_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_030": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:53:04.676655",
+    "start": 30,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_30_32_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_031": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_032": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:54:20.064744",
+    "start": 30,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_30_31_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_031": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:54:46.172288",
+    "start": 31,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_31_32_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_032": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:56:18.801969",
+    "start": 32,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_32_34_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_033": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_034": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:56:44.309031",
+    "start": 32,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_32_33_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_033": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:57:09.272582",
+    "start": 33,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_33_34_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_034": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:57:50.998550",
+    "start": 34,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_34_36_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_035": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_036": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:59:10.248209",
+    "start": 34,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_34_35_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_035": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T18:59:37.949641",
+    "start": 35,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_35_36_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_036": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:00:50.696934",
+    "start": 36,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_36_38_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_037": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_038": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:02:15.622844",
+    "start": 36,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_36_37_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_037": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:02:39.928359",
+    "start": 37,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_37_38_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_038": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:04:21.259079",
+    "start": 38,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_38_40_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_039": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_040": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:04:47.398880",
+    "start": 38,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_38_39_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_039": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:06:09.186600",
+    "start": 39,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_39_40_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_040": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:07:50.232970",
+    "start": 40,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_40_42_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_041": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_042": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:08:17.612010",
+    "start": 40,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_40_41_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_041": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:09:33.972437",
+    "start": 41,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_41_42_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_042": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:11:53.126668",
+    "start": 42,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_42_44_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_043": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_044": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:12:17.974356",
+    "start": 42,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_42_43_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_043": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:14:11.200884",
+    "start": 43,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_43_44_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_044": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:14:57.219453",
+    "start": 44,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_44_46_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_045": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_046": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:15:20.383802",
+    "start": 44,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_44_45_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_045": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:17:13.318251",
+    "start": 45,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_45_46_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_046": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:18:52.440685",
+    "start": 46,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_46_48_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_047": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_048": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:19:21.239467",
+    "start": 46,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_46_47_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_047": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:19:47.745338",
+    "start": 47,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_47_48_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_048": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:21:02.666560",
+    "start": 48,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_48_50_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_049": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_050": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:23:02.952892",
+    "start": 48,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_48_49_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_049": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:23:28.887104",
+    "start": 49,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_49_50_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_050": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:25:07.679774",
+    "start": 50,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_50_52_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_051": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_052": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:26:21.022240",
+    "start": 50,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_50_51_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_051": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:26:47.080039",
+    "start": 51,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_51_52_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_052": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:27:32.522027",
+    "start": 52,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_52_54_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_053": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ],
+      "gt_054": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:28:53.227981",
+    "start": 52,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_52_53_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_053": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:29:20.556611",
+    "start": 53,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_53_54_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_054": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:31:37.440440",
+    "start": 54,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_54_55_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_055": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-09T19:32:05.257845",
+    "start": 54,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_54_55_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_055": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T07:56:29.529351",
+    "start": 0,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-10T08:03:03.804195",
+    "start": 2,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_02_04_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-10T08:12:09.165590",
+    "start": 4,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_005": [
+        "faithfulness"
+      ],
+      "gt_006": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T08:18:21.614538",
+    "start": 4,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_attempt2_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_005": [
+        "context_recall",
+        "faithfulness"
+      ],
+      "gt_006": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T08:19:46.757151",
+    "start": 4,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_attempt3_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_006": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T08:26:45.766986",
+    "start": 4,
+    "limit": 2,
+    "model": "openai/gpt-oss-120b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_attempt4_4metrics_groq_openai_gpt-oss-120b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_006": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T08:28:37.735895",
+    "start": 5,
+    "limit": 1,
+    "model": "groq/compound",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_05_06_retry_4metrics_groq_groq_compound.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_006": [
+        "context_precision",
+        "context_recall",
+        "faithfulness",
+        "answer_relevancy"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T08:30:24.302103",
+    "start": 5,
+    "limit": 1,
+    "model": "llama-3.3-70b-versatile",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_05_06_retry_4metrics_groq_llama-3.3-70b-versatile.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-10T08:34:08.542615",
+    "start": 6,
+    "limit": 2,
+    "model": "llama-3.3-70b-versatile",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_06_08_4metrics_groq_llama-3.3-70b-versatile.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_008": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T08:39:47.338739",
+    "start": 6,
+    "limit": 2,
+    "model": "openai/gpt-oss-20b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_06_08_attempt2_4metrics_groq_openai_gpt-oss-20b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_007": [
+        "faithfulness"
+      ],
+      "gt_008": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T08:46:49.263050",
+    "start": 6,
+    "limit": 2,
+    "model": "llama-3.1-8b-instant",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_06_08_attempt3_4metrics_groq_llama-3.1-8b-instant.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-10T08:53:30.134288",
+    "start": 8,
+    "limit": 2,
+    "model": "llama-3.1-8b-instant",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_08_10_4metrics_groq_llama-3.1-8b-instant.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-10T08:57:54.936441",
+    "start": 10,
+    "limit": 2,
+    "model": "llama-3.1-8b-instant",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_10_12_4metrics_groq_llama-3.1-8b-instant.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-10T09:02:20.160591",
+    "start": 12,
+    "limit": 2,
+    "model": "llama-3.1-8b-instant",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_12_14_4metrics_groq_llama-3.1-8b-instant.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-10T09:07:38.909026",
+    "start": 14,
+    "limit": 2,
+    "model": "llama-3.1-8b-instant",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_14_16_4metrics_groq_llama-3.1-8b-instant.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-10T09:12:57.293904",
+    "start": 16,
+    "limit": 2,
+    "model": "llama-3.1-8b-instant",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_16_18_4metrics_groq_llama-3.1-8b-instant.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-10T09:18:00.444733",
+    "start": 18,
+    "limit": 2,
+    "model": "llama-3.1-8b-instant",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_18_20_4metrics_groq_llama-3.1-8b-instant.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-10T09:22:44.745689",
+    "start": 20,
+    "limit": 2,
+    "model": "llama-3.1-8b-instant",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_20_22_4metrics_groq_llama-3.1-8b-instant.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-10T09:27:22.430959",
+    "start": 22,
+    "limit": 2,
+    "model": "llama-3.1-8b-instant",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_22_24_4metrics_groq_llama-3.1-8b-instant.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-10T09:32:39.078613",
+    "start": 24,
+    "limit": 2,
+    "model": "llama-3.1-8b-instant",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_24_26_4metrics_groq_llama-3.1-8b-instant.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-10T09:38:19.441359",
+    "start": 26,
+    "limit": 2,
+    "model": "llama-3.1-8b-instant",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_26_28_4metrics_groq_llama-3.1-8b-instant.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-10T09:43:24.793496",
+    "start": 28,
+    "limit": 2,
+    "model": "llama-3.1-8b-instant",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_28_30_4metrics_groq_llama-3.1-8b-instant.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-10T09:49:21.214955",
+    "start": 30,
+    "limit": 2,
+    "model": "llama-3.1-8b-instant",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_30_32_4metrics_groq_llama-3.1-8b-instant.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_032": [
+        "context_recall"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T09:55:09.864226",
+    "start": 30,
+    "limit": 2,
+    "model": "llama-3.1-8b-instant",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_30_32_attempt2_4metrics_groq_llama-3.1-8b-instant.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_032": [
+        "context_recall"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T10:01:03.060054",
+    "start": 30,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_30_32_attempt3_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_031": [
+        "context_recall",
+        "faithfulness"
+      ],
+      "gt_032": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T10:04:00.876837",
+    "start": 30,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_30_31_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_031": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T10:07:18.197915",
+    "start": 31,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_31_32_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_032": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T10:11:07.231048",
+    "start": 31,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_31_32_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_032": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T10:16:59.018921",
+    "start": 32,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_32_34_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_033": [
+        "context_recall",
+        "faithfulness"
+      ],
+      "gt_034": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T10:19:11.648557",
+    "start": 32,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_32_33_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_033": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T10:22:48.256669",
+    "start": 33,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_33_34_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_034": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T10:27:43.564084",
+    "start": 34,
+    "limit": 2,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_34_36_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_035": [
+        "context_recall",
+        "faithfulness"
+      ],
+      "gt_036": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T10:30:46.267170",
+    "start": 34,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_34_35_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "gt_035": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T10:33:27.429182",
+    "start": 34,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_34_35_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_035": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-10T10:36:07.866403",
+    "start": 35,
+    "limit": 1,
+    "model": "allam-2-7b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_35_36_retry_4metrics_groq_allam-2-7b.json",
+    "returncode": 0,
+    "rate_limited": true,
+    "missing_metrics": {
+      "gt_036": [
+        "context_recall",
+        "faithfulness"
+      ]
+    }
+  }
+]

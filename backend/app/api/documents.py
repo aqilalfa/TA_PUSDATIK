@@ -8,6 +8,7 @@ from typing import Optional, List, Dict, Any
 from loguru import logger
 from app.config import settings
 from app.dependencies.auth_dependencies import get_current_user, require_roles
+from app.core.rag.access_control import user_can_access_metadata
 
 router = APIRouter(prefix="/api/documents", tags=["Documents"])
 
@@ -26,6 +27,10 @@ class DocumentResponse(BaseModel):
 
 class ChunkResponse(BaseModel):
     id: int
+    chunk_id: Optional[int] = None
+    doc_id: Optional[str] = None
+    canonical_context_id: Optional[str] = None
+    citation_id: Optional[str] = None
     chunk_index: int
     text: str
     raw_text: Optional[str] = None
@@ -84,6 +89,15 @@ def get_manager():
     from app.core.ingestion.document_manager import get_document_manager
     return get_document_manager()
 
+
+def _require_document_access(manager, doc_id: str, current_user) -> Dict[str, Any]:
+    document = manager.get_document(doc_id)
+    if not document:
+        raise HTTPException(404, f"Dokumen tidak ditemukan: {doc_id}")
+    if not user_can_access_metadata(document.get("access_metadata", {}), current_user):
+        raise HTTPException(403, "Akses dokumen ditolak")
+    return document
+
 @router.post("/upload", response_model=UploadResponse)
 async def upload_document(
     file: UploadFile = File(...), 
@@ -95,7 +109,7 @@ async def upload_document(
         raise HTTPException(400, "Hanya file PDF yang didukung")
     try:
         content = await file.read()
-        result = manager.upload_file(content, filename)
+        result = manager.upload_file(content, filename, uploaded_by=_admin)
         return UploadResponse(**result)
     except ValueError as e:
         raise HTTPException(400, str(e))
@@ -103,6 +117,7 @@ async def upload_document(
 @router.post("/{doc_id}/preview", response_model=PreviewResponse)
 async def preview_chunks(doc_id: str, manager=Depends(get_manager), _user=Depends(get_current_user)):
     try:
+        _require_document_access(manager, doc_id, _user)
         result = manager.preview_chunks(doc_id)
         return PreviewResponse(**result)
     except ValueError as e:
@@ -122,11 +137,16 @@ async def save_document(
 
 @router.get("", response_model=List[DocumentResponse])
 async def list_documents(manager=Depends(get_manager), _user=Depends(get_current_user)):
-    return [DocumentResponse(**d) for d in manager.list_documents()]
+    return [
+        DocumentResponse(**d)
+        for d in manager.list_documents()
+        if user_can_access_metadata(d.get("access_metadata", {}), _user)
+    ]
 
 @router.get("/{doc_id}")
 async def get_document(doc_id: str, manager=Depends(get_manager), _user=Depends(get_current_user)):
     try:
+        _require_document_access(manager, doc_id, _user)
         return manager.get_document_detail(doc_id)
     except ValueError as e:
         raise HTTPException(404, str(e))
@@ -141,6 +161,7 @@ async def get_chunks(
 ):
     """Get chunks for a document. Handles both SQLite and Qdrant fallback automatically."""
     try:
+        _require_document_access(manager, doc_id, _user)
         chunks = manager.get_chunks(doc_id, limit=limit, offset=offset)
         if not chunks:
             # Check if document exists at all

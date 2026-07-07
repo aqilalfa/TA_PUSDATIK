@@ -1,0 +1,244 @@
+[
+  {
+    "time": "2026-06-08T20:53:13.942743",
+    "start": 0,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T20:59:17.523171",
+    "start": 2,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_02_04_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T21:05:09.049559",
+    "start": 4,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "GT-005": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-08T21:12:00.500299",
+    "start": 4,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_04_06_attempt2_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T21:18:47.501806",
+    "start": 6,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_06_08_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T21:25:46.866494",
+    "start": 8,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_08_10_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T21:31:49.580783",
+    "start": 10,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_10_12_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T21:38:07.755454",
+    "start": 12,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_12_14_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T21:44:26.774819",
+    "start": 14,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_14_16_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "GT-016": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-08T21:50:44.999317",
+    "start": 14,
+    "limit": 2,
+    "model": "qwen/qwen3-32b",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_14_16_attempt2_4metrics_groq_qwen_qwen3-32b.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {
+      "GT-016": [
+        "faithfulness"
+      ]
+    }
+  },
+  {
+    "time": "2026-06-08T21:52:16.644322",
+    "start": 14,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_14_16_attempt3_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T21:53:08.938953",
+    "start": 16,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_16_18_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T21:54:04.938243",
+    "start": 18,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_18_20_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T21:54:55.084835",
+    "start": 20,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_20_22_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T21:55:47.906869",
+    "start": 22,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_22_24_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T21:56:50.606518",
+    "start": 24,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_24_26_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T21:57:50.505298",
+    "start": 26,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_26_28_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T21:58:47.541838",
+    "start": 28,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_28_30_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T21:59:45.262423",
+    "start": 30,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_30_32_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T22:00:54.351415",
+    "start": 32,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_32_34_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T22:02:02.403824",
+    "start": 34,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_34_36_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T22:02:54.638245",
+    "start": 36,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_36_38_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  },
+  {
+    "time": "2026-06-08T22:03:57.105311",
+    "start": 38,
+    "limit": 2,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "report_path": "D:\\aqil\\pusdatik\\backend\\data\\eval_ragas_batch_38_40_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+    "returncode": 0,
+    "rate_limited": false,
+    "missing_metrics": {}
+  }
+]

@@ -10,7 +10,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from app.database import SessionLocal
-from app.models.db_models import Chunk
+from app.models.db_models import Chunk, Document
+from app.core.rag.context_ids import enrich_context_identity
 from loguru import logger
 import pickle
 import json
@@ -49,19 +50,24 @@ def rebuild_bm25():
 
     db = SessionLocal()
     try:
-        chunks = db.query(Chunk).all()
+        rows = (
+            db.query(Chunk, Document)
+            .join(Document, Chunk.document_id == Document.id)
+            .order_by(Document.id, Chunk.chunk_index)
+            .all()
+        )
 
-        if not chunks:
+        if not rows:
             logger.warning("No chunks found!")
             return
 
-        logger.info(f"Found {len(chunks)} chunks")
+        logger.info(f"Found {len(rows)} chunks")
 
         # Build documents list with metadata
         documents = []
         corpus = []
 
-        for c in chunks:
+        for c, doc in rows:
             # Parse chunk_metadata JSON
             metadata = {}
             if c.chunk_metadata:
@@ -69,6 +75,18 @@ def rebuild_bm25():
                     metadata = json.loads(c.chunk_metadata)
                 except:
                     pass
+            metadata.update(
+                {
+                    "document_id": doc.id,
+                    "doc_id": doc.doc_id or str(doc.id),
+                    "chunk_id": c.id,
+                    "chunk_index": c.chunk_index,
+                    "document_title": metadata.get("document_title") or doc.document_title or doc.filename or "",
+                    "filename": metadata.get("filename") or doc.original_filename or doc.filename or "",
+                    "doc_type": metadata.get("doc_type") or doc.doc_type or "",
+                }
+            )
+            metadata = enrich_context_identity(metadata)
 
             text = c.chunk_text or ""
             search_text = build_bm25_search_text(text, metadata)

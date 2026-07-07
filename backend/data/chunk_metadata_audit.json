@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-06-02T22:49:30+07:00",
+  "verdict": "usable_with_alias_fallback",
+  "summary": {
+    "has_universal_canonical_chunk_id": false,
+    "has_runtime_traceable_ids": true,
+    "primary_runtime_id_fields": [
+      "chunk_id",
+      "document_id",
+      "doc_id",
+      "chunk_index"
+    ],
+    "available_legal_metadata": [
+      "filename",
+      "document_title",
+      "judul_dokumen",
+      "tentang",
+      "doc_type",
+      "bab",
+      "bagian",
+      "pasal",
+      "ayat",
+      "hierarchy",
+      "context_header",
+      "table_context"
+    ],
+    "missing_or_inconsistent_metadata": [
+      "canonical_chunk_id",
+      "normalized_document_slug",
+      "page_number",
+      "angka",
+      "huruf",
+      "stable citation_id on every chunk"
+    ]
+  },
+  "evidence": {
+    "sqlite_chunks": "chunks table stores id, document_id, chunk_index, chunk_text, chunk_metadata JSON.",
+    "qdrant_runtime": "retrieve_context returns raw_docs with metadata; vector hits often include chunk_id/document_id, while BM25 hits may include doc_id plus hierarchy/context_header instead.",
+    "source_builder": "langchain_engine._build_sources_list currently emits doc_id/document/section/snippet but not context_id; evaluate_rag.py was updated to persist retrieved_context_ids/retrieved_sources for future collect runs.",
+    "ground_truth_mapping": "build_ground_truth_canonical.py mapped 30/40 ground-truth rows to actual DB chunks; remaining rows use citation fallback IDs."
+  },
+  "decision": {
+    "can_run_id_based_retrieval_eval_now": true,
+    "strict_id_match_only_is_too_harsh": true,
+    "recommended_matching_strategy": "alias-group matching using dbchunk:<chunk_id>, doc<document_id>:idx<chunk_index>, doc<doc_id>:idx<chunk_index>, and document-slug:section aliases.",
+    "recommended_future_ingestion_change": "Add canonical_context_id/citation_id at ingestion time and persist it in SQLite, Qdrant payload, BM25 cache, API sources, and eval results."
+  }
+}

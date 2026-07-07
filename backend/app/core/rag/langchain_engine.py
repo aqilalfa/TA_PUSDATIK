@@ -35,6 +35,7 @@ from app.core.rag.legal_utils import (
     build_cover_citation_title,
 )
 from app.core.rag.prompts import expand_query
+from app.core.rag.access_control import build_qdrant_access_filter
 
 def classify_query(query: str) -> str:
     """Classify query type for routing: 'table', 'pasal', 'indikator', or 'general'."""
@@ -140,12 +141,9 @@ class LangchainRAGEngine:
             except Exception as e:
                 logger.warning(f"[BM25] Failed to load: {e}")
 
-    def _build_qdrant_filter(self, doc_id: Optional[str]):
-        """Build a Qdrant Filter scoped to a specific document, or None for global search."""
-        if not doc_id:
-            return None
-        from qdrant_client.models import Filter, FieldCondition, MatchValue
-        return Filter(must=[FieldCondition(key="doc_id", match=MatchValue(value=str(doc_id)))])
+    def _build_qdrant_filter(self, doc_id: Optional[str], current_user=None):
+        """Build a Qdrant Filter scoped by document and user access metadata."""
+        return build_qdrant_access_filter(doc_id=doc_id, current_user=current_user)
 
     def retrieve_context(
         self,
@@ -153,6 +151,7 @@ class LangchainRAGEngine:
         top_k: int = 5,
         use_rag: bool = True,
         doc_id: Optional[str] = None,
+        current_user=None,
     ) -> Dict[str, Any]:
         """Main retrieval pipeline: Search -> Fusion -> Stitch -> Final Rank."""
         if not self._initialized:
@@ -161,6 +160,9 @@ class LangchainRAGEngine:
 
         if not use_rag:
             return {"context": "", "sources": [], "raw_docs": []}
+
+        if self.retriever is None or self.ranker is None or self.stitcher is None:
+            raise RuntimeError("RAG Engine components are not initialized.")
 
         query_type = classify_query(query)
         # Technical/legal queries need a broader candidate pool before final rerank.
@@ -176,29 +178,56 @@ class LangchainRAGEngine:
 
         # 2. Parallel Search (Vector + BM25 + Table Literal + Indicator Literal)
         # Vector search: scoped to doc_id when provided — prevents cross-doc contamination in RRF pool
-        qdrant_filter = self._build_qdrant_filter(doc_id)
+        qdrant_filter = self._build_qdrant_filter(doc_id, current_user)
         ranked_lists: List[List[Document]] = []
         for sq in search_queries:
             ranked_lists.append(self.retriever.vector_search(sq, candidate_k, qdrant_filter))
             
         for sq in search_queries:
-            ranked_lists.append(self.retriever.bm25_search(sq, candidate_k * 2, self._bm25_docs, doc_id))
+            ranked_lists.append(
+                self.retriever.bm25_search(
+                    sq,
+                    candidate_k * 2,
+                    self._bm25_docs,
+                    doc_id,
+                    current_user=current_user,
+                )
+            )
         for sq in search_queries:
-            ranked_lists.append(self.retriever.table_literal_search(sq, self.collection_name, doc_id))
-            ranked_lists.append(self.retriever.indicator_literal_search(sq, self.collection_name, doc_id))
+            ranked_lists.append(
+                self.retriever.table_literal_search(
+                    sq,
+                    self.collection_name,
+                    doc_id,
+                    current_user=current_user,
+                )
+            )
+            ranked_lists.append(
+                self.retriever.indicator_literal_search(
+                    sq,
+                    self.collection_name,
+                    doc_id,
+                    current_user=current_user,
+                )
+            )
 
         # 3. Hybrid Fusion (RRF)
         # Combine results from all search paths
         candidates = self.ranker.rrf_fusion(ranked_lists, max_candidates=max(100, candidate_k * 4))
         
         # 4. Context Stitching (±1 neighbor chunks for better coherence)
-        expanded_docs = self.stitcher.expand_docs_with_neighbor_context(candidates, self.collection_name)
+        expanded_docs = self.stitcher.expand_docs_with_neighbor_context(
+            candidates,
+            self.collection_name,
+            current_user=current_user,
+        )
         
         # 5. Final Ranking & Selection
         final_docs = self.ranker.rerank(query, expanded_docs, k)
 
         # 6. Format for LLM and UI
         context = self._format_context(final_docs)
+        # sources.append payload is built in _build_sources_list and includes "doc_id":
         sources = self._build_sources_list(final_docs)
 
         return {

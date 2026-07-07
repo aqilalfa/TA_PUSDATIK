@@ -122,10 +122,14 @@ export const getCurrentUserProfile = () => {
   return tokenProfile
 }
 
+export const isAdminUser = (user = getCurrentUserProfile()) => {
+  return Array.isArray(user?.roles) && user.roles.includes('admin_pusdatik')
+}
+
 export const formatRoleLabel = (role) => {
   const roleMap = {
     admin_pusdatik: 'Admin PUSDATIK',
-    evaluator_spbe: 'Evaluator SPBE',
+    staff: 'Staff',
     user: 'Pengguna'
   }
 

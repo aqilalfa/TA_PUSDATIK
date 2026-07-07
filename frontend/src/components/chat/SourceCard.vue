@@ -1,16 +1,25 @@
 <template>
   <div
     class="source-card-wrapper"
-    :class="{ clickable: source.doc_id }"
+    :class="{ clickable: source.doc_id, expanded }"
   >
-    <div class="source-card">
-      <div class="source-num">
-        📎 SUMBER [{{ source.id }}]<span v-if="source.score > 0" class="source-score"> · {{ Number(source.score).toFixed(2) }}</span>
-      </div>
-      <div class="source-title">{{ source.citation_title || source.document }}</div>
-      <div v-if="source.section" class="source-meta">{{ source.section }}</div>
-    </div>
-    <div class="source-expand">
+    <button
+      type="button"
+      class="source-card"
+      :aria-expanded="expanded"
+      :aria-controls="`source-expand-${source.id}`"
+      @click="toggleExpanded"
+    >
+      <span class="source-header">
+        <span class="source-num">
+          📎 SUMBER [{{ source.id }}]<span v-if="source.score > 0" class="source-score"> · {{ Number(source.score).toFixed(2) }}</span>
+        </span>
+        <span class="source-toggle" aria-hidden="true">{{ expanded ? 'Tutup' : 'Detail' }}</span>
+      </span>
+      <span class="source-title">{{ source.citation_title || source.document }}</span>
+      <span v-if="source.section" class="source-meta">{{ source.section }}</span>
+    </button>
+    <div :id="`source-expand-${source.id}`" class="source-expand">
       <p v-if="source.snippet" class="expand-snippet">{{ source.snippet }}</p>
       <p v-if="source.hierarchy_path" class="expand-path">{{ source.hierarchy_path }}</p>
       <div v-if="source.doc_id" class="expand-actions">
@@ -26,11 +35,18 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import { openDocumentFile } from '@/services/documentService'
 
 const props = defineProps({
   source: { type: Object, required: true }
 })
+
+const expanded = ref(false)
+
+function toggleExpanded() {
+  expanded.value = !expanded.value
+}
 
 async function openPdf() {
   if (props.source.doc_id) {
@@ -51,8 +67,9 @@ function openContext() {
 
 <style scoped>
 .source-card-wrapper {
-  min-width: 150px;
-  max-width: 240px;
+  flex: 1 1 260px;
+  min-width: 240px;
+  max-width: 100%;
   position: relative;
 }
 
@@ -61,16 +78,26 @@ function openContext() {
 }
 
 .source-card {
+  width: 100%;
+  min-height: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
+  text-align: left;
   border: 1px solid var(--color-border);
-  border-left: 3px solid var(--color-gold);
-  padding: 8px 12px;
-  border-radius: 0 3px 0 0;
+  padding: 10px 12px;
+  border-radius: 4px 4px 0 0;
   background: var(--color-cream, #faf9f7);
-  transition: border-left-color 0.15s, box-shadow 0.15s;
+  box-shadow: inset 0 0 0 1px rgba(201, 168, 76, 0.08);
+  transition: border-color 0.15s, box-shadow 0.15s;
+  cursor: pointer;
 }
 
-.source-card-wrapper:hover .source-card {
-  border-left-color: var(--color-navy);
+.source-card-wrapper:hover .source-card,
+.source-card:focus-visible,
+.source-card-wrapper.expanded .source-card {
+  border-color: var(--color-navy);
   box-shadow: 0 2px 8px rgba(26, 58, 107, 0.08);
 }
 
@@ -83,44 +110,72 @@ function openContext() {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.2s ease, opacity 0.15s, padding 0.15s;
+  transition: opacity 0.15s;
 }
 
-.source-card-wrapper:hover .source-expand {
-  max-height: 200px;
+.source-card-wrapper:hover .source-expand,
+.source-card-wrapper:focus-within .source-expand,
+.source-card-wrapper.expanded .source-expand {
+  max-height: 260px;
   opacity: 1;
-  padding: 8px 12px;
+  padding: 10px 12px;
+}
+
+.source-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
 }
 
 .source-num {
+  min-width: 0;
   font-size: 9px;
-  color: var(--color-gold);
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  margin-bottom: 3px;
+  color: var(--color-gold-ink, #9d7928);
+  font-weight: 700;
+  letter-spacing: 0.4px;
   font-family: var(--font-ui);
+  overflow-wrap: anywhere;
 }
 
 .source-score {
-  color: var(--color-text-light);
-  font-weight: 400;
+  color: var(--color-text-panel-muted, #5c6f8a);
+  font-weight: 500;
+}
+
+.source-toggle {
+  flex: 0 0 auto;
+  font-family: var(--font-ui);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: var(--color-text-panel-muted, #5c6f8a);
 }
 
 .source-title {
-  font-size: 10px;
+  display: -webkit-box;
   color: var(--color-navy);
-  font-weight: 600;
-  margin-bottom: 2px;
   font-family: var(--font-ui);
-  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.35;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow-wrap: anywhere;
 }
 
 .source-meta {
-  font-size: 9px;
-  color: var(--color-text-muted);
+  display: -webkit-box;
+  color: var(--color-text-panel-muted, #5c6f8a);
   font-family: var(--font-ui);
+  font-size: 9px;
+  line-height: 1.45;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow-wrap: anywhere;
 }
 
 .expand-snippet {

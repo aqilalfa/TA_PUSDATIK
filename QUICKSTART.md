@@ -102,15 +102,17 @@ ls -lh data/documents/*/
 
 ### Langkah 5: Build & Run
 
+Mode Docker resmi untuk development saat ini adalah `docker-compose.dev.yml` + `docker-compose.gpu.yml`. Lihat `DOCKER-USAGE.md` untuk panduan lengkap.
+
 ```bash
-# Build semua containers (pertama kali займет ~10-15 menit)
-docker-compose -f docker-compose.dev.yml build
+# Build semua containers (pertama kali bisa memakan waktu ~10-15 menit)
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml build
 
 # Start services
-docker-compose -f docker-compose.dev.yml up -d
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml up -d
 
 # Watch logs untuk memastikan semua jalan
-docker-compose -f docker-compose.dev.yml logs -f
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml logs -f
 ```
 
 Tunggu hingga melihat:
@@ -194,7 +196,7 @@ File yang Anda edit akan otomatis reload:
 # Edit file di backend/app/
 # Uvicorn auto-reload secara otomatis
 # Lihat perubahan di logs
-docker-compose -f docker-compose.dev.yml logs -f backend
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml logs -f backend
 ```
 
 **Frontend:**
@@ -235,11 +237,11 @@ python scripts/download_models.py --force
 **Issue: Container crash**
 ```bash
 # Check logs
-docker-compose -f docker-compose.dev.yml logs backend
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml logs backend
 
 # Rebuild
-docker-compose -f docker-compose.dev.yml build backend --no-cache
-docker-compose -f docker-compose.dev.yml up -d backend
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml build backend --no-cache
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml up -d backend
 ```
 
 ## 📚 Next Steps After Setup

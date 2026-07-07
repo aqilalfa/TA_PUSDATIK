@@ -1,0 +1,167 @@
+{
+    "root_group": {
+        "groups": {},
+        "checks": {
+                "unauthorized chat request is rejected or rate-limited": {
+                    "fails": 0,
+                    "name": "unauthorized chat request is rejected or rate-limited",
+                    "path": "::unauthorized chat request is rejected or rate-limited",
+                    "id": "b943a1d4ef558cb238e98cc498a9eb54",
+                    "passes": 304
+                },
+                "failed login is rejected or rate-limited": {
+                    "path": "::failed login is rejected or rate-limited",
+                    "id": "a8bc7f4f41417f1ea23cd3a830ef2188",
+                    "passes": 182,
+                    "fails": 186,
+                    "name": "failed login is rejected or rate-limited"
+                },
+                "rate-limited response has Retry-After": {
+                    "name": "rate-limited response has Retry-After",
+                    "path": "::rate-limited response has Retry-After",
+                    "id": "69d919b7660ed39482b9234dd855e74f",
+                    "passes": 368,
+                    "fails": 0
+                }
+            },
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "metrics": {
+        "http_req_duration": {
+            "avg": 12912.512207142856,
+            "min": 4.1788,
+            "med": 12346.934150000001,
+            "max": 30494.677,
+            "p(90)": 23401.291429999994,
+            "p(95)": 25420.427104999984,
+            "thresholds": {
+                "p(95)<1500": true
+            }
+        },
+        "checks": {
+            "passes": 854,
+            "fails": 186,
+            "value": 0.8211538461538461
+        },
+        "iteration_duration": {
+            "p(90)": 23502.372549999993,
+            "p(95)": 25521.129789999984,
+            "avg": 13013.222854017858,
+            "min": 104.9804,
+            "med": 12447.449250000001,
+            "max": 30595.2733
+        },
+        "http_req_blocked": {
+            "avg": 0.40693139880952395,
+            "min": 0,
+            "med": 0,
+            "max": 12.9429,
+            "p(90)": 1.06997,
+            "p(95)": 1.0914599999999999
+        },
+        "error_status_count": {
+            "count": 186,
+            "rate": 2.346448149267407
+        },
+        "http_req_failed": {
+            "passes": 672,
+            "fails": 0,
+            "thresholds": {
+                "rate<0.50": true
+            },
+            "value": 1
+        },
+        "http_req_receiving": {
+            "avg": 0.07727842261904759,
+            "min": 0,
+            "med": 0,
+            "max": 1.5106,
+            "p(90)": 0.53603,
+            "p(95)": 0.5565
+        },
+        "vus": {
+            "value": 1,
+            "min": 1,
+            "max": 150
+        },
+        "dropped_iterations": {
+            "count": 1128,
+            "rate": 14.230072647170081
+        },
+        "status_429_count": {
+            "rate": 2.0689112713970683,
+            "count": 164
+        },
+        "http_req_sending": {
+            "min": 0,
+            "med": 0,
+            "max": 0.5903,
+            "p(90)": 0.5274199999999999,
+            "p(95)": 0.540045,
+            "avg": 0.05960208333333333
+        },
+        "http_reqs": {
+            "count": 672,
+            "rate": 8.477490087675793
+        },
+        "iterations": {
+            "count": 672,
+            "rate": 8.477490087675793
+        },
+        "data_sent": {
+            "count": 145920,
+            "rate": 1840.8264190381722
+        },
+        "http_req_connecting": {
+            "avg": 0.34175342261904795,
+            "min": 0,
+            "med": 0,
+            "max": 2.3742,
+            "p(90)": 1.06348,
+            "p(95)": 1.0794749999999997
+        },
+        "data_received": {
+            "rate": 1652.366263651582,
+            "count": 130981
+        },
+        "auth_rate_limited": {
+            "passes": 164,
+            "fails": 204,
+            "thresholds": {
+                "rate>0.01": false
+            },
+            "value": 0.44565217391304346
+        },
+        "chat_rejected_or_limited": {
+            "fails": 0,
+            "passes": 304,
+            "thresholds": {
+                "rate>0.95": false
+            },
+            "value": 1
+        },
+        "http_req_waiting": {
+            "max": 30494.1382,
+            "p(90)": 23401.291429999994,
+            "p(95)": 25420.184914999983,
+            "avg": 12912.375326636908,
+            "min": 4.1788,
+            "med": 12346.66445
+        },
+        "vus_max": {
+            "value": 150,
+            "min": 30,
+            "max": 150
+        },
+        "http_req_tls_handshaking": {
+            "avg": 0,
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-06-07T14:12:21.140453",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "groq",
+  "llm_judge": "qwen/qwen3-32b",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "faithfulness"
+  ],
+  "total_evaluated": 1,
+  "averages": {
+    "faithfulness": 1.0
+  },
+  "by_doc_type": {
+    "laporan": {
+      "faithfulness": 1.0
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "GT-039",
+      "source_doc": "Laporan Evaluasi SPBE Tahun 2024",
+      "doc_type": "laporan",
+      "question": "Apa domain yang mencetak skor evaluasi terendah secara nasional pada Laporan 2024?",
+      "answer": "Berdasarkan Laporan Pelaksanaan Evaluasi SPBE 2024, Domain Manajemen mencetak skor evaluasi terendah secara nasional dengan nilai indeks sebesar 1,86 [1]. Skor ini merupakan rata-rata paling rendah dibandingkan keempat domain lainnya yang dievaluasi dalam laporan tersebut [3].",
+      "ground_truth": "Domain Manajemen SPBE dengan skor 1,86.",
+      "scores": {
+        "faithfulness": 1.0
+      }
+    }
+  ]
+}

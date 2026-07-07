@@ -28,11 +28,14 @@ from pathlib import Path
 from datetime import datetime
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-sys.stdout.reconfigure(encoding="utf-8")
+stdout_reconfigure = getattr(sys.stdout, "reconfigure", None)
+if callable(stdout_reconfigure):
+    stdout_reconfigure(encoding="utf-8")
 
 from loguru import logger
 from app.core.rag.langchain_engine import langchain_engine
 from app.config import settings
+from app.core.rag.context_ids import enrich_context_identity
 
 
 GROUND_TRUTH_PATH = Path(__file__).parent.parent / "data" / "ground_truth.json"
@@ -40,6 +43,100 @@ RESULTS_PATH      = Path(__file__).parent.parent / "data" / "eval_results.json"
 REPORT_PATH       = Path(__file__).parent.parent / "data" / "eval_report.json"
 
 DEFAULT_MODEL = "qwen3.5:4b"
+
+
+def _slug_text(text: str, max_len: int = 80) -> str:
+    import re
+    return re.sub(r"[^a-z0-9]+", "_", (text or "").lower()).strip("_")[:max_len]
+
+
+def build_context_id(metadata: dict) -> str:
+    """Build a traceable ID for a retrieved context from best available metadata."""
+    metadata = enrich_context_identity(metadata)
+    if metadata.get("canonical_context_id"):
+        return str(metadata["canonical_context_id"])
+    if metadata.get("chunk_id"):
+        return f"dbchunk:{metadata['chunk_id']}"
+    if metadata.get("document_id") is not None and metadata.get("chunk_index") is not None:
+        return f"doc{metadata['document_id']}:idx{metadata['chunk_index']}"
+    if metadata.get("doc_id") and metadata.get("chunk_index") is not None:
+        return f"doc{metadata['doc_id']}:idx{metadata['chunk_index']}"
+
+    blob = " ".join(
+        str(metadata.get(k, ""))
+        for k in ("filename", "document_title", "judul_dokumen", "tentang")
+    )
+    section = metadata.get("context_header") or metadata.get("hierarchy") or metadata.get("pasal") or "unknown"
+    return f"{_slug_text(blob, 50)}:{_slug_text(str(section), 80)}"
+
+
+def build_retrieved_source(rank: int, doc) -> dict:
+    metadata = enrich_context_identity(dict(doc.metadata or {}))
+    return {
+        "rank": rank,
+        "context_id": build_context_id(metadata),
+        "document_id": metadata.get("document_id"),
+        "doc_id": metadata.get("doc_id"),
+        "chunk_id": metadata.get("chunk_id"),
+        "chunk_index": metadata.get("chunk_index"),
+        "source_doc": metadata.get("filename") or metadata.get("document_title") or metadata.get("judul_dokumen"),
+        "section": metadata.get("context_header") or metadata.get("hierarchy") or metadata.get("pasal"),
+        "metadata": metadata,
+    }
+
+
+def _infer_doc_type(source_doc: str, fallback: str = "unknown") -> str:
+    source = (source_doc or "").lower()
+    if "laporan" in source:
+        return "laporan"
+    if source:
+        return "peraturan"
+    return fallback
+
+
+def _normalize_ground_truth_item(item: dict) -> dict:
+    """Normalize supported ground-truth schemas into the evaluator schema."""
+    metadata = item.get("metadata") or {}
+    question = item.get("question") or item.get("pertanyaan") or item.get("user_input")
+    ground_truth = item.get("ground_truth") or item.get("answer") or item.get("jawaban") or item.get("reference")
+    source_doc = (
+        item.get("source_doc")
+        or item.get("sumber_dokumen")
+        or metadata.get("sumber_dokumen")
+        or item.get("sitasi")
+        or metadata.get("sitasi")
+        or "unknown"
+    )
+    doc_type = (
+        item.get("doc_type")
+        or metadata.get("jenis_dokumen")
+        or _infer_doc_type(source_doc, item.get("jenis") or metadata.get("jenis", "unknown"))
+    )
+
+    if not question or not ground_truth:
+        raise ValueError(f"Invalid ground truth item, missing question/answer fields: {item}")
+
+    return {
+        "id": item.get("id") or item.get("nomor"),
+        "source_doc": source_doc,
+        "doc_type": doc_type,
+        "question": question,
+        "ground_truth": ground_truth,
+    }
+
+
+def load_ground_truth(path: Path) -> list:
+    """Load JSON or JSONL ground truth and normalize field names."""
+    if path.suffix.lower() == ".jsonl":
+        items = [
+            json.loads(line)
+            for line in path.read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        ]
+    else:
+        items = json.loads(path.read_text(encoding="utf-8"))
+
+    return [_normalize_ground_truth_item(item) for item in items]
 
 
 # ---------------------------------------------------------------------------
@@ -58,7 +155,7 @@ async def collect_one(question: str, model: str) -> dict:
     )
     context    = retrieval["context"]
     query_type = retrieval.get("query_type", "general")
-    raw_docs   = retrieval.get("raw_docs", [])
+    raw_docs = retrieval.get("raw_docs", [])
     history    = []
 
     # Collect streaming answer
@@ -74,10 +171,17 @@ async def collect_one(question: str, model: str) -> dict:
 
     # Use full page_content from raw_docs so RAGAS gets complete chunk text, not 150-char snippets
     contexts = [doc.page_content for doc in raw_docs if doc.page_content]
-    return {"answer": answer, "contexts": contexts}
+    retrieved_sources = [build_retrieved_source(i, doc) for i, doc in enumerate(raw_docs, 1)]
+    retrieved_context_ids = [source["context_id"] for source in retrieved_sources]
+    return {
+        "answer": answer,
+        "contexts": contexts,
+        "retrieved_context_ids": retrieved_context_ids,
+        "retrieved_sources": retrieved_sources,
+    }
 
 
-async def phase_collect(ground_truth: list, model: str, sample: int = None) -> list:
+async def phase_collect(ground_truth: list, model: str, sample: int | None = None) -> list:
     """Jalankan semua pertanyaan ke RAG pipeline dan simpan hasilnya."""
     if not langchain_engine._initialized:
         logger.info("Initializing RAG engine...")
@@ -100,6 +204,8 @@ async def phase_collect(ground_truth: list, model: str, sample: int = None) -> l
                 "ground_truth": gt["ground_truth"],
                 "answer":       out["answer"],
                 "contexts":     out["contexts"],
+                "retrieved_context_ids": out.get("retrieved_context_ids", []),
+                "retrieved_sources": out.get("retrieved_sources", []),
                 "latency_s":    round(elapsed, 2),
             })
             logger.success(f"  answer {len(out['answer'])} chars, {len(out['contexts'])} contexts, {elapsed:.1f}s")
@@ -141,8 +247,11 @@ def score_semantic_similarity(answer: str, ground_truth: str) -> float:
     """
     if not langchain_engine._initialized:
         langchain_engine.initialize()
-    emb_a = langchain_engine.embeddings.embed_query(answer)
-    emb_b = langchain_engine.embeddings.embed_query(ground_truth)
+    embeddings = langchain_engine.embeddings
+    if embeddings is None:
+        raise RuntimeError("RAG embeddings are not initialized")
+    emb_a = embeddings.embed_query(answer)
+    emb_b = embeddings.embed_query(ground_truth)
     return _cosine(emb_a, emb_b)
 
 
@@ -284,8 +393,8 @@ def print_summary(report: dict):
 # Entry point
 # ---------------------------------------------------------------------------
 
-async def main(phase: str, sample: int, model: str):
-    ground_truth = json.loads(GROUND_TRUTH_PATH.read_text(encoding="utf-8"))
+async def main(phase: str, sample: int | None, model: str):
+    ground_truth = load_ground_truth(GROUND_TRUTH_PATH)
     logger.info(f"Ground truth: {len(ground_truth)} pertanyaan dari {GROUND_TRUTH_PATH.name}")
 
     if phase in ("collect", "both"):
@@ -310,6 +419,16 @@ if __name__ == "__main__":
                         help="Jumlah pertanyaan untuk tes cepat (default: semua)")
     parser.add_argument("--model",  default=DEFAULT_MODEL,
                         help=f"Model Ollama yang digunakan (default: {DEFAULT_MODEL})")
+    parser.add_argument("--ground-truth-path", type=Path, default=GROUND_TRUTH_PATH,
+                        help=f"Path ground truth JSON/JSONL (default: {GROUND_TRUTH_PATH})")
+    parser.add_argument("--results-path", type=Path, default=RESULTS_PATH,
+                        help=f"Path output hasil collect (default: {RESULTS_PATH})")
+    parser.add_argument("--report-path", type=Path, default=REPORT_PATH,
+                        help=f"Path output laporan score (default: {REPORT_PATH})")
     args = parser.parse_args()
+
+    GROUND_TRUTH_PATH = args.ground_truth_path
+    RESULTS_PATH = args.results_path
+    REPORT_PATH = args.report_path
 
     asyncio.run(main(args.phase, args.sample, args.model))

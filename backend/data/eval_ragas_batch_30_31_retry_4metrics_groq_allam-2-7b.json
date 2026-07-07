@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-06-10T10:03:59.478148",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "groq",
+  "llm_judge": "allam-2-7b",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 1,
+  "averages": {
+    "context_precision": 0.5,
+    "context_recall": null,
+    "faithfulness": null,
+    "answer_relevancy": 0.0
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.5,
+      "context_recall": null,
+      "faithfulness": null,
+      "answer_relevancy": 0.0
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_031",
+      "source_doc": "Perpres Nomor 95 Tahun 2018.pdf",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan keamanan SPBE sebagai prinsip berdasarkan Pasal 2 Perpres Nomor 95 Tahun 2018?",
+      "answer": "Berdasarkan Pasal 2 Perpres Nomor 95 Tahun 2018, **Keamanan** sebagaimana dimaksud pada ayat (1) huruf g merupakan kerahasiaan, keutuhan, ketersediaan, keaslian, dan kenirsangkalan (nonrepudiation) sumber daya yang mendukung SPBE [2].",
+      "ground_truth": "Berdasarkan Pasal 2 ayat (8) Perpres Nomor 95 Tahun 2018, prinsip Keamanan dalam SPBE merupakan kerahasiaan, keutuhan, ketersediaan, keaslian, dan kenirsangkalan (nonrepudiation) sumber daya yang mend...",
+      "scores": {
+        "context_precision": 0.49999999995,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": 0.0
+      }
+    }
+  ]
+}

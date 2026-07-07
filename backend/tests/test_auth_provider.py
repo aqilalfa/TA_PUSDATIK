@@ -57,7 +57,7 @@ def test_ldap_provider_provisions_shadow_user_and_maps_roles(tmp_path, monkeypat
     assert user.email == "john@bssn.go.id"
     assert user.name == "John Doe"
     assert user.department == "PUSDATIK"
-    assert user.roles == '["evaluator_spbe", "staf_pusdatik"]'
+    assert user.roles == '["staff"]'
     assert user.auth_provider == "ldap"
     assert user.external_id == "EMP-001"
 

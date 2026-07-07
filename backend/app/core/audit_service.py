@@ -7,9 +7,10 @@ Provides:
 - @audit_event decorator (for automatic logging in routes)
 """
 
+import hashlib
 import json
 from enum import Enum
-from datetime import datetime
+from datetime import datetime, timezone
 from functools import wraps
 from typing import Optional, Dict, Any
 from sqlalchemy.orm import Session
@@ -28,6 +29,9 @@ class AuditEventType(str, Enum):
     USER_CREATED = "USER_CREATED"
     USER_UPDATED = "USER_UPDATED"
     DOCUMENT_UPLOADED = "DOCUMENT_UPLOADED"
+    LLM_PROMPT_INJECTION_BLOCKED = "LLM_PROMPT_INJECTION_BLOCKED"
+    LLM_UNSAFE_OUTPUT_BLOCKED = "LLM_UNSAFE_OUTPUT_BLOCKED"
+    INGESTION_PROMPT_INJECTION_QUARANTINED = "INGESTION_PROMPT_INJECTION_QUARANTINED"
 
 
 class AuditLogger:
@@ -72,7 +76,7 @@ class AuditLogger:
             status=status,
             ip_address=ip_address,
             details=details or "{}",
-            timestamp=datetime.utcnow(),
+            timestamp=datetime.now(timezone.utc).replace(tzinfo=None),
         )
         self.session.add(log_entry)
         self.session.commit()
@@ -84,6 +88,41 @@ class AuditLogger:
         )
         
         return log_entry
+
+    def log_llm_security_event(
+        self,
+        event_type: str,
+        user_id: Optional[int],
+        username: str,
+        action: str,
+        resource: str,
+        categories: list[str],
+        prompt_preview: str = "",
+        ip_address: Optional[str] = None,
+        extra: Optional[Dict[str, Any]] = None,
+    ) -> AuditLog:
+        """Persist an LLM security event without storing full malicious content."""
+        preview = str(prompt_preview or "")
+        details: Dict[str, Any] = {
+            "categories": categories,
+            "prompt_hash": hashlib.sha256(preview.encode("utf-8")).hexdigest() if preview else "",
+            "preview_length": len(preview),
+        }
+        if extra:
+            details.update(extra)
+
+        event_type_value = event_type.value if isinstance(event_type, Enum) else str(event_type)
+
+        return self.log_event(
+            event_type=event_type_value,
+            user_id=user_id,
+            username=username or "unknown",
+            action=action,
+            resource=resource,
+            status="blocked",
+            ip_address=ip_address,
+            details=json.dumps(details, ensure_ascii=False),
+        )
 
     def get_user_events(self, user_id: int, limit: int = 100) -> list:
         """Get recent audit events for a user"""
@@ -109,7 +148,8 @@ class AuditLogger:
         """Get failed login attempts for a user (bruteforce detection)"""
         from datetime import timedelta
 
-        cutoff_time = datetime.utcnow() - timedelta(hours=hours)
+        cutoff_time = datetime.now(timezone.utc).replace(tzinfo=None) - timedelta(hours=hours)
+
         return (
             self.session.query(AuditLog)
             .filter(AuditLog.username == username)

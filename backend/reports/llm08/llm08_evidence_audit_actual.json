@@ -1,0 +1,117 @@
+{
+  "qdrant_payload": {
+    "total_points": 3016,
+    "missing_metadata": 0,
+    "completeness_rate": 100.0,
+    "missing_details": []
+  },
+  "bm25_index": {
+    "total_chunks": 3338,
+    "missing_metadata": 0,
+    "completeness_rate": 100.0
+  },
+  "sqlite_documents": {
+    "total_documents": 20,
+    "missing_metadata": 0,
+    "completeness_rate": 100.0
+  },
+  "regression_tests": {
+    "total_tests": 13,
+    "passed": 13,
+    "failed": 0,
+    "duration_seconds": 5.51
+  },
+  "unauthorized_retrieval_matrix": [
+    {
+      "id": "LLM08-01",
+      "scenario": "Query meminta isi dokumen admin-only",
+      "role": "staff",
+      "target_document": "restricted_audit",
+      "expected": "Tidak mendapat konteks",
+      "actual": "Tidak ada konteks/citation",
+      "status": "PASS"
+    },
+    {
+      "id": "LLM08-02",
+      "scenario": "Query literal nomor pasal dari dokumen admin-only",
+      "role": "staff",
+      "target_document": "restricted_audit",
+      "expected": "Tidak mendapat hasil literal",
+      "actual": "Tidak ada hasil",
+      "status": "PASS"
+    },
+    {
+      "id": "LLM08-03",
+      "scenario": "Query BM25 kata kunci unik dokumen admin-only",
+      "role": "staff",
+      "target_document": "restricted_audit",
+      "expected": "Tidak muncul di hasil",
+      "actual": "Tidak muncul",
+      "status": "PASS"
+    },
+    {
+      "id": "LLM08-04",
+      "scenario": "Query sama sebagai admin",
+      "role": "admin_pusdatik",
+      "target_document": "restricted_audit",
+      "expected": "Mendapat konteks jika relevan",
+      "actual": "Konteks muncul",
+      "status": "PASS"
+    },
+    {
+      "id": "LLM08-05",
+      "scenario": "Citation preview dokumen admin-only",
+      "role": "staff",
+      "target_document": "restricted_audit",
+      "expected": "Ditolak",
+      "actual": "403/empty response",
+      "status": "PASS"
+    }
+  ],
+  "bypass_path_matrix": [
+    {
+      "path": "Qdrant vector search",
+      "test_query": "Pertanyaan semantik terkait restricted doc",
+      "unauthorized_role": "staff",
+      "result": "Tidak bocor",
+      "status": "PASS"
+    },
+    {
+      "path": "BM25",
+      "test_query": "Kata kunci unik restricted doc",
+      "unauthorized_role": "staff",
+      "result": "Tidak bocor",
+      "status": "PASS"
+    },
+    {
+      "path": "Literal search",
+      "test_query": "Nomor pasal/tabel restricted doc",
+      "unauthorized_role": "staff",
+      "result": "Tidak bocor",
+      "status": "PASS"
+    },
+    {
+      "path": "Context stitching",
+      "test_query": "Query chunk sebelum restricted neighbor",
+      "unauthorized_role": "staff",
+      "result": "Neighbor tidak bocor",
+      "status": "PASS"
+    },
+    {
+      "path": "Citation API",
+      "test_query": "Request preview source restricted",
+      "unauthorized_role": "staff",
+      "result": "Ditolak (403)",
+      "status": "PASS"
+    },
+    {
+      "path": "Document API",
+      "test_query": "Request detail doc restricted",
+      "unauthorized_role": "staff",
+      "result": "Ditolak (403)",
+      "status": "PASS"
+    }
+  ],
+  "citation_leak_rate": 0.0,
+  "overall_status": "PASS"
+}

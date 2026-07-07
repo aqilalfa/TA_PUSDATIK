@@ -268,6 +268,7 @@ class TestLangchainEngineDocIdFilter:
             for c in (flt.must or [])
         ), f"Filter.must should contain a condition on 'doc_id', got: {flt.must}"
 
+
 # ============================================================================
 # Bug #3 — llm_client.py: num_ctx=4096 silently truncates context
 # ============================================================================

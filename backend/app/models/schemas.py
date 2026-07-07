@@ -2,7 +2,7 @@
 Pydantic schemas for request/response validation
 """
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from typing import List, Optional, Dict, Any, Union
 from datetime import datetime
 
@@ -29,8 +29,7 @@ class UserResponse(BaseModel):
     created_at: datetime
     last_active: datetime
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 # ============================================================================
@@ -51,8 +50,7 @@ class SessionResponse(BaseModel):
     updated_at: datetime
     is_active: bool
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 # ============================================================================
@@ -62,14 +60,13 @@ class SessionResponse(BaseModel):
 
 class ChatRequest(BaseModel):
     session_id: Optional[str] = None
-    message: str
+    message: str = Field(..., min_length=1, max_length=5000)
     model: Optional[str] = None
-    use_rag: bool = True
     use_structured_fact: bool = False
-    top_k: int = 5
-    max_tokens: int = 2048
+    top_k: int = Field(default=5, ge=1, le=20)
+    max_tokens: int = Field(default=2048, ge=128, le=4096)
     document_id: Optional[str] = None
-    max_quality_retries: Optional[int] = None  # override MAX_QUALITY_RETRY_ATTEMPTS; 0 = skip retries
+    max_quality_retries: Optional[int] = Field(default=None, ge=0, le=3)  # override MAX_QUALITY_RETRY_ATTEMPTS; 0 = skip retries
 
 
 class ChatResponse(BaseModel):
@@ -85,8 +82,7 @@ class ConversationMessage(BaseModel):
     sources: Optional[List[Dict[str, Any]]] = []
     timestamp: datetime
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 # ============================================================================
@@ -109,8 +105,7 @@ class DocumentResponse(BaseModel):
     processed_at: Optional[datetime]
     error_message: Optional[str]
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class DocumentStatus(BaseModel):

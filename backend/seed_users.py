@@ -30,7 +30,7 @@ try:
             name='Evaluator SPBE', 
             email='evaluator@bssn.go.id',
             hashed_password=test_pwd_hash,
-            roles='["evaluator_spbe"]',
+            roles='["staff"]',
             department='DEPUTI_EVALUASI'
         )
         db.add(eval_user)
@@ -38,7 +38,7 @@ try:
         print('[OK] Test user created: evaluator@bssn.go.id')
     else:
         eval_user.hashed_password = test_pwd_hash
-        eval_user.roles = '["evaluator_spbe"]'
+        eval_user.roles = '["staff"]'
         db.commit()
         print('[OK] Test user updated: evaluator@bssn.go.id')
 finally:

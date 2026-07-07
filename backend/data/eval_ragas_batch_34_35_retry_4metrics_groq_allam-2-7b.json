@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-06-10T10:33:26.068187",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "groq",
+  "llm_judge": "allam-2-7b",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 1,
+  "averages": {
+    "context_precision": 0.0,
+    "context_recall": null,
+    "faithfulness": null,
+    "answer_relevancy": 0.5895
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.0,
+      "context_recall": null,
+      "faithfulness": null,
+      "answer_relevancy": 0.5895
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_035",
+      "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+      "doc_type": "peraturan",
+      "question": "Siapa saja yang termasuk Penyelenggara Sistem Elektronik Lingkup Privat menurut PP Nomor 71 Tahun 2019?",
+      "answer": "Menurut Pasal 1 ayat (6) dan Pasal 2 ayat (5) PP Nomor 71 Tahun 2019, Penyelenggara Sistem Elektronik Lingkup Privat meliputi Orang, Badan Usaha, dan masyarakat yang menyediakan, mengelola, atau mengoperasikan Sistem Elektronik secara sendiri-sendiri maupun bersama-sama [2].\n\nSelain itu, kategori sp...",
+      "ground_truth": "Berdasarkan Pasal 2 ayat (5) PP Nomor 71 Tahun 2019, Penyelenggara Sistem Elektronik Lingkup Privat meliputi: (a) Penyelenggara yang diatur atau diawasi oleh Kementerian/Lembaga; dan (b) Penyelenggara...",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": 0.5894728476766058
+      }
+    }
+  ]
+}

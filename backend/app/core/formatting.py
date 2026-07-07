@@ -146,9 +146,8 @@ def append_citation_reference_block(
 
     cited_ids = _extract_citation_ids(base_answer)
     if not cited_ids:
-        cited_ids = [int(s.get("id")) for s in sources[: min(3, len(sources))] if s.get("id")]
-    else:
-        cited_ids = sorted(cited_ids)
+        return base_answer
+    cited_ids = sorted(cited_ids)
 
     source_by_id = {}
     for src in sources:
@@ -177,16 +176,82 @@ def append_citation_reference_block(
 
 
 def filter_used_sources(answer: str, sources: List[Dict]) -> List[Dict]:
-    """Filter sources to only include those actually cited in the answer."""
-    citations = re.findall(r"\[(\d+)\]", answer)
-    used_ids = set(int(c) for c in citations)
+    """Return only sources cited by the answer while preserving citation IDs."""
+    core_answer = re.split(r"(?im)^Referensi\s+Dokumen\s*:", answer or "", maxsplit=1)[0]
+    citations = re.findall(r"\[(\d+)\]", core_answer)
+    used_ids = set()
+    for citation in citations:
+        try:
+            used_ids.add(int(citation))
+        except ValueError:
+            continue
 
     if not used_ids:
-        return sources[:3]
+        return []
 
-    filtered = [s for s in sources if s.get("id") in used_ids]
+    return [s for s in sources if s.get("id") in used_ids]
 
-    for i, s in enumerate(filtered, 1):
-        s["id"] = i
 
-    return filtered
+def renumber_citations_and_sources(answer: str, sources: List[Dict]) -> tuple[str, List[Dict]]:
+    """Renumber cited sources by first citation appearance and update source IDs to match.
+
+    The retrieval layer may provide sources as [1..N], while the model may cite only
+    [4], [2], and [5]. For user-facing IEEE-style citations, the final answer should
+    show [1], [2], [3] and the source cards should use those same IDs.
+    """
+    base_answer = answer or ""
+    parts = re.split(r"(?im)^Referensi\s+Dokumen\s*:", base_answer, maxsplit=1)
+    core_answer = parts[0]
+    reference_suffix = ""
+    if len(parts) > 1:
+        reference_suffix = "Referensi Dokumen:" + parts[1]
+
+    citation_order: List[int] = []
+    seen = set()
+    for raw_id in re.findall(r"\[(\d+)\]", core_answer):
+        try:
+            source_id = int(raw_id)
+        except ValueError:
+            continue
+        if source_id not in seen:
+            seen.add(source_id)
+            citation_order.append(source_id)
+
+    if not citation_order:
+        return core_answer.strip(), []
+
+    source_by_id = {}
+    for src in sources:
+        src_id = src.get("id")
+        if isinstance(src_id, int):
+            source_by_id[src_id] = src
+
+    id_map = {
+        old_id: new_id
+        for new_id, old_id in enumerate(citation_order, 1)
+        if old_id in source_by_id
+    }
+
+    def replace_citation(match):
+        old_id = int(match.group(1))
+        new_id = id_map.get(old_id)
+        return f"[{new_id}]" if new_id is not None else match.group(0)
+
+    renumbered_answer = re.sub(r"\[(\d+)\]", replace_citation, core_answer).strip()
+    if reference_suffix:
+        # Drop stale reference blocks; append_citation_reference_block will rebuild them.
+        renumbered_answer = renumbered_answer.strip()
+
+    renumbered_sources: List[Dict] = []
+    for old_id in citation_order:
+        src = source_by_id.get(old_id)
+        new_id = id_map.get(old_id)
+        if src is None or new_id is None:
+            continue
+        updated = dict(src)
+        updated["id"] = new_id
+        updated["original_id"] = old_id
+        renumbered_sources.append(updated)
+
+    return renumbered_answer, renumbered_sources
+

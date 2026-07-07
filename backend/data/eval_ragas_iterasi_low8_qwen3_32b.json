@@ -1,0 +1,155 @@
+{
+  "generated_at": "2026-06-05T17:17:59.122342",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "groq",
+  "llm_judge": "qwen/qwen3-32b",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 8,
+  "averages": {
+    "context_precision": 0.6417,
+    "context_recall": 0.875,
+    "faithfulness": 0.75,
+    "answer_relevancy": 0.7418
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.7048,
+      "context_recall": 1.0,
+      "faithfulness": 0.75,
+      "answer_relevancy": 0.7616
+    },
+    "laporan": {
+      "context_precision": 0.2,
+      "context_recall": 0.0,
+      "faithfulness": null,
+      "answer_relevancy": 0.6034
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "GT-007",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa tujuan diadakannya Tata Kelola SPBE?",
+      "answer": "Tujuan dari Tata Kelola Sistem Pemerintahan Berbasis Elektronik (SPBE) adalah untuk memastikan penerapan unsur-unsur SPBE secara terpadu [1]. Hal ini juga bertujuan agar penerapan unsur tersebut dapat dilakukan dengan cara yang terintegrasi dan konsisten di seluruh sistem pemerintahan [3].",
+      "ground_truth": "Memastikan penerapan unsur-unsur SPBE dilaksanakan secara terpadu.",
+      "scores": {
+        "context_precision": 0.8333333332916666,
+        "context_recall": 1.0,
+        "faithfulness": null,
+        "answer_relevancy": 0.7610041045594964
+      }
+    },
+    {
+      "id": "GT-009",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Untuk berapa lama Arsitektur SPBE Nasional disusun?",
+      "answer": "Arsitektur SPBE Nasional disusun untuk jangka waktu 5 (lima) tahun [3], dan juga diatur dalam Perpres Nomor 95 Tahun 2018 bahwa Arsitektur SPBE Nasional disusun untuk jangka waktu tersebut [4]. Selain itu, dokumen yang sama menyebutkan bahwa Arsitektur SPBE Nasional dilakukan reviu pada paruh waktu ...",
+      "ground_truth": "Disusun untuk jangka waktu 5 (lima) tahun.",
+      "scores": {
+        "context_precision": 0.19999999998,
+        "context_recall": 1.0,
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.6981513742915614
+      }
+    },
+    {
+      "id": "GT-013",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "question": "Siapa yang berhak melakukan Penilaian Dokumen?",
+      "answer": "Penilaian Dokumen dilakukan oleh Tim Asesor Eksternal untuk memverifikasi informasi dari hasil Penilaian Mandiri berdasarkan dokumen jawaban, penjelasan, dan bukti pendukung yang disampaikan oleh Tim Asesor Internal atau Responden [4]. Selain itu, dalam konteks evaluasi SPBE, kegiatan ini juga merup...",
+      "ground_truth": "Tim Asesor Eksternal.",
+      "scores": {
+        "context_precision": 0.99999999998,
+        "context_recall": 1.0,
+        "faithfulness": 0.75,
+        "answer_relevancy": 0.48410030763837875
+      }
+    },
+    {
+      "id": "GT-020",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "question": "Apa predikat SPBE untuk nilai indeks di bawah 1,8?",
+      "answer": "Berdasarkan dokumen Permenpan RB Nomor 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE), untuk nilai indeks SPBE di bawah 1,8 predikat yang diberikan adalah \"Kurang\". Hal ini tercantum dalam Tabel 13 Predikat Penilaian SPBE pada dokumen tersebut [1].",
+      "ground_truth": "Predikat Kurang.",
+      "scores": {
+        "context_precision": 0.6999999999766667,
+        "context_recall": 1.0,
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.7738889941490998
+      }
+    },
+    {
+      "id": "GT-021",
+      "source_doc": "Perpres Nomor 82 Tahun 2023",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan Aplikasi SPBE Prioritas?",
+      "answer": "Berdasarkan dokumen yang diberikan, berikut adalah penjelasan mengenai Aplikasi SPBE Prioritas:\n\nAplikasi SPBE Prioritas didefinisikan sebagai **Aplikasi SPBE** yang memiliki dampak luas dan merupakan perwujudan nyata dari Layanan SPBE yang berkualitas serta tepercaya [1]. Secara umum, **Aplikasi SP...",
+      "ground_truth": "Aplikasi SPBE berdampak luas yang merupakan wujud nyata layanan SPBE berkualitas dan tepercaya.",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9748605408445409
+      }
+    },
+    {
+      "id": "GT-027",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "question": "Siapa entitas yang bertugas sebagai Pelaksana Audit Keamanan SPBE?",
+      "answer": "Berdasarkan dokumen Peraturan Badan Siber dan Sandi Negara Nomor 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik, entitas yang bertugas sebagai Pelaksana Audit Keamanan SPBE adalah LATIK cakupan Keamanan SPBE [5]. LATIK ini terdiri dari d...",
+      "ground_truth": "LATIK cakupan Keamanan SPBE yang meliputi LATIK pemerintah maupun LATIK Terakreditasi yang terdaftar.",
+      "scores": {
+        "context_precision": 0.19999999998,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7324426606863841
+      }
+    },
+    {
+      "id": "GT-032",
+      "source_doc": "PP Nomor 71 Tahun 2019",
+      "doc_type": "peraturan",
+      "question": "Apa sanksi administratif jika Penyelenggara Sistem Elektronik melakukan pelanggaran?",
+      "answer": "Jika Penyelenggara Sistem Elektronik melakukan pelanggaran terhadap ketentuan peraturan perundang-undangan, mereka dikenai sanksi administratif sebagaimana diatur dalam Pasal 84 ayat (1) dan (2). Sanksi tersebut dapat berupa teguran tertulis, denda administratif, penghentian sementara, pemutusan Aks...",
+      "ground_truth": "Teguran tertulis, denda administratif, penghentian sementara, pemutusan Akses, dan/atau dikeluarkan dari daftar.",
+      "scores": {
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "faithfulness": 0.75,
+        "answer_relevancy": 0.9067667319701825
+      }
+    },
+    {
+      "id": "GT-039",
+      "source_doc": "Laporan Evaluasi SPBE Tahun 2024",
+      "doc_type": "laporan",
+      "question": "Apa domain yang mencetak skor evaluasi terendah secara nasional pada Laporan 2024?",
+      "answer": "Berdasarkan data capaian instansi dalam Laporan Pelaksanaan Evaluasi SPBE Tahun 2024 untuk kategori wilayah Nasional, terdapat beberapa entri dengan rincian nilai per domain sebagai berikut [1][2][3][4][5]:\n\n*   **Pemerintah Provinsi Papua Selatan** mencatat skor terendah pada domain Kebijakan Inter...",
+      "ground_truth": "Domain Manajemen SPBE dengan skor 1,86.",
+      "scores": {
+        "context_precision": 0.19999999998,
+        "context_recall": 0.0,
+        "faithfulness": null,
+        "answer_relevancy": 0.6034263431462402
+      }
+    }
+  ]
+}

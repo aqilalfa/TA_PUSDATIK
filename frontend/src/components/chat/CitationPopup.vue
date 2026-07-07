@@ -142,9 +142,10 @@ defineExpose({ show, hide, scheduleClose, cancelClose })
   width: 260px;
   background: white;
   border: 1px solid var(--color-border);
-  border-left: 3px solid var(--color-gold);
-  border-radius: 0 4px 4px 4px;
-  box-shadow: 0 4px 20px rgba(26, 58, 107, 0.14);
+  border-radius: 4px;
+  box-shadow:
+    inset 0 0 0 1px rgba(201, 168, 76, 0.12),
+    0 4px 20px rgba(26, 58, 107, 0.14);
   padding: 10px 12px;
   font-family: var(--font-ui);
   animation: popupIn 0.15s ease;

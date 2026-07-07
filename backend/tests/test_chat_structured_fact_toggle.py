@@ -92,6 +92,7 @@ def test_chat_request_defaults_to_structured_fact_disabled():
     request = ChatRequest(message="Apa yang dimaksud dengan Layanan SPBE?")
 
     assert request.use_structured_fact is False
+    assert not hasattr(request, "use_rag")
 
 
 def test_chat_stream_skips_structured_fact_by_default(client):
@@ -100,7 +101,6 @@ def test_chat_stream_skips_structured_fact_by_default(client):
         json={
             "session_id": "session-1",
             "message": "Apa saja prinsip-prinsip dalam pelaksanaan SPBE?",
-            "use_rag": True,
         },
     )
 
@@ -116,7 +116,6 @@ def test_chat_stream_uses_structured_fact_when_explicitly_enabled(client):
         json={
             "session_id": "session-1",
             "message": "Apa saja prinsip-prinsip dalam pelaksanaan SPBE?",
-            "use_rag": True,
             "use_structured_fact": True,
         },
     )
@@ -132,7 +131,6 @@ def test_chat_stream_can_disable_structured_fact_for_pure_rag(client):
         json={
             "session_id": "session-1",
             "message": "Apa saja prinsip-prinsip dalam pelaksanaan SPBE?",
-            "use_rag": True,
             "use_structured_fact": False,
         },
     )
@@ -141,6 +139,69 @@ def test_chat_stream_can_disable_structured_fact_for_pure_rag(client):
     assert "pure rag answer" in response.text
     assert "structured-fact-index" not in response.text
     assert '"structured_fact"' not in response.text
+
+
+def test_chat_stream_replaces_invalid_llm09_answer_with_safe_fallback(client, monkeypatch):
+    async def uncited_stream_answer(**_kwargs):
+        yield "jawaban tanpa sitasi yang tidak boleh menjadi final"
+
+    monkeypatch.setattr(chat_routes.langchain_engine, "stream_answer", uncited_stream_answer)
+    monkeypatch.setattr(
+        chat_routes,
+        "validate_answer",
+        lambda *_args, **_kwargs: {
+            "is_valid": False,
+            "has_citations": False,
+            "warnings": ["Jawaban tidak memiliki referensi/sitasi inline pada klaim jawaban"],
+            "confidence": "low",
+            "citation_count": 0,
+        },
+    )
+
+    response = client.post(
+        "/api/chat/stream",
+        json={
+            "session_id": "session-1",
+            "message": "Apa yang dimaksud dengan SPBE?",
+            "use_structured_fact": False,
+        },
+    )
+
+    assert response.status_code == 200
+    assert "belum dapat memverifikasi jawaban" in response.text
+    assert "jawaban tanpa sitasi yang tidak boleh menjadi final" in response.text
+    assert '"is_valid": false' in response.text
+
+
+def test_chat_stream_returns_insufficient_context_without_calling_llm(client, monkeypatch):
+    async def fail_if_llm_called(**_kwargs):
+        raise AssertionError("LLM must not be called when retrieval has no sources")
+        yield "unreachable"
+
+    monkeypatch.setattr(
+        chat_routes.langchain_engine,
+        "retrieve_context",
+        lambda **_kwargs: {
+            "sources": [],
+            "context": "Tidak ada dokumen yang ditemukan.",
+            "query_type": "general",
+        },
+    )
+    monkeypatch.setattr(chat_routes.langchain_engine, "stream_answer", fail_if_llm_called)
+
+    response = client.post(
+        "/api/chat/stream",
+        json={
+            "session_id": "session-1",
+            "message": "Apa aturan untuk topik yang tidak ada di dokumen?",
+            "use_structured_fact": False,
+        },
+    )
+
+    assert response.status_code == 200
+    assert "konteks dokumen yang tersedia belum cukup" in response.text.lower()
+    assert '"model_used": "llm09-insufficient-context"' in response.text
+    assert '"source_count": 0' in response.text
 
 
 def test_ground_truth_eval_defaults_to_pure_rag_report_semantics():

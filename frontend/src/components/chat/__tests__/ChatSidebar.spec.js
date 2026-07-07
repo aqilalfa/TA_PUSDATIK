@@ -2,6 +2,15 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { mount, RouterLinkStub } from '@vue/test-utils'
 import ChatSidebar from '../ChatSidebar.vue'
 
+vi.mock('@/services/auth', () => ({
+  getCurrentUserProfile: vi.fn(() => ({
+    username: 'evaluator@bssn.go.id',
+    display_name: 'Evaluator SPBE',
+    roles: ['staff']
+  })),
+  isAdminUser: vi.fn(() => false)
+}))
+
 const NOW = new Date('2026-04-25T10:00:00')
 const YESTERDAY = new Date('2026-04-24T10:00:00')
 const THREE_DAYS_AGO = new Date('2026-04-22T10:00:00')
@@ -156,5 +165,16 @@ describe('ChatSidebar — inline rename', () => {
     await wrapper.find('.session-rename-btn').trigger('click')
     await wrapper.find('.session-item').trigger('click')
     expect(wrapper.emitted('load-session')).toBeFalsy()
+  })
+})
+
+describe('ChatSidebar — role-based document navigation', () => {
+  it('hides the document management shortcut for non-admin users', () => {
+    const wrapper = mountSidebar()
+
+    const documentLinks = wrapper.findAllComponents(RouterLinkStub)
+      .filter((link) => link.props('to') === '/documents')
+
+    expect(documentLinks).toHaveLength(0)
   })
 })

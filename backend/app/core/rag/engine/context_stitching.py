@@ -1,10 +1,11 @@
-from typing import List, Dict, Any, Optional, Tuple, Set
+from typing import List, Dict, Any, Optional, Tuple, Set, cast
 from loguru import logger
 from langchain_core.documents import Document
 from qdrant_client import QdrantClient
 from qdrant_client.models import Filter, FieldCondition, MatchValue, MatchAny
 
 from app.core.rag.utils import safe_int, longest_suffix_prefix_overlap
+from app.core.rag.access_control import ADMIN_ROLE, NO_MATCH_ROLE, parse_user_roles
 
 class ContextStitcher:
     def __init__(self, qdrant_client: QdrantClient):
@@ -13,13 +14,20 @@ class ContextStitcher:
     def fetch_neighbor_documents(
         self, 
         centers_by_doc: Dict[str, Set[int]], 
-        collection_name: str
+        collection_name: str,
+        current_user=None,
     ) -> List[Document]:
         """Fetch ±1 neighboring chunks for primary documents from Qdrant."""
         if not centers_by_doc:
             return []
 
-        should_conditions = []
+        should_conditions: list[Any] = []
+        roles = parse_user_roles(current_user)
+        role_condition = None
+        if current_user is not None and not roles:
+            role_condition = FieldCondition(key="allowed_roles", match=MatchAny(any=[NO_MATCH_ROLE]))
+        if roles and ADMIN_ROLE not in roles:
+            role_condition = FieldCondition(key="allowed_roles", match=MatchAny(any=roles))
         for doc_id, indices in centers_by_doc.items():
             doc_neighbors = set()
             for idx in indices:
@@ -31,11 +39,14 @@ class ContextStitcher:
             doc_neighbors -= indices
             
             if doc_neighbors:
+                must_conditions: list[Any] = [
+                    FieldCondition(key="doc_id", match=MatchValue(value=doc_id)),
+                    FieldCondition(key="chunk_index", match=MatchAny(any=list(doc_neighbors))),
+                ]
+                if role_condition is not None:
+                    must_conditions.append(role_condition)
                 should_conditions.append(
-                    Filter(must=[
-                        FieldCondition(key="doc_id", match=MatchValue(value=doc_id)),
-                        FieldCondition(key="chunk_index", match=MatchAny(any=list(doc_neighbors)))
-                    ])
+                    Filter(must=must_conditions)
                 )
 
         if not should_conditions:
@@ -52,11 +63,13 @@ class ContextStitcher:
             
             docs = []
             for p in points:
-                payload = p.payload  # flat Qdrant payload — no 'payload.' nesting (confirmed by retrievers.py)
+                payload = cast(dict[str, Any], p.payload or {})  # flat Qdrant payload — no 'payload.' nesting
                 # Tag these as neighbors for merging logic
                 # Find which center this belongs to
-                doc_id = payload.get("doc_id")
+                doc_id = str(payload.get("doc_id") or "")
                 idx = safe_int(payload.get("chunk_index"))
+                if idx is None:
+                    continue
                 
                 # Check if it's a neighbor of any center in that doc
                 centers = centers_by_doc.get(doc_id, set())
@@ -66,7 +79,7 @@ class ContextStitcher:
                 
                 if neighbor_of != -1:
                     payload["_neighbor_of_chunk_index"] = neighbor_of
-                    docs.append(Document(page_content=payload.get("text", ""), metadata=payload))
+                    docs.append(Document(page_content=str(payload.get("text", "")), metadata=payload))
             return docs
         except Exception as e:
             logger.error(f"[NeighborFetch] Failed: {e}")
@@ -93,7 +106,8 @@ class ContextStitcher:
     def expand_docs_with_neighbor_context(
         self, 
         primary_docs: List[Document], 
-        collection_name: str
+        collection_name: str,
+        current_user=None,
     ) -> List[Document]:
         """Combine primary documents with their ±1 neighbors for fuller context."""
         if not primary_docs:
@@ -110,7 +124,7 @@ class ContextStitcher:
             centers_by_doc.setdefault(doc_id, set()).add(chunk_index)
 
         # 2. Fetch neighbors
-        neighbor_docs = self.fetch_neighbor_documents(centers_by_doc, collection_name)
+        neighbor_docs = self.fetch_neighbor_documents(centers_by_doc, collection_name, current_user=current_user)
         
         # 3. Group by center
         neighbors_by_anchor: Dict[Tuple[str, int], List[Document]] = {}

@@ -360,7 +360,7 @@ class TestLDAPProviderWithMockLDAP:
         assert user is not None
         assert user.email == "admin@bssn.go.id"
         assert "admin_pusdatik" in user.roles
-        assert "manager_evaluasi" in user.roles
+        assert "staff" in user.roles
     
     def test_ldap_group_mapping_with_all_test_users(self, mock_ldap_server):
         """Test role mapping works for all test users"""
@@ -377,11 +377,11 @@ class TestLDAPProviderWithMockLDAP:
             # Verify specific roles
             if username == "admin":
                 assert "admin_pusdatik" in roles
-                assert "manager_evaluasi" in roles
+                assert "staff" in roles
             elif username == "evaluator":
-                assert "evaluator_spbe" in roles
+                assert "staff" in roles
             elif username == "staff":
-                assert "staf_pusdatik" in roles
+                assert "staff" in roles
 
 
 class TestRealLDAPScenarios:

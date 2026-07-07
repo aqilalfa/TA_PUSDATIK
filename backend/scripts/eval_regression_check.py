@@ -92,7 +92,7 @@ def _post_query(backend: str, request_body: dict, timeout: float) -> dict | None
     try:
         r = requests.post(
             f"{backend.rstrip('/')}/api/chat/stream",
-            json={**request_body, "use_rag": True, "max_tokens": request_body.get("max_tokens", 400)},
+            json={**request_body, "max_tokens": request_body.get("max_tokens", 400)},
             timeout=timeout,
             stream=False,
         )

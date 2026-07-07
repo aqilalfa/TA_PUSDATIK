@@ -1,0 +1,602 @@
+- generic [ref=e4]:
+  - complementary [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]: Asisten Hukum SPBE
+      - button "Chat Baru" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+        - generic [ref=e10]: Chat Baru
+    - generic [ref=e11]:
+      - generic [ref=e88]: HARI INI
+      - generic [ref=e89] [cursor=pointer]:
+        - generic [ref=e91]: Apa dasar hukum penerapan SPBE di instansi pemerintah
+        - button "Ubah nama" [ref=e92]:
+          - img [ref=e93]
+        - button "Hapus sesi" [ref=e96]:
+          - img [ref=e97]
+      - generic [ref=e100] [cursor=pointer]:
+        - generic [ref=e102]: Bagaimana hubungan audit SPBE dengan evaluasi SPBE
+        - button "Ubah nama" [ref=e103]:
+          - img [ref=e104]
+        - button "Hapus sesi" [ref=e107]:
+          - img [ref=e108]
+      - generic [ref=e111] [cursor=pointer]:
+        - generic [ref=e113]: Apa saja dokumen yang perlu disiapkan untuk tata
+        - button "Ubah nama" [ref=e114]:
+          - img [ref=e115]
+        - button "Hapus sesi" [ref=e118]:
+          - img [ref=e119]
+      - generic [ref=e122]: 7 HARI LALU
+      - generic [ref=e123] [cursor=pointer]:
+        - generic [ref=e125]: Apa saja domain dalam SPBE
+        - button "Ubah nama" [ref=e126]:
+          - img [ref=e127]
+        - button "Hapus sesi" [ref=e130]:
+          - img [ref=e131]
+      - generic [ref=e134] [cursor=pointer]:
+        - generic [ref=e136]: Jelaskan tentang Perpres 95 Tahun 2018 tentang SPBE
+        - button "Ubah nama" [ref=e137]:
+          - img [ref=e138]
+        - button "Hapus sesi" [ref=e141]:
+          - img [ref=e142]
+      - generic [ref=e145] [cursor=pointer]:
+        - generic [ref=e147]: Apa itu SPBE
+        - button "Ubah nama" [ref=e148]:
+          - img [ref=e149]
+        - button "Hapus sesi" [ref=e152]:
+          - img [ref=e153]
+      - generic [ref=e156] [cursor=pointer]:
+        - generic [ref=e158]: Tolong jelaskan tentang SPBE secara singkat
+        - button "Ubah nama" [ref=e159]:
+          - img [ref=e160]
+        - button "Hapus sesi" [ref=e163]:
+          - img [ref=e164]
+      - generic [ref=e167] [cursor=pointer]:
+        - generic [ref=e169]: "Evaluasi Ground Truth #40"
+        - button "Ubah nama" [ref=e170]:
+          - img [ref=e171]
+        - button "Hapus sesi" [ref=e174]:
+          - img [ref=e175]
+      - generic [ref=e178] [cursor=pointer]:
+        - generic [ref=e180]: "Evaluasi Ground Truth #40"
+        - button "Ubah nama" [ref=e181]:
+          - img [ref=e182]
+        - button "Hapus sesi" [ref=e185]:
+          - img [ref=e186]
+      - generic [ref=e189] [cursor=pointer]:
+        - generic [ref=e191]: "Evaluasi Ground Truth #40"
+        - button "Ubah nama" [ref=e192]:
+          - img [ref=e193]
+        - button "Hapus sesi" [ref=e196]:
+          - img [ref=e197]
+      - generic [ref=e200] [cursor=pointer]:
+        - generic [ref=e202]: "Evaluasi Ground Truth #40"
+        - button "Ubah nama" [ref=e203]:
+          - img [ref=e204]
+        - button "Hapus sesi" [ref=e207]:
+          - img [ref=e208]
+      - generic [ref=e211] [cursor=pointer]:
+        - generic [ref=e213]: "Evaluasi Ground Truth #37"
+        - button "Ubah nama" [ref=e214]:
+          - img [ref=e215]
+        - button "Hapus sesi" [ref=e218]:
+          - img [ref=e219]
+      - generic [ref=e222] [cursor=pointer]:
+        - generic [ref=e224]: "Evaluasi Ground Truth #40"
+        - button "Ubah nama" [ref=e225]:
+          - img [ref=e226]
+        - button "Hapus sesi" [ref=e229]:
+          - img [ref=e230]
+      - generic [ref=e233] [cursor=pointer]:
+        - generic [ref=e235]: "Evaluasi Ground Truth #39"
+        - button "Ubah nama" [ref=e236]:
+          - img [ref=e237]
+        - button "Hapus sesi" [ref=e240]:
+          - img [ref=e241]
+      - generic [ref=e244] [cursor=pointer]:
+        - generic [ref=e246]: "Evaluasi Ground Truth #38"
+        - button "Ubah nama" [ref=e247]:
+          - img [ref=e248]
+        - button "Hapus sesi" [ref=e251]:
+          - img [ref=e252]
+      - generic [ref=e255] [cursor=pointer]:
+        - generic [ref=e257]: "Evaluasi Ground Truth #36"
+        - button "Ubah nama" [ref=e258]:
+          - img [ref=e259]
+        - button "Hapus sesi" [ref=e262]:
+          - img [ref=e263]
+      - generic [ref=e266] [cursor=pointer]:
+        - generic [ref=e268]: "Evaluasi Ground Truth #35"
+        - button "Ubah nama" [ref=e269]:
+          - img [ref=e270]
+        - button "Hapus sesi" [ref=e273]:
+          - img [ref=e274]
+      - generic [ref=e277] [cursor=pointer]:
+        - generic [ref=e279]: "Evaluasi Ground Truth #34"
+        - button "Ubah nama" [ref=e280]:
+          - img [ref=e281]
+        - button "Hapus sesi" [ref=e284]:
+          - img [ref=e285]
+      - generic [ref=e288] [cursor=pointer]:
+        - generic [ref=e290]: "Evaluasi Ground Truth #33"
+        - button "Ubah nama" [ref=e291]:
+          - img [ref=e292]
+        - button "Hapus sesi" [ref=e295]:
+          - img [ref=e296]
+      - generic [ref=e299] [cursor=pointer]:
+        - generic [ref=e301]: "Evaluasi Ground Truth #32"
+        - button "Ubah nama" [ref=e302]:
+          - img [ref=e303]
+        - button "Hapus sesi" [ref=e306]:
+          - img [ref=e307]
+      - generic [ref=e310] [cursor=pointer]:
+        - generic [ref=e312]: "Evaluasi Ground Truth #31"
+        - button "Ubah nama" [ref=e313]:
+          - img [ref=e314]
+        - button "Hapus sesi" [ref=e317]:
+          - img [ref=e318]
+      - generic [ref=e321] [cursor=pointer]:
+        - generic [ref=e323]: "Evaluasi Ground Truth #40"
+        - button "Ubah nama" [ref=e324]:
+          - img [ref=e325]
+        - button "Hapus sesi" [ref=e328]:
+          - img [ref=e329]
+      - generic [ref=e332] [cursor=pointer]:
+        - generic [ref=e334]: "Evaluasi Ground Truth #39"
+        - button "Ubah nama" [ref=e335]:
+          - img [ref=e336]
+        - button "Hapus sesi" [ref=e339]:
+          - img [ref=e340]
+      - generic [ref=e343] [cursor=pointer]:
+        - generic [ref=e345]: "Evaluasi Ground Truth #38"
+        - button "Ubah nama" [ref=e346]:
+          - img [ref=e347]
+        - button "Hapus sesi" [ref=e350]:
+          - img [ref=e351]
+      - generic [ref=e354] [cursor=pointer]:
+        - generic [ref=e356]: "Evaluasi Ground Truth #37"
+        - button "Ubah nama" [ref=e357]:
+          - img [ref=e358]
+        - button "Hapus sesi" [ref=e361]:
+          - img [ref=e362]
+      - generic [ref=e365] [cursor=pointer]:
+        - generic [ref=e367]: "Evaluasi Ground Truth #36"
+        - button "Ubah nama" [ref=e368]:
+          - img [ref=e369]
+        - button "Hapus sesi" [ref=e372]:
+          - img [ref=e373]
+      - generic [ref=e376] [cursor=pointer]:
+        - generic [ref=e378]: "Evaluasi Ground Truth #35"
+        - button "Ubah nama" [ref=e379]:
+          - img [ref=e380]
+        - button "Hapus sesi" [ref=e383]:
+          - img [ref=e384]
+      - generic [ref=e387] [cursor=pointer]:
+        - generic [ref=e389]: "Evaluasi Ground Truth #34"
+        - button "Ubah nama" [ref=e390]:
+          - img [ref=e391]
+        - button "Hapus sesi" [ref=e394]:
+          - img [ref=e395]
+      - generic [ref=e398] [cursor=pointer]:
+        - generic [ref=e400]: "Evaluasi Ground Truth #33"
+        - button "Ubah nama" [ref=e401]:
+          - img [ref=e402]
+        - button "Hapus sesi" [ref=e405]:
+          - img [ref=e406]
+      - generic [ref=e409] [cursor=pointer]:
+        - generic [ref=e411]: "Evaluasi Ground Truth #32"
+        - button "Ubah nama" [ref=e412]:
+          - img [ref=e413]
+        - button "Hapus sesi" [ref=e416]:
+          - img [ref=e417]
+      - generic [ref=e420] [cursor=pointer]:
+        - generic [ref=e422]: "Evaluasi Ground Truth #31"
+        - button "Ubah nama" [ref=e423]:
+          - img [ref=e424]
+        - button "Hapus sesi" [ref=e427]:
+          - img [ref=e428]
+      - generic [ref=e431] [cursor=pointer]:
+        - generic [ref=e433]: "Evaluasi Ground Truth #30"
+        - button "Ubah nama" [ref=e434]:
+          - img [ref=e435]
+        - button "Hapus sesi" [ref=e438]:
+          - img [ref=e439]
+      - generic [ref=e442] [cursor=pointer]:
+        - generic [ref=e444]: "Evaluasi Ground Truth #29"
+        - button "Ubah nama" [ref=e445]:
+          - img [ref=e446]
+        - button "Hapus sesi" [ref=e449]:
+          - img [ref=e450]
+      - generic [ref=e453] [cursor=pointer]:
+        - generic [ref=e455]: "Evaluasi Ground Truth #28"
+        - button "Ubah nama" [ref=e456]:
+          - img [ref=e457]
+        - button "Hapus sesi" [ref=e460]:
+          - img [ref=e461]
+      - generic [ref=e464] [cursor=pointer]:
+        - generic [ref=e466]: "Evaluasi Ground Truth #27"
+        - button "Ubah nama" [ref=e467]:
+          - img [ref=e468]
+        - button "Hapus sesi" [ref=e471]:
+          - img [ref=e472]
+      - generic [ref=e475] [cursor=pointer]:
+        - generic [ref=e477]: "Evaluasi Ground Truth #26"
+        - button "Ubah nama" [ref=e478]:
+          - img [ref=e479]
+        - button "Hapus sesi" [ref=e482]:
+          - img [ref=e483]
+      - generic [ref=e486] [cursor=pointer]:
+        - generic [ref=e488]: "Evaluasi Ground Truth #25"
+        - button "Ubah nama" [ref=e489]:
+          - img [ref=e490]
+        - button "Hapus sesi" [ref=e493]:
+          - img [ref=e494]
+      - generic [ref=e497] [cursor=pointer]:
+        - generic [ref=e499]: "Evaluasi Ground Truth #24"
+        - button "Ubah nama" [ref=e500]:
+          - img [ref=e501]
+        - button "Hapus sesi" [ref=e504]:
+          - img [ref=e505]
+      - generic [ref=e508] [cursor=pointer]:
+        - generic [ref=e510]: "Evaluasi Ground Truth #23"
+        - button "Ubah nama" [ref=e511]:
+          - img [ref=e512]
+        - button "Hapus sesi" [ref=e515]:
+          - img [ref=e516]
+      - generic [ref=e519] [cursor=pointer]:
+        - generic [ref=e521]: "Evaluasi Ground Truth #22"
+        - button "Ubah nama" [ref=e522]:
+          - img [ref=e523]
+        - button "Hapus sesi" [ref=e526]:
+          - img [ref=e527]
+      - generic [ref=e530] [cursor=pointer]:
+        - generic [ref=e532]: "Evaluasi Ground Truth #21"
+        - button "Ubah nama" [ref=e533]:
+          - img [ref=e534]
+        - button "Hapus sesi" [ref=e537]:
+          - img [ref=e538]
+      - generic [ref=e541] [cursor=pointer]:
+        - generic [ref=e543]: "Evaluasi Ground Truth #10"
+        - button "Ubah nama" [ref=e544]:
+          - img [ref=e545]
+        - button "Hapus sesi" [ref=e548]:
+          - img [ref=e549]
+      - generic [ref=e552] [cursor=pointer]:
+        - generic [ref=e554]: "Evaluasi Ground Truth #10"
+        - button "Ubah nama" [ref=e555]:
+          - img [ref=e556]
+        - button "Hapus sesi" [ref=e559]:
+          - img [ref=e560]
+      - generic [ref=e563] [cursor=pointer]:
+        - generic [ref=e565]: "Evaluasi Ground Truth #9"
+        - button "Ubah nama" [ref=e566]:
+          - img [ref=e567]
+        - button "Hapus sesi" [ref=e570]:
+          - img [ref=e571]
+      - generic [ref=e574] [cursor=pointer]:
+        - generic [ref=e576]: "Evaluasi Ground Truth #8"
+        - button "Ubah nama" [ref=e577]:
+          - img [ref=e578]
+        - button "Hapus sesi" [ref=e581]:
+          - img [ref=e582]
+      - generic [ref=e585] [cursor=pointer]:
+        - generic [ref=e587]: "Evaluasi Ground Truth #7"
+        - button "Ubah nama" [ref=e588]:
+          - img [ref=e589]
+        - button "Hapus sesi" [ref=e592]:
+          - img [ref=e593]
+      - generic [ref=e596] [cursor=pointer]:
+        - generic [ref=e598]: "Evaluasi Ground Truth #6"
+        - button "Ubah nama" [ref=e599]:
+          - img [ref=e600]
+        - button "Hapus sesi" [ref=e603]:
+          - img [ref=e604]
+      - generic [ref=e607] [cursor=pointer]:
+        - generic [ref=e609]: "Evaluasi Ground Truth #5"
+        - button "Ubah nama" [ref=e610]:
+          - img [ref=e611]
+        - button "Hapus sesi" [ref=e614]:
+          - img [ref=e615]
+      - generic [ref=e618] [cursor=pointer]:
+        - generic [ref=e620]: "Evaluasi Ground Truth #4"
+        - button "Ubah nama" [ref=e621]:
+          - img [ref=e622]
+        - button "Hapus sesi" [ref=e625]:
+          - img [ref=e626]
+      - generic [ref=e629] [cursor=pointer]:
+        - generic [ref=e631]: "Evaluasi Ground Truth #3"
+        - button "Ubah nama" [ref=e632]:
+          - img [ref=e633]
+        - button "Hapus sesi" [ref=e636]:
+          - img [ref=e637]
+    - generic [ref=e13]:
+      - link "Dokumen Hukum" [ref=e14] [cursor=pointer]:
+        - /url: /documents
+        - img [ref=e15]
+        - generic [ref=e18]: Dokumen Hukum
+      - generic [ref=e19]:
+        - generic [ref=e20]: Model
+        - combobox [ref=e21] [cursor=pointer]:
+          - option "qwen3.5:4b" [selected]
+          - option "qwen3.5:9b"
+          - option "qwen2.5:7b-instruct"
+          - option "qwen2.5:3b-instruct"
+          - option "qwen2.5vl:7b"
+          - option "qwen2.5:3b"
+          - option "qwen3-vl:4b"
+          - option "qwen3:4b"
+          - option "qwen3-vl:8b"
+          - option "qwen3:8b"
+    - button "Tutup sidebar" [ref=e22] [cursor=pointer]:
+      - img [ref=e23]
+  - generic [ref=e25]:
+    - navigation [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e28]: AH
+        - generic [ref=e29]:
+          - generic [ref=e30]: Asisten Hukum SPBE
+          - generic [ref=e31]: Chatbot Hukum untuk Tata Kelola Digital Pemerintah
+      - generic [ref=e32]:
+        - link "Beranda" [ref=e33] [cursor=pointer]:
+          - /url: /home
+        - link "Layanan" [ref=e34] [cursor=pointer]:
+          - /url: /
+        - link "Dasar Hukum" [ref=e35] [cursor=pointer]:
+          - /url: /documents
+        - button "Hapus Konsultasi" [ref=e659] [cursor=pointer]
+        - generic "Admin PUSDATIK • admin@bssn.go.id" [ref=e36]:
+          - generic [ref=e37]: A
+          - generic [ref=e38]:
+            - generic [ref=e39]: Masuk sebagai
+            - generic [ref=e40]: Admin PUSDATIK
+            - generic [ref=e41]: Admin PUSDATIK
+        - link "Keluar" [ref=e42] [cursor=pointer]:
+          - /url: /logout
+        - generic [ref=e43]: Terhubung
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - generic "Aksi cepat konsultasi" [ref=e46]:
+          - button "Lihat pasal" [ref=e47] [cursor=pointer]
+          - button "Buat ringkasan" [ref=e48] [cursor=pointer]
+          - button "Bandingkan regulasi" [ref=e49] [cursor=pointer]
+          - button "Buat policy brief" [ref=e50] [cursor=pointer]
+          - button "Tampilkan sumber" [ref=e51] [cursor=pointer]
+        - generic [ref=e52]:
+          - generic [ref=e641]:
+            - generic [ref=e642]:
+              - generic [ref=e643]: AH
+              - text: Preview visual sementara
+            - generic [ref=e646]:
+              - heading "Jawaban Ringkas" [level=3] [ref=e647]
+              - paragraph [ref=e648]: Instansi wajib menyusun arsitektur SPBE sesuai prinsip integrasi, interoperabilitas, dan keamanan SPBE.
+              - heading "Poin Kewajiban" [level=3] [ref=e649]
+              - list [ref=e650]:
+                - listitem [ref=e651]: Menyusun arsitektur SPBE instansi sesuai kerangka kerja nasional.
+                - listitem [ref=e652]: Menetapkan arsitektur SPBE melalui keputusan pimpinan instansi.
+                - listitem [ref=e653]: Melakukan reviu dan pemutakhiran secara berkala.
+              - heading "Dokumen yang Perlu Disiapkan" [level=3] [ref=e654]
+              - list [ref=e655]:
+                - listitem [ref=e656]: Dokumen Arsitektur SPBE Instansi.
+                - listitem [ref=e657]: Peta Rencana SPBE Instansi.
+                - listitem [ref=e658]: Standar dan pedoman teknis internal.
+          - generic [ref=e662]: Apa dasar hukum penerapan SPBE di instansi pemerintah?
+          - generic [ref=e664]:
+            - generic [ref=e665]:
+              - generic [ref=e666]: AH
+              - generic [ref=e667]:
+                - text: Jawaban bersumber dari regulasi resmi
+                - generic [ref=e668]: · 5 sumber
+              - generic [ref=e669]: 13:55
+            - generic [ref=e670]:
+              - generic [ref=e671]:
+                - paragraph [ref=e673]:
+                  - text: Dasar hukum utama penerapan Sistem Pemerintahan Berbasis Elektronik (SPBE) pada Instansi Pusat dan Pemerintah Daerah adalah Peraturan Presiden Republik Indonesia Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik
+                  - button "1" [ref=e674] [cursor=pointer]
+                  - text: . Selain itu, penerapan SPBE juga didasarkan pada Peraturan Presiden Nomor 132 Tahun 2022 tentang Arsitektur SPBE Nasional yang mewajibkan pembangunan layanan digital agar selaras dengan arsitektur tersebut
+                  - button "1" [ref=e675] [cursor=pointer]
+                  - text: . Dalam konteks tata kelola, penerapan SPBE juga diatur oleh Peraturan Kepala Badan Siber dan Sandi Negara Nomor 2 Tahun 2023 yang menetapkan bahwa penerapan Tata Kelola SPBE dilakukan kepada unit kerja yang melaksanakan tugas dan fungsi di bidang perencanaan, pelaksanaan, evaluasi, dan pelaporan data dan TIK
+                  - button "2" [ref=e676] [cursor=pointer]
+                  - text: . Lebih lanjut, Pasal 52 Peraturan Presiden Nomor 95 Tahun 2018 juga mengatur bahwa manajemen pengetahuan dalam pelaksanaan SPBE harus dilaksanakan berdasarkan pedoman yang ditetapkan, serta dapat dilakukan konsultasi dengan kepala lembaga pemerintah non kementerian yang menyelenggarakan tugas di bidang pengkajian dan penerapan teknologi
+                  - button "3" [ref=e677] [cursor=pointer]
+                  - text: .
+                - generic [ref=e678]:
+                  - generic [ref=e679]:
+                    - generic [ref=e680]:
+                      - generic [ref=e681]: 📎 SUMBER [1] · 78.20
+                      - generic [ref=e682]: PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024
+                      - generic [ref=e683]: BAB I - PENDAHULUAN
+                    - generic [ref=e684]:
+                      - paragraph [ref=e685]: Sistem Pemerintahan Berbasis Elektronik (SPBE) merupakan penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan komunikasi dalam rangka meningkatkan kualitas layanan administras...
+                      - generic [ref=e686]:
+                        - button "📄 Buka PDF ↗" [ref=e687] [cursor=pointer]
+                        - button "🔍 Lihat Konteks →" [ref=e688] [cursor=pointer]
+                  - generic [ref=e689]:
+                    - generic [ref=e690]:
+                      - generic [ref=e691]: 📎 SUMBER [2] · 77.97
+                      - generic [ref=e692]: PERKA BSSN NOMOR 2 TAHUN 2023
+                      - generic [ref=e693]: PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023 > BAB II > Kesatu - > Pasal 5 > Ayat (2)
+                    - generic [ref=e694]:
+                      - paragraph [ref=e695]: naan penerapan Tata Kelola SPBE kepada unit kerja yang melaksanakan tugas dan fungsi di bidang perencanaan, pelaksanaan, evaluasi, dan pelaporan data dan TIK.
+                      - generic [ref=e696]:
+                        - button "📄 Buka PDF ↗" [ref=e697] [cursor=pointer]
+                        - button "🔍 Lihat Konteks →" [ref=e698] [cursor=pointer]
+                  - generic [ref=e699]:
+                    - generic [ref=e700]:
+                      - generic [ref=e701]: 📎 SUMBER [3] · 77.82
+                      - generic [ref=e702]: Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik
+                      - generic [ref=e703]: Pasal 52
+                    - generic [ref=e704]:
+                      - paragraph [ref=e705]: (1) Manajemen pengetahuan sebagaimana dimaksud dalam Pasal 46 ayat (1) huruf f bertujuan untuk meningkatkan kualitas Layanan SPBE dan mendukung proses pengambilan keputusan dalam SPBE. (2) Manajemen p...
+                      - generic [ref=e706]:
+                        - button "📄 Buka PDF ↗" [ref=e707] [cursor=pointer]
+                        - button "🔍 Lihat Konteks →" [ref=e708] [cursor=pointer]
+                  - generic [ref=e709]:
+                    - generic [ref=e710]:
+                      - generic [ref=e711]: 📎 SUMBER [4] · 77.68
+                      - generic [ref=e712]: PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024
+                    - generic [ref=e713]:
+                      - paragraph [ref=e714]: "Tingkat 4: - Kriteria: Kriteria tingkat 3 telah terpenuhi dan Layanan Jaringan Dokumentasi dan Informasi Hukum Berbasis Elektronik memberikan layanan kolaborasi dengan layanan elektronik lai..."
+                      - generic [ref=e715]:
+                        - button "📄 Buka PDF ↗" [ref=e716] [cursor=pointer]
+                        - button "🔍 Lihat Konteks →" [ref=e717] [cursor=pointer]
+                  - generic [ref=e718]:
+                    - generic [ref=e719]:
+                      - generic [ref=e720]: 📎 SUMBER [5] · 77.53
+                      - generic [ref=e721]: PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024
+                      - generic [ref=e722]: BAB III - TATA CARA DAN KAIDAH PENILAIAN PEMANTAUAN DAN EVALUASI SPBE
+                    - generic [ref=e723]:
+                      - paragraph [ref=e724]: . Kebijakan terkait Arsitektur SPBE telah disusun dan disahkan dalam Peraturan … Nomor … Tahun … tentang Tata Kelola Sistem Pemerintahan Berbasis Elektronik yaitu pada Halaman .. Pasal … tentang ...
+                      - generic [ref=e725]:
+                        - button "📄 Buka PDF ↗" [ref=e726] [cursor=pointer]
+                        - button "🔍 Lihat Konteks →" [ref=e727] [cursor=pointer]
+              - generic [ref=e728]:
+                - button "📋 Salin" [ref=e729] [cursor=pointer]
+                - button "↻ Regenerate" [ref=e730] [cursor=pointer]
+                - button "✎ Edit & retry" [ref=e731] [cursor=pointer]
+          - generic [ref=e734]: "Tampilkan pasal atau bagian dokumen yang relevan untuk pertanyaan berikut: penilaian spbe berguna untuk memberikan nilai pada instansi pemerintah dan kementrian"
+          - generic [ref=e736]:
+            - generic [ref=e737]:
+              - generic [ref=e738]: AH
+              - generic [ref=e739]:
+                - text: Jawaban bersumber dari regulasi resmi
+                - generic [ref=e740]: · 4 sumber
+              - generic [ref=e741]: 14:01
+            - generic [ref=e742]:
+              - generic [ref=e743]:
+                - generic [ref=e744]:
+                  - paragraph [ref=e745]:
+                    - text: Pasal atau bagian dokumen yang relevan untuk pertanyaan mengenai kegunaan penilaian SPBE dalam memberikan nilai pada instansi pemerintah dan kementerian terdapat dalam Permenpan RB Nomor 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik, khususnya pada BAB IV - PENUTUP
+                    - button "1" [ref=e746] [cursor=pointer]
+                    - text: .
+                  - paragraph [ref=e747]:
+                    - text: Isi dari bagian tersebut menyatakan bahwa dalam kegiatan Pemantauan dan Evaluasi SPBE, penilaian tingkat kematangan atas penerapan SPBE pada Instansi Pusat dan Pemerintah Daerah dilakukan untuk mengukur kapabilitas proses yang mencakup kebijakan SPBE, proses tata kelola SPBE, dan proses manajemen SPBE, serta mengukur kapabilitas layanan yang mencakup layanan administrasi pemerintahan berbasis elektronik dan layanan publik berbasis elektronik
+                    - button "1" [ref=e748] [cursor=pointer]
+                    - text: . Nilai tingkat kematangan atas penerapan SPBE yang direpresentasikan dalam bentuk indeks SPBE menunjukkan kemampuan Instansi Pusat dan Pemerintah Daerah dalam penerapan SPBE
+                    - button "1" [ref=e749] [cursor=pointer]
+                    - text: .
+                  - paragraph [ref=e750]:
+                    - text: Selain itu, dalam dokumen yang sama, disebutkan bahwa nilai indeks SPBE dikelompokkan ke dalam lima predikat yaitu memuaskan, sangat baik, baik, cukup, dan kurang
+                    - button "1" [ref=e751] [cursor=pointer]
+                    - text: . Hasil penilaian atas penerapan SPBE pada Instansi Pusat dan Pemerintah Daerah dapat digunakan oleh Instansi Pusat dan Pemerintah Daerah sebagai dasar untuk memahami tingkat kemampuan penerapan SPBE
+                    - button "1" [ref=e752] [cursor=pointer]
+                    - text: .
+                  - paragraph [ref=e753]: "Kutipan Teks Dokumen:"
+                  - blockquote [ref=e754]:
+                    - paragraph [ref=e755]:
+                      - text: "\"Di dalam kegiatan Pemantauan dan Evaluasi SPBE, penilaian tingkat kematangan atas penerapan SPBE pada Instansi Pusat dan Pemerintah Daerah mengukur kapabilitas proses yang mencakup kebijakan SPBE, proses tata kelola SPBE, dan proses manajemen SPBE serta mengukur kapabilitas layanan yang mencakup layanan administrasi pemerintahan berbasis elektronik dan layanan publik berbasis elektronik. Nilai tingkat kematangan atas penerapan SPBE yang direpresentasikan dalam bentuk indeks SPBE menunjukkan kemampuan Instansi Pusat dan Pemerintah Daerah dalam penerapan SPBE.\""
+                      - button "1" [ref=e756] [cursor=pointer]
+                  - blockquote [ref=e757]:
+                    - paragraph [ref=e758]:
+                      - text: "\"Untuk memudahkan memahami tingkat kemampuan, nilai indeks SPBE dikelompokkan ke dalam 5 (lima) predikat yaitu memuaskan, sangat baik, baik, cukup, dan kurang.\""
+                      - button "1" [ref=e759] [cursor=pointer]
+                  - blockquote [ref=e760]:
+                    - paragraph [ref=e761]:
+                      - text: "\"Hasil penilaian atas penerapan SPBE pada Instansi Pusat dan Pemerintah Daerah dapat digunakan oleh Instansi Pusat dan Pemerintah Daerah sebagai...\""
+                      - button "1" [ref=e762] [cursor=pointer]
+                - generic [ref=e763]:
+                  - generic [ref=e764]:
+                    - generic [ref=e765]:
+                      - generic [ref=e766]: 📎 SUMBER [1] · 74.86
+                      - generic [ref=e767]: Permenpan RB Nomor 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik
+                      - generic [ref=e768]: BAB IV - PENUTUP
+                    - generic [ref=e769]:
+                      - paragraph [ref=e770]: Setiap anggota Tim Asesor Eksternal menyusun Laporan Anggota Tim Asesor Eksternal yang berisi seluruh aktivitas yang dilakukan oleh anggota tersebut selama mengikuti kegiatan Pemantauan dan Evaluasi S...
+                      - generic [ref=e771]:
+                        - button "📄 Buka PDF ↗" [ref=e772] [cursor=pointer]
+                        - button "🔍 Lihat Konteks →" [ref=e773] [cursor=pointer]
+                  - generic [ref=e774]:
+                    - generic [ref=e775]:
+                      - generic [ref=e776]: 📎 SUMBER [2] · 74.40
+                      - generic [ref=e777]: Permenpan RB Nomor 59 Tahun 2020
+                      - generic [ref=e778]: Pasal 1
+                    - generic [ref=e779]:
+                      - paragraph [ref=e780]: Instansi Pusat/Pemerintah Daerah untuk memberikan jawaban dan penjelasan serta bukti pendukung atas pertanyaan yang diberikan oleh Asesor. 8. Penilaian Mandiri adalah penilaian yang dilakukan ole...
+                      - generic [ref=e781]:
+                        - button "📄 Buka PDF ↗" [ref=e782] [cursor=pointer]
+                        - button "🔍 Lihat Konteks →" [ref=e783] [cursor=pointer]
+                  - generic [ref=e784]:
+                    - generic [ref=e785]:
+                      - generic [ref=e786]: 📎 SUMBER [3] · 74.19
+                      - generic [ref=e787]: 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024
+                    - generic [ref=e788]:
+                      - paragraph [ref=e789]: "Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah Provinsi<br>Maluku (Pemerintah Provinsi, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 2.63 (Predikat: Baik). Rincian Nilai Domain:..."
+                      - generic [ref=e790]:
+                        - button "📄 Buka PDF ↗" [ref=e791] [cursor=pointer]
+                        - button "🔍 Lihat Konteks →" [ref=e792] [cursor=pointer]
+                  - generic [ref=e793]:
+                    - generic [ref=e794]:
+                      - generic [ref=e795]: 📎 SUMBER [4] · 73.53
+                      - generic [ref=e796]: LAPORAN EVALUASI SPBE KemenpanRB 2023
+                    - generic [ref=e797]:
+                      - paragraph [ref=e798]: "Laporan Pelaksanaan Evaluasi SPBE Tahun 2023. Instansi: Pemerintah Kab. Pekalongan (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 3.37 (Predikat: Baik). Rincian Nilai Domain: K..."
+                      - generic [ref=e799]:
+                        - button "📄 Buka PDF ↗" [ref=e800] [cursor=pointer]
+                        - button "🔍 Lihat Konteks →" [ref=e801] [cursor=pointer]
+              - generic [ref=e802]:
+                - button "📋 Salin" [ref=e803] [cursor=pointer]
+                - button "↻ Regenerate" [ref=e804] [cursor=pointer]
+                - button "✎ Edit & retry" [ref=e805] [cursor=pointer]
+      - complementary "Panel bukti rujukan jawaban" [ref=e64]:
+        - generic [ref=e65]:
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - generic [ref=e68]: Bukti & Rujukan
+              - heading "Rujukan Jawaban" [level=3] [ref=e69]
+            - generic [ref=e70]: 4 sumber
+          - generic [ref=e806]:
+            - generic [ref=e807]: Jawaban terakhir
+            - paragraph [ref=e808]: Sumber di bawah berasal dari hasil retrieval sistem RAG untuk respons terbaru.
+          - generic [ref=e809]:
+            - article [ref=e810]:
+              - generic [ref=e811]: "1"
+              - generic [ref=e812]:
+                - generic [ref=e813]:
+                  - strong [ref=e814]: Permenpan RB Nomor 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik
+                  - generic [ref=e815]: Sumber RAG
+                - paragraph [ref=e816]: BAB IV - PENUTUP
+                - paragraph [ref=e817]: “Setiap anggota Tim Asesor Eksternal menyusun Laporan Anggota Tim Asesor Eksternal yang berisi seluruh aktivitas yang dilakukan oleh anggota tersebut selama mengikuti kegiatan Pemantauan dan Evaluasi S...”
+                - generic [ref=e818]:
+                  - generic [ref=e819]: Relevansi 74.86
+                  - button "Buka Dokumen" [ref=e820] [cursor=pointer]
+            - article [ref=e821]:
+              - generic [ref=e822]: "2"
+              - generic [ref=e823]:
+                - generic [ref=e824]:
+                  - strong [ref=e825]: Permenpan RB Nomor 59 Tahun 2020
+                  - generic [ref=e826]: Sumber RAG
+                - paragraph [ref=e827]: Pasal 1
+                - paragraph [ref=e828]: “Instansi Pusat/Pemerintah Daerah untuk memberikan jawaban dan penjelasan serta bukti pendukung atas pertanyaan yang diberikan oleh Asesor. 8. Penilaian Mandiri adalah penilaian yang dilakukan ole...”
+                - generic [ref=e829]:
+                  - generic [ref=e830]: Relevansi 74.40
+                  - button "Buka Dokumen" [ref=e831] [cursor=pointer]
+            - article [ref=e832]:
+              - generic [ref=e833]: "3"
+              - generic [ref=e834]:
+                - generic [ref=e835]:
+                  - strong [ref=e836]: 20250313 Laporan Pelaksanaan Evaluasi SPBE 2024
+                  - generic [ref=e837]: Sumber RAG
+                - paragraph [ref=e838]: "“Laporan Pelaksanaan Evaluasi SPBE Tahun 2024. Instansi: Pemerintah Provinsi<br>Maluku (Pemerintah Provinsi, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 2.63 (Predikat: Baik). Rincian Nilai Domain:...”"
+                - generic [ref=e839]:
+                  - generic [ref=e840]: Relevansi 74.19
+                  - button "Buka Dokumen" [ref=e841] [cursor=pointer]
+            - article [ref=e842]:
+              - generic [ref=e843]: "4"
+              - generic [ref=e844]:
+                - generic [ref=e845]:
+                  - strong [ref=e846]: LAPORAN EVALUASI SPBE KemenpanRB 2023
+                  - generic [ref=e847]: Sumber RAG
+                - paragraph [ref=e848]: "“Laporan Pelaksanaan Evaluasi SPBE Tahun 2023. Instansi: Pemerintah Kab. Pekalongan (Pemerintah Kabupaten, Kategori Wilayah: Nasional). Indeks SPBE Akhir: 3.37 (Predikat: Baik). Rincian Nilai Domain: K...”"
+                - generic [ref=e849]:
+                  - generic [ref=e850]: Relevansi 73.53
+                  - button "Buka Dokumen" [ref=e851] [cursor=pointer]
+          - paragraph [ref=e75]: Panel ini hanya menampilkan sumber dari respons chatbot, bukan daftar regulasi manual.
+    - button "Kembali ke atas" [ref=e852] [cursor=pointer]:
+      - img [ref=e853]
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - textbox "Ketik pertanyaan hukum SPBE Anda..." [ref=e78]
+        - generic [ref=e79]:
+          - generic "RAG aktif" [ref=e80] [cursor=pointer]:
+            - generic [ref=e83]: RAG
+          - button [disabled] [ref=e84]:
+            - img [ref=e85]
+      - generic [ref=e87]: Enter untuk kirim · Shift+Enter untuk baris baru · Data tidak digunakan untuk pelatihan model publik

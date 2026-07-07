@@ -1,0 +1,79 @@
+[
+  {
+    "id": "gt_002",
+    "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+    "doc_type": "laporan",
+    "question": "Instansi mana yang mendapatkan nilai Indeks SPBE tertinggi dari kategori Pemerintah Daerah pada evaluasi SPBE 2024?",
+    "ground_truth": "Pemerintah Kabupaten Banyuwangi meraih Indeks SPBE tertinggi pada kategori Pemerintah Daerah dengan skor 4,77 (predikat \"Memuaskan\"). Skor ini dicapai dengan nilai D1=5,00; D2=4,60; D3=4,18; D4=5,00."
+  },
+  {
+    "id": "gt_007",
+    "source_doc": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+    "doc_type": "pedoman_spbe",
+    "question": "Untuk siapa Pedoman Menteri PANRB Nomor 3 Tahun 2024 ini ditujukan?",
+    "ground_truth": "Pedoman Menteri PANRB Nomor 3 Tahun 2024 dimaksudkan untuk memberi panduan bagi: (1) Asesor Internal Instansi Pusat dan Pemerintah Daerah; (2) Asesor Eksternal; dan (3) Tim Pelaksanaan Pemantauan dan Evaluasi SPBE Kementerian PANRB yang terlibat dalam penyelenggaraan pemantauan dan evaluasi SPBE."
+  },
+  {
+    "id": "gt_008",
+    "source_doc": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+    "doc_type": "pedoman_spbe",
+    "question": "Berapa jumlah indikator yang digunakan dalam kuesioner pemantauan dan evaluasi SPBE sesuai Pedoman Menteri PANRB Nomor 3 Tahun 2024?",
+    "ground_truth": "Kuesioner pemantauan dan evaluasi SPBE berdasarkan Pedoman Menteri PANRB Nomor 3 Tahun 2024 terdiri dari 47 (empat puluh tujuh) indikator dalam bentuk pertanyaan Tingkat Kematangan. Instrumen ini digunakan sebagai alat penilaian bagi Asesor Internal dan/atau responden pada Instansi Pusat atau Pemerintah Daerah."
+  },
+  {
+    "id": "gt_011",
+    "source_doc": "peraturan-bssn-no-8-tahun-2024.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa saja komponen Standar Audit Keamanan SPBE menurut Peraturan BSSN Nomor 8 Tahun 2024 Pasal 2?",
+    "ground_truth": "Berdasarkan Pasal 2 Peraturan BSSN Nomor 8 Tahun 2024, Standar Audit Keamanan SPBE terdiri atas 5 komponen: (a) objek Audit Keamanan SPBE; (b) pelaksana Audit Keamanan SPBE; (c) kriteria Audit Keamanan SPBE; (d) bukti Audit Keamanan SPBE; dan (e) kesimpulan Audit Keamanan SPBE."
+  },
+  {
+    "id": "gt_014",
+    "source_doc": "peraturan-bssn-no-8-tahun-2024.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa saja informasi yang wajib dimuat dalam surat tugas tim auditor Keamanan SPBE berdasarkan Pasal 37 Peraturan BSSN Nomor 8 Tahun 2024?",
+    "ground_truth": "Berdasarkan Pasal 37 ayat (2) Peraturan BSSN Nomor 8 Tahun 2024, surat tugas tim auditor Keamanan SPBE paling sedikit memuat: (a) nama auditor Keamanan SPBE; (b) jabatan dalam tim auditor Keamanan SPBE; (c) nama Instansi Pusat atau Pemerintah Daerah yang diaudit; dan (d) lingkup Audit Keamanan SPBE."
+  },
+  {
+    "id": "gt_021",
+    "source_doc": "Perpres Nomor 82 Tahun 2023.pdf",
+    "doc_type": "peraturan",
+    "question": "Siapa yang ditugaskan untuk menyelenggarakan Aplikasi SPBE Prioritas dalam Perpres Nomor 82 Tahun 2023?",
+    "ground_truth": "Perpres Nomor 82 Tahun 2023 menugaskan Perum Peruri (Perusahaan Umum Percetakan Uang Republik Indonesia) untuk menyelenggarakan Aplikasi SPBE Prioritas. Perum Peruri adalah badan usaha milik negara yang seluruh modalnya dimiliki negara dan menyelenggarakan usaha pencetakan uang, dokumen sekuriti, jasa digital sekuriti, serta usaha lainnya."
+  },
+  {
+    "id": "gt_028",
+    "source_doc": "Perpres Nomor 95 Tahun 2018.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa tujuan Manajemen Risiko SPBE menurut Pasal 47 Perpres Nomor 95 Tahun 2018?",
+    "ground_truth": "Berdasarkan Pasal 47 ayat (1) Perpres Nomor 95 Tahun 2018, Manajemen Risiko bertujuan untuk menjamin keberlangsungan SPBE dengan meminimalkan dampak risiko dalam SPBE. Manajemen risiko dilakukan melalui serangkaian proses identifikasi, analisis, pengendalian, pemantauan, dan evaluasi terhadap risiko dalam SPBE."
+  },
+  {
+    "id": "gt_032",
+    "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa kewajiban pendaftaran bagi Penyelenggara Sistem Elektronik (PSE) menurut Pasal 6 PP Nomor 71 Tahun 2019?",
+    "ground_truth": "Berdasarkan Pasal 6 PP Nomor 71 Tahun 2019: (1) Setiap Penyelenggara Sistem Elektronik wajib melakukan pendaftaran; (2) Kewajiban pendaftaran dilakukan sebelum Sistem Elektronik mulai digunakan oleh Pengguna; (3) Pendaftaran diajukan kepada Menteri melalui pelayanan perizinan berusaha terintegrasi secara elektronik."
+  },
+  {
+    "id": "gt_033",
+    "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa yang dimaksud dengan Sistem Elektronik menurut Pasal 1 PP Nomor 71 Tahun 2019?",
+    "ground_truth": "Berdasarkan Pasal 1 angka 1 PP Nomor 71 Tahun 2019, Sistem Elektronik adalah serangkaian perangkat dan prosedur elektronik yang berfungsi mempersiapkan, mengumpulkan, mengolah, menganalisis, menyimpan, menampilkan, mengumumkan, mengirimkan, dan/atau menyebarkan Informasi Elektronik."
+  },
+  {
+    "id": "gt_035",
+    "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+    "doc_type": "peraturan",
+    "question": "Siapa saja yang termasuk Penyelenggara Sistem Elektronik Lingkup Privat menurut PP Nomor 71 Tahun 2019?",
+    "ground_truth": "Berdasarkan Pasal 2 ayat (5) PP Nomor 71 Tahun 2019, Penyelenggara Sistem Elektronik Lingkup Privat meliputi: (a) Penyelenggara yang diatur atau diawasi oleh Kementerian/Lembaga; dan (b) Penyelenggara yang memiliki portal, situs, atau aplikasi dalam jaringan melalui internet untuk menyediakan perdagangan barang/jasa, layanan transaksi keuangan, pengiriman muatan digital berbayar, atau layanan komunikasi berbayar."
+  },
+  {
+    "id": "gt_037",
+    "source_doc": "Perpres Nomor 95 Tahun 2018.pdf",
+    "doc_type": "peraturan",
+    "question": "Apa yang dimaksud dengan interoperabilitas dalam prinsip SPBE menurut Perpres Nomor 95 Tahun 2018?",
+    "ground_truth": "Berdasarkan Pasal 2 ayat (7) Perpres Nomor 95 Tahun 2018, Interoperabilitas merupakan koordinasi dan kolaborasi antar Proses Bisnis dan antar sistem elektronik, dalam rangka pertukaran data, informasi, atau Layanan SPBE."
+  }
+]

@@ -3,6 +3,8 @@ import {
   stripReferenceBlock,
   injectCitationSpans,
   renderLatex,
+  normalizeLegalAnswerSections,
+  highlightImportantAnswerPhrases,
   formatMessageContent,
 } from '../messageFormatter.js'
 
@@ -124,6 +126,114 @@ describe('renderLatex', () => {
 })
 
 // ─────────────────────────────────────────────────────────────────────────────
+// normalizeLegalAnswerSections
+// ─────────────────────────────────────────────────────────────────────────────
+describe('normalizeLegalAnswerSections', () => {
+  it('turns common plain section labels into markdown headings', () => {
+    const input = `Jawaban Ringkas
+Instansi wajib menyusun arsitektur SPBE.
+
+Poin Kewajiban
+1. Menyusun arsitektur SPBE instansi.`
+
+    const result = normalizeLegalAnswerSections(input)
+
+    expect(result).toContain('### Jawaban Ringkas')
+    expect(result).toContain('### Poin Kewajiban')
+    expect(result).toContain('1. Menyusun arsitektur SPBE instansi.')
+  })
+
+  it('does not change existing markdown headings or list items', () => {
+    const input = `### Jawaban Ringkas
+- Dokumen arsitektur SPBE`
+
+    expect(normalizeLegalAnswerSections(input)).toBe(input)
+  })
+
+  it('keeps visual headings when backend leaves a section label with colon inline', () => {
+    const input = 'Jawaban Ringkas: Instansi wajib menyusun arsitektur SPBE.'
+
+    expect(normalizeLegalAnswerSections(input)).toBe(
+      '### Jawaban Ringkas\nInstansi wajib menyusun arsitektur SPBE.'
+    )
+  })
+
+  it('keeps visual headings when streamed markdown emphasis is later cleaned', () => {
+    const input = '**Poin Kewajiban:** Menyusun arsitektur SPBE instansi.'
+
+    expect(normalizeLegalAnswerSections(input)).toBe(
+      '### Poin Kewajiban\nMenyusun arsitektur SPBE instansi.'
+    )
+  })
+})
+
+// ─────────────────────────────────────────────────────────────────────────────
+// highlightImportantAnswerPhrases
+// ─────────────────────────────────────────────────────────────────────────────
+describe('highlightImportantAnswerPhrases', () => {
+  it('highlights the core definition phrase after "adalah" without changing surrounding text', () => {
+    const input = 'SPBE adalah penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan komunikasi untuk memberikan layanan kepada pengguna.'
+
+    const result = highlightImportantAnswerPhrases(input)
+
+    expect(result).toContain('SPBE adalah <mark class="answer-highlight">penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan komunikasi</mark> untuk memberikan layanan')
+  })
+
+  it('highlights important quoted phrases inside paragraphs', () => {
+    const input = 'Pengguna menanyakan frasa "pedoman evaluasi SPBE di BSSN" sebagai topik konsultasi.'
+
+    const result = highlightImportantAnswerPhrases(input)
+
+    expect(result).toContain('"<mark class="answer-highlight">pedoman evaluasi SPBE di BSSN</mark>"')
+  })
+
+  it('does not highlight markdown heading lines', () => {
+    const input = '### Jawaban Ringkas'
+
+    expect(highlightImportantAnswerPhrases(input)).toBe(input)
+  })
+
+  it('highlights legal obligations beyond definition clauses', () => {
+    const input = 'Instansi wajib menyusun arsitektur SPBE sesuai kerangka kerja arsitektur SPBE nasional.'
+
+    const result = highlightImportantAnswerPhrases(input)
+
+    expect(result).toContain('<mark class="answer-highlight">Instansi wajib menyusun arsitektur SPBE sesuai kerangka kerja arsitektur SPBE nasional</mark>')
+  })
+
+  it('highlights limitation statements when sources are not explicit', () => {
+    const input = 'Dokumen tidak menyebutkan secara eksplisit pedoman evaluasi SPBE khusus untuk BSSN.'
+
+    const result = highlightImportantAnswerPhrases(input)
+
+    expect(result).toContain('<mark class="answer-highlight">Dokumen tidak menyebutkan secara eksplisit pedoman evaluasi SPBE khusus untuk BSSN</mark>')
+  })
+
+  it('highlights formal regulation references', () => {
+    const input = 'Dasar hukum yang digunakan adalah Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE.'
+
+    const result = highlightImportantAnswerPhrases(input)
+
+    expect(result).toContain('<mark class="answer-highlight">Peraturan Presiden Nomor 95 Tahun 2018</mark>')
+  })
+
+  it('limits inline highlights so answers do not become visually noisy', () => {
+    const input = [
+      'SPBE adalah penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan komunikasi untuk layanan publik.',
+      'Instansi wajib menyusun arsitektur SPBE sesuai kerangka nasional.',
+      'Dokumen tidak menyebutkan secara eksplisit pedoman khusus BSSN.',
+      'Dasar hukum utama adalah Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE.',
+      'Terdapat 5 domain dalam tata kelola SPBE.',
+    ].join('\n')
+
+    const result = highlightImportantAnswerPhrases(input)
+    const count = (result.match(/class="answer-highlight"/g) || []).length
+
+    expect(count).toBeLessThanOrEqual(4)
+  })
+})
+
+// ─────────────────────────────────────────────────────────────────────────────
 // formatMessageContent — integration
 // ─────────────────────────────────────────────────────────────────────────────
 describe('formatMessageContent', () => {
@@ -151,5 +261,34 @@ Referensi Dokumen:
   it('returns empty string for empty input', () => {
     expect(formatMessageContent('')).toBe('')
     expect(formatMessageContent(null)).toBe('')
+  })
+
+  it('renders legal answer section labels as headings', () => {
+    const input = `Jawaban Ringkas
+Instansi wajib menyusun arsitektur SPBE.
+
+Dokumen yang Perlu Disiapkan
+- Dokumen Arsitektur SPBE Instansi`
+
+    const result = formatMessageContent(input)
+
+    expect(result).toContain('<h3>Jawaban Ringkas</h3>')
+    expect(result).toContain('<h3>Dokumen yang Perlu Disiapkan</h3>')
+    expect(result).toContain('<li>Dokumen Arsitektur SPBE Instansi</li>')
+  })
+
+  it('renders inline legal section labels as headings without losing content', () => {
+    const result = formatMessageContent('Jawaban Ringkas: Tidak ada peraturan khusus yang ditemukan.')
+
+    expect(result).toContain('<h3>Jawaban Ringkas</h3>')
+    expect(result).toContain('Tidak ada peraturan khusus yang ditemukan')
+  })
+
+  it('renders important paragraph phrases as blue highlight marks', () => {
+    const input = 'SPBE adalah penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan komunikasi untuk memberikan layanan kepada pengguna.'
+
+    const result = formatMessageContent(input)
+
+    expect(result).toContain('<mark class="answer-highlight">penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan komunikasi</mark>')
   })
 })

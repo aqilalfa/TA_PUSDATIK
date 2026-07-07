@@ -226,14 +226,14 @@ nano .env
 # Return to project root
 cd ..
 
-# Build containers
-docker-compose -f docker-compose.dev.yml build
+# Build containers using the official current dev mode
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml build
 
 # Start all services
-docker-compose -f docker-compose.dev.yml up -d
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml up -d
 
 # Watch logs
-docker-compose -f docker-compose.dev.yml logs -f
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml logs -f
 ```
 
 ### Step 6: Upload Your Documents
@@ -246,7 +246,7 @@ cp /path/to/audit_2023.pdf data/documents/audit/
 cp /path/to/lainnya.pdf data/documents/others/
 
 # Process documents (when ingestion pipeline is ready)
-docker-compose -f docker-compose.dev.yml exec backend python scripts/ingest_documents.py --input-dir /app/data/documents
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml exec backend python scripts/ingest_documents.py --input-dir /app/data/documents
 ```
 
 ### Step 7: Access Application
@@ -373,35 +373,39 @@ The development setup supports hot-reload for both backend and frontend:
 
 ### Common Commands
 
+> Current official development mode uses `docker-compose.dev.yml` plus the GPU override. See [DOCKER-USAGE.md](DOCKER-USAGE.md) for the full Docker guide.
+
 ```bash
+# Start development stack with GPU override
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml up -d
+
 # View logs
-docker-compose -f docker-compose.dev.yml logs -f [service_name]
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml logs -f [service_name]
 
 # Restart a service
-docker-compose -f docker-compose.dev.yml restart backend
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml restart backend
 
-# Rebuild after dependency changes
-docker-compose -f docker-compose.dev.yml build backend
-docker-compose -f docker-compose.dev.yml up -d backend
+# Rebuild after backend dependency changes
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml build backend
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml up -d backend
 
 # Enter container shell
-docker-compose -f docker-compose.dev.yml exec backend bash
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml exec backend bash
 
 # Stop all services
-docker-compose -f docker-compose.dev.yml down
-
-# Clean slate (remove volumes)
-docker-compose -f docker-compose.dev.yml down -v
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml down
 ```
+
+Avoid `down -v` unless you intentionally want to remove container volumes/data.
 
 ### Running Tests
 
 ```bash
 # Backend tests
-docker-compose -f docker-compose.dev.yml exec backend pytest
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml exec backend pytest
 
 # With coverage
-docker-compose -f docker-compose.dev.yml exec backend pytest --cov=app tests/
+docker compose -f docker-compose.dev.yml -f docker-compose.gpu.yml exec backend pytest --cov=app tests/
 ```
 
 ---

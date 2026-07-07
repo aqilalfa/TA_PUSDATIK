@@ -18,6 +18,7 @@ from sqlalchemy.orm import Session
 from app.database import get_db
 from app.dependencies.auth_dependencies import get_current_user
 from app.models.db_models import Document, Chunk
+from app.core.rag.access_control import user_can_access_metadata
 
 router = APIRouter(prefix="/api/rag/documents", tags=["RAG Documents"])
 
@@ -46,6 +47,16 @@ def _find_document(doc_id_param: str, db: Session) -> Document:
     raise HTTPException(status_code=404, detail="Document not found")
 
 
+def _document_access_metadata(document: Document) -> dict:
+    if not document.doc_metadata:
+        return {}
+    try:
+        parsed = json.loads(document.doc_metadata)
+        return parsed.get("security", parsed) if isinstance(parsed, dict) else {}
+    except Exception:
+        return {}
+
+
 @router.get("/by-doc-id/{doc_id}/file")
 def serve_document_file(
     doc_id: str,
@@ -57,6 +68,8 @@ def serve_document_file(
     Mendukung doc_id UUID (baru) maupun integer ID (legacy).
     """
     document = _find_document(doc_id, db)
+    if not user_can_access_metadata(_document_access_metadata(document), _user):
+        raise HTTPException(status_code=403, detail="Document access denied")
 
     file_path = document.file_path or document.original_path
     if not file_path or not Path(file_path).exists():
@@ -85,6 +98,8 @@ def get_chunk_by_index(
     Digunakan oleh CitationPopup untuk menampilkan preview teks chunk.
     """
     document = _find_document(doc_id, db)
+    if not user_can_access_metadata(_document_access_metadata(document), _user):
+        raise HTTPException(status_code=403, detail="Document access denied")
 
     chunk = (
         db.query(Chunk)

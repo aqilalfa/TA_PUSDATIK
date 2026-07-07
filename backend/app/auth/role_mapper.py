@@ -7,10 +7,10 @@ from typing import Iterable, List, Sequence
 
 
 DEFAULT_ROLE_MAPPING = {
-    "Evaluator_SPBE": ["evaluator_spbe"],
-    "Staf_PUSDATIK": ["staf_pusdatik"],
-    "Admin_PUSDATIK": ["admin_pusdatik", "staf_pusdatik"],
-    "Manager_Evaluasi": ["manager_evaluasi", "staf_pusdatik"],
+    "Evaluator_SPBE": ["staff"],
+    "Staf_PUSDATIK": ["staff"],
+    "Admin_PUSDATIK": ["admin_pusdatik"],
+    "Manager_Evaluasi": ["staff"],
 }
 
 

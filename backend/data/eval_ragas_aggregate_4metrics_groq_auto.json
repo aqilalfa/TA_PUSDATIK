@@ -1,0 +1,937 @@
+{
+  "generated_at": "2026-06-05T08:01:20.759553",
+  "metrics": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "judge_provider": "groq",
+  "llm_judges": [
+    "meta-llama/llama-4-scout-17b-16e-instruct",
+    "openai/gpt-oss-120b",
+    "qwen/qwen3-32b"
+  ],
+  "batch_files": [
+    {
+      "file": "data\\eval_ragas_batch_00_02_4metrics_groq_qwen3_32b.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "qwen/qwen3-32b",
+      "averages": {
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "faithfulness": 0.675,
+        "answer_relevancy": 0.872
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_02_04_4metrics_groq_qwen3_32b.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "qwen/qwen3-32b",
+      "averages": {
+        "context_precision": 0.475,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9322
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_04_06_4metrics_groq_qwen3_32b.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "qwen/qwen3-32b",
+      "averages": {
+        "context_precision": 0.9167,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8298
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_06_08_4metrics_groq_qwen3_32b.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "qwen/qwen3-32b",
+      "averages": {
+        "context_precision": 0.8194,
+        "context_recall": 1.0,
+        "faithfulness": 0.75,
+        "answer_relevancy": 0.2162
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_07_08_retry_4metrics_groq_qwen3_32b.json",
+      "total_evaluated": 1,
+      "judge_provider": "groq",
+      "llm_judge": "qwen/qwen3-32b",
+      "averages": {
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.4332
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_08_10_4metrics_groq_qwen3_32b.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "qwen/qwen3-32b",
+      "averages": {
+        "context_precision": 0.6,
+        "context_recall": 1.0,
+        "faithfulness": 0.5667,
+        "answer_relevancy": 0.8592
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_10_12_4metrics_groq_qwen_qwen3-32b.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "qwen/qwen3-32b",
+      "averages": {
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "faithfulness": 0.75,
+        "answer_relevancy": 0.8465
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_10_12_attempt2_4metrics_groq_qwen_qwen3-32b.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "qwen/qwen3-32b",
+      "averages": {
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "faithfulness": 0.875,
+        "answer_relevancy": 0.9199
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_12_14_4metrics_groq_qwen_qwen3-32b.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "qwen/qwen3-32b",
+      "averages": {
+        "context_precision": 0.9021,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8579
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_12_14_attempt2_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 1.0,
+        "context_recall": 0.5,
+        "faithfulness": 0.9,
+        "answer_relevancy": 0.6971
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_14_16_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 0.975,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6181
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_16_18_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "faithfulness": 0.7879,
+        "answer_relevancy": 0.7827
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_18_20_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 0.9437,
+        "context_recall": 1.0,
+        "faithfulness": 0.5417,
+        "answer_relevancy": 0.6489
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_20_22_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 0.5,
+        "context_recall": 0.5,
+        "faithfulness": 0.875,
+        "answer_relevancy": 0.2788
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_22_24_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 0.975,
+        "context_recall": 1.0,
+        "faithfulness": 0.9,
+        "answer_relevancy": 0.6317
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_24_26_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 0.725,
+        "context_recall": 1.0,
+        "faithfulness": 0.7727,
+        "answer_relevancy": 0.6881
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_24_26_attempt2_4metrics_groq_openai_gpt-oss-120b.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "openai/gpt-oss-120b",
+      "averages": {
+        "context_precision": 0.725,
+        "context_recall": 1.0,
+        "faithfulness": 0.7083,
+        "answer_relevancy": 0.7853
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_26_28_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 0.4778,
+        "context_recall": 1.0,
+        "faithfulness": 0.9167,
+        "answer_relevancy": 0.5474
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_28_30_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 0.975,
+        "context_recall": 1.0,
+        "faithfulness": 0.619,
+        "answer_relevancy": 0.5994
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_30_32_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 0.75,
+        "context_recall": 1.0,
+        "faithfulness": 0.875,
+        "answer_relevancy": 0.5464
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_32_34_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 0.9583,
+        "context_recall": 1.0,
+        "faithfulness": 0.8444,
+        "answer_relevancy": 0.6092
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_34_36_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 0.7944,
+        "context_recall": 1.0,
+        "faithfulness": 0.9286,
+        "answer_relevancy": 0.6804
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_36_38_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6608
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_38_40_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 0.5,
+        "context_recall": 0.5,
+        "faithfulness": 0.8167,
+        "answer_relevancy": 0.6013
+      }
+    }
+  ],
+  "total_questions_aggregated": 40,
+  "summary": {
+    "context_precision": {
+      "avg": 0.8193,
+      "valid": 40,
+      "null": 0
+    },
+    "context_recall": {
+      "avg": 0.925,
+      "valid": 40,
+      "null": 0
+    },
+    "faithfulness": {
+      "avg": 0.8352,
+      "valid": 40,
+      "null": 0
+    },
+    "answer_relevancy": {
+      "avg": 0.6659,
+      "valid": 40,
+      "null": 0
+    }
+  },
+  "per_question": [
+    {
+      "id": "GT-001",
+      "question": "Apa yang dimaksud dengan Layanan SPBE?",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.999999999975,
+        "context_recall": 1.0,
+        "faithfulness": 0.6,
+        "answer_relevancy": 0.8042091945332172
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_00_02_4metrics_groq_qwen3_32b.json"
+      ]
+    },
+    {
+      "id": "GT-002",
+      "question": "Apa definisi Rencana Induk SPBE Nasional?",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 0.75,
+        "answer_relevancy": 0.9397595507263903
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_00_02_4metrics_groq_qwen3_32b.json"
+      ]
+    },
+    {
+      "id": "GT-003",
+      "question": "Apa pengertian Arsitektur SPBE?",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.699999999965,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9268271463263092
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_02_04_4metrics_groq_qwen3_32b.json"
+      ]
+    },
+    {
+      "id": "GT-004",
+      "question": "Apa yang dimaksud dengan Keamanan SPBE menurut Perpres 95 Tahun 2018?",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.249999999975,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9376722470798313
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_02_04_4metrics_groq_qwen3_32b.json"
+      ]
+    },
+    {
+      "id": "GT-005",
+      "question": "Siapa saja yang termasuk sebagai Pengguna SPBE?",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8750947002600881
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_04_06_4metrics_groq_qwen3_32b.json"
+      ]
+    },
+    {
+      "id": "GT-006",
+      "question": "Apa saja prinsip-prinsip dalam pelaksanaan SPBE?",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.8333333332916666,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7845804610581281
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_04_06_4metrics_groq_qwen3_32b.json"
+      ]
+    },
+    {
+      "id": "GT-007",
+      "question": "Apa tujuan diadakannya Tata Kelola SPBE?",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.6388888888675925,
+        "context_recall": 1.0,
+        "faithfulness": 0.75,
+        "answer_relevancy": 0.0
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_06_08_4metrics_groq_qwen3_32b.json"
+      ]
+    },
+    {
+      "id": "GT-008",
+      "question": "Apa saja yang mencakup unsur-unsur SPBE?",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.43321337175941554
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_06_08_4metrics_groq_qwen3_32b.json",
+        "data\\eval_ragas_batch_07_08_retry_4metrics_groq_qwen3_32b.json"
+      ]
+    },
+    {
+      "id": "GT-009",
+      "question": "Untuk berapa lama Arsitektur SPBE Nasional disusun?",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.19999999998,
+        "context_recall": 1.0,
+        "faithfulness": 0.3333333333333333,
+        "answer_relevancy": 0.8638698358119021
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_08_10_4metrics_groq_qwen3_32b.json"
+      ]
+    },
+    {
+      "id": "GT-010",
+      "question": "Apa definisi Audit Teknologi Informasi dan Komunikasi (TIK)?",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "faithfulness": 0.8,
+        "answer_relevancy": 0.8544648646639103
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_08_10_4metrics_groq_qwen3_32b.json"
+      ]
+    },
+    {
+      "id": "GT-011",
+      "question": "Apa yang dimaksud dengan Pemantauan SPBE?",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9476317939979241
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_10_12_4metrics_groq_qwen_qwen3-32b.json",
+        "data\\eval_ragas_batch_10_12_attempt2_4metrics_groq_qwen_qwen3-32b.json"
+      ]
+    },
+    {
+      "id": "GT-012",
+      "question": "Apa definisi Evaluasi SPBE?",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "faithfulness": 0.75,
+        "answer_relevancy": 0.8922170300617666
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_10_12_4metrics_groq_qwen_qwen3-32b.json",
+        "data\\eval_ragas_batch_10_12_attempt2_4metrics_groq_qwen_qwen3-32b.json"
+      ]
+    },
+    {
+      "id": "GT-013",
+      "question": "Siapa yang berhak melakukan Penilaian Dokumen?",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.99999999998,
+        "context_recall": 0.0,
+        "faithfulness": 0.8,
+        "answer_relevancy": 0.4695804717828209
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_12_14_4metrics_groq_qwen_qwen3-32b.json",
+        "data\\eval_ragas_batch_12_14_attempt2_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-014",
+      "question": "Apa yang dimaksud dengan Penilaian Visitasi?",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9245879635812567
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_12_14_4metrics_groq_qwen_qwen3-32b.json",
+        "data\\eval_ragas_batch_12_14_attempt2_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-015",
+      "question": "Apa tujuan utama dilakukannya Pemantauan dan Evaluasi SPBE?",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.94999999997625,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6655578265083296
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_14_16_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-016",
+      "question": "Sebutkan 5 tingkatan kematangan kapabilitas proses SPBE!",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.5705487920024964
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_14_16_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-017",
+      "question": "Apa yang mendefinisikan SPBE Tingkat 1 (Rintisan)?",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 0.6666666666666666,
+        "answer_relevancy": 0.9181450148085001
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_16_18_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-018",
+      "question": "Berapa persentase bobot penilaian untuk Domain Layanan SPBE?",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 0.9090909090909091,
+        "answer_relevancy": 0.6472215607411927
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_16_18_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-019",
+      "question": "Predikat apa yang disematkan pada rentang nilai indeks SPBE 3,5 hingga kurang dari 4,2?",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "faithfulness": 0.75,
+        "answer_relevancy": 0.6824535672071219
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_18_20_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-020",
+      "question": "Apa predikat SPBE untuk nilai indeks di bawah 1,8?",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.8874999999778125,
+        "context_recall": 1.0,
+        "faithfulness": 0.3333333333333333,
+        "answer_relevancy": 0.6152621051097465
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_18_20_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-021",
+      "question": "Apa yang dimaksud dengan Aplikasi SPBE Prioritas?",
+      "source_doc": "Perpres Nomor 82 Tahun 2023",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "faithfulness": 0.75,
+        "answer_relevancy": 0.0
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_20_22_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-022",
+      "question": "Berapa minimal target pengguna agar sebuah aplikasi beroperasi disebut Aplikasi SPBE Prioritas?",
+      "source_doc": "Perpres Nomor 82 Tahun 2023",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.5576556798165168
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_20_22_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-023",
+      "question": "Siapa lembaga yang secara khusus ditugaskan pemerintah untuk menyelenggarakan Aplikasi SPBE Prioritas?",
+      "source_doc": "Perpres Nomor 82 Tahun 2023",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.94999999997625,
+        "context_recall": 1.0,
+        "faithfulness": 0.8,
+        "answer_relevancy": 0.643795662911256
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_22_24_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-024",
+      "question": "Kapan batas akhir pertama kali Aplikasi SPBE Prioritas harus diluncurkan secara terpadu?",
+      "source_doc": "Perpres Nomor 82 Tahun 2023",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6195352128385015
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_22_24_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-025",
+      "question": "Apa yang dimaksud dengan Audit Keamanan SPBE?",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.8666666666377778,
+        "context_recall": 1.0,
+        "faithfulness": 0.6666666666666666,
+        "answer_relevancy": 0.8703741353930754
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_24_26_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+        "data\\eval_ragas_batch_24_26_attempt2_4metrics_groq_openai_gpt-oss-120b.json"
+      ]
+    },
+    {
+      "id": "GT-026",
+      "question": "Apa sajakah yang dapat menjadi objek dari Audit Keamanan SPBE?",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.5833333333041666,
+        "context_recall": 1.0,
+        "faithfulness": 0.75,
+        "answer_relevancy": 0.7003107919653035
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_24_26_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+        "data\\eval_ragas_batch_24_26_attempt2_4metrics_groq_openai_gpt-oss-120b.json"
+      ]
+    },
+    {
+      "id": "GT-027",
+      "question": "Siapa entitas yang bertugas sebagai Pelaksana Audit Keamanan SPBE?",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.19999999998,
+        "context_recall": 1.0,
+        "faithfulness": 0.8333333333333334,
+        "answer_relevancy": 0.6186264638692136
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_26_28_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-028",
+      "question": "Aspek apa saja yang harus dipenuhi oleh bukti Audit Keamanan SPBE?",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.7555555555303703,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.4761546376712056
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_26_28_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-029",
+      "question": "Apa tiga konklusi akhir dari Audit Keamanan SPBE?",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.94999999997625,
+        "context_recall": 1.0,
+        "faithfulness": 0.5714285714285714,
+        "answer_relevancy": 0.6044458924966148
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_28_30_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-030",
+      "question": "Siapa saja pihak yang termasuk dalam Penyelenggara Sistem Elektronik Lingkup Publik?",
+      "source_doc": "PP Nomor 71 Tahun 2019",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "faithfulness": 0.6666666666666666,
+        "answer_relevancy": 0.5942546521036123
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_28_30_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-031",
+      "question": "Apa yang dimaksud sistem elektronik yang \"andal\" secara hukum?",
+      "source_doc": "PP Nomor 71 Tahun 2019",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "faithfulness": 0.75,
+        "answer_relevancy": 0.6414483464440166
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_30_32_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-032",
+      "question": "Apa sanksi administratif jika Penyelenggara Sistem Elektronik melakukan pelanggaran?",
+      "source_doc": "PP Nomor 71 Tahun 2019",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.49999999995,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.45132294276816615
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_30_32_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-033",
+      "question": "Apa bentuk teknis dari pelaksanaan sanksi pemutusan Akses?",
+      "source_doc": "PP Nomor 71 Tahun 2019",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.9166666666361111,
+        "context_recall": 1.0,
+        "faithfulness": 0.8888888888888888,
+        "answer_relevancy": 0.4471191625251462
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_32_34_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-034",
+      "question": "Apa pengertian dari Manajemen SPBE di lingkungan BSSN?",
+      "source_doc": "Peraturan BSSN Nomor 2 Tahun 2023",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "faithfulness": 0.8,
+        "answer_relevancy": 0.7712258484737772
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_32_34_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-035",
+      "question": "Apa saja yang menjadi ruang lingkup penyelenggaraan SPBE di BSSN?",
+      "source_doc": "Peraturan BSSN Nomor 2 Tahun 2023",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.8333333332916666,
+        "context_recall": 1.0,
+        "faithfulness": 0.8571428571428571,
+        "answer_relevancy": 0.5676408972198147
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_34_36_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-036",
+      "question": "Apa yang menjadi kewajiban Tim Koordinasi SPBE BSSN?",
+      "source_doc": "Peraturan BSSN Nomor 2 Tahun 2023",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.7555555555303703,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7932363620956776
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_34_36_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-037",
+      "question": "Siapa yang bertanggung jawab langsung atas pelaksanaan Audit Keamanan Internal di BSSN?",
+      "source_doc": "Peraturan BSSN Nomor 2 Tahun 2023",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.583717943465555
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_36_38_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-038",
+      "question": "Kapan LATIK Terakreditasi wajib menyampaikan laporan periodik audit keamanan mereka?",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7379781912189595
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_36_38_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-039",
+      "question": "Apa domain yang mencetak skor evaluasi terendah secara nasional pada Laporan 2024?",
+      "source_doc": "Laporan Evaluasi SPBE Tahun 2024",
+      "doc_type": "laporan",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "faithfulness": 0.8,
+        "answer_relevancy": 0.5287613180077521
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_38_40_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "GT-040",
+      "question": "Instansi pemerintah daerah mana yang meraih nilai SPBE tertinggi di tahun 2024?",
+      "source_doc": "Laporan Evaluasi SPBE Tahun 2024",
+      "doc_type": "laporan",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 0.8333333333333334,
+        "answer_relevancy": 0.6739160572901307
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_38_40_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    }
+  ]
+}

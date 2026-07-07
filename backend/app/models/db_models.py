@@ -13,8 +13,13 @@ from sqlalchemy import (
     Float,
 )
 from sqlalchemy.orm import relationship
-from datetime import datetime
+from datetime import datetime, timezone
 from app.database import Base
+
+
+def utc_now_naive() -> datetime:
+    """Return UTC timestamp compatible with existing naive DateTime columns."""
+    return datetime.now(timezone.utc).replace(tzinfo=None)
 
 
 class User(Base):
@@ -30,8 +35,8 @@ class User(Base):
     department = Column(String, nullable=True)
     auth_provider = Column(String, default="local")
     external_id = Column(String, nullable=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
-    last_active = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    created_at = Column(DateTime, default=utc_now_naive)
+    last_active = Column(DateTime, default=utc_now_naive, onupdate=utc_now_naive)
 
     # Relationships
     sessions = relationship(
@@ -54,8 +59,8 @@ class Session(Base):
     id = Column(String, primary_key=True)  # UUID
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     title = Column(String, default="New Conversation")
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    created_at = Column(DateTime, default=utc_now_naive)
+    updated_at = Column(DateTime, default=utc_now_naive, onupdate=utc_now_naive)
     is_active = Column(Boolean, default=True)
 
     # Relationships
@@ -75,7 +80,7 @@ class Conversation(Base):
     role = Column(String, nullable=False)  # 'user' or 'assistant'
     content = Column(Text, nullable=False)
     sources = Column(Text, nullable=True)  # JSON array of retrieved sources
-    timestamp = Column(DateTime, default=datetime.utcnow)
+    timestamp = Column(DateTime, default=utc_now_naive)
     tokens_used = Column(Integer, nullable=True)
     latency_ms = Column(Integer, nullable=True)
 
@@ -96,7 +101,7 @@ class Document(Base):
     ocr_needed = Column(Boolean, default=False)
     doc_metadata = Column(Text, nullable=True)  # JSON metadata
     uploaded_by = Column(Integer, ForeignKey("users.id"), nullable=True)
-    uploaded_at = Column(DateTime, default=datetime.utcnow)
+    uploaded_at = Column(DateTime, default=utc_now_naive)
     processed_at = Column(DateTime, nullable=True)
     error_message = Column(Text, nullable=True)
 
@@ -125,7 +130,7 @@ class Chunk(Base):
     chunk_text = Column(Text, nullable=False)
     chunk_index = Column(Integer, nullable=False)
     chunk_metadata = Column(Text, nullable=True)  # JSON: bab, pasal, ayat, context_header, dll
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=utc_now_naive)
 
     # === Kolom tambahan untuk rich metadata (Phase 1) ===
     chunk_type = Column(String, default="text", nullable=True)  # 'pasal', 'table', 'section', dll
@@ -145,7 +150,7 @@ class EvaluationResult(Base):
     metrics = Column(Text, nullable=False)  # JSON of metrics
     score = Column(Float, nullable=True)
     notes = Column(Text, nullable=True)
-    evaluated_at = Column(DateTime, default=datetime.utcnow)
+    evaluated_at = Column(DateTime, default=utc_now_naive)
 
 
 class AuditLog(Base):
@@ -162,4 +167,4 @@ class AuditLog(Base):
     status = Column(String, nullable=False)  # 'success', 'failure', 'denied', 'pending'
     ip_address = Column(String, nullable=True)  # Client IP for geolocation/abuse detection
     details = Column(Text, nullable=True)  # JSON: provider, reason, attempt_count, etc.
-    timestamp = Column(DateTime, default=datetime.utcnow, index=True)  # Indexed for range queries
+    timestamp = Column(DateTime, default=utc_now_naive, index=True)  # Indexed for range queries

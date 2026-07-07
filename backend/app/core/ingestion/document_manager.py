@@ -6,6 +6,8 @@ Handles: upload, preview chunking, indexing to Qdrant/BM25, delete
 import os
 import uuid
 import re
+import json
+import hashlib
 import pickle
 import time
 from pathlib import Path
@@ -14,6 +16,13 @@ from datetime import datetime
 
 from loguru import logger
 from app.config import settings
+from app.core.rag.context_ids import enrich_context_identity
+from app.core.rag.access_control import (
+    build_document_access_metadata,
+    enrich_metadata_with_access,
+    normalize_allowed_roles,
+)
+from app.core.rag.guardrails import detect_indirect_prompt_injection
 
 # Paths
 BASE_DIR = Path(__file__).parent.parent.parent
@@ -283,12 +292,21 @@ def detect_document_type(filename: str, text: str) -> str:
     text_lower = text[:2000].lower()
 
     if any(
-        kw in filename_lower for kw in ["perpres", "pp_", "permen", "peraturan", "se_"]
+        kw in filename_lower
+        for kw in ["perpres", "pp_", "permen", "peraturan", "se_", "bssn", "perka"]
     ):
         return "peraturan"
     if any(
         kw in text_lower
-        for kw in ["peraturan presiden", "peraturan pemerintah", "peraturan menteri"]
+        for kw in [
+            "peraturan presiden",
+            "peraturan pemerintah",
+            "peraturan menteri",
+            "peraturan badan siber dan sandi negara",
+            "peraturan kepala badan",
+            "perka bssn",
+            "badan siber dan sandi negara",
+        ]
     ):
         return "peraturan"
     if any(kw in filename_lower for kw in ["audit", "laporan"]):
@@ -672,6 +690,13 @@ class DocumentManager:
         """Convert ORM Document object ke dict format yang kompatibel dengan callers."""
         if doc is None:
             return {}
+        access_metadata: Dict[str, Any] = {}
+        if doc.doc_metadata:
+            try:
+                parsed_meta = json.loads(doc.doc_metadata)
+                access_metadata = parsed_meta.get("security", parsed_meta) if isinstance(parsed_meta, dict) else {}
+            except Exception:
+                access_metadata = {}
         return {
             "id": doc.id,
             "doc_id": doc.doc_id or str(doc.id),
@@ -686,6 +711,11 @@ class DocumentManager:
             "created_at": str(doc.uploaded_at) if doc.uploaded_at else "",
             "processed_at": str(doc.processed_at) if doc.processed_at else None,
             "error_message": doc.error_message,
+            "access_metadata": access_metadata,
+            "classification": access_metadata.get("classification", "internal"),
+            "allowed_roles": normalize_allowed_roles(access_metadata.get("allowed_roles")),
+            "uploaded_by": access_metadata.get("uploaded_by"),
+            "source_hash": access_metadata.get("source_hash"),
         }
 
     @staticmethod
@@ -715,8 +745,13 @@ class DocumentManager:
                 return default
 
         # Standardize field names and types
-        return {
+        normalized = {
             "id": data.get("id", 0),
+            "chunk_id": _to_int(data.get("chunk_id"), data.get("id", 0)),
+            "doc_id": str(data.get("doc_id", "")) if data.get("doc_id") is not None else None,
+            "document_id": _to_int(data.get("document_id")),
+            "canonical_context_id": data.get("canonical_context_id"),
+            "citation_id": data.get("citation_id"),
             "chunk_index": _to_int(data.get("chunk_index"), 0),
             "text": data.get("text") or data.get("chunk_text") or "",
             "raw_text": data.get("raw_text") or data.get("text") or "",
@@ -738,6 +773,7 @@ class DocumentManager:
             "table_context": data.get("table_context", ""),
             "is_indexed": data.get("is_indexed", True),
         }
+        return enrich_context_identity(normalized)
 
     # ── Document CRUD (ORM) ───────────────────────────────────────
     def create_document(
@@ -747,6 +783,7 @@ class DocumentManager:
         original_filename: str,
         file_size: int,
         file_path: str,
+        access_metadata: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
         """Create a new document record via ORM."""
         from app.models.db_models import Document
@@ -762,6 +799,7 @@ class DocumentManager:
                 file_path=file_path,
                 document_title=document_title,
                 file_size=file_size,
+                doc_metadata=json.dumps({"security": access_metadata or {}}, ensure_ascii=False),
                 status="uploaded",
                 chunk_count=0,
             )
@@ -912,6 +950,9 @@ class DocumentManager:
             # Insert chunks baru
             for i, chunk in enumerate(chunks):
                 meta = {
+                    "doc_id": doc.doc_id or str(doc.id),
+                    "document_id": doc.id,
+                    "chunk_index": i,
                     "context_header": chunk.get("context_header", ""),
                     "hierarchy": chunk.get("hierarchy", ""),
                     "document_title": chunk.get("document_title", ""),
@@ -932,6 +973,7 @@ class DocumentManager:
                     "chunk_part": chunk.get("chunk_part"),
                     "chunk_parts_total": chunk.get("chunk_parts_total"),
                 }
+                meta = enrich_context_identity(meta)
                 new_chunk = Chunk(
                     document_id=doc.id,
                     chunk_index=i,
@@ -1113,7 +1155,12 @@ class DocumentManager:
 
 
     def upload_file(
-        self, file_content: bytes, original_filename: str
+        self,
+        file_content: bytes,
+        original_filename: str,
+        uploaded_by=None,
+        classification: str = "internal",
+        allowed_roles: Optional[List[str]] = None,
     ) -> Dict[str, Any]:
         """Save uploaded file and create document record."""
 
@@ -1126,6 +1173,17 @@ class DocumentManager:
         # Validate file type
         if not original_filename.lower().endswith(".pdf"):
             raise ValueError("Only PDF files are supported")
+
+        if not file_content.startswith(b"%PDF"):
+            raise ValueError("Uploaded file is not a valid PDF")
+
+        access_metadata = build_document_access_metadata(
+            file_content=file_content,
+            filename=original_filename,
+            uploaded_by=uploaded_by,
+            classification=classification,
+            allowed_roles=allowed_roles,
+        )
 
         # Generate unique ID and filename
         doc_id = str(uuid.uuid4())[:8]
@@ -1144,6 +1202,7 @@ class DocumentManager:
             original_filename=original_filename,
             file_size=len(file_content),
             file_path=str(file_path),
+            access_metadata=access_metadata,
         )
 
         logger.info(f"Uploaded document: {doc_id} - {original_filename}")
@@ -1152,6 +1211,9 @@ class DocumentManager:
             "doc_id": doc_id,
             "filename": original_filename,
             "file_size": len(file_content),
+            "source_hash": access_metadata["source_hash"],
+            "classification": access_metadata["classification"],
+            "allowed_roles": access_metadata["allowed_roles"],
             "status": "uploaded",
         }
 
@@ -1568,40 +1630,48 @@ class DocumentManager:
         self._delete_qdrant_points_by_doc_id(doc_id)
 
         points = []
+        access_metadata = doc.get("access_metadata", {})
         for i, (chunk, emb) in enumerate(zip(chunks, embeddings)):
             if emb is None:
                 continue
 
             chunk_index = chunk.get("chunk_index", i)
+            payload = enrich_context_identity(
+                enrich_metadata_with_access(
+                    {
+                    "chunk_index": chunk_index,
+                    "text": chunk["text"],
+                    "raw_text": chunk.get("raw_text", chunk["text"]),
+                    "context_header": chunk.get("context_header", ""),
+                    "document_title": doc["document_title"],
+                    "filename": doc["original_filename"],
+                    "doc_type": doc.get("doc_type", "other"),
+                    "bab": chunk.get("bab", ""),
+                    "bagian": chunk.get("bagian", ""),
+                    "pasal": chunk.get("pasal", ""),
+                    "ayat": chunk.get("ayat", ""),
+                    "parent_pasal_text": chunk.get("parent_pasal_text", ""),
+                    "is_parent": chunk.get("is_parent", False),
+                    "hierarchy": chunk.get("hierarchy", ""),
+                    "chunk_part": chunk.get("chunk_part"),
+                    "chunk_parts_total": chunk.get("chunk_parts_total"),
+                    "doc_id": doc_id,
+                    "document_id": doc.get("id"),
+                    "chunk_type": chunk.get("chunk_type", "text"),
+                    "section": chunk.get("section", ""),
+                    "is_table": chunk.get("is_table", False),
+                    "table_label": chunk.get("table_label", ""),
+                    "table_context": chunk.get("table_context", ""),
+                    "original_table": chunk.get("original_table", ""),
+                    },
+                    access_metadata,
+                )
+            )
             points.append(
                 {
                     "id": str(uuid.uuid4()),
                     "vector": emb,
-                    "payload": {
-                        "chunk_index": chunk_index,
-                        "text": chunk["text"],
-                        "raw_text": chunk.get("raw_text", chunk["text"]),
-                        "context_header": chunk.get("context_header", ""),
-                        "document_title": doc["document_title"],
-                        "filename": doc["original_filename"],
-                        "doc_type": doc.get("doc_type", "other"),
-                        "bab": chunk.get("bab", ""),
-                        "bagian": chunk.get("bagian", ""),
-                        "pasal": chunk.get("pasal", ""),
-                        "ayat": chunk.get("ayat", ""),
-                        "parent_pasal_text": chunk.get("parent_pasal_text", ""),
-                        "is_parent": chunk.get("is_parent", False),
-                        "hierarchy": chunk.get("hierarchy", ""),
-                        "chunk_part": chunk.get("chunk_part"),
-                        "chunk_parts_total": chunk.get("chunk_parts_total"),
-                        "doc_id": doc_id,
-                        "chunk_type": chunk.get("chunk_type", "text"),
-                        "section": chunk.get("section", ""),
-                        "is_table": chunk.get("is_table", False),
-                        "table_label": chunk.get("table_label", ""),
-                        "table_context": chunk.get("table_context", ""),
-                        "original_table": chunk.get("original_table", ""),
-                    },
+                    "payload": payload,
                 }
             )
 
@@ -1627,6 +1697,54 @@ class DocumentManager:
 
         return uploaded
 
+    def _quarantine_prompt_injection_document(
+        self,
+        doc_id: str,
+        doc: Dict[str, Any],
+        categories: list[str],
+        chunk_index: int,
+    ) -> Dict[str, Any]:
+        reason = (
+            "Potential prompt injection detected before indexing; "
+            f"categories={categories}; chunk_index={chunk_index}"
+        )
+        self.update_document(
+            doc_id,
+            status="quarantined",
+            error_message=reason,
+            processed_at=datetime.now().isoformat(),
+        )
+
+        try:
+            from app.core.audit_service import AuditEventType, AuditLogger
+            db = self._get_db()
+            try:
+                access_metadata = doc.get("access_metadata") or {}
+                uploaded_by = access_metadata.get("uploaded_by")
+                AuditLogger(session=db).log_llm_security_event(
+                    event_type=AuditEventType.INGESTION_PROMPT_INJECTION_QUARANTINED,
+                    user_id=uploaded_by if isinstance(uploaded_by, int) else None,
+                    username="document-ingestion",
+                    action="prompt_injection_quarantined",
+                    resource=f"documents/{doc_id}",
+                    categories=categories,
+                    prompt_preview=reason,
+                    extra={"doc_id": doc_id, "chunk_index": chunk_index},
+                )
+            finally:
+                db.close()
+        except Exception as audit_error:
+            logger.warning(f"Failed to audit prompt injection quarantine for doc_id={doc_id}: {audit_error}")
+
+        logger.warning(f"Quarantined document before indexing: doc_id={doc_id}; {reason}")
+        return {
+            "doc_id": doc_id,
+            "chunks_indexed": 0,
+            "status": "quarantined",
+            "quarantine_reason": reason,
+            "categories": categories,
+        }
+
     def index_document(self, doc_id: str) -> Dict[str, Any]:
         """Index document chunks to Qdrant and BM25."""
         doc = self.get_document(doc_id)
@@ -1636,6 +1754,16 @@ class DocumentManager:
         chunks = self.get_chunks(doc_id, limit=MAX_INDEX_CHUNKS)
         if not chunks:
             raise ValueError("No chunks to index. Run preview first.")
+
+        for chunk_index, chunk in enumerate(chunks):
+            check = detect_indirect_prompt_injection(chunk.get("text", ""))
+            if check.is_blocked:
+                return self._quarantine_prompt_injection_document(
+                    doc_id,
+                    doc,
+                    check.categories,
+                    chunk_index,
+                )
 
         total_chunks = self.get_chunk_count(doc_id)
         if total_chunks and total_chunks > len(chunks):
@@ -1698,26 +1826,34 @@ class DocumentManager:
                         )
                     )
                 for chunk in chunks:
+                    metadata = enrich_context_identity(
+                        enrich_metadata_with_access(
+                            {
+                            "document_title": doc.get("document_title", ""),
+                            "context_header": chunk.get("context_header", ""),
+                            "pasal": chunk.get("pasal", ""),
+                            "ayat": chunk.get("ayat", ""),
+                            "bab": chunk.get("bab", ""),
+                            "hierarchy": chunk.get("hierarchy", ""),
+                            "chunk_index": chunk.get("chunk_index"),
+                            "chunk_part": chunk.get("chunk_part"),
+                            "chunk_parts_total": chunk.get("chunk_parts_total"),
+                            "parent_pasal_text": chunk.get("parent_pasal_text", ""),
+                            "is_parent": chunk.get("is_parent", False),
+                            "doc_id": doc["doc_id"],
+                            "document_id": doc.get("id"),
+                            "filename": chunk.get("filename", ""),
+                            "is_table": chunk.get("is_table", False),
+                            "table_label": chunk.get("table_label", ""),
+                            "table_context": chunk.get("table_context", ""),
+                            },
+                            doc.get("access_metadata", {}),
+                        )
+                    )
                     all_chunks.append(
                         {
                             "text": chunk["text"],
-                            "metadata": {
-                                "document_title": doc.get("document_title", ""),
-                                "context_header": chunk.get("context_header", ""),
-                                "pasal": chunk.get("pasal", ""),
-                                "ayat": chunk.get("ayat", ""),
-                                "bab": chunk.get("bab", ""),
-                                "hierarchy": chunk.get("hierarchy", ""),
-                                "chunk_part": chunk.get("chunk_part"),
-                                "chunk_parts_total": chunk.get("chunk_parts_total"),
-                                "parent_pasal_text": chunk.get("parent_pasal_text", ""),
-                                "is_parent": chunk.get("is_parent", False),
-                                "doc_id": doc["doc_id"],
-                                   "filename": chunk.get("filename", ""),
-                                   "is_table": chunk.get("is_table", False),
-                                   "table_label": chunk.get("table_label", ""),
-                                   "table_context": chunk.get("table_context", ""),
-                            },
+                            "metadata": metadata,
                         }
                     )
 
@@ -1860,6 +1996,7 @@ class DocumentManager:
                 "status": d["status"],
                 "created_at": d["created_at"],
                 "processed_at": d["processed_at"],
+                "access_metadata": d.get("access_metadata", {}),
             }
             for d in docs
             if d.get("chunk_count", 0) > 0

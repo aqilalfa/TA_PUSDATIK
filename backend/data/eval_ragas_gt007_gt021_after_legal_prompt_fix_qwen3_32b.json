@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-06-05T16:15:35.958162",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "groq",
+  "llm_judge": "qwen/qwen3-32b",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.9167,
+    "context_recall": 1.0,
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.8588
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.9167,
+      "context_recall": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8588
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "GT-007",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa tujuan diadakannya Tata Kelola SPBE?",
+      "answer": "Tujuan utama dari Tata Kelola Sistem Pemerintahan Berbasis Elektronik (SPBE) adalah untuk memastikan penerapan unsur-unsur SPBE secara terpadu [1]. Hal ini juga bertujuan menjamin bahwa penerapan unsur tersebut berjalan dengan baik di lingkungan Badan Siber dan Sandi Negara (BSSN) agar dapat dilakuk...",
+      "ground_truth": "Memastikan penerapan unsur-unsur SPBE dilaksanakan secara terpadu.",
+      "scores": {
+        "context_precision": 0.8333333332916666,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7176603011355344
+      }
+    },
+    {
+      "id": "GT-021",
+      "source_doc": "Perpres Nomor 82 Tahun 2023",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan Aplikasi SPBE Prioritas?",
+      "answer": "Berdasarkan dokumen yang diberikan, berikut adalah penjelasan mengenai Aplikasi SPBE Prioritas:\n\nAplikasi SPBE Prioritas didefinisikan sebagai **Aplikasi SPBE** yang memiliki dampak luas serta merupakan perwujudan nyata dari Layanan SPBE yang berkualitas dan tepercaya [1].",
+      "ground_truth": "Aplikasi SPBE berdampak luas yang merupakan wujud nyata layanan SPBE berkualitas dan tepercaya.",
+      "scores": {
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9999999999999464
+      }
+    }
+  ]
+}

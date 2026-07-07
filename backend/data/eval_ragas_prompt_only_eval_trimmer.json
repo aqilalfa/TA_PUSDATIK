@@ -1,0 +1,292 @@
+{
+  "generated_at": "2026-06-09T12:05:05.909114",
+  "metrics": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "judge_provider": "groq",
+  "llm_judges": [
+    "meta-llama/llama-4-scout-17b-16e-instruct",
+    "qwen/qwen3-32b"
+  ],
+  "batch_files": [
+    {
+      "file": "data\\eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "qwen/qwen3-32b",
+      "averages": {
+        "context_precision": 0.9437,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7497
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_00_02_attempt2_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 0.9437,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6755
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_02_04_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 0.5,
+        "context_recall": 0.5,
+        "faithfulness": 0.9524,
+        "answer_relevancy": 0.4083
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_04_06_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 0.7937,
+        "context_recall": 0.75,
+        "faithfulness": 0.75,
+        "answer_relevancy": 0.6831
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_06_08_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 0.9167,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6277
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_08_10_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 2,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 0.625,
+        "context_recall": 1.0,
+        "faithfulness": 0.8295,
+        "answer_relevancy": 0.7869
+      }
+    },
+    {
+      "file": "data\\eval_ragas_batch_10_11_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json",
+      "total_evaluated": 1,
+      "judge_provider": "groq",
+      "llm_judge": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "averages": {
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "faithfulness": 0.8571,
+        "answer_relevancy": 0.6912
+      }
+    }
+  ],
+  "total_questions_aggregated": 11,
+  "summary": {
+    "context_precision": {
+      "avg": 0.6871,
+      "valid": 11,
+      "null": 0
+    },
+    "context_recall": {
+      "avg": 0.7727,
+      "valid": 11,
+      "null": 0
+    },
+    "faithfulness": {
+      "avg": 0.9019,
+      "valid": 11,
+      "null": 0
+    },
+    "answer_relevancy": {
+      "avg": 0.6413,
+      "valid": 11,
+      "null": 0
+    }
+  },
+  "per_question": [
+    {
+      "id": "gt_002",
+      "question": "Instansi mana yang mendapatkan nilai Indeks SPBE tertinggi dari kategori Pemerintah Daerah pada evaluasi SPBE 2024?",
+      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+      "doc_type": "laporan",
+      "scores": {
+        "context_precision": 0.9999999999666667,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.696921019565349
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json",
+        "data\\eval_ragas_batch_00_02_attempt2_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "gt_007",
+      "question": "Untuk siapa Pedoman Menteri PANRB Nomor 3 Tahun 2024 ini ditujukan?",
+      "source_doc": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "doc_type": "pedoman_spbe",
+      "scores": {
+        "context_precision": 0.8874999999778125,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6540529291503495
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json",
+        "data\\eval_ragas_batch_00_02_attempt2_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "gt_008",
+      "question": "Berapa jumlah indikator yang digunakan dalam kuesioner pemantauan dan evaluasi SPBE sesuai Pedoman Menteri PANRB Nomor 3 Tahun 2024?",
+      "source_doc": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "doc_type": "pedoman_spbe",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "faithfulness": 0.9047619047619048,
+        "answer_relevancy": 0.0
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_02_04_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "gt_011",
+      "question": "Apa saja komponen Standar Audit Keamanan SPBE menurut Peraturan BSSN Nomor 8 Tahun 2024 Pasal 2?",
+      "source_doc": "peraturan-bssn-no-8-tahun-2024.pdf",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.9999999999666667,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8165597658537203
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_02_04_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "gt_014",
+      "question": "Apa saja informasi yang wajib dimuat dalam surat tugas tim auditor Keamanan SPBE berdasarkan Pasal 37 Peraturan BSSN Nomor 8 Tahun 2024?",
+      "source_doc": "peraturan-bssn-no-8-tahun-2024.pdf",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.8874999999778125,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8533604064748518
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_04_06_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "gt_021",
+      "question": "Siapa yang ditugaskan untuk menyelenggarakan Aplikasi SPBE Prioritas dalam Perpres Nomor 82 Tahun 2023?",
+      "source_doc": "Perpres Nomor 82 Tahun 2023.pdf",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.699999999965,
+        "context_recall": 0.5,
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.5127744037937765
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_04_06_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "gt_028",
+      "question": "Apa tujuan Manajemen Risiko SPBE menurut Pasal 47 Perpres Nomor 95 Tahun 2018?",
+      "source_doc": "Perpres Nomor 95 Tahun 2018.pdf",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.8333333332916666,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.5634652890406341
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_06_08_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "gt_032",
+      "question": "Apa kewajiban pendaftaran bagi Penyelenggara Sistem Elektronik (PSE) menurut Pasal 6 PP Nomor 71 Tahun 2019?",
+      "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6918436545790136
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_06_08_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "gt_033",
+      "question": "Apa yang dimaksud dengan Sistem Elektronik menurut Pasal 1 PP Nomor 71 Tahun 2019?",
+      "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 0.9090909090909091,
+        "answer_relevancy": 0.915283642839976
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_08_10_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "gt_035",
+      "question": "Siapa saja yang termasuk Penyelenggara Sistem Elektronik Lingkup Privat menurut PP Nomor 71 Tahun 2019?",
+      "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.249999999975,
+        "context_recall": 1.0,
+        "faithfulness": 0.75,
+        "answer_relevancy": 0.6584685705577656
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_08_10_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    },
+    {
+      "id": "gt_037",
+      "question": "Apa yang dimaksud dengan interoperabilitas dalam prinsip SPBE menurut Perpres Nomor 95 Tahun 2018?",
+      "source_doc": "Perpres Nomor 95 Tahun 2018.pdf",
+      "doc_type": "peraturan",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "faithfulness": 0.8571428571428571,
+        "answer_relevancy": 0.6911662698182389
+      },
+      "batch_files": [
+        "data\\eval_ragas_batch_10_11_4metrics_groq_meta-llama_llama-4-scout-17b-16e-instruct.json"
+      ]
+    }
+  ]
+}

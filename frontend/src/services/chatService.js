@@ -2,7 +2,7 @@ import api, { API_BASE_URL, authenticatedFetch, getErrorMessage } from './api'
 
 export async function getModels() {
   try {
-    const { data } = await api.get('/api/models')
+    const { data } = await api.get('/api/models/')
     return data
   } catch (error) {
     throw new Error(getErrorMessage(error, 'Failed to fetch models'))
@@ -31,7 +31,7 @@ export async function setDefaultModel(model) {
 
 export async function getSessions() {
   try {
-    const { data } = await api.get('/api/sessions')
+    const { data } = await api.get('/api/sessions/')
     return data
   } catch (error) {
     throw new Error(getErrorMessage(error, 'Failed to fetch sessions'))

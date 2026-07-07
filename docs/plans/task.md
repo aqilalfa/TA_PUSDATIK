@@ -1,10 +1,18 @@
-# oh-my-openagent Installation and Configuration Task List
+# Task Tracker: Peningkatan Answer Relevancy
 
-| Task ID | Description | Status | Notes |
+**Goal:** AR 0.6672 → ≥ 0.75 | **Safety:** CR/CP/Faithfulness tidak boleh turun  
+**Baseline:** CP=0.8453 | CR=0.9500 | Faith=0.8116 | AR=0.6672
+
+| # | Task | Status | Notes |
 |---|---|---|---|
-| TASK-01 | Greet user with 'oMoMoMoMo...' and ask subscription questions | Completed | User answered they have ChatGPT Plus |
-| TASK-02 | Verify OpenCode and Bun are installed | Completed | OpenCode 1.4.6 and Bun 1.3.6 are already installed |
-| TASK-03 | Run the `oh-my-openagent` installer with chosen flags | Completed | Successfully installed with `--openai=yes` |
-| TASK-04 | Verify setup and run doctor command | Completed | Setup verified in opencode.json and doctor command run |
-| TASK-05 | Configure authentication for providers | Completed | Guided user to authenticate OpenAI via `opencode auth login` |
-| TASK-06 | Present model setup, advertising, and tutorial | Completed | Presented complete documentation, advertisement, and tutorial |
+| 1 | Update `build_answer_style_instructions()` — hard-stop per tipe | `[x]` | ✅ |
+| 2 | Update `shared_rules` — anti-disclaimer rules | `[x]` | ✅ |
+| 3 | Buat `_FEW_SHOT_BY_TYPE` dict + inject ke `build_answer_style_instructions()` | `[x]` | ✅ |
+| 4 | Update `SYSTEM_PROMPT_SPBE` — tambah anti-verbose constraint (rule 13 & 14) | `[x]` | ✅ |
+| 5 | Buat `answer_trimmer.py` — disclaimer detector + type-aware trim | `[x]` | ✅ Faithfulness-safe |
+| 6 | Update `expand_query()` — tambah anchor GT-021 | `[x]` | ✅ |
+| 7 | Integrasi trimmer ke `evaluate_rag.py` | `[x]` | ✅ answer_raw tersimpan untuk debug |
+| 8 | Unit test `test_answer_trimmer.py` — 24 tests | `[x]` | ✅ 24/24 PASSED |
+| 9 | Collect ulang 12 ID AR terendah | `[ ]` | Perlu Ollama running |
+| 10 | RAGAS on subset + bandingkan semua 4 metrik | `[ ]` | Gate: tidak ada degradasi |
+

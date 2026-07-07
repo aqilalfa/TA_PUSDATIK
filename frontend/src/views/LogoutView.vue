@@ -2,10 +2,10 @@
   <div class="logout-view">
     <div class="logout-shell">
       <div class="logout-brand">
-        <div class="logout-logo">B</div>
+        <div class="logout-logo">AH</div>
         <div>
-          <div class="logout-brand-title">SPBE Asisten</div>
-          <div class="logout-brand-subtitle">Badan Siber dan Sandi Negara</div>
+          <div class="logout-brand-title">Asisten Hukum SPBE</div>
+          <div class="logout-brand-subtitle">Chatbot Hukum untuk Tata Kelola Digital Pemerintah</div>
         </div>
       </div>
 
@@ -59,7 +59,7 @@ const user = ref(getCurrentUserProfile())
 const status = ref(isAuthenticated() ? 'confirm' : 'signed-out')
 const message = ref(
   isAuthenticated()
-    ? 'Pastikan pekerjaan Anda sudah selesai. Setelah keluar, Anda perlu login kembali untuk mengakses chat, dokumen, dan pengaturan model.'
+    ? 'Pastikan konsultasi Anda sudah selesai. Setelah keluar, Anda perlu login kembali untuk mengakses layanan konsultasi, dokumen hukum, dan pengaturan model.'
     : 'Anda sudah keluar dari sistem. Silakan login kembali untuk melanjutkan.'
 )
 
@@ -109,9 +109,8 @@ async function confirmLogout() {
 <style scoped>
 .logout-view {
   min-height: 100vh;
-  background:
-    radial-gradient(circle at 18% 16%, rgba(201, 168, 76, 0.18), transparent 30%),
-    linear-gradient(160deg, #1a3a6b 0%, #0f2444 52%, #071528 100%);
+  min-height: 100dvh;
+  background: linear-gradient(160deg, #1a3a6b 0%, #0f2444 52%, #071528 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -159,7 +158,6 @@ async function confirmLogout() {
 .logout-card {
   background: rgba(255, 255, 255, 0.97);
   border: 1px solid rgba(201, 168, 76, 0.35);
-  border-top: 4px solid var(--color-gold);
   border-radius: 14px;
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
   padding: 34px;

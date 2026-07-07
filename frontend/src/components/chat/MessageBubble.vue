@@ -3,33 +3,43 @@
 
     <!-- User message -->
     <div v-if="message.role === 'user'" class="msg-user">
-      <div class="msg-user-bubble">{{ message.content }}</div>
+      <div v-if="!isEditing" class="msg-user-bubble-wrapper">
+        <button v-if="canEditRetry" class="user-edit-btn" @click="$emit('edit-retry')" title="Perbaiki Pertanyaan">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </button>
+        <div class="msg-user-bubble">{{ message.content }}</div>
+      </div>
+      <div v-else class="msg-user-edit-box">
+        <textarea
+          v-focus
+          :value="editContent"
+          @input="$emit('update:editContent', $event.target.value)"
+          class="inline-edit-textarea"
+        ></textarea>
+        <div class="inline-edit-actions">
+          <button @click="$emit('cancel-edit')" class="btn-cancel">Batal</button>
+          <button @click="$emit('submit-edit', editContent)" class="btn-submit">Kirim Ulang</button>
+        </div>
+      </div>
     </div>
 
     <!-- AI message -->
     <div v-else class="msg-ai">
       <div class="msg-ai-header">
-        <div class="msg-ai-avatar">AI</div>
+        <div class="msg-ai-avatar">AH</div>
         <span v-if="message.loading" class="msg-ai-meta">
           <span class="retrieval-spinner"></span>
           {{ message.loadingText || 'Mencari dokumen relevan...' }}
         </span>
         <span v-else class="msg-ai-meta">
-          Berdasarkan dokumen resmi
+          Asisten Hukum SPBE
           <span v-if="message.sources && message.sources.length"> · {{ message.sources.length }} sumber</span>
         </span>
         <span v-if="message.timestamp" class="msg-ai-timestamp">{{ message.timestamp }}</span>
-        <span v-if="message.timing && !message.streaming" class="msg-ai-timing">
-          {{ Math.round(message.timing.total_ms) }}ms
-        </span>
       </div>
 
-      <div class="msg-ai-bubble-wrapper">
+      <div v-if="!message.loading" class="msg-ai-bubble-wrapper">
         <div class="msg-ai-bubble">
-          <div v-if="message.loading" class="loading-dots">
-            <span></span><span></span><span></span>
-          </div>
-          <template v-else>
             <div
               class="msg-text"
               v-html="formattedContent"
@@ -53,13 +63,12 @@
               @close="popupSource = null"
             />
 
-            <div v-if="showValidationWarnings" class="validation-warnings">
-              <div class="validation-title">⚠ Peringatan Validasi</div>
-              <ul>
-                <li v-for="(warning, i) in message.validation.warnings" :key="i">{{ warning }}</li>
-              </ul>
-            </div>
-          </template>
+          <div v-if="showValidationWarnings" class="validation-warnings">
+            <div class="validation-title">⚠ Peringatan Validasi</div>
+            <ul>
+              <li v-for="(warning, i) in message.validation.warnings" :key="i">{{ warning }}</li>
+            </ul>
+          </div>
         </div>
 
         <MessageActions
@@ -67,10 +76,8 @@
           :content="message.content || ''"
           :has-warning="showValidationWarnings"
           :can-regenerate="canRegenerate"
-          :can-edit-retry="canEditRetry"
           @dismiss-warning="warningDismissed = true"
           @regenerate="$emit('regenerate')"
-          @edit-retry="$emit('edit-retry')"
         />
       </div>
     </div>
@@ -88,10 +95,12 @@ import { formatMessageContent } from '@/utils/messageFormatter.js'
 const props = defineProps({
   message: { type: Object, required: true },
   canRegenerate: { type: Boolean, default: false },
-  canEditRetry: { type: Boolean, default: false }
+  canEditRetry: { type: Boolean, default: false },
+  isEditing: { type: Boolean, default: false },
+  editContent: { type: String, default: '' }
 })
 
-defineEmits(['regenerate', 'edit-retry'])
+defineEmits(['regenerate', 'edit-retry', 'submit-edit', 'update:editContent', 'cancel-edit'])
 
 const warningDismissed = ref(false)
 
@@ -99,6 +108,12 @@ const warningDismissed = ref(false)
 const popupRef = ref(null)
 const popupSource = ref(null)
 const popupAnchorRect = ref(null)
+
+const vFocus = {
+  mounted(el) {
+    el.focus()
+  }
+}
 
 const formattedContent = computed(() => formatMessageContent(props.message.content))
 
@@ -146,15 +161,106 @@ function handleCitationMouseleave() {
   justify-content: flex-end;
 }
 
+.msg-user-bubble-wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  max-width: 65%;
+}
+
 .msg-user-bubble {
   background: var(--color-navy);
   color: white;
   padding: 10px 16px;
-  border-radius: 16px 16px 2px 16px;
-  max-width: 65%;
-  font-family: var(--font-body);
+  border-radius: var(--radius-md);
+  font-family: var(--font-ui);
   font-size: 13px;
   line-height: 1.55;
+}
+
+.user-edit-btn {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s, color 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+  margin-bottom: 4px;
+}
+
+.msg-user-bubble-wrapper:hover .user-edit-btn {
+  opacity: 1;
+}
+
+.user-edit-btn:hover {
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.msg-user-edit-box {
+  background: var(--color-white);
+  border: 1px solid var(--color-navy);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  width: 100%;
+  max-width: 65%;
+  box-shadow: 0 4px 12px rgba(11, 74, 191, 0.08);
+}
+
+.inline-edit-textarea {
+  width: 100%;
+  min-height: 60px;
+  border: none;
+  outline: none;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  color: var(--color-text);
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.inline-edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.btn-cancel, .btn-submit {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.15s, color 0.15s;
+  font-weight: 600;
+}
+
+.btn-cancel {
+  background: var(--color-surface-page-muted);
+  color: var(--color-text-muted);
+}
+
+.btn-cancel:hover {
+  background: var(--color-border-blue-light);
+}
+
+.btn-submit {
+  background: var(--color-navy);
+  color: white;
+}
+
+.btn-submit:hover {
+  background: var(--color-navy-hover);
 }
 
 /* AI message */
@@ -186,27 +292,19 @@ function handleCitationMouseleave() {
 }
 
 .msg-ai-meta {
-  font-size: 10px;
-  color: #8b7355;
-  font-style: italic;
-  font-family: var(--font-display);
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-style: normal;
+  font-family: var(--font-ui);
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
 .msg-ai-timestamp {
-  font-size: 9px;
+  font-size: 10px;
   color: var(--color-text-light);
   font-family: var(--font-ui);
-}
-
-.msg-ai-timing {
-  font-size: 9px;
-  color: var(--color-text-light);
-  font-family: var(--font-ui);
-  font-style: normal;
-  margin-left: auto;
 }
 
 /* Bubble wrapper enables hover-reveal for MessageActions */
@@ -219,28 +317,102 @@ function handleCitationMouseleave() {
 }
 
 .msg-ai-bubble {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-left: 3px solid var(--color-gold);
-  padding: 14px 16px;
-  border-radius: 0 8px 8px 8px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border-blue);
+  padding: 16px 18px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-panel);
 }
 
 /* Message body text */
 .msg-text {
-  font-family: var(--font-body);
+  font-family: var(--font-ui);
   font-size: 13px;
   line-height: 1.7;
-  color: var(--color-text);
+  color: var(--color-text-panel);
 }
 
-.msg-text :deep(p) { margin: 0 0 8px; }
+.msg-text :deep(h3) {
+  margin: 14px 0 8px;
+  color: var(--color-action-blue-dark);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.1px;
+}
+
+.msg-text :deep(h3:first-child) { margin-top: 0; }
+
+.msg-text :deep(p) { margin: 0 0 9px; }
 .msg-text :deep(p:last-child) { margin-bottom: 0; }
-.msg-text :deep(strong) { font-weight: 600; color: var(--color-navy); }
-.msg-text :deep(ul), .msg-text :deep(ol) { padding-left: 20px; margin: 8px 0; }
-.msg-text :deep(li) { margin-bottom: 4px; }
-.msg-text :deep(code) { font-size: 12px; background: #f0ece4; padding: 1px 5px; border-radius: 2px; }
-.msg-text :deep(pre) { background: #f0ece4; padding: 12px; border-radius: 3px; overflow-x: auto; margin: 8px 0; }
+.msg-text :deep(strong) { font-weight: 700; color: var(--color-action-blue-dark); }
+.msg-text :deep(mark.answer-highlight) {
+  background: var(--color-surface-soft-blue);
+  color: var(--color-action-blue-dark);
+  border-radius: var(--radius-sm);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 1px 4px 2px;
+  font-weight: 700;
+}
+.msg-text :deep(ul),
+.msg-text :deep(ol) {
+  margin: 9px 0 12px;
+  padding-left: 0;
+}
+
+.msg-text :deep(ol) {
+  list-style: none;
+  counter-reset: legal-answer-step;
+}
+
+.msg-text :deep(ul) {
+  list-style: none;
+}
+
+.msg-text :deep(li) {
+  position: relative;
+  margin-bottom: 7px;
+  padding-left: 26px;
+  color: var(--color-text-panel);
+}
+
+.msg-text :deep(ol > li) {
+  counter-increment: legal-answer-step;
+}
+
+.msg-text :deep(ol > li::before) {
+  content: counter(legal-answer-step);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-soft-blue);
+  color: var(--color-action-blue-dark);
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.msg-text :deep(ul > li::before) {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--color-action-blue);
+}
+
+.msg-text :deep(code) { font-size: 12px; background: var(--color-cream-dark); padding: 1px 5px; border-radius: var(--radius-xs); }
+.msg-text :deep(pre) { background: var(--color-cream-dark); padding: 12px; border-radius: var(--radius-sm); overflow-x: auto; margin: 8px 0; }
 .msg-text :deep(button.citation) {
   display: inline-flex;
   align-items: center;
@@ -262,7 +434,7 @@ function handleCitationMouseleave() {
 }
 
 .msg-text :deep(button.citation:hover) {
-  background: #d4e4f7;
+  background: var(--color-surface-soft-blue);
   border-color: var(--color-navy);
 }
 
@@ -282,29 +454,7 @@ function handleCitationMouseleave() {
   50% { opacity: 0; }
 }
 
-/* Loading dots */
-.loading-dots {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-  padding: 4px 0;
-}
 
-.loading-dots span {
-  width: 6px;
-  height: 6px;
-  background: var(--color-gold);
-  border-radius: 50%;
-  animation: dotBounce 1.2s ease-in-out infinite;
-}
-
-.loading-dots span:nth-child(2) { animation-delay: 0.2s; }
-.loading-dots span:nth-child(3) { animation-delay: 0.4s; }
-
-@keyframes dotBounce {
-  0%, 80%, 100% { transform: scale(0.7); opacity: 0.5; }
-  40% { transform: scale(1); opacity: 1; }
-}
 
 /* Retrieval spinner */
 .retrieval-spinner {
@@ -320,9 +470,9 @@ function handleCitationMouseleave() {
 
 /* Source cards */
 .source-cards {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
   margin-top: 12px;
   padding-top: 12px;
   border-top: 1px solid var(--color-border-light);
@@ -354,5 +504,79 @@ function handleCitationMouseleave() {
   font-size: 11px;
   color: var(--color-status-warn-text);
   font-family: var(--font-ui);
+}
+
+@media (max-width: 640px) {
+  .message-wrapper {
+    padding: 0 14px;
+    margin-bottom: 16px;
+  }
+
+  .msg-user-bubble-wrapper,
+  .msg-user-edit-box {
+    max-width: 88%;
+  }
+
+  .msg-user-bubble {
+    padding: 10px 13px;
+    overflow-wrap: anywhere;
+  }
+
+  .user-edit-btn {
+    opacity: 1;
+    width: 32px;
+    height: 32px;
+  }
+
+  .msg-ai-header {
+    align-items: flex-start;
+    gap: 7px;
+  }
+
+  .msg-ai-meta {
+    min-width: 0;
+    flex-wrap: wrap;
+    line-height: 1.35;
+  }
+
+  .msg-ai-bubble {
+    padding: 14px 13px;
+    border-radius: var(--radius-md);
+  }
+
+  .msg-text {
+    font-size: 13px;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+  }
+
+  .msg-text :deep(pre) {
+    margin-inline: -2px;
+    padding: 10px;
+  }
+
+  .source-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .message-wrapper {
+    padding: 0 10px;
+  }
+
+  .msg-user-bubble-wrapper,
+  .msg-user-edit-box {
+    max-width: 92%;
+  }
+
+  .inline-edit-actions {
+    flex-wrap: wrap;
+  }
+
+  .btn-cancel,
+  .btn-submit {
+    min-height: 36px;
+  }
 }
 </style>

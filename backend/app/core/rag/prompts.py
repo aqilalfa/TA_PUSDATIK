@@ -13,6 +13,191 @@ from typing import List, Dict, Optional
 import re
 
 
+def _classify_question_type(query: str) -> str:
+    """Classify user question intent for concise answer-shaping only."""
+    query_lower = " ".join((query or "").lower().split())
+
+    if not query_lower:
+        return "general"
+
+    if re.search(r"\b(?:siapa|lembaga\s+mana|instansi\s+mana|pihak\s+mana)\b", query_lower):
+        if re.search(r"\b(?:siapa\s+saja|pihak\s+yang\s+termasuk|apa\s+saja)\b", query_lower):
+            return "list"
+        return "actor"
+
+    if re.search(r"\b(?:berapa|kapan|untuk\s+berapa\s+lama)\b", query_lower):
+        return "value_or_time"
+
+    if re.search(r"\b(?:apa\s+tujuan|tujuan\s+utama)\b", query_lower):
+        return "purpose"
+
+    if re.search(r"\b(?:apa\s+yang\s+dimaksud|definisi|pengertian)\b", query_lower):
+        return "definition"
+
+    if re.search(r"\b(?:apa\s+saja|sebutkan|aspek\s+apa\s+saja|sanksi\s+administratif|konklusi)\b", query_lower):
+        return "list"
+
+    if re.search(r"\b(?:jelaskan|mengapa|bagaimana)\b", query_lower):
+        return "explanation"
+
+    if re.search(r"\b(?:apa\s+bentuk|bentuk\s+teknis|predikat\s+apa)\b", query_lower):
+        return "direct_fact"
+
+    return "general"
+
+
+# ---------------------------------------------------------------------------
+# Per-type few-shot examples: show correct vs incorrect format.
+# These are FORMAT examples only — content is never from real documents.
+# Grounding and citation rules from SYSTEM_PROMPT_SPBE remain unchanged.
+# ---------------------------------------------------------------------------
+_FEW_SHOT_BY_TYPE: dict = {
+    "actor": (
+        "CONTOH FORMAT BENAR (tipe SIAPA):\n"
+        "  Jawaban: Tim Auditor Keamanan SPBE BSSN [1].\n"
+        "CONTOH FORMAT SALAH — JANGAN LAKUKAN:\n"
+        "  Jawaban: Berdasarkan dokumen, Tim Auditor Keamanan SPBE BSSN [1] bertanggung jawab. "
+        "Pelaksanaan mencakup pengujian kontrol keamanan infrastruktur [3][4]. "
+        "Selain itu, Tim juga berkoordinasi dengan instansi lain [5]."
+    ),
+    "value_or_time": (
+        "CONTOH FORMAT BENAR (tipe BERAPA/KAPAN):\n"
+        "  Jawaban: Minimal 200.000 pengguna SPBE [1].\n"
+        "CONTOH FORMAT SALAH — JANGAN LAKUKAN:\n"
+        "  Jawaban: Berdasarkan Pasal X, aplikasi harus memiliki minimal 200.000 pengguna [1]. "
+        "Ketentuan ini bertujuan memastikan layanan menjangkau masyarakat luas [2]."
+    ),
+    "purpose": (
+        "CONTOH FORMAT BENAR (tipe TUJUAN):\n"
+        "  Jawaban: Memastikan penerapan unsur-unsur SPBE dilaksanakan secara terpadu [4].\n"
+        "CONTOH FORMAT SALAH — JANGAN LAKUKAN:\n"
+        "  Jawaban: Informasi mengenai tujuan tidak tercantum secara eksplisit. "
+        "Dokumen mendefinisikan Tata Kelola sebagai kerangka kerja untuk memastikan terlaksananya "
+        "penerapan SPBE secara terpadu [4]. Selain itu, hal ini juga berkaitan dengan pengaturan [2]."
+    ),
+    "definition": (
+        "CONTOH FORMAT BENAR (tipe DEFINISI):\n"
+        "  Jawaban: Pemantauan SPBE adalah penilaian secara sistematis melalui verifikasi "
+        "informasi atas Penilaian Mandiri untuk mengukur tingkat kematangan penerapan SPBE [1].\n"
+        "CONTOH FORMAT SALAH — JANGAN LAKUKAN:\n"
+        "  Jawaban: Berdasarkan dokumen, berikut penjelasan mengenai Pemantauan SPBE: "
+        "Pertama, pengertiannya adalah... Kedua, dalam konteks lain disebutkan bahwa..."
+    ),
+    "list": (
+        "CONTOH FORMAT BENAR (tipe DAFTAR):\n"
+        "  Jawaban:\n"
+        "  - Teguran tertulis [2].\n"
+        "  - Denda administratif [2].\n"
+        "  - Penghentian sementara [2].\n"
+        "  - Pemutusan Akses [2].\n"
+        "  - Dikeluarkan dari daftar [2].\n"
+        "CONTOH FORMAT SALAH — JANGAN LAKUKAN:\n"
+        "  Jawaban: Berikut sanksi administratif yang dapat dikenakan:\n"
+        "  1. **Jenis Sanksi:** Teguran tertulis, denda administratif...\n"
+        "     - Detail: dikenakan jika PSE melanggar ketentuan...\n"
+        "  2. **Pelaksana:** Kementerian terkait bertanggung jawab..."
+    ),
+    "direct_fact": (
+        "CONTOH FORMAT BENAR (tipe FAKTA):\n"
+        "  Jawaban: Pemblokiran akses dan/atau penutupan akun serta penghapusan konten [1].\n"
+        "CONTOH FORMAT SALAH — JANGAN LAKUKAN:\n"
+        "  Jawaban: Bentuk teknisnya meliputi pemblokiran akses [1]. "
+        "Sanksi ini juga dapat diterapkan kepada pihak yang melanggar [4]. "
+        "Penyelenggara wajib melaksanakan kewajiban ini terhadap konten yang melanggar undang-undang [3]."
+    ),
+    "explanation": None,  # No constraint example for explanations
+    "general": None,
+}
+
+
+def build_answer_style_instructions(query: str) -> str:
+    """
+    Build concise answer-shaping instructions without changing retrieval behavior.
+
+    The goal is to improve answer relevancy while preserving faithfulness:
+    answer the asked fact first, cite it, then stop unless the question asks for detail.
+
+    Safety invariant: grounding rules (citation [n], no pasal hallucination) are in
+    SYSTEM_PROMPT_SPBE and are NOT duplicated or weakened here.
+    """
+    question_type = _classify_question_type(query)
+
+    # Shared rules — every type must follow these.
+    # CHANGED: hard-stop language replaces soft 'if enough, stop'.
+    # ADDED: anti-disclaimer rules to prevent GT-007 pattern (false not-found).
+    shared_rules = [
+        "Kalimat pertama jawaban HARUS berisi fakta inti yang ditanya — bukan pengantar, bukan disclaimer.",
+        "JIKA DATA BENAR-BENAR KOSONG, BERHENTI dan TULIS HANYA: 'Informasi tersebut tidak ditemukan dalam dokumen yang tersedia.'",
+        "STOP setelah menjawab inti. Jangan menambahkan paragraf kedua berisi konteks, proses, atau "
+        "tujuan yang tidak ditanyakan.",
+        "Tetap sertakan sitasi [n] pada setiap kalimat atau poin jawaban — ini WAJIB dijaga.",
+        "Gunakan hanya konteks yang paling langsung menjawab pertanyaan; abaikan konteks sampingan.",
+    ]
+
+    # Per-type hard-stop rules.
+    # CHANGED: 'Jangan menambahkan' → 'STOP setelah 1 kalimat' for atomic types.
+    type_rules = {
+        "actor": [
+            "Tipe pertanyaan: SIAPA/ENTITAS.",
+            "Tulis nama pihak/lembaga/instansi dalam 1 kalimat dengan sitasi [n], lalu STOP.",
+            "DILARANG menambahkan kalimat kedua berisi tugas, dasar hukum, atau penjelasan "
+            "kecuali pertanyaan secara eksplisit meminta uraian tugas.",
+        ],
+        "value_or_time": [
+            "Tipe pertanyaan: BERAPA/KAPAN/NILAI/WAKTU.",
+            "Tulis angka, nilai, predikat, tanggal, atau durasi dalam 1 kalimat dengan sitasi [n], lalu STOP.",
+            "DILARANG menambahkan penjelasan tujuan, proses, atau konteks historis.",
+        ],
+        "purpose": [
+            "Tipe pertanyaan: TUJUAN.",
+            "Tulis tujuan inti dalam 1 kalimat dengan sitasi [n], lalu STOP.",
+            "Jika konteks memuat frasa 'bertujuan', 'untuk memastikan', atau 'agar' terkait subjek "
+            "yang ditanya — itulah jawabannya. Tulis langsung tanpa pengantar.",
+            "DILARANG mencampurkan tujuan dari subjek lain walaupun muncul di konteks.",
+        ],
+        "definition": [
+            "Tipe pertanyaan: DEFINISI/PENGERTIAN.",
+            "Tulis definisi inti dalam 1 kalimat dengan sitasi [n]; gunakan frasa eksplisit dokumen.",
+            "Jika konteks memuat 'adalah', 'yang dimaksud dengan', atau padanannya — itulah jawaban. "
+            "Tulis langsung. STOP setelahnya.",
+            "DILARANG menambahkan contoh, ruang lingkup, atau tujuan kecuali definisi dalam dokumen "
+            "memang memuatnya sebagai satu frasa kesatuan.",
+        ],
+        "list": [
+            "Tipe pertanyaan: DAFTAR.",
+            "Jawab dengan bullet list singkat dan LENGKAP sesuai konteks. Sertakan sitasi [n] per item.",
+            "DILARANG: menambahkan sub-header bernomor ('1. Jenis...', '2. Pelaksana...').",
+            "DILARANG: menambahkan paragraf penjelasan setelah bullet terakhir.",
+            "Format: '- [item] [n].' — tidak lebih dari itu per baris.",
+        ],
+        "explanation": [
+            "Tipe pertanyaan: PENJELASAN.",
+            "Jawab dalam 2-4 kalimat yang langsung menjelaskan inti pertanyaan.",
+            "Jangan membuat ringkasan seluruh konteks; pilih fakta yang benar-benar menjawab pertanyaan.",
+        ],
+        "direct_fact": [
+            "Tipe pertanyaan: FAKTA LANGSUNG.",
+            "Tulis fakta yang ditanya dalam 1 kalimat dengan sitasi [n], lalu STOP.",
+            "Tambahkan kalimat kedua HANYA jika ada dua fakta berbeda yang sama-sama diminta oleh pertanyaan.",
+        ],
+        "general": [
+            "Tipe pertanyaan: UMUM.",
+            "Jawab secara ringkas dan hanya perluas jawaban bila pertanyaan memang meminta uraian.",
+        ],
+    }
+
+    few_shot = _FEW_SHOT_BY_TYPE.get(question_type)
+
+    lines = ["PROFIL JAWABAN BERDASARKAN TIPE PERTANYAAN:"]
+    lines.extend(f"- {rule}" for rule in type_rules[question_type])
+    lines.append("ATURAN WAJIB SEMUA TIPE:")
+    lines.extend(f"- {rule}" for rule in shared_rules)
+    if few_shot:
+        lines.append("")
+        lines.append(few_shot)
+    return "\n".join(lines)
+
+
 # =============================================================================
 # SYSTEM PROMPTS - Strict Legal Document Grounding
 # =============================================================================
@@ -26,7 +211,9 @@ ATURAN WAJIB:
 4. Jika ada daftar (a, b, c, d...), tulis LENGKAP semua butir yang ada di konteks.
 5. JANGAN generalisasi atau menambahkan interpretasi di luar teks dokumen.
 6. Jika informasi tidak ada dalam konteks, katakan: "Informasi tersebut tidak ditemukan dalam dokumen yang tersedia."
-7. Gunakan bahasa Indonesia formal pemerintahan.
+7. Untuk pertanyaan definisi/tujuan, jika konteks memuat frasa eksplisit seperti "adalah", "yang dimaksud", atau "bertujuan untuk" terkait istilah yang ditanyakan, jawab langsung dari frasa tersebut dan JANGAN menyatakan informasi tidak ditemukan.
+8. Untuk pertanyaan yang diawali "Apa tujuan" atau "Apa yang dimaksud", jawab maksimal 1 kalimat inti. Jangan menambahkan definisi/tujuan dari subjek lain walaupun muncul di konteks lain.
+9. Gunakan bahasa Indonesia formal pemerintahan.
 
 FORMAT JAWABAN:
 - Sebutkan nomor Pasal/Ayat sumber di awal jawaban
@@ -45,6 +232,13 @@ ATURAN WAJIB:
 6. Jika pertanyaan menyebut "Tabel X" dan konteks memuat "Tabel X", jawab berdasarkan isi/nilai tabel tersebut
 7. DILARANG menyatakan "tidak ditemukan" untuk "Tabel X" jika label "Tabel X" ada di konteks
 8. Jika konteks hanya memuat sebagian tabel, jelaskan bahwa jawaban berdasarkan bagian tabel yang tersedia
+9. DILARANG menyatakan "tidak ditemukan" untuk pertanyaan definisi/tujuan jika konteks memuat frasa eksplisit seperti "adalah", "yang dimaksud", atau "bertujuan untuk" yang menjawab istilah dalam pertanyaan. Jawab langsung dari frasa tersebut.
+10. Untuk pertanyaan definisi/tujuan, fokus HANYA pada istilah utama yang ditanyakan. Jangan menambahkan definisi atau tujuan dari subjek lain walaupun muncul di konteks lain.
+11. Untuk pertanyaan yang diawali "Apa tujuan" atau "Apa yang dimaksud", jawab maksimal 1 kalimat inti. DILARANG menambahkan frasa "selain itu", "hal ini juga", atau informasi lanjutan dari konteks lain.
+12. Jika pertanyaan laporan meminta nilai/domain "secara nasional", jawab dari ringkasan/agregat nasional bila tersedia; jangan menyimpulkan dari baris instansi individual.
+13. JIKA FAKTA INTI BENAR-BENAR TIDAK DITEMUKAN, WAJIB fail-closed dan katakan HANYA: "Informasi tersebut tidak ditemukan dalam dokumen yang tersedia." JANGAN mencoba mengarang atau merangkum hal lain.
+14. STOP setelah menjawab inti. Jangan tambahkan paragraf kedua yang berisi proses, ketentuan, atau konsekuensi yang tidak ditanya. Satu pertanyaan = satu jawaban inti.
+15. Untuk pertanyaan yang bersifat agregasi/menyimpulkan/tabel parsial, jika data tidak lengkap 100%, WAJIB katakan: "Konteks dokumen yang tersedia belum cukup untuk menjawab agregasi tersebut."
 
 PANDUAN:
 - Gunakan bahasa Indonesia formal
@@ -147,6 +341,7 @@ def build_rag_prompt(
         Complete prompt string
     """
     system = system_prompt or SYSTEM_PROMPT_LEGAL
+    answer_style_instructions = build_answer_style_instructions(query)
 
     # Build user message with explicit instructions
     user_message = f"""DOKUMEN REFERENSI:
@@ -161,12 +356,14 @@ INSTRUKSI:
 3. Jika ada daftar (a, b, c...), tulis LENGKAP.
 4. JANGAN mengarang poin atau Pasal/Ayat yang tidak ada di dokumen.
 5. Jika pertanyaan menyebut "Tabel X" dan konteks memuat "Tabel X", utamakan isi/nilai dari tabel tersebut dan jangan menjawab "tidak ditemukan".
-6. Sebelum menyatakan keterbatasan informasi, rangkum terlebih dahulu bagian yang memang tersedia di konteks.
+6. Jika pertanyaan meminta kesimpulan menyeluruh, namun dokumen hanya menyajikan sebagian kecil data, WAJIB TOLAK menjawab dan katakan: "Konteks dokumen yang tersedia belum cukup." Jangan generalisasi.
+7. Untuk pertanyaan definisi atau tujuan, jika konteks memuat frasa eksplisit "adalah", "yang dimaksud", atau "bertujuan untuk" terkait istilah yang ditanyakan, jawab langsung memakai frasa tersebut dan jangan menyatakan informasi tidak ditemukan.
+8. Untuk pertanyaan definisi atau tujuan, jawab ringkas HANYA untuk istilah yang ditanyakan. Abaikan definisi/tujuan lain dari subjek berbeda walaupun ada di konteks.
+9. Jika pertanyaan diawali "Apa tujuan" atau "Apa yang dimaksud", jawab maksimal 1 kalimat inti dan jangan menambahkan "selain itu" atau "hal ini juga".
+10. Jika pertanyaan laporan meminta nilai/domain "secara nasional", gunakan konteks ringkasan/agregat nasional; jangan menghitung atau menyimpulkan dari daftar instansi individual kecuali tidak ada ringkasan nasional.
+11. JIKA JAWABAN SAMA SEKALI TIDAK ADA DI DOKUMEN, WAJIB HANYA KATAKAN: "Informasi tersebut tidak ditemukan dalam dokumen yang tersedia." JANGAN mencoba menjawab hal lain.
 
-CONTOH FORMAT JAWABAN YANG DIHARAPKAN:
-Kriteria pemenuhan tingkat kematangan 5 adalah evaluasi berkelanjutan [1]. Selain itu, bukti dukung yang harus dilampirkan meliputi:
-a. Laporan Audit SPBE [2].
-b. Notulensi Rapat [3].
+{answer_style_instructions}
 
 JAWABAN DENGAN SITASI TERINTEGRASI:"""
 
@@ -199,6 +396,8 @@ def build_simple_prompt(query: str, context: str) -> str:
     Build simpler prompt without chat format.
     Maintains strict grounding rules.
     """
+    answer_style_instructions = build_answer_style_instructions(query)
+
     return f"""DOKUMEN REFERENSI:
 {context}
 
@@ -211,6 +410,11 @@ INSTRUKSI KETAT:
 - JANGAN mengarang Pasal atau Ayat
 - Jika pertanyaan menyebut "Tabel X" dan konteks memuat "Tabel X", jawab isi/nilai tabel tersebut
 - Jika informasi parsial, jelaskan dulu bagian yang tersedia; nyatakan "tidak ditemukan" hanya bila benar-benar tidak ada bukti relevan
+- Untuk pertanyaan definisi/tujuan, jika konteks memuat frasa eksplisit "adalah", "yang dimaksud", atau "bertujuan untuk", jawab langsung dari frasa tersebut dan jangan menyatakan "tidak ditemukan"
+- Untuk pertanyaan definisi/tujuan, jangan tambahkan definisi/tujuan subjek lain; jawab hanya istilah utama yang ditanyakan
+- Untuk "Apa tujuan" atau "Apa yang dimaksud", jawab maksimal 1 kalimat inti
+
+{answer_style_instructions}
 
 JAWABAN:"""
 
@@ -440,6 +644,19 @@ def expand_query(query: str) -> List[str]:
         _append_unique_query(queries, "Permenpan RB Nomor 59 Tahun 2020 Lampiran I Tabel 13 predikat indeks SPBE")
         _append_unique_query(queries, f"Tabel 13 rentang nilai indeks SPBE {normalized_query}")
 
+    # GT-021 fix: "Aplikasi SPBE Prioritas" definition from Perpres 82/2023 Pasal 1
+    if "aplikasi spbe prioritas" in query_lower or (
+        "aplikasi" in query_lower and "prioritas" in query_lower and "spbe" in query_lower
+    ):
+        _append_unique_query(
+            queries,
+            "Perpres Nomor 82 Tahun 2023 Pasal 1 Aplikasi SPBE Prioritas adalah",
+        )
+        _append_unique_query(
+            queries,
+            "Aplikasi SPBE berdampak luas wujud nyata layanan SPBE berkualitas tepercaya",
+        )
+
     return queries[:10]
 
 
@@ -470,7 +687,7 @@ def _build_source_metadata_number_map(sources: Optional[List[Dict]]) -> Dict[int
     for src in sources or []:
         raw_id = src.get("id")
         try:
-            source_id = int(raw_id)
+            source_id = int(str(raw_id))
         except (TypeError, ValueError):
             continue
 
@@ -627,7 +844,8 @@ def validate_answer(answer: str, context: str, sources: Optional[List[Dict]] = N
     result["citation_count"] = len(citations)
 
     if not result["has_citations"]:
-        result["warnings"].append("Jawaban tidak memiliki referensi/sitasi")
+        result["warnings"].append("Jawaban tidak memiliki referensi/sitasi inline pada klaim jawaban")
+        result["is_valid"] = False
         result["confidence"] = "low"
 
     # Check citation numbers are valid

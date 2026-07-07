@@ -53,14 +53,14 @@ describe('LoginView.vue - TDD Test Suite', () => {
     it('should render topbar with BSSN branding', () => {
       const topbar = wrapper.find('.topbar')
       expect(topbar.exists()).toBe(true)
-      expect(topbar.text()).toContain('SPBE Asisten')
-      expect(topbar.text()).toContain('Badan Siber dan Sandi Negara')
+      expect(topbar.text()).toContain('Asisten Hukum SPBE')
+      expect(topbar.text()).toContain('Chatbot Hukum untuk Tata Kelola Digital Pemerintah')
     })
 
-    it('should render topbar logo "B"', () => {
+    it('should render topbar logo "AH"', () => {
       const logo = wrapper.find('.topbar-logo')
       expect(logo.exists()).toBe(true)
-      expect(logo.text()).toBe('B')
+      expect(logo.text()).toBe('AH')
     })
 
     it('should render login container with proper styling', () => {
@@ -82,13 +82,13 @@ describe('LoginView.vue - TDD Test Suite', () => {
     it('should render correct header title', () => {
       const title = wrapper.find('.login-title')
       expect(title.exists()).toBe(true)
-      expect(title.text()).toBe('Autentikasi Sistem')
+      expect(title.text()).toBe('Masuk ke Sistem Internal')
     })
 
     it('should render correct subtitle', () => {
       const subtitle = wrapper.find('.login-subtitle')
       expect(subtitle.exists()).toBe(true)
-      expect(subtitle.text()).toContain('Masuk untuk mengakses layanan')
+      expect(subtitle.text()).toContain('Masuk untuk mengakses konsultasi regulasi')
     })
 
     it('should render email input field', () => {
@@ -110,7 +110,7 @@ describe('LoginView.vue - TDD Test Suite', () => {
     it('should render footer text', () => {
       const footer = wrapper.find('.login-footer')
       expect(footer.exists()).toBe(true)
-      expect(footer.text()).toContain('BSSN')
+      expect(footer.text()).toContain('Sistem internal pemerintah')
     })
 
     it('should have form with submit prevention', () => {

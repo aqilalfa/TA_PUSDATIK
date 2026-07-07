@@ -91,7 +91,7 @@ def test_require_roles():
     assert result == user
     
     # This should raise 403
-    dep_fail = require_roles(["evaluator_spbe"])
+    dep_fail = require_roles(["staff"])
     with pytest.raises(HTTPException) as excinfo:
         dep_fail(user)
     assert excinfo.value.status_code == status.HTTP_403_FORBIDDEN

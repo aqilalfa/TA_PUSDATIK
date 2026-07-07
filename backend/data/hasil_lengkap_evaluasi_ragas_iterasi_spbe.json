@@ -1,0 +1,747 @@
+{
+  "metadata": {
+    "title": "Hasil Lengkap Evaluasi RAGAS dan Iterasi Perbaikan RAG SPBE",
+    "generated_at": "2026-06-05",
+    "system": "SPBE RAG System",
+    "answer_model": "qwen3.5:4b",
+    "primary_judge_model": "groq:qwen/qwen3-32b",
+    "fallback_judge_models": [
+      "groq:meta-llama/llama-4-scout-17b-16e-instruct",
+      "groq:openai/gpt-oss-120b"
+    ],
+    "metrics": [
+      "context_precision",
+      "context_recall",
+      "faithfulness",
+      "answer_relevancy"
+    ],
+    "retrieval_top_k": 5,
+    "markdown_report": "backend/data/laporan_lengkap_evaluasi_ragas_iterasi_spbe.md"
+  },
+  "source_artifacts": {
+    "full_40_ragas": "backend/data/eval_ragas_aggregate_4metrics_groq_auto.json",
+    "low8_retrieval_after_fixes": "backend/data/eval_retrieval_ids_report_iterasi_low8_after_fixes_v2.json",
+    "low8_answers_after_fixes": "backend/data/eval_results_iterasi_low8_after_fixes_v2.json",
+    "low8_ragas_qwen_after_fixes_partial": "backend/data/eval_ragas_iterasi_low8_after_fixes_v2_qwen3_32b.json",
+    "low8_ragas_llama4_after_fixes": "backend/data/eval_ragas_iterasi_low8_after_fixes_v2_llama4.json",
+    "low8_markdown_report": "backend/data/laporan_iterasi_low8_ragas.md",
+    "gt039_results_after_new_upload": "backend/data/eval_results_gt039_after_new_upload.json",
+    "gt039_heuristic_after_new_upload": "backend/data/eval_report_gt039_after_new_upload.json",
+    "gt039_ragas_qwen_after_new_upload": "backend/data/eval_ragas_gt039_after_new_upload_qwen3_32b.json",
+    "gt039_ragas_qwen_faithfulness_retry": "backend/data/eval_ragas_gt039_after_new_upload_qwen3_32b_faithfulness_retry.json"
+  },
+  "executive_summary": {
+    "main_findings": [
+      "Evaluasi penuh 40 pertanyaan menunjukkan retrieval recall kuat dengan context_recall 0.9250.",
+      "Kualitas grounding jawaban cukup baik dengan faithfulness 0.8352.",
+      "Titik lemah utama adalah answer_relevancy 0.6659 karena beberapa jawaban terlalu panjang atau kurang langsung.",
+      "Iterasi targeted low8 menaikkan hit@1 dari 0.6250 menjadi 0.7500 tanpa menurunkan recall@5.",
+      "GT-039 awalnya bermasalah karena fakta agregat nasional 2024 belum tersedia pada chunk aktif, tetapi retest focused setelah unggah ulang dokumen sudah resolved dengan context_recall 1.0000 dan faithfulness 1.0000."
+    ],
+    "overall_status": "baik_dengan_catatan",
+    "primary_remaining_issue": "answer_relevancy dan kebutuhan full 40 RAGAS ulang setelah kuota Groq pulih"
+  },
+  "full_evaluation_40_questions": {
+    "dataset_size": 40,
+    "valid_count": 40,
+    "null_count": 0,
+    "average_scores": {
+      "context_precision": 0.8193,
+      "context_recall": 0.925,
+      "faithfulness": 0.8352,
+      "answer_relevancy": 0.6659
+    },
+    "interpretation": {
+      "context_precision": "Baik; sebagian besar konteks relevan, tetapi masih ada noise pada beberapa pertanyaan.",
+      "context_recall": "Sangat baik; fakta yang dibutuhkan umumnya masuk ke konteks top-k.",
+      "faithfulness": "Baik; jawaban cukup grounded, walau beberapa jawaban masih menambahkan detail.",
+      "answer_relevancy": "Cukup; jawaban sering benar tetapi belum selalu ringkas atau tepat sasaran."
+    },
+    "per_question_results": [
+      {
+        "id": "GT-001",
+        "question": "Apa yang dimaksud dengan Layanan SPBE?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 0.6,
+          "answer_relevancy": 0.8042
+        },
+        "interpretation": "Konteks dan relevansi baik, tetapi faithfulness sedang; jawaban kemungkinan menambah detail di luar klaim inti."
+      },
+      {
+        "id": "GT-002",
+        "question": "Apa definisi Rencana Induk SPBE Nasional?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 0.75,
+          "answer_relevancy": 0.9398
+        },
+        "interpretation": "Baik; konteks lengkap dan jawaban sangat relevan, hanya grounding perlu sedikit diperketat."
+      },
+      {
+        "id": "GT-003",
+        "question": "Apa pengertian Arsitektur SPBE?",
+        "scores": {
+          "context_precision": 0.7,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9268
+        },
+        "interpretation": "Baik; fakta ditemukan lengkap dan jawaban grounded, meski ada sedikit noise konteks."
+      },
+      {
+        "id": "GT-004",
+        "question": "Apa yang dimaksud dengan Keamanan SPBE menurut Perpres 95 Tahun 2018?",
+        "scores": {
+          "context_precision": 0.25,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9377
+        },
+        "interpretation": "Jawaban baik, tetapi precision rendah; konteks benar ada namun banyak konteks tambahan tidak relevan."
+      },
+      {
+        "id": "GT-005",
+        "question": "Siapa saja yang termasuk sebagai Pengguna SPBE?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.8751
+        },
+        "interpretation": "Sangat baik; retrieval dan jawaban kuat."
+      },
+      {
+        "id": "GT-006",
+        "question": "Apa saja prinsip-prinsip dalam pelaksanaan SPBE?",
+        "scores": {
+          "context_precision": 0.8333,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.7846
+        },
+        "interpretation": "Baik; semua fakta ditemukan dan grounded, relevansi cukup tinggi."
+      },
+      {
+        "id": "GT-007",
+        "question": "Apa tujuan diadakannya Tata Kelola SPBE?",
+        "scores": {
+          "context_precision": 0.6389,
+          "context_recall": 1.0,
+          "faithfulness": 0.75,
+          "answer_relevancy": 0.0
+        },
+        "interpretation": "Perlu perhatian pada baseline; jawaban tidak dianggap relevan oleh judge walau konteks ada. Sudah menjadi target iterasi."
+      },
+      {
+        "id": "GT-008",
+        "question": "Apa saja yang mencakup unsur-unsur SPBE?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.4332
+        },
+        "interpretation": "Retrieval dan grounding sangat baik, tetapi jawaban dinilai kurang relevan atau kurang langsung."
+      },
+      {
+        "id": "GT-009",
+        "question": "Untuk berapa lama Arsitektur SPBE Nasional disusun?",
+        "scores": {
+          "context_precision": 0.2,
+          "context_recall": 1.0,
+          "faithfulness": 0.3333,
+          "answer_relevancy": 0.8639
+        },
+        "interpretation": "Perlu perhatian pada baseline; konteks benar ada tetapi precision dan faithfulness rendah. Sudah diperbaiki pada iterasi."
+      },
+      {
+        "id": "GT-010",
+        "question": "Apa definisi Audit Teknologi Informasi dan Komunikasi (TIK)?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 0.8,
+          "answer_relevancy": 0.8545
+        },
+        "interpretation": "Baik; semua metrik kuat."
+      },
+      {
+        "id": "GT-011",
+        "question": "Apa yang dimaksud dengan Pemantauan SPBE?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9476
+        },
+        "interpretation": "Sangat baik."
+      },
+      {
+        "id": "GT-012",
+        "question": "Apa definisi Evaluasi SPBE?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 0.75,
+          "answer_relevancy": 0.8922
+        },
+        "interpretation": "Baik; sedikit perlu penguatan grounding."
+      },
+      {
+        "id": "GT-013",
+        "question": "Siapa yang berhak melakukan Penilaian Dokumen?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 0.0,
+          "faithfulness": 0.8,
+          "answer_relevancy": 0.4696
+        },
+        "interpretation": "Judge memberi recall rendah, tetapi evaluasi manual menunjukkan konteks Tim Asesor Eksternal ada. Kemungkinan judge variance."
+      },
+      {
+        "id": "GT-014",
+        "question": "Apa yang dimaksud dengan Penilaian Visitasi?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9246
+        },
+        "interpretation": "Sangat baik."
+      },
+      {
+        "id": "GT-015",
+        "question": "Apa tujuan utama dilakukannya Pemantauan dan Evaluasi SPBE?",
+        "scores": {
+          "context_precision": 0.95,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.6656
+        },
+        "interpretation": "Baik; jawaban benar tetapi relevansi masih bisa dibuat lebih ringkas."
+      },
+      {
+        "id": "GT-016",
+        "question": "Sebutkan 5 tingkatan kematangan kapabilitas proses SPBE!",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.5705
+        },
+        "interpretation": "Retrieval kuat; jawaban kemungkinan terlalu panjang atau format kurang sesuai ekspektasi judge."
+      },
+      {
+        "id": "GT-017",
+        "question": "Apa yang mendefinisikan SPBE Tingkat 1 (Rintisan)?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 0.6667,
+          "answer_relevancy": 0.9181
+        },
+        "interpretation": "Baik; relevansi tinggi, faithfulness sedang."
+      },
+      {
+        "id": "GT-018",
+        "question": "Berapa persentase bobot penilaian untuk Domain Layanan SPBE?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 0.9091,
+          "answer_relevancy": 0.6472
+        },
+        "interpretation": "Baik; jawaban factual, relevansi cukup."
+      },
+      {
+        "id": "GT-019",
+        "question": "Predikat apa yang disematkan pada rentang nilai indeks SPBE 3,5 hingga kurang dari 4,2?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 0.75,
+          "answer_relevancy": 0.6825
+        },
+        "interpretation": "Baik; tabel ditemukan, tetapi jawaban bisa dibuat lebih langsung."
+      },
+      {
+        "id": "GT-020",
+        "question": "Apa predikat SPBE untuk nilai indeks di bawah 1,8?",
+        "scores": {
+          "context_precision": 0.8875,
+          "context_recall": 1.0,
+          "faithfulness": 0.3333,
+          "answer_relevancy": 0.6153
+        },
+        "interpretation": "Konteks benar, jawaban inti benar, tetapi faithfulness rendah karena wording atau elaborasi."
+      },
+      {
+        "id": "GT-021",
+        "question": "Apa yang dimaksud dengan Aplikasi SPBE Prioritas?",
+        "scores": {
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "faithfulness": 0.75,
+          "answer_relevancy": 0.0
+        },
+        "interpretation": "Baseline gagal pada konteks/relevansi. Sudah diperbaiki pada iterasi sebelumnya dan low8."
+      },
+      {
+        "id": "GT-022",
+        "question": "Berapa minimal target pengguna agar sebuah aplikasi beroperasi disebut Aplikasi SPBE Prioritas?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.5577
+        },
+        "interpretation": "Retrieval dan grounding sangat baik, relevansi sedang."
+      },
+      {
+        "id": "GT-023",
+        "question": "Siapa lembaga yang secara khusus ditugaskan pemerintah untuk menyelenggarakan Aplikasi SPBE Prioritas?",
+        "scores": {
+          "context_precision": 0.95,
+          "context_recall": 1.0,
+          "faithfulness": 0.8,
+          "answer_relevancy": 0.6438
+        },
+        "interpretation": "Baik; jawaban bisa dipadatkan."
+      },
+      {
+        "id": "GT-024",
+        "question": "Kapan batas akhir pertama kali Aplikasi SPBE Prioritas harus diluncurkan secara terpadu?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.6195
+        },
+        "interpretation": "Retrieval dan grounding kuat, relevansi cukup."
+      },
+      {
+        "id": "GT-025",
+        "question": "Apa yang dimaksud dengan Audit Keamanan SPBE?",
+        "scores": {
+          "context_precision": 0.8667,
+          "context_recall": 1.0,
+          "faithfulness": 0.6667,
+          "answer_relevancy": 0.8704
+        },
+        "interpretation": "Baik; relevansi tinggi, faithfulness sedang."
+      },
+      {
+        "id": "GT-026",
+        "question": "Apa sajakah yang dapat menjadi objek dari Audit Keamanan SPBE?",
+        "scores": {
+          "context_precision": 0.5833,
+          "context_recall": 1.0,
+          "faithfulness": 0.75,
+          "answer_relevancy": 0.7003
+        },
+        "interpretation": "Cukup; fakta ditemukan tetapi konteks masih cukup noisy."
+      },
+      {
+        "id": "GT-027",
+        "question": "Siapa entitas yang bertugas sebagai Pelaksana Audit Keamanan SPBE?",
+        "scores": {
+          "context_precision": 0.2,
+          "context_recall": 1.0,
+          "faithfulness": 0.8333,
+          "answer_relevancy": 0.6186
+        },
+        "interpretation": "Perlu perhatian pada baseline; konteks benar ada tapi precision rendah. Sudah diperbaiki pada iterasi."
+      },
+      {
+        "id": "GT-028",
+        "question": "Aspek apa saja yang harus dipenuhi oleh bukti Audit Keamanan SPBE?",
+        "scores": {
+          "context_precision": 0.7556,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.4762
+        },
+        "interpretation": "Grounded dan recall baik, tetapi jawaban kurang sesuai ekspektasi relevansi."
+      },
+      {
+        "id": "GT-029",
+        "question": "Apa tiga konklusi akhir dari Audit Keamanan SPBE?",
+        "scores": {
+          "context_precision": 0.95,
+          "context_recall": 1.0,
+          "faithfulness": 0.5714,
+          "answer_relevancy": 0.6044
+        },
+        "interpretation": "Konteks baik, tetapi faithfulness dan relevansi perlu diperbaiki."
+      },
+      {
+        "id": "GT-030",
+        "question": "Siapa saja pihak yang termasuk dalam Penyelenggara Sistem Elektronik Lingkup Publik?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 0.6667,
+          "answer_relevancy": 0.5943
+        },
+        "interpretation": "Retrieval kuat, tetapi jawaban perlu lebih langsung atau grounded."
+      },
+      {
+        "id": "GT-031",
+        "question": "Apa yang dimaksud sistem elektronik yang \"andal\" secara hukum?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 0.75,
+          "answer_relevancy": 0.6414
+        },
+        "interpretation": "Baik; perlu sedikit penguatan jawaban ringkas."
+      },
+      {
+        "id": "GT-032",
+        "question": "Apa sanksi administratif jika Penyelenggara Sistem Elektronik melakukan pelanggaran?",
+        "scores": {
+          "context_precision": 0.5,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.4513
+        },
+        "interpretation": "Konteks benar dan grounded, tetapi precision/relevansi rendah karena jawaban terlalu elaboratif."
+      },
+      {
+        "id": "GT-033",
+        "question": "Apa bentuk teknis dari pelaksanaan sanksi pemutusan Akses?",
+        "scores": {
+          "context_precision": 0.9167,
+          "context_recall": 1.0,
+          "faithfulness": 0.8889,
+          "answer_relevancy": 0.4471
+        },
+        "interpretation": "Konteks dan grounding baik, relevansi rendah; perlu jawaban lebih singkat."
+      },
+      {
+        "id": "GT-034",
+        "question": "Apa pengertian dari Manajemen SPBE di lingkungan BSSN?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 0.8,
+          "answer_relevancy": 0.7712
+        },
+        "interpretation": "Baik."
+      },
+      {
+        "id": "GT-035",
+        "question": "Apa saja yang menjadi ruang lingkup penyelenggaraan SPBE di BSSN?",
+        "scores": {
+          "context_precision": 0.8333,
+          "context_recall": 1.0,
+          "faithfulness": 0.8571,
+          "answer_relevancy": 0.5676
+        },
+        "interpretation": "Baik pada retrieval, relevansi sedang."
+      },
+      {
+        "id": "GT-036",
+        "question": "Apa yang menjadi kewajiban Tim Koordinasi SPBE BSSN?",
+        "scores": {
+          "context_precision": 0.7556,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.7932
+        },
+        "interpretation": "Baik."
+      },
+      {
+        "id": "GT-037",
+        "question": "Siapa yang bertanggung jawab langsung atas pelaksanaan Audit Keamanan Internal di BSSN?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.5837
+        },
+        "interpretation": "Retrieval dan grounding sangat baik, relevansi sedang."
+      },
+      {
+        "id": "GT-038",
+        "question": "Kapan LATIK Terakreditasi wajib menyampaikan laporan periodik audit keamanan mereka?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.738
+        },
+        "interpretation": "Baik."
+      },
+      {
+        "id": "GT-039",
+        "question": "Apa domain yang mencetak skor evaluasi terendah secara nasional pada Laporan 2024?",
+        "scores": {
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "faithfulness": 0.8,
+          "answer_relevancy": 0.5288
+        },
+        "interpretation": "Perlu perhatian; sumber agregat nasional 2024 tidak ditemukan di chunk aktif. Butuh perbaikan ingestion/ground truth."
+      },
+      {
+        "id": "GT-040",
+        "question": "Instansi pemerintah daerah mana yang meraih nilai SPBE tertinggi di tahun 2024?",
+        "scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 0.8333,
+          "answer_relevancy": 0.6739
+        },
+        "interpretation": "Baik; jawaban cukup relevan dan grounded."
+      }
+    ]
+  },
+  "targeted_low8_iteration": {
+    "ids": [
+      "GT-007",
+      "GT-009",
+      "GT-013",
+      "GT-020",
+      "GT-021",
+      "GT-027",
+      "GT-032",
+      "GT-039"
+    ],
+    "retrieval_before_fixes": {
+      "hit_at_1": 0.625,
+      "hit_at_5": 1.0,
+      "precision_at_5": 0.525,
+      "recall_at_5": 0.8333,
+      "mrr_at_5": 0.7542,
+      "citation_match_at_5": 0.875,
+      "source_doc_hit_at_5": 1.0,
+      "reference_context_overlap_at_5": 0.9338
+    },
+    "retrieval_after_fixes": {
+      "hit_at_1": 0.75,
+      "hit_at_5": 1.0,
+      "precision_at_5": 0.5,
+      "recall_at_5": 0.8333,
+      "citation_match_at_5": 1.0,
+      "source_doc_hit_at_5": 1.0
+    },
+    "retrieval_delta": {
+      "hit_at_1": 0.125,
+      "hit_at_5": 0.0,
+      "precision_at_5": -0.025,
+      "recall_at_5": 0.0,
+      "citation_match_at_5": 0.125,
+      "source_doc_hit_at_5": 0.0
+    },
+    "ragas_after_fixes_qwen_partial": {
+      "status": "partial_due_to_groq_rate_limit",
+      "average_scores": {
+        "context_precision": 0.8792,
+        "context_recall": 1.0,
+        "faithfulness": 0.875,
+        "answer_relevancy": 0.721
+      }
+    },
+    "ragas_after_fixes_llama4_fallback": {
+      "status": "complete_fallback_judge",
+      "average_scores": {
+        "context_precision": 0.845,
+        "context_recall": 0.75,
+        "faithfulness": 0.7946,
+        "answer_relevancy": 0.6289
+      }
+    },
+    "per_question_after_fixes": [
+      {
+        "id": "GT-007",
+        "question": "Apa tujuan diadakannya Tata Kelola SPBE?",
+        "ground_truth": "Memastikan penerapan unsur-unsur SPBE dilaksanakan secara terpadu.",
+        "answer_summary": "Menjawab benar di kalimat pertama, tetapi menambah konteks BSSN.",
+        "fallback_llama4_scores": {
+          "context_precision": 0.7556,
+          "context_recall": 1.0,
+          "faithfulness": 0.5,
+          "answer_relevancy": 0.9693
+        },
+        "interpretation": "Konteks utama Pasal 4 sudah rank atas dan recall aman. Masalah tersisa adalah tambahan kalimat dari konteks BSSN."
+      },
+      {
+        "id": "GT-009",
+        "question": "Untuk berapa lama Arsitektur SPBE Nasional disusun?",
+        "ground_truth": "Disusun untuk jangka waktu 5 tahun.",
+        "answer_summary": "Menjawab 5 tahun.",
+        "fallback_llama4_scores": {
+          "context_precision": 0.75,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.6937
+        },
+        "interpretation": "Perbaikan berhasil: Pasal 8 Perpres 95 naik menjadi konteks utama dan faithfulness sempurna."
+      },
+      {
+        "id": "GT-013",
+        "question": "Siapa yang berhak melakukan Penilaian Dokumen?",
+        "ground_truth": "Tim Asesor Eksternal.",
+        "answer_summary": "Menjawab Tim Asesor Eksternal.",
+        "fallback_llama4_scores": {
+          "context_precision": 1.0,
+          "context_recall": 0.0,
+          "faithfulness": 0.8,
+          "answer_relevancy": 0.5333
+        },
+        "interpretation": "Isi jawaban benar. Context recall 0 dari fallback kemungkinan judge variance karena konteks eksplisit tersedia."
+      },
+      {
+        "id": "GT-020",
+        "question": "Apa predikat SPBE untuk nilai indeks di bawah 1,8?",
+        "ground_truth": "Predikat Kurang.",
+        "answer_summary": "Menjawab Kurang.",
+        "fallback_llama4_scores": {
+          "context_precision": 0.8875,
+          "context_recall": 1.0,
+          "faithfulness": 0.6,
+          "answer_relevancy": 0.8613
+        },
+        "interpretation": "Hasil baik. Tabel 13 ditemukan dan jawaban tepat, tetapi masih ada elaborasi tambahan."
+      },
+      {
+        "id": "GT-021",
+        "question": "Apa yang dimaksud dengan Aplikasi SPBE Prioritas?",
+        "ground_truth": "Aplikasi SPBE berdampak luas yang merupakan wujud nyata layanan SPBE berkualitas dan tepercaya.",
+        "answer_summary": "Menjawab definisi inti dengan benar.",
+        "fallback_llama4_scores": {
+          "context_precision": 1.0,
+          "context_recall": 1.0,
+          "faithfulness": 0.8571,
+          "answer_relevancy": 0.9094
+        },
+        "interpretation": "Hasil sangat baik setelah perbaikan sebelumnya. Konteks definisi tepat dan jawaban relevan."
+      },
+      {
+        "id": "GT-027",
+        "question": "Siapa entitas yang bertugas sebagai Pelaksana Audit Keamanan SPBE?",
+        "ground_truth": "LATIK cakupan Keamanan SPBE, meliputi LATIK pemerintah atau LATIK Terakreditasi yang terdaftar.",
+        "answer_summary": "Menjawab LATIK cakupan Keamanan SPBE.",
+        "fallback_llama4_scores": {
+          "context_precision": 0.8667,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.6127
+        },
+        "interpretation": "Perbaikan berhasil menaikkan Pasal 4/LATIK ke posisi kuat. Relevansi masih sedang karena ada tambahan informasi."
+      },
+      {
+        "id": "GT-032",
+        "question": "Apa sanksi administratif jika Penyelenggara Sistem Elektronik melakukan pelanggaran?",
+        "ground_truth": "Teguran tertulis, denda administratif, penghentian sementara, pemutusan Akses, dan/atau dikeluarkan dari daftar.",
+        "answer_summary": "Menjawab daftar sanksi administratif.",
+        "fallback_llama4_scores": {
+          "context_precision": 0.5,
+          "context_recall": 1.0,
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.4513
+        },
+        "interpretation": "Fakta ditemukan dan jawaban grounded, tetapi konteks banyak noise dan jawaban terlalu panjang."
+      },
+      {
+        "id": "GT-039",
+        "question": "Apa domain yang mencetak skor evaluasi terendah secara nasional pada Laporan 2024?",
+        "ground_truth": "Domain Manajemen SPBE dengan skor 1,86.",
+        "answer_summary": "Pada iterasi low8 lama sistem belum bisa mengidentifikasi pasti dari konteks; pada retest focused setelah unggah ulang dokumen, sistem menjawab Domain Manajemen dengan nilai indeks 1,86.",
+        "fallback_llama4_scores": {
+          "context_precision": 1.0,
+          "context_recall": 0.0,
+          "faithfulness": 0.6,
+          "answer_relevancy": 0.0
+        },
+        "interpretation": "Nilai fallback_llama4_scores adalah hasil low8 lama. Status terbaru: resolved pada retest focused GT-039 setelah unggah ulang dokumen; top-5 retrieval mengambil dokumen Laporan Pelaksanaan Evaluasi SPBE 2024 dan RAGAS Qwen memberi context_recall 1.0000 serta faithfulness 1.0000."
+      }
+    ]
+  },
+  "gt039_focused_retest_after_new_upload": {
+    "status": "resolved",
+    "question_id": "GT-039",
+    "ground_truth": "Domain Manajemen SPBE dengan skor 1,86.",
+    "answer": "Berdasarkan Laporan Pelaksanaan Evaluasi SPBE 2024, Domain Manajemen mencetak skor evaluasi terendah secara nasional dengan nilai indeks sebesar 1,86 [1]. Skor ini merupakan rata-rata paling rendah dibandingkan keempat domain lainnya yang dievaluasi dalam laporan tersebut [3].",
+    "retrieval_top_k": 5,
+    "retrieved_sources": [
+      {
+        "rank": 1,
+        "document_id": 23,
+        "chunk_index": 39,
+        "source_doc": "Laporan Pelaksanaan Evaluasi SPBE 2024.pdf"
+      },
+      {
+        "rank": 2,
+        "document_id": 23,
+        "chunk_index": 40,
+        "source_doc": "Laporan Pelaksanaan Evaluasi SPBE 2024.pdf"
+      },
+      {
+        "rank": 3,
+        "document_id": 23,
+        "chunk_index": 37,
+        "source_doc": "Laporan Pelaksanaan Evaluasi SPBE 2024.pdf"
+      },
+      {
+        "rank": 4,
+        "document_id": 23,
+        "chunk_index": 36,
+        "source_doc": "Laporan Pelaksanaan Evaluasi SPBE 2024.pdf"
+      },
+      {
+        "rank": 5,
+        "document_id": 23,
+        "chunk_index": 45,
+        "source_doc": "Laporan Pelaksanaan Evaluasi SPBE 2024.pdf"
+      }
+    ],
+    "heuristic_scores": {
+      "semantic_similarity": 0.7854,
+      "context_recall": 1.0,
+      "answer_coverage": 1.0
+    },
+    "ragas_qwen_scores": {
+      "context_precision": 0.95,
+      "context_recall": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.669
+    },
+    "interpretation": "GT-039 resolved setelah dokumen Laporan Pelaksanaan Evaluasi SPBE 2024 diunggah ulang dan terindeks. Kegagalan sebelumnya terutama berasal dari ketersediaan/hasil ingestion evidence agregat nasional, bukan dari prompt atau reranker semata. Answer relevancy masih dapat ditingkatkan dengan jawaban yang lebih ringkas."
+  },
+  "known_limitations": [
+    {
+      "issue": "Groq Qwen rate/token limit",
+      "impact": "RAGAS low8 setelah fix dengan Qwen bersifat parsial karena beberapa nilai null akibat rate limit."
+    },
+    {
+      "issue": "Judge variance",
+      "impact": "Fallback Llama memberi context_recall 0 pada GT-013 meskipun konteks eksplisit tersedia; hasil fallback perlu diperlakukan sebagai pembanding."
+    },
+    {
+      "issue": "GT-039 baseline score is stale",
+      "impact": "GT-039 sudah resolved pada retest focused setelah unggah ulang dokumen, tetapi skor baseline full 40 masih memakai hasil lama sebelum dokumen baru terindeks."
+    },
+    {
+      "issue": "Answer verbosity",
+      "impact": "Beberapa jawaban benar tetapi terlalu panjang, sehingga answer_relevancy turun."
+    }
+  ],
+  "recommendations": [
+    "Tambahkan quality gate ingestion Laporan 2024 untuk memastikan tabel/ringkasan agregat nasional masuk ke corpus aktif.",
+    "Tambahkan prompt khusus jawaban ringkas untuk pertanyaan definisi, tujuan, siapa, dan berapa.",
+    "Retest RAGAS dengan Qwen setelah limit Groq pulih agar hasil low8 setelah fix lengkap.",
+    "Jalankan ulang full 40 RAGAS setelah kuota Groq pulih agar hasil terbaru GT-039 dan prompt ringkas tercermin dalam skor akhir.",
+    "Pertahankan top-5 retrieval karena terbukti menjaga recall; fokuskan iterasi berikutnya pada ranking dan generasi jawaban."
+  ],
+  "verification": {
+    "report_file_created": true,
+    "json_file_created": true,
+    "json_syntax_validated": true,
+    "notes": "JSON berhasil divalidasi dengan python -m json.tool."
+  }
+}

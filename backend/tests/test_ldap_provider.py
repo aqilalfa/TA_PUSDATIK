@@ -162,48 +162,37 @@ class TestLDAPRoleMapping:
     """Test LDAP group to PBAC role mapping"""
 
     def test_map_admin_group_to_roles(self):
-        """Verify Admin_PUSDATIK group maps to correct roles"""
+        """Verify Admin_PUSDATIK group maps to admin role only."""
         groups = ["Admin_PUSDATIK"]
         roles = map_directory_groups_to_roles(groups)
-        assert "admin_pusdatik" in roles
-        assert "staf_pusdatik" in roles
+        assert roles == ["admin_pusdatik"]
 
     def test_map_evaluator_group_to_roles(self):
-        """Verify Evaluator_SPBE group maps to correct role"""
+        """Verify Evaluator_SPBE group maps to the unified staff role."""
         groups = ["Evaluator_SPBE"]
         roles = map_directory_groups_to_roles(groups)
-        assert "evaluator_spbe" in roles
+        assert roles == ["staff"]
 
     def test_map_manager_group_to_roles(self):
-        """Verify Manager_Evaluasi group maps to correct roles"""
+        """Verify Manager_Evaluasi group maps to the unified staff role."""
         groups = ["Manager_Evaluasi"]
         roles = map_directory_groups_to_roles(groups)
-        assert "manager_evaluasi" in roles
-        assert "staf_pusdatik" in roles
+        assert roles == ["staff"]
 
     def test_map_multiple_groups_to_roles(self):
-        """Verify multiple groups map to combined roles"""
+        """Verify multiple groups map to deduplicated admin/staff roles."""
         groups = ["Admin_PUSDATIK", "Evaluator_SPBE", "Manager_Evaluasi"]
         roles = map_directory_groups_to_roles(groups)
-        
-        # Verify all roles present (should be deduplicated)
-        assert "admin_pusdatik" in roles
-        assert "evaluator_spbe" in roles
-        assert "manager_evaluasi" in roles
-        assert "staf_pusdatik" in roles
-        
-        # staf_pusdatik should only appear once
-        assert roles.count("staf_pusdatik") == 1
+
+        assert roles == ["admin_pusdatik", "staff"]
+        assert roles.count("staff") == 1
 
     def test_map_unknown_group_ignored(self):
         """Verify unknown groups are ignored"""
         groups = ["UnknownGroup_XYZ", "Admin_PUSDATIK"]
         roles = map_directory_groups_to_roles(groups)
-        
-        # Unknown group should be ignored
-        assert len(roles) == 2
-        assert "admin_pusdatik" in roles
-        assert "staf_pusdatik" in roles
+
+        assert roles == ["admin_pusdatik"]
 
     def test_custom_role_mapping(self):
         """Verify custom role mapping can be provided"""
@@ -310,8 +299,8 @@ class TestLDAPAuthProvider:
         assert user.department == "New IT Department"
         
         # Verify role was updated
-        assert "manager_evaluasi" in user.roles
-        assert "staf_pusdatik" in user.roles
+        assert "staff" in user.roles
+        assert "staff" in user.roles
 
     @patch.object(LDAPDirectoryClient, "authenticate")
     def test_ldap_provider_handles_invalid_credentials(self, mock_auth, test_db: Session):
@@ -356,8 +345,8 @@ class TestLDAPAuthProvider:
 
         # Verify all roles assigned
         assert "admin_pusdatik" in user.roles
-        assert "staf_pusdatik" in user.roles
-        assert "evaluator_spbe" in user.roles
+        assert "staff" in user.roles
+        assert "staff" in user.roles
 
 
 class TestLDAPIntegration:
@@ -389,7 +378,7 @@ class TestLDAPIntegration:
         assert user.email == "aqil@bssn.go.id"
         assert user.auth_provider == "ldap"
         assert "admin_pusdatik" in user.roles
-        assert "manager_evaluasi" in user.roles
+        assert "staff" in user.roles
 
         # Verify shadow user persisted
         db_user = test_db.query(User).filter_by(email="aqil@bssn.go.id").first()

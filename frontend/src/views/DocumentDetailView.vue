@@ -84,13 +84,13 @@
                 <span v-if="chunk.is_indexed" class="badge indexed">indexed</span>
               </div>
               <div class="chunk-actions">
-                <button @click="editChunk(chunk)" class="icon-btn" title="Edit">
+                <button @click="editChunk(chunk)" class="icon-btn" title="Edit" :aria-label="`Edit konteks #${index + 1}`">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
                     <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
                   </svg>
                 </button>
-                <button @click="confirmDeleteChunk(chunk)" class="icon-btn delete" title="Hapus">
+                <button @click="confirmDeleteChunk(chunk)" class="icon-btn delete" title="Hapus" :aria-label="`Hapus konteks #${index + 1}`">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polyline points="3 6 5 6 21 6"/>
                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
@@ -104,21 +104,35 @@
             <div v-if="chunk.context_header" class="chunk-context">
               {{ chunk.context_header }}
             </div>
+            <div
+              v-if="chunk.canonical_context_id || chunk.citation_id"
+              class="chunk-identity"
+              data-testid="chunk-identity"
+            >
+              <div v-if="chunk.canonical_context_id" class="identity-item">
+                <span class="identity-label">Context ID</span>
+                <code>{{ chunk.canonical_context_id }}</code>
+              </div>
+              <div v-if="chunk.citation_id" class="identity-item">
+                <span class="identity-label">Citation ID</span>
+                <code>{{ chunk.citation_id }}</code>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Add/Edit Modal -->
-    <div v-if="showAddModal || editingChunk" class="modal-overlay" @click="closeModal">
-      <div class="modal" @click.stop>
-        <h3>{{ editingChunk ? 'Edit Chunk' : 'Tambah Chunk Baru' }}</h3>
+    <div v-if="showAddModal || editingChunk" class="modal-overlay" @click="closeModal" @keydown.escape="closeModal">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="chunk-modal-title" @click.stop>
+        <h3 id="chunk-modal-title">{{ editingChunk ? 'Edit Konteks' : 'Tambah Konteks Baru' }}</h3>
         
         <div class="form-group">
-          <label>Teks Chunk</label>
+          <label>Teks Konteks</label>
           <textarea 
             v-model="chunkForm.text" 
-            placeholder="Masukkan teks chunk..."
+            placeholder="Masukkan teks konteks..."
             rows="8"
           ></textarea>
         </div>
@@ -137,17 +151,17 @@
         <div class="modal-actions">
           <button @click="closeModal" class="btn-cancel">Batal</button>
           <button @click="saveChunk" :disabled="saving" class="btn-primary">
-            {{ saving ? 'Menyimpan...' : (editingChunk ? 'Simpan Perubahan' : 'Tambah Chunk') }}
+            {{ saving ? 'Menyimpan...' : (editingChunk ? 'Simpan Perubahan' : 'Tambah Konteks') }}
           </button>
         </div>
       </div>
     </div>
 
     <!-- Delete Chunk Confirmation Modal -->
-    <div v-if="deletingChunk" class="modal-overlay" @click="deletingChunk = null">
-      <div class="modal" @click.stop>
-        <h3>Hapus Chunk?</h3>
-        <p>Yakin ingin menghapus chunk #{{ deletingChunk.chunk_index + 1 }}?</p>
+    <div v-if="deletingChunk" class="modal-overlay" @click="deletingChunk = null" @keydown.escape="deletingChunk = null">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="delete-chunk-modal-title" @click.stop>
+        <h3 id="delete-chunk-modal-title">Hapus Konteks?</h3>
+        <p>Yakin ingin menghapus konteks #{{ deletingChunk.chunk_index + 1 }}?</p>
         <div class="modal-actions">
           <button @click="deletingChunk = null" class="btn-cancel">Batal</button>
           <button @click="deleteChunk" :disabled="deleting" class="btn-danger">
@@ -158,11 +172,11 @@
     </div>
 
     <!-- Delete Document Confirmation Modal -->
-    <div v-if="deletingDocument" class="modal-overlay" @click="deletingDocument = false">
-      <div class="modal" @click.stop>
-        <h3>Hapus Dokumen?</h3>
+    <div v-if="deletingDocument" class="modal-overlay" @click="deletingDocument = false" @keydown.escape="deletingDocument = false">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="delete-document-modal-title" @click.stop>
+        <h3 id="delete-document-modal-title">Hapus Dokumen?</h3>
         <p class="delete-warning">Yakin ingin menghapus dokumen "<strong>{{ document?.document_title }}</strong>"?</p>
-        <p class="delete-info">Semua {{ document?.chunk_count || 0 }} chunks akan ikut terhapus. Aksi ini tidak dapat dibatalkan.</p>
+        <p class="delete-info">Semua {{ document?.chunk_count || 0 }} konteks akan ikut terhapus. Aksi ini tidak dapat dibatalkan.</p>
         <div class="modal-actions">
           <button @click="deletingDocument = false" class="btn-cancel">Batal</button>
           <button @click="deleteDocument" :disabled="deletingDocumentLoading" class="btn-danger">
@@ -468,6 +482,7 @@ onMounted(async () => {
 <style scoped>
 .detail-page {
   min-height: 100vh;
+  min-height: 100dvh;
   background: var(--color-cream);
 }
 
@@ -548,8 +563,8 @@ onMounted(async () => {
 
 .btn-danger-outline {
   background: transparent;
-  color: #c0392b;
-  border: 1px solid #c0392b;
+  color: var(--color-danger);
+  border: 1px solid var(--color-danger);
   padding: 7px 14px;
   font-size: 11px;
   font-family: var(--font-ui);
@@ -573,7 +588,7 @@ onMounted(async () => {
 .btn-cancel:hover { border-color: var(--color-text-muted); }
 
 .btn-danger {
-  background: #c0392b;
+  background: var(--color-danger);
   color: white;
   border: none;
   padding: 7px 16px;
@@ -583,7 +598,7 @@ onMounted(async () => {
   cursor: pointer;
   transition: background 0.15s;
 }
-.btn-danger:hover:not(:disabled) { background: #a93226; }
+.btn-danger:hover:not(:disabled) { background: var(--color-danger-hover); }
 .btn-danger:disabled { opacity: 0.5; cursor: not-allowed; }
 
 /* Main content */
@@ -674,13 +689,12 @@ onMounted(async () => {
 
 .chunk-card.highlighted {
   border-color: var(--color-gold);
-  border-left: 3px solid var(--color-gold);
   box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.20);
   animation: highlightFade 2.5s ease forwards;
 }
 
 @keyframes highlightFade {
-  0%   { background: #fdf8ee; }
+  0%   { background: var(--color-status-warn-bg); }
   100% { background: white; }
 }
 
@@ -689,7 +703,7 @@ onMounted(async () => {
   justify-content: space-between;
   align-items: center;
   padding: 8px 14px;
-  background: #faf9f7;
+  background: var(--color-input-bg);
   border-bottom: 1px solid var(--color-border-light);
 }
 
@@ -710,10 +724,10 @@ onMounted(async () => {
   border-radius: 2px;
 }
 
-.badge.bab { background: #fdf8ee; color: #8b7355; border: 1px solid #e0c97a; font-size: 9px; padding: 2px 7px; border-radius: 2px; font-family: var(--font-ui); font-weight: 600; }
+.badge.bab { background: var(--color-status-warn-bg); color: var(--color-status-warn-text); border: 1px solid var(--color-status-warn-border); font-size: 9px; padding: 2px 7px; border-radius: 2px; font-family: var(--font-ui); font-weight: 600; }
 .badge.pasal { background: var(--color-status-info-bg); color: var(--color-status-info-text); border: 1px solid var(--color-status-info-border); font-size: 9px; padding: 2px 7px; border-radius: 2px; font-family: var(--font-ui); font-weight: 600; }
 .badge.ayat { background: var(--color-status-ok-bg); color: var(--color-status-ok-text); border: 1px solid var(--color-status-ok-border); font-size: 9px; padding: 2px 7px; border-radius: 2px; font-family: var(--font-ui); font-weight: 600; }
-.badge.part { background: #eef2f9; color: #2c5282; border: 1px solid #b8cce4; font-size: 9px; padding: 2px 7px; border-radius: 2px; font-family: var(--font-ui); }
+.badge.part { background: var(--color-status-info-bg); color: var(--color-navy-hover); border: 1px solid var(--color-status-info-border); font-size: 9px; padding: 2px 7px; border-radius: 2px; font-family: var(--font-ui); }
 .badge.indexed { background: var(--color-status-ok-bg); color: var(--color-status-ok-text); border: 1px solid var(--color-status-ok-border); font-size: 9px; padding: 2px 7px; border-radius: 2px; font-family: var(--font-ui); }
 
 .chunk-actions {
@@ -727,6 +741,7 @@ onMounted(async () => {
   justify-content: center;
   width: 28px;
   height: 28px;
+  position: relative; /* Impeccable Layout: Expand hit area */
   background: transparent;
   border: 1px solid transparent;
   border-radius: 2px;
@@ -734,8 +749,14 @@ onMounted(async () => {
   cursor: pointer;
   transition: all 0.15s;
 }
-.icon-btn:hover { border-color: var(--color-border); color: var(--color-navy); background: #eef2f9; }
-.icon-btn.delete:hover { border-color: #fcc; color: #c0392b; background: rgba(192,57,43,0.06); }
+
+.icon-btn::before {
+  content: '';
+  position: absolute;
+  inset: -10px; /* Expands touch target to ~48x48px without changing visuals */
+}
+.icon-btn:hover { border-color: var(--color-border); color: var(--color-navy); background: var(--color-status-info-bg); }
+.icon-btn.delete:hover { border-color: var(--color-danger-border-light); color: var(--color-danger); background: rgba(192,57,43,0.06); }
 
 .chunk-content {
   padding: 12px 14px;
@@ -759,6 +780,44 @@ onMounted(async () => {
   font-style: italic;
 }
 
+.chunk-identity {
+  display: grid;
+  gap: 5px;
+  padding: 8px 14px 10px;
+  background: var(--color-surface-soft);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.identity-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.identity-label {
+  flex: 0 0 70px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-family: var(--font-ui);
+}
+
+.identity-item code {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  padding: 2px 6px;
+  background: #eef2f9;
+  border: 1px solid #d8e0ed;
+  border-radius: 2px;
+  color: var(--color-navy);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
 /* Modal */
 .modal-overlay {
   position: fixed;
@@ -767,7 +826,7 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: var(--z-modal-backdrop);
 }
 
 .modal {
@@ -842,7 +901,7 @@ onMounted(async () => {
   border-radius: 2px;
   font-size: 12px;
   font-family: var(--font-ui);
-  z-index: 1001;
+  z-index: var(--z-toast);
   animation: slideInRight 0.3s ease;
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }

@@ -12,7 +12,13 @@ from pathlib import Path
 sys.stdout.reconfigure(encoding="utf-8")
 
 
-METRICS = ["faithfulness", "answer_relevancy", "context_precision", "context_recall"]
+METRICS = [
+    "faithfulness",
+    "answer_relevancy",
+    "context_precision",
+    "context_recall",
+    "answer_correctness",
+]
 
 
 def main():

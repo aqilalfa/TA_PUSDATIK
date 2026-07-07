@@ -3,124 +3,144 @@
     <AppHeader active="documents" />
 
     <div class="docs-layout">
-      <!-- Page header -->
-      <div class="page-title-row">
-        <div>
+      <div class="page-title-row docs-hero">
+        <div class="page-copy">
+          <span class="page-kicker">Arsip regulasi SPBE</span>
           <h1 class="page-title">Manajemen Dokumen</h1>
-          <p class="page-title-sub">Kelola sumber pengetahuan sistem RAG SPBE</p>
+          <p class="page-title-sub">
+            Kelola dokumen hukum, kebijakan, dan rujukan yang menjadi dasar jawaban Asisten Hukum SPBE.
+          </p>
+          <div class="document-summary" aria-label="Ringkasan dokumen tersedia">
+            <span><strong>{{ documents.length }}</strong> dokumen</span>
+            <span><strong>{{ indexedCount }}</strong> terindeks</span>
+            <span><strong>{{ totalChunks }}</strong> konteks</span>
+          </div>
         </div>
         <div class="page-actions">
-          <button @click="syncFromQdrant" :disabled="syncing" class="btn-outline">
+          <button @click="syncFromQdrant" :disabled="syncing" class="btn-outline sync-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" :class="{ spinning: syncing }">
               <path d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9"/>
             </svg>
-            {{ syncing ? 'Menyinkronkan...' : '↻ Sinkronisasi Qdrant' }}
+            {{ syncing ? 'Menyinkronkan...' : 'Sinkronisasi Qdrant' }}
           </button>
         </div>
       </div>
 
-      <!-- Stepper -->
-      <div v-if="stepperState !== 'idle'" class="upload-stepper">
-        <div class="stepper-step">
-          <div class="stepper-circle" :class="stepClass(1)">
-            <span v-if="stepClass(1) === 'done'">✓</span>
-            <span v-else>1</span>
-          </div>
-          <span class="stepper-label">UNGGAH</span>
-        </div>
-        <div class="stepper-connector" :class="connectorClass(1)"></div>
-        <div class="stepper-step">
-          <div class="stepper-circle" :class="stepClass(2)">
-            <span v-if="stepClass(2) === 'done'">✓</span>
-            <span v-else>2</span>
-          </div>
-          <span class="stepper-label">PREVIEW</span>
-        </div>
-        <div class="stepper-connector" :class="connectorClass(2)"></div>
-        <div class="stepper-step">
-          <div class="stepper-circle" :class="stepClass(3)">
-            <span v-if="stepClass(3) === 'done'">✓</span>
-            <span v-else>3</span>
-          </div>
-          <span class="stepper-label">INDEKS</span>
-        </div>
-      </div>
-
-      <!-- Upload zone -->
-      <div
-        class="upload-zone"
-        :class="{ 'drag-over': isDragging, 'has-file': selectedFile }"
-        @dragover.prevent="isDragging = true"
-        @dragleave="isDragging = false"
-        @drop.prevent="handleDrop"
-        @click="$refs.fileInput.click()"
-      >
-        <input type="file" ref="fileInput" accept=".pdf,.doc,.docx" @change="handleFileSelect" hidden />
-
-        <div v-if="!selectedFile" class="upload-content">
-          <div class="upload-icon">📄</div>
-          <div class="upload-title">Seret & Lepas File di Sini</div>
-          <div class="upload-desc">Mendukung PDF, DOC, DOCX · Maks. 50 MB</div>
-          <div class="upload-or">atau</div>
-          <div class="upload-browse">Pilih dari Komputer</div>
-        </div>
-
-        <div v-else class="file-selected">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-            <polyline points="14 2 14 8 20 8"/>
-          </svg>
+      <section class="upload-panel" aria-labelledby="upload-panel-title">
+        <div class="upload-panel-header">
           <div>
-            <p class="file-name">{{ selectedFile.name }}</p>
-            <small class="file-size">{{ formatFileSize(selectedFile.size) }}</small>
+            <span class="panel-kicker">Unggah sumber</span>
+            <h2 id="upload-panel-title">Tambah dokumen rujukan</h2>
+            <p>Dokumen yang tersimpan akan diproses menjadi konteks pencarian dan tetap dapat diperiksa kembali.</p>
           </div>
-          <button @click.stop="clearFile" class="file-clear-btn">✕</button>
+          <span class="upload-policy">PDF, DOC, DOCX · Maks. 50 MB</span>
         </div>
-      </div>
 
-      <!-- Validation messages -->
-      <div v-if="validationErrors.length" class="validation-error">
-        <span v-for="e in validationErrors" :key="e" class="validation-msg">⚠ {{ e }}</span>
-      </div>
-      <div v-if="validationWarnings.length" class="validation-warning">
-        <span v-for="w in validationWarnings" :key="w" class="validation-msg">💡 {{ w }}</span>
-      </div>
+        <div v-if="stepperState !== 'idle'" class="upload-stepper" aria-label="Tahapan unggah dokumen">
+          <div class="stepper-step">
+            <div class="stepper-circle" :class="stepClass(1)">
+              <span v-if="stepClass(1) === 'done'">✓</span>
+              <span v-else>1</span>
+            </div>
+            <span class="stepper-label">Unggah</span>
+          </div>
+          <div class="stepper-connector" :class="connectorClass(1)"></div>
+          <div class="stepper-step">
+            <div class="stepper-circle" :class="stepClass(2)">
+              <span v-if="stepClass(2) === 'done'">✓</span>
+              <span v-else>2</span>
+            </div>
+            <span class="stepper-label">Preview</span>
+          </div>
+          <div class="stepper-connector" :class="connectorClass(2)"></div>
+          <div class="stepper-step">
+            <div class="stepper-circle" :class="stepClass(3)">
+              <span v-if="stepClass(3) === 'done'">✓</span>
+              <span v-else>3</span>
+            </div>
+            <span class="stepper-label">Indeks</span>
+          </div>
+        </div>
 
-      <!-- Upload/Preview actions -->
-      <div v-if="selectedFile && !uploadedDocId" class="upload-actions">
-        <button
-          data-testid="upload-btn"
-          @click="uploadFile"
-          :disabled="uploading || validationErrors.length > 0"
-          class="btn-primary"
+        <div
+          class="upload-zone"
+          :class="{ 'drag-over': isDragging, 'has-file': selectedFile }"
+          role="button"
+          tabindex="0"
+          aria-label="Pilih atau seret dokumen untuk diunggah"
+          @dragover.prevent="isDragging = true"
+          @dragleave="isDragging = false"
+          @drop.prevent="handleDrop"
+          @click="$refs.fileInput.click()"
+          @keydown.enter.prevent="$refs.fileInput.click()"
+          @keydown.space.prevent="$refs.fileInput.click()"
         >
-          {{ uploading ? 'Mengunggah...' : 'Unggah Dokumen' }}
-        </button>
-      </div>
-      <!-- Progress bar: shown while upload is in progress, regardless of uploadedDocId state -->
-      <div v-if="uploading" class="upload-progress">
-        <div class="progress-bar">
-          <div class="progress-fill" :style="{ width: uploadProgress + '%' }"></div>
-        </div>
-        <span class="progress-label">{{ uploadProgress }}%</span>
-      </div>
-      <div v-if="uploadedDocId && !previewData" class="upload-actions">
-        <button @click="previewChunks" :disabled="previewing" class="btn-outline">
-          {{ previewing ? 'Mengekstrak chunks...' : 'Pratinjau Chunks' }}
-        </button>
-      </div>
+          <input type="file" ref="fileInput" accept=".pdf,.doc,.docx" @change="handleFileSelect" hidden />
 
-      <!-- Preview section -->
+          <div v-if="!selectedFile" class="upload-content">
+            <div class="upload-icon" aria-hidden="true">▤</div>
+            <div>
+              <div class="upload-title">Pilih dokumen rujukan</div>
+              <div class="upload-desc">Seret berkas ke area ini, atau pilih dari komputer.</div>
+            </div>
+            <div class="upload-browse">Pilih dari komputer</div>
+          </div>
+
+          <div v-else class="file-selected">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            <div>
+              <p class="file-name">{{ selectedFile.name }}</p>
+              <small class="file-size">{{ formatFileSize(selectedFile.size) }} · siap divalidasi</small>
+            </div>
+            <button @click.stop="clearFile" class="file-clear-btn" aria-label="Batalkan pilihan dokumen">✕</button>
+          </div>
+        </div>
+
+        <div v-if="validationErrors.length" class="validation-error">
+          <span v-for="e in validationErrors" :key="e" class="validation-msg">Peringatan: {{ e }}</span>
+        </div>
+        <div v-if="validationWarnings.length" class="validation-warning">
+          <span v-for="w in validationWarnings" :key="w" class="validation-msg">Catatan: {{ w }}</span>
+        </div>
+
+        <div v-if="selectedFile && !uploadedDocId" class="upload-actions">
+          <button
+            data-testid="upload-btn"
+            @click="uploadFile"
+            :disabled="uploading || validationErrors.length > 0"
+            class="btn-primary"
+          >
+            {{ uploading ? 'Mengunggah...' : 'Unggah dokumen' }}
+          </button>
+        </div>
+
+        <div v-if="uploading" class="upload-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" :style="{ width: uploadProgress + '%' }"></div>
+          </div>
+          <span class="progress-label">{{ uploadProgress }}%</span>
+        </div>
+
+        <div v-if="uploadedDocId && !previewData" class="upload-actions">
+          <button @click="previewChunks" :disabled="previewing" class="btn-outline">
+            {{ previewing ? 'Mengekstrak konteks...' : 'Pratinjau konteks' }}
+          </button>
+        </div>
+      </section>
+
       <div v-if="previewData" class="preview-section">
         <div class="preview-header">
           <div>
             <h2 class="preview-title">Pratinjau: {{ previewData.document_title }}</h2>
-            <p class="preview-meta">{{ previewData.total_chunks }} chunk ditemukan ({{ previewData.doc_type }})</p>
+            <p class="preview-meta">{{ previewData.total_chunks }} konteks ditemukan ({{ previewData.doc_type }})</p>
           </div>
           <div class="preview-actions">
             <button @click="cancelPreview" class="btn-ghost">Batal</button>
             <button data-testid="save-btn" @click="saveDocument" :disabled="saving" class="btn-primary">
-              {{ saving ? 'Menyimpan...' : 'Simpan ke Indeks' }}
+              {{ saving ? 'Menyimpan...' : 'Simpan ke indeks' }}
             </button>
           </div>
         </div>
@@ -137,41 +157,43 @@
         </div>
 
         <div v-if="previewData.has_more" class="more-notice">
-          + {{ previewData.total_chunks - previewData.chunks.length }} chunk lainnya
+          + {{ previewData.total_chunks - previewData.chunks.length }} konteks lainnya
         </div>
       </div>
 
-      <!-- Success card -->
       <div v-if="saveComplete" class="success-card">
-        <div class="success-icon">✅</div>
+        <div class="success-icon" aria-hidden="true">✓</div>
         <div class="success-title">Dokumen berhasil diindeks</div>
-        <div class="success-meta">{{ lastChunkCount }} chunks tersimpan · Siap untuk pencarian</div>
+        <div class="success-meta">{{ lastChunkCount }} konteks tersimpan · Siap untuk pencarian</div>
         <button data-testid="upload-another-btn" @click="resetUpload" class="btn-outline">
-          + Unggah Dokumen Lain
+          + Unggah dokumen lain
         </button>
       </div>
 
-      <!-- Document list -->
       <div class="docs-section">
         <div class="docs-list-header">
-          <div class="section-heading">Dokumen Tersedia</div>
+          <div>
+            <div class="section-heading">Dokumen Tersedia</div>
+            <p class="docs-list-subtitle">Daftar sumber yang dapat digunakan sistem untuk menelusuri rujukan SPBE.</p>
+          </div>
           <div class="docs-count" v-if="documents.length > 0">{{ documents.length }} dokumen</div>
         </div>
 
         <div v-if="loading" class="state-loading">Memuat dokumen...</div>
 
         <div v-else-if="documents.length === 0" class="state-empty">
-          <div style="font-size:32px;margin-bottom:10px;">📄</div>
-          <p>Belum ada dokumen terindekas</p>
-          <small>Unggah dokumen PDF untuk memulai</small>
+          <div class="state-icon">▤</div>
+          <p>Belum ada dokumen terindeks</p>
+          <small>Unggah dokumen resmi untuk mulai membangun rujukan sistem.</small>
         </div>
 
-        <div v-else class="docs-table">
+        <div v-else class="table-responsive">
+          <div class="docs-table">
           <div class="docs-thead">
             <div class="docs-row-grid docs-th-row">
               <span>Nama Dokumen</span>
               <span>Ukuran</span>
-              <span>Chunk</span>
+              <span>Konteks</span>
               <span>Status</span>
               <span>Aksi</span>
             </div>
@@ -180,38 +202,43 @@
             v-for="doc in documents"
             :key="doc.doc_id"
             class="docs-row docs-row-grid"
+            role="button"
+            tabindex="0"
+            :aria-label="`Buka detail dokumen ${doc.document_title || doc.filename}`"
             @click="goToDetail(doc.doc_id)"
+            @keydown.enter.prevent="goToDetail(doc.doc_id)"
+            @keydown.space.prevent="goToDetail(doc.doc_id)"
           >
             <div class="doc-name-cell">
               <span class="doc-name">{{ doc.document_title || doc.filename }}</span>
-              <span class="doc-type-tag">{{ doc.doc_type }}</span>
+              <span class="doc-type-tag">{{ doc.doc_type || 'Dokumen' }}</span>
             </div>
-            <span class="doc-cell">{{ formatFileSize(doc.file_size) }}</span>
-            <span class="doc-cell">{{ doc.chunk_count || '—' }}</span>
-            <span class="doc-cell">
+            <span class="doc-cell" data-label="Ukuran">{{ formatFileSize(doc.file_size) }}</span>
+            <span class="doc-cell" data-label="Konteks">{{ doc.chunk_count || '—' }}</span>
+            <span class="doc-cell" data-label="Status">
               <span class="badge" :class="{
                 'badge-ok': doc.status === 'indexed',
                 'badge-warn': doc.status === 'uploaded' || doc.status === 'previewed'
               }">
-                {{ doc.status === 'indexed' ? '✓ Terindeks' : doc.status === 'previewed' ? '👁 Pratinjau' : '⏳ Diunggah' }}
+                {{ doc.status === 'indexed' ? 'Terindeks' : doc.status === 'previewed' ? 'Pratinjau' : 'Diunggah' }}
               </span>
             </span>
-            <span class="doc-cell doc-actions" @click.stop>
+            <span class="doc-cell doc-actions" data-label="Aksi" @click.stop @keydown.stop>
               <button v-if="doc.status !== 'indexed'" @click="goToDetail(doc.doc_id)" class="doc-btn">Lihat</button>
               <button @click="goToDetail(doc.doc_id)" class="doc-btn">Detail</button>
               <button @click="confirmDelete(doc)" class="doc-btn danger">Hapus</button>
             </span>
           </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Delete Modal -->
     <div v-if="deleteTarget" class="modal-overlay" @click="deleteTarget = null">
-      <div class="modal" @click.stop>
-        <h3 class="modal-title">Hapus Dokumen?</h3>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="delete-modal-title" @click.stop>
+        <h3 id="delete-modal-title" class="modal-title">Hapus Dokumen?</h3>
         <p class="modal-body">Yakin ingin menghapus <strong>{{ deleteTarget.document_title || deleteTarget.filename }}</strong>?</p>
-        <p class="modal-warning">{{ deleteTarget.chunk_count }} chunk akan dihapus dari indeks.</p>
+        <p class="modal-warning">{{ deleteTarget.chunk_count }} konteks akan dihapus dari indeks.</p>
         <div class="modal-actions">
           <button @click="deleteTarget = null" class="btn-ghost">Batal</button>
           <button @click="deleteDocument" :disabled="deleting" class="btn-danger">
@@ -221,7 +248,6 @@
       </div>
     </div>
 
-    <!-- Toast -->
     <div v-if="toast" class="toast" :class="toast.type">{{ toast.message }}</div>
   </div>
 </template>
@@ -260,6 +286,9 @@ const validationWarnings = ref([])
 const uploadProgress = ref(0)
 const saveComplete = ref(false)
 const lastChunkCount = ref(0)
+
+const indexedCount = computed(() => documents.value.filter((doc) => doc.status === 'indexed').length)
+const totalChunks = computed(() => documents.value.reduce((total, doc) => total + Number(doc.chunk_count || 0), 0))
 
 const stepperState = computed(() => {
   if (saveComplete.value) return 'done'
@@ -348,7 +377,7 @@ async function uploadFile() {
       uploadProgress.value = pct
     })
     uploadedDocId.value = data.doc_id
-    showToast('Upload berhasil! Klik Pratinjau untuk melihat chunks.')
+    showToast('Unggah berhasil. Lanjutkan ke pratinjau konteks.')
   } catch (e) {
     showToast(e.message, 'error')
   } finally {
@@ -390,7 +419,7 @@ async function loadDocuments() {
   try {
     documents.value = await listDocuments()
   } catch (e) {
-    console.error('Load docs error:', e)
+    showToast(e.message || 'Gagal memuat dokumen', 'error')
   } finally {
     loading.value = false
   }
@@ -429,7 +458,6 @@ async function syncFromQdrant() {
     await loadDocuments()
   } catch (e) {
     showToast(e.message, 'error')
-    console.error('Sync error:', e)
   } finally {
     syncing.value = false
   }
@@ -445,453 +473,277 @@ defineExpose({ handleFileChange, uploadedDocId, previewData, saveComplete, selec
 <style scoped>
 .documents-page {
   min-height: 100vh;
+  min-height: 100dvh;
   background: var(--color-cream);
 }
 
 .docs-layout {
-  max-width: 960px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 32px;
+  padding: 40px 32px 56px;
 }
 
-/* Page title */
-.page-title-row {
+.docs-hero,
+.upload-panel,
+.preview-section,
+.success-card,
+.docs-table,
+.state-loading,
+.state-empty {
+  border: 1px solid var(--color-border-blue);
+  border-radius: 14px;
+  background: var(--color-white);
+  box-shadow: 0 14px 34px rgba(18, 45, 87, 0.06);
+}
+
+.docs-hero {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  margin-bottom: 28px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--color-border);
+  gap: 24px;
+  margin-bottom: 22px;
+  padding: 22px 24px;
+}
+
+.page-copy {
+  max-width: 720px;
+}
+
+.page-kicker,
+.panel-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: var(--color-gold-ink);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.page-kicker::before,
+.panel-kicker::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--color-gold);
+  box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.14);
 }
 
 .page-title {
+  margin: 0 0 6px;
+  color: var(--color-text-heading);
   font-family: var(--font-display);
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
-  color: var(--color-navy);
-  margin: 0 0 3px;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  text-wrap: balance;
 }
 
 .page-title-sub {
-  font-family: var(--font-display);
-  font-size: 13px;
-  color: #8b7355;
-  font-style: italic;
+  max-width: 68ch;
   margin: 0;
+  color: var(--color-text-panel-muted);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.6;
 }
 
-.page-actions { display: flex; gap: 8px; }
+.document-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
 
-/* Buttons */
-.btn-primary {
-  background: var(--color-navy);
-  color: white;
-  border: none;
-  padding: 8px 18px;
+.document-summary span,
+.upload-policy,
+.docs-count {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 6px 10px;
+  border: 1px solid var(--color-border-blue-light);
+  border-radius: 999px;
+  background: var(--color-surface-page);
+  color: var(--color-text-panel-muted);
+  font-family: var(--font-ui);
+  font-size: 12px;
+}
+
+.document-summary span {
+  gap: 5px;
+}
+
+.document-summary strong {
+  color: var(--color-text-heading);
+  font-weight: 700;
+}
+
+.page-actions,
+.preview-actions,
+.upload-actions,
+.modal-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-primary,
+.btn-outline,
+.btn-ghost,
+.btn-danger,
+.doc-btn,
+.file-clear-btn {
+  min-height: 38px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-ui);
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.btn-primary,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 18px;
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.5px;
-  font-family: var(--font-ui);
-  border-radius: 2px;
-  cursor: pointer;
-  transition: background 0.15s;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  letter-spacing: 0.3px;
 }
-.btn-primary:hover:not(:disabled) { background: var(--color-navy-hover); }
-.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-primary {
+  border: none;
+  background: var(--color-action-blue-dark);
+  color: var(--color-white);
+  box-shadow: 0 10px 20px rgba(11, 54, 112, 0.14);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--color-action-blue);
+  transform: translateY(-1px);
+}
 
 .btn-outline {
-  background: transparent;
-  color: var(--color-navy);
-  border: 1px solid var(--color-navy);
-  padding: 7px 16px;
-  font-size: 11px;
-  font-family: var(--font-ui);
-  border-radius: 2px;
-  cursor: pointer;
-  transition: background 0.15s;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  border: 1px solid var(--color-border-blue);
+  background: var(--color-white);
+  color: var(--color-text-heading);
 }
-.btn-outline:hover:not(:disabled) { background: #eef2f9; }
-.btn-outline:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-outline:hover:not(:disabled) {
+  border-color: var(--color-action-blue);
+  background: var(--color-surface-soft-blue);
+  color: var(--color-action-blue-dark);
+}
+
+.btn-ghost,
+.btn-danger {
+  padding: 8px 14px;
+  font-size: 11px;
+}
 
 .btn-ghost {
-  background: transparent;
-  color: var(--color-text-muted);
   border: 1px solid var(--color-border);
-  padding: 7px 14px;
-  font-size: 11px;
-  font-family: var(--font-ui);
-  border-radius: 2px;
-  cursor: pointer;
-  transition: all 0.15s;
+  background: var(--color-white);
+  color: var(--color-text-panel-muted);
 }
-.btn-ghost:hover { border-color: var(--color-text-muted); color: var(--color-text); }
+
+.btn-ghost:hover {
+  border-color: var(--color-border-blue);
+  background: var(--color-surface-page);
+  color: var(--color-text-heading);
+}
 
 .btn-danger {
-  background: #c0392b;
-  color: white;
   border: none;
-  padding: 7px 16px;
-  font-size: 11px;
-  font-family: var(--font-ui);
-  border-radius: 2px;
-  cursor: pointer;
-  transition: background 0.15s;
-}
-.btn-danger:hover:not(:disabled) { background: #a93226; }
-.btn-danger:disabled { opacity: 0.5; cursor: not-allowed; }
-
-/* Upload zone */
-.upload-zone {
-  border: 2px dashed var(--color-border);
-  border-radius: 3px;
-  background: white;
-  padding: 32px;
-  text-align: center;
-  margin-bottom: 20px;
-  cursor: pointer;
-  transition: border-color 0.2s, background 0.2s;
-}
-.upload-zone:hover, .upload-zone.drag-over {
-  border-color: var(--color-navy);
-  background: #f5f8fd;
-}
-.upload-zone.has-file {
-  border-color: var(--color-status-ok-border);
-  background: var(--color-status-ok-bg);
-  border-style: solid;
+  background: var(--color-danger);
+  color: var(--color-white);
 }
 
-.upload-content { color: var(--color-text-muted); }
-.upload-icon { font-size: 28px; margin-bottom: 10px; }
-.upload-title {
-  font-family: var(--font-display);
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--color-navy);
-  margin-bottom: 5px;
-}
-.upload-desc {
-  font-family: var(--font-body);
-  font-size: 12px;
-  color: var(--color-text-muted);
-  font-style: italic;
-  margin-bottom: 10px;
-}
-.upload-or {
-  font-size: 10px;
-  color: var(--color-text-light);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin: 8px 0;
-}
-.upload-browse {
-  display: inline-block;
-  padding: 7px 20px;
-  border: 1px solid var(--color-border);
-  border-radius: 2px;
-  font-size: 11px;
-  color: var(--color-text-muted);
-  font-family: var(--font-ui);
-  transition: all 0.15s;
-}
-.upload-zone:hover .upload-browse {
-  border-color: var(--color-navy);
-  color: var(--color-navy);
+.btn-danger:hover:not(:disabled) {
+  background: #9f2f24;
 }
 
-.file-selected {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-align: left;
-  color: var(--color-status-ok-text);
+.btn-primary:disabled,
+.btn-outline:disabled,
+.btn-danger:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
 }
-.file-name { font-weight: 600; margin: 0; font-size: 13px; color: var(--color-navy); }
-.file-size { font-size: 11px; color: var(--color-text-muted); }
-.file-clear-btn {
-  margin-left: auto;
-  background: none;
-  border: none;
-  color: var(--color-text-light);
-  cursor: pointer;
-  font-size: 14px;
-  padding: 4px 6px;
-  border-radius: 2px;
-  transition: color 0.15s;
+
+.btn-primary:focus-visible,
+.btn-outline:focus-visible,
+.btn-ghost:focus-visible,
+.btn-danger:focus-visible,
+.doc-btn:focus-visible,
+.file-clear-btn:focus-visible,
+.upload-zone:focus-visible,
+.docs-row:focus-visible {
+  outline: 3px solid rgba(201, 168, 76, 0.42);
+  outline-offset: 3px;
 }
-.file-clear-btn:hover { color: #c0392b; }
 
-.upload-actions { margin-bottom: 20px; }
+.sync-button {
+  min-height: 40px;
+  white-space: nowrap;
+}
 
-/* Preview */
-.preview-section {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: 3px;
-  padding: 20px;
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+.upload-panel,
+.preview-section,
+.success-card {
   margin-bottom: 28px;
+  padding: 24px;
 }
-.preview-header {
+
+.upload-panel-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 16px;
+  gap: 20px;
+  margin-bottom: 18px;
 }
-.preview-title {
-  font-family: var(--font-display);
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--color-navy);
-  margin: 0 0 3px;
-}
-.preview-meta { font-size: 12px; color: var(--color-text-muted); margin: 0; }
-.preview-actions { display: flex; gap: 8px; }
 
-.chunks-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-height: 420px;
-  overflow-y: auto;
-  scrollbar-width: thin;
+.upload-panel-header h2 {
+  margin: 0 0 6px;
+  color: var(--color-text-heading);
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 1.2;
 }
-.chunk-card {
-  border: 1px solid var(--color-border-light);
-  border-radius: 2px;
-  padding: 10px 12px;
-  background: #faf9f7;
-}
-.chunk-header {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 6px;
-  align-items: center;
-}
-.chunk-num {
-  font-size: 9px;
-  color: var(--color-text-muted);
-  font-family: var(--font-ui);
-  font-weight: 600;
-}
-.chunk-tag {
-  font-size: 9px;
-  padding: 2px 7px;
-  border-radius: 2px;
-  font-family: var(--font-ui);
-  font-weight: 600;
-}
-.chunk-tag.pasal { background: var(--color-status-info-bg); color: var(--color-status-info-text); border: 1px solid var(--color-status-info-border); }
-.chunk-tag.ayat { background: var(--color-status-ok-bg); color: var(--color-status-ok-text); border: 1px solid var(--color-status-ok-border); }
-.chunk-text {
-  font-family: var(--font-body);
-  font-size: 12px;
-  line-height: 1.6;
-  color: var(--color-text);
+
+.upload-panel-header p,
+.docs-list-subtitle {
+  max-width: 62ch;
   margin: 0;
-}
-.more-notice {
-  text-align: center;
-  color: var(--color-text-muted);
-  padding: 12px;
-  font-style: italic;
-  font-family: var(--font-body);
-  font-size: 12px;
+  color: var(--color-text-panel-muted);
+  font-size: 13px;
+  line-height: 1.6;
 }
 
-/* Documents table */
-.docs-section { }
-.docs-list-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-.docs-count { font-size: 11px; color: var(--color-text-muted); font-family: var(--font-ui); }
-
-.docs-table {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.docs-row-grid {
-  display: grid;
-  grid-template-columns: 1fr 80px 70px 110px 140px;
-  gap: 12px;
-  padding: 11px 16px;
-  align-items: center;
-}
-
-.docs-thead {
-  background: #faf9f7;
-  border-bottom: 1px solid var(--color-border);
-}
-.docs-th-row span {
-  font-size: 9px;
-  font-weight: 600;
-  color: var(--color-text-muted);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  font-family: var(--font-ui);
-}
-
-.docs-row {
-  border-bottom: 1px solid var(--color-border-light);
-  cursor: pointer;
-  transition: background 0.15s;
-}
-.docs-row:last-child { border-bottom: none; }
-.docs-row:hover { background: #faf9f7; }
-
-.doc-name-cell { min-width: 0; }
-.doc-name {
-  font-size: 12px;
-  color: var(--color-navy);
-  font-weight: 500;
-  font-family: var(--font-ui);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
-}
-.doc-type-tag {
-  font-size: 9px;
-  color: var(--color-text-light);
-  font-family: var(--font-ui);
-  font-style: italic;
-}
-
-.doc-cell {
+.upload-policy {
+  flex: 0 0 auto;
+  color: var(--color-text-blue-muted);
   font-size: 11px;
-  color: var(--color-text-muted);
-  font-family: var(--font-ui);
+  font-weight: 600;
+  white-space: nowrap;
 }
-
-.doc-actions {
-  display: flex;
-  gap: 4px;
-  cursor: default;
-}
-
-.doc-btn {
-  background: none;
-  border: 1px solid var(--color-border);
-  border-radius: 2px;
-  padding: 3px 8px;
-  font-size: 9px;
-  color: var(--color-text-muted);
-  cursor: pointer;
-  font-family: var(--font-ui);
-  transition: all 0.15s;
-}
-.doc-btn:hover { border-color: var(--color-navy); color: var(--color-navy); }
-.doc-btn.danger:hover { border-color: #c0392b; color: #c0392b; }
-
-/* State messages */
-.state-loading, .state-empty {
-  text-align: center;
-  padding: 40px;
-  color: var(--color-text-muted);
-  font-family: var(--font-body);
-  font-style: italic;
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: 3px;
-}
-.state-empty small { display: block; font-size: 11px; margin-top: 4px; }
-
-/* Modal */
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(26, 58, 107, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-.modal {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: 3px;
-  padding: 24px;
-  max-width: 400px;
-  width: 90%;
-  box-shadow: 0 8px 32px rgba(26, 58, 107, 0.15);
-}
-.modal-title {
-  font-family: var(--font-display);
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--color-navy);
-  margin: 0 0 12px;
-}
-.modal-body { font-family: var(--font-body); font-size: 13px; color: var(--color-text); margin: 0 0 6px; }
-.modal-warning { font-size: 12px; color: #c0392b; font-family: var(--font-ui); margin: 0 0 20px; }
-.modal-actions { display: flex; justify-content: flex-end; gap: 8px; }
-
-/* Toast */
-.toast {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  padding: 12px 20px;
-  border-radius: 2px;
-  font-size: 12px;
-  font-family: var(--font-ui);
-  z-index: 1001;
-  animation: slideInRight 0.3s ease;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-}
-.toast.success { background: var(--color-navy); color: white; }
-.toast.error { background: #c0392b; color: white; }
-.toast.info { background: #8b7355; color: white; }
-
-.validation-error {
-  margin-top: 8px;
-  padding: 8px 12px;
-  background: #fff8f8;
-  border: 1px solid #e74c3c;
-  border-radius: 3px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.validation-warning {
-  margin-top: 8px;
-  padding: 8px 12px;
-  background: #fff3cd;
-  border: 1px solid #ffc107;
-  border-radius: 3px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.validation-msg {
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-.validation-error .validation-msg { color: #c0392b; }
-.validation-warning .validation-msg { color: #856404; }
 
 .upload-stepper {
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
-  padding: 14px 20px;
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
+  margin-bottom: 18px;
+  padding: 14px 18px;
+  border: 1px solid var(--color-border-blue-light);
+  border-radius: 12px;
+  background: var(--color-surface-page);
 }
 
 .stepper-step {
@@ -902,93 +754,802 @@ defineExpose({ handleFileChange, uploadedDocId, previewData, saveComplete, selec
 }
 
 .stepper-circle {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
-  font-weight: 700;
-  font-family: var(--font-ui);
-  transition: background 0.2s, color 0.2s;
+  width: 28px;
+  height: 28px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  font: 700 11px var(--font-ui);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.stepper-circle.idle { background: var(--color-border); color: #aaa; }
-.stepper-circle.active { background: var(--color-navy); color: white; }
-.stepper-circle.in-progress { background: var(--color-gold); color: var(--color-navy-dark); }
-.stepper-circle.done { background: #2e7d32; color: white; }
+.stepper-circle.idle {
+  border-color: var(--color-border-blue);
+  background: var(--color-white);
+  color: var(--color-text-panel-muted);
+}
+
+.stepper-circle.active {
+  background: var(--color-action-blue-dark);
+  color: var(--color-white);
+}
+
+.stepper-circle.in-progress {
+  background: var(--color-gold);
+  color: var(--color-navy-dark);
+}
+
+.stepper-circle.done {
+  background: var(--color-status-ok-text);
+  color: var(--color-white);
+}
 
 .stepper-connector {
   flex: 1;
   height: 2px;
-  background: var(--color-border);
-  margin: 0 8px;
-  margin-bottom: 16px;
-  transition: background 0.2s;
+  margin: 0 8px 16px;
+  background: var(--color-border-blue);
+  transition: background 0.2s ease;
 }
 
-.stepper-connector.done { background: var(--color-gold); }
+.stepper-connector.done {
+  background: var(--color-gold);
+}
 
 .stepper-label {
-  font-size: 8px;
-  letter-spacing: 1px;
-  font-weight: 600;
+  color: var(--color-text-panel-muted);
+  font: 600 9px var(--font-ui);
+  letter-spacing: 0.6px;
+}
+
+.upload-zone {
+  margin-bottom: 16px;
+  padding: 26px;
+  border: 1.5px dashed var(--color-border-blue);
+  border-radius: 14px;
+  background: linear-gradient(180deg, var(--color-white), var(--color-surface-page));
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.upload-zone:hover,
+.upload-zone.drag-over {
+  border-color: var(--color-action-blue);
+  background: var(--color-surface-soft-blue);
+  box-shadow: inset 0 0 0 1px rgba(11, 74, 191, 0.08);
+}
+
+.upload-zone.has-file {
+  border-color: var(--color-status-ok-border);
+  border-style: solid;
+  background: var(--color-status-ok-bg);
+}
+
+.upload-content,
+.file-selected {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.upload-icon,
+.state-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-border-blue);
+  border-radius: 12px;
+  background: var(--color-white);
+  color: var(--color-action-blue-dark);
+  font-size: 22px;
+}
+
+.upload-title {
+  margin-bottom: 4px;
+  color: var(--color-text-heading);
+  font: 700 15px var(--font-ui);
+}
+
+.upload-desc,
+.file-size,
+.preview-meta,
+.progress-label,
+.docs-count {
+  color: var(--color-text-panel-muted);
   font-family: var(--font-ui);
-  color: #aaa;
-  text-transform: uppercase;
+}
+
+.upload-desc {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.upload-browse {
+  margin-left: auto;
+  padding: 7px 20px;
+  border: 1px solid var(--color-border-blue);
+  border-radius: 8px;
+  background: var(--color-white);
+  color: var(--color-text-heading);
+  font: 600 11px var(--font-ui);
+}
+
+.file-selected {
+  color: var(--color-status-ok-text);
+}
+
+.file-selected svg {
+  flex: 0 0 auto;
+}
+
+.file-name {
+  margin: 0;
+  color: var(--color-text-heading);
+  font: 600 14px var(--font-ui);
+}
+
+.file-size {
+  font-size: 11px;
+}
+
+.file-clear-btn {
+  min-width: 38px;
+  margin-left: auto;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--color-danger);
+  font-size: 14px;
+}
+
+.file-clear-btn:hover {
+  border-color: var(--color-danger-bg);
+  background: var(--color-danger-bg);
+}
+
+.upload-actions {
+  justify-content: flex-end;
+  margin-top: 14px;
 }
 
 .upload-progress {
-  margin-top: 10px;
+  margin-top: 14px;
 }
 
 .progress-bar {
-  background: var(--color-border);
-  border-radius: 2px;
   height: 5px;
   overflow: hidden;
+  border-radius: 999px;
+  background: var(--color-border-blue-light);
 }
 
 .progress-fill {
   height: 5px;
-  background: var(--color-gold);
-  border-radius: 2px;
-  transition: width 0.2s ease;
+  border-radius: 999px;
+  background: var(--color-action-blue);
+  transition: none;
 }
 
 .progress-label {
   display: block;
+  margin-top: 4px;
   text-align: right;
   font-size: 10px;
-  color: var(--color-text-muted);
-  margin-top: 3px;
+}
+
+.validation-error,
+.validation-warning {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
   font-family: var(--font-ui);
 }
 
-.success-card {
-  border: 1px solid #2e7d32;
-  border-radius: 4px;
-  background: #f0faf0;
-  padding: 24px;
-  text-align: center;
-  margin-bottom: 24px;
+.validation-error {
+  border: 1px solid rgba(192, 57, 43, 0.35);
+  background: var(--color-danger-bg);
 }
 
-.success-icon { font-size: 32px; margin-bottom: 8px; }
+.validation-warning {
+  border: 1px solid var(--color-status-warn-border);
+  background: var(--color-status-warn-bg);
+}
 
-.success-title {
-  font-size: 16px;
-  font-weight: 600;
-  color: #2e7d32;
+.validation-error .validation-msg {
+  color: var(--color-danger);
+}
+
+.validation-warning .validation-msg {
+  color: var(--color-status-warn-text);
+}
+
+.validation-msg {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.preview-header,
+.docs-list-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.preview-header {
+  margin-bottom: 16px;
+}
+
+.preview-title,
+.success-title,
+.modal-title {
+  margin: 0;
+  color: var(--color-text-heading);
   font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.preview-title {
+  margin-bottom: 4px;
+  font-size: 18px;
+}
+
+.preview-meta {
+  margin: 0;
+  font-size: 12px;
+}
+
+.chunks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 420px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.chunk-card {
+  padding: 10px 12px;
+  border: 1px solid var(--color-border-blue-light);
+  border-radius: 10px;
+  background: var(--color-surface-page);
+}
+
+.chunk-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   margin-bottom: 6px;
 }
 
-.success-meta {
-  font-size: 12px;
-  color: #555;
+.chunk-num,
+.chunk-tag {
   font-family: var(--font-ui);
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.chunk-num {
+  color: var(--color-text-panel-muted);
+}
+
+.chunk-tag {
+  padding: 2px 7px;
+  border-radius: 6px;
+}
+
+.chunk-tag.pasal {
+  border: 1px solid var(--color-status-info-border);
+  background: var(--color-status-info-bg);
+  color: var(--color-status-info-text);
+}
+
+.chunk-tag.ayat {
+  border: 1px solid var(--color-status-ok-border);
+  background: var(--color-status-ok-bg);
+  color: var(--color-status-ok-text);
+}
+
+.chunk-text {
+  margin: 0;
+  color: var(--color-text-panel);
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.more-notice {
+  padding: 12px;
+  color: var(--color-text-panel-muted);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  text-align: center;
+}
+
+.success-card {
+  border-color: var(--color-status-ok-border);
+  background: var(--color-status-ok-bg);
+  text-align: center;
+}
+
+.success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 10px;
+  border-radius: 999px;
+  background: var(--color-status-ok-text);
+  color: var(--color-white);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.success-title {
+  margin-bottom: 6px;
+  color: var(--color-status-ok-text);
+  font-size: 16px;
+}
+
+.success-meta {
   margin-bottom: 16px;
+  color: var(--color-text-panel-muted);
+  font: 12px var(--font-ui);
+}
+
+.docs-section {
+  margin-top: 8px;
+}
+
+.docs-list-header {
+  align-items: flex-end;
+  margin-bottom: 14px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  color: var(--color-text-heading);
+  font: 600 9px var(--font-ui);
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.section-heading::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  min-width: 80px;
+  background: var(--color-border-blue);
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.docs-table {
+  overflow: hidden;
+  min-width: 700px; /* Ensure table has minimum width before scrolling */
+}
+
+.docs-row-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 96px 78px 116px 168px;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+}
+
+.docs-thead {
+  border-bottom: 1px solid var(--color-border-blue-light);
+  background: var(--color-surface-page);
+}
+
+.docs-th-row span {
+  color: var(--color-text-blue-muted);
+  font: 600 9px var(--font-ui);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.docs-row {
+  border-bottom: 1px solid var(--color-border-blue-light);
+  cursor: pointer;
+  transition: background 0.16s ease, box-shadow 0.16s ease;
+}
+
+.docs-row:last-child {
+  border-bottom: none;
+}
+
+.docs-row:hover {
+  background: var(--color-surface-page);
+}
+
+.doc-name-cell {
+  min-width: 0;
+}
+
+.doc-name {
+  display: block;
+  overflow: hidden;
+  color: var(--color-text-heading);
+  font: 600 13px var(--font-ui);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.doc-type-tag {
+  color: var(--color-text-blue-muted);
+  font: 9px var(--font-ui);
+}
+
+.doc-cell {
+  color: var(--color-text-panel-muted);
+  font: 12px var(--font-ui);
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.badge-ok {
+  border: 1px solid var(--color-status-ok-border);
+  background: var(--color-status-ok-bg);
+  color: var(--color-status-ok-text);
+}
+
+.badge-warn {
+  border: 1px solid var(--color-status-warn-border);
+  background: var(--color-status-warn-bg);
+  color: var(--color-status-warn-text);
+}
+
+.doc-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  cursor: default;
+}
+
+.doc-btn {
+  min-height: 44px; /* Increased touch target for pointer: coarse / all screens */
+  padding: 8px 12px;
+  border: 1px solid var(--color-border-blue);
+  background: var(--color-white);
+  color: var(--color-text-blue-muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.doc-btn:hover {
+  border-color: var(--color-action-blue);
+  background: var(--color-surface-soft-blue);
+  color: var(--color-action-blue-dark);
+}
+
+.doc-btn.danger:hover {
+  border-color: rgba(192, 57, 43, 0.35);
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+.state-loading,
+.state-empty {
+  padding: 44px 24px;
+  color: var(--color-text-panel-muted);
+  font-family: var(--font-ui);
+  text-align: center;
+}
+
+.state-empty {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.state-empty p {
+  margin: 0;
+  color: var(--color-text-heading);
+  font-weight: 700;
+}
+
+.state-empty small {
+  max-width: 42ch;
+  color: var(--color-text-panel-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(7, 31, 69, 0.48);
+}
+
+.modal {
+  width: 90%;
+  max-width: 400px;
+  padding: 24px;
+  border: 1px solid var(--color-border-blue);
+  border-radius: 14px;
+  background: var(--color-white);
+  box-shadow: 0 24px 60px rgba(7, 31, 69, 0.22);
+}
+
+.modal-title {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.modal-body {
+  margin: 0 0 6px;
+  color: var(--color-text-panel);
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.modal-warning {
+  margin: 0 0 20px;
+  color: var(--color-danger);
+  font: 12px var(--font-ui);
+}
+
+.modal-actions {
+  justify-content: flex-end;
+}
+
+.toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1001;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 16px 36px rgba(7, 31, 69, 0.22);
+  color: var(--color-white);
+  font: 12px var(--font-ui);
+  animation: slideInRight 0.3s ease;
+}
+
+.toast.success {
+  background: var(--color-navy);
+}
+
+.toast.error {
+  background: var(--color-danger);
+}
+
+.toast.info {
+  background: #755f3f;
+}
+
+@media (max-width: 920px) {
+  .docs-layout {
+    padding: 20px 16px 40px;
+  }
+
+  .docs-hero,
+  .preview-header,
+  .docs-list-header,
+  .upload-panel-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .document-summary,
+  .page-actions,
+  .preview-actions,
+  .upload-actions,
+  .upload-policy {
+    width: 100%;
+  }
+
+  .document-summary span {
+    flex: 1 1 150px;
+    justify-content: center;
+  }
+
+  .page-actions > *,
+  .preview-actions > *,
+  .upload-actions > * {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .upload-policy {
+    justify-content: center;
+  }
+
+  .upload-zone {
+    padding: 26px 18px;
+  }
+
+  .upload-stepper {
+    overflow-x: auto;
+  }
+
+  .upload-browse {
+    margin-left: 0;
+  }
+
+  .docs-thead {
+    display: none;
+  }
+
+  .docs-table {
+    display: grid;
+    gap: 12px;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .docs-row-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .docs-row {
+    border: 1px solid var(--color-border-blue);
+    border-radius: 12px;
+    background: var(--color-white);
+    box-shadow: 0 10px 24px rgba(18, 45, 87, 0.05);
+  }
+
+  .docs-row:hover {
+    background: var(--color-white);
+  }
+
+  .doc-cell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 32px;
+    padding-top: 8px;
+    border-top: 1px solid var(--color-border-blue-light);
+    color: var(--color-text);
+  }
+
+  .doc-cell::before {
+    content: attr(data-label);
+    color: var(--color-text-panel-muted);
+    font: 700 10px var(--font-ui);
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+
+  .doc-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    padding-top: 10px;
+  }
+
+  .doc-actions::before {
+    content: none;
+  }
+
+  .doc-btn {
+    min-height: 44px;
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 560px) {
+  .docs-layout {
+    padding: 16px 12px 32px;
+  }
+
+  .docs-hero,
+  .upload-panel {
+    padding: 18px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .document-summary span {
+    flex-basis: 100%;
+  }
+
+  .upload-content {
+    display: grid;
+    justify-items: start;
+  }
+
+  .upload-browse {
+    width: 100%;
+    text-align: center;
+  }
+
+  .file-selected {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: flex-start;
+  }
+
+  .file-clear-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .preview-section,
+  .success-card {
+    padding: 16px;
+  }
+
+  .preview-actions,
+  .doc-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .modal {
+    width: calc(100% - 24px);
+    padding: 20px;
+  }
+
+  .modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .modal-actions > * {
+    min-height: 44px;
+    width: 100%;
+  }
+
+  .toast {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary,
+  .btn-outline,
+  .btn-ghost,
+  .btn-danger,
+  .doc-btn,
+  .file-clear-btn,
+  .upload-zone,
+  .docs-row,
+  .stepper-circle,
+  .stepper-connector {
+    transition: none;
+  }
+
+  .spinning,
+  .toast {
+    animation: none;
+  }
 }
 </style>

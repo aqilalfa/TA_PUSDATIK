@@ -105,7 +105,7 @@ async def lifespan(app: FastAPI):
                     name="Evaluator SPBE", 
                     email="evaluator@bssn.go.id",
                     hashed_password=test_pwd_hash,
-                    roles='["evaluator_spbe"]',
+                    roles='["staff"]',
                     department="DEPUTI_EVALUASI"
                 )
                 db.add(eval_user)

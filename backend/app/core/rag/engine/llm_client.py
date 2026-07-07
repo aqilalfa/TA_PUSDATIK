@@ -11,7 +11,11 @@ from app.core.rag.prompts import (
     SYSTEM_PROMPT_LEGAL,
     SYSTEM_PROMPT_GENERAL,
 )
-from app.core.rag.guardrails import build_quality_guardrail
+from app.core.rag.guardrails import (
+    build_llm01_security_instruction,
+    build_quality_guardrail,
+    sanitize_untrusted_context,
+)
 
 def _role(msg) -> str:
     """Convert LangChain message objects to Ollama role strings."""
@@ -40,7 +44,9 @@ async def stream_answer(
     }
     
     system_prompt = _PROMPT_MAP.get(query_type, SYSTEM_PROMPT_GENERAL)
-    system_content = system_prompt + "\n\nKonteks Referensi:\n" + context
+    security_instruction = build_llm01_security_instruction()
+    safe_context = sanitize_untrusted_context(context)
+    system_content = f"{system_prompt}\n\n{security_instruction}\n\nKonteks Referensi:\n{safe_context}"
 
     ollama_messages = [{"role": "system", "content": system_content}]
     for msg in history:

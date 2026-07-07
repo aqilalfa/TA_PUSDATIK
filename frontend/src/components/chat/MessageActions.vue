@@ -4,11 +4,9 @@
       {{ copied === 'ok' ? '✓ Tersalin!' : copied === 'fail' ? '✗ Gagal' : '📋 Salin' }}
     </button>
     <button v-if="canRegenerate" class="action-btn" @click="$emit('regenerate')">
-      ↻ Regenerate
+      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 1 0 2.1-5.8L2 9"/></svg>Muat Ulang
     </button>
-    <button v-if="canEditRetry" class="action-btn" @click="$emit('edit-retry')">
-      ✎ Edit & retry
-    </button>
+
     <button v-if="hasWarning" class="action-btn dismiss-btn" @click="$emit('dismiss-warning')">
       ✕
     </button>
@@ -21,11 +19,10 @@ import { ref } from 'vue'
 const props = defineProps({
   content: { type: String, required: true },
   hasWarning: { type: Boolean, default: false },
-  canRegenerate: { type: Boolean, default: false },
-  canEditRetry: { type: Boolean, default: false }
+  canRegenerate: { type: Boolean, default: false }
 })
 
-defineEmits(['dismiss-warning', 'regenerate', 'edit-retry'])
+defineEmits(['dismiss-warning', 'regenerate'])
 
 const copied = ref(null) // null | 'ok' | 'fail'
 
@@ -66,13 +63,19 @@ async function copyContent() {
 .action-btn {
   font-family: var(--font-ui);
   font-size: 10px;
-  padding: 3px 8px;
+  padding: 4px 8px;
   border: 1px solid var(--color-border);
   background: white;
   color: var(--color-text-muted);
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: color 0.15s, border-color 0.15s;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.action-btn:hover {
+  background: #fdfdfd;
 }
 
 .copy-btn:hover {

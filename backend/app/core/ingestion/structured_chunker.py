@@ -18,7 +18,6 @@ import re
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 from loguru import logger
-from langchain_text_splitters import RecursiveCharacterTextSplitter
 from app.config import settings
 
 
@@ -46,16 +45,38 @@ def split_text_with_overlap(
     max_size: int = MAX_CHUNK_SIZE,
     overlap: int = CHUNK_OVERLAP,
 ) -> List[str]:
-    """Split long text using Langchain's RecursiveCharacterTextSplitter."""
+    """Split long text without importing heavyweight ML dependencies."""
     if len(text) <= max_size:
         return [text]
 
-    splitter = RecursiveCharacterTextSplitter(
-        chunk_size=max_size,
-        chunk_overlap=overlap,
-        separators=["\n\n", "\n", ".", " ", ""],
-    )
-    return splitter.split_text(text)
+    overlap = max(0, min(overlap, max_size - 1)) if max_size > 1 else 0
+    chunks: List[str] = []
+    start = 0
+    text_length = len(text)
+    separators = ["\n\n", "\n", ".", " "]
+
+    while start < text_length:
+        end = min(start + max_size, text_length)
+        if end < text_length:
+            split_at = -1
+            split_len = 0
+            for separator in separators:
+                candidate = text.rfind(separator, start, end)
+                if candidate > split_at:
+                    split_at = candidate
+                    split_len = len(separator)
+            if split_at > start + max_size // 3:
+                end = split_at + split_len
+
+        piece = text[start:end].strip()
+        if piece:
+            chunks.append(piece)
+
+        if end >= text_length:
+            break
+        start = max(end - overlap, start + 1)
+
+    return chunks
 
 
 def _is_table_like_text(text: str) -> bool:
@@ -841,7 +862,16 @@ def chunk_document(doc: Dict[str, Any], md_file_path: Optional[str] = None) -> L
                 filename = doc.get("source_filename") or md_path.name
 
                 md_chunks = chunk_from_markdown(md_text, filename, doc_title)
-                if len(md_chunks) > len(chunks):
+                has_legal_metadata = doc_type == "peraturan" and any(
+                    (chunk.get("metadata") or {}).get("pasal")
+                    or (chunk.get("metadata") or {}).get("ayat")
+                    for chunk in chunks
+                )
+                if has_legal_metadata:
+                    logger.info(
+                        "Fallback markdown tidak menggantikan hasil peraturan karena metadata Pasal/Ayat sudah ada"
+                    )
+                elif len(md_chunks) > len(chunks):
                     logger.success(
                         "Fallback markdown aktif: {} chunks (sebelumnya {} chunks)",
                         len(md_chunks),

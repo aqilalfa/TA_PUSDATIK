@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-05-28T09:23:23.328121+00:00",
+  "summary_source": "D:\\aqil\\pusdatik\\backend\\data\\security_eval\\k6_security_summary_20260528T092203Z.json",
+  "qps": 0,
+  "p95_latency_ms": 0,
+  "status_429_count": 0,
+  "error_status_count": 0,
+  "http_req_failed_rate": 0,
+  "auth_rate_limited_rate": 0,
+  "chat_rejected_or_limited_rate": 0
+}

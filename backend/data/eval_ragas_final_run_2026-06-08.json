@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-06-08T22:04:12.335259",
+  "metrics": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "judge_provider": "groq",
+  "llm_judges": [],
+  "batch_files": [],
+  "total_questions_aggregated": 0,
+  "summary": {
+    "context_precision": {
+      "avg": null,
+      "valid": 0,
+      "null": 0
+    },
+    "context_recall": {
+      "avg": null,
+      "valid": 0,
+      "null": 0
+    },
+    "faithfulness": {
+      "avg": null,
+      "valid": 0,
+      "null": 0
+    },
+    "answer_relevancy": {
+      "avg": null,
+      "valid": 0,
+      "null": 0
+    }
+  },
+  "per_question": []
+}

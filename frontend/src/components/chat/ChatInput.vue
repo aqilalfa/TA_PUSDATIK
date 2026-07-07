@@ -4,7 +4,7 @@
       <textarea
         ref="inputField"
         :value="modelValue"
-        placeholder="Tanyakan sesuatu tentang regulasi SPBE, audit BSSN, atau kebijakan terkait..."
+        placeholder="Ketik pertanyaan hukum SPBE Anda..."
         rows="1"
         :disabled="isLoading"
         @keydown.enter.exact.prevent="emitSend"
@@ -14,14 +14,6 @@
       ></textarea>
 
       <div class="input-actions">
-        <label class="rag-toggle" :title="useRag ? 'RAG aktif' : 'RAG nonaktif'">
-          <div class="toggle-track" :class="{ on: useRag }">
-            <div class="toggle-thumb"></div>
-          </div>
-          <span class="toggle-label">RAG</span>
-          <input type="checkbox" :checked="useRag" @change="onRagToggle" hidden />
-        </label>
-
         <button
           v-if="isLoading"
           type="button"
@@ -45,7 +37,7 @@
     </div>
 
     <div class="input-hint">
-      <span>Enter untuk kirim · Shift+Enter untuk baris baru</span>
+      <span>Enter kirim · Shift+Enter baris baru</span>
     </div>
   </form>
 </template>
@@ -55,11 +47,10 @@ import { ref, watch } from 'vue'
 
 const props = defineProps({
   modelValue: { type: String, default: '' },
-  isLoading: { type: Boolean, default: false },
-  useRag: { type: Boolean, default: true }
+  isLoading: { type: Boolean, default: false }
 })
 
-const emit = defineEmits(['update:modelValue', 'update:useRag', 'send', 'stop'])
+const emit = defineEmits(['update:modelValue', 'send', 'stop'])
 
 const inputField = ref(null)
 const isFocused = ref(false)
@@ -69,10 +60,6 @@ function emitSend() { emit('send') }
 function handleInput(event) {
   emit('update:modelValue', event.target.value)
   autoResize(event.target)
-}
-
-function onRagToggle(event) {
-  emit('update:useRag', event.target.checked)
 }
 
 function autoResize(textarea) {
@@ -94,25 +81,25 @@ defineExpose({ focusInput, resetInputHeight })
 
 <style scoped>
 .chat-input-form {
-  padding: 14px 28px 18px;
-  background: white;
-  border-top: 1px solid var(--color-border);
+  padding: 12px 28px 16px;
+  background: var(--color-white);
+  border-top: 1px solid var(--color-border-blue-light);
 }
 
 .input-box {
   display: flex;
   align-items: flex-end;
   gap: 10px;
-  border: 1px solid var(--color-border);
-  border-radius: 2px;
-  background: #faf9f7;
+  border: 1px solid var(--color-border-control);
+  border-radius: var(--radius-md);
+  background: var(--color-input-bg);
   padding: 10px 12px;
   transition: border-color 0.2s, background 0.2s;
 }
 
 .input-box.focused {
-  border-color: var(--color-navy);
-  background: white;
+  border-color: var(--color-action-blue);
+  background: var(--color-white);
 }
 
 textarea {
@@ -120,7 +107,7 @@ textarea {
   background: transparent;
   border: none;
   outline: none;
-  font-family: var(--font-body);
+  font-family: var(--font-ui);
   font-size: 13px;
   color: var(--color-text);
   resize: none;
@@ -129,8 +116,8 @@ textarea {
 }
 
 textarea::placeholder {
-  color: var(--color-text-light);
-  font-style: italic;
+  color: var(--color-text-placeholder);
+  font-style: normal;
 }
 
 textarea:disabled {
@@ -145,56 +132,13 @@ textarea:disabled {
   flex-shrink: 0;
 }
 
-/* RAG toggle */
-.rag-toggle {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.toggle-track {
-  width: 28px;
-  height: 14px;
-  background: rgba(0,0,0,0.15);
-  border-radius: 7px;
-  position: relative;
-  transition: background 0.2s;
-}
-
-.toggle-track.on {
-  background: var(--color-navy);
-}
-
-.toggle-thumb {
-  width: 10px;
-  height: 10px;
-  background: white;
-  border-radius: 50%;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  transition: left 0.2s;
-}
-
-.toggle-track.on .toggle-thumb {
-  left: 16px;
-}
-
-.toggle-label {
-  font-size: 10px;
-  color: var(--color-text-muted);
-  font-family: var(--font-ui);
-  letter-spacing: 0.3px;
-}
-
 /* Send button */
 .send-btn {
   width: 32px;
   height: 32px;
   background: var(--color-navy);
   border: none;
-  border-radius: 2px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -207,9 +151,9 @@ textarea:disabled {
 .stop-btn {
   min-width: 52px;
   height: 32px;
-  background: #8b2d2d;
+  background: var(--color-danger-strong);
   border: none;
-  border-radius: 2px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   color: #ffffff;
   font-family: var(--font-ui);
@@ -221,7 +165,7 @@ textarea:disabled {
 }
 
 .stop-btn:hover {
-  background: #a33a3a;
+  background: var(--color-danger-hover);
 }
 
 .send-btn:hover:not(:disabled) {
@@ -235,9 +179,53 @@ textarea:disabled {
 
 .input-hint {
   margin-top: 6px;
-  font-size: 9px;
-  color: var(--color-text-light);
+  font-size: 10px;
+  color: var(--color-text-muted);
   font-family: var(--font-ui);
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
+}
+
+@media (max-width: 640px) {
+  .chat-input-form {
+    padding: 10px 12px calc(12px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .input-box {
+    gap: 8px;
+    padding: 8px 9px 8px 11px;
+  }
+
+  textarea {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .send-btn,
+  .stop-btn {
+    min-height: 40px;
+  }
+
+  .send-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .stop-btn {
+    min-width: 58px;
+  }
+
+  .input-hint {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .chat-input-form {
+    padding-inline: 10px;
+  }
+
+  .input-box {
+    border-radius: var(--radius-lg);
+  }
 }
 </style>

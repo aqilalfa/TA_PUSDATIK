@@ -1,19 +1,19 @@
 <template>
   <aside class="sidebar" :class="{ collapsed: collapsed }">
     <div class="sidebar-header">
-      <div v-if="!collapsed" class="sidebar-label">Sesi Percakapan</div>
-      <button @click="$emit('new-chat')" class="new-chat-btn" :title="collapsed ? 'Sesi Baru' : ''">
+      <div v-if="!collapsed" class="sidebar-label">Asisten Hukum SPBE</div>
+      <button @click="$emit('new-chat')" class="new-chat-btn" :title="collapsed ? 'Chat Baru' : ''">
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
           <line x1="12" y1="5" x2="12" y2="19"></line>
           <line x1="5" y1="12" x2="19" y2="12"></line>
         </svg>
-        <span v-if="!collapsed">Sesi Baru</span>
+        <span v-if="!collapsed">Chat Baru</span>
       </button>
     </div>
 
     <div class="sidebar-sessions" v-if="!collapsed">
       <div v-if="sessions.length === 0" class="no-sessions">
-        Belum ada percakapan
+        Belum ada riwayat konsultasi
       </div>
       <template v-else>
         <template v-for="group in groupedSessions" :key="group.label">
@@ -23,7 +23,13 @@
             :key="session.id"
             class="session-item"
             :class="{ active: currentSessionId === session.id }"
+            role="button"
+            tabindex="0"
+            :aria-current="currentSessionId === session.id ? 'page' : undefined"
+            :aria-label="`Buka sesi konsultasi ${session.title}`"
             @click="onSessionClick(session)"
+            @keydown.enter.prevent="onSessionClick(session)"
+            @keydown.space.prevent="onSessionClick(session)"
           >
             <template v-if="editingSessionId !== session.id">
               <div class="session-item-content">
@@ -33,13 +39,19 @@
                 class="session-rename-btn"
                 @click.stop="startEdit(session)"
                 title="Ubah nama"
+                :aria-label="`Ubah nama sesi ${session.title}`"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
                   <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
                 </svg>
               </button>
-              <button @click.stop="$emit('delete-session', session.id)" class="session-delete-btn" title="Hapus sesi">
+              <button
+                @click.stop="$emit('delete-session', session.id)"
+                class="session-delete-btn"
+                title="Hapus sesi"
+                :aria-label="`Hapus sesi ${session.title}`"
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
                 </svg>
@@ -54,6 +66,7 @@
                 @keydown.escape.prevent="cancelEdit"
                 @blur="commitEdit"
                 @click.stop
+                :aria-label="`Nama baru untuk sesi ${editingOriginalTitle}`"
               />
             </template>
           </div>
@@ -62,12 +75,12 @@
     </div>
 
     <div class="sidebar-footer" v-if="!collapsed">
-      <router-link to="/documents" class="sidebar-footer-link">
+      <router-link v-if="canManageDocuments" to="/documents" class="sidebar-footer-link">
         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
           <polyline points="14 2 14 8 20 8"/>
         </svg>
-        <span>Kelola Dokumen</span>
+        <span>Dokumen Hukum</span>
       </router-link>
       <div class="model-selector">
         <label class="model-label">Model</label>
@@ -90,6 +103,7 @@
 
 <script setup>
 import { computed, ref, nextTick } from 'vue'
+import { getCurrentUserProfile, isAdminUser } from '@/services/auth'
 
 const props = defineProps({
   collapsed: { type: Boolean, default: false },
@@ -108,6 +122,9 @@ const emit = defineEmits([
   'update:selectedModel',
   'model-change'
 ])
+
+const currentUser = ref(getCurrentUserProfile())
+const canManageDocuments = computed(() => isAdminUser(currentUser.value))
 
 const editingSessionId = ref(null)
 const editingTitle = ref('')
@@ -188,7 +205,7 @@ function onModelChange(event) {
   flex-shrink: 0;
   overflow: hidden;
   position: relative;
-  transition: width 0.2s ease;
+  transition: none;
   border-right: 1px solid rgba(201, 168, 76, 0.12);
 }
 
@@ -270,18 +287,25 @@ function onModelChange(event) {
   align-items: center;
   padding: 8px 14px;
   cursor: pointer;
-  border-left: 2px solid transparent;
+  border: 1px solid transparent;
   transition: background 0.15s, border-color 0.15s;
   gap: 6px;
 }
 
-.session-item:hover {
+.session-item:hover,
+.session-item:focus-visible {
   background: rgba(255, 255, 255, 0.05);
+}
+
+.session-item:focus-visible {
+  border-color: rgba(201, 168, 76, 0.65);
+  outline: 2px solid rgba(201, 168, 76, 0.75);
+  outline-offset: -2px;
 }
 
 .session-item.active {
   background: rgba(201, 168, 76, 0.1);
-  border-left-color: var(--color-gold);
+  border-color: rgba(201, 168, 76, 0.42);
 }
 
 .session-item-content {
@@ -318,7 +342,9 @@ function onModelChange(event) {
 }
 
 .session-item:hover .session-rename-btn,
-.session-item:hover .session-delete-btn {
+.session-item:hover .session-delete-btn,
+.session-item:focus-within .session-rename-btn,
+.session-item:focus-within .session-delete-btn {
   opacity: 1;
 }
 
@@ -446,5 +472,79 @@ function onModelChange(event) {
 .collapse-btn:hover {
   color: rgba(255, 255, 255, 0.75);
   background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 720px) {
+  .sidebar,
+  .sidebar.collapsed {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: var(--z-modal);
+    width: min(84vw, 312px);
+    max-width: 312px;
+    height: 100vh;
+    height: 100dvh;
+    transform: translateX(-100%);
+    transition: transform 0.22s ease-out;
+    box-shadow: 18px 0 42px rgba(7, 31, 69, 0.28);
+  }
+
+  .sidebar.mobile-open,
+  .sidebar.collapsed.mobile-open {
+    transform: translateX(0);
+  }
+
+  .sidebar-header {
+    padding: 16px 16px 12px;
+  }
+
+  .sidebar-label,
+  .sidebar-sessions,
+  .sidebar-footer {
+    display: flex;
+  }
+
+  .sidebar-label {
+    display: block;
+  }
+
+  .sidebar-sessions,
+  .sidebar-footer {
+    flex-direction: column;
+  }
+
+  .new-chat-btn {
+    min-height: 42px;
+  }
+
+  .session-item {
+    min-height: 44px;
+    padding: 9px 16px;
+  }
+
+  .session-rename-btn,
+  .session-delete-btn {
+    opacity: 1;
+    min-width: 30px;
+    min-height: 30px;
+    justify-content: center;
+  }
+
+  .collapse-btn,
+  .collapsed .collapse-btn {
+    top: 14px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    transform: none;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar,
+  .sidebar.collapsed {
+    transition: none;
+  }
 }
 </style>

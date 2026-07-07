@@ -65,12 +65,23 @@ qdrant_storage/
 models/
 logs/
 .venv/
+venv/
+backend/venv/
+screenshoot_env/
 .pytest_cache/
 .ruff_cache/
+.mypy_cache/
+.coverage
+coverage/
+htmlcov/
 .agent/
 .planning/
 .claude/
 .superpowers/
+
+# Generated local tool artifacts
+frontend/vite.config.js.timestamp-*.mjs
+
 
 
 # Windows reserved files

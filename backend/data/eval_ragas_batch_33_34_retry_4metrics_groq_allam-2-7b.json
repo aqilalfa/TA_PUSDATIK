@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-06-10T10:22:46.853909",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "groq",
+  "llm_judge": "allam-2-7b",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 1,
+  "averages": {
+    "context_precision": 0.0,
+    "context_recall": null,
+    "faithfulness": null,
+    "answer_relevancy": 0.5039
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.0,
+      "context_recall": null,
+      "faithfulness": null,
+      "answer_relevancy": 0.5039
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_034",
+      "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+      "doc_type": "peraturan",
+      "question": "Apa kewajiban Penyelenggara Sistem Elektronik terkait rekam jejak audit dalam PP Nomor 71 Tahun 2019?",
+      "answer": "Berdasarkan dokumen Peraturan Pemerintah Nomor 71 Tahun 2019 tentang Penyelenggaraan Sistem dan Transaksi Elektronik, berikut adalah rincian kewajiban Penyelenggara Sistem Elektronik terkait rekam jejak audit:\n\nPenyelenggara Sistem Elektronik wajib menyediakan rekam jejak audit terhadap seluruh kegi...",
+      "ground_truth": "Berdasarkan Pasal 22 PP Nomor 71 Tahun 2019: (1) Penyelenggara Sistem Elektronik wajib menyediakan rekam jejak audit terhadap seluruh kegiatan penyelenggaraan Sistem Elektronik; (2) Rekam jejak audit ...",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": 0.5038739900997795
+      }
+    }
+  ]
+}

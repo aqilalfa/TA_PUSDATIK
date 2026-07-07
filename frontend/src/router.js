@@ -5,7 +5,7 @@ import DocumentsView from './views/DocumentsView.vue'
 import DocumentDetailView from './views/DocumentDetailView.vue'
 import LoginView from './views/LoginView.vue'
 import LogoutView from './views/LogoutView.vue'
-import { isAuthenticated } from '@/services/auth'
+import { isAdminUser, isAuthenticated } from '@/services/auth'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,27 +24,28 @@ const router = createRouter({
     },
     {
       path: '/',
-      name: 'chat',
-      component: ChatView,
+      name: 'home',
+      component: HomeView,
+      alias: '/home',
       meta: { requiresAuth: true }
     },
     {
-      path: '/home',
-      name: 'home',
-      component: HomeView,
+      path: '/chat',
+      name: 'chat',
+      component: ChatView,
       meta: { requiresAuth: true }
     },
     {
       path: '/documents',
       name: 'documents',
       component: DocumentsView,
-      meta: { requiresAuth: true }
+      meta: { requiresAuth: true, requiresAdmin: true }
     },
     {
       path: '/documents/:doc_id',
       name: 'document-detail',
       component: DocumentDetailView,
-      meta: { requiresAuth: true }
+      meta: { requiresAuth: true, requiresAdmin: true }
     }
   ]
 })
@@ -58,6 +59,8 @@ router.beforeEach((to, from, next) => {
     next({ name: 'login', query: { redirect: to.fullPath } })
   } else if (to.name === 'login' && isAuth) {
     next({ name: 'home' })
+  } else if (to.matched.some(record => record.meta.requiresAdmin) && !isAdminUser()) {
+    next({ name: 'chat' })
   } else {
     next()
   }

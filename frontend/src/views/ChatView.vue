@@ -1,6 +1,26 @@
 <template>
   <div class="chat-layout">
+    <button
+      type="button"
+      class="mobile-sidebar-toggle"
+      :aria-expanded="mobileSidebarOpen"
+      aria-controls="chat-sidebar"
+      @click="openMobileSidebar"
+    >
+      <span class="mobile-sidebar-toggle-icon" aria-hidden="true"></span>
+      <span>Riwayat</span>
+    </button>
+
+    <div
+      v-if="mobileSidebarOpen"
+      class="mobile-sidebar-backdrop"
+      aria-hidden="true"
+      @click="closeMobileSidebar"
+    ></div>
+
     <ChatSidebar
+      id="chat-sidebar"
+      :class="{ 'mobile-open': mobileSidebarOpen }"
       :collapsed="sidebarCollapsed"
       :sessions="sessions"
       :current-session-id="currentSessionId"
@@ -22,32 +42,47 @@
         @clear-chat="clearCurrentChat"
       />
 
-      <!-- Messages -->
-      <div class="messages-area" ref="messagesContainer" @scroll="onMessagesScroll">
-        <!-- Welcome screen -->
-        <div v-if="messages.length === 0" class="welcome-screen">
-          <div class="welcome-logo">B</div>
-          <h2 class="welcome-title">SPBE Asisten</h2>
-          <p class="welcome-desc">Tanyakan tentang peraturan SPBE, audit keamanan BSSN, dan dokumen terkait.</p>
-          <div class="suggestions">
-            <button
-              v-for="q in sampleQuestions"
-              :key="q"
-              @click="sendSampleQuestion(q)"
-              class="suggestion-btn"
-            >{{ q }}</button>
+      <div class="chat-workspace">
+        <div class="consultation-column">
+          <div class="quick-action-strip" aria-label="Aksi cepat konsultasi">
+            <button v-for="action in quickActions" :key="action" type="button" @click="applyQuickAction(action)">
+              {{ action }}
+            </button>
+          </div>
+
+          <!-- Messages -->
+          <div class="messages-area" ref="messagesContainer" @scroll="onMessagesScroll">
+            <!-- Welcome screen -->
+            <div v-if="messages.length === 0" class="welcome-screen">
+              <div class="welcome-logo">AH</div>
+              <h2 class="welcome-title">Asisten Hukum SPBE</h2>
+              <p class="welcome-desc">Ajukan konsultasi regulasi, kebijakan, tata kelola digital, audit SPBE, dan dokumen hukum pemerintahan.</p>
+              <div class="suggestions">
+                <button
+                  v-for="q in sampleQuestions"
+                  :key="q"
+                  @click="sendSampleQuestion(q)"
+                  class="suggestion-btn"
+                >{{ q }}</button>
+              </div>
+            </div>
+
+            <MessageBubble
+              v-for="(msg, idx) in messages"
+              :key="idx"
+              :message="msg"
+              :can-regenerate="canRegenerateMessage(idx)"
+              :can-edit-retry="canEditRetryMessage(idx)"
+              :is-editing="editingMessageIndex === idx"
+              :edit-content="editingMessageContent"
+              @update:edit-content="editingMessageContent = $event"
+              @cancel-edit="editingMessageIndex = null"
+              @regenerate="regenerateFrom(idx)"
+              @edit-retry="editRetryFrom(idx)"
+              @submit-edit="(newContent) => submitEditedMessage(idx, newContent)"
+            />
           </div>
         </div>
-
-        <MessageBubble
-          v-for="(msg, idx) in messages"
-          :key="idx"
-          :message="msg"
-          :can-regenerate="canRegenerateMessage(idx)"
-          :can-edit-retry="canEditRetryMessage(idx)"
-          @regenerate="regenerateFrom(idx)"
-          @edit-retry="editRetryFrom(idx)"
-        />
       </div>
 
       <Transition name="fade">
@@ -59,9 +94,8 @@
         ref="chatInputRef"
         v-model="inputMessage"
         :is-loading="isLoading"
-        :use-rag="useRag"
-        @update:use-rag="useRag = $event"
         @send="sendMessage"
+
         @stop="stopGeneration"
       />
     </div>
@@ -69,7 +103,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, nextTick } from 'vue'
+import { ref, computed, onMounted, nextTick } from 'vue'
 import AppHeader from '@/components/layout/AppHeader.vue'
 import ChatSidebar from '@/components/chat/ChatSidebar.vue'
 import ChatInput from '@/components/chat/ChatInput.vue'
@@ -90,6 +124,7 @@ import {
 
 // State
 const sidebarCollapsed = ref(false)
+const mobileSidebarOpen = ref(false)
 const sessions = ref([])
 const currentSessionId = ref(null)
 const messages = ref([])
@@ -98,21 +133,28 @@ const isLoading = ref(false)
 const connectionStatus = ref('connecting')
 const models = ref([])
 const selectedModel = ref('qwen2.5:3b')
-const useRag = ref(true)
 const showScrollTop = ref(false)
-const activeAbortController = ref(null)
 
+const activeAbortController = ref(null)
 // Refs
 const messagesContainer = ref(null)
 const chatInputRef = ref(null)
 
 // Sample questions
 const sampleQuestions = [
-  'Apa itu SPBE?',
-  'Apa saja domain dalam SPBE?',
-  'Bagaimana prosedur audit keamanan?',
-  'Jelaskan tentang Perpres 95 Tahun 2018'
+  'Apa dasar hukum penerapan SPBE di instansi pemerintah?',
+  'Apa kewajiban instansi dalam penyusunan arsitektur SPBE?',
+  'Bagaimana hubungan audit SPBE dengan evaluasi SPBE?',
+  'Apa saja dokumen yang perlu disiapkan untuk tata kelola SPBE?'
 ]
+
+const quickActions = [
+  'Lihat pasal',
+  'Ringkas',
+  'Bandingkan',
+  'Tampilkan sumber'
+]
+
 
 const DEFAULT_SESSION_TITLE = 'New Conversation'
 const MAX_SESSION_TITLE_WORDS = 8
@@ -217,6 +259,7 @@ async function checkServerHealth() {
 
 async function createNewChat() {
   if (isLoading.value) stopGeneration()
+  closeMobileSidebar()
   currentSessionId.value = null
   messages.value = []
   await nextTick()
@@ -224,11 +267,24 @@ async function createNewChat() {
 }
 
 function toggleSidebar() {
+  if (mobileSidebarOpen.value) {
+    closeMobileSidebar()
+    return
+  }
   sidebarCollapsed.value = !sidebarCollapsed.value
+}
+
+function openMobileSidebar() {
+  mobileSidebarOpen.value = true
+}
+
+function closeMobileSidebar() {
+  mobileSidebarOpen.value = false
 }
 
 async function loadSession(sessionId) {
   if (isLoading.value) stopGeneration()
+  closeMobileSidebar()
   try {
     const [session, history] = await Promise.all([
       getSession(sessionId),
@@ -342,7 +398,7 @@ async function submitChatMessage(userMessage, options = {}) {
   }
 
   const loadingIdx = assistantIndex ?? messages.value.length
-  messages.value.splice(loadingIdx, 0, { role: 'assistant', loading: true, loadingText: 'Menganalisa pertanyaan...' })
+  messages.value.splice(loadingIdx, 0, { role: 'assistant', loading: true, loadingText: 'Sedang menyiapkan jawaban...' })
 
   await nextTick()
   scrollToBottom()
@@ -367,7 +423,6 @@ async function submitChatMessage(userMessage, options = {}) {
         message: userMessage,
         session_id: currentSessionId.value,
         model: selectedModel.value,
-        use_rag: useRag.value,
         top_k: 5,
         max_tokens: 2048
       },
@@ -376,7 +431,7 @@ async function submitChatMessage(userMessage, options = {}) {
           messages.value[loadingIdx] = {
             role: 'assistant',
             loading: true,
-            loadingText: `Ditemukan ${data.count} dokumen, sedang menjawab...`
+            loadingText: `Ditemukan ${data.count} sumber regulasi, sedang menyiapkan jawaban...`
           }
         },
         onToken: async (data) => {
@@ -470,7 +525,7 @@ function canRegenerateMessage(index) {
 }
 
 function canEditRetryMessage(index) {
-  return canRegenerateMessage(index)
+  return !isLoading.value && messages.value[index]?.role === 'user'
 }
 
 async function regenerateFrom(index) {
@@ -481,16 +536,19 @@ async function regenerateFrom(index) {
   await submitChatMessage(prompt, { appendUser: false, assistantIndex: index })
 }
 
-async function editRetryFrom(index) {
-  if (!canEditRetryMessage(index)) return
-  const userIndex = findPreviousUserIndex(index)
-  const currentPrompt = messages.value[userIndex].content
-  const editedPrompt = window.prompt('Edit pertanyaan lalu jalankan ulang:', currentPrompt)
-  if (!editedPrompt || !editedPrompt.trim() || editedPrompt.trim() === currentPrompt.trim()) return
+async function editRetryFrom(userIndex) {
+  if (!canEditRetryMessage(userIndex)) return
+  editingMessageIndex.value = userIndex
+  editingMessageContent.value = messages.value[userIndex].content
+}
+
+async function submitEditedMessage(userIndex, newContent) {
+  editingMessageIndex.value = null
+  if (!newContent || !newContent.trim() || newContent.trim() === messages.value[userIndex].content) return
 
   messages.value.splice(userIndex)
   inputMessage.value = ''
-  await submitChatMessage(editedPrompt.trim(), { appendUser: true })
+  await submitChatMessage(newContent.trim(), { appendUser: true })
 }
 
 function sendSampleQuestion(question) {
@@ -498,6 +556,17 @@ function sendSampleQuestion(question) {
   sendMessage()
 }
 
+function applyQuickAction(action) {
+  const prefixByAction = {
+    'Lihat pasal': 'Tampilkan pasal atau bagian dokumen yang relevan untuk pertanyaan berikut: ',
+    'Ringkas': 'Buat ringkasan formal dan singkat berdasarkan sumber tersedia: ',
+    'Bandingkan': 'Bandingkan regulasi berikut dan jelaskan perbedaannya: ',
+    'Tampilkan sumber': 'Tampilkan sumber regulasi dan rujukan yang relevan untuk pertanyaan berikut: '
+  }
+
+  inputMessage.value = `${prefixByAction[action] || ''}${inputMessage.value}`.trim()
+  nextTick(() => chatInputRef.value?.focusInput())
+}
 function scrollToBottom() {
   if (messagesContainer.value) {
     messagesContainer.value.scrollTop = messagesContainer.value.scrollHeight
@@ -515,10 +584,17 @@ function scrollToTop() {
 
 <style scoped>
 .chat-layout {
+  position: relative;
   display: flex;
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
-  background: var(--color-cream);
+  background: var(--color-surface-page);
+}
+
+.mobile-sidebar-toggle,
+.mobile-sidebar-backdrop {
+  display: none;
 }
 
 .chat-main {
@@ -529,54 +605,102 @@ function scrollToTop() {
   min-width: 0;
 }
 
+.chat-workspace {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  padding: 14px 14px 0;
+  overflow: hidden;
+  background: var(--color-surface-page);
+}
+
+.consultation-column {
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--color-border-blue);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background: var(--color-surface-panel);
+  box-shadow: var(--shadow-panel);
+}
+
+.quick-action-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border-blue-light);
+  background: var(--color-surface-panel-muted);
+}
+
+.quick-action-strip button {
+  border: 1px solid var(--color-border-control);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  color: var(--color-action-blue-dark);
+  cursor: pointer;
+  font: 600 12px var(--font-ui);
+  padding: 7px 10px;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.quick-action-strip button:hover {
+  border-color: var(--color-action-blue);
+  color: var(--color-action-blue);
+  background: var(--color-surface-soft-blue);
+}
+
+
 /* Messages area */
 .messages-area {
   flex: 1;
   overflow-y: auto;
-  background: var(--color-cream);
+  background: var(--color-white);
   padding: 24px 0 8px;
   scrollbar-width: thin;
   scrollbar-color: var(--color-border) transparent;
 }
-
 /* Welcome screen */
 .welcome-screen {
-  max-width: 520px;
-  margin: 60px auto 0;
+  max-width: 560px;
+  margin: 56px auto 0;
   padding: 0 28px;
-  text-align: center;
+  text-align: left;
 }
 
 .welcome-logo {
-  width: 52px;
-  height: 52px;
-  background: var(--color-gold);
-  border-radius: 3px;
+  width: 40px;
+  height: 40px;
+  background: var(--color-action-blue);
+  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-display);
+  font-family: var(--font-ui);
   font-weight: 700;
-  font-size: 22px;
-  color: var(--color-navy);
-  margin: 0 auto 16px;
+  font-size: 14px;
+  color: var(--color-white);
+  margin: 0 0 14px;
 }
 
 .welcome-title {
-  font-family: var(--font-display);
-  font-size: 24px;
+  font-family: var(--font-ui);
+  font-size: 22px;
   font-weight: 700;
-  color: var(--color-navy);
+  color: var(--color-text-strong);
   margin: 0 0 8px;
 }
 
 .welcome-desc {
-  font-family: var(--font-body);
+  font-family: var(--font-ui);
   font-size: 14px;
   color: var(--color-text-muted);
-  line-height: 1.6;
-  margin: 0 0 28px;
-  font-style: italic;
+  line-height: 1.55;
+  margin: 0 0 22px;
+  font-style: normal;
 }
 
 .suggestions {
@@ -586,23 +710,138 @@ function scrollToTop() {
 }
 
 .suggestion-btn {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-left: 3px solid var(--color-gold);
-  padding: 10px 14px;
-  font-family: var(--font-body);
+  background: var(--color-white);
+  border: 1px solid var(--color-border-blue);
+  padding: 10px 12px;
+  font-family: var(--font-ui);
   font-size: 13px;
-  color: var(--color-navy);
+  color: var(--color-text-strong);
   text-align: left;
   cursor: pointer;
-  border-radius: 0 3px 3px 0;
-  transition: border-left-color 0.15s, background 0.15s, box-shadow 0.15s;
+  border-radius: var(--radius-md);
+  transition: border-color 0.15s, background 0.15s;
 }
 
 .suggestion-btn:hover {
-  border-left-color: var(--color-navy);
-  background: #f5f8fd;
-  box-shadow: 0 2px 8px rgba(26, 58, 107, 0.06);
+  border-color: var(--color-action-blue);
+  background: var(--color-surface-soft-blue);
+}
+
+
+@media (max-width: 1180px) {
+  .chat-workspace { grid-template-columns: 1fr; overflow-y: auto; }
+  .source-panel { overflow: visible; }
+  .evidence-panel { min-height: auto; }
+}
+
+@media (max-width: 820px) {
+  .chat-workspace { padding: 10px 10px 0; }
+  .quick-action-strip { padding: 12px; }
+}
+
+@media (max-width: 720px) {
+  .mobile-sidebar-toggle {
+    position: fixed;
+    left: 12px;
+    bottom: calc(86px + env(safe-area-inset-bottom, 0px));
+    z-index: var(--z-dropdown);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 44px;
+    padding: 0 14px;
+    border: 1px solid rgba(11, 74, 191, 0.2);
+    border-radius: var(--radius-pill);
+    background: var(--color-white);
+    color: var(--color-action-blue-dark);
+    box-shadow: 0 10px 24px rgba(12, 43, 84, 0.16);
+    cursor: pointer;
+    font: 700 12px var(--font-ui);
+  }
+
+  .mobile-sidebar-toggle-icon,
+  .mobile-sidebar-toggle-icon::before,
+  .mobile-sidebar-toggle-icon::after {
+    display: block;
+    width: 14px;
+    height: 2px;
+    border-radius: var(--radius-pill);
+    background: currentColor;
+  }
+
+  .mobile-sidebar-toggle-icon {
+    position: relative;
+  }
+
+  .mobile-sidebar-toggle-icon::before,
+  .mobile-sidebar-toggle-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+
+  .mobile-sidebar-toggle-icon::before { top: -5px; }
+  .mobile-sidebar-toggle-icon::after { top: 5px; }
+
+  .mobile-sidebar-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-modal-backdrop);
+    display: block;
+    background: rgba(7, 31, 69, 0.44);
+  }
+
+  .chat-workspace {
+    padding: 8px 8px 0;
+  }
+
+  .consultation-column {
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+  }
+
+  .quick-action-strip {
+    flex-wrap: nowrap;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 10px 10px 9px;
+    scrollbar-width: none;
+  }
+
+  .quick-action-strip::-webkit-scrollbar {
+    display: none;
+  }
+
+  .quick-action-strip button {
+    flex: 0 0 auto;
+    min-height: 36px;
+    padding: 7px 10px;
+  }
+
+  .messages-area {
+    padding-top: 18px;
+  }
+
+  .welcome-screen {
+    margin-top: 32px;
+    padding: 0 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .mobile-sidebar-toggle {
+    left: 10px;
+    bottom: calc(78px + env(safe-area-inset-bottom, 0px));
+    min-height: 42px;
+    padding: 0 12px;
+  }
+
+  .chat-workspace {
+    padding-inline: 6px;
+  }
+
+  .welcome-title {
+    font-size: 20px;
+  }
 }
 
 .fade-enter-active,

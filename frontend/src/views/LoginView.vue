@@ -3,10 +3,10 @@
     <!-- Topbar matches HomeView -->
     <nav class="topbar">
       <div class="topbar-brand">
-        <div class="topbar-logo">B</div>
+        <div class="topbar-logo">AH</div>
         <div>
-          <div class="topbar-title">SPBE Asisten</div>
-          <div class="topbar-subtitle">Badan Siber dan Sandi Negara</div>
+          <div class="topbar-title">Asisten Hukum SPBE</div>
+          <div class="topbar-subtitle">Chatbot Hukum untuk Tata Kelola Digital Pemerintah</div>
         </div>
       </div>
     </nav>
@@ -16,8 +16,8 @@
       <div class="login-card">
         <div class="login-header">
           <div class="login-icon">🔒</div>
-          <h2 class="login-title">Autentikasi Sistem</h2>
-          <p class="login-subtitle">Masuk untuk mengakses layanan tanya jawab regulasi SPBE.</p>
+          <h2 class="login-title">Masuk ke Sistem Internal</h2>
+          <p class="login-subtitle">Masuk untuk mengakses konsultasi regulasi, kebijakan, dan tata kelola digital SPBE.</p>
         </div>
 
         <form @submit.prevent="handleLogin" class="login-form">
@@ -79,7 +79,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
           </svg>
-          Sistem ini terintegrasi dengan RAG dan dibatasi hanya untuk internal BSSN.
+          Sistem internal pemerintah. Data konsultasi tidak digunakan untuk pelatihan model publik.
         </div>
       </div>
     </div>
@@ -134,6 +134,7 @@ const handleLogin = async () => {
 <style scoped>
 .login-view {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   background: var(--color-cream);
@@ -145,32 +146,11 @@ const handleLogin = async () => {
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
-  background: linear-gradient(160deg, #1a3a6b 0%, #0f2444 55%, #0a1a33 100%);
+  background: linear-gradient(160deg, var(--color-navy) 0%, var(--color-navy-darker) 55%, var(--color-navy-darkest) 100%);
   position: relative;
   overflow: hidden;
 }
 
-.login-container::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 79px,
-      rgba(201, 168, 76, 0.03) 79px,
-      rgba(201, 168, 76, 0.03) 80px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 79px,
-      rgba(201, 168, 76, 0.03) 79px,
-      rgba(201, 168, 76, 0.03) 80px
-    );
-  pointer-events: none;
-}
 
 .login-card {
   width: 100%;
@@ -221,18 +201,18 @@ const handleLogin = async () => {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  background: #ffebee;
-  color: #d32f2f;
+  background: var(--color-danger-bg);
+  color: var(--color-danger-strong);
   padding: 12px 14px;
   border-radius: 3px;
   font-size: 12px;
   margin-bottom: 20px;
-  border-left: 4px solid #d32f2f;
+  border: 1px solid rgba(211, 47, 47, 0.28);
   animation: slideDown 0.25s ease-out;
 }
 
 .error-icon {
-  color: #d32f2f;
+  color: var(--color-danger-strong);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -265,32 +245,32 @@ const handleLogin = async () => {
   padding-right: 36px;
   font-family: var(--font-ui);
   font-size: 14px;
-  border: 1px solid #d0d0d0;
+  border: 1px solid var(--color-border);
   border-radius: 3px;
-  background: #faf9f7;
+  background: var(--color-input-bg);
   color: var(--color-text);
   transition: all 0.15s ease-in-out;
 }
 
 .form-input:hover:not(:disabled) {
-  border-color: #b8b0a0;
+  border-color: var(--color-input-border-hover);
 }
 
 .form-input:focus {
   outline: none;
   border-color: var(--color-gold);
-  background: #ffffff;
+  background: var(--color-white);
   box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
 }
 
 .form-input::placeholder {
-  color: #bbb;
+  color: var(--color-text-placeholder);
 }
 
 .form-input:disabled {
   opacity: 0.65;
   cursor: not-allowed;
-  background: #f5f2ee;
+  background: var(--color-input-bg-disabled);
 }
 
 .input-check {
@@ -325,7 +305,7 @@ const handleLogin = async () => {
 }
 
 .login-button:hover:not(:disabled) {
-  background: #b8922e;
+  background: var(--color-gold-hover);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -365,14 +345,14 @@ const handleLogin = async () => {
   border-top: 1px solid var(--color-border);
   text-align: center;
   font-size: 11px;
-  color: #888888;
+  color: var(--color-text-muted);
   line-height: 1.5;
 }
 
 .login-footer svg {
   width: 13px;
   height: 13px;
-  color: #888888;
+  color: var(--color-text-muted);
   flex-shrink: 0;
 }
 

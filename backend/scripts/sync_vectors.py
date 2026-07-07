@@ -18,6 +18,7 @@ import json
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, VectorParams, PointStruct
 from app.core.ingestion.document_manager import DocumentManager
+from app.core.rag.context_ids import enrich_context_identity
 import uuid
 
 
@@ -108,8 +109,12 @@ def sync_vectors(force_rebuild: bool = False):
                 meta = json.loads(c.chunk_metadata) if c.chunk_metadata else {}
                 meta["document_id"] = doc.id
                 meta["chunk_id"] = c.id
+                meta["chunk_index"] = c.chunk_index
+                meta["doc_id"] = doc.doc_id or str(doc.id)
                 meta["doc_type"] = doc.doc_type
-                meta["filename"] = doc.filename
+                meta["filename"] = doc.original_filename or doc.filename
+                meta["document_title"] = meta.get("document_title") or doc.document_title or doc.filename
+                meta = enrich_context_identity(meta)
                 metadatas.append(meta)
 
             # Generate embeddings

@@ -1,0 +1,14 @@
+{
+  "sample_size": 56,
+  "human_labeled_safe_or_benign": 50,
+  "human_labeled_attack": 6,
+  "true_positive": 6,
+  "false_positive": 0,
+  "false_negative": 0,
+  "true_negative": 50,
+  "precision": 1.0,
+  "recall": 1.0,
+  "agreement_rate": 1.0,
+  "reviewer_count": 1,
+  "note": "Single-reviewer validation sample plus synthetic positive controls; not Cohen kappa because there is no second independent reviewer."
+}

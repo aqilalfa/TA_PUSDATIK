@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-06-10T09:32:37.737559",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "groq",
+  "llm_judge": "llama-3.1-8b-instant",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.8778,
+    "context_recall": 1.0,
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.8145
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.8778,
+      "context_recall": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8145
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_025",
+      "source_doc": "Perpres Nomor 95 Tahun 2018.pdf",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan SPBE menurut Perpres Nomor 95 Tahun 2018?",
+      "answer": "Berdasarkan Pasal 1 Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik [3], dalam peraturan ini yang dimaksud dengan SPBE adalah penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan komunikasi untuk memberikan layanan kepada Pengguna SPBE [4].",
+      "ground_truth": "Berdasarkan Pasal 1 angka 1 Perpres Nomor 95 Tahun 2018, Sistem Pemerintahan Berbasis Elektronik (SPBE) adalah penyelenggaraan pemerintahan yang memanfaatkan teknologi informasi dan komunikasi untuk m...",
+      "scores": {
+        "context_precision": 0.9999999999666667,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8697446497105673
+      }
+    },
+    {
+      "id": "gt_026",
+      "source_doc": "Perpres Nomor 95 Tahun 2018.pdf",
+      "doc_type": "peraturan",
+      "question": "Apa saja yang termasuk dalam Manajemen SPBE menurut Pasal 46 Perpres Nomor 95 Tahun 2018?",
+      "answer": "Pasal 46 Perpres Nomor 95 Tahun 2018 mengatur bahwa Manajemen SPBE meliputi delapan unsur sebagai berikut: [3]\n\na. manajemen risiko; b. manajemen keamanan informasi; c. manajemen data; d. manajemen aset teknologi informasi dan komunikasi; e. manajemen sumber daya manusia; f. manajemen pengetahuan; g...",
+      "ground_truth": "Berdasarkan Pasal 46 ayat (1) Perpres Nomor 95 Tahun 2018, Manajemen SPBE meliputi 8 komponen: (a) manajemen risiko; (b) manajemen keamanan informasi; (c) manajemen data; (d) manajemen aset teknologi ...",
+      "scores": {
+        "context_precision": 0.7555555555303703,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7591895294116968
+      }
+    }
+  ]
+}
