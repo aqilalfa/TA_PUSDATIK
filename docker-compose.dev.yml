@@ -146,7 +146,7 @@ services:
       - ./frontend/vite.config.js:/app/vite.config.js
       - /app/node_modules  # Don't mount node_modules
     environment:
-      - VITE_API_URL=${VITE_API_URL:-http://localhost:8000}
+      - VITE_API_URL=${VITE_API_URL:-/}
       - VITE_BACKEND_PROXY=http://backend:8000
       - VITE_USE_POLLING=true
       - NODE_ENV=development

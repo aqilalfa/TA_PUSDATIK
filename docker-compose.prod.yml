@@ -1,6 +1,5 @@
-
 services:
-  # Qdrant Vector Database
+  # Qdrant Vector Database (internal only)
   qdrant:
     image: qdrant/qdrant:v1.16.2
     container_name: spbe-qdrant-prod
@@ -8,7 +7,7 @@ services:
       - ./qdrant_storage:/qdrant/storage
     environment:
       - QDRANT__SERVICE__GRPC_PORT=6334
-    restart: always
+    restart: unless-stopped
     networks:
       - spbe-network
     healthcheck:
@@ -19,7 +18,23 @@ services:
       retries: 3
       start_period: 30s
 
-  # Backend FastAPI Service
+  # Redis for rate limits, token revocation, and security counters (internal only)
+  redis:
+    image: redis:7-alpine
+    container_name: spbe-redis-prod
+    command: redis-server --appendonly yes
+    volumes:
+      - ./redis_data:/data
+    restart: unless-stopped
+    networks:
+      - spbe-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Backend FastAPI Service (internal only; accessed through frontend nginx /api proxy)
   backend:
     build:
       context: ./backend
@@ -33,7 +48,8 @@ services:
       LOG_LEVEL: INFO
       DATABASE_URL: "sqlite:////app/data/spbe_rag.db"
       QDRANT_URL: "http://qdrant:6333"
-      OLLAMA_BASE_URL: "http://host.docker.internal:11434"
+      REDIS_ENABLED: "true"
+      REDIS_URL: "redis://redis:6379/0"
     volumes:
       - ./backend/data:/app/data
       - ./backend/models:/app/models:ro
@@ -41,7 +57,9 @@ services:
     depends_on:
       qdrant:
         condition: service_healthy
-    restart: always
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
     networks:
       - spbe-network
     healthcheck:
@@ -49,24 +67,26 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5
-      start_period: 60s
+      start_period: 90s
 
-  # Frontend (nginx serving Vue build)
+  # Frontend (nginx serving Vue build and proxying /api to backend)
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile.prod
       args:
         # Empty means the frontend uses the browser's current origin.
-        # This is the safest default for Cloudflare Tunnel because /api is proxied by nginx.
+        # This is safest because /api is proxied by nginx.
         VITE_API_URL: ${VITE_API_URL:-}
     container_name: spbe-frontend-prod
     ports:
-      - "80:80"
+      # Bind to localhost only so a host reverse proxy (Caddy/Nginx) owns public 80/443.
+      # Change to "80:80" only for direct LAN testing without a host reverse proxy.
+      - "127.0.0.1:8080:80"
     depends_on:
       backend:
         condition: service_healthy
-    restart: always
+    restart: unless-stopped
     networks:
       - spbe-network
 

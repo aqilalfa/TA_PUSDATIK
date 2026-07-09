@@ -22,6 +22,9 @@ export default defineConfig({
       usePolling: process.env.VITE_USE_POLLING === 'true',
       interval: 300
     },
+    hmr: {
+      clientPort: 443
+    },
     proxy: {
       '/api': {
         target: process.env.VITE_BACKEND_PROXY ?? 'http://localhost:8000',
