@@ -16,7 +16,7 @@
           <div class="doc-meta" v-if="document">
             <span class="badge badge-info">{{ document.doc_type }}</span>
             <span class="badge" :class="document.status === 'indexed' ? 'badge-ok' : 'badge-warn'">{{ document.status }}</span>
-            <span class="meta-item">{{ document.chunk_count }} chunk</span>
+            <span class="meta-item">{{ document.chunk_count }} konteks</span>
           </div>
         </div>
       </div>
@@ -35,7 +35,7 @@
       <!-- Loading State -->
       <div v-if="loading" class="loading-state">
         <div class="spinner"></div>
-        <p>Memuat chunks...</p>
+        <p>Memuat konteks...</p>
       </div>
 
       <!-- Empty State -->
@@ -44,15 +44,15 @@
           <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
           <polyline points="14 2 14 8 20 8"/>
         </svg>
-        <p>Tidak ada chunks</p>
-        <button @click="showAddModal = true" class="action-btn primary">Tambah Chunk Pertama</button>
+        <p>Tidak ada konteks</p>
+        <button @click="showAddModal = true" class="action-btn primary">Tambah Konteks Pertama</button>
       </div>
 
       <!-- Chunks List -->
       <div v-else class="chunks-container">
         <div class="chunks-header">
           <div class="chunks-info">
-            <span>{{ chunks.length }} chunks</span>
+            <span>{{ chunks.length }} konteks</span>
             <span class="sort-indicator" v-if="document?.doc_type === 'peraturan'">
               Diurutkan: BAB → Pasal → Ayat
             </span>
@@ -110,11 +110,11 @@
               data-testid="chunk-identity"
             >
               <div v-if="chunk.canonical_context_id" class="identity-item">
-                <span class="identity-label">Context ID</span>
+                <span class="identity-label">ID Konteks Teknis</span>
                 <code>{{ chunk.canonical_context_id }}</code>
               </div>
               <div v-if="chunk.citation_id" class="identity-item">
-                <span class="identity-label">Citation ID</span>
+                <span class="identity-label">ID Sitasi Teknis</span>
                 <code>{{ chunk.citation_id }}</code>
               </div>
             </div>
@@ -350,7 +350,7 @@ async function loadChunks() {
     hasMore.value = rawChunks.length >= 500
   } catch (e) {
     console.error('Load chunks error:', e)
-    showToast('Gagal memuat chunks', 'error')
+            showToast('Gagal memuat konteks', 'error')
   } finally {
     loading.value = false
   }
@@ -416,7 +416,7 @@ function closeModal() {
 
 async function saveChunk() {
   if (!chunkForm.value.text.trim()) {
-    showToast('Teks chunk tidak boleh kosong', 'error')
+      showToast('Teks konteks tidak boleh kosong', 'error')
     return
   }
 
@@ -434,8 +434,8 @@ async function saveChunk() {
       
       showToast('Chunk berhasil diperbarui')
     } else {
-      // Add new chunk - for now just show message
-      showToast('Fitur tambah chunk baru akan segera tersedia', 'info')
+      // Add new context - for now just show message
+      showToast('Fitur tambah konteks baru akan segera tersedia', 'info')
     }
     
     closeModal()

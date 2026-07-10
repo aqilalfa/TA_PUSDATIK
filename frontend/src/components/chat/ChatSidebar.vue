@@ -76,19 +76,15 @@
 
     <div class="sidebar-footer" v-if="!collapsed">
       <router-link v-if="canManageDocuments" to="/documents" class="sidebar-footer-link">
-        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
           <polyline points="14 2 14 8 20 8"/>
         </svg>
         <span>Dokumen Hukum</span>
       </router-link>
-      <div class="model-selector">
-        <label class="model-label">Model</label>
-        <select :value="selectedModel" @change="onModelChange" class="model-select">
-          <option v-for="model in models" :key="model.name" :value="model.name">
-            {{ model.name }}
-          </option>
-        </select>
+      <div class="fixed-model-note" aria-label="Model tetap yang digunakan sistem">
+        <span class="fixed-model-label">Model tetap</span>
+        <strong>Qwen 3.5 4B</strong>
       </div>
     </div>
 
@@ -108,9 +104,7 @@ import { getCurrentUserProfile, isAdminUser } from '@/services/auth'
 const props = defineProps({
   collapsed: { type: Boolean, default: false },
   sessions: { type: Array, default: () => [] },
-  currentSessionId: { type: String, default: null },
-  models: { type: Array, default: () => [] },
-  selectedModel: { type: String, default: '' }
+  currentSessionId: { type: String, default: null }
 })
 
 const emit = defineEmits([
@@ -118,9 +112,7 @@ const emit = defineEmits([
   'new-chat',
   'load-session',
   'delete-session',
-  'rename-session',
-  'update:selectedModel',
-  'model-change'
+  'rename-session'
 ])
 
 const currentUser = ref(getCurrentUserProfile())
@@ -187,12 +179,6 @@ function cancelEdit() {
 
 function setRenameInput(el) {
   renameInput.value = el
-}
-
-function onModelChange(event) {
-  const model = event.target.value
-  emit('update:selectedModel', model)
-  emit('model-change', model)
 }
 </script>
 
@@ -400,51 +386,35 @@ function onModelChange(event) {
   font-family: var(--font-ui);
 }
 
-.sidebar-footer-link:hover {
+.sidebar-footer-link:hover,
+.sidebar-footer-link:focus-visible {
   color: rgba(255, 255, 255, 0.75);
-}
-
-.model-selector {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 5px;
-  padding-top: 8px;
-  border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-.model-label {
-  font-size: 9px;
-  color: rgba(255, 255, 255, 0.3);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  white-space: nowrap;
-  font-family: var(--font-ui);
-}
-
-.model-select {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(201, 168, 76, 0.28);
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 11px;
-  padding: 8px 28px 8px 10px;
-  border-radius: 2px;
-  font-family: var(--font-ui);
-  cursor: pointer;
-  min-width: 0;
-  line-height: 1.2;
-}
-
-.model-select:hover,
-.model-select:focus {
-  border-color: rgba(201, 168, 76, 0.65);
   outline: none;
 }
 
-.model-select option {
-  background: var(--color-navy-dark);
-  color: #ffffff;
+.fixed-model-note {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  color: rgba(255, 255, 255, 0.68);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.fixed-model-label {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.fixed-model-note strong {
+  color: rgba(255, 255, 255, 0.86);
+  font-weight: 700;
 }
 
 .collapse-btn {

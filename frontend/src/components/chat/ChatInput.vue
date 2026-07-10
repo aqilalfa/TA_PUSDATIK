@@ -6,7 +6,6 @@
         :value="modelValue"
         placeholder="Ketik pertanyaan hukum SPBE Anda..."
         rows="1"
-        :disabled="isLoading"
         @keydown.enter.exact.prevent="emitSend"
         @input="handleInput"
         @focus="isFocused = true"
@@ -37,7 +36,7 @@
     </div>
 
     <div class="input-hint">
-      <span>Enter kirim · Shift+Enter baris baru</span>
+      <span>{{ isLoading ? 'Jawaban sedang dibuat · Anda tetap bisa menyiapkan pertanyaan berikutnya' : 'Enter kirim · Shift+Enter baris baru' }}</span>
     </div>
   </form>
 </template>
@@ -164,12 +163,16 @@ textarea:disabled {
   transition: background 0.15s;
 }
 
-.stop-btn:hover {
+.stop-btn:hover,
+.stop-btn:focus-visible {
   background: var(--color-danger-hover);
+  outline: none;
 }
 
-.send-btn:hover:not(:disabled) {
+.send-btn:hover:not(:disabled),
+.send-btn:focus-visible:not(:disabled) {
   background: var(--color-navy-hover);
+  outline: none;
 }
 
 .send-btn:disabled {

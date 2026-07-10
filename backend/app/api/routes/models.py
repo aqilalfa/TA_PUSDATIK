@@ -12,7 +12,7 @@ from app.models.schemas import ModelInfo
 
 router = APIRouter()
 
-DEFAULT_MODEL_FALLBACK = "qwen3:4b"
+DEFAULT_MODEL_FALLBACK = "qwen3.5:4b"
 
 
 def _default_model_path() -> Path:

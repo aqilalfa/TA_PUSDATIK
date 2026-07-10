@@ -40,8 +40,6 @@ function mountSidebar(sessions = allSessions, extra = {}) {
       sessions,
       currentSessionId: null,
       collapsed: false,
-      models: [],
-      selectedModel: '',
       ...extra
     },
     global: { stubs: { RouterLink: RouterLinkStub } }

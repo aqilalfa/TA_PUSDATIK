@@ -4,8 +4,8 @@
     <!-- User message -->
     <div v-if="message.role === 'user'" class="msg-user">
       <div v-if="!isEditing" class="msg-user-bubble-wrapper">
-        <button v-if="canEditRetry" class="user-edit-btn" @click="$emit('edit-retry')" title="Perbaiki Pertanyaan">
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        <button v-if="canEditRetry" class="user-edit-btn" @click="$emit('edit-retry')" title="Perbaiki Pertanyaan" aria-label="Perbaiki pertanyaan dan kirim ulang">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
         </button>
         <div class="msg-user-bubble">{{ message.content }}</div>
       </div>
@@ -15,6 +15,7 @@
           :value="editContent"
           @input="$emit('update:editContent', $event.target.value)"
           class="inline-edit-textarea"
+          aria-label="Perbaiki pertanyaan"
         ></textarea>
         <div class="inline-edit-actions">
           <button @click="$emit('cancel-edit')" class="btn-cancel">Batal</button>
@@ -183,26 +184,30 @@ function handleCitationMouseleave() {
   background: white;
   border: 1px solid var(--color-border);
   border-radius: 50%;
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-text-muted);
   cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.15s, color 0.15s, border-color 0.15s;
+  opacity: 0.58;
+  transition: opacity 0.15s, color 0.15s, border-color 0.15s, box-shadow 0.15s;
   flex-shrink: 0;
   margin-bottom: 4px;
 }
 
-.msg-user-bubble-wrapper:hover .user-edit-btn {
+.msg-user-bubble-wrapper:hover .user-edit-btn,
+.user-edit-btn:focus-visible {
   opacity: 1;
 }
 
-.user-edit-btn:hover {
+.user-edit-btn:hover,
+.user-edit-btn:focus-visible {
   color: var(--color-gold);
   border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.18);
+  outline: none;
 }
 
 .msg-user-edit-box {
@@ -577,6 +582,14 @@ function handleCitationMouseleave() {
   .btn-cancel,
   .btn-submit {
     min-height: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .message-wrapper,
+  .streaming-cursor,
+  .retrieval-spinner {
+    animation: none;
   }
 }
 </style>

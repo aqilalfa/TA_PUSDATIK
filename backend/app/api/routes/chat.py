@@ -223,7 +223,7 @@ async def chat_stream(
       4. Save assistant response to DB
     """
     _enforce_chat_rate_limit(http_request, current_user, "chat/stream")
-    model = request.model or get_default_model()
+    model = "qwen3.5:4b"
 
     async def event_generator():
         try:

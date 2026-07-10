@@ -24,14 +24,11 @@
       :collapsed="sidebarCollapsed"
       :sessions="sessions"
       :current-session-id="currentSessionId"
-      :models="models"
-      v-model:selected-model="selectedModel"
       @toggle-sidebar="toggleSidebar"
       @new-chat="createNewChat"
       @load-session="loadSession"
       @delete-session="deleteSession"
       @rename-session="handleRenameSession"
-      @model-change="onModelChange"
     />
 
     <div class="chat-main">
@@ -45,6 +42,7 @@
       <div class="chat-workspace">
         <div class="consultation-column">
           <div class="quick-action-strip" aria-label="Aksi cepat konsultasi">
+            <span class="quick-action-help">Tambahkan instruksi:</span>
             <button v-for="action in quickActions" :key="action" type="button" @click="applyQuickAction(action)">
               {{ action }}
             </button>
@@ -112,12 +110,9 @@ import ScrollToTop from '@/components/chat/ScrollToTop.vue'
 import {
   checkHealth as checkApiHealth,
   deleteSession as deleteSessionService,
-  getDefaultModel,
-  getModels,
   getSession,
   getSessionHistory,
   getSessions,
-  setDefaultModel,
   streamChat,
   updateSessionTitle
 } from '@/services/chatService'
@@ -131,9 +126,10 @@ const messages = ref([])
 const inputMessage = ref('')
 const isLoading = ref(false)
 const connectionStatus = ref('connecting')
-const models = ref([])
-const selectedModel = ref('qwen2.5:3b')
 const showScrollTop = ref(false)
+const editingMessageIndex = ref(null)
+const editingMessageContent = ref('')
+
 
 const activeAbortController = ref(null)
 // Refs
@@ -164,21 +160,10 @@ let hasBackfilledDefaultTitles = false
 // Initialize
 onMounted(async () => {
   await Promise.all([
-    fetchModels(),
     fetchSessions(),
     checkServerHealth()
   ])
 })
-
-async function fetchModels() {
-  try {
-    models.value = await getModels()
-    const modelData = await getDefaultModel()
-    selectedModel.value = modelData.model
-  } catch (error) {
-    console.error('Failed to fetch models:', error)
-  }
-}
 
 async function fetchSessions() {
   try {
@@ -291,7 +276,6 @@ async function loadSession(sessionId) {
       getSessionHistory(sessionId)
     ])
     currentSessionId.value = session.id
-    if (session.model) selectedModel.value = session.model
     messages.value = history.map((message) => {
       let timestamp = null
       if (message.timestamp) {
@@ -365,14 +349,6 @@ async function handleRenameSession({ id, title }) {
   }
 }
 
-async function onModelChange() {
-  try {
-    await setDefaultModel(selectedModel.value)
-  } catch (error) {
-    console.error('Failed to set default model:', error)
-  }
-}
-
 async function sendMessage() {
   if (!inputMessage.value.trim() || isLoading.value) return
 
@@ -422,7 +398,7 @@ async function submitChatMessage(userMessage, options = {}) {
       {
         message: userMessage,
         session_id: currentSessionId.value,
-        model: selectedModel.value,
+        model: 'qwen3.5:4b',
         top_k: 5,
         max_tokens: 2048
       },
@@ -630,10 +606,17 @@ function scrollToTop() {
 .quick-action-strip {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 8px;
   padding: 12px 16px;
   border-bottom: 1px solid var(--color-border-blue-light);
   background: var(--color-surface-panel-muted);
+}
+
+.quick-action-help {
+  color: var(--color-text-muted);
+  font: 600 11px var(--font-ui);
+  margin-right: 2px;
 }
 
 .quick-action-strip button {
@@ -647,10 +630,12 @@ function scrollToTop() {
   transition: border-color 0.15s, color 0.15s, background 0.15s;
 }
 
-.quick-action-strip button:hover {
+.quick-action-strip button:hover,
+.quick-action-strip button:focus-visible {
   border-color: var(--color-action-blue);
   color: var(--color-action-blue);
   background: var(--color-surface-soft-blue);
+  outline: none;
 }
 
 

@@ -202,12 +202,6 @@
             v-for="doc in documents"
             :key="doc.doc_id"
             class="docs-row docs-row-grid"
-            role="button"
-            tabindex="0"
-            :aria-label="`Buka detail dokumen ${doc.document_title || doc.filename}`"
-            @click="goToDetail(doc.doc_id)"
-            @keydown.enter.prevent="goToDetail(doc.doc_id)"
-            @keydown.space.prevent="goToDetail(doc.doc_id)"
           >
             <div class="doc-name-cell">
               <span class="doc-name">{{ doc.document_title || doc.filename }}</span>
@@ -223,8 +217,7 @@
                 {{ doc.status === 'indexed' ? 'Terindeks' : doc.status === 'previewed' ? 'Pratinjau' : 'Diunggah' }}
               </span>
             </span>
-            <span class="doc-cell doc-actions" data-label="Aksi" @click.stop @keydown.stop>
-              <button v-if="doc.status !== 'indexed'" @click="goToDetail(doc.doc_id)" class="doc-btn">Lihat</button>
+            <span class="doc-cell doc-actions" data-label="Aksi">
               <button @click="goToDetail(doc.doc_id)" class="doc-btn">Detail</button>
               <button @click="confirmDelete(doc)" class="doc-btn danger">Hapus</button>
             </span>
@@ -404,7 +397,7 @@ async function saveDocument() {
     const data = await saveDocumentById(uploadedDocId.value)
     lastChunkCount.value = data.chunks_indexed
     saveComplete.value = true
-    loadDocuments()
+    await loadDocuments()
   } catch (e) {
     showToast(e.message, 'error')
   } finally {

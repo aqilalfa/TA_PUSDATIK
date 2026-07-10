@@ -53,9 +53,9 @@ describe('DocumentDetailView — context identity metadata', () => {
     await flushPromises()
 
     const text = wrapper.text()
-    expect(text).toContain('Context ID')
+    expect(text).toContain('ID Konteks Teknis')
     expect(text).toContain('doc6:idx3')
-    expect(text).toContain('Citation ID')
+    expect(text).toContain('ID Sitasi Teknis')
     expect(text).toContain('perpres95_2018:pasal_1')
   })
 })
