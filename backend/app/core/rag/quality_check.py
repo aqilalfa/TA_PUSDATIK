@@ -3,6 +3,8 @@ import json
 from typing import List, Dict, Any
 from loguru import logger
 
+from app.core.rag.query_profile import classify_query_profile
+
 HARD_UNAVAILABLE_CLAIM_PATTERNS = (
     "tidak tercantum",
     "tidak tersedia",
@@ -160,7 +162,10 @@ def build_answer_quality_report(query: str, context: str, answer: str, source_co
     if focus_coverage < 0.45 and context_focus_terms: retry_reasons.append("cakupan istilah inti pertanyaan masih rendah")
     if not list_structure_ok: retry_reasons.append("format rincian/daftar belum lengkap")
     if citations == 0: retry_reasons.append("sitasi [n] belum muncul")
-    if len(answer_text) < 180: retry_reasons.append("jawaban terlalu ringkas")
+
+    question_type = classify_query_profile(query).answer_type
+    if question_type in {"explanation", "general"} and len(answer_text) < 180:
+        retry_reasons.append("jawaban terlalu ringkas")
 
     return {
         "score": score,

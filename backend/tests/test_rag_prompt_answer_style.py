@@ -15,7 +15,7 @@ def test_value_or_time_question_gets_one_sentence_direct_answer_instruction():
 
     assert "Tipe pertanyaan: BERAPA/KAPAN/NILAI/WAKTU." in instructions
     assert "dalam 1 kalimat" in instructions
-    assert "Jangan menambahkan penjelasan proses" in instructions
+    assert "DILARANG menambahkan penjelasan tujuan, proses, atau konteks historis" in instructions
 
 
 def test_actor_question_gets_entity_only_instruction():
@@ -24,8 +24,8 @@ def test_actor_question_gets_entity_only_instruction():
     )
 
     assert "Tipe pertanyaan: SIAPA/ENTITAS." in instructions
-    assert "Jawab nama pihak/lembaga/instansi" in instructions
-    assert "Jangan menambahkan tugas" in instructions
+    assert "Tulis nama pihak/lembaga/instansi" in instructions
+    assert "DILARANG menambahkan kalimat kedua berisi tugas" in instructions
 
 
 def test_list_question_preserves_complete_list_requirement():
@@ -34,7 +34,7 @@ def test_list_question_preserves_complete_list_requirement():
     )
 
     assert "Tipe pertanyaan: DAFTAR." in instructions
-    assert "bullet list singkat dan lengkap" in instructions
+    assert "bullet list singkat dan LENGKAP" in instructions
 
 
 def test_rag_prompt_includes_answer_first_and_context_spillover_rules():
@@ -45,8 +45,8 @@ def test_rag_prompt_includes_answer_first_and_context_spillover_rules():
 
     assert "PROFIL JAWABAN BERDASARKAN TIPE PERTANYAAN" in prompt
     assert "Tipe pertanyaan: TUJUAN." in prompt
-    assert "Jawab inti pertanyaan pada kalimat pertama" in prompt
-    assert "abaikan konteks sampingan yang tidak diminta" in prompt
+    assert "Kalimat pertama jawaban HARUS berisi fakta inti yang ditanya" in prompt
+    assert "abaikan konteks sampingan" in prompt
 
 
 def test_simple_prompt_includes_same_answer_style_guidance():
@@ -57,4 +57,4 @@ def test_simple_prompt_includes_same_answer_style_guidance():
 
     assert "PROFIL JAWABAN BERDASARKAN TIPE PERTANYAAN" in prompt
     assert "Tipe pertanyaan: DEFINISI/PENGERTIAN." in prompt
-    assert "Jawab definisi inti dalam 1 kalimat" in prompt
+    assert "Tulis definisi inti dalam 1 kalimat" in prompt

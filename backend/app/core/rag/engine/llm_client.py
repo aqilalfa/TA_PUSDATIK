@@ -10,12 +10,25 @@ from app.core.rag.prompts import (
     SYSTEM_PROMPT_TABLE,
     SYSTEM_PROMPT_LEGAL,
     SYSTEM_PROMPT_GENERAL,
+    build_answer_style_instructions,
 )
+from app.core.rag.query_profile import QueryProfile, classify_query_profile
 from app.core.rag.guardrails import (
     build_llm01_security_instruction,
     build_quality_guardrail,
     sanitize_untrusted_context,
 )
+
+PRODUCTION_MODEL = "qwen3.5:4b"
+
+
+def build_ollama_options(max_tokens: int = 1024) -> Dict[str, Any]:
+    return {
+        "temperature": 0.1,
+        "num_predict": max_tokens,
+        "num_ctx": 8192,
+    }
+
 
 def _role(msg) -> str:
     """Convert LangChain message objects to Ollama role strings."""
@@ -25,44 +38,63 @@ def _role(msg) -> str:
         return "assistant"
     return "user"
 
-async def stream_answer(
-    query: str, 
-    context: str, 
-    history: List, 
-    model_name: str, 
-    query_type: str = "general"
-) -> AsyncIterator[str]:
-    """
-    Stream LLM answer token by token via direct Ollama /api/chat call.
-    Bypassing LangChain-Ollama ensures fast First Token delivery.
-    """
-    _PROMPT_MAP = {
+
+def _scope_instruction(profile: QueryProfile) -> str:
+    if profile.scope == "national":
+        return "Cakupan nasional: gunakan bukti agregat atau regulasi tingkat nasional; jangan substitusi data khusus BSSN."
+    if profile.scope == "bssn":
+        return "Cakupan jawaban: fokus pada bukti khusus BSSN; jangan menggeneralisasi menjadi kondisi nasional."
+    return "Cakupan jawaban: pertahankan cakupan yang dinyatakan sumber dan jangan membuat generalisasi."
+
+
+def _build_ollama_messages(
+    query: str,
+    context: str,
+    history: List,
+    query_profile: QueryProfile,
+) -> List[Dict[str, str]]:
+    prompt_map = {
         "table": SYSTEM_PROMPT_TABLE,
         "pasal": SYSTEM_PROMPT_LEGAL,
         "indikator": SYSTEM_PROMPT_LEGAL,
         "general": SYSTEM_PROMPT_GENERAL,
     }
-    
-    system_prompt = _PROMPT_MAP.get(query_type, SYSTEM_PROMPT_GENERAL)
-    security_instruction = build_llm01_security_instruction()
+    system_prompt = prompt_map.get(query_profile.retrieval_type, SYSTEM_PROMPT_GENERAL)
     safe_context = sanitize_untrusted_context(context)
-    system_content = f"{system_prompt}\n\n{security_instruction}\n\nKonteks Referensi:\n{safe_context}"
-
-    ollama_messages = [{"role": "system", "content": system_content}]
-    for msg in history:
-        ollama_messages.append({"role": _role(msg), "content": msg.content})
-
+    system_content = (
+        f"{system_prompt}\n\n{build_llm01_security_instruction()}\n\n"
+        f"{build_answer_style_instructions(query)}\n\n{_scope_instruction(query_profile)}\n\n"
+        f"Konteks Referensi:\n{safe_context}"
+    )
+    messages = [{"role": "system", "content": system_content}]
+    messages.extend({"role": _role(msg), "content": msg.content} for msg in history)
     quality_guardrail = build_quality_guardrail(query, context)
     user_content = f"Pertanyaan: {query}"
     if quality_guardrail:
         user_content += f"\n\n{quality_guardrail}"
-    ollama_messages.append({"role": "user", "content": user_content})
+    messages.append({"role": "user", "content": user_content})
+    return messages
 
-    options: dict = {
-        "temperature": 0.1, 
-        "num_predict": 1024,
-        "num_ctx": 8192  # Raised from 4096 — 5 docs + system prompt + history needs ~3000+ tokens
-    }
+
+async def stream_answer(
+    query: str, 
+    context: str, 
+    history: List, 
+    model_name: str,
+    query_type: str = "general",
+    max_tokens: int = 1024,
+) -> AsyncIterator[str]:
+    """
+    Stream LLM answer token by token via direct Ollama /api/chat call.
+    Bypassing LangChain-Ollama ensures fast First Token delivery.
+    """
+    query_profile = classify_query_profile(query)
+    ollama_messages = _build_ollama_messages(query, context, history, query_profile)
+
+    if model_name != PRODUCTION_MODEL:
+        raise ValueError(f"Unsupported model: {model_name}. Expected {PRODUCTION_MODEL}")
+
+    options = build_ollama_options(max_tokens=max_tokens)
     
     # Robust thinking model detection — includes qwen3 family (qwen3:4b, qwen3.5, etc.)
     is_thinking_model = any(kw in model_name.lower() for kw in ["qwen3", "qwen3.5", "r1"])
@@ -73,7 +105,7 @@ async def stream_answer(
 
     logger.info(
         f"[LLM] Streaming {model_name} via Ollama API "
-        f"({len(ollama_messages)} msgs, ctx {len(context)} chars, ctx_limit=4096)..."
+        f"({len(ollama_messages)} msgs, ctx {len(context)} chars, ctx_limit={options['num_ctx']}, max_tokens={max_tokens})..."
     )
 
     url = f"{settings.OLLAMA_BASE_URL}/api/chat"
