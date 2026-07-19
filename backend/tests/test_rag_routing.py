@@ -40,86 +40,114 @@ def test_classify_table_wins_over_pasal():
     assert classify_query("tabel di pasal 5 berisi apa?") == "table"
 
 
-def test_expand_definition_query_adds_legal_term_anchor():
+def test_expand_definition_query_adds_neutral_legal_term_anchor():
     from app.core.rag.prompts import expand_query
 
     queries = expand_query("Apa yang dimaksud dengan Keamanan SPBE menurut Perpres 95 Tahun 2018?")
 
-    assert any("Keamanan SPBE adalah" in q and "pasal 1" in q.lower() for q in queries)
+    assert queries[0] == "Apa yang dimaksud dengan Keamanan SPBE menurut Perpres 95 Tahun 2018?"
+    assert any("Keamanan SPBE adalah" in q for q in queries)
+    assert all("pasal 1" not in q.lower() for q in queries)
 
 
-def test_expand_principle_query_adds_pasal_2_anchor():
+def test_expand_query_does_not_invent_unstated_legal_or_answer_anchors():
+    from app.core.rag.prompts import expand_query
+
+    cases = [
+        (
+            "Apa tujuan utama dilakukannya Pemantauan dan Evaluasi SPBE?",
+            ["permenpan", "pasal 2", "ayat 2"],
+        ),
+        (
+            "Instansi pemerintah daerah mana yang meraih nilai SPBE tertinggi di tahun 2024?",
+            ["4,77", "4.77", "predikat memuaskan"],
+        ),
+    ]
+
+    for query, forbidden_anchors in cases:
+        expanded_text = "\n".join(expand_query(query)).lower()
+        assert all(anchor not in expanded_text for anchor in forbidden_anchors)
+
+
+def test_expand_principle_query_does_not_guess_pasal_anchor():
     from app.core.rag.prompts import expand_query
 
     queries = expand_query("Apa saja prinsip-prinsip dalam pelaksanaan SPBE?")
 
-    assert any("SPBE dilaksanakan berdasarkan prinsip Pasal 2" in q for q in queries)
+    assert queries[0] == "Apa saja prinsip-prinsip dalam pelaksanaan SPBE?"
+    assert all("pasal 2" not in q.lower() for q in queries)
 
 
-def test_expand_maturity_query_adds_table_1_anchor():
+def test_expand_maturity_query_does_not_guess_table_anchor():
     from app.core.rag.prompts import expand_query
 
     queries = expand_query("Apa yang mendefinisikan SPBE Tingkat 1 (Rintisan)?")
 
-    assert any("Tabel 1" in q and "Rintisan" in q for q in queries)
+    assert all("tabel 1" not in q.lower() for q in queries)
 
 
-def test_expand_domain_weight_query_adds_table_7_anchor():
+def test_expand_domain_weight_query_does_not_guess_table_anchor():
     from app.core.rag.prompts import expand_query
 
     queries = expand_query("Berapa persentase bobot penilaian untuk Domain Layanan SPBE?")
 
-    assert any("Tabel 7" in q and "Domain Layanan SPBE" in q for q in queries)
+    assert all("tabel 7" not in q.lower() for q in queries)
 
 
-def test_expand_predicate_query_adds_table_13_anchor():
+def test_expand_predicate_query_does_not_guess_table_anchor():
     from app.core.rag.prompts import expand_query
 
     queries = expand_query("Predikat apa yang disematkan pada rentang nilai indeks SPBE 3,5 hingga kurang dari 4,2?")
 
-    assert any("Tabel 13" in q and "predikat indeks SPBE" in q for q in queries)
+    assert all("tabel 13" not in q.lower() for q in queries)
 
 
-def test_expand_monitoring_evaluation_purpose_adds_pasal_2_anchor():
+def test_expand_monitoring_evaluation_purpose_preserves_user_terms_only():
     from app.core.rag.prompts import expand_query
 
     queries = expand_query("Apa tujuan utama dilakukannya Pemantauan dan Evaluasi SPBE?")
 
-    assert any("Pasal 2 Ayat 2" in q and "Pemantauan dan Evaluasi SPBE" in q for q in queries)
+    assert queries[0] == "Apa tujuan utama dilakukannya Pemantauan dan Evaluasi SPBE?"
+    assert all("pasal" not in q.lower() and "ayat" not in q.lower() for q in queries)
 
 
-def test_expand_pp71_reliability_query_adds_explanation_anchor():
+def test_expand_reliability_query_does_not_guess_regulation_anchor():
     from app.core.rag.prompts import expand_query
 
     queries = expand_query('Apa yang dimaksud sistem elektronik yang "andal" secara hukum?')
 
-    assert any("Penjelasan Pasal 3 Ayat 1" in q and "andal" in q for q in queries)
+    assert all("pp nomor" not in q.lower() and "pasal" not in q.lower() for q in queries)
 
 
-def test_expand_pp71_administrative_sanctions_adds_pasal_100_anchor():
+def test_expand_administrative_sanctions_does_not_inject_answer_terms():
     from app.core.rag.prompts import expand_query
 
     queries = expand_query("Apa sanksi administratif jika Penyelenggara Sistem Elektronik melakukan pelanggaran?")
 
-    assert any("Pasal 100 Ayat 2" in q and "sanksi administratif" in q for q in queries)
+    joined = "\n".join(queries).lower()
+    assert "pasal 100" not in joined
+    assert "denda administratif" not in joined
 
 
-def test_expand_report_2024_lowest_domain_adds_national_index_anchor():
+def test_expand_report_query_does_not_guess_table_or_domain_answer():
     from app.core.rag.prompts import expand_query
 
     queries = expand_query("Apa domain yang mencetak skor evaluasi terendah secara nasional pada Laporan 2024?")
 
-    assert any("Laporan Evaluasi SPBE Tahun 2024" in q and "nilai indeks domain nasional" in q for q in queries)
+    joined = "\n".join(queries).lower()
+    assert "tabel 5" not in joined
+    assert "domain manajemen" not in joined
 
 
-def test_expand_report_2024_highest_local_government_adds_summary_anchor():
+def test_expand_report_query_does_not_inject_winning_entity_or_value():
     from app.core.rag.prompts import expand_query
 
     queries = expand_query("Instansi pemerintah daerah mana yang meraih nilai SPBE tertinggi di tahun 2024?")
 
-    assert any("Indeks Maturitas SPBE tertinggi nasional" in q and "Pemerintah Daerah" in q for q in queries)
-    assert any("Pemerintah Kabupaten" in q and "Max 4,77" in q for q in queries)
-    assert any("Indeks SPBE Akhir 4.77" in q for q in queries)
+    joined = "\n".join(queries).lower()
+    assert "pemerintah kabupaten" not in joined
+    assert "4,77" not in joined
+    assert "4.77" not in joined
 
 
 def test_build_qdrant_filter_with_doc_id():
@@ -175,7 +203,7 @@ def test_doc_scoped_retrieval_does_not_fallback(monkeypatch):
     engine.stitcher.expand_docs_with_neighbor_context.return_value = []
 
     # Force a qdrant filter to be present
-    monkeypatch.setattr(engine, "_build_qdrant_filter", lambda d: object())
+    monkeypatch.setattr(engine, "_build_qdrant_filter", lambda d, current_user=None: object())
     monkeypatch.setattr(le, "expand_query", lambda q: [q])
     monkeypatch.setattr(le, "classify_query", lambda q: "general")
 

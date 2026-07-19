@@ -1,3 +1,4 @@
+import math
 import re
 import time
 from typing import List, Dict, Any, Optional
@@ -65,32 +66,55 @@ class RAGRanker:
         self._reranker = reranker_instance
         self.deduplicate_contexts = deduplicate_contexts
 
-    def rrf_fusion(self, ranked_lists: List[List[Document]], max_candidates: int, k: int = 60) -> List[Document]:
-        """Perform Reciprocal Rank Fusion on multiple ranked lists."""
+    def rrf_fusion(
+        self,
+        ranked_lists: List[List[Document]],
+        max_candidates: int,
+        k: int = 60,
+        list_families: Optional[List[str]] = None,
+        family_weights: Optional[Dict[str, float]] = None,
+    ) -> List[Document]:
+        """Fuse ranked lists while bounding each retrieval family's total influence."""
         scores: Dict[str, float] = {}
         docs: Dict[str, Document] = {}
+        contributions: Dict[str, List[Dict[str, Any]]] = {}
+        families = list_families or [f"list-{index}" for index in range(len(ranked_lists))]
+        if len(families) != len(ranked_lists):
+            raise ValueError("list_families must align with ranked_lists")
+        weights = family_weights or {family: 1.0 for family in families}
+        family_counts: Dict[str, int] = {}
+        for family in families:
+            family_counts[family] = family_counts.get(family, 0) + 1
 
-        for ranked_list in ranked_lists:
+        for list_index, ranked_list in enumerate(ranked_lists):
+            family = families[list_index]
+            family_budget = max(0.0, float(weights.get(family, 1.0)))
+            list_weight = family_budget / family_counts[family]
             for rank, doc in enumerate(ranked_list):
-                # Use page_content + doc_id as unique key
-                doc_id = str(doc.metadata.get("document_id") or doc.metadata.get("doc_id") or "none")
-                content_hash = str(hash(doc.page_content))
-                key = f"{doc_id}_{content_hash}"
-                
-                score = 1.0 / (k + rank + 1)
-                scores[key] = scores.get(key, 0.0) + score
+                metadata = enrich_context_identity(doc.metadata or {})
+                doc.metadata = metadata
+                key = str(metadata.get("canonical_context_id"))
+                raw_score = 1.0 / (k + rank + 1)
+                weighted_score = list_weight * raw_score
+                scores[key] = scores.get(key, 0.0) + weighted_score
+                contributions.setdefault(key, []).append({
+                    "family": family,
+                    "list_index": list_index,
+                    "rank": rank + 1,
+                    "weight": list_weight,
+                    "raw_score": raw_score,
+                    "weighted_score": weighted_score,
+                })
                 if key not in docs:
                     docs[key] = doc
 
-        # Sort by score
-        fused = sorted(docs.keys(), key=lambda k: scores[k], reverse=True)
-        
+        fused = sorted(docs, key=lambda key: scores[key], reverse=True)
         results = []
         for key in fused[:max_candidates]:
             doc = docs[key]
             doc.metadata["rrf_score"] = scores[key]
+            doc.metadata["rrf_contributions"] = contributions[key]
             results.append(doc)
-            
         return results
 
     def query_metadata_boost(self, query: str, metadata: Dict[str, Any], text: str = "") -> float:
@@ -492,7 +516,36 @@ class RAGRanker:
 
         return boost
 
-    def rerank(self, query: str, docs: List[Document], top_k: int) -> List[Document]:
+    @staticmethod
+    def _has_clear_rrf_boundary(
+        docs: List[Document],
+        boundary: int = 16,
+        minimum_relative_drop: float = 0.25,
+    ) -> bool:
+        """Return whether the RRF drop after ``boundary`` is safe to prune at."""
+        if len(docs) <= boundary:
+            return False
+
+        before_value = (docs[boundary - 1].metadata or {}).get("rrf_score")
+        after_value = (docs[boundary].metadata or {}).get("rrf_score")
+        if not isinstance(before_value, (int, float)) or not isinstance(after_value, (int, float)):
+            return False
+        before = float(before_value)
+        after = float(after_value)
+
+        if not math.isfinite(before) or not math.isfinite(after) or before <= 0.0:
+            return False
+        relative_drop = (before - after) / abs(before)
+        return after <= before and relative_drop >= minimum_relative_drop
+
+    def rerank(
+        self,
+        query: str,
+        docs: List[Document],
+        top_k: int,
+        retrieval_type: str = "general",
+        candidate_limit_override: Optional[int] = None,
+    ) -> List[Document]:
         """Rerank documents using CrossEncoder + Metadata Heuristics."""
         if not docs:
             return []
@@ -503,40 +556,83 @@ class RAGRanker:
             # 1. Base scores from CrossEncoder if available
             scored_docs = []
             if self._reranker:
-                pairs = [[query, (doc.page_content or "")[:3000]] for doc in docs]
-                ce_scores = self._reranker.predict(pairs)
-                for i, score in enumerate(ce_scores):
-                    scored_docs.append({"score": float(score), "doc": docs[i]})
-            else:
-                # Fallback to RRF score if no reranker
-                for doc in docs:
-                    scored_docs.append({"score": doc.metadata.get("rrf_score", 0.0), "doc": doc})
+                if candidate_limit_override is not None:
+                    candidate_limit = max(1, int(candidate_limit_override))
+                    candidate_policy = "override"
+                elif retrieval_type in {"pasal", "table", "indikator"}:
+                    candidate_limit = 32
+                    candidate_policy = "adaptive-specialized"
+                elif self._has_clear_rrf_boundary(docs):
+                    candidate_limit = 16
+                    candidate_policy = "adaptive-clear-boundary"
+                else:
+                    candidate_limit = 24
+                    candidate_policy = "adaptive-default"
 
-            # 2. Apply Domain Heuristic Boosting
+                candidate_docs = docs[:candidate_limit]
+                pairs = [[query, (doc.page_content or "")[:3000]] for doc in candidate_docs]
+                ce_scores = [float(score) for score in self._reranker.predict(pairs, batch_size=8)]
+                if ce_scores:
+                    low, high = min(ce_scores), max(ce_scores)
+                    spread = high - low
+                    normalized_scores = [0.5 if spread == 0 else (score - low) / spread for score in ce_scores]
+                    for i, score in enumerate(normalized_scores):
+                        scored_docs.append({"score": score, "doc": candidate_docs[i]})
+            else:
+                candidate_limit = len(docs)
+                candidate_policy = "degraded-all"
+                candidate_docs = docs
+                # Keep degraded fallback bounded so stale RRF magnitude cannot swamp metadata order.
+                rrf_scores = [float(doc.metadata.get("rrf_score", 0.0)) for doc in candidate_docs]
+                low, high = min(rrf_scores), max(rrf_scores)
+                spread = high - low
+                normalized_scores = [0.05 if spread == 0 else 0.10 * ((score - low) / spread) for score in rrf_scores]
+                for doc, score in zip(candidate_docs, normalized_scores):
+                    scored_docs.append({"score": score, "doc": doc})
+
+            # 2. Normalize metadata heuristics into a bounded adjustment without losing order.
             final_ranked = []
-            for item in scored_docs:
+            raw_boosts = [
+                float(self.query_metadata_boost(query, item["doc"].metadata, item["doc"].page_content))
+                for item in scored_docs
+            ]
+            boost_low = min(raw_boosts) if raw_boosts else 0.0
+            boost_high = max(raw_boosts) if raw_boosts else 0.0
+            boost_spread = boost_high - boost_low
+            for item, raw_meta_boost in zip(scored_docs, raw_boosts):
                 doc = item["doc"]
-                meta_boost = self.query_metadata_boost(query, doc.metadata, doc.page_content)
+                if boost_spread == 0:
+                    meta_boost = max(-0.15, min(0.15, raw_meta_boost))
+                else:
+                    meta_boost = -0.15 + 0.30 * ((raw_meta_boost - boost_low) / boost_spread)
                 final_score = item["score"] + meta_boost
-                
+
                 doc.metadata["rerank_base_score"] = item["score"]
-                doc.metadata["query_boost"] = float(meta_boost)
+                doc.metadata["query_boost"] = meta_boost
                 doc.metadata["rerank_score"] = float(final_score)
                 final_ranked.append((final_score, doc))
 
             final_ranked.sort(key=lambda x: x[0], reverse=True)
 
+            rerank_elapsed_ms = (time.perf_counter() - t_start) * 1000.0
             for _, doc in final_ranked:
                 doc.metadata = enrich_context_identity(doc.metadata or {})
+                doc.metadata["rerank_candidate_limit"] = candidate_limit
+                doc.metadata["rerank_candidate_count"] = len(candidate_docs)
+                doc.metadata["rerank_candidate_policy"] = candidate_policy
+                doc.metadata["rerank_elapsed_ms"] = rerank_elapsed_ms
 
             if self.deduplicate_contexts:
                 deduped_docs = []
                 seen_context_ids = set()
+                per_document: Dict[str, int] = {}
                 for _, doc in final_ranked:
                     identity = doc.metadata.get("canonical_context_id") or doc.metadata.get("citation_id")
-                    if identity in seen_context_ids:
+                    document_id = str(doc.metadata.get("document_id") or doc.metadata.get("doc_id") or "unknown")
+                    if identity in seen_context_ids or per_document.get(document_id, 0) >= 2:
                         continue
                     seen_context_ids.add(identity)
+                    per_document[document_id] = per_document.get(document_id, 0) + 1
                     deduped_docs.append(doc)
                     if len(deduped_docs) >= top_k:
                         break
@@ -544,7 +640,15 @@ class RAGRanker:
             else:
                 result_docs = [doc for _, doc in final_ranked[:top_k]]
             
-            logger.info(f"[Rerank] Boosted {len(docs)} candidates in {time.perf_counter()-t_start:.3f}s")
+            logger.info(
+                "[Rerank] Boosted {} of {} candidates policy={} limit={} in {:.3f}s".format(
+                    len(candidate_docs),
+                    len(docs),
+                    candidate_policy,
+                    candidate_limit,
+                    rerank_elapsed_ms / 1000.0,
+                )
+            )
             return result_docs
             
         except Exception as e:

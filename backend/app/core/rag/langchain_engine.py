@@ -7,9 +7,10 @@ import re
 import time
 import asyncio
 import json
+import hashlib
 import pickle
 from pathlib import Path
-from typing import List, Dict, Any, Optional, AsyncIterator, Tuple
+from typing import List, Dict, Any, Optional, AsyncIterator, Tuple, Literal, Callable
 from functools import partial
 from loguru import logger
 import torch
@@ -35,18 +36,37 @@ from app.core.rag.legal_utils import (
     build_cover_citation_title,
 )
 from app.core.rag.prompts import expand_query
+from app.core.rag.observability import RagTrace
+from app.core.rag.query_profile import classify_query_profile
 from app.core.rag.access_control import build_qdrant_access_filter
 
+RetrievalMode = Literal["vector_only", "bm25_only", "hybrid", "final"]
+RETRIEVAL_MODES: tuple[str, ...] = ("vector_only", "bm25_only", "hybrid", "final")
+DEFAULT_RETRIEVAL_MODE: RetrievalMode = "final"
+
+
+def normalize_retrieval_mode(mode: str | None) -> RetrievalMode:
+    """Normalize and validate retrieval modes used for ablation experiments."""
+    normalized = (mode or DEFAULT_RETRIEVAL_MODE).strip().lower().replace("-", "_")
+    aliases = {
+        "vector": "vector_only",
+        "dense": "vector_only",
+        "dense_only": "vector_only",
+        "bm25": "bm25_only",
+        "keyword": "bm25_only",
+        "keyword_only": "bm25_only",
+        "full": "final",
+        "full_pipeline": "final",
+    }
+    normalized = aliases.get(normalized, normalized)
+    if normalized not in RETRIEVAL_MODES:
+        allowed = ", ".join(RETRIEVAL_MODES)
+        raise ValueError(f"Invalid retrieval_mode={mode!r}. Expected one of: {allowed}")
+    return normalized  # type: ignore[return-value]
+
 def classify_query(query: str) -> str:
-    """Classify query type for routing: 'table', 'pasal', 'indikator', or 'general'."""
-    q = (query or "").lower()
-    if re.search(r'\btabel\b|\btable\b', q):
-        return "table"
-    if re.search(r'\bindikator\b|\bid[-\s]*\d+', q):
-        return "indikator"
-    if re.search(r'\bpasal\b|\bayat\b|\bperpres\b|\bpermenpan\b|\bpp\s*\d+\b|\bse\s+menteri\b', q):
-        return "pasal"
-    return "general"
+    """Backward-compatible retrieval classification."""
+    return classify_query_profile(query).retrieval_type
 
 class SBERTDirectEmbeddings(Embeddings):
     """Direct SentenceTransformer wrapper that inherits LangChain's Embeddings base class.
@@ -85,6 +105,8 @@ class LangchainRAGEngine:
         self.qdrant = None
         self._bm25 = None
         self._bm25_docs = []
+        self._reranker = None
+        self.reranker_readiness = {"status": "not_loaded"}
 
     def initialize(self) -> bool:
         """Load models and initialize modular components."""
@@ -113,7 +135,10 @@ class LangchainRAGEngine:
 
             # 3. Instantiate Modular Components
             self.retriever = HybridRetriever(self.client, self.qdrant, self._bm25)
-            self.ranker = RAGRanker()
+            self.ranker = RAGRanker(
+                reranker_instance=self._load_reranker(),
+                deduplicate_contexts=True,
+            )
             self.stitcher = ContextStitcher(self.client)
 
             self._initialized = True
@@ -127,19 +152,71 @@ class LangchainRAGEngine:
         """Async wrapper for initialization."""
         return await asyncio.get_event_loop().run_in_executor(None, self.initialize)
 
-    def _load_bm25(self):
-        """Load BM25 index from disk."""
+    def _load_reranker(self):
+        """Load the configured CrossEncoder once from local cache on bounded CPU."""
+        if self._reranker is not None:
+            return self._reranker
+        try:
+            from sentence_transformers import CrossEncoder
+
+            snapshot_dir = Path(settings.RERANKER_CACHE_DIR) / settings.RERANKER_MODEL.rsplit("/", 1)[-1]
+            model_source = (
+                str(snapshot_dir)
+                if (snapshot_dir / "config.json").is_file()
+                else settings.RERANKER_MODEL
+            )
+            self._reranker = CrossEncoder(
+                model_source,
+                device="cpu",
+                cache_folder=settings.RERANKER_CACHE_DIR,
+                local_files_only=True,
+            )
+            self.reranker_readiness = {
+                "status": "ready",
+                "model": settings.RERANKER_MODEL,
+                "source": model_source,
+                "device": "cpu",
+            }
+        except (OSError, ValueError, RuntimeError) as exc:
+            self._reranker = None
+            self.reranker_readiness = {
+                "status": "degraded",
+                "reason": "local_model_unavailable",
+                "error_type": type(exc).__name__,
+            }
+            logger.warning("[Reranker] Local CrossEncoder unavailable; degraded retrieval active")
+        return self._reranker
+
+    def _bm25_index_path(self) -> Path:
+        """Return the configured local BM25 index path."""
         backend_root = Path(__file__).resolve().parents[3]
-        path = backend_root / "data" / "bm25_index.pkl"
-        if path.exists():
-            try:
-                with path.open("rb") as f:
-                    data = pickle.load(f)
-                self._bm25 = data.get("bm25")
-                self._bm25_docs = data.get("documents", [])
-                logger.info(f"[BM25] Loaded {len(self._bm25_docs)} chunks")
-            except Exception as e:
-                logger.warning(f"[BM25] Failed to load: {e}")
+        return backend_root / "data" / "bm25_index.pkl"
+
+    def _load_bm25(self, force: bool = False):
+        """Load and validate the local BM25 index payload."""
+        if self._bm25 is not None and not force:
+            return
+
+        path = self._bm25_index_path()
+        if not path.exists():
+            self._bm25 = None
+            self._bm25_docs = []
+            return
+
+        try:
+            with path.open("rb") as f:
+                data = pickle.load(f)
+            bm25 = data.get("bm25") if isinstance(data, dict) else None
+            documents = data.get("documents") if isinstance(data, dict) else None
+            if not callable(getattr(bm25, "get_scores", None)) or not isinstance(documents, list):
+                raise ValueError("Invalid BM25 index payload")
+            self._bm25 = bm25
+            self._bm25_docs = documents
+            logger.info(f"[BM25] Loaded {len(self._bm25_docs)} chunks")
+        except Exception as e:
+            self._bm25 = None
+            self._bm25_docs = []
+            logger.warning(f"[BM25] Failed to load: {e}")
 
     def _build_qdrant_filter(self, doc_id: Optional[str], current_user=None):
         """Build a Qdrant Filter scoped by document and user access metadata."""
@@ -152,89 +229,260 @@ class LangchainRAGEngine:
         use_rag: bool = True,
         doc_id: Optional[str] = None,
         current_user=None,
+        retrieval_mode: RetrievalMode | str = DEFAULT_RETRIEVAL_MODE,
+        trace: RagTrace | None = None,
+        rerank_candidate_limit_override: int | None = None,
     ) -> Dict[str, Any]:
-        """Main retrieval pipeline: Search -> Fusion -> Stitch -> Final Rank."""
+        """Retrieve context using an explicit ablation-study retrieval mode."""
         if not self._initialized:
             if not self.initialize():
                 raise RuntimeError("RAG Engine is not initialized and initialization failed.")
 
+        mode = normalize_retrieval_mode(retrieval_mode)
         if not use_rag:
-            return {"context": "", "sources": [], "raw_docs": []}
+            return {
+                "context": "",
+                "sources": [],
+                "raw_docs": [],
+                "retrieval_mode": mode,
+                "retrieval_status": "disabled",
+                "failed_retrievers": [],
+            }
 
-        if self.retriever is None or self.ranker is None or self.stitcher is None:
+        retriever = self.retriever
+        ranker = self.ranker
+        stitcher = self.stitcher
+        if retriever is None or ranker is None or stitcher is None:
             raise RuntimeError("RAG Engine components are not initialized.")
 
-        query_type = classify_query(query)
-        # Technical/legal queries need a broader candidate pool before final rerank.
-        # The LLM still receives only top_k docs; this only improves retrieval recall.
-        k = int(top_k or (8 if query_type in ["table", "indikator"] else 5))
+        query_profile = classify_query_profile(query)
+        query_type = query_profile.retrieval_type if mode == "final" else "general"
+        k = int(top_k or 5)
+        if mode == "final" and not top_k and query_type in ["table", "indikator"]:
+            k = 8
         candidate_k = max(k * 3, 15)
-        
-        logger.info(f"[Retrieval] Processing '{query[:50]}...' (type: {query_type})")
-
-        # 1. Expand query into variants for broader recall
-        search_queries = expand_query(query)
-        logger.info(f"[Retrieval] Expanded into {len(search_queries)} search variants")
-
-        # 2. Parallel Search (Vector + BM25 + Table Literal + Indicator Literal)
-        # Vector search: scoped to doc_id when provided — prevents cross-doc contamination in RRF pool
         qdrant_filter = self._build_qdrant_filter(doc_id, current_user)
+        search_queries = expand_query(query) if mode == "final" else [query]
         ranked_lists: List[List[Document]] = []
-        for sq in search_queries:
-            ranked_lists.append(self.retriever.vector_search(sq, candidate_k, qdrant_filter))
-            
-        for sq in search_queries:
-            ranked_lists.append(
-                self.retriever.bm25_search(
-                    sq,
-                    candidate_k * 2,
+        ranked_families: List[str] = []
+        attempted_retrievers: set[str] = set()
+        failed_retrievers: set[str] = set()
+
+        def run_search(family: str, operation: Callable[[], List[Document]]) -> List[Document]:
+            attempted_retrievers.add(family)
+            try:
+                return operation()
+            except Exception as exc:
+                failed_retrievers.add(family)
+                logger.error(
+                    "[Retrieval] family={} failed error_type={}".format(
+                        family,
+                        type(exc).__name__,
+                    )
+                )
+                return []
+
+        if trace:
+            trace.stage(
+                "query.classified",
+                status="ok",
+                retrieval_type=query_type,
+                answer_type=query_profile.answer_type,
+                query_scope=query_profile.scope,
+                retrieval_mode=mode,
+                document_scope=doc_id,
+            )
+            trace.stage(
+                "query.expanded",
+                status="ok",
+                variant_count=len(search_queries),
+                variants=[{"variant_id": index, "query_hash": hashlib.sha256(item.encode("utf-8")).hexdigest()} for index, item in enumerate(search_queries)],
+            )
+
+        query_hash = trace.query_hash if trace else hashlib.sha256(query.encode("utf-8")).hexdigest()
+        logger.info(
+            "[Retrieval] Processing query_hash={} mode={} type={} variants={}".format(
+                query_hash,
+                mode,
+                query_type,
+                len(search_queries),
+            )
+        )
+
+        if mode == "vector_only":
+            final_docs = run_search(
+                "vector",
+                lambda: retriever.vector_search(query, k, qdrant_filter),
+            )[:k]
+        elif mode == "bm25_only":
+            final_docs = run_search(
+                "bm25",
+                lambda: retriever.bm25_search(
+                    query,
+                    k,
                     self._bm25_docs,
                     doc_id,
                     current_user=current_user,
+                ),
+            )[:k]
+        else:
+            for query_index, sq in enumerate(search_queries):
+                ranked_lists.append(
+                    run_search(
+                        "vector",
+                        lambda sq=sq: retriever.vector_search(sq, candidate_k, qdrant_filter),
+                    )
                 )
+                ranked_families.append("vector_original" if query_index == 0 else "vector_expansion")
+
+            for query_index, sq in enumerate(search_queries):
+                ranked_lists.append(
+                    run_search(
+                        "bm25",
+                        lambda sq=sq: retriever.bm25_search(
+                            sq,
+                            candidate_k * 2,
+                            self._bm25_docs,
+                            doc_id,
+                            current_user=current_user,
+                        ),
+                    )
+                )
+                ranked_families.append("bm25_original" if query_index == 0 else "bm25_expansion")
+
+            for query_index, sq in enumerate(search_queries):
+                ranked_lists.append(
+                    run_search(
+                        "table_literal",
+                        lambda sq=sq: retriever.table_literal_search(
+                            sq,
+                            self.collection_name,
+                            doc_id,
+                            current_user=current_user,
+                        ),
+                    )
+                )
+                ranked_families.append("literal_original" if query_index == 0 else "literal_expansion")
+                ranked_lists.append(
+                    run_search(
+                        "indicator_literal",
+                        lambda sq=sq: retriever.indicator_literal_search(
+                            sq,
+                            self.collection_name,
+                            doc_id,
+                            current_user=current_user,
+                        ),
+                    )
+                )
+                ranked_families.append("literal_original" if query_index == 0 else "literal_expansion")
+
+            if trace:
+                trace.stage(
+                    "retrieval.completed",
+                    status="ok",
+                    ranked_list_count=len(ranked_lists),
+                    input_count=sum(len(items) for items in ranked_lists),
+                )
+            candidates = ranker.rrf_fusion(
+                ranked_lists,
+                max_candidates=max(100, candidate_k * 4),
+                list_families=ranked_families,
+                family_weights={
+                    "vector_original": 1.0,
+                    "bm25_original": 1.0,
+                    "literal_original": 0.8,
+                    "vector_expansion": 0.55,
+                    "bm25_expansion": 0.55,
+                    "literal_expansion": 0.4,
+                },
             )
-        for sq in search_queries:
-            ranked_lists.append(
-                self.retriever.table_literal_search(
-                    sq,
+            if trace:
+                trace.stage(
+                    "fusion.rrf.completed",
+                    status="ok",
+                    output_count=len(candidates),
+                    documents=[
+                        {
+                            "doc_id": (doc.metadata or {}).get("doc_id") or (doc.metadata or {}).get("document_id"),
+                            "rank": index,
+                            "score": (doc.metadata or {}).get("rrf_score"),
+                        }
+                        for index, doc in enumerate(candidates[:20], 1)
+                    ],
+                )
+            if mode == "hybrid":
+                final_docs = candidates[:k]
+            else:
+                expanded_docs = stitcher.expand_docs_with_neighbor_context(
+                    candidates,
                     self.collection_name,
-                    doc_id,
                     current_user=current_user,
                 )
-            )
-            ranked_lists.append(
-                self.retriever.indicator_literal_search(
-                    sq,
-                    self.collection_name,
-                    doc_id,
-                    current_user=current_user,
+                if trace:
+                    trace.stage(
+                        "context.stitching.completed",
+                        status="ok",
+                        input_count=len(candidates),
+                        output_count=len(expanded_docs),
+                    )
+                final_docs = ranker.rerank(
+                    query,
+                    expanded_docs,
+                    k,
+                    retrieval_type=query_type,
+                    candidate_limit_override=rerank_candidate_limit_override,
                 )
-            )
+                if trace:
+                    rerank_metadata = final_docs[0].metadata if final_docs else {}
+                    trace.stage(
+                        "rerank.completed",
+                        status="ok",
+                        input_count=len(expanded_docs),
+                        output_count=len(final_docs),
+                        candidate_limit=rerank_metadata.get("rerank_candidate_limit"),
+                        candidate_count=rerank_metadata.get("rerank_candidate_count"),
+                        candidate_policy=rerank_metadata.get("rerank_candidate_policy"),
+                        elapsed_ms=rerank_metadata.get("rerank_elapsed_ms"),
+                        documents=[
+                            {
+                                "doc_id": (doc.metadata or {}).get("doc_id") or (doc.metadata or {}).get("document_id"),
+                                "rank": index,
+                                "score": (doc.metadata or {}).get("rerank_score"),
+                            }
+                            for index, doc in enumerate(final_docs, 1)
+                        ],
+                    )
 
-        # 3. Hybrid Fusion (RRF)
-        # Combine results from all search paths
-        candidates = self.ranker.rrf_fusion(ranked_lists, max_candidates=max(100, candidate_k * 4))
-        
-        # 4. Context Stitching (±1 neighbor chunks for better coherence)
-        expanded_docs = self.stitcher.expand_docs_with_neighbor_context(
-            candidates,
-            self.collection_name,
-            current_user=current_user,
-        )
-        
-        # 5. Final Ranking & Selection
-        final_docs = self.ranker.rerank(query, expanded_docs, k)
-
-        # 6. Format for LLM and UI
         context = self._format_context(final_docs)
-        # sources.append payload is built in _build_sources_list and includes "doc_id":
         sources = self._build_sources_list(final_docs)
+        if failed_retrievers:
+            retrieval_status = (
+                "failed"
+                if attempted_retrievers and failed_retrievers == attempted_retrievers
+                else "partial"
+            )
+        else:
+            retrieval_status = "ok" if final_docs else "ok-empty"
+
+        if trace:
+            trace.stage(
+                "retrieval.outcome",
+                status=retrieval_status,
+                attempted_retrievers=sorted(attempted_retrievers),
+                failed_retrievers=sorted(failed_retrievers),
+                output_count=len(final_docs),
+            )
 
         return {
             "context": context,
             "sources": sources,
             "raw_docs": final_docs,
-            "query_type": query_type
+            "query_type": query_type,
+            "answer_type": query_profile.answer_type,
+            "query_scope": query_profile.scope,
+            "retrieval_mode": mode,
+            "retrieval_status": retrieval_status,
+            "failed_retrievers": sorted(failed_retrievers),
         }
 
     def _format_context(self, docs: List[Document]) -> str:

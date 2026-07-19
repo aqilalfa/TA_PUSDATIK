@@ -225,6 +225,48 @@ class TestLangchainEngineDocIdFilter:
         assert rrf_call.kwargs["max_candidates"] >= 100
         assert rerank_call.args[2] == 5
 
+    def test_retrieve_context_passes_profile_and_traces_adaptive_candidate_stats(self):
+        from app.core.rag.observability import RagTrace
+
+        engine = self._build_engine()
+        reranked = Document(
+            page_content="Pasal 4",
+            metadata={
+                "doc_id": "doc-1",
+                "rerank_score": 0.9,
+                "rerank_candidate_limit": 32,
+                "rerank_candidate_count": 32,
+                "rerank_candidate_policy": "adaptive-specialized",
+            },
+        )
+        engine.ranker.rrf_fusion.return_value = [reranked]
+        engine.stitcher.expand_docs_with_neighbor_context.return_value = [reranked]
+        engine.ranker.rerank.return_value = [reranked]
+        trace = RagTrace.create(session_id="test", user_id=1, query="Apa isi Pasal 4?")
+
+        with patch("app.core.rag.langchain_engine.expand_query", return_value=["Apa isi Pasal 4?"]):
+            engine.retrieve_context("Apa isi Pasal 4?", top_k=5, trace=trace)
+
+        assert engine.ranker.rerank.call_args.kwargs["retrieval_type"] == "pasal"
+        rerank_stage = next(
+            stage for stage in trace.snapshot()["stages"] if stage["stage"] == "rerank.completed"
+        )
+        assert rerank_stage["candidate_limit"] == 32
+        assert rerank_stage["candidate_count"] == 32
+        assert rerank_stage["candidate_policy"] == "adaptive-specialized"
+
+    def test_retrieve_context_supports_explicit_candidate_limit_for_ablation(self):
+        engine = self._build_engine()
+
+        with patch("app.core.rag.langchain_engine.expand_query", return_value=["test query"]):
+            engine.retrieve_context(
+                "test query",
+                top_k=5,
+                rerank_candidate_limit_override=64,
+            )
+
+        assert engine.ranker.rerank.call_args.kwargs["candidate_limit_override"] == 64
+
     def test_retrieve_context_uses_expanded_queries_for_bm25(self):
         """BM25 should receive legal-anchor expanded queries, not only the original query."""
         engine = self._build_engine()
@@ -247,6 +289,110 @@ class TestLangchainEngineDocIdFilter:
 
         assert table_queries == ["original", "Tabel 13 anchor"]
         assert indicator_queries == ["original", "Tabel 13 anchor"]
+
+    def test_vector_only_mode_skips_non_vector_pipeline_stages(self):
+        """Vector-only baseline must not use expansion, BM25, literal search, RRF, stitching, or rerank."""
+        engine = self._build_engine()
+        engine.retriever.vector_search.return_value = [Document(page_content="v", metadata={})]
+
+        with patch("app.core.rag.langchain_engine.expand_query") as expand:
+            result = engine.retrieve_context("original", top_k=5, retrieval_mode="vector_only")
+
+        expand.assert_not_called()
+        engine.retriever.vector_search.assert_called_once()
+        engine.retriever.bm25_search.assert_not_called()
+        engine.retriever.table_literal_search.assert_not_called()
+        engine.retriever.indicator_literal_search.assert_not_called()
+        engine.ranker.rrf_fusion.assert_not_called()
+        engine.ranker.rerank.assert_not_called()
+        engine.stitcher.expand_docs_with_neighbor_context.assert_not_called()
+        assert result["retrieval_mode"] == "vector_only"
+
+    def test_bm25_only_mode_skips_vector_and_hybrid_pipeline_stages(self):
+        """BM25-only baseline must not use vector, literal search, RRF, stitching, or rerank."""
+        engine = self._build_engine()
+        engine.retriever.bm25_search.return_value = [Document(page_content="b", metadata={})]
+
+        with patch("app.core.rag.langchain_engine.expand_query") as expand:
+            result = engine.retrieve_context("original", top_k=5, retrieval_mode="bm25_only")
+
+        expand.assert_not_called()
+        engine.retriever.vector_search.assert_not_called()
+        engine.retriever.bm25_search.assert_called_once()
+        engine.retriever.table_literal_search.assert_not_called()
+        engine.retriever.indicator_literal_search.assert_not_called()
+        engine.ranker.rrf_fusion.assert_not_called()
+        engine.ranker.rerank.assert_not_called()
+        engine.stitcher.expand_docs_with_neighbor_context.assert_not_called()
+        assert result["retrieval_mode"] == "bm25_only"
+
+    def test_hybrid_mode_uses_rrf_without_expansion_stitching_or_rerank(self):
+        """Hybrid baseline uses vector+BM25+literal+RRF only, then takes Top-5."""
+        engine = self._build_engine()
+        fused_docs = [Document(page_content=str(i), metadata={}) for i in range(6)]
+        engine.ranker.rrf_fusion.return_value = fused_docs
+
+        with patch("app.core.rag.langchain_engine.expand_query") as expand:
+            result = engine.retrieve_context("original", top_k=5, retrieval_mode="hybrid")
+
+        expand.assert_not_called()
+        engine.retriever.vector_search.assert_called_once()
+        engine.retriever.bm25_search.assert_called_once()
+        engine.retriever.table_literal_search.assert_called_once()
+        engine.retriever.indicator_literal_search.assert_called_once()
+        engine.ranker.rrf_fusion.assert_called_once()
+        engine.ranker.rerank.assert_not_called()
+        engine.stitcher.expand_docs_with_neighbor_context.assert_not_called()
+        assert result["retrieval_mode"] == "hybrid"
+        assert len(result["raw_docs"]) == 5
+
+    def test_final_mode_keeps_expansion_stitching_and_rerank(self):
+        """Final config keeps query expansion, RRF, context stitching, and metadata reranking."""
+        engine = self._build_engine()
+
+        with patch("app.core.rag.langchain_engine.expand_query", return_value=["original", "expanded"]):
+            result = engine.retrieve_context("original", top_k=5, retrieval_mode="final")
+
+        assert engine.retriever.vector_search.call_count == 2
+        assert engine.retriever.bm25_search.call_count == 2
+        assert engine.retriever.table_literal_search.call_count == 2
+        assert engine.retriever.indicator_literal_search.call_count == 2
+        engine.ranker.rrf_fusion.assert_called_once()
+        engine.stitcher.expand_docs_with_neighbor_context.assert_called_once()
+        engine.ranker.rerank.assert_called_once()
+        assert result["retrieval_mode"] == "final"
+
+    def test_retrieval_outcome_is_ok_empty_when_all_searches_succeed_without_hits(self):
+        engine = self._build_engine()
+
+        with patch("app.core.rag.langchain_engine.expand_query", return_value=["original"]):
+            result = engine.retrieve_context("original", top_k=5)
+
+        assert result["retrieval_status"] == "ok-empty"
+        assert result["failed_retrievers"] == []
+
+    def test_retrieval_outcome_is_partial_when_one_search_family_fails(self):
+        engine = self._build_engine()
+        engine.retriever.vector_search.side_effect = RuntimeError("vector unavailable")
+
+        with patch("app.core.rag.langchain_engine.expand_query", return_value=["original"]):
+            result = engine.retrieve_context("original", top_k=5)
+
+        assert result["retrieval_status"] == "partial"
+        assert result["failed_retrievers"] == ["vector"]
+
+    def test_retrieval_outcome_is_failed_when_every_search_family_fails(self):
+        engine = self._build_engine()
+        engine.retriever.vector_search.side_effect = RuntimeError("vector unavailable")
+        engine.retriever.bm25_search.side_effect = RuntimeError("bm25 unavailable")
+        engine.retriever.table_literal_search.side_effect = RuntimeError("literal unavailable")
+        engine.retriever.indicator_literal_search.side_effect = RuntimeError("literal unavailable")
+
+        with patch("app.core.rag.langchain_engine.expand_query", return_value=["original"]):
+            result = engine.retrieve_context("original", top_k=5)
+
+        assert result["retrieval_status"] == "failed"
+        assert set(result["failed_retrievers"]) == {"vector", "bm25", "table_literal", "indicator_literal"}
 
     def test_build_qdrant_filter_returns_none_for_no_doc_id(self):
         """_build_qdrant_filter(None) must return None (no filter = global search)."""
@@ -281,39 +427,11 @@ class TestLLMClientNumCtx:
     """
 
     def test_num_ctx_is_at_least_8192(self):
-        """
-        We inspect the hardcoded options dict by parsing the module source.
-        The num_ctx value must be >= 8192 after the fix.
-        """
-        import ast
-        import inspect
-        import app.core.rag.engine.llm_client as llm_module
+        from app.core.rag.engine.llm_client import build_ollama_options
 
-        # Parse the stream_answer function source to extract the options dict
-        source = inspect.getsource(llm_module.stream_answer)
-        tree = ast.parse(source)
+        options = build_ollama_options()
 
-        num_ctx_value = None
-        for node in ast.walk(tree):
-            # Look for: "num_ctx": <number>  inside any dict
-            if isinstance(node, ast.Dict):
-                for key, value in zip(node.keys, node.values):
-                    if (
-                        isinstance(key, ast.Constant)
-                        and key.value == "num_ctx"
-                        and isinstance(value, ast.Constant)
-                    ):
-                        num_ctx_value = value.value
-
-        assert num_ctx_value is not None, (
-            "Could not find 'num_ctx' key in stream_answer options dict. "
-            "It must be explicitly set."
-        )
-        assert num_ctx_value >= 8192, (
-            f"num_ctx={num_ctx_value} is too small — silently truncates context. "
-            "5 docs × 800 chars + system prompt + 4 history turns ≈ 3000+ tokens. "
-            "Must be >= 8192 to avoid silent truncation. This is Bug #3."
-        )
+        assert options["num_ctx"] >= 8192
 
     def test_ollama_model_name_uses_qwen3(self):
         """

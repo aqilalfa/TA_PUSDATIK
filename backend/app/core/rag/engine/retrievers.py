@@ -44,7 +44,7 @@ class HybridRetriever:
             return docs
         except Exception as e:
             logger.error(f"[VectorSearch] Failed: {e}")
-            return []
+            raise RuntimeError("Vector search failed") from e
 
     def bm25_search(
         self,
@@ -94,7 +94,7 @@ class HybridRetriever:
             return results
         except Exception as e:
             logger.error(f"[BM25] Search failed: {e}")
-            return []
+            raise RuntimeError("BM25 search failed") from e
 
     def table_literal_search(
         self, 
@@ -144,7 +144,7 @@ class HybridRetriever:
             return docs
         except Exception as e:
             logger.error(f"[LiteralSearch] Failed: {e}")
-            return []
+            raise RuntimeError("Table literal search failed") from e
 
     def indicator_literal_search(
         self, 
@@ -174,6 +174,7 @@ class HybridRetriever:
 
         docs = []
         seen_ids = set()
+        failed_targets = 0
         for field, value in search_targets:
             if len(docs) >= 5:
                 break
@@ -205,7 +206,10 @@ class HybridRetriever:
                     ))
             except Exception as e:
                 logger.warning(f"[LiteralSearch] field={field} failed: {e}")
+                failed_targets += 1
                 continue
 
+        if failed_targets == len(search_targets):
+            raise RuntimeError("Indicator literal search failed for all metadata targets")
         logger.info(f"[LiteralSearch] Found {len(docs)} indicator literal matches")
         return docs

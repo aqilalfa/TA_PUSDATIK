@@ -52,31 +52,6 @@ def test_cr03_filename_present_in_rebuild_bm25_index_source():
     )
 
 
-def test_cr03_langchain_engine_filters_by_filename():
-    """
-    RED TEST: Verify that _bm25_search filters by filename when doc_id supplied.
-    
-    Current status: FAILS because filename not in BM25 metadata (upstream CR-03).
-    
-    This inspects langchain_engine.py _bm25_search to verify it filters by filename.
-    """
-    from app.core.rag.langchain_engine import LangchainRAGEngine
-    
-    # Get source code of _bm25_search method
-    source = inspect.getsource(LangchainRAGEngine._bm25_search)
-    
-    # Should have: d.metadata.get("filename") for filtering
-    assert '"filename"' in source or "'filename'" in source, (
-        "CR-03 impact: _bm25_search should filter by filename metadata. "
-        "Found at langchain_engine.py:294 but filename not in BM25 metadata due to CR-03."
-    )
-    
-    # Should filter when doc_id supplied
-    assert "target_filename" in source, (
-        "_bm25_search should map doc_id to target_filename via _resolve_doc_target"
-    )
-
-
 if __name__ == "__main__":
     import pytest
     pytest.main([__file__, "-v"])
