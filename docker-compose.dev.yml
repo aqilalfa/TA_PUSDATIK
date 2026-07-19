@@ -60,6 +60,7 @@ services:
       - ./backend/app:/app/app
       - ./backend/scripts:/app/scripts
       - ./backend/tests:/app/tests
+      - ./backend/seed_users.py:/app/seed_users.py:ro
 
       # Don't mount Python cache
       - /app/app/__pycache__

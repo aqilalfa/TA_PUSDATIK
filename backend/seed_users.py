@@ -1,45 +1,51 @@
-import asyncio
+import os
+
+from app.auth.local_authenticator import get_password_hash
+from app.config import settings
 from app.database import SessionLocal
 from app.models.db_models import User
 
-db = SessionLocal()
-try:
-    test_pwd_hash = '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW'
-    admin_user = db.query(User).filter(User.email == 'admin@bssn.go.id').first()
-    if not admin_user:
-        admin_user = User(
-            name='Admin PUSDATIK', 
-            email='admin@bssn.go.id',
-            hashed_password=test_pwd_hash,
-            roles='["admin_pusdatik"]',
-            department='PUSDATIK'
-        )
-        db.add(admin_user)
+
+def seed_development_users() -> None:
+    if settings.ENVIRONMENT.strip().lower() == "production":
+        raise RuntimeError("Refusing to seed development users in production")
+
+    password = os.environ.get("SEED_USER_PASSWORD", "").strip()
+    if not password:
+        raise RuntimeError("SEED_USER_PASSWORD must be set explicitly")
+
+    password_hash = get_password_hash(password)
+    users = (
+        {
+            "name": "Admin PUSDATIK",
+            "email": "admin@bssn.go.id",
+            "roles": '["admin_pusdatik"]',
+            "department": "PUSDATIK",
+        },
+        {
+            "name": "Evaluator SPBE",
+            "email": "evaluator@bssn.go.id",
+            "roles": '["staff"]',
+            "department": "DEPUTI_EVALUASI",
+        },
+    )
+
+    db = SessionLocal()
+    try:
+        for values in users:
+            user = db.query(User).filter(User.email == values["email"]).first()
+            if user is None:
+                user = User(**values, hashed_password=password_hash)
+                db.add(user)
+            else:
+                user.name = values["name"]
+                user.hashed_password = password_hash
+                user.roles = values["roles"]
+                user.department = values["department"]
         db.commit()
-        print('[OK] Test user created: admin@bssn.go.id')
-    else:
-        # Update hash if it exists but is wrong
-        admin_user.hashed_password = test_pwd_hash
-        admin_user.roles = '["admin_pusdatik"]'
-        db.commit()
-        print('[OK] Test user updated: admin@bssn.go.id')
-        
-    eval_user = db.query(User).filter(User.email == 'evaluator@bssn.go.id').first()
-    if not eval_user:
-        eval_user = User(
-            name='Evaluator SPBE', 
-            email='evaluator@bssn.go.id',
-            hashed_password=test_pwd_hash,
-            roles='["staff"]',
-            department='DEPUTI_EVALUASI'
-        )
-        db.add(eval_user)
-        db.commit()
-        print('[OK] Test user created: evaluator@bssn.go.id')
-    else:
-        eval_user.hashed_password = test_pwd_hash
-        eval_user.roles = '["staff"]'
-        db.commit()
-        print('[OK] Test user updated: evaluator@bssn.go.id')
-finally:
-    db.close()
+    finally:
+        db.close()
+
+
+if __name__ == "__main__":
+    seed_development_users()

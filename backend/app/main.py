@@ -13,11 +13,20 @@ from app.api.routes import health, users, sessions, chat, models
 from app.api.documents import router as doc_mgmt_router
 from app.api.rag_documents import router as rag_doc_router
 from app.api.auth_routes import router as auth_router
-from app.database import init_database, SessionLocal
+from app.database import init_database
 
 # Silence noisy SQLAlchemy SQL logging
 import logging
 logging.getLogger("sqlalchemy.engine").setLevel(logging.WARNING)
+
+
+def _handle_startup_failure(component: str, error: Exception, environment: str) -> None:
+    """Fail fast for critical startup dependencies in production."""
+    message = f"{component} failed: {error}"
+    if environment.strip().lower() == "production":
+        logger.error(f"[FAIL] {message}")
+        raise error
+    logger.warning(f"[WARN] {message}")
 
 
 # Setup logging
@@ -48,7 +57,7 @@ async def lifespan(app: FastAPI):
         init_database()
         logger.success("[OK] Database initialized")
     except Exception as e:
-        logger.error(f"[FAIL] Database initialization failed: {e}")
+        _handle_startup_failure("Database initialization", e, settings.ENVIRONMENT)
 
     # Jalankan schema migrations (idempotent — aman dipanggil setiap startup)
     try:
@@ -61,61 +70,17 @@ async def lifespan(app: FastAPI):
         for _mig_path in sorted(_migrations_dir.glob("[0-9][0-9][0-9]_*.py")):
             _module_name = f"migration_{_mig_path.stem}"
             _spec = importlib.util.spec_from_file_location(_module_name, _mig_path)
+            if _spec is None or _spec.loader is None:
+                raise RuntimeError(f"Unable to load migration module: {_mig_path}")
             _migration = importlib.util.module_from_spec(_spec)
             _spec.loader.exec_module(_migration)
             if hasattr(_migration, "run"):
                 _migration.run(_db_path)
     except Exception as e:
-        logger.warning(f"[WARN] Schema migration warning: {e}")
+        _handle_startup_failure("Schema migration", e, settings.ENVIRONMENT)
 
-    # Pastikan default user (id=1) ada — dibutuhkan oleh chat session system
-    try:
-        from app.models.db_models import User
-        db = SessionLocal()
-        try:
-            default_user = db.query(User).filter(User.id == 1).first()
-            if not default_user:
-                default_user = User(id=1, name="Default User", email=None)
-                db.add(default_user)
-                db.commit()
-                logger.success("[OK] Default user created (id=1)")
-            else:
-                logger.info("[OK] Default user exists (id=1)")
-                
-            # Create Test Users for JWT Auth
-            from app.auth.local_authenticator import get_password_hash
-            test_pwd_hash = get_password_hash('password123')
-            
-            admin_user = db.query(User).filter(User.email == "admin@bssn.go.id").first()
-            if not admin_user:
-                admin_user = User(
-                    name="Admin PUSDATIK", 
-                    email="admin@bssn.go.id",
-                    hashed_password=test_pwd_hash,
-                    roles='["admin_pusdatik"]',
-                    department="PUSDATIK"
-                )
-                db.add(admin_user)
-                db.commit()
-                logger.success("[OK] Test user created: admin@bssn.go.id (pw: password123)")
-                
-            eval_user = db.query(User).filter(User.email == "evaluator@bssn.go.id").first()
-            if not eval_user:
-                eval_user = User(
-                    name="Evaluator SPBE", 
-                    email="evaluator@bssn.go.id",
-                    hashed_password=test_pwd_hash,
-                    roles='["staff"]',
-                    department="DEPUTI_EVALUASI"
-                )
-                db.add(eval_user)
-                db.commit()
-                logger.success("[OK] Test user created: evaluator@bssn.go.id (pw: password123)")
-                
-        finally:
-            db.close()
-    except Exception as e:
-        logger.warning(f"[WARN] Could not ensure default user: {e}")
+    # User provisioning is intentionally explicit. Run backend/seed_users.py only
+    # in controlled development environments; application startup never creates accounts.
 
     # Pre-load embedding model & Qdrant connection in background thread
     # This prevents the first chat request from blocking the async event loop
