@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T13:56:24.178520",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.25,
+    "context_recall": 0.5,
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.9286
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.25,
+      "context_recall": 0.5,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9286
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_035",
+      "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+      "doc_type": "peraturan",
+      "question": "Siapa saja yang termasuk Penyelenggara Sistem Elektronik Lingkup Privat menurut PP Nomor 71 Tahun 2019?",
+      "answer": "Menurut Pasal 1 ayat (6) PP Nomor 71 Tahun 2019 tentang Penyelenggaraan Sistem dan Transaksi Elektronik, Penyelenggara Sistem Elektronik Lingkup Privat adalah penyelenggaraan Sistem Elektronik oleh Orang, Badan Usaha, dan masyarakat [2].",
+      "ground_truth": "Berdasarkan Pasal 2 ayat (5) PP Nomor 71 Tahun 2019, Penyelenggara Sistem Elektronik Lingkup Privat meliputi: (a) Penyelenggara yang diatur atau diawasi oleh Kementerian/Lembaga; dan (b) Penyelenggara...",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8870158061960963
+      }
+    },
+    {
+      "id": "gt_036",
+      "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+      "doc_type": "peraturan",
+      "question": "Apa tugas dan kewenangan Pemerintah dalam penyelenggaraan sistem dan transaksi elektronik menurut Pasal 9 PP Nomor 71 Tahun 2019?",
+      "answer": "Berdasarkan Pasal 9 Peraturan Pemerintah Nomor 71 Tahun 2019 tentang Penyelenggaraan Sistem dan Transaksi Elektronik, tugas dan kewenangan Pemerintah dalam penyelenggaraan sistem dan transaksi elektronik meliputi beberapa aspek utama sebagai berikut:\n\nPertama, pemerintah memiliki peran untuk memfasi...",
+      "ground_truth": "Berdasarkan Pasal 9 PP Nomor 71 Tahun 2019, peran Pemerintah dalam penyelenggaraan sistem dan Transaksi Elektronik meliputi: (a) memfasilitasi pemanfaatan Teknologi Informasi dan Transaksi Elektronik ...",
+      "scores": {
+        "context_precision": 0.49999999995,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.970281544861495
+      }
+    }
+  ]
+}

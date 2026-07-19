@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T14:32:03.407139",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.4167,
+    "context_recall": 1.0,
+    "faithfulness": 0.4375,
+    "answer_relevancy": 0.7661
+  },
+  "by_doc_type": {
+    "pedoman_spbe": {
+      "context_precision": 0.4167,
+      "context_recall": 1.0,
+      "faithfulness": 0.4375,
+      "answer_relevancy": 0.7661
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_009",
+      "source_doc": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "doc_type": "pedoman_spbe",
+      "question": "Apa saja tujuan dari Pedoman Menteri PANRB Nomor 3 Tahun 2024 tentang pemantauan dan evaluasi SPBE?",
+      "answer": "Tujuan dari Pedoman Menteri Pendayagunaan Aparatur Negara dan Reformasi Birokrasi Republik Indonesia Nomor 3 Tahun 2024 adalah sebagai berikut:\n\n1. Memberikan panduan agar tercapai kesamaan pemahaman dan tindakan dalam proses penilaian pemantauan dan evaluasi SPBE [3].\n2. Memberikan petunjuk/tata ca...",
+      "ground_truth": "Pedoman Menteri PANRB Nomor 3 Tahun 2024 bertujuan untuk: (a) memberikan panduan agar tercapai kesamaan pemahaman dan tindakan dalam proses penilaian pemantauan dan evaluasi SPBE; (b) memberikan petun...",
+      "scores": {
+        "context_precision": 0.3333333333,
+        "context_recall": 1.0,
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.685842115692504
+      }
+    },
+    {
+      "id": "gt_010",
+      "source_doc": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "doc_type": "pedoman_spbe",
+      "question": "Bagaimana perkembangan Indeks SPBE Nasional pada rentang 2021 sampai 2023 berdasarkan Pedoman Menteri PANRB Nomor 3 Tahun 2024?",
+      "answer": "Berdasarkan Pedoman Menteri PANRB Nomor 3 Tahun 2024 dan data evaluasi tahun 2023, Indeks SPBE Nasional menunjukkan peningkatan dari tahun ke tahun pada rentang waktu tersebut [n]. Secara spesifik, nilai Indeks SPBE Nasional tercatat sebesar 2,24 pada tahun 2021, meningkat menjadi 2,34 pada tahun 20...",
+      "ground_truth": "Berdasarkan Tabel 1 dalam Pedoman Menteri PANRB Nomor 3 Tahun 2024 (mengacu Permenpan 59/2020): Indeks SPBE Nasional 2021 = 2,24; 2022 = 2,34; 2023 = 2,79. Domain Layanan secara konsisten memiliki nil...",
+      "scores": {
+        "context_precision": 0.499999999975,
+        "context_recall": 1.0,
+        "faithfulness": 0.875,
+        "answer_relevancy": 0.8463310689150632
+      }
+    }
+  ]
+}

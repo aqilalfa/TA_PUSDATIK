@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-07-09T10:03:40.004068",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "groq",
+  "llm_judge": "qwen/qwen3-32b",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 1,
+  "averages": {
+    "context_precision": 0.25,
+    "context_recall": 1.0,
+    "faithfulness": null,
+    "answer_relevancy": null
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.25,
+      "context_recall": 1.0,
+      "faithfulness": null,
+      "answer_relevancy": null
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "GT-004",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan Keamanan SPBE menurut Perpres 95 Tahun 2018?",
+      "answer": "Menurut Pasal 1 ayat (24) Perpres Nomor 95 Tahun 2018, Keamanan SPBE adalah pengendalian keamanan yang terpadu dalam SPBE [n].",
+      "ground_truth": "Pengendalian keamanan yang terpadu di dalam pelaksanaan SPBE.",
+      "scores": {
+        "context_precision": 0.249999999975,
+        "context_recall": 1.0,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    }
+  ]
+}

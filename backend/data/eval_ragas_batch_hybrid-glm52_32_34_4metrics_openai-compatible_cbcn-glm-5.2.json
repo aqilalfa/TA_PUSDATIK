@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T15:06:45.530021",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.4167,
+    "context_recall": 0.5,
+    "faithfulness": 0.75,
+    "answer_relevancy": 0.3824
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.4167,
+      "context_recall": 0.5,
+      "faithfulness": 0.75,
+      "answer_relevancy": 0.3824
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_033",
+      "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan Sistem Elektronik menurut Pasal 1 PP Nomor 71 Tahun 2019?",
+      "answer": "Berdasarkan dokumen yang diberikan, definisi lengkap mengenai \"Sistem Elektronik\" menurut Pasal 1 PP Nomor 71 Tahun 2019 tidak dapat ditemukan karena konteks referensi hanya menyediakan isi dari Pasal 34 [1], Pasal 27 [4], dan Penjelasan Umum Pasal 104 [5] tanpa menyertakan teks pasal tersebut.\n\nInf...",
+      "ground_truth": "Berdasarkan Pasal 1 angka 1 PP Nomor 71 Tahun 2019, Sistem Elektronik adalah serangkaian perangkat dan prosedur elektronik yang berfungsi mempersiapkan, mengumpulkan, mengolah, menganalisis, menyimpan...",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "faithfulness": 0.75,
+        "answer_relevancy": 0.0
+      }
+    },
+    {
+      "id": "gt_034",
+      "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+      "doc_type": "peraturan",
+      "question": "Apa kewajiban Penyelenggara Sistem Elektronik terkait rekam jejak audit dalam PP Nomor 71 Tahun 2019?",
+      "answer": "Berdasarkan dokumen yang diberikan, berikut adalah kewajiban Penyelenggara Sistem Elektronik terkait rekam jejak audit dalam PP Nomor 71 Tahun 2019:\n\nPenyelenggara Sistem Elektronik wajib menyediakan rekam jejak audit terhadap seluruh kegiatan penyelenggaraan Sistem Elektronik [3]. Rekam jejak audit...",
+      "ground_truth": "Berdasarkan Pasal 22 PP Nomor 71 Tahun 2019: (1) Penyelenggara Sistem Elektronik wajib menyediakan rekam jejak audit terhadap seluruh kegiatan penyelenggaraan Sistem Elektronik; (2) Rekam jejak audit ...",
+      "scores": {
+        "context_precision": 0.8333333332916666,
+        "context_recall": 1.0,
+        "faithfulness": 0.75,
+        "answer_relevancy": 0.7647620577416431
+      }
+    }
+  ]
+}

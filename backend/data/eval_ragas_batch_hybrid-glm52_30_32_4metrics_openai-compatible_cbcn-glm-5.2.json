@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T15:04:31.659179",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.5,
+    "context_recall": 0.5,
+    "faithfulness": 0.625,
+    "answer_relevancy": 0.4698
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.5,
+      "context_recall": 0.5,
+      "faithfulness": 0.625,
+      "answer_relevancy": 0.4698
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_031",
+      "source_doc": "Perpres Nomor 95 Tahun 2018.pdf",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan keamanan SPBE sebagai prinsip berdasarkan Pasal 2 Perpres Nomor 95 Tahun 2018?",
+      "answer": "Berdasarkan dokumen referensi yang tersedia, definisi spesifik mengenai \"keamanan SPBE sebagai prinsip\" dalam Pasal 2 Perpres Nomor 95 Tahun 2018 tidak dapat ditemukan karena konteks hanya merujuk pada isi dari Peraturan BSSN Nomor 4 Tahun 2021 dan PERKA BSSN Nomor 2 Tahun 2023.\n\nDokumen yang tersed...",
+      "ground_truth": "Berdasarkan Pasal 2 ayat (8) Perpres Nomor 95 Tahun 2018, prinsip Keamanan dalam SPBE merupakan kerahasiaan, keutuhan, ketersediaan, keaslian, dan kenirsangkalan (nonrepudiation) sumber daya yang mend...",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "faithfulness": 0.25,
+        "answer_relevancy": 0.0
+      }
+    },
+    {
+      "id": "gt_032",
+      "source_doc": "PP Nomor 71 Tahun 2019.pdf",
+      "doc_type": "peraturan",
+      "question": "Apa kewajiban pendaftaran bagi Penyelenggara Sistem Elektronik (PSE) menurut Pasal 6 PP Nomor 71 Tahun 2019?",
+      "answer": "Menurut Pasal 6 PP Nomor 71 Tahun 2019, setiap Penyelenggara Sistem Elektronik (PSE) sebagaimana dimaksud dalam Pasal 2 ayat (2) wajib melakukan pendaftaran [1]. Kewajiban tersebut harus dilakukan sebelum Sistem Elektronik mulai digunakan oleh Pengguna Sistem Elektronik [1]. Pendaftaran diajukan kep...",
+      "ground_truth": "Berdasarkan Pasal 6 PP Nomor 71 Tahun 2019: (1) Setiap Penyelenggara Sistem Elektronik wajib melakukan pendaftaran; (2) Kewajiban pendaftaran dilakukan sebelum Sistem Elektronik mulai digunakan oleh P...",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9395132969619259
+      }
+    }
+  ]
+}

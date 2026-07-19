@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-07-13T08:56:40.018168",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-claude-haiku-4.5",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "answer_relevancy"
+  ],
+  "total_evaluated": 1,
+  "averages": {
+    "answer_relevancy": 0.6587
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "answer_relevancy": 0.6587
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "GT-001",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan Layanan SPBE?",
+      "answer": "Layanan SPBE didefinisikan sebagai keluaran yang dihasilkan oleh satu atau beberapa fungsi aplikasi SPBE dan yang memiliki nilai manfaat [1], serta merupakan hasil dari proses penyampaian informasi antar sarana/media dalam kerangka penyelenggaraan pemerintahan berbasis elektronik [2]. Definisi ini k...",
+      "ground_truth": "Layanan SPBE adalah keluaran yang dihasilkan oleh satu atau beberapa fungsi aplikasi SPBE dan memiliki nilai manfaat.",
+      "scores": {
+        "answer_relevancy": 0.6586961686113334
+      }
+    }
+  ]
+}

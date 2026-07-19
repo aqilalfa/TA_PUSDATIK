@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T14:43:43.073690",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.125,
+    "context_recall": 0.25,
+    "faithfulness": 0.9286,
+    "answer_relevancy": 0.5
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.125,
+      "context_recall": 0.25,
+      "faithfulness": 0.9286,
+      "answer_relevancy": 0.5
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_017",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+      "doc_type": "peraturan",
+      "question": "Apa saja domain yang digunakan dalam struktur penilaian tingkat kematangan SPBE menurut Permenpan RB Nomor 59 Tahun 2020?",
+      "answer": "Berdasarkan dokumen referensi, berikut adalah rincian domain yang digunakan dalam struktur penilaian tingkat kematangan SPBE menurut Permenpan RB Nomor 59 Tahun 2020:\n\n1. **Domain Kebijakan Internal SPBE** dengan bobot 13% [4].\n2. **Domain Tata Kelola SPBE** dengan bobot 25% [4].\n3. **Domain Manajem...",
+      "ground_truth": "Berdasarkan Permenpan RB Nomor 59 Tahun 2020, struktur penilaian tingkat kematangan SPBE terdiri atas 4 domain: (1) Domain Kebijakan Internal SPBE (Indikator 1â€“10); (2) Domain Tata Kelola SPBE; (3) ...",
+      "scores": {
+        "context_precision": 0.249999999975,
+        "context_recall": 0.5,
+        "faithfulness": 0.8571428571428571,
+        "answer_relevancy": 0.9999999999999994
+      }
+    },
+    {
+      "id": "gt_018",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020.pdf",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan Asesor dalam Peraturan Menteri PANRB Nomor 59 Tahun 2020?",
+      "answer": "Berdasarkan dokumen yang diberikan, istilah \"Asesor\" secara eksplisit tidak didefinisikan atau dijelaskan dalam detail mengenai tugas spesifiknya di bawah Peraturan Menteri PANRB Nomor 59 Tahun 2020; informasi tersebut hanya ditemukan sebagai bagian dari kelompok pihak yang terlibat dalam pemantauan...",
+      "ground_truth": "Berdasarkan Pasal 1 angka 4 Permenpan RB Nomor 59 Tahun 2020, Asesor adalah seseorang yang melakukan penilaian atas penerapan SPBE. Tim Asesor Internal adalah sekelompok Asesor yang melakukan penilaia...",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.0
+      }
+    }
+  ]
+}

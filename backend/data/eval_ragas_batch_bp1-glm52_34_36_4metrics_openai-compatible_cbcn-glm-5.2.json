@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T11:58:20.372338",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.9167,
+    "context_recall": 1.0,
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.7891
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.9167,
+      "context_recall": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7891
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "GT-035",
+      "source_doc": "Peraturan BSSN Nomor 2 Tahun 2023",
+      "doc_type": "peraturan",
+      "question": "Apa saja yang menjadi ruang lingkup penyelenggaraan SPBE di BSSN?",
+      "answer": "Ruang lingkup penyelenggaraan Sistem Pemerintahan Berbasis Elektronik (SPBE) di lingkungan Badan Siber dan Sandi Negara (BSSN) meliputi lima aspek berikut:\n\n1. Tata Kelola SPBE BSSN [1].\n2. Manajemen SPBE BSSN [1].\n3. Audit TIK [1].\n4. Penyelenggara SPBE BSSN [1].\n5. Pemantauan dan evaluasi SPBE BSS...",
+      "ground_truth": "Tata Kelola, Manajemen, Audit TIK, penyelenggara, serta pemantauan & evaluasi SPBE BSSN.",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6046986438465952
+      }
+    },
+    {
+      "id": "GT-036",
+      "source_doc": "Peraturan BSSN Nomor 2 Tahun 2023",
+      "doc_type": "peraturan",
+      "question": "Apa yang menjadi kewajiban Tim Koordinasi SPBE BSSN?",
+      "answer": "Berdasarkan dokumen yang diberikan, berikut adalah kewajiban Tim Koordinasi SPBE BSSN:\n\n1.  Mengarahkan, memantau, dan mengevaluasi pelaksanaan Sistem Pemerintahan Berbasis Elektronik (SPBE) secara terpadu di lingkungan Badan Siber Sandi Negara (BSSN). [3]\n2.  Melakukan koordinasi dengan tim koordin...",
+      "ground_truth": "Mengarahkan, memantau, dan mengevaluasi SPBE internal BSSN, serta berkoordinasi lintas instansi dengan tim nasional.",
+      "scores": {
+        "context_precision": 0.8333333332916666,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9734563645159553
+      }
+    }
+  ]
+}

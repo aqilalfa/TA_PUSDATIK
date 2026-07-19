@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T12:01:59.122713",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 1.0,
+    "context_recall": 0.5,
+    "faithfulness": 0.8333,
+    "answer_relevancy": 0.795
+  },
+  "by_doc_type": {
+    "laporan": {
+      "context_precision": 1.0,
+      "context_recall": 0.5,
+      "faithfulness": 0.8333,
+      "answer_relevancy": 0.795
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "GT-039",
+      "source_doc": "Laporan Evaluasi SPBE Tahun 2024",
+      "doc_type": "laporan",
+      "question": "Apa domain yang mencetak skor evaluasi terendah secara nasional pada Laporan 2024?",
+      "answer": "Berdasarkan data capaian instansi dalam Laporan Pelaksanaan Evaluasi SPBE Tahun 2024 untuk kategori wilayah Nasional, terdapat beberapa entri dengan rincian nilai pada empat domain utama (Kebijakan Internal, Tata Kelola, Manajemen SPBE, dan Layanan SPBE). Analisis terhadap seluruh dokumen yang terse...",
+      "ground_truth": "Domain Manajemen SPBE dengan skor 1,86.",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 0.0,
+        "faithfulness": 0.6666666666666666,
+        "answer_relevancy": 0.7289664970709291
+      }
+    },
+    {
+      "id": "GT-040",
+      "source_doc": "Laporan Evaluasi SPBE Tahun 2024",
+      "doc_type": "laporan",
+      "question": "Instansi pemerintah daerah mana yang meraih nilai SPBE tertinggi di tahun 2024?",
+      "answer": "Berdasarkan data capaian instansi dalam Laporan Pelaksanaan Evaluasi SPBE Tahun 2024, Pemerintah Kabupaten Banyuwangi meraih Indeks SPBE tertinggi dengan nilai akhir sebesar 4,77 [1]. Instansi ini memiliki rincian nilai domain sebagai berikut: Kebijakan Internal (5,0), Tata Kelola (4,6), Manajemen S...",
+      "ground_truth": "Pemerintah Kabupaten Banyuwangi dengan skor kepuasan 4,77.",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.86095659338828
+      }
+    }
+  ]
+}

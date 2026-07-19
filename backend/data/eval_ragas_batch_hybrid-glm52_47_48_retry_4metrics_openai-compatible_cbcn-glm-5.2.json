@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-07-13T15:33:12.276080",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 1,
+  "averages": {
+    "context_precision": null,
+    "context_recall": null,
+    "faithfulness": null,
+    "answer_relevancy": null
+  },
+  "by_doc_type": {
+    "laporan": {
+      "context_precision": null,
+      "context_recall": null,
+      "faithfulness": null,
+      "answer_relevancy": null
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_048",
+      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+      "doc_type": "laporan",
+      "question": "Mana yang lebih besar bobotnya antara Aspek Layanan Administrasi Pemerintahan dan Aspek Layanan Publik berbasis Elektronik?",
+      "answer": "Berdasarkan dokumen Permenpan RB Nomor 59 Tahun 2020, bobot Aspek Layanan Administrasi Pemerintahan Berbasis Elektronik adalah sebesar 27,50%, sedangkan bobot Aspek Layanan Publik Berbasis Elektronik adalah sebesar 18,00% [5]. Dengan demikian, Aspek Layanan Administrasi Pemerintahan Berbasis Elektro...",
+      "ground_truth": "Aspek Layanan Administrasi Pemerintahan Berbasis Elektronik mempunyai bobot 27,5%, lebih besar dari Aspek Layanan Publik Berbasis Elektronik yang berbobot 18%.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    }
+  ]
+}

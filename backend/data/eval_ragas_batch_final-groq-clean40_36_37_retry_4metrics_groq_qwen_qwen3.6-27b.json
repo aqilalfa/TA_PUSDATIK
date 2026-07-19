@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-07-13T21:44:01.821771",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "groq",
+  "llm_judge": "qwen/qwen3.6-27b",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 1,
+  "averages": {
+    "context_precision": null,
+    "context_recall": null,
+    "faithfulness": null,
+    "answer_relevancy": null
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": null,
+      "context_recall": null,
+      "faithfulness": null,
+      "answer_relevancy": null
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_037",
+      "source_doc": "Perpres Nomor 95 Tahun 2018.pdf",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan interoperabilitas dalam prinsip SPBE menurut Perpres Nomor 95 Tahun 2018?",
+      "answer": "Informasi mengenai definisi spesifik \"interoperabilitas\" tidak ditemukan dalam dokumen Perpres Nomor 95 Tahun 2018 Pasal 1 yang telah disediakan sebagai konteks referensi [n]. Dokumen tersebut hanya mendefinisikan istilah seperti Sistem Pemerintahan Berbasis Elektronik (SPBE), Tata Kelola, Manajemen...",
+      "ground_truth": "Berdasarkan Pasal 2 ayat (7) Perpres Nomor 95 Tahun 2018, Interoperabilitas merupakan koordinasi dan kolaborasi antar Proses Bisnis dan antar sistem elektronik, dalam rangka pertukaran data, informasi...",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    }
+  ]
+}

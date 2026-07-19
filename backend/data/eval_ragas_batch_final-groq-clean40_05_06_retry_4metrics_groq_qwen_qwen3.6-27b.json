@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-07-13T21:00:29.590870",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "groq",
+  "llm_judge": "qwen/qwen3.6-27b",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 1,
+  "averages": {
+    "context_precision": 0.0,
+    "context_recall": null,
+    "faithfulness": null,
+    "answer_relevancy": null
+  },
+  "by_doc_type": {
+    "laporan": {
+      "context_precision": 0.0,
+      "context_recall": null,
+      "faithfulness": null,
+      "answer_relevancy": null
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_006",
+      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+      "doc_type": "laporan",
+      "question": "Berapa nilai Indeks SPBE rata-rata untuk Pemerintah Daerah pada tahun 2024 dan bagaimana rincian per domainnya?",
+      "answer": "Berdasarkan dokumen referensi yang tersedia, berikut adalah informasi mengenai Indeks SPBE Pemerintah Daerah pada tahun 2024 beserta rincian per domainnya:\n\n1. Kementerian Koordinator Bidang Kemaritiman dan Investasi memiliki Indeks SPBE Akhir sebesar **3,92** dengan predikat Sangat Baik; rincian ni...",
+      "ground_truth": "Indeks SPBE rata-rata Pemerintah Daerah pada 2024 sebesar 3,08 (predikat \"Baik\"). Rincian per domain: Domain Layanan = 3,79 (Sangat Baik); Domain Kebijakan = 3,33 (Baik); Domain Tata Kelola = 2,51 (Cu...",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    }
+  ]
+}

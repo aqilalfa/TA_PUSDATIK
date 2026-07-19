@@ -1,0 +1,848 @@
+{
+  "generated_at": "2026-07-09T11:59:49.306229",
+  "source_results": "data\\eval_results_full_40_after_legal_prompt_fix_2026-07-08.json",
+  "merge_strategy": "latest non-null metric per question from batch files modified after 2026-07-09 09:00, restricted to 40 uppercase GT IDs",
+  "batch_files": [
+    "eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json",
+    "eval_ragas_batch_02_04_4metrics_groq_qwen_qwen3-32b.json",
+    "eval_ragas_batch_02_03_retry_4metrics_groq_qwen_qwen3-32b.json",
+    "eval_ragas_batch_03_04_retry_4metrics_groq_qwen_qwen3-32b.json",
+    "eval_ragas_batch_04_06_4metrics_groq_qwen_qwen3-32b.json",
+    "eval_ragas_batch_04_05_retry_4metrics_groq_qwen_qwen3-32b.json",
+    "eval_ragas_batch_06_08_4metrics_groq_qwen_qwen3-32b.json",
+    "eval_ragas_batch_06_07_retry_4metrics_groq_qwen_qwen3-32b.json",
+    "eval_ragas_batch_07_08_retry_4metrics_groq_qwen_qwen3-32b.json",
+    "eval_ragas_batch_02_04_4metrics_groq_llama-3.3-70b-versatile.json",
+    "eval_ragas_batch_04_06_4metrics_groq_llama-3.3-70b-versatile.json",
+    "eval_ragas_batch_06_08_4metrics_groq_llama-3.3-70b-versatile.json",
+    "eval_ragas_batch_08_10_4metrics_groq_llama-3.3-70b-versatile.json",
+    "eval_ragas_batch_08_10_attempt2_4metrics_groq_llama-3.1-8b-instant.json",
+    "eval_ragas_batch_10_12_4metrics_groq_llama-3.1-8b-instant.json",
+    "eval_ragas_batch_12_14_4metrics_groq_llama-3.1-8b-instant.json",
+    "eval_ragas_batch_14_16_4metrics_groq_llama-3.1-8b-instant.json"
+  ],
+  "summary": {
+    "context_precision": {
+      "avg": 0.795,
+      "valid": 16,
+      "null": 24
+    },
+    "context_recall": {
+      "avg": 0.9554,
+      "valid": 16,
+      "null": 24
+    },
+    "faithfulness": {
+      "avg": 0.7707,
+      "valid": 16,
+      "null": 24
+    },
+    "answer_relevancy": {
+      "avg": 0.8877,
+      "valid": 16,
+      "null": 24
+    }
+  },
+  "per_question": [
+    {
+      "id": "GT-001",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan Layanan SPBE?",
+      "answer": "Layanan SPBE didefinisikan sebagai keluaran yang dihasilkan oleh satu atau beberapa fungsi aplikasi SPBE dan yang memiliki nilai manfaat [1], serta merupakan hasil dari proses penyampaian informasi antar sarana/media dalam kerangka penyelenggaraan pemerintahan berbasis elektronik [2]. Definisi ini k...",
+      "ground_truth": "Layanan SPBE adalah keluaran yang dihasilkan oleh satu atau beberapa fungsi aplikasi SPBE dan memiliki nilai manfaat.",
+      "scores": {
+        "context_precision": 0.99999999998,
+        "context_recall": 1.0,
+        "faithfulness": 0.3,
+        "answer_relevancy": 0.7752644510168372
+      },
+      "score_sources": {
+        "context_precision": "eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json | qwen/qwen3-32b",
+        "context_recall": "eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json | qwen/qwen3-32b",
+        "faithfulness": "eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json | qwen/qwen3-32b",
+        "answer_relevancy": "eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json | qwen/qwen3-32b"
+      }
+    },
+    {
+      "id": "GT-002",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa definisi Rencana Induk SPBE Nasional?",
+      "answer": "Rencana Induk SPBE Nasional adalah dokumen perencanaan pembangunan Sistem Pemerintahan Berbasis Elektronik (SPBE) secara nasional untuk jangka waktu 20 tahun [1].",
+      "ground_truth": "Dokumen perencanaan pembangunan SPBE secara nasional untuk jangka waktu 20 tahun.",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9397595538104012
+      },
+      "score_sources": {
+        "context_precision": "eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json | qwen/qwen3-32b",
+        "context_recall": "eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json | qwen/qwen3-32b",
+        "faithfulness": "eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json | qwen/qwen3-32b",
+        "answer_relevancy": "eval_ragas_batch_00_02_4metrics_groq_qwen_qwen3-32b.json | qwen/qwen3-32b"
+      }
+    },
+    {
+      "id": "GT-003",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa pengertian Arsitektur SPBE?",
+      "answer": "Berdasarkan dokumen referensi yang diberikan, berikut adalah penjelasan mengenai pengertian Arsitektur SPBE:\n\nArsitektur SPBE didefinisikan sebagai kerangka dasar [1]. Definisi ini juga ditemukan dalam Peraturan Kepala Badan Siber dan Sandi Negara Nomor 2 Tahun 2023 di mana Arsitektur SPBE dijelaska...",
+      "ground_truth": "Kerangka dasar yang mendeskripsikan integrasi proses bisnis, data dan informasi, infrastruktur, aplikasi, dan keamanan SPBE.",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": 1.0,
+        "faithfulness": 0.3333333333333333,
+        "answer_relevancy": 0.9268271419134955
+      },
+      "score_sources": {
+        "context_precision": "eval_ragas_batch_02_04_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "context_recall": "eval_ragas_batch_02_04_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "faithfulness": "eval_ragas_batch_02_04_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "answer_relevancy": "eval_ragas_batch_02_04_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile"
+      }
+    },
+    {
+      "id": "GT-004",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan Keamanan SPBE menurut Perpres 95 Tahun 2018?",
+      "answer": "Menurut Pasal 1 ayat (24) Perpres Nomor 95 Tahun 2018, Keamanan SPBE adalah pengendalian keamanan yang terpadu dalam SPBE [n].",
+      "ground_truth": "Pengendalian keamanan yang terpadu di dalam pelaksanaan SPBE.",
+      "scores": {
+        "context_precision": 0.499999999975,
+        "context_recall": 1.0,
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.9938334943921628
+      },
+      "score_sources": {
+        "context_precision": "eval_ragas_batch_02_04_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "context_recall": "eval_ragas_batch_02_04_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "faithfulness": "eval_ragas_batch_02_04_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "answer_relevancy": "eval_ragas_batch_02_04_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile"
+      }
+    },
+    {
+      "id": "GT-005",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Siapa saja yang termasuk sebagai Pengguna SPBE?",
+      "answer": "Berdasarkan dokumen referensi yang diberikan, berikut adalah daftar pihak yang termasuk Pengguna SPBE:\n\n1. Instansi Pusat (kementerian dan lembaga pemerintah) [2][4].\n2. Pemerintah Daerah (kepala daerah sebagai unsur penyelenggara pemerintahan daerah) [1][2].\n3. Pegawai Aparatur Sipil Negara [1][2]....",
+      "ground_truth": "Instansi pusat, pemerintah daerah, pegawai ASN, perorangan, masyarakat, pelaku usaha, dan pihak lain.",
+      "scores": {
+        "context_precision": 0.8666666666377778,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9903075452459013
+      },
+      "score_sources": {
+        "context_precision": "eval_ragas_batch_04_06_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "context_recall": "eval_ragas_batch_04_06_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "faithfulness": "eval_ragas_batch_04_06_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "answer_relevancy": "eval_ragas_batch_04_06_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile"
+      }
+    },
+    {
+      "id": "GT-006",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa saja prinsip-prinsip dalam pelaksanaan SPBE?",
+      "answer": "Prinsip-prinsip dalam pelaksanaan Sistem Pemerintahan Berbasis Elektronik (SPBE) meliputi tujuh poin sebagai berikut [1]:\n\na. Efektivitas merupakan optimalisasi pemanfaatan sumber daya yang mendukung SPBE yang berhasil guna sesuai dengan kebutuhan [2].  \nb. Keterpaduan merupakan pengintegrasian sumb...",
+      "ground_truth": "Efektivitas, keterpaduan, kesinambungan, efisiensi, akuntabilitas, interoperabilitas, dan keamanan.",
+      "scores": {
+        "context_precision": 0.7555555555303703,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8010589073304453
+      },
+      "score_sources": {
+        "context_precision": "eval_ragas_batch_04_06_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "context_recall": "eval_ragas_batch_04_06_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "faithfulness": "eval_ragas_batch_04_06_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "answer_relevancy": "eval_ragas_batch_04_06_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile"
+      }
+    },
+    {
+      "id": "GT-007",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa tujuan diadakannya Tata Kelola SPBE?",
+      "answer": "Tujuan Tata Kelola SPBE adalah untuk memastikan penerapan unsur-unsur Sistem Pemerintahan Berbasis Elektronik secara terpadu [1], serta bertujuan untuk memastikan penerapan unsur SPBE BSSN secara terpadu sesuai dengan peraturan Kepala Badan Siber dan Sandi Negara Tahun 2023 [3].",
+      "ground_truth": "Memastikan penerapan unsur-unsur SPBE dilaksanakan secara terpadu.",
+      "scores": {
+        "context_precision": 0.8055555555287036,
+        "context_recall": 1.0,
+        "faithfulness": 0.6666666666666666,
+        "answer_relevancy": 0.96928477334863
+      },
+      "score_sources": {
+        "context_precision": "eval_ragas_batch_06_08_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "context_recall": "eval_ragas_batch_06_08_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "faithfulness": "eval_ragas_batch_06_08_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "answer_relevancy": "eval_ragas_batch_06_08_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile"
+      }
+    },
+    {
+      "id": "GT-008",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa saja yang mencakup unsur-unsur SPBE?",
+      "answer": "Unsur-unsur Sistem Pemerintahan Berbasis Elektronik (SPBE) meliputi sepuluh komponen berikut berdasarkan Peraturan Presiden Nomor 95 Tahun 2018 [1]:\n\na. Rencana Induk SPBE Nasional;  \nb. Arsitektur SPBE;  \nc. Peta Rencana SPBE;  \nd. Rencana dan anggaran SPBE;  \ne. Proses Bisnis;  \nf. Data dan inform...",
+      "ground_truth": "Rencana Induk Nasional, Arsitektur, Peta Rencana, rencana & anggaran, proses bisnis, data & informasi, infrastruktur, aplikasi, keamanan, dan layanan SPBE.",
+      "scores": {
+        "context_precision": 0.9166666666361111,
+        "context_recall": 1.0,
+        "faithfulness": 0.9090909090909091,
+        "answer_relevancy": 0.5392543632357966
+      },
+      "score_sources": {
+        "context_precision": "eval_ragas_batch_06_08_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "context_recall": "eval_ragas_batch_06_08_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "faithfulness": "eval_ragas_batch_06_08_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile",
+        "answer_relevancy": "eval_ragas_batch_06_08_4metrics_groq_llama-3.3-70b-versatile.json | llama-3.3-70b-versatile"
+      }
+    },
+    {
+      "id": "GT-009",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Untuk berapa lama Arsitektur SPBE Nasional disusun?",
+      "answer": "Arsitektur SPBE Nasional disusun untuk jangka waktu 5 (lima) tahun [1]. Arsitektur tersebut dilakukan reviu pada paruh waktu dan tahun terakhir pelaksanaan atau sewaktu-waktu sesuai dengan kebutuhan [2]. Selain itu, ketentuan lebih lanjut mengenai pedoman penyiapan arsitektur diatur dalam Peraturan ...",
+      "ground_truth": "Disusun untuk jangka waktu 5 (lima) tahun.",
+      "scores": {
+        "context_precision": 0.7555555555303703,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9253629583219537
+      },
+      "score_sources": {
+        "context_precision": "eval_ragas_batch_08_10_attempt2_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "context_recall": "eval_ragas_batch_08_10_attempt2_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "faithfulness": "eval_ragas_batch_08_10_attempt2_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "answer_relevancy": "eval_ragas_batch_08_10_attempt2_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant"
+      }
+    },
+    {
+      "id": "GT-010",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa definisi Audit Teknologi Informasi dan Komunikasi (TIK)?",
+      "answer": "Audit Teknologi Informasi dan Komunikasi (TIK) adalah proses sistematis untuk memperoleh dan mengevaluasi bukti secara objektif terhadap aset TIK dengan tujuan menetapkan tingkat kesesuaian antara TIK dengan kriteria atau standar yang telah ditetapkan [1]. Dalam konteks Peraturan Badan ini, Audit TI...",
+      "ground_truth": "Proses sistematis guna memperoleh serta mengevaluasi bukti secara objektif terhadap aset TIK guna menetapkan kesesuaiannya dengan kriteria/standar.",
+      "scores": {
+        "context_precision": 0.999999999975,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9130211214653583
+      },
+      "score_sources": {
+        "context_precision": "eval_ragas_batch_08_10_attempt2_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "context_recall": "eval_ragas_batch_08_10_attempt2_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "faithfulness": "eval_ragas_batch_08_10_attempt2_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "answer_relevancy": "eval_ragas_batch_08_10_attempt2_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant"
+      }
+    },
+    {
+      "id": "GT-011",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan Pemantauan SPBE?",
+      "answer": "Pemantauan SPBE adalah proses penilaian secara sistematis melalui verifikasi informasi terhadap hasil Penilaian Mandiri untuk mengukur tingkat kematangan penerapan Sistem Pemerintahan Berbasis Elektronik (SPBE) [1]. Dalam konteks ini, SPBE didefinisikan sebagai penyelenggaraan pemerintahan yang mema...",
+      "ground_truth": "Penilaian secara sistematis melalui verifikasi informasi atas Penilaian Mandiri untuk mengukur kematangan penerapan SPBE.",
+      "scores": {
+        "context_precision": 0.8874999999778125,
+        "context_recall": 1.0,
+        "faithfulness": 0.8,
+        "answer_relevancy": 0.9476318143510993
+      },
+      "score_sources": {
+        "context_precision": "eval_ragas_batch_10_12_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "context_recall": "eval_ragas_batch_10_12_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "faithfulness": "eval_ragas_batch_10_12_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "answer_relevancy": "eval_ragas_batch_10_12_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant"
+      }
+    },
+    {
+      "id": "GT-012",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "question": "Apa definisi Evaluasi SPBE?",
+      "answer": "Evaluasi SPBE adalah proses penilaian secara sistematis melalui verifikasi dan klarifikasi informasi yang dapat dilanjutkan dengan validasi informasi terhadap hasil Penilaian Mandiri untuk mengukur tingkat kematangan penerapan SPBE [1]. Proses ini juga didefinisikan sebagai proses penilaian secara s...",
+      "ground_truth": "Penilaian sistematis via verifikasi, klarifikasi, serta validasi terhadap Penilaian Mandiri guna mengukur kematangan SPBE.",
+      "scores": {
+        "context_precision": 0.9999999999666667,
+        "context_recall": 1.0,
+        "faithfulness": 0.75,
+        "answer_relevancy": 0.8922170489038908
+      },
+      "score_sources": {
+        "context_precision": "eval_ragas_batch_10_12_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "context_recall": "eval_ragas_batch_10_12_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "faithfulness": "eval_ragas_batch_10_12_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "answer_relevancy": "eval_ragas_batch_10_12_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant"
+      }
+    },
+    {
+      "id": "GT-013",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "question": "Siapa yang berhak melakukan Penilaian Dokumen?",
+      "answer": "Penilaian Dokumen dilakukan oleh Tim Asesor Eksternal untuk memverifikasi informasi dari hasil Penilaian Mandiri berdasarkan dokumen jawaban, penjelasan, dan bukti pendukung yang disampaikan oleh Tim Asesor Internal atau Responden [4]. Selain itu, dalam konteks evaluasi SPBE, kegiatan ini juga merup...",
+      "ground_truth": "Tim Asesor Eksternal.",
+      "scores": {
+        "context_precision": 0.4777777777618519,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.951770527331877
+      },
+      "score_sources": {
+        "context_precision": "eval_ragas_batch_12_14_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "context_recall": "eval_ragas_batch_12_14_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "faithfulness": "eval_ragas_batch_12_14_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "answer_relevancy": "eval_ragas_batch_12_14_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant"
+      }
+    },
+    {
+      "id": "GT-014",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan Penilaian Visitasi?",
+      "answer": "Penilaian Visitasi adalah penilaian yang dilakukan dengan melakukan pengamatan langsung oleh Tim Asesor Eksternal pada lokus penilaian untuk validasi informasi [1].",
+      "ground_truth": "Pengamatan langsung oleh Tim Asesor Eksternal di lokasi untuk melakukan validasi informasi.",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 0.2857142857142857,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9403662905002697
+      },
+      "score_sources": {
+        "context_precision": "eval_ragas_batch_12_14_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "context_recall": "eval_ragas_batch_12_14_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "faithfulness": "eval_ragas_batch_12_14_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "answer_relevancy": "eval_ragas_batch_12_14_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant"
+      }
+    },
+    {
+      "id": "GT-015",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "question": "Apa tujuan utama dilakukannya Pemantauan dan Evaluasi SPBE?",
+      "answer": "Tujuan utama pelaksanaan Pemantauan dan Evaluasi SPBE adalah untuk mengukur capaian kemajuan penerapan Sistem Pemerintahan Berbasis Elektronik (SPBE) pada Instansi Pusat dan Pemerintah Daerah [1]. Selain itu, kegiatan ini bertujuan untuk meningkatkan kualitas penerapan SPBE serta meningkatkan kualit...",
+      "ground_truth": "Mengukur kemajuan, meningkatkan kualitas penerapan SPBE, dan meningkatkan kualitas pelayanan publik di pemerintahan.",
+      "scores": {
+        "context_precision": 0.94999999997625,
+        "context_recall": 1.0,
+        "faithfulness": 0.5714285714285714,
+        "answer_relevancy": 0.9716695424011687
+      },
+      "score_sources": {
+        "context_precision": "eval_ragas_batch_14_16_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "context_recall": "eval_ragas_batch_14_16_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "faithfulness": "eval_ragas_batch_14_16_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "answer_relevancy": "eval_ragas_batch_14_16_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant"
+      }
+    },
+    {
+      "id": "GT-016",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "question": "Sebutkan 5 tingkatan kematangan kapabilitas proses SPBE!",
+      "answer": "Berdasarkan dokumen referensi berikut ini adalah 5 (lima) tingkatan kematangan kapabilitas SPBE yang digunakan untuk mengukur tingkat kematangan kebijakan, tata kelola, dan manajemen:\n\n1. **Rintisan**: Proses penerapan Sistem Pemerintahan Berbasis Elektronik (SPBE) dilakukan tanpa perencanaan dan se...",
+      "ground_truth": "Tingkat Rintisan, Terkelola, Terdefinisi, Terpadu dan Terukur, serta Optimum.",
+      "scores": {
+        "context_precision": 0.8041666666465626,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7263222407078155
+      },
+      "score_sources": {
+        "context_precision": "eval_ragas_batch_14_16_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "context_recall": "eval_ragas_batch_14_16_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "faithfulness": "eval_ragas_batch_14_16_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant",
+        "answer_relevancy": "eval_ragas_batch_14_16_4metrics_groq_llama-3.1-8b-instant.json | llama-3.1-8b-instant"
+      }
+    },
+    {
+      "id": "GT-017",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "question": "Apa yang mendefinisikan SPBE Tingkat 1 (Rintisan)?",
+      "answer": "Berdasarkan dokumen yang diberikan, definisi SPBE Tingkat 1 (Rintisan) adalah kondisi di mana proses penerapan Sistem Pemerintahan Berbasis Elektronik dilakukan tanpa perencanaan dan bersifat sewaktu-waktu [1].",
+      "ground_truth": "Proses penerapan SPBE dilakukan tanpa perencanaan yang matang dan secara sewaktu-waktu.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-018",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "question": "Berapa persentase bobot penilaian untuk Domain Layanan SPBE?",
+      "answer": "Berdasarkan dokumen Permenpan RB Nomor 59 Tahun 2020, persentase bobot penilaian untuk Domain Layanan SPBE adalah **45,50%**. [1] Nilai ini merupakan komponen terbesar dalam total bobot penilaiannya yang mencapai 100%. [3]",
+      "ground_truth": "Sebesar 45,50%.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-019",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "question": "Predikat apa yang disematkan pada rentang nilai indeks SPBE 3,5 hingga kurang dari 4,2?",
+      "answer": "Berdasarkan dokumen yang diberikan, rentang nilai indeks SPBE dari 3,5 hingga kurang dari 4,2 disematkan pada predikat \"Sangat Baik\". Hal ini tercantum dalam Tabel 10 di Peraturan Menteri PANRB Nomor 59 Tahun 2020 [1] serta juga disajikan dalam Laporan Pelaksanaan Evaluasi SPBE 2024 yang mengonfirma...",
+      "ground_truth": "Sangat Baik.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-020",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "question": "Apa predikat SPBE untuk nilai indeks di bawah 1,8?",
+      "answer": "Berdasarkan dokumen yang diberikan, untuk nilai indeks SPBE di bawah 1,8, predikatnya adalah **Kurang** [1], [2]. Hal ini tercantum dalam Tabel 13 dan Tabel pada sumber terkait evaluasi SPBE yang mengklasifikasikan rentang nilai tersebut ke dalam kategori \"Kurang\" [4], [5].",
+      "ground_truth": "Predikat Kurang.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-021",
+      "source_doc": "Perpres Nomor 82 Tahun 2023",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan Aplikasi SPBE Prioritas?",
+      "answer": "Aplikasi SPBE Prioritas adalah Aplikasi SPBE yang berdampak luas dan merupakan perwujudan nyata dari Layanan SPBE yang berkualitas serta tepercaya [1][2]. Definisi umum Aplikasi SPBE merujuk pada satu atau sekumpulan program komputer dan prosedur yang dirancang untuk melakukan tugas atau fungsi Laya...",
+      "ground_truth": "Aplikasi SPBE berdampak luas yang merupakan wujud nyata layanan SPBE berkualitas dan tepercaya.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-022",
+      "source_doc": "Perpres Nomor 82 Tahun 2023",
+      "doc_type": "peraturan",
+      "question": "Berapa minimal target pengguna agar sebuah aplikasi beroperasi disebut Aplikasi SPBE Prioritas?",
+      "answer": "Berdasarkan dokumen Perpres Nomor 82 Tahun 2023 tentang Percepatan Transformasi Digital Dan Keterpaduan Layanan Digital Nasional, sebuah Aplikasi SPBE Prioritas dapat berupa aplikasi yang baru akan beroperasi atau telah beroperasi dengan minimal memiliki target Pengguna SPBE sebanyak 200.000 (dua ra...",
+      "ground_truth": "Minimal 200.000 pengguna SPBE.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-023",
+      "source_doc": "Perpres Nomor 82 Tahun 2023",
+      "doc_type": "peraturan",
+      "question": "Siapa lembaga yang secara khusus ditugaskan pemerintah untuk menyelenggarakan Aplikasi SPBE Prioritas?",
+      "answer": "Pemerintah menugaskan Perum Peruri untuk penyelenggaraan Aplikasi SPBE Prioritas [4][5]. Selain itu, kementerian/lembaga penanggung jawab juga melakukan pelaksanaan kendali mutu, pendampingan teknis, dan fasilitasi pengintegrasian terhadap aplikasi tersebut [1][2][3].",
+      "ground_truth": "Perum Peruri.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-024",
+      "source_doc": "Perpres Nomor 82 Tahun 2023",
+      "doc_type": "peraturan",
+      "question": "Kapan batas akhir pertama kali Aplikasi SPBE Prioritas harus diluncurkan secara terpadu?",
+      "answer": "Berdasarkan dokumen Perpres Nomor 82 Tahun 2023 tentang Percepatan Transformasi Digital Dan Keterpaduan Layanan Digital Nasional, batas akhir peluncuran terpadu untuk Aplikasi SPBE Prioritas yang baru akan beroperasi atau dibangun adalah paling lambat pada triwulan III tahun 2024 [1].\n\nSelain itu, b...",
+      "ground_truth": "Triwulan III tahun 2024.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-025",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan Audit Keamanan SPBE?",
+      "answer": "Berdasarkan dokumen yang diberikan, berikut adalah penjelasan mengenai Audit Keamanan SPBE:\n\nAudit Keamanan Sistem Pemerintahan Berbasis Elektronik (SPBE) didefinisikan sebagai audit teknologi informasi dan komunikasi yang mencakup cakupan keamanan SPBE [1]. Dalam konteks peraturan ini, istilah \"aud...",
+      "ground_truth": "Audit teknologi informasi dan komunikasi dengan ruang lingkup khusus pada keamanan SPBE.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-026",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "question": "Apa sajakah yang dapat menjadi objek dari Audit Keamanan SPBE?",
+      "answer": "Berdasarkan dokumen peraturan BSSN Nomor 8 Tahun 2024, berikut adalah rincian objek Audit Keamanan SPBE:\n\n1. Objek Audit Keamanan SPBE terdiri atas Infrastruktur SPBE Nasional dan Infrastruktur SPBE Instansi Pusat serta Pemerintah Daerah [3].\n2. Secara lebih rinci, infrastruktur tersebut mencakup pu...",
+      "ground_truth": "Infrastruktur SPBE Nasional, Infrastruktur Instansi Pusat/Daerah, Aplikasi Umum, dan Aplikasi Khusus.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-027",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "question": "Siapa entitas yang bertugas sebagai Pelaksana Audit Keamanan SPBE?",
+      "answer": "Berdasarkan dokumen yang diberikan, entitas yang bertugas sebagai Pelaksana Audit Keamanan SPBE adalah LATIK pemerintah atau LATIK Terakreditasi yang terdaftar [1]. Selain itu, pelaksanaan audit juga dapat dilakukan oleh auditor pada unit kerja Instansi Pusat atau Pemerintah Daerah untuk kebutuhan i...",
+      "ground_truth": "LATIK cakupan Keamanan SPBE yang meliputi LATIK pemerintah maupun LATIK Terakreditasi yang terdaftar.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-028",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "question": "Aspek apa saja yang harus dipenuhi oleh bukti Audit Keamanan SPBE?",
+      "answer": "Berdasarkan dokumen yang diberikan, berikut adalah rincian aspek-aspek yang harus dipenuhi oleh Bukti Audit Keamanan SPBE:\n\n1.  **Kecukupan**: Aspek ini merupakan ukuran kuantitas bukti Audit Keamanan SPBE yang dipengaruhi oleh penilaian auditor atas risiko dan kualitas bukti tersebut [4].\n2.  **Ket...",
+      "ground_truth": "Bukti audit harus memenuhi aspek kecukupan dan aspek ketepatan.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-029",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "question": "Apa tiga konklusi akhir dari Audit Keamanan SPBE?",
+      "answer": "Berdasarkan dokumen Peraturan Badan Siber dan Sandi Negara Nomor 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik, tiga konklusi akhir dari Audit Keamanan SPBE adalah: (1) memadai; [3] (2) perlu peningkatan; atau [5] (3) tidak memadai.",
+      "ground_truth": "Memadai, perlu peningkatan, atau tidak memadai.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-030",
+      "source_doc": "PP Nomor 71 Tahun 2019",
+      "doc_type": "peraturan",
+      "question": "Siapa saja pihak yang termasuk dalam Penyelenggara Sistem Elektronik Lingkup Publik?",
+      "answer": "Berdasarkan dokumen yang diberikan, berikut adalah penjelasan mengenai pihak-pihak yang termasuk dalam Penyelenggara Sistem Elektronik Lingkup Publik:\n\nPenyelenggara Sistem Elektronik Lingkup Publik mencakup Instansi dan institusi yang ditunjuk oleh Instansi Penyilenggara Negara [2]. Namun, ketentua...",
+      "ground_truth": "Instansi dan institusi yang ditunjuk oleh Instansi, tidak termasuk otoritas sektor keuangan.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-031",
+      "source_doc": "PP Nomor 71 Tahun 2019",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud sistem elektronik yang \"andal\" secara hukum?",
+      "answer": "Berdasarkan dokumen yang diberikan, definisi \"andal\" dalam konteks Sistem Elektronik diatur sebagai berikut:\n\nSistem Elektronik dikatakan memiliki kemampuan yang sesuai dengan kebutuhan penggunaannya [1]. Penyelenggara Sistem Elektronik wajib menyelenggarakan Sistem Elektronik tersebut secara andal ...",
+      "ground_truth": "Sistem elektronik yang memiliki kemampuan sesuai dengan kebutuhan penggunanya.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-032",
+      "source_doc": "PP Nomor 71 Tahun 2019",
+      "doc_type": "peraturan",
+      "question": "Apa sanksi administratif jika Penyelenggara Sistem Elektronik melakukan pelanggaran?",
+      "answer": "Berdasarkan dokumen yang diberikan, berikut adalah rincian sanksi administratif bagi Penyelenggara Sistem Elektronik (PSE) jika terjadi pelanggaran:\n\n1.  **Jenis Sanksi Administratif**\n    Pelanggaran terhadap ketentuan tertentu dalam Peraturan Pemerintah Nomor 71 Tahun 2019 dapat dikenai sanksi adm...",
+      "ground_truth": "Teguran tertulis, denda administratif, penghentian sementara, pemutusan Akses, dan/atau dikeluarkan dari daftar.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-033",
+      "source_doc": "PP Nomor 71 Tahun 2019",
+      "doc_type": "peraturan",
+      "question": "Apa bentuk teknis dari pelaksanaan sanksi pemutusan Akses?",
+      "answer": "Berdasarkan dokumen yang diberikan, bentuk teknis dari pelaksanaan sanksi **pemutusan Akses** meliputi pemblokiran Akses dan/atau penutupan akun serta penghapusan konten [1]. Pelaksanaan sanksi administratif berupa penghentian sementara atau pemutusan Akses dilakukan melalui koordinasi dengan pimpin...",
+      "ground_truth": "Pemblokiran akses, penutupan akun pengguna, dan/atau penghapusan konten terkait.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-034",
+      "source_doc": "Peraturan BSSN Nomor 2 Tahun 2023",
+      "doc_type": "peraturan",
+      "question": "Apa pengertian dari Manajemen SPBE di lingkungan BSSN?",
+      "answer": "Menurut Peraturan Kepala Badan Siber dan Sandi Negara Nomor 2 Tahun 2023, Manajemen SPBE didefinisikan sebagai serangkaian proses untuk mencapai penerapan Sistem Pemerintahan Berbasis Elektronik yang efektif, efisien, dan berkesinambungan, serta layanan SPBE yang berkualitas [1]. Dalam konteks perat...",
+      "ground_truth": "Serangkaian proses pencapaian SPBE yang efektif, efisien, berkesinambungan, dan berkualitas.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-035",
+      "source_doc": "Peraturan BSSN Nomor 2 Tahun 2023",
+      "doc_type": "peraturan",
+      "question": "Apa saja yang menjadi ruang lingkup penyelenggaraan SPBE di BSSN?",
+      "answer": "Ruang lingkup penyelenggaraan Sistem Pemerintahan Berbasis Elektronik (SPBE) di lingkungan Badan Siber dan Sandi Negara (BSSN) meliputi lima aspek berikut:\n\n1. Tata Kelola SPBE BSSN [1].\n2. Manajemen SPBE BSSN [1].\n3. Audit TIK [1].\n4. Penyelenggara SPBE BSSN [1].\n5. Pemantauan dan evaluasi SPBE BSS...",
+      "ground_truth": "Tata Kelola, Manajemen, Audit TIK, penyelenggara, serta pemantauan & evaluasi SPBE BSSN.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-036",
+      "source_doc": "Peraturan BSSN Nomor 2 Tahun 2023",
+      "doc_type": "peraturan",
+      "question": "Apa yang menjadi kewajiban Tim Koordinasi SPBE BSSN?",
+      "answer": "Berdasarkan dokumen yang diberikan, berikut adalah kewajiban Tim Koordinasi SPBE BSSN:\n\n1.  Mengarahkan, memantau, dan mengevaluasi pelaksanaan Sistem Pemerintahan Berbasis Elektronik (SPBE) yang terpadu di Badan Siber Sandi Negara (BSSN). [3]\n2.  Melakukan koordinasi dengan tim koordinasi SPBE nasi...",
+      "ground_truth": "Mengarahkan, memantau, dan mengevaluasi SPBE internal BSSN, serta berkoordinasi lintas instansi dengan tim nasional.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-037",
+      "source_doc": "Peraturan BSSN Nomor 2 Tahun 2023",
+      "doc_type": "peraturan",
+      "question": "Siapa yang bertanggung jawab langsung atas pelaksanaan Audit Keamanan Internal di BSSN?",
+      "answer": "Berdasarkan dokumen yang diberikan, Tim Auditor Keamanan SPBE BSSN adalah pihak yang melaksanakan Audit Keamanan Internal di Lingkungan Badan Siber dan Sandi Negara (BSSN) [1]. Dokumen tersebut tidak secara eksplisit menggunakan frasa \"bertanggung jawab langsung\" untuk mendefinisikan peran spesifik ...",
+      "ground_truth": "Tim Auditor Keamanan SPBE BSSN.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-038",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "question": "Kapan LATIK Terakreditasi wajib menyampaikan laporan periodik audit keamanan mereka?",
+      "answer": "LATIK Terakreditasi yang terdaftar wajib menyampaikan laporan secara periodik atas pelaksanaan Audit Keamanan SPBE setiap bulan April dan Oktober kepada Kepala Badan [1]. Selain itu, LATIK Terakreditasi juga harus melaporkan perubahan daftar auditor Keamanan SPBE paling lambat 2 (dua) hari kerja set...",
+      "ground_truth": "Disampaikan secara periodik pada setiap bulan April dan Oktober.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-039",
+      "source_doc": "Laporan Evaluasi SPBE Tahun 2024",
+      "doc_type": "laporan",
+      "question": "Apa domain yang mencetak skor evaluasi terendah secara nasional pada Laporan 2024?",
+      "answer": "Berdasarkan Laporan Pelaksanaan Evaluasi SPBE 2024, Domain Manajemen mencetak skor rata-rata indeks terendah secara nasional dengan nilai sebesar 1,86 [1]. Skor ini juga merupakan yang paling rendah dibandingkan ketiga domain lainnya (Kebijakan Internal, Tata Kelola, dan Layanan) dalam evaluasi ters...",
+      "ground_truth": "Domain Manajemen SPBE dengan skor 1,86.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "GT-040",
+      "source_doc": "Laporan Evaluasi SPBE Tahun 2024",
+      "doc_type": "laporan",
+      "question": "Instansi pemerintah daerah mana yang meraih nilai SPBE tertinggi di tahun 2024?",
+      "answer": "Berdasarkan dokumen evaluasi SPBE 2024, Pemerintah Kabupaten Banyuwangi merupakan instansi pemerintah daerah yang meraih nilai Indeks SPBE tertinggi dengan skor 4,77 dan predikat \"Memuaskan\" [1]. Data rincian ini juga dikonfirmasi dalam laporan capaian instansi tahun 2025 [3].",
+      "ground_truth": "Pemerintah Kabupaten Banyuwangi dengan skor kepuasan 4,77.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      },
+      "score_sources": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    }
+  ]
+}

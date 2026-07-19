@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T11:31:21.577003",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.75,
+    "context_recall": 1.0,
+    "faithfulness": 0.7879,
+    "answer_relevancy": 0.2699
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.75,
+      "context_recall": 1.0,
+      "faithfulness": 0.7879,
+      "answer_relevancy": 0.2699
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "GT-007",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa tujuan diadakannya Tata Kelola SPBE?",
+      "answer": "Berdasarkan dokumen yang diberikan, informasi mengenai definisi spesifik atau \"tujuan\" diadakannya Tata Kelola SPBE secara eksplisit tidak tercantum dalam konteks referensi yang disediakan [1][2][3][4][5]. Dokumen hanya mendefinisikan **Tata Kelola SPBE** sebagai kerangka kerja untuk memastikan terl...",
+      "ground_truth": "Memastikan penerapan unsur-unsur SPBE dilaksanakan secara terpadu.",
+      "scores": {
+        "context_precision": 0.499999999975,
+        "context_recall": 1.0,
+        "faithfulness": 0.6666666666666666,
+        "answer_relevancy": 0.0
+      }
+    },
+    {
+      "id": "GT-008",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa saja yang mencakup unsur-unsur SPBE?",
+      "answer": "Unsur-unsur Sistem Pemerintahan Berbasis Elektronik (SPBE) sebagaimana diatur dalam Pasal 4 Perpres Nomor 95 Tahun 2018 meliputi: a. Rencana Induk SPBE Nasional; b. Arsitektur SPBE; c. Peta Rencana SPBE; d. rencana dan anggaran SPBE; e. Proses Bisnis; f. data dan informasi; g. Infrastruktur SPBE; h....",
+      "ground_truth": "Rencana Induk Nasional, Arsitektur, Peta Rencana, rencana & anggaran, proses bisnis, data & informasi, infrastruktur, aplikasi, keamanan, dan layanan SPBE.",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 0.9090909090909091,
+        "answer_relevancy": 0.5398788938837663
+      }
+    }
+  ]
+}

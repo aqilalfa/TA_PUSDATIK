@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T12:00:05.325491",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 1.0,
+    "context_recall": 1.0,
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.8078
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8078
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "GT-037",
+      "source_doc": "Peraturan BSSN Nomor 2 Tahun 2023",
+      "doc_type": "peraturan",
+      "question": "Siapa yang bertanggung jawab langsung atas pelaksanaan Audit Keamanan Internal di BSSN?",
+      "answer": "Berdasarkan dokumen yang diberikan, tanggung jawab langsung atas pelaksanaan Audit Keamanan Internal SPBE di Lingkungan BSSN berada pada Tim Auditor Keamanan SPBE BSSN [1]. Pelaksanaan audit tersebut mencakup pengujian terhadap kontrol keamanan dalam perencanaan, pengembangan, operasional, dan peman...",
+      "ground_truth": "Tim Auditor Keamanan SPBE BSSN.",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9424360647609108
+      }
+    },
+    {
+      "id": "GT-038",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "question": "Kapan LATIK Terakreditasi wajib menyampaikan laporan periodik audit keamanan mereka?",
+      "answer": "LATIK Terakreditasi yang terdaftar wajib menyampaikan laporan secara periodik atas pelaksanaan Audit Keamanan SPBE setiap bulan April dan Oktober kepada Kepala Badan [1]. Selain itu, LATIK Terakreditasi juga harus melaporkan perubahan daftar auditor Keamanan SPBE paling lambat 2 (dua) hari kerja set...",
+      "ground_truth": "Disampaikan secara periodik pada setiap bulan April dan Oktober.",
+      "scores": {
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6732338928172815
+      }
+    }
+  ]
+}

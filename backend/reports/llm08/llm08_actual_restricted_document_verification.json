@@ -1,0 +1,108 @@
+{
+  "selected_document": {
+    "id": 5,
+    "doc_id": "5",
+    "filename": "Perpres Nomor 82 Tahun 2023.pdf"
+  },
+  "sqlite_document_security": {
+    "classification": "restricted_audit",
+    "allowed_roles": [
+      "admin_pusdatik"
+    ],
+    "uploaded_by": 1,
+    "uploader_department": null,
+    "source_filename": "Perpres Nomor 82 Tahun 2023.pdf",
+    "source_hash": "sha256:0b2d71b86c9ccc51dd1a79472904d5553dc6e84f9d2fd02006a0e4bc1245cbac"
+  },
+  "sqlite_chunks_restricted": {
+    "restricted_chunks": 43,
+    "total_chunks": 43
+  },
+  "bm25_restricted": {
+    "restricted_chunks": 43,
+    "total_matches": 43
+  },
+  "endpoint_checks": [
+    {
+      "role": "staff",
+      "method": "GET",
+      "path": "/api/documents/5",
+      "status_code": 403,
+      "body_preview": "{\"detail\":\"Akses dokumen ditolak\"}",
+      "id": "staff_document_detail_403",
+      "expected": 403,
+      "verdict": "PASS"
+    },
+    {
+      "role": "staff",
+      "method": "GET",
+      "path": "/api/documents/5/chunks",
+      "status_code": 403,
+      "body_preview": "{\"detail\":\"Akses dokumen ditolak\"}",
+      "id": "staff_document_chunks_403",
+      "expected": 403,
+      "verdict": "PASS"
+    },
+    {
+      "role": "staff",
+      "method": "POST",
+      "path": "/api/documents/5/preview",
+      "status_code": 403,
+      "body_preview": "{\"detail\":\"Akses dokumen ditolak\"}",
+      "id": "staff_document_preview_403",
+      "expected": 403,
+      "verdict": "PASS"
+    },
+    {
+      "role": "staff",
+      "method": "GET",
+      "path": "/api/rag/documents/by-doc-id/5/chunks/0",
+      "status_code": 403,
+      "body_preview": "{\"detail\":\"Document access denied\"}",
+      "id": "staff_citation_chunk_403",
+      "expected": 403,
+      "verdict": "PASS"
+    },
+    {
+      "role": "admin_pusdatik",
+      "method": "GET",
+      "path": "/api/documents/5",
+      "status_code": 200,
+      "body_preview": "{\"doc_id\":\"5\",\"filename\":\"Perpres Nomor 82 Tahun 2023.pdf\",\"document_title\":\"Perpres Nomor 82 Tahun 2023.pdf\",\"doc_type\":\"peraturan\",\"file_size\":0,\"chunk_count\":43,\"status\":\"indexed\",\"created_at\":\"2026-04-26 02:49:10.298103\",\"processed_at\":\"2026-04-26 02:49:26.913039\",\"chunks\":[{\"id\":824,\"chunk_id\":824,\"doc_id\":\"5\",\"document_id\":5,\"canonical_context_id\":\"doc5:idx0\",\"citation_id\":\"perpres_nomor_82_",
+      "id": "admin_document_detail_200",
+      "expected": 200,
+      "verdict": "PASS"
+    },
+    {
+      "role": "admin_pusdatik",
+      "method": "GET",
+      "path": "/api/rag/documents/by-doc-id/5/chunks/0",
+      "status_code": 200,
+      "body_preview": "{\"chunk_index\":0,\"text\":\"SALINAN\\nPRESIDEN\\nREPUBLIK INDONESIA\\nPERATURAN PRESIDEN REPUBLIK INDONESIA\\nNOMOR 82 TAHUN 2023\\nTENTANG\\nPERCEPATAN TRANSFORMASI DIGITAL DAN KETERPADUAN LAYANAN\\nDIGITAL NASIONAL\\nDENGAN RAHMAT TUHAN YANG MAHA ESA\\nPRESIDEN REPUBUK INDONESIA,\\nMenimbang\\na. bahwa untuk mewujudkan pelayanan publik yang\\nberkualitas dan tepercaya, sistem pemerintahan\\nberbasis elektronik ",
+      "id": "admin_citation_chunk_200",
+      "expected": 200,
+      "verdict": "PASS"
+    },
+    {
+      "id": "staff_document_list_excludes_restricted",
+      "role": "staff",
+      "method": "GET",
+      "path": "/api/documents",
+      "status_code": 200,
+      "expected": "200 without exact doc_id=5",
+      "body_preview": "[{\"doc_id\":\"46744099\",\"filename\":\"Laporan Pelaksanaan Evaluasi SPBE 2024.pdf\",\"document_title\":\"Laporan Pelaksanaan Evaluasi SPBE 2024\",\"doc_type\":\"audit\",\"file_size\":9662583,\"chunk_count\":95,\"status\":\"indexed\",\"created_at\":\"2026-06-07 05:11:14.047323\",\"processed_at\":\"2026-06-07 05:14:16.806438\"},{\"doc_id\":\"22d827ca\",\"filename\":\"Peraturan BSSN Nomor 4 Tahun 2021-1.pdf\",\"document_title\":\"Peraturan ",
+      "verdict": "PASS"
+    },
+    {
+      "id": "admin_document_list_includes_restricted",
+      "role": "admin_pusdatik",
+      "method": "GET",
+      "path": "/api/documents",
+      "status_code": 200,
+      "expected": "200 with exact doc_id=5",
+      "body_preview": "[{\"doc_id\":\"46744099\",\"filename\":\"Laporan Pelaksanaan Evaluasi SPBE 2024.pdf\",\"document_title\":\"Laporan Pelaksanaan Evaluasi SPBE 2024\",\"doc_type\":\"audit\",\"file_size\":9662583,\"chunk_count\":95,\"status\":\"indexed\",\"created_at\":\"2026-06-07 05:11:14.047323\",\"processed_at\":\"2026-06-07 05:14:16.806438\"},{\"doc_id\":\"22d827ca\",\"filename\":\"Peraturan BSSN Nomor 4 Tahun 2021-1.pdf\",\"document_title\":\"Peraturan ",
+      "verdict": "PASS"
+    }
+  ],
+  "overall_status": "PASS"
+}

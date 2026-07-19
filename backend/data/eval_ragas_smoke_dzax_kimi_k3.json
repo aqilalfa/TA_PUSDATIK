@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-07-18T19:14:24.229270",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "gl/kimi-k3",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "faithfulness"
+  ],
+  "total_evaluated": 1,
+  "averages": {
+    "faithfulness": null
+  },
+  "by_doc_type": {
+    "laporan": {
+      "faithfulness": null
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_001",
+      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+      "doc_type": "laporan",
+      "question": "Berapa nilai Indeks SPBE Nasional pada tahun 2024 dan apa predikatnya?",
+      "answer": "Berdasarkan dokumen referensi yang tersedia, informasi mengenai **Indeks SPBE Nasional** secara agregat untuk tahun 2024 tidak dapat ditentukan karena laporan evaluasi hanya menyajikan data per instansi individu [1][2]. Namun, berikut adalah rincian nilai Indeks SPBE dan predikatnya bagi beberapa in...",
+      "ground_truth": "Indeks SPBE Nasional pada tahun 2024 sebesar 3,12 (skala 1 hingga 5) dengan predikat \"Baik\". Capaian ini melampaui target yang ditetapkan sebesar 2,85 dan merupakan pertama kalinya Indeks SPBE Nasiona...",
+      "scores": {
+        "faithfulness": null
+      }
+    }
+  ]
+}

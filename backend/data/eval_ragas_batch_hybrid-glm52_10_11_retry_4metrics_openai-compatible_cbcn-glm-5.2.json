@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-07-13T14:36:55.243603",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 1,
+  "averages": {
+    "context_precision": 0.0,
+    "context_recall": 0.0,
+    "faithfulness": 0.3889,
+    "answer_relevancy": 0.0
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.0,
+      "context_recall": 0.0,
+      "faithfulness": 0.3889,
+      "answer_relevancy": 0.0
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_011",
+      "source_doc": "peraturan-bssn-no-8-tahun-2024.pdf",
+      "doc_type": "peraturan",
+      "question": "Apa saja komponen Standar Audit Keamanan SPBE menurut Peraturan BSSN Nomor 8 Tahun 2024 Pasal 2?",
+      "answer": "Berdasarkan dokumen yang diberikan, komponen Standar Audit Keamanan SPBE tidak dijelaskan secara rinci pada Pasal 2 karena konteks referensi hanya mencakup Bab II (Standar Audit) dan Bab III (Tata Cara Audit), di mana detail spesifik mengenai \"Pasal 2\" tidak tersedia. Namun, berdasarkan isi pasal-pa...",
+      "ground_truth": "Berdasarkan Pasal 2 Peraturan BSSN Nomor 8 Tahun 2024, Standar Audit Keamanan SPBE terdiri atas 5 komponen: (a) objek Audit Keamanan SPBE; (b) pelaksana Audit Keamanan SPBE; (c) kriteria Audit Keamana...",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "faithfulness": 0.3888888888888889,
+        "answer_relevancy": 0.0
+      }
+    }
+  ]
+}

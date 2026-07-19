@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T14:48:25.237389",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.375,
+    "context_recall": 0.25,
+    "faithfulness": 0.1,
+    "answer_relevancy": 0.87
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.375,
+      "context_recall": 0.25,
+      "faithfulness": 0.1,
+      "answer_relevancy": 0.87
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_021",
+      "source_doc": "Perpres Nomor 82 Tahun 2023.pdf",
+      "doc_type": "peraturan",
+      "question": "Siapa yang ditugaskan untuk menyelenggarakan Aplikasi SPBE Prioritas dalam Perpres Nomor 82 Tahun 2023?",
+      "answer": "Berdasarkan Perpres Nomor 82 Tahun 2023, kementerian/lembaga penanggung jawab Aplikasi SPBE Prioritas ditugaskan untuk melakukan berbagai kegiatan dalam penyelenggaraan aplikasi tersebut [1]. Tugas yang mencakup meliputi perencanaan, pembangunan dan pengembangan, pengintegrasian, pengoperasian, keam...",
+      "ground_truth": "Perpres Nomor 82 Tahun 2023 menugaskan Perum Peruri (Perusahaan Umum Percetakan Uang Republik Indonesia) untuk menyelenggarakan Aplikasi SPBE Prioritas. Perum Peruri adalah badan usaha milik negara ya...",
+      "scores": {
+        "context_precision": 0.7499999999625,
+        "context_recall": 0.5,
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.8251221090552607
+      }
+    },
+    {
+      "id": "gt_022",
+      "source_doc": "Perpres Nomor 82 Tahun 2023.pdf",
+      "doc_type": "peraturan",
+      "question": "Untuk sektor apa saja Aplikasi SPBE Prioritas diselenggarakan menurut Perpres Nomor 82 Tahun 2023?",
+      "answer": "Berdasarkan dokumen Perpres Nomor 82 Tahun 2023, Aplikasi SPBE Prioritas diselenggarakan untuk mendukung integrasi dan interoperabilitas data serta informasi antar aplikasi prioritas pemerintah [1]. Penugasan penyelenggaraan mencakup perencanaan, pembangunan, pengintegrasian, pengoperasian, keamanan...",
+      "ground_truth": "Berdasarkan Pasal 2 ayat (3) Perpres Nomor 82 Tahun 2023, Aplikasi SPBE Prioritas diselenggarakan untuk mendukung: (a) layanan pendidikan terintegrasi; (b) layanan kesehatan terintegrasi; (c) layanan ...",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "faithfulness": 0.2,
+        "answer_relevancy": 0.9148096704892357
+      }
+    }
+  ]
+}

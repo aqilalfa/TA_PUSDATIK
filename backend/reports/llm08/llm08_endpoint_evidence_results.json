@@ -1,0 +1,76 @@
+{
+  "scope": "FastAPI TestClient endpoint evidence with dependency overrides",
+  "overall_status": "PASS",
+  "checks": [
+    {
+      "method": "GET",
+      "path": "/api/documents/restricted-audit-live-test",
+      "role": "staff",
+      "status_code": 403,
+      "body_preview": "{\"detail\":\"Akses dokumen ditolak\"}",
+      "id": "DOC-DETAIL-STAFF",
+      "expected": 403,
+      "verdict": "PASS"
+    },
+    {
+      "method": "GET",
+      "path": "/api/documents/restricted-audit-live-test/chunks",
+      "role": "staff",
+      "status_code": 403,
+      "body_preview": "{\"detail\":\"Akses dokumen ditolak\"}",
+      "id": "DOC-CHUNKS-STAFF",
+      "expected": 403,
+      "verdict": "PASS"
+    },
+    {
+      "method": "POST",
+      "path": "/api/documents/restricted-audit-live-test/preview",
+      "role": "staff",
+      "status_code": 403,
+      "body_preview": "{\"detail\":\"Akses dokumen ditolak\"}",
+      "id": "DOC-PREVIEW-STAFF",
+      "expected": 403,
+      "verdict": "PASS"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rag/documents/by-doc-id/restricted-audit-live-test/chunks/0",
+      "role": "staff",
+      "status_code": 403,
+      "body_preview": "{\"detail\":\"Document access denied\"}",
+      "id": "CITATION-CHUNK-STAFF",
+      "expected": 403,
+      "verdict": "PASS"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rag/documents/by-doc-id/restricted-audit-live-test/file",
+      "role": "staff",
+      "status_code": 403,
+      "body_preview": "{\"detail\":\"Document access denied\"}",
+      "id": "CITATION-FILE-STAFF",
+      "expected": 403,
+      "verdict": "PASS"
+    },
+    {
+      "method": "GET",
+      "path": "/api/documents/restricted-audit-live-test",
+      "role": "admin_pusdatik",
+      "status_code": 200,
+      "body_preview": "{\"doc_id\":\"restricted-audit-live-test\",\"filename\":\"restricted_audit.pdf\",\"document_title\":\"Restricted Audit Evidence Fixture\",\"doc_type\":\"audit\",\"file_size\":128,\"chunk_count\":1,\"status\":\"indexed\",\"access_metadata\":{\"allowed_roles\":[\"admin_pusdatik\"],\"classification\":\"restricted_audit\",\"source_hash\":\"sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"},\"detail\":true}",
+      "id": "DOC-DETAIL-ADMIN-POSITIVE-CONTROL",
+      "expected": 200,
+      "verdict": "PASS"
+    },
+    {
+      "method": "GET",
+      "path": "/api/rag/documents/by-doc-id/restricted-audit-live-test/chunks/0",
+      "role": "admin_pusdatik",
+      "status_code": 200,
+      "body_preview": "{\"chunk_index\":0,\"text\":\"RESTRICTED_AUDIT_SECRET_CONTEXT\",\"pasal\":\"Pasal Rahasia\",\"bab\":null,\"context_header\":\"Restricted Audit\",\"document_title\":\"Restricted Audit Evidence Fixture\",\"doc_id\":\"restricted-audit-live-test\",\"doc_type\":\"audit\"}",
+      "id": "CITATION-CHUNK-ADMIN-POSITIVE-CONTROL",
+      "expected": 200,
+      "verdict": "PASS"
+    }
+  ]
+}

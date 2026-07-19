@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T14:21:07.610615",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.25,
+    "context_recall": 0.75,
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.9104
+  },
+  "by_doc_type": {
+    "laporan": {
+      "context_precision": 0.25,
+      "context_recall": 0.75,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9104
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_003",
+      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+      "doc_type": "laporan",
+      "question": "Kementerian apa yang mendapatkan nilai Indeks SPBE tertinggi di kategori Instansi Pusat pada evaluasi tahun 2024?",
+      "answer": "Berdasarkan dokumen evaluasi SPBE tahun 2024, Kementerian Komunikasi dan Informatika adalah Instansi Pusat yang memperoleh nilai Indeks SPBE tertinggi dengan skor 4,75 (predikat \"Memuaskan\") [4].",
+      "ground_truth": "Kementerian Komunikasi dan Informatika memperoleh nilai Indeks SPBE tertinggi pada kategori Instansi Pusat dengan skor 4,75 (predikat \"Memuaskan\"). Nilai per domain: D1=5,00; D2=5,00; D3=3,45; D4=5,00...",
+      "scores": {
+        "context_precision": 0.249999999975,
+        "context_recall": 0.5,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9166859937867105
+      }
+    },
+    {
+      "id": "gt_004",
+      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+      "doc_type": "laporan",
+      "question": "Domain mana yang memiliki nilai indeks rata-rata tertinggi dan terendah secara nasional pada evaluasi SPBE 2024?",
+      "answer": "Berdasarkan data evaluasi SPBE 2024 secara nasional, Domain Layanan SPBE memiliki nilai indeks rata-rata tertinggi sebesar 3,79 yang masuk dalam kategori \"Sangat Baik\" [4]. Sementara itu, Domain Manajemen SPBE mencatat nilai indeks rata-rata terendah dengan skor 1,86 yang berada pada kategori \"Kuran...",
+      "ground_truth": "Berdasarkan Tabel 5 Nilai Indeks Domain Nasional 2024: Domain Layanan SPBE memiliki nilai rata-rata tertinggi sebesar 3,78, sedangkan Domain Manajemen SPBE memiliki nilai rata-rata terendah sebesar 1,...",
+      "scores": {
+        "context_precision": 0.249999999975,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9040254388079735
+      }
+    }
+  ]
+}

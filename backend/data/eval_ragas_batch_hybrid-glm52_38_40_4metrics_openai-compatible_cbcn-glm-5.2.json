@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-07-13T15:14:12.911346",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.1,
+    "context_recall": 0.5,
+    "faithfulness": 0.9167,
+    "answer_relevancy": 0.8172
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.2,
+      "context_recall": 1.0,
+      "faithfulness": 0.8333,
+      "answer_relevancy": 0.9521
+    },
+    "laporan": {
+      "context_precision": 0.0,
+      "context_recall": 0.0,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6822
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_039",
+      "source_doc": "Perpres Nomor 82 Tahun 2023.pdf",
+      "doc_type": "peraturan",
+      "question": "Bagaimana pelaporan pelaksanaan penugasan Perum Peruri dilakukan berdasarkan Perpres Nomor 82 Tahun 2023?",
+      "answer": "Berdasarkan Perpres Nomor 82 Tahun 2023 tentang Percepatan Transformasi Digital Dan Keterpaduan Layanan Digital Nasional, pelaporan pelaksanaan penugasan oleh Direksi Perum Peruri dilakukan sebagai berikut:\n\nDireksi Perum Peruri menyampaikan laporan pelaksanaan penugasan kepada Menteri yang menyelen...",
+      "ground_truth": "Berdasarkan Pasal 20 ayat (1) dan (2) Perpres Nomor 82 Tahun 2023, Direksi Perum Peruri menyampaikan laporan pelaksanaan penugasan kepada Menteri yang menyelenggarakan urusan pemerintahan di bidang ap...",
+      "scores": {
+        "context_precision": 0.19999999998,
+        "context_recall": 1.0,
+        "faithfulness": 0.8333333333333334,
+        "answer_relevancy": 0.9521198276836716
+      }
+    },
+    {
+      "id": "gt_040",
+      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+      "doc_type": "laporan",
+      "question": "Apa saja dasar regulasi yang digunakan dalam pelaksanaan Evaluasi SPBE tahun 2024?",
+      "answer": "Berdasarkan dokumen referensi yang tersedia, berikut adalah informasi mengenai dasar dan ketentuan untuk pelaksanaan Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE):\n\n1.  Pelaksanaan pemantauan dan evaluasi SPBE didasarkan pada pedoman evaluasi SPBE [1].\n2.  Pedoman evaluasi tersebut digunak...",
+      "ground_truth": "Evaluasi SPBE 2024 dilakukan berdasarkan tiga regulasi utama: (1) Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE, yang menjadi dasar utama penerapan sistem pemerintahan berbasis elektronik; (2) P...",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.682189080422003
+      }
+    }
+  ]
+}

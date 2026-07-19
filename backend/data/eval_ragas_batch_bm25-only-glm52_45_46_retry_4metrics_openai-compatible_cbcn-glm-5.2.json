@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-07-13T15:22:50.692112",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 1,
+  "averages": {
+    "context_precision": null,
+    "context_recall": null,
+    "faithfulness": null,
+    "answer_relevancy": null
+  },
+  "by_doc_type": {
+    "laporan": {
+      "context_precision": null,
+      "context_recall": null,
+      "faithfulness": null,
+      "answer_relevancy": null
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_046",
+      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+      "doc_type": "laporan",
+      "question": "Bagaimana hierarki Struktur Penilaian Tingkat Kematangan SPBE?",
+      "answer": "Struktur Penilaian Tingkat Kematangan SPBE terdiri dari tiga level hierarki utama yaitu domain, aspek, dan indikator [1]. Setiap domain mencakup satu atau beberapa aspek, sedangkan setiap aspek terdiri dari beberapa indikator yang merupakan informasi spesifik untuk dinilai [2]. Struktur penilaian in...",
+      "ground_truth": "Struktur penilaian SPBE terdiri atas 3 level: (1) domain — area penerapan SPBE yang dinilai; (2) aspek — area spesifik dalam domain; (3) indikator — informasi spesifik dari aspek yang dinilai. Sebuah ...",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    }
+  ]
+}

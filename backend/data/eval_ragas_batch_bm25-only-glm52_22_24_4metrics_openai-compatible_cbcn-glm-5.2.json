@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T14:50:41.251877",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.6667,
+    "context_recall": 1.0,
+    "faithfulness": 0.75,
+    "answer_relevancy": 0.8724
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.6667,
+      "context_recall": 1.0,
+      "faithfulness": 0.75,
+      "answer_relevancy": 0.8724
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_023",
+      "source_doc": "Perpres Nomor 82 Tahun 2023.pdf",
+      "doc_type": "peraturan",
+      "question": "Bersumber dari mana pendanaan untuk penugasan Perum Peruri dalam Perpres Nomor 82 Tahun 2023?",
+      "answer": "Berdasarkan Perpres Nomor 82 Tahun 2023 Pasal 6 ayat (1), pendanaan untuk penugasan Perum Peruri dalam penyelenggaraan Aplikasi SPBE Prioritas bersumber dari anggaran pendapatan dan belanja negara atau sumber-sumber lain yang sah dan tidak mengikat sesuai ketentuan peraturan perundang-undangan [1]. ...",
+      "ground_truth": "Berdasarkan Pasal 6 ayat (1) Perpres Nomor 82 Tahun 2023, pendanaan untuk penugasan Perum Peruri bersumber dari: (a) anggaran pendapatan dan belanja negara (APBN); dan/atau (b) sumber-sumber lain yang...",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.767072282756495
+      }
+    },
+    {
+      "id": "gt_024",
+      "source_doc": "Perpres Nomor 82 Tahun 2023.pdf",
+      "doc_type": "peraturan",
+      "question": "Kapan batas waktu peluncuran Aplikasi SPBE Prioritas yang baru dibangun menurut Perpres Nomor 82 Tahun 2023?",
+      "answer": "Berdasarkan Perpres Nomor 82 Tahun 2023, batas waktu peluncuran Aplikasi SPBE Prioritas yang baru akan beroperasi atau akan dibangun adalah paling lambat pada triwulan III tahun 2024 [1]. Peluncuran tersebut dilakukan secara terpadu untuk pertama kalinya sesuai ketentuan Pasal 2 ayat (4) dan Pasal 3...",
+      "ground_truth": "Berdasarkan Pasal 2 ayat (4) dan (5) Perpres Nomor 82 Tahun 2023, Aplikasi SPBE Prioritas baru maupun yang sedang dikembangkan dari yang sudah beroperasi, keduanya harus telah diintegrasikan dan dilun...",
+      "scores": {
+        "context_precision": 0.3333333333,
+        "context_recall": 1.0,
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.9778165177770424
+      }
+    }
+  ]
+}

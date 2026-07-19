@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T09:02:18.805351",
+  "generated_at": "2026-07-09T11:51:33.533028",
   "framework": "RAGAS 0.2.x",
   "judge_provider": "groq",
   "llm_judge": "llama-3.1-8b-instant",
@@ -12,17 +12,17 @@
   ],
   "total_evaluated": 2,
   "averages": {
-    "context_precision": 1.0,
-    "context_recall": 1.0,
+    "context_precision": 0.7389,
+    "context_recall": 0.6429,
     "faithfulness": 1.0,
-    "answer_relevancy": 0.8121
+    "answer_relevancy": 0.9461
   },
   "by_doc_type": {
     "peraturan": {
-      "context_precision": 1.0,
-      "context_recall": 1.0,
+      "context_precision": 0.7389,
+      "context_recall": 0.6429,
       "faithfulness": 1.0,
-      "answer_relevancy": 0.8121
+      "answer_relevancy": 0.9461
     }
   },
   "metric_descriptions": {
@@ -34,31 +34,31 @@
   },
   "per_question": [
     {
-      "id": "gt_013",
-      "source_doc": "peraturan-bssn-no-8-tahun-2024.pdf",
+      "id": "GT-013",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
       "doc_type": "peraturan",
-      "question": "Apa saja hal pokok teknis yang termasuk dalam Kriteria Audit Keamanan SPBE menurut Pasal 10 Peraturan BSSN Nomor 8 Tahun 2024?",
-      "answer": "Pasal 10 ayat (1) Peraturan BSSN Nomor 8 Tahun 2024 menetapkan bahwa Kriteria Audit Keamanan SPBE meliputi hal pokok teknis pada: a. tata kelola Keamanan SPBE; b. manajemen Keamanan SPBE; c. fungsionalitas dan kinerja Keamanan SPBE; dan d. aspek keamanan lainnya [3].",
-      "ground_truth": "Berdasarkan Pasal 10 ayat (1) Peraturan BSSN Nomor 8 Tahun 2024, Kriteria Audit Keamanan SPBE meliputi hal pokok teknis pada: (a) tata kelola Keamanan SPBE; (b) manajemen Keamanan SPBE (meliputi peren...",
+      "question": "Siapa yang berhak melakukan Penilaian Dokumen?",
+      "answer": "Penilaian Dokumen dilakukan oleh Tim Asesor Eksternal untuk memverifikasi informasi dari hasil Penilaian Mandiri berdasarkan dokumen jawaban, penjelasan, dan bukti pendukung yang disampaikan oleh Tim Asesor Internal atau Responden [4]. Selain itu, dalam konteks evaluasi SPBE, kegiatan ini juga merup...",
+      "ground_truth": "Tim Asesor Eksternal.",
       "scores": {
-        "context_precision": 0.99999999998,
+        "context_precision": 0.4777777777618519,
         "context_recall": 1.0,
         "faithfulness": 1.0,
-        "answer_relevancy": 0.778447936113082
+        "answer_relevancy": 0.951770527331877
       }
     },
     {
-      "id": "gt_014",
-      "source_doc": "peraturan-bssn-no-8-tahun-2024.pdf",
+      "id": "GT-014",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
       "doc_type": "peraturan",
-      "question": "Apa saja informasi yang wajib dimuat dalam surat tugas tim auditor Keamanan SPBE berdasarkan Pasal 37 Peraturan BSSN Nomor 8 Tahun 2024?",
-      "answer": "Berdasarkan Pasal 37 Ayat (2) Peraturan BSSN Nomor 8 Tahun 2024, Surat Tugas Tim Auditor Keamanan SPBE paling sedikit harus memuat informasi sebagai berikut:\n\na. nama auditor Keamanan SPBE [5];  \nb. jabatan dalam tim auditor Keamanan SPBE [5];  \nc. nama Instansi Pusat atau Pemerintah Daerah yang dia...",
-      "ground_truth": "Berdasarkan Pasal 37 ayat (2) Peraturan BSSN Nomor 8 Tahun 2024, surat tugas tim auditor Keamanan SPBE paling sedikit memuat: (a) nama auditor Keamanan SPBE; (b) jabatan dalam tim auditor Keamanan SPB...",
+      "question": "Apa yang dimaksud dengan Penilaian Visitasi?",
+      "answer": "Penilaian Visitasi adalah penilaian yang dilakukan dengan melakukan pengamatan langsung oleh Tim Asesor Eksternal pada lokus penilaian untuk validasi informasi [1].",
+      "ground_truth": "Pengamatan langsung oleh Tim Asesor Eksternal di lokasi untuk melakukan validasi informasi.",
       "scores": {
-        "context_precision": 0.99999999998,
-        "context_recall": 1.0,
+        "context_precision": 0.9999999999,
+        "context_recall": 0.2857142857142857,
         "faithfulness": 1.0,
-        "answer_relevancy": 0.8457949831239034
+        "answer_relevancy": 0.9403662905002697
       }
     }
   ]

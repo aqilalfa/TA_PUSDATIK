@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T11:27:36.276425",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.475,
+    "context_recall": 1.0,
+    "faithfulness": 0.9286,
+    "answer_relevancy": 0.9069
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.475,
+      "context_recall": 1.0,
+      "faithfulness": 0.9286,
+      "answer_relevancy": 0.9069
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "GT-003",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa pengertian Arsitektur SPBE?",
+      "answer": "Arsitektur SPBE didefinisikan sebagai kerangka dasar yang mendeskripsikan integrasi proses bisnis, data dan informasi, infrastruktur SPBE, aplikasi SPBE, dan keamanan SPBE untuk menghasilkan layanan SPBE yang terintegrasi [6] [7].",
+      "ground_truth": "Kerangka dasar yang mendeskripsikan integrasi proses bisnis, data dan informasi, infrastruktur, aplikasi, dan keamanan SPBE.",
+      "scores": {
+        "context_precision": 0.699999999965,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8365943009664579
+      }
+    },
+    {
+      "id": "GT-004",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan Keamanan SPBE menurut Perpres 95 Tahun 2018?",
+      "answer": "**Pasal 1 ayat 24 Perpres Nomor 95 Tahun 2018**\n\nDalam Peraturan Presiden ini yang dimaksud dengan **Keamanan SPBE** adalah pengendalian keamanan yang terpadu dalam SPBE [n].\n\nSeluruh definisi istilah terkait di Pasal 1 Perpres Nomor 95 Tahun 2018 sebagai berikut:\n*   Sistem Pemerintahan Berbasis El...",
+      "ground_truth": "Pengendalian keamanan yang terpadu di dalam pelaksanaan SPBE.",
+      "scores": {
+        "context_precision": 0.249999999975,
+        "context_recall": 1.0,
+        "faithfulness": 0.8571428571428571,
+        "answer_relevancy": 0.9771840442052451
+      }
+    }
+  ]
+}

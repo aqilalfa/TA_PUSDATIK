@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T08:03:02.427920",
+  "generated_at": "2026-07-09T09:55:47.972454",
   "framework": "RAGAS 0.2.x",
   "judge_provider": "groq",
   "llm_judge": "qwen/qwen3-32b",
@@ -12,17 +12,17 @@
   ],
   "total_evaluated": 2,
   "averages": {
-    "context_precision": 0.4167,
+    "context_precision": 0.625,
     "context_recall": 0.5,
-    "faithfulness": 0.5,
-    "answer_relevancy": 0.4385
+    "faithfulness": null,
+    "answer_relevancy": 0.8727
   },
   "by_doc_type": {
-    "laporan": {
-      "context_precision": 0.4167,
+    "peraturan": {
+      "context_precision": 0.625,
       "context_recall": 0.5,
-      "faithfulness": 0.5,
-      "answer_relevancy": 0.4385
+      "faithfulness": null,
+      "answer_relevancy": 0.8727
     }
   },
   "metric_descriptions": {
@@ -34,31 +34,31 @@
   },
   "per_question": [
     {
-      "id": "gt_003",
-      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
-      "doc_type": "laporan",
-      "question": "Kementerian apa yang mendapatkan nilai Indeks SPBE tertinggi di kategori Instansi Pusat pada evaluasi tahun 2024?",
-      "answer": "Berdasarkan dokumen yang diberikan, informasi mengenai Indeks SPBE tertinggi khusus pada **kategori Instansi Pusat** untuk evaluasi tahun 2024 tidak dapat diidentifikasi secara spesifik karena seluruh data dalam konteks referensi hanya menyajikan hasil evaluasi bagi Pemerintah Daerah (seperti Kement...",
-      "ground_truth": "Kementerian Komunikasi dan Informatika memperoleh nilai Indeks SPBE tertinggi pada kategori Instansi Pusat dengan skor 4,75 (predikat \"Memuaskan\"). Nilai per domain: D1=5,00; D2=5,00; D3=3,45; D4=5,00...",
+      "id": "GT-003",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa pengertian Arsitektur SPBE?",
+      "answer": "Berdasarkan dokumen referensi yang diberikan, berikut adalah penjelasan mengenai pengertian Arsitektur SPBE:\n\nArsitektur SPBE didefinisikan sebagai kerangka dasar [1]. Definisi ini juga ditemukan dalam Peraturan Kepala Badan Siber dan Sandi Negara Nomor 2 Tahun 2023 di mana Arsitektur SPBE dijelaska...",
+      "ground_truth": "Kerangka dasar yang mendeskripsikan integrasi proses bisnis, data dan informasi, infrastruktur, aplikasi, dan keamanan SPBE.",
       "scores": {
-        "context_precision": 0.0,
-        "context_recall": 0.0,
-        "faithfulness": 0.0,
-        "answer_relevancy": 0.0
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": null,
+        "answer_relevancy": 0.8727426041949395
       }
     },
     {
-      "id": "gt_004",
-      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
-      "doc_type": "laporan",
-      "question": "Domain mana yang memiliki nilai indeks rata-rata tertinggi dan terendah secara nasional pada evaluasi SPBE 2024?",
-      "answer": "Berdasarkan dokumen Laporan Pelaksanaan Evaluasi SPBE 2024, Domain Layanan merupakan domain dengan nilai indeks rata-rata tertinggi secara nasional sebesar 3,78 [1]. Sebaliknya, Domain Manajemen adalah domain yang memiliki nilai indeks rata-rata terendah pada tingkat nasional dengan skor 1,86 [2].",
-      "ground_truth": "Berdasarkan Tabel 5 Nilai Indeks Domain Nasional 2024: Domain Layanan SPBE memiliki nilai rata-rata tertinggi sebesar 3,78, sedangkan Domain Manajemen SPBE memiliki nilai rata-rata terendah sebesar 1,...",
+      "id": "GT-004",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan Keamanan SPBE menurut Perpres 95 Tahun 2018?",
+      "answer": "Menurut Pasal 1 ayat (24) Perpres Nomor 95 Tahun 2018, Keamanan SPBE adalah pengendalian keamanan yang terpadu dalam SPBE [n].",
+      "ground_truth": "Pengendalian keamanan yang terpadu di dalam pelaksanaan SPBE.",
       "scores": {
-        "context_precision": 0.8333333332916666,
-        "context_recall": 1.0,
-        "faithfulness": 1.0,
-        "answer_relevancy": 0.877037865913682
+        "context_precision": 0.249999999975,
+        "context_recall": 0.0,
+        "faithfulness": null,
+        "answer_relevancy": null
       }
     }
   ]

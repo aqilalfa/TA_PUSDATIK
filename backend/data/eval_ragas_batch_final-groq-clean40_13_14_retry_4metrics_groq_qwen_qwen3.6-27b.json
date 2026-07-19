@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-07-13T21:20:42.519720",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "groq",
+  "llm_judge": "qwen/qwen3.6-27b",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 1,
+  "averages": {
+    "context_precision": null,
+    "context_recall": null,
+    "faithfulness": null,
+    "answer_relevancy": null
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": null,
+      "context_recall": null,
+      "faithfulness": null,
+      "answer_relevancy": null
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_014",
+      "source_doc": "peraturan-bssn-no-8-tahun-2024.pdf",
+      "doc_type": "peraturan",
+      "question": "Apa saja informasi yang wajib dimuat dalam surat tugas tim auditor Keamanan SPBE berdasarkan Pasal 37 Peraturan BSSN Nomor 8 Tahun 2024?",
+      "answer": "Berdasarkan Pasal 37 Ayat (2) Peraturan BSSN Nomor 8 Tahun 2024, Surat Tugas Tim Auditor Keamanan SPBE paling sedikit harus memuat informasi sebagai berikut: a. nama auditor Keamanan SPBE; b. jabatan dalam tim auditor Keamanan SPBE; c. nama Instansi Pusat atau Pemerintah Daerah yang diaudit; dan d. ...",
+      "ground_truth": "Berdasarkan Pasal 37 ayat (2) Peraturan BSSN Nomor 8 Tahun 2024, surat tugas tim auditor Keamanan SPBE paling sedikit memuat: (a) nama auditor Keamanan SPBE; (b) jabatan dalam tim auditor Keamanan SPB...",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    }
+  ]
+}

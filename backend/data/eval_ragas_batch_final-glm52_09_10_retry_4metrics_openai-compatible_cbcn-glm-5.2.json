@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-07-13T17:28:30.891106",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 1,
+  "averages": {
+    "context_precision": null,
+    "context_recall": null,
+    "faithfulness": null,
+    "answer_relevancy": null
+  },
+  "by_doc_type": {
+    "pedoman_spbe": {
+      "context_precision": null,
+      "context_recall": null,
+      "faithfulness": null,
+      "answer_relevancy": null
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_010",
+      "source_doc": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024.pdf",
+      "doc_type": "pedoman_spbe",
+      "question": "Bagaimana perkembangan Indeks SPBE Nasional pada rentang 2021 sampai 2023 berdasarkan Pedoman Menteri PANRB Nomor 3 Tahun 2024?",
+      "answer": "Berdasarkan Pedoman Menteri PANRB Nomor 3 Tahun 2024 dan data evaluasi SPBE tahun 2021 hingga 2023, Indeks SPBE Nasional menunjukkan peningkatan dari tahun ke tahun dengan nilai sebesar 2,24 pada tahun 2021 menjadi 2,79 pada tahun 2023 [2]. Meskipun secara umum terjadi kenaikan capaian indeks terseb...",
+      "ground_truth": "Berdasarkan Tabel 1 dalam Pedoman Menteri PANRB Nomor 3 Tahun 2024 (mengacu Permenpan 59/2020): Indeks SPBE Nasional 2021 = 2,24; 2022 = 2,34; 2023 = 2,79. Domain Layanan secara konsisten memiliki nil...",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    }
+  ]
+}

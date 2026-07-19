@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T10:18:13.127062",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-claude-haiku-4.5",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.5167,
+    "context_recall": 1.0,
+    "faithfulness": 0.7,
+    "answer_relevancy": 0.4222
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.5167,
+      "context_recall": 1.0,
+      "faithfulness": 0.7,
+      "answer_relevancy": 0.4222
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "GT-027",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "question": "Siapa entitas yang bertugas sebagai Pelaksana Audit Keamanan SPBE?",
+      "answer": "Berdasarkan dokumen Peraturan Badan Siber dan Sandi Negara Nomor 8 Tahun 2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik (SPBE), entitas yang bertugas sebagai Pelaksana Audit Keamanan SPBE adalah LATIK cakupan Keamanan SPBE. LATIK ini terdiri dar...",
+      "ground_truth": "LATIK cakupan Keamanan SPBE yang meliputi LATIK pemerintah maupun LATIK Terakreditasi yang terdaftar.",
+      "scores": {
+        "context_precision": 0.19999999998,
+        "context_recall": 1.0,
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.5004033009544958
+      }
+    },
+    {
+      "id": "GT-028",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "question": "Aspek apa saja yang harus dipenuhi oleh bukti Audit Keamanan SPBE?",
+      "answer": "Berdasarkan dokumen yang diberikan, berikut adalah rincian aspek-aspek yang harus dipenuhi oleh bukti Audit Keamanan SPBE:\n\n*   Bukti Audit Keamanan Sistem Pemerintahan Berbasis Elektronik (SPBE) sebagaimana dimaksud dalam Pasal 2 huruf d peraturan BSSN Nomor 8 Tahun 2024 **harus** memenuhi dua aspe...",
+      "ground_truth": "Bukti audit harus memenuhi aspek kecukupan dan aspek ketepatan.",
+      "scores": {
+        "context_precision": 0.8333333332916666,
+        "context_recall": 1.0,
+        "faithfulness": 0.9,
+        "answer_relevancy": 0.3440106727182801
+      }
+    }
+  ]
+}

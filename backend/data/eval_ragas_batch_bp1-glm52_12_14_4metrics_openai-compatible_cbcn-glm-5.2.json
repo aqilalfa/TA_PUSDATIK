@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T11:36:21.319245",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 1.0,
+    "context_recall": 1.0,
+    "faithfulness": 0.75,
+    "answer_relevancy": 0.8713
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "faithfulness": 0.75,
+      "answer_relevancy": 0.8713
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "GT-013",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "question": "Siapa yang berhak melakukan Penilaian Dokumen?",
+      "answer": "Penilaian Dokumen dilakukan oleh Tim Asesor Eksternal untuk memverifikasi informasi dari hasil Penilaian Mandiri [3][4]. Selain itu, dalam pelaksanaan Evaluasi SPBE, kegiatan ini juga merupakan bagian aktivitas yang dilaksanakan bersama dengan Tim Asesor Internal dan Responden sebagai lokus penilaia...",
+      "ground_truth": "Tim Asesor Eksternal.",
+      "scores": {
+        "context_precision": 0.99999999998,
+        "context_recall": 1.0,
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.7823852880726626
+      }
+    },
+    {
+      "id": "GT-014",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan Penilaian Visitasi?",
+      "answer": "Penilaian Visitasi adalah penilaian yang dilakukan dengan melakukan pengamatan langsung oleh Tim Asesor Eksternal pada lokus penilaian untuk validasi informasi [1].",
+      "ground_truth": "Pengamatan langsung oleh Tim Asesor Eksternal di lokasi untuk melakukan validasi informasi.",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.960244193666827
+      }
+    }
+  ]
+}

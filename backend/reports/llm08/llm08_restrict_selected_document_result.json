@@ -1,0 +1,21 @@
+{
+  "selected_document": {
+    "id": 5,
+    "doc_id": "5",
+    "filename": "Perpres Nomor 82 Tahun 2023.pdf",
+    "title": null
+  },
+  "sqlite": {
+    "document_rows_updated": 1,
+    "chunk_rows_updated": 43
+  },
+  "bm25": {
+    "documents_updated": 43
+  },
+  "qdrant": {
+    "reachable": true,
+    "updated": 43,
+    "error": null,
+    "response": "{\"result\":{\"operation_id\":3052,\"status\":\"acknowledged\"},\"status\":\"ok\",\"time\":0.075461978}"
+  }
+}

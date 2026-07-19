@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T10:16:25.054476",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-claude-haiku-4.5",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.7917,
+    "context_recall": 1.0,
+    "faithfulness": 0.8889,
+    "answer_relevancy": 0.6041
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.7917,
+      "context_recall": 1.0,
+      "faithfulness": 0.8889,
+      "answer_relevancy": 0.6041
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "GT-025",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan Audit Keamanan SPBE?",
+      "answer": "Berdasarkan dokumen yang diberikan, berikut adalah penjelasan mengenai Audit Keamanan SPBE:\n\nAudit Keamanan Sistem Pemerintahan Berbasis Elektronik (SPBE) didefinisikan sebagai audit teknologi informasi dan komunikasi yang mencakup cakupan keamanan SPBE [1]. Secara lebih rinci, istilah ini merujuk p...",
+      "ground_truth": "Audit teknologi informasi dan komunikasi dengan ruang lingkup khusus pada keamanan SPBE.",
+      "scores": {
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "faithfulness": 0.7777777777777778,
+        "answer_relevancy": 0.7717201644247155
+      }
+    },
+    {
+      "id": "GT-026",
+      "source_doc": "Peraturan BSSN Nomor 8 Tahun 2024",
+      "doc_type": "peraturan",
+      "question": "Apa sajakah yang dapat menjadi objek dari Audit Keamanan SPBE?",
+      "answer": "Berdasarkan dokumen Peraturan BSSN Nomor 8 Tahun 2024, berikut adalah rincian mengenai objek Audit Keamanan Sistem Pemerintahan Berbasis Elektronik (SPBE):\n\n1. Objek Audit Keamanan SPBE terdiri atas empat kategori utama: Infrastruktur SPBE Nasional, Infrastruktur SPBE Instansi Pusat dan Pemerintah D...",
+      "ground_truth": "Infrastruktur SPBE Nasional, Infrastruktur Instansi Pusat/Daerah, Aplikasi Umum, dan Aplikasi Khusus.",
+      "scores": {
+        "context_precision": 0.5833333333041666,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.4365178672859153
+      }
+    }
+  ]
+}

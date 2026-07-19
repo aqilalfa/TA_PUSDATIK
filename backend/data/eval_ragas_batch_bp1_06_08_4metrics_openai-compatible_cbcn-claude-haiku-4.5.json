@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T09:31:00.309590",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-claude-haiku-4.5",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.9167,
+    "context_recall": 1.0,
+    "faithfulness": 0.6212,
+    "answer_relevancy": 0.56
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.9167,
+      "context_recall": 1.0,
+      "faithfulness": 0.6212,
+      "answer_relevancy": 0.56
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "GT-007",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa tujuan diadakannya Tata Kelola SPBE?",
+      "answer": "Tujuan Tata Kelola SPBE adalah untuk memastikan penerapan unsur-unsur Sistem Pemerintahan Berbasis Elektronik secara terpadu [1], serta bertujuan untuk memastikan penerapan unsur SPBE BSSN secara terpadu sesuai dengan peraturan Kepala Badan Siber dan Sandi Negara Tahun 2023 [3].",
+      "ground_truth": "Memastikan penerapan unsur-unsur SPBE dilaksanakan secara terpadu.",
+      "scores": {
+        "context_precision": 0.8333333332916666,
+        "context_recall": 1.0,
+        "faithfulness": 0.3333333333333333,
+        "answer_relevancy": 0.766954557753623
+      }
+    },
+    {
+      "id": "GT-008",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa saja yang mencakup unsur-unsur SPBE?",
+      "answer": "Unsur-unsur Sistem Pemerintahan Berbasis Elektronik (SPBE) meliputi sepuluh komponen berikut berdasarkan Peraturan Presiden Nomor 95 Tahun 2018 [1]:\n\na. Rencana Induk SPBE Nasional;  \nb. Arsitektur SPBE;  \nc. Peta Rencana SPBE;  \nd. Rencana dan anggaran SPBE;  \ne. Proses Bisnis;  \nf. Data dan inform...",
+      "ground_truth": "Rencana Induk Nasional, Arsitektur, Peta Rencana, rencana & anggaran, proses bisnis, data & informasi, infrastruktur, aplikasi, keamanan, dan layanan SPBE.",
+      "scores": {
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "faithfulness": 0.9090909090909091,
+        "answer_relevancy": 0.3529828995157515
+      }
+    }
+  ]
+}

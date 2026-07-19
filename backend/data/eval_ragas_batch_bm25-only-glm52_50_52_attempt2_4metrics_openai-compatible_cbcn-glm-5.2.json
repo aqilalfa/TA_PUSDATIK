@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T15:44:59.884993",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": null,
+    "context_recall": null,
+    "faithfulness": null,
+    "answer_relevancy": null
+  },
+  "by_doc_type": {
+    "laporan": {
+      "context_precision": null,
+      "context_recall": null,
+      "faithfulness": null,
+      "answer_relevancy": null
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_051",
+      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+      "doc_type": "laporan",
+      "question": "Berapa target peringkat EGDI Indonesia pada periode 2025-2029 dan 2045?",
+      "answer": "Berdasarkan dokumen referensi yang diberikan, berikut adalah informasi mengenai target peringkat EGDI Indonesia pada periode tersebut [1]:\n\nIndonesia menargetkan masuk ke dalam **50 besar dunia** untuk periode tahun 2025–2029 dan **20 besar dunia** pada tahun 2045 sebagai indikator utama transformas...",
+      "ground_truth": "Indonesia menargetkan masuk ke dalam 50 besar peringkat EGDI pada periode 2025-2029 dan 20 besar pada 2045.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "gt_052",
+      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+      "doc_type": "laporan",
+      "question": "Siapa saja anggota Tim Koordinasi SPBE Nasional?",
+      "answer": "Anggota Tim Koordinasi SPBE Nasional terdiri dari Menteri yang menyelenggarakan urusan pemerintahan di bidang komunikasi dan informatika serta lima kepala lembaga atau menteri lainnya sesuai ketentuan Perpres Nomor 95 Tahun 2018 Pasal 41 [5]. Komposisi anggota tersebut meliputi: (a) Ketua, (b) Anggo...",
+      "ground_truth": "Tim Koordinasi SPBE Nasional terdiri dari Kementerian PPN/Bappenas, Kementerian Kominfo, Kementerian Keuangan, Kementerian Dalam Negeri, Badan Siber dan Sandi Negara (BSSN), dan Badan Riset dan Inovas...",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    }
+  ]
+}

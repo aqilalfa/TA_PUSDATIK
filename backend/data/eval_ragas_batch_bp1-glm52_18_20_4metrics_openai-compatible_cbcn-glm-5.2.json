@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T11:41:40.452904",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.85,
+    "context_recall": 1.0,
+    "faithfulness": 0.3333,
+    "answer_relevancy": 0.8096
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.85,
+      "context_recall": 1.0,
+      "faithfulness": 0.3333,
+      "answer_relevancy": 0.8096
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "GT-019",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "question": "Predikat apa yang disematkan pada rentang nilai indeks SPBE 3,5 hingga kurang dari 4,2?",
+      "answer": "Berdasarkan dokumen yang diberikan, rentang nilai indeks SPBE antara 3,5 hingga kurang dari 4,2 disematkan pada predikat **Sangat Baik**. Hal ini tercantum dalam Tabel 10 di mana kategori tersebut mencakup nilai indeks mulai dari 3,5 (termasuk) sampai dengan angka lebih kecil dari 4,2 [1].",
+      "ground_truth": "Sangat Baik.",
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 0.6666666666666666,
+        "answer_relevancy": 0.8092366312188015
+      }
+    },
+    {
+      "id": "GT-020",
+      "source_doc": "Permenpan RB Nomor 59 Tahun 2020",
+      "doc_type": "peraturan",
+      "question": "Apa predikat SPBE untuk nilai indeks di bawah 1,8?",
+      "answer": "Berdasarkan dokumen Permenpan RB Nomor 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik (SPBE), untuk nilai indeks SPBE di bawah 1,8 predikat yang diberikan adalah **Kurang** [3].",
+      "ground_truth": "Predikat Kurang.",
+      "scores": {
+        "context_precision": 0.6999999999766667,
+        "context_recall": 1.0,
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.8100279469223436
+      }
+    }
+  ]
+}

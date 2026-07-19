@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T14:32:19.674753",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": 0.0,
+    "context_recall": 0.0,
+    "faithfulness": 0.8,
+    "answer_relevancy": 0.4193
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": 0.0,
+      "context_recall": 0.0,
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.4193
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_011",
+      "source_doc": "peraturan-bssn-no-8-tahun-2024.pdf",
+      "doc_type": "peraturan",
+      "question": "Apa saja komponen Standar Audit Keamanan SPBE menurut Peraturan BSSN Nomor 8 Tahun 2024 Pasal 2?",
+      "answer": "Berdasarkan dokumen referensi yang tersedia, berikut adalah komponen atau ketentuan terkait Standar Audit Keamanan SPBE menurut Peraturan BSSN Nomor 8 Tahun 2024:\n\n*   Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik (SPBE) dilaksanakan oleh Lembaga Akreditasi dan Tesing Informasi ...",
+      "ground_truth": "Berdasarkan Pasal 2 Peraturan BSSN Nomor 8 Tahun 2024, Standar Audit Keamanan SPBE terdiri atas 5 komponen: (a) objek Audit Keamanan SPBE; (b) pelaksana Audit Keamanan SPBE; (c) kriteria Audit Keamana...",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.83852084223994
+      }
+    },
+    {
+      "id": "gt_012",
+      "source_doc": "peraturan-bssn-no-8-tahun-2024.pdf",
+      "doc_type": "peraturan",
+      "question": "Apa saja objek Audit Keamanan SPBE yang tercantum dalam Pasal 3 Peraturan BSSN Nomor 8 Tahun 2024?",
+      "answer": "Berdasarkan dokumen yang diberikan, informasi mengenai \"objek Audit Keamanan SPBE\" sebagaimana dimaksud pada Pasal 3 Peraturan BSSN Nomor 8 Tahun 2024 tidak dapat diuraikan secara rinci karena konteks hanya merujuk ke Lampiran II untuk detail tersebut. Dokumen menyatakan bahwa matriks objek Audit Ke...",
+      "ground_truth": "Berdasarkan Pasal 3 ayat (1) Peraturan BSSN Nomor 8 Tahun 2024, Objek Audit Keamanan SPBE terdiri atas: (a) Infrastruktur SPBE Nasional (meliputi Pusat Data Nasional, Jaringan Intra pemerintah, dan Si...",
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "faithfulness": 0.6,
+        "answer_relevancy": 0.0
+      }
+    }
+  ]
+}

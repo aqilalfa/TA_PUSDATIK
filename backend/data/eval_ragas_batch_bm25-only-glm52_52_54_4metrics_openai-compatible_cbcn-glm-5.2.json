@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-13T15:49:31.073988",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "openai-compatible",
+  "llm_judge": "cbcn-glm-5.2",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 2,
+  "averages": {
+    "context_precision": null,
+    "context_recall": null,
+    "faithfulness": null,
+    "answer_relevancy": null
+  },
+  "by_doc_type": {
+    "laporan": {
+      "context_precision": null,
+      "context_recall": null,
+      "faithfulness": null,
+      "answer_relevancy": null
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "gt_053",
+      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+      "doc_type": "laporan",
+      "question": "Domain mana yang mencapai indeks tertinggi pada Indeks SPBE Nasional 2024?",
+      "answer": "Berdasarkan dokumen referensi, Domain Layanan SPBE meraih rata-rata nilai indeks tertinggi pada Indeks Maturitas SPBE Nasional tahun 2024 dengan skor sebesar 3,78 [4].",
+      "ground_truth": "Domain Layanan mencapai indeks tertinggi pada tahun 2024 dengan skor 3,78.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    },
+    {
+      "id": "gt_054",
+      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
+      "doc_type": "laporan",
+      "question": "Bagaimana tren capaian Domain Manajemen SPBE Nasional dari 2021 hingga 2024?",
+      "answer": "Berdasarkan dokumen referensi yang tersedia, berikut adalah analisis mengenai tren capaian Domain Manajemen SPBE Nasional dari tahun 2021 hingga 2024:\n\nPada periode evaluasi tahun 2023, penilaian terhadap Domain Manajemen SPBE baru dilaksanakan pada tahun 2021 dan menunjukkan nilai rerata indeks yan...",
+      "ground_truth": "Capaian Domain Manajemen SPBE Nasional menunjukkan tren peningkatan dari 1,23 (2021), 1,32 (2022), 1,66 (2023), hingga 1,86 (2024). Domain ini konsisten berada di posisi terendah dibanding domain lain...",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    }
+  ]
+}

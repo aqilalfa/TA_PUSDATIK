@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T07:56:28.140270",
+  "generated_at": "2026-07-09T09:21:22.575004",
   "framework": "RAGAS 0.2.x",
   "judge_provider": "groq",
   "llm_judge": "qwen/qwen3-32b",
@@ -12,17 +12,17 @@
   ],
   "total_evaluated": 2,
   "averages": {
-    "context_precision": 0.5,
-    "context_recall": 0.5,
-    "faithfulness": 1.0,
-    "answer_relevancy": 0.3161
+    "context_precision": 1.0,
+    "context_recall": 1.0,
+    "faithfulness": 0.65,
+    "answer_relevancy": 0.8575
   },
   "by_doc_type": {
-    "laporan": {
-      "context_precision": 0.5,
-      "context_recall": 0.5,
-      "faithfulness": 1.0,
-      "answer_relevancy": 0.3161
+    "peraturan": {
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "faithfulness": 0.65,
+      "answer_relevancy": 0.8575
     }
   },
   "metric_descriptions": {
@@ -34,31 +34,31 @@
   },
   "per_question": [
     {
-      "id": "gt_001",
-      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
-      "doc_type": "laporan",
-      "question": "Berapa nilai Indeks SPBE Nasional pada tahun 2024 dan apa predikatnya?",
-      "answer": "Berdasarkan dokumen yang diberikan, informasi mengenai satu angka tunggal untuk \"Indeks SPBE Nasional\" pada tahun 2024 tidak ditemukan secara eksplisit sebagai agregat keseluruhan; namun tersedia data indeks per instansi di bawah kategori wilayah nasional [1][2]. Berikut adalah rincian nilai Indeks ...",
-      "ground_truth": "Indeks SPBE Nasional pada tahun 2024 sebesar 3,12 (skala 1 hingga 5) dengan predikat \"Baik\". Capaian ini melampaui target yang ditetapkan sebesar 2,85 dan merupakan pertama kalinya Indeks SPBE Nasiona...",
+      "id": "GT-001",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa yang dimaksud dengan Layanan SPBE?",
+      "answer": "Layanan SPBE didefinisikan sebagai keluaran yang dihasilkan oleh satu atau beberapa fungsi aplikasi SPBE dan yang memiliki nilai manfaat [1], serta merupakan hasil dari proses penyampaian informasi antar sarana/media dalam kerangka penyelenggaraan pemerintahan berbasis elektronik [2]. Definisi ini k...",
+      "ground_truth": "Layanan SPBE adalah keluaran yang dihasilkan oleh satu atau beberapa fungsi aplikasi SPBE dan memiliki nilai manfaat.",
       "scores": {
-        "context_precision": 0.0,
-        "context_recall": 0.0,
-        "faithfulness": 1.0,
-        "answer_relevancy": 0.0
+        "context_precision": 0.99999999998,
+        "context_recall": 1.0,
+        "faithfulness": 0.3,
+        "answer_relevancy": 0.7752644510168372
       }
     },
     {
-      "id": "gt_002",
-      "source_doc": "20250313_Laporan_Pelaksanaan_Evaluasi_SPBE_2024.pdf",
-      "doc_type": "laporan",
-      "question": "Instansi mana yang mendapatkan nilai Indeks SPBE tertinggi dari kategori Pemerintah Daerah pada evaluasi SPBE 2024?",
-      "answer": "Berdasarkan dokumen evaluasi SPBE 2024, Pemerintah Kabupaten Banyuwangi adalah instansi dari kategori Pemerintah Daerah yang memperoleh nilai Indeks SPBE tertinggi dengan skor sebesar 4,77 [1]. Capaian ini menempatkan instansi tersebut pada predikat \"Memuaskan\" dan menjadi lokus tertinggi untuk Peme...",
-      "ground_truth": "Pemerintah Kabupaten Banyuwangi meraih Indeks SPBE tertinggi pada kategori Pemerintah Daerah dengan skor 4,77 (predikat \"Memuaskan\"). Skor ini dicapai dengan nilai D1=5,00; D2=4,60; D3=4,18; D4=5,00.",
+      "id": "GT-002",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa definisi Rencana Induk SPBE Nasional?",
+      "answer": "Rencana Induk SPBE Nasional adalah dokumen perencanaan pembangunan Sistem Pemerintahan Berbasis Elektronik (SPBE) secara nasional untuk jangka waktu 20 tahun [1].",
+      "ground_truth": "Dokumen perencanaan pembangunan SPBE secara nasional untuk jangka waktu 20 tahun.",
       "scores": {
-        "context_precision": 0.9999999999666667,
+        "context_precision": 0.9999999999,
         "context_recall": 1.0,
         "faithfulness": 1.0,
-        "answer_relevancy": 0.632168953357409
+        "answer_relevancy": 0.9397595538104012
       }
     }
   ]

@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-07-09T10:16:17.045270",
+  "framework": "RAGAS 0.2.x",
+  "judge_provider": "groq",
+  "llm_judge": "qwen/qwen3-32b",
+  "embed_model": "firqaaa/indo-sentence-bert-base",
+  "metrics_requested": [
+    "context_precision",
+    "context_recall",
+    "faithfulness",
+    "answer_relevancy"
+  ],
+  "total_evaluated": 1,
+  "averages": {
+    "context_precision": null,
+    "context_recall": null,
+    "faithfulness": null,
+    "answer_relevancy": null
+  },
+  "by_doc_type": {
+    "peraturan": {
+      "context_precision": null,
+      "context_recall": null,
+      "faithfulness": null,
+      "answer_relevancy": null
+    }
+  },
+  "metric_descriptions": {
+    "faithfulness": "Apakah jawaban hanya berdasarkan context? (0=hallucination, 1=fully grounded)",
+    "answer_relevancy": "Apakah jawaban relevan dengan pertanyaan? (0=tidak relevan, 1=sangat relevan)",
+    "context_precision": "Apakah context yang di-retrieve relevan? (0=banyak noise, 1=presisi)",
+    "context_recall": "Apakah context mencakup informasi yang dibutuhkan? (0=miss, 1=lengkap)",
+    "answer_correctness": "Apakah jawaban benar dibanding ground truth? (0=salah, 1=benar)"
+  },
+  "per_question": [
+    {
+      "id": "GT-007",
+      "source_doc": "Perpres Nomor 95 Tahun 2018",
+      "doc_type": "peraturan",
+      "question": "Apa tujuan diadakannya Tata Kelola SPBE?",
+      "answer": "Tujuan Tata Kelola SPBE adalah untuk memastikan penerapan unsur-unsur Sistem Pemerintahan Berbasis Elektronik secara terpadu [1], serta bertujuan untuk memastikan penerapan unsur SPBE BSSN secara terpadu sesuai dengan peraturan Kepala Badan Siber dan Sandi Negara Tahun 2023 [3].",
+      "ground_truth": "Memastikan penerapan unsur-unsur SPBE dilaksanakan secara terpadu.",
+      "scores": {
+        "context_precision": null,
+        "context_recall": null,
+        "faithfulness": null,
+        "answer_relevancy": null
+      }
+    }
+  ]
+}
