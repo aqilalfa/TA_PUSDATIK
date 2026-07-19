@@ -193,6 +193,108 @@ def build_openai_ragas_config(model: str, embedding_model: str):
     return LangchainLLMWrapper(llm), LangchainEmbeddingsWrapper(embeddings)
 
 
+class SimpleOpenAICompatibleChatModel:
+    """Minimal LangChain-compatible chat model for strict OpenAI-compatible proxies."""
+
+    def __init__(self, *, model: str, api_key: str, base_url: str, temperature: float = 0.0, timeout: int = 600):
+        from langchain_core.language_models.chat_models import BaseChatModel
+        from pydantic import create_model
+
+        class _Model(BaseChatModel):
+            model_name: str
+            api_key_value: str
+            base_url_value: str
+            temperature_value: float = 0.0
+            timeout_value: int = 600
+
+            @property
+            def _llm_type(self) -> str:
+                return "simple-openai-compatible-chat"
+
+            def _message_role(self, message) -> str:
+                if message.type == "human":
+                    return "user"
+                if message.type == "ai":
+                    return "assistant"
+                if message.type == "system":
+                    return "system"
+                return "user"
+
+            def _generate(self, messages, stop=None, run_manager=None, **kwargs):
+                import requests
+                from langchain_core.messages import AIMessage
+                from langchain_core.outputs import ChatGeneration, ChatResult
+
+                payload = {
+                    "model": self.model_name,
+                    "messages": [
+                        {"role": self._message_role(message), "content": str(message.content)}
+                        for message in messages
+                    ],
+                    "temperature": self.temperature_value,
+                }
+                if stop:
+                    payload["stop"] = stop
+
+                url = self.base_url_value.rstrip("/") + "/chat/completions"
+                response = requests.post(
+                    url,
+                    headers={
+                        "Authorization": f"Bearer {self.api_key_value}",
+                        "Content-Type": "application/json",
+                    },
+                    json=payload,
+                    timeout=self.timeout_value,
+                )
+                response.raise_for_status()
+                data = response.json()
+                content = data["choices"][0]["message"].get("content") or ""
+                generation = ChatGeneration(message=AIMessage(content=content))
+                return ChatResult(generations=[generation], llm_output={"token_usage": data.get("usage")})
+
+        self._model = _Model(
+            model_name=model,
+            api_key_value=api_key,
+            base_url_value=base_url,
+            temperature_value=temperature,
+            timeout_value=timeout,
+        )
+
+    def __getattr__(self, name: str):
+        return getattr(self._model, name)
+
+
+def build_openai_compatible_ragas_config(model: str, embedding_model: str):
+    """Buat LLM judge OpenAI-compatible dengan embeddings lokal untuk RAGAS."""
+    load_env_files()
+
+    api_key = os.getenv("CUSTOM_OPENAI_API_KEY")
+    base_url = os.getenv("CUSTOM_OPENAI_BASE_URL")
+
+    if not api_key:
+        logger.error("CUSTOM_OPENAI_API_KEY belum diset di backend/.env")
+        sys.exit(1)
+    if not base_url:
+        logger.error("CUSTOM_OPENAI_BASE_URL belum diset di backend/.env")
+        sys.exit(1)
+
+    logger.info(
+        "Configuring RAGAS with provider=openai-compatible, "
+        f"LLM={model}, base_url={base_url}, embed={embedding_model}"
+    )
+
+    llm = SimpleOpenAICompatibleChatModel(
+        model=model,
+        api_key=api_key,
+        base_url=base_url,
+        temperature=0.0,
+        timeout=600,
+    )
+    embeddings = build_huggingface_embeddings(embedding_model)
+
+    return LangchainLLMWrapper(llm), LangchainEmbeddingsWrapper(embeddings)
+
+
 def build_ragas_config(provider: str, model: str, embedding_model: str):
     """Buat konfigurasi RAGAS berdasarkan provider judge."""
     if provider == "groq":
@@ -201,6 +303,8 @@ def build_ragas_config(provider: str, model: str, embedding_model: str):
         return build_ollama_ragas_config(model, embedding_model)
     if provider == "openai":
         return build_openai_ragas_config(model, embedding_model)
+    if provider == "openai-compatible":
+        return build_openai_compatible_ragas_config(model, embedding_model)
 
     raise ValueError(f"Provider tidak didukung: {provider}")
 
@@ -450,10 +554,10 @@ if __name__ == "__main__":
                         help="Jumlah pertanyaan dari --start untuk batch eval. Jika tidak diset, --sample tetap didukung")
     parser.add_argument("--metrics", nargs="+", default=None, choices=list(METRIC_REGISTRY.keys()),
                         help="Metrik RAGAS yang dijalankan. Default: semua metric")
-    parser.add_argument("--provider", default=DEFAULT_PROVIDER, choices=["groq", "ollama", "openai"],
+    parser.add_argument("--provider", default=DEFAULT_PROVIDER, choices=["groq", "ollama", "openai", "openai-compatible"],
                         help=f"Provider judge RAGAS (default: {DEFAULT_PROVIDER})")
     parser.add_argument("--model", default=None,
-                        help="Model judge. Default: llama-3.3-70b-versatile untuk Groq, qwen3.5:4b untuk Ollama, gpt-4o-mini untuk OpenAI")
+                        help="Model judge. Default: llama-3.3-70b-versatile untuk Groq, qwen3.5:4b untuk Ollama, gpt-4o-mini untuk OpenAI, CUSTOM_RAGAS_MODEL untuk OpenAI-compatible")
     parser.add_argument("--embedding-model", default=None,
                         help="Model embedding. Default: indo-sentence-bert untuk Groq/Ollama, text-embedding-3-small untuk OpenAI")
     parser.add_argument("--timeout", type=int, default=600,
@@ -472,11 +576,13 @@ if __name__ == "__main__":
         "groq": DEFAULT_GROQ_MODEL,
         "openai": DEFAULT_OPENAI_MODEL,
         "ollama": DEFAULT_OLLAMA_MODEL,
+        "openai-compatible": os.getenv("CUSTOM_RAGAS_MODEL", "cbcn-claude-haiku-4.5"),
     }
     default_embedding_models = {
         "groq": DEFAULT_GROQ_EMBED_MODEL,
         "openai": DEFAULT_OPENAI_EMBED_MODEL,
         "ollama": DEFAULT_OLLAMA_EMBED_MODEL,
+        "openai-compatible": DEFAULT_GROQ_EMBED_MODEL,
     }
     judge_model = args.model or default_models[args.provider]
     embedding_model = args.embedding_model or default_embedding_models[args.provider]

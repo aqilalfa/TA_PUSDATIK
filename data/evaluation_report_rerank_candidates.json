@@ -1,0 +1,429 @@
+{
+  "ground_truth": "/tmp/ground_truth_rag_permenpan59_2020.json",
+  "acceptance_thresholds": {
+    "minimum_rerank_latency_reduction": 0.5,
+    "maximum_hit_rate_drop": 0.02,
+    "maximum_mrr_drop": 0.02
+  },
+  "baseline_64": {
+    "queries": 8,
+    "hit_rate_at_5": 0.625,
+    "mrr_at_5": 0.5,
+    "ndcg_at_5": 0.5327324383928644,
+    "mean_rerank_ms": 35326.4576294996,
+    "median_rerank_ms": 37971.222789499734,
+    "mean_pipeline_ms": 35590.064609249566,
+    "candidate_counts": [
+      51,
+      64,
+      54,
+      36,
+      38,
+      62,
+      37,
+      62
+    ],
+    "candidate_policies": [
+      "override",
+      "override",
+      "override",
+      "override",
+      "override",
+      "override",
+      "override",
+      "override"
+    ]
+  },
+  "adaptive": {
+    "queries": 8,
+    "hit_rate_at_5": 0.75,
+    "mrr_at_5": 0.59375,
+    "ndcg_at_5": 0.6327007889556063,
+    "mean_rerank_ms": 16525.642588248957,
+    "median_rerank_ms": 16008.119528498355,
+    "mean_pipeline_ms": 16793.408933999217,
+    "candidate_counts": [
+      24,
+      24,
+      24,
+      24,
+      24,
+      16,
+      24,
+      32
+    ],
+    "candidate_policies": [
+      "adaptive-default",
+      "adaptive-default",
+      "adaptive-default",
+      "adaptive-default",
+      "adaptive-default",
+      "adaptive-clear-boundary",
+      "adaptive-default",
+      "adaptive-specialized"
+    ]
+  },
+  "comparison": {
+    "rerank_latency_reduction": 0.5322021029799177,
+    "hit_rate_drop": -0.125,
+    "mrr_drop": -0.09375,
+    "mean_top5_jaccard": 0.6091269841269841,
+    "accepted": true
+  },
+  "details": [
+    {
+      "id": "GT-001",
+      "question": "Apa definisi dari Sistem Pemerintahan Berbasis Elektronik (SPBE) menurut Peraturan Menteri ini?",
+      "markers": [
+        "pasal 1"
+      ],
+      "baseline": {
+        "relevant_rank": null,
+        "hit": false,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "rerank_ms": 38732.21577499862,
+        "pipeline_ms": 39141.90004399643,
+        "candidate_limit": 64,
+        "candidate_count": 51,
+        "candidate_policy": "override",
+        "top_ids": [
+          "doc6:idx3",
+          "doc5:idx4",
+          "doc3:idx4",
+          "doc9cd441c8:idx3",
+          "doc4799624e:idx0"
+        ]
+      },
+      "adaptive": {
+        "relevant_rank": 4,
+        "hit": true,
+        "reciprocal_rank": 0.25,
+        "ndcg": 0.43067655807339306,
+        "rerank_ms": 14580.681760999141,
+        "pipeline_ms": 15089.855050999176,
+        "candidate_limit": 24,
+        "candidate_count": 24,
+        "candidate_policy": "adaptive-default",
+        "top_ids": [
+          "doc6:idx3",
+          "doc5:idx4",
+          "doc9cd441c8:idx3",
+          "doc4:idx3",
+          "doce8ddd563:idx0"
+        ]
+      },
+      "top5_jaccard": 0.42857142857142855
+    },
+    {
+      "id": "GT-002",
+      "question": "Sebutkan 3 (tiga) tujuan dari dilaksanakannya Pemantauan dan Evaluasi SPBE!",
+      "markers": [
+        "pasal 2"
+      ],
+      "baseline": {
+        "relevant_rank": 2,
+        "hit": true,
+        "reciprocal_rank": 0.5,
+        "ndcg": 0.6309297535714575,
+        "rerank_ms": 44089.35912400193,
+        "pipeline_ms": 44383.71910299975,
+        "candidate_limit": 64,
+        "candidate_count": 64,
+        "candidate_policy": "override",
+        "top_ids": [
+          "doc6:idx128",
+          "doc4:idx8",
+          "doc4:idx9",
+          "doc2:idx62",
+          "doc2:idx64"
+        ]
+      },
+      "adaptive": {
+        "relevant_rank": 1,
+        "hit": true,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "rerank_ms": 19383.4365900002,
+        "pipeline_ms": 19702.296673996898,
+        "candidate_limit": 24,
+        "candidate_count": 24,
+        "candidate_policy": "adaptive-default",
+        "top_ids": [
+          "doc4:idx8",
+          "doc4:idx9",
+          "doc2:idx62",
+          "doc2:idx64",
+          "doc6:idx115"
+        ]
+      },
+      "top5_jaccard": 0.6666666666666666
+    },
+    {
+      "id": "GT-003",
+      "question": "Apa perbedaan utama aktivitas pada tahap pelaksanaan antara Pemantauan SPBE dan Evaluasi SPBE?",
+      "markers": [
+        "pasal 3"
+      ],
+      "baseline": {
+        "relevant_rank": null,
+        "hit": false,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "rerank_ms": 37210.229804000846,
+        "pipeline_ms": 37493.74561900186,
+        "candidate_limit": 64,
+        "candidate_count": 54,
+        "candidate_policy": "override",
+        "top_ids": [
+          "doc4:idx166",
+          "doc4:idx165",
+          "doc2:idx1",
+          "doc2:idx0",
+          "doc9cd441c8:idx403"
+        ]
+      },
+      "adaptive": {
+        "relevant_rank": null,
+        "hit": false,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "rerank_ms": 15360.064701999363,
+        "pipeline_ms": 15604.620104000787,
+        "candidate_limit": 24,
+        "candidate_count": 24,
+        "candidate_policy": "adaptive-default",
+        "top_ids": [
+          "doc4:idx166",
+          "doc4:idx165",
+          "doc2:idx1",
+          "doc9cd441c8:idx403",
+          "doc46744099:idx91"
+        ]
+      },
+      "top5_jaccard": 0.6666666666666666
+    },
+    {
+      "id": "GT-004",
+      "question": "Sebutkan 5 (lima) tingkatan dalam pengukuran tingkat kematangan kapabilitas layanan beserta urutannya!",
+      "markers": [
+        "tabel 2"
+      ],
+      "baseline": {
+        "relevant_rank": 1,
+        "hit": true,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "rerank_ms": 25074.875070000417,
+        "pipeline_ms": 25211.901296999713,
+        "candidate_limit": 64,
+        "candidate_count": 36,
+        "candidate_policy": "override",
+        "top_ids": [
+          "doc4:idx30",
+          "doc4:idx28",
+          "doc46744099:idx26",
+          "doc46744099:idx25",
+          "doc2:idx214"
+        ]
+      },
+      "adaptive": {
+        "relevant_rank": 1,
+        "hit": true,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "rerank_ms": 17180.765621997125,
+        "pipeline_ms": 17328.016417999606,
+        "candidate_limit": 24,
+        "candidate_count": 24,
+        "candidate_policy": "adaptive-default",
+        "top_ids": [
+          "doc4:idx30",
+          "doc4:idx28",
+          "doc46744099:idx26",
+          "doc46744099:idx25",
+          "doc2:idx219"
+        ]
+      },
+      "top5_jaccard": 0.6666666666666666
+    },
+    {
+      "id": "GT-005",
+      "question": "Berapakah nilai persentase bobot yang diberikan untuk Aspek 8, yaitu Layanan Publik Berbasis Elektronik?",
+      "markers": [
+        "tabel 8"
+      ],
+      "baseline": {
+        "relevant_rank": 1,
+        "hit": true,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "rerank_ms": 25572.2172709975,
+        "pipeline_ms": 25715.810284000327,
+        "candidate_limit": 64,
+        "candidate_count": 38,
+        "candidate_policy": "override",
+        "top_ids": [
+          "doc4:idx39",
+          "doc4:idx44",
+          "doc46744099:idx32",
+          "doc46744099:idx46",
+          "doc2:idx267"
+        ]
+      },
+      "adaptive": {
+        "relevant_rank": 1,
+        "hit": true,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "rerank_ms": 16656.174354997347,
+        "pipeline_ms": 16791.974118001235,
+        "candidate_limit": 24,
+        "candidate_count": 24,
+        "candidate_policy": "adaptive-default",
+        "top_ids": [
+          "doc4:idx39",
+          "doc4:idx38",
+          "doc46744099:idx32",
+          "doc46744099:idx46",
+          "doc2:idx267"
+        ]
+      },
+      "top5_jaccard": 0.6666666666666666
+    },
+    {
+      "id": "GT-006",
+      "question": "Jika sebuah Instansi Pusat mendapatkan total perhitungan nilai Indeks SPBE sebesar 3,28, predikat apa yang didapatkan oleh instansi tersebut?",
+      "markers": [
+        "tabel 13"
+      ],
+      "baseline": {
+        "relevant_rank": null,
+        "hit": false,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "rerank_ms": 43650.381068997376,
+        "pipeline_ms": 43949.575362999894,
+        "candidate_limit": 64,
+        "candidate_count": 62,
+        "candidate_policy": "override",
+        "top_ids": [
+          "doc10:idx2",
+          "doc46744099:idx47",
+          "doc46744099:idx8",
+          "doc10:idx35",
+          "doc12:idx184"
+        ]
+      },
+      "adaptive": {
+        "relevant_rank": null,
+        "hit": false,
+        "reciprocal_rank": 0.0,
+        "ndcg": 0.0,
+        "rerank_ms": 11485.311676999117,
+        "pipeline_ms": 11785.025597997446,
+        "candidate_limit": 16,
+        "candidate_count": 16,
+        "candidate_policy": "adaptive-clear-boundary",
+        "top_ids": [
+          "doc46744099:idx47",
+          "doc46744099:idx46",
+          "doc4:idx188",
+          "doc10:idx124",
+          "doc10:idx71"
+        ]
+      },
+      "top5_jaccard": 0.1111111111111111
+    },
+    {
+      "id": "GT-007",
+      "question": "Siapa saja pihak-pihak yang dapat menjadi unsur anggota Tim Asesor Eksternal yang ditetapkan oleh Menteri?",
+      "markers": [
+        "akademisi",
+        "perguruan tinggi",
+        "tenaga ahli"
+      ],
+      "baseline": {
+        "relevant_rank": 2,
+        "hit": true,
+        "reciprocal_rank": 0.5,
+        "ndcg": 0.6309297535714575,
+        "rerank_ms": 24744.563784999627,
+        "pipeline_ms": 24969.714617000136,
+        "candidate_limit": 64,
+        "candidate_count": 37,
+        "candidate_policy": "override",
+        "top_ids": [
+          "doc4:idx174",
+          "doc4:idx171",
+          "doc2:idx65",
+          "doc2:idx39",
+          "doc6:idx107"
+        ]
+      },
+      "adaptive": {
+        "relevant_rank": 2,
+        "hit": true,
+        "reciprocal_rank": 0.5,
+        "ndcg": 0.6309297535714575,
+        "rerank_ms": 15113.572389000183,
+        "pipeline_ms": 15273.992790000193,
+        "candidate_limit": 24,
+        "candidate_count": 24,
+        "candidate_policy": "adaptive-default",
+        "top_ids": [
+          "doc4:idx174",
+          "doc4:idx171",
+          "doc2:idx65",
+          "doc2:idx53",
+          "doc6:idx107"
+        ]
+      },
+      "top5_jaccard": 0.6666666666666666
+    },
+    {
+      "id": "GT-008",
+      "question": "Berdasarkan Kuesioner Pemantauan dan Evaluasi SPBE, apa kriteria yang harus dipenuhi agar Indikator 42 (Layanan Pengaduan Pelayanan Publik) dapat mencapai Tingkat Kematangan 3?",
+      "markers": [
+        "indikator 42"
+      ],
+      "baseline": {
+        "relevant_rank": 1,
+        "hit": true,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "rerank_ms": 43537.81913800049,
+        "pipeline_ms": 43854.150546998426,
+        "candidate_limit": 64,
+        "candidate_count": 62,
+        "candidate_policy": "override",
+        "top_ids": [
+          "doc4:idx279",
+          "doc2:idx267",
+          "doc4:idx149",
+          "doc2:idx271",
+          "doc10:idx1"
+        ]
+      },
+      "adaptive": {
+        "relevant_rank": 1,
+        "hit": true,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0,
+        "rerank_ms": 22445.133609999175,
+        "pipeline_ms": 22771.490718998393,
+        "candidate_limit": 32,
+        "candidate_count": 32,
+        "candidate_policy": "adaptive-specialized",
+        "top_ids": [
+          "doc4:idx279",
+          "doc2:idx267",
+          "doc4:idx149",
+          "doc2:idx271",
+          "doc10:idx1"
+        ]
+      },
+      "top5_jaccard": 1.0
+    }
+  ]
+}

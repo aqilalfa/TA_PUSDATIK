@@ -33,7 +33,7 @@ if callable(stdout_reconfigure):
     stdout_reconfigure(encoding="utf-8")
 
 from loguru import logger
-from app.core.rag.langchain_engine import langchain_engine
+from app.core.rag.langchain_engine import RETRIEVAL_MODES, normalize_retrieval_mode, langchain_engine
 from app.config import settings
 from app.core.rag.context_ids import enrich_context_identity
 
@@ -143,7 +143,7 @@ def load_ground_truth(path: Path) -> list:
 # Fase 1: Collect — jalankan tiap pertanyaan ke RAG pipeline
 # ---------------------------------------------------------------------------
 
-async def collect_one(question: str, model: str) -> dict:
+async def collect_one(question: str, model: str, retrieval_mode: str) -> dict:
     """Kirim satu pertanyaan ke RAG pipeline, kembalikan answer + contexts."""
     import asyncio
     from functools import partial
@@ -151,10 +151,18 @@ async def collect_one(question: str, model: str) -> dict:
     # Retrieve context (sync, jalankan di thread pool)
     retrieval = await asyncio.get_event_loop().run_in_executor(
         None,
-        partial(langchain_engine.retrieve_context, query=question, top_k=5, use_rag=True, doc_id=None),
+        partial(
+            langchain_engine.retrieve_context,
+            query=question,
+            top_k=5,
+            use_rag=True,
+            doc_id=None,
+            retrieval_mode=retrieval_mode,
+        ),
     )
     context    = retrieval["context"]
     query_type = retrieval.get("query_type", "general")
+    resolved_retrieval_mode = retrieval.get("retrieval_mode", retrieval_mode)
     raw_docs = retrieval.get("raw_docs", [])
     history    = []
 
@@ -176,12 +184,13 @@ async def collect_one(question: str, model: str) -> dict:
     return {
         "answer": answer,
         "contexts": contexts,
+        "retrieval_mode": resolved_retrieval_mode,
         "retrieved_context_ids": retrieved_context_ids,
         "retrieved_sources": retrieved_sources,
     }
 
 
-async def phase_collect(ground_truth: list, model: str, sample: int | None = None) -> list:
+async def phase_collect(ground_truth: list, model: str, retrieval_mode: str, sample: int | None = None) -> list:
     """Jalankan semua pertanyaan ke RAG pipeline dan simpan hasilnya."""
     if not langchain_engine._initialized:
         logger.info("Initializing RAG engine...")
@@ -194,7 +203,7 @@ async def phase_collect(ground_truth: list, model: str, sample: int | None = Non
         logger.info(f"[{i}/{len(items)}] {gt['question'][:70]}...")
         t0 = time.perf_counter()
         try:
-            out = await collect_one(gt["question"], model)
+            out = await collect_one(gt["question"], model, retrieval_mode)
             elapsed = time.perf_counter() - t0
             results.append({
                 "id":           gt["id"],
@@ -204,6 +213,7 @@ async def phase_collect(ground_truth: list, model: str, sample: int | None = Non
                 "ground_truth": gt["ground_truth"],
                 "answer":       out["answer"],
                 "contexts":     out["contexts"],
+                "retrieval_mode": out.get("retrieval_mode", retrieval_mode),
                 "retrieved_context_ids": out.get("retrieved_context_ids", []),
                 "retrieved_sources": out.get("retrieved_sources", []),
                 "latency_s":    round(elapsed, 2),
@@ -219,6 +229,7 @@ async def phase_collect(ground_truth: list, model: str, sample: int | None = Non
                 "ground_truth": gt["ground_truth"],
                 "answer":       "",
                 "contexts":     [],
+                "retrieval_mode": retrieval_mode,
                 "latency_s":    -1,
                 "error":        str(e),
             })
@@ -337,6 +348,7 @@ def phase_score(results: list) -> dict:
 
     report = {
         "generated_at":    datetime.now().isoformat(),
+        "retrieval_mode":  results[0].get("retrieval_mode") if results else None,
         "total_questions": len(results),
         "evaluated":       len(valid),
         "failed":          len(results) - len(valid),
@@ -393,12 +405,14 @@ def print_summary(report: dict):
 # Entry point
 # ---------------------------------------------------------------------------
 
-async def main(phase: str, sample: int | None, model: str):
+async def main(phase: str, sample: int | None, model: str, retrieval_mode: str):
+    retrieval_mode = normalize_retrieval_mode(retrieval_mode)
     ground_truth = load_ground_truth(GROUND_TRUTH_PATH)
     logger.info(f"Ground truth: {len(ground_truth)} pertanyaan dari {GROUND_TRUTH_PATH.name}")
+    logger.info(f"Retrieval mode: {retrieval_mode}")
 
     if phase in ("collect", "both"):
-        results = await phase_collect(ground_truth, model, sample)
+        results = await phase_collect(ground_truth, model, retrieval_mode, sample)
     else:
         if not RESULTS_PATH.exists():
             logger.error(f"File hasil tidak ditemukan: {RESULTS_PATH}. Jalankan fase collect dulu.")
@@ -419,6 +433,8 @@ if __name__ == "__main__":
                         help="Jumlah pertanyaan untuk tes cepat (default: semua)")
     parser.add_argument("--model",  default=DEFAULT_MODEL,
                         help=f"Model Ollama yang digunakan (default: {DEFAULT_MODEL})")
+    parser.add_argument("--retrieval-mode", default="final", choices=RETRIEVAL_MODES,
+                        help="Mode retrieval untuk ablation study: vector_only, bm25_only, hybrid, final")
     parser.add_argument("--ground-truth-path", type=Path, default=GROUND_TRUTH_PATH,
                         help=f"Path ground truth JSON/JSONL (default: {GROUND_TRUTH_PATH})")
     parser.add_argument("--results-path", type=Path, default=RESULTS_PATH,
@@ -431,4 +447,4 @@ if __name__ == "__main__":
     RESULTS_PATH = args.results_path
     REPORT_PATH = args.report_path
 
-    asyncio.run(main(args.phase, args.sample, args.model))
+    asyncio.run(main(args.phase, args.sample, args.model, args.retrieval_mode))

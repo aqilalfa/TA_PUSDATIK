@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run RAGAS evaluation in small batches with Groq model fallback.
+"""Run RAGAS evaluation in small batches with configurable judge model fallback.
 
 This wrapper keeps the expensive judge run resumable:
 - skips questions that already have all requested metrics in the aggregate report,
@@ -155,14 +155,15 @@ def evaluate_batch(
 ) -> tuple[CommandResult, Path]:
     end = start + limit
     suffix_part = f"_{suffix}" if suffix else ""
+    label_part = f"_{model_slug(args.run_label)}" if args.run_label else ""
     report_path = DATA_DIR / (
-        f"eval_ragas_batch_{start:02d}_{end:02d}{suffix_part}_4metrics_groq_{model_slug(model)}.json"
+        f"eval_ragas_batch{label_part}_{start:02d}_{end:02d}{suffix_part}_4metrics_{model_slug(args.provider)}_{model_slug(model)}.json"
     )
     command = [
         sys.executable,
         str(EVALUATE_SCRIPT),
         "--provider",
-        "groq",
+        args.provider,
         "--model",
         model,
         "--start",
@@ -269,7 +270,14 @@ def run_batch_with_fallback(
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run RAGAS batches with Groq fallback models")
+    parser = argparse.ArgumentParser(description="Run RAGAS batches with configurable fallback models")
+    parser.add_argument(
+        "--provider",
+        default="groq",
+        choices=["groq", "ollama", "openai", "openai-compatible"],
+        help="Judge provider passed through to evaluate_ragas.py",
+    )
+    parser.add_argument("--run-label", default="", help="Optional label inserted into generated batch filenames")
     parser.add_argument("--results-path", type=Path, default=DEFAULT_RESULTS_PATH)
     parser.add_argument("--aggregate-json", type=Path, default=DEFAULT_AGGREGATE_JSON)
     parser.add_argument("--aggregate-md", type=Path, default=DEFAULT_AGGREGATE_MD)
