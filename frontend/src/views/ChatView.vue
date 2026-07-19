@@ -398,17 +398,32 @@ async function submitChatMessage(userMessage, options = {}) {
       {
         message: userMessage,
         session_id: currentSessionId.value,
-        model: 'qwen3.5:4b',
         top_k: 5,
         max_tokens: 2048
       },
       {
+        onMeta: async (data) => {
+          messages.value[loadingIdx] = {
+            ...messages.value[loadingIdx],
+            requestId: data.request_id
+          }
+        },
         onRetrieval: async (data) => {
           messages.value[loadingIdx] = {
             role: 'assistant',
             loading: true,
             loadingText: `Ditemukan ${data.count} sumber regulasi, sedang menyiapkan jawaban...`
           }
+        },
+        onReplace: async (data) => {
+          streamedContent = data.answer || ''
+          messages.value[loadingIdx] = { role: 'assistant', content: streamedContent, replaced: true }
+        },
+        onSecurity: async (data) => {
+          messages.value[loadingIdx] = { ...messages.value[loadingIdx], security: data }
+        },
+        onLlm09Guard: async (data) => {
+          messages.value[loadingIdx] = { ...messages.value[loadingIdx], llm09Guard: data }
         },
         onToken: async (data) => {
           streamedContent += data.t

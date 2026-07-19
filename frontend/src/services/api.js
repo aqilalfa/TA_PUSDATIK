@@ -52,6 +52,9 @@ const refreshClient = axios.create({
 
 export const SESSION_EXPIRED_NOTICE_KEY = 'spbe_session_expired_notice'
 
+let refreshPromise = null
+
+
 function redirectToLoginWithSessionNotice() {
   if (typeof window === 'undefined') return
   if (window.location.pathname.includes('/login')) return
@@ -64,16 +67,27 @@ function redirectToLoginWithSessionNotice() {
   window.location.href = '/login?reason=session-expired'
 }
 
-export async function refreshAccessToken() {
-  const { data } = await refreshClient.post('/api/auth/refresh', {})
-  const newToken = data?.access_token
-  if (!newToken) {
-    throw new Error('Refresh response did not include an access token')
+export function refreshAccessToken() {
+  if (!refreshPromise) {
+    refreshPromise = refreshClient
+      .post('/api/auth/refresh', {})
+      .then(({ data }) => {
+        const newToken = data?.access_token
+        if (!newToken) {
+          throw new Error('Refresh response did not include an access token')
+        }
+
+        setAccessToken(newToken)
+        return newToken
+      })
+      .finally(() => {
+        refreshPromise = null
+      })
   }
 
-  setAccessToken(newToken)
-  return newToken
+  return refreshPromise
 }
+
 
 export async function authenticatedFetch(input, init = {}) {
   const buildRequest = (token) => {

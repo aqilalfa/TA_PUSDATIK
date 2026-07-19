@@ -14,6 +14,7 @@ from app.models.db_models import Session as DBSession, Conversation
 from app.models.db_models import User
 from app.models.schemas import ChatRequest, ChatResponse, ConversationMessage
 from app.core.rag.langchain_engine import langchain_engine, classify_query
+from app.core.rag.observability import RagTrace
 from app.core.rag.prompts import validate_answer
 from app.core.rag.llm09_guard import assess_llm09_pre_generation_guard
 from app.core.rag.structured_facts import (
@@ -28,7 +29,7 @@ from app.core.formatting import (
     append_citation_reference_block,
     renumber_citations_and_sources,
 )
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import List, Dict, Any
 from loguru import logger
 from app.api.routes.models import get_default_model
@@ -38,8 +39,45 @@ import os
 import time
 import uuid
 import re
+import asyncio
 
 router = APIRouter()
+
+
+def _utcnow() -> datetime:
+    """Return naive UTC for compatibility with existing SQLAlchemy DateTime columns."""
+    return datetime.now(timezone.utc).replace(tzinfo=None)
+
+
+async def _request_disconnected(request: Request) -> bool:
+    return bool(await request.is_disconnected())
+
+
+def _persist_exchange(
+    db: Session,
+    session: DBSession,
+    session_id: str,
+    user_content: str,
+    assistant_content: str,
+    sources: List[Dict[str, Any]],
+    latency_ms: int,
+) -> None:
+    """Persist one complete exchange atomically or roll it all back."""
+    db.add(Conversation(session_id=session_id, role="user", content=user_content, timestamp=_utcnow()))
+    db.add(Conversation(
+        session_id=session_id,
+        role="assistant",
+        content=assistant_content,
+        sources=json.dumps(sources, ensure_ascii=False),
+        timestamp=_utcnow(),
+        latency_ms=latency_ms,
+    ))
+    session.updated_at = _utcnow()
+    try:
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise
 
 
 def _chat_rate_limit_key(request: Request, current_user: User | None) -> str:
@@ -92,6 +130,7 @@ from app.core.rag.quality_check import (
     build_answer_quality_report,
     find_unavailable_triggers,
 )
+from app.core.rag.retry_policy import bounded_retry_limit, should_retry_quality
 
 QUALITY_DEBUG = os.getenv("QUALITY_DEBUG", "").strip() == "1"
 
@@ -142,10 +181,17 @@ def _build_llm09_guard_validation(reason: str, risk_category: str, details: Dict
 async def debug_retrieval(query: str, current_user: User = Depends(require_roles(["admin_pusdatik"]))):
     """Debug endpoint to see what chunks are actually retrieved."""
     try:
-        results = langchain_engine.retrieve_context(query, current_user=current_user)
+        trace = RagTrace.create(
+            session_id=None,
+            user_id=getattr(current_user, "id", None),
+            query=query,
+        )
+        results = langchain_engine.retrieve_context(query, current_user=current_user, trace=trace)
         return {
+            "request_id": trace.request_id,
             "query": query,
             "query_type": results.get("query_type"),
+            "trace": trace.snapshot(),
             "source_count": len(results.get("sources", [])),
             "docs": [
                 {
@@ -183,7 +229,7 @@ async def chat(
         session_id=request.session_id,
         role="user",
         content=request.message,
-        timestamp=datetime.utcnow(),
+        timestamp=_utcnow(),
     )
     db.add(user_message)
 
@@ -197,11 +243,11 @@ async def chat(
         role="assistant",
         content=response_text,
         sources=json.dumps([]),
-        timestamp=datetime.utcnow(),
+        timestamp=_utcnow(),
         latency_ms=latency,
     )
     db.add(assistant_message)
-    session.updated_at = datetime.utcnow()
+    session.updated_at = _utcnow()
     db.commit()
 
     return ChatResponse(response=response_text, sources=[], latency_ms=latency)
@@ -223,10 +269,20 @@ async def chat_stream(
       4. Save assistant response to DB
     """
     _enforce_chat_rate_limit(http_request, current_user, "chat/stream")
-    model = "qwen3.5:4b"
+    model = request.model
+    trace = RagTrace.create(
+        session_id=request.session_id,
+        user_id=getattr(current_user, "id", None),
+        query=request.message,
+    )
+    trace.stage("chat.request.accepted", status="ok", model=model)
 
     async def event_generator():
         try:
+            yield (
+                "event: meta\n"
+                f"data: {json.dumps({'request_id': trace.request_id, 'model': model}, ensure_ascii=False)}\n\n"
+            )
             # 1. Session Management
             # Gunakan local variable — jangan mutate Pydantic request model (immutable di v2)
             session_id = request.session_id
@@ -267,9 +323,19 @@ async def chat_stream(
                     categories=injection_check.categories,
                     prompt_preview=request.message,
                 )
+                _persist_exchange(
+                    db=db,
+                    session=session,
+                    session_id=session_id,
+                    user_content=request.message,
+                    assistant_content=refusal,
+                    sources=[],
+                    latency_ms=latency,
+                )
                 yield f"event: security\ndata: {json.dumps({'blocked': True, 'categories': injection_check.categories}, ensure_ascii=False)}\n\n"
                 yield f"event: token\ndata: {json.dumps({'t': refusal}, ensure_ascii=False)}\n\n"
                 complete_data = {
+                    "request_id": trace.request_id,
                     "session_id": session_id,
                     "answer": refusal,
                     "sources": [],
@@ -290,16 +356,6 @@ async def chat_stream(
                 yield f"event: complete\ndata: {json.dumps(complete_data, ensure_ascii=False)}\n\n"
                 return
 
-            # Save user message
-            user_msg = Conversation(
-                session_id=session_id,
-                role="user",
-                content=request.message,
-                timestamp=datetime.utcnow(),
-            )
-            db.add(user_msg)
-            db.commit()
-
             start_time = time.perf_counter()
 
             structured_fact = (
@@ -311,31 +367,26 @@ async def chat_stream(
                 sources_for_response = structured_fact.sources
                 full_response = format_structured_fact_answer(structured_fact)
 
+                if await _request_disconnected(http_request):
+                    trace.stage("chat.cancelled", status="cancelled", reason="client_disconnected")
+                    return
+
                 yield f"event: retrieval\ndata: {json.dumps({'count': len(sources_for_response), 'mode': 'structured_fact'})}\n\n"
                 yield f"event: token\ndata: {json.dumps({'t': full_response}, ensure_ascii=False)}\n\n"
 
                 latency = int((time.perf_counter() - start_time) * 1000)
-                assistant_message = Conversation(
+                _persist_exchange(
+                    db=db,
+                    session=session,
                     session_id=session_id,
-                    role="assistant",
-                    content=full_response,
-                    sources=json.dumps(sources_for_response),
-                    timestamp=datetime.utcnow(),
+                    user_content=request.message,
+                    assistant_content=full_response,
+                    sources=sources_for_response,
                     latency_ms=latency,
                 )
-                db.add(assistant_message)
-                session.updated_at = datetime.utcnow()
-                try:
-                    db.commit()
-                except Exception as save_error:
-                    db.rollback()
-                    logger.warning(
-                        "Structured fact response was generated but conversation save failed: {}".format(
-                            save_error
-                        )
-                    )
 
                 complete_data = {
+                    "request_id": trace.request_id,
                     "session_id": session_id,
                     "answer": full_response,
                     "sources": sources_for_response,
@@ -365,7 +416,9 @@ async def chat_stream(
                 return
 
             # 2. Retrieve context (offload ke thread pool agar tidak block event loop)
-            import asyncio
+            if await _request_disconnected(http_request):
+                trace.stage("chat.cancelled", status="cancelled", reason="client_disconnected")
+                return
             retrieval = await asyncio.get_event_loop().run_in_executor(
                 None,
                 partial(
@@ -375,14 +428,69 @@ async def chat_stream(
                     use_rag=True,
                     doc_id=request.document_id,
                     current_user=current_user,
+                    trace=trace,
                 ),
             )
+            if await _request_disconnected(http_request):
+                trace.stage("chat.cancelled", status="cancelled", reason="client_disconnected")
+                return
 
             sources_for_response = retrieval["sources"]
             context = retrieval["context"]
             query_type = retrieval.get("query_type", "general")
+            retrieval_status = retrieval.get(
+                "retrieval_status",
+                "ok" if sources_for_response else "ok-empty",
+            )
+            failed_retrievers = retrieval.get("failed_retrievers", [])
 
-            yield f"event: retrieval\ndata: {json.dumps({'count': len(sources_for_response)})}\n\n"
+            yield (
+                "event: retrieval\n"
+                f"data: {json.dumps({'count': len(sources_for_response), 'status': retrieval_status, 'failed_retrievers': failed_retrievers})}\n\n"
+            )
+
+            if retrieval_status == "failed":
+                full_response = (
+                    "Maaf, layanan pencarian dokumen sedang mengalami gangguan sehingga "
+                    "jawaban belum dapat diverifikasi. Silakan coba kembali beberapa saat lagi."
+                )
+                latency = int((time.perf_counter() - start_time) * 1000)
+                _persist_exchange(
+                    db=db,
+                    session=session,
+                    session_id=session_id,
+                    user_content=request.message,
+                    assistant_content=full_response,
+                    sources=[],
+                    latency_ms=latency,
+                )
+                yield f"event: token\ndata: {json.dumps({'t': full_response}, ensure_ascii=False)}\n\n"
+                complete_data = {
+                    "request_id": trace.request_id,
+                    "session_id": session_id,
+                    "answer": full_response,
+                    "sources": [],
+                    "timing": {"total_ms": latency},
+                    "model_used": "retrieval-infrastructure-fallback",
+                    "retrieval": {
+                        "status": retrieval_status,
+                        "failed_retrievers": failed_retrievers,
+                    },
+                    "validation": {
+                        "is_valid": False,
+                        "has_citations": False,
+                        "warnings": ["Semua jalur retrieval gagal"],
+                        "confidence": "low",
+                        "citation_count": 0,
+                    },
+                    "quality_check": {
+                        "score": None,
+                        "needs_retry": False,
+                        "retry_reasons": ["infrastructure"],
+                    },
+                }
+                yield f"event: complete\ndata: {json.dumps(complete_data, ensure_ascii=False)}\n\n"
+                return
 
             if not sources_for_response:
                 full_response = _build_llm09_insufficient_context_answer()
@@ -395,20 +503,19 @@ async def chat_stream(
                     "citation_count": 0,
                     "source_count": 0,
                 }
-                assistant_message = Conversation(
+                _persist_exchange(
+                    db=db,
+                    session=session,
                     session_id=session_id,
-                    role="assistant",
-                    content=full_response,
-                    sources=json.dumps([]),
-                    timestamp=datetime.utcnow(),
+                    user_content=request.message,
+                    assistant_content=full_response,
+                    sources=[],
                     latency_ms=latency,
                 )
-                db.add(assistant_message)
-                session.updated_at = datetime.utcnow()
-                db.commit()
 
                 yield f"event: token\ndata: {json.dumps({'t': full_response}, ensure_ascii=False)}\n\n"
                 complete_data = {
+                    "request_id": trace.request_id,
                     "session_id": session_id,
                     "answer": full_response,
                     "sources": [],
@@ -440,21 +547,20 @@ async def chat_stream(
                     llm09_guard.risk_category,
                     llm09_guard.details,
                 )
-                assistant_message = Conversation(
+                _persist_exchange(
+                    db=db,
+                    session=session,
                     session_id=session_id,
-                    role="assistant",
-                    content=full_response,
-                    sources=json.dumps([]),
-                    timestamp=datetime.utcnow(),
+                    user_content=request.message,
+                    assistant_content=full_response,
+                    sources=[],
                     latency_ms=latency,
                 )
-                db.add(assistant_message)
-                session.updated_at = datetime.utcnow()
-                db.commit()
 
                 yield f"event: llm09_guard\ndata: {json.dumps({'blocked': True, 'risk_category': llm09_guard.risk_category, 'reason': llm09_guard.reason}, ensure_ascii=False)}\n\n"
                 yield f"event: token\ndata: {json.dumps({'t': full_response}, ensure_ascii=False)}\n\n"
                 complete_data = {
+                    "request_id": trace.request_id,
                     "session_id": session_id,
                     "answer": full_response,
                     "sources": [],
@@ -483,13 +589,23 @@ async def chat_stream(
             full_response = ""
             selected_quality: Dict[str, Any] = {}
 
+            trace.stage(
+                "llm.stream.started",
+                status="ok",
+                model=model,
+                context_chars=len(context),
+                history_count=len(history),
+            )
             async for token in langchain_engine.stream_answer(
                 query=request.message,
                 context=context,
                 history=history,
                 model_name=model,
                 query_type=query_type,
+                max_tokens=request.max_tokens,
             ):
+                if await _request_disconnected(http_request):
+                    raise asyncio.CancelledError()
                 candidate_response = full_response + token
                 output_check = scan_llm_output_for_leakage(candidate_response)
                 if output_check.is_blocked:
@@ -511,9 +627,19 @@ async def chat_stream(
                         categories=output_check.categories,
                         prompt_preview=candidate_response,
                     )
+                    _persist_exchange(
+                        db=db,
+                        session=session,
+                        session_id=session_id,
+                        user_content=request.message,
+                        assistant_content=full_response,
+                        sources=[],
+                        latency_ms=latency,
+                    )
                     yield f"event: security\ndata: {json.dumps({'blocked': True, 'categories': output_check.categories}, ensure_ascii=False)}\n\n"
-                    yield f"event: token\ndata: {json.dumps({'t': full_response}, ensure_ascii=False)}\n\n"
+                    yield f"event: replace\ndata: {json.dumps({'answer': full_response, 'reason': 'security'}, ensure_ascii=False)}\n\n"
                     complete_data = {
+                        "request_id": trace.request_id,
                         "session_id": session_id,
                         "answer": full_response,
                         "sources": [],
@@ -534,22 +660,23 @@ async def chat_stream(
                     yield f"event: complete\ndata: {json.dumps(complete_data, ensure_ascii=False)}\n\n"
                     return
                 full_response = candidate_response
-                yield f"event: token\ndata: {json.dumps({'t': token}, ensure_ascii=False)}\n\n"
+
+            trace.stage(
+                "llm.stream.completed",
+                status="ok",
+                model=model,
+                answer_chars=len(full_response),
+            )
+            # Release generated text only after the complete candidate passes leakage
+            # scanning. This prevents multi-token secret patterns from being partially
+            # disclosed before the final token makes the pattern detectable.
+            yield f"event: token\ndata: {json.dumps({'t': full_response}, ensure_ascii=False)}\n\n"
 
             # LLM09: do not add synthetic citations to uncited claims.
             # Missing inline citations must remain visible to validation instead of being masked
             # by a decorative source footer.
 
-            # 5. Post-streaming: quality check & post-process
-            # selected_quality diisi setelah streaming selesai (tidak blocking streaming)
-            selected_quality = build_answer_quality_report(
-                query=request.message,
-                context=context,
-                answer=full_response,
-                source_count=len(sources_for_response),
-            )
-
-            # Post-process jawaban: validasi sitasi, plain text emphasis, dan peta referensi
+            # 5. Post-process jawaban: validasi sitasi, plain text emphasis, dan peta referensi
             full_response = sanitize_citations(full_response, len(sources_for_response))
             full_response = strip_markdown_emphasis(full_response)
             full_response, used_sources_for_response = renumber_citations_and_sources(
@@ -580,10 +707,12 @@ async def chat_stream(
 
                 if validation.get("is_valid") is False:
                     full_response = _build_llm09_safe_fallback(validation)
-                    yield f"event: token\ndata: {json.dumps({'t': full_response}, ensure_ascii=False)}\n\n"
+                    yield f"event: replace\ndata: {json.dumps({'answer': full_response}, ensure_ascii=False)}\n\n"
 
+            quality_outcome = "quality"
             if validation and validation.get("is_valid") is False:
                 used_sources_for_response = []
+                quality_outcome = "no_evidence"
 
             output_contract = validate_llm_output_contract(
                 full_response,
@@ -624,22 +753,156 @@ async def chat_stream(
                     },
                 }
                 yield f"event: security\ndata: {json.dumps({'blocked': True, 'categories': output_contract.categories, 'severity': output_contract.severity}, ensure_ascii=False)}\n\n"
-                yield f"event: token\ndata: {json.dumps({'t': full_response}, ensure_ascii=False)}\n\n"
+                yield f"event: replace\ndata: {json.dumps({'answer': full_response, 'reason': 'security'}, ensure_ascii=False)}\n\n"
+                quality_outcome = "security"
+
+            # Evaluate exactly the answer and sources that will be persisted and returned.
+            selected_quality = build_answer_quality_report(
+                query=request.message,
+                context=context,
+                answer=full_response,
+                source_count=len(used_sources_for_response),
+            )
+
+            if await _request_disconnected(http_request):
+                trace.stage("chat.cancelled", status="cancelled", reason="client_disconnected")
+                return
+
+            retry_limit = bounded_retry_limit(request.max_quality_retries)
+            retry_attempt = 0
+            while should_retry_quality(
+                selected_quality,
+                attempt=retry_attempt,
+                limit=retry_limit,
+                outcome=quality_outcome,
+            ):
+                retry_attempt += 1
+                retry_reasons = "; ".join(
+                    str(reason) for reason in selected_quality.get("retry_reasons", [])
+                )
+                retry_query = (
+                    f"{request.message}\n\n"
+                    "INSTRUKSI PERBAIKAN: Tulis ulang jawaban agar sepenuhnya didukung "
+                    "konteks dan setiap klaim faktual memiliki sitasi inline yang tepat."
+                )
+                if retry_reasons:
+                    retry_query += f" Kekurangan jawaban sebelumnya: {retry_reasons}."
+
+                trace.stage(
+                    "answer.quality.retry.started",
+                    status="ok",
+                    attempt=retry_attempt,
+                    limit=retry_limit,
+                    model=model,
+                )
+                retry_response = ""
+                retry_blocked = False
+                async for token in langchain_engine.stream_answer(
+                    query=retry_query,
+                    context=context,
+                    history=history,
+                    model_name=model,
+                    query_type=query_type,
+                    max_tokens=request.max_tokens,
+                ):
+                    if await _request_disconnected(http_request):
+                        raise asyncio.CancelledError()
+                    candidate_retry = retry_response + token
+                    if scan_llm_output_for_leakage(candidate_retry).is_blocked:
+                        retry_blocked = True
+                        break
+                    retry_response = candidate_retry
+
+                if retry_blocked or not retry_response.strip():
+                    trace.stage(
+                        "answer.quality.retry.completed",
+                        status="blocked" if retry_blocked else "failed",
+                        attempt=retry_attempt,
+                    )
+                    break
+
+                retry_response = sanitize_citations(retry_response, len(sources_for_response))
+                retry_response = strip_markdown_emphasis(retry_response)
+                retry_response, retry_sources = renumber_citations_and_sources(
+                    retry_response,
+                    sources_for_response,
+                )
+                retry_response = append_citation_reference_block(retry_response, retry_sources)
+                retry_validation = validate_answer(retry_response, context, retry_sources)
+                retry_contract = validate_llm_output_contract(
+                    retry_response,
+                    requires_citation=bool(context and retry_sources),
+                    allow_refusal_without_citation=True,
+                )
+                retry_quality = build_answer_quality_report(
+                    query=request.message,
+                    context=context,
+                    answer=retry_response,
+                    source_count=len(retry_sources),
+                )
+
+                current_score = float(selected_quality.get("score") or 0)
+                retry_score = float(retry_quality.get("score") or 0)
+                retry_acceptable = (
+                    retry_validation.get("is_valid") is not False
+                    and retry_contract.allowed
+                    and retry_score > current_score
+                )
+                trace.stage(
+                    "answer.quality.retry.completed",
+                    status="accepted" if retry_acceptable else "rejected",
+                    attempt=retry_attempt,
+                    score=retry_quality.get("score"),
+                    needs_retry=retry_quality.get("needs_retry"),
+                )
+                if retry_acceptable:
+                    full_response = retry_response
+                    used_sources_for_response = retry_sources
+                    validation = retry_validation
+                    selected_quality = retry_quality
+                    yield (
+                        "event: replace\n"
+                        f"data: {json.dumps({'answer': full_response, 'reason': 'quality_retry', 'attempt': retry_attempt}, ensure_ascii=False)}\n\n"
+                    )
+                else:
+                    break
+
+            trace.stage(
+                "answer.validation.completed",
+                status="ok" if not validation or validation.get("is_valid") is not False else "failed",
+                is_valid=None if validation is None else validation.get("is_valid"),
+                warning_count=len((validation or {}).get("warnings", [])),
+            )
+            trace.stage(
+                "answer.quality.completed",
+                status="ok",
+                score=selected_quality.get("score"),
+                needs_retry=selected_quality.get("needs_retry"),
+                retry_reasons=selected_quality.get("retry_reasons", []),
+            )
 
             # 6. Save response to DB
             latency = int((time.perf_counter() - start_time) * 1000)
 
-            assistant_message = Conversation(
+            if await _request_disconnected(http_request):
+                trace.stage("chat.cancelled", status="cancelled", reason="client_disconnected")
+                return
+
+            _persist_exchange(
+                db=db,
+                session=session,
                 session_id=session_id,
-                role="assistant",
-                content=full_response,
-                sources=json.dumps(used_sources_for_response),
-                timestamp=datetime.utcnow(),
+                user_content=request.message,
+                assistant_content=full_response,
+                sources=used_sources_for_response,
                 latency_ms=latency,
             )
-            db.add(assistant_message)
-            session.updated_at = datetime.utcnow()
-            db.commit()
+            trace.stage(
+                "persistence.completed",
+                status="ok",
+                session_id=session_id,
+                source_count=len(used_sources_for_response),
+            )
 
             quality_payload = {
                 "score": selected_quality.get("score"),
@@ -670,6 +933,7 @@ async def chat_stream(
                     )
 
             complete_data = {
+                "request_id": trace.request_id,
                 "session_id": session_id,
                 "answer": full_response,
                 "sources": used_sources_for_response,
@@ -680,10 +944,14 @@ async def chat_stream(
             }
             yield f"event: complete\ndata: {json.dumps(complete_data, ensure_ascii=False)}\n\n"
 
+        except asyncio.CancelledError:
+            db.rollback()
+            trace.stage("chat.cancelled", status="cancelled")
+            raise
         except Exception as e:
-            import traceback
-            logger.error(f"Chat streaming error: {e}\n{traceback.format_exc()}")
-            yield f"event: error\ndata: {json.dumps({'error': str(e)})}\n\n"
+            db.rollback()
+            logger.error("Chat streaming failed request_id={} error_type={}".format(trace.request_id, type(e).__name__))
+            yield f"event: error\ndata: {json.dumps({'error': 'Chat processing failed', 'request_id': trace.request_id})}\n\n"
 
     return StreamingResponse(
         event_generator(),

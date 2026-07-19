@@ -139,7 +139,15 @@ export async function streamChat(payload, handlers = {}, options = {}) {
         continue
       }
 
-      if (eventType === 'retrieval' && handlers.onRetrieval) {
+      if (eventType === 'meta' && handlers.onMeta) {
+        await handlers.onMeta(data)
+      } else if (eventType === 'replace' && handlers.onReplace) {
+        await handlers.onReplace(data)
+      } else if (eventType === 'security' && handlers.onSecurity) {
+        await handlers.onSecurity(data)
+      } else if (eventType === 'llm09_guard' && handlers.onLlm09Guard) {
+        await handlers.onLlm09Guard(data)
+      } else if (eventType === 'retrieval' && handlers.onRetrieval) {
         await handlers.onRetrieval(data)
       } else if (eventType === 'token' && handlers.onToken) {
         await handlers.onToken(data)

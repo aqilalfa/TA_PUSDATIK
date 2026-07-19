@@ -18,11 +18,6 @@ def test_source_dict_includes_doc_id():
             "judul_dokumen": "PP Nomor 71 Tahun 2019",
         },
     )
-    # Verifikasi via inspeksi source bahwa sources.append payload memuat key "doc_id".
-    # String "doc_id" muncul di banyak tempat, jadi batasi pencarian ke block sources.append.
-    import inspect
-    src = inspect.getsource(LangchainRAGEngine.retrieve_context)
-    assert 'sources.append' in src, "sources.append block missing"
-    anchor = src.index('sources.append')
-    block = src[anchor:anchor + 2000]
-    assert '"doc_id":' in block, "sources.append payload must include doc_id field"
+    sources = engine._build_sources_list([fake_doc])
+
+    assert sources[0]["doc_id"] == "7"

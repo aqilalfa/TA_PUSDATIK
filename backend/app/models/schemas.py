@@ -3,7 +3,7 @@ Pydantic schemas for request/response validation
 """
 
 from pydantic import BaseModel, ConfigDict, Field
-from typing import List, Optional, Dict, Any, Union
+from typing import List, Optional, Dict, Any, Union, Literal
 from datetime import datetime
 
 class ModelInfo(BaseModel):
@@ -61,12 +61,12 @@ class SessionResponse(BaseModel):
 class ChatRequest(BaseModel):
     session_id: Optional[str] = None
     message: str = Field(..., min_length=1, max_length=5000)
-    model: Optional[str] = None
+    model: Literal["qwen3.5:4b"] = "qwen3.5:4b"
     use_structured_fact: bool = False
     top_k: int = Field(default=5, ge=1, le=20)
     max_tokens: int = Field(default=2048, ge=128, le=4096)
     document_id: Optional[str] = None
-    max_quality_retries: Optional[int] = Field(default=None, ge=0, le=3)  # override MAX_QUALITY_RETRY_ATTEMPTS; 0 = skip retries
+    max_quality_retries: Optional[int] = Field(default=None, ge=0, le=2)
 
 
 class ChatResponse(BaseModel):
