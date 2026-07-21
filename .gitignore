@@ -107,3 +107,12 @@ nul
 .claude/_state/*
 !.claude/_state/.gitkeep
 .superpowers/
+
+@"
+
+# Archived/unused deployment files
+.env.cloudflare.example
+docker-compose.cloudflare.yml
+docker-compose.ldap.yml
+start_all.bat
+"@ | Add-Content .gitignore
