@@ -130,11 +130,17 @@ tangkapan layar/
 !.claude/_state/.gitkeep
 .superpowers/
 
-@"
+# Runtime data (must never be tracked)
+redis_data/
+backend/data/*.db
+backend/data/*.pkl
+.env.docker
 
-# Archived/unused deployment files
-.env.cloudflare.example
-docker-compose.cloudflare.yml
-docker-compose.ldap.yml
-start_all.bat
-"@ | Add-Content .gitignore
+# Transfer/temp artifacts
+*.zip
+*.log
+temp.ps1
+tunnel-dev.ps1
+tunnel-dev-backend.ps1
+tunnel-frontend.ps1
+
