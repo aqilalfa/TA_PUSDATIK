@@ -117,16 +117,56 @@ export function getDocumentFileUrl(docId) {
   return `${API_BASE_URL}/api/rag/documents/by-doc-id/${docId}/file`
 }
 
+function pdfOpenErrorMessage(status) {
+  if (status === 401) return 'Sesi berakhir. Login ulang untuk membuka PDF.'
+  if (status === 403) return 'Akses ke file PDF ditolak.'
+  if (status === 404) return 'File PDF tidak ditemukan di server.'
+  return `Gagal membuka PDF (HTTP ${status}).`
+}
+
+/**
+ * Open original PDF in a new tab.
+ * Opens about:blank synchronously (keeps user-gesture so popup blockers allow it),
+ * then navigates to the authenticated blob URL after fetch.
+ */
 export async function openDocumentFile(docId) {
-  const response = await authenticatedFetch(getDocumentFileUrl(docId))
-  if (!response.ok) {
-    throw new Error(`Failed to open PDF: HTTP ${response.status}`)
+  if (!docId) {
+    throw new Error('Dokumen tidak memiliki ID file.')
   }
 
-  const blob = await response.blob()
-  const url = URL.createObjectURL(blob)
-  window.open(url, '_blank', 'noopener,noreferrer')
-  setTimeout(() => URL.revokeObjectURL(url), 60_000)
+  // Must open before any await — async window.open is blocked by browsers.
+  // Do NOT pass "noopener" here: modern browsers then return null and we
+  // cannot navigate the tab after the authenticated fetch completes.
+  const tab = window.open('about:blank', '_blank')
+  if (!tab) {
+    throw new Error(
+      'Browser memblokir tab baru. Izinkan pop-up untuk situs ini, lalu coba lagi.'
+    )
+  }
+  try {
+    tab.opener = null
+  } catch {
+    // some browsers lock opener after open
+  }
+
+  try {
+    const response = await authenticatedFetch(getDocumentFileUrl(docId))
+    if (!response.ok) {
+      throw new Error(pdfOpenErrorMessage(response.status))
+    }
+
+    const blob = await response.blob()
+    const url = URL.createObjectURL(blob)
+    tab.location.href = url
+    setTimeout(() => URL.revokeObjectURL(url), 60_000)
+  } catch (error) {
+    try {
+      tab.close()
+    } catch {
+      // ignore close failures on already-closed tabs
+    }
+    throw error
+  }
 }
 
 /**

@@ -52,6 +52,7 @@ def _build_ollama_messages(
     context: str,
     history: List,
     query_profile: QueryProfile,
+    extra_system_instruction: str = "",
 ) -> List[Dict[str, str]]:
     prompt_map = {
         "table": SYSTEM_PROMPT_TABLE,
@@ -64,8 +65,10 @@ def _build_ollama_messages(
     system_content = (
         f"{system_prompt}\n\n{build_llm01_security_instruction()}\n\n"
         f"{build_answer_style_instructions(query)}\n\n{_scope_instruction(query_profile)}\n\n"
-        f"Konteks Referensi:\n{safe_context}"
     )
+    if extra_system_instruction:
+        system_content += f"{extra_system_instruction}\n\n"
+    system_content += f"Konteks Referensi:\n{safe_context}"
     messages = [{"role": "system", "content": system_content}]
     messages.extend({"role": _role(msg), "content": msg.content} for msg in history)
     quality_guardrail = build_quality_guardrail(query, context)
@@ -83,13 +86,19 @@ async def stream_answer(
     model_name: str,
     query_type: str = "general",
     max_tokens: int = 1024,
+    extra_system_instruction: str = "",
 ) -> AsyncIterator[str]:
     """
     Stream LLM answer token by token via direct Ollama /api/chat call.
     Bypassing LangChain-Ollama ensures fast First Token delivery.
+
+    `extra_system_instruction` carries the LLM09 Answerability Gate (Tahap D)
+    partial-answer directive when evidence coverage is incomplete.
     """
     query_profile = classify_query_profile(query)
-    ollama_messages = _build_ollama_messages(query, context, history, query_profile)
+    ollama_messages = _build_ollama_messages(
+        query, context, history, query_profile, extra_system_instruction=extra_system_instruction
+    )
 
     if model_name != PRODUCTION_MODEL:
         raise ValueError(f"Unsupported model: {model_name}. Expected {PRODUCTION_MODEL}")

@@ -1,6 +1,12 @@
-import { describe, it, expect, vi, afterEach } from 'vitest'
+import { describe, it, expect, vi, afterEach, beforeEach } from 'vitest'
 import { mount } from '@vue/test-utils'
 import SourceCard from '../SourceCard.vue'
+
+const isAdminUser = vi.fn(() => true)
+
+vi.mock('@/services/auth', () => ({
+  isAdminUser: (...args) => isAdminUser(...args),
+}))
 
 const baseSource = {
   id: 1,
@@ -14,6 +20,10 @@ const baseSource = {
 }
 
 describe('SourceCard', () => {
+  beforeEach(() => {
+    isAdminUser.mockReturnValue(true)
+  })
+
   afterEach(() => {
     vi.restoreAllMocks()
   })
@@ -61,5 +71,12 @@ describe('SourceCard', () => {
       props: { source: { ...baseSource, doc_id: '' } }
     })
     expect(wrapper.find('.action-btn.ctx').exists()).toBe(false)
+  })
+
+  it('hides context button for staff/evaluator (non-admin)', () => {
+    isAdminUser.mockReturnValue(false)
+    const wrapper = mount(SourceCard, { props: { source: baseSource } })
+    expect(wrapper.find('.action-btn.ctx').exists()).toBe(false)
+    expect(wrapper.find('.action-btn.pdf').exists()).toBe(true)
   })
 })

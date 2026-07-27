@@ -1,0 +1,10 @@
+response_id,claim_id,text,citation_ids,status
+llm09-unavailable-002,claim-001,"Informasi mengenai nomor surat edaran internal terbaru tentang SPBE yang spesifik dinyatakan ""belum ada"" tidak ditemukan dalam dokumen sumber [1], [2], [3], [4], dan [5].","[1, 2, 3, 4, 5]",not_evaluated
+llm09-unavailable-002,claim-002,- Tidak terdapat informasi mengenai nomor surat edaran internal terbaru yang dinyatakan belum ada dalam dokumen sumber [1] hingga [5].,"[1, 5]",not_evaluated
+llm09-unavailable-002,claim-003,"- Dokumen menyediakan kriteria bukti dukungan berupa draf peraturan, keputusan, atau surat edaran untuk indikator kematangan kebijakan internal SPBE namun tidak mencantumkan daftar spesifik surat yang hilang [2].",[2],not_evaluated
+llm09-source-mismatch-002,claim-001,Audit Keamanan SPBE adalah proses identifikasi dan evaluasi risiko serta pemetaan kriteria kontrol sesuai dengan lingkup Audit Keamanan SPBE [1].,[1],not_evaluated
+llm09-over-answering-002,claim-001,"Jawaban:
+Tujuan Tata Kelola SPBE adalah memastikan penerapan unsur-unsur SPBE secara terpadu [1].",[1],not_evaluated
+llm09-over-answering-002,claim-002,"Unsur-unsur tersebut meliputi Rencana Induk SPBE Nasional, Arsitektur SPBE, Peta Rencana SPBE, rencana dan anggaran SPBE, Proses Bisnis, data dan informasi, Infrastruktur SPBE, Aplikasi SPBE, Keamanan SPBE, serta Layanan SPBE [1].",[1],not_evaluated
+llm09-over-answering-002,claim-003,"Tata Kelola SPBE didefinisikan sebagai kerangka kerja yang memastikan terlaksananya pengaturan, pengarahan, dan pengendalian dalam penerapan SPBE secara terpadu [2].",[2],not_evaluated
+llm09-over-answering-002,claim-004,"Manajemen SPBE merupakan serangkaian proses untuk mencapai penerapan SPBE yang efektif, efisien, berkesinambungan, serta layanan berkualitas [2].",[2],not_evaluated

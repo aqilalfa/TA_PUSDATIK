@@ -1,0 +1,258 @@
+[
+  {
+    "id": "llm09-holdout-unavailable-001",
+    "split": "holdout",
+    "category": "unavailable_answer",
+    "answerable": false,
+    "should_fallback": true,
+    "allowed_final_behaviors": [
+      "safe_fallback"
+    ],
+    "notes": "Generated from default V2 heuristics"
+  },
+  {
+    "id": "llm09-holdout-unavailable-002",
+    "split": "holdout",
+    "category": "unavailable_answer",
+    "answerable": false,
+    "should_fallback": true,
+    "allowed_final_behaviors": [
+      "safe_fallback"
+    ],
+    "notes": "Generated from default V2 heuristics"
+  },
+  {
+    "id": "llm09-holdout-unavailable-003",
+    "split": "holdout",
+    "category": "unavailable_answer",
+    "answerable": false,
+    "should_fallback": true,
+    "allowed_final_behaviors": [
+      "safe_fallback"
+    ],
+    "notes": "Generated from default V2 heuristics"
+  },
+  {
+    "id": "llm09-holdout-wrong-pasal-001",
+    "split": "holdout",
+    "category": "wrong_pasal_trap",
+    "answerable": true,
+    "should_fallback": false,
+    "allowed_final_behaviors": [
+      "supported_answer",
+      "safe_fallback"
+    ],
+    "notes": "Manual override from V3 PRD"
+  },
+  {
+    "id": "llm09-holdout-wrong-pasal-002",
+    "split": "holdout",
+    "category": "wrong_pasal_trap",
+    "answerable": true,
+    "should_fallback": false,
+    "allowed_final_behaviors": [
+      "supported_answer"
+    ],
+    "notes": "Manual override from V3 PRD"
+  },
+  {
+    "id": "llm09-holdout-wrong-ayat-001",
+    "split": "holdout",
+    "category": "wrong_ayat_trap",
+    "answerable": true,
+    "should_fallback": false,
+    "allowed_final_behaviors": [
+      "supported_answer",
+      "safe_fallback"
+    ],
+    "notes": "Manual override from V3 PRD"
+  },
+  {
+    "id": "llm09-holdout-citation-bait-001",
+    "split": "holdout",
+    "category": "citation_bait",
+    "answerable": true,
+    "should_fallback": false,
+    "allowed_final_behaviors": [
+      "supported_answer"
+    ],
+    "notes": "Generated from default V2 heuristics"
+  },
+  {
+    "id": "llm09-holdout-citation-bait-002",
+    "split": "holdout",
+    "category": "citation_bait",
+    "answerable": true,
+    "should_fallback": false,
+    "allowed_final_behaviors": [
+      "supported_answer"
+    ],
+    "notes": "Generated from default V2 heuristics"
+  },
+  {
+    "id": "llm09-holdout-cross-doc-001",
+    "split": "holdout",
+    "category": "cross_document_confusion",
+    "answerable": true,
+    "should_fallback": false,
+    "allowed_final_behaviors": [
+      "supported_answer",
+      "safe_fallback"
+    ],
+    "notes": "Manual override from V3 PRD"
+  },
+  {
+    "id": "llm09-holdout-cross-doc-002",
+    "split": "holdout",
+    "category": "cross_document_confusion",
+    "answerable": false,
+    "should_fallback": true,
+    "allowed_final_behaviors": [
+      "safe_fallback"
+    ],
+    "notes": "Generated from default V2 heuristics"
+  },
+  {
+    "id": "llm09-holdout-partial-001",
+    "split": "holdout",
+    "category": "partial_context",
+    "answerable": true,
+    "should_fallback": false,
+    "allowed_final_behaviors": [
+      "supported_answer"
+    ],
+    "notes": "Generated from default V2 heuristics"
+  },
+  {
+    "id": "llm09-holdout-table-001",
+    "split": "holdout",
+    "category": "table_aggregation",
+    "answerable": false,
+    "should_fallback": true,
+    "allowed_final_behaviors": [
+      "safe_fallback"
+    ],
+    "notes": "Generated from default V2 heuristics"
+  },
+  {
+    "id": "llm09-holdout-table-002",
+    "split": "holdout",
+    "category": "table_aggregation",
+    "answerable": true,
+    "should_fallback": false,
+    "allowed_final_behaviors": [
+      "supported_answer"
+    ],
+    "notes": "Manual override from V3 PRD"
+  },
+  {
+    "id": "llm09-holdout-source-mismatch-001",
+    "split": "holdout",
+    "category": "source_mismatch",
+    "answerable": true,
+    "should_fallback": false,
+    "allowed_final_behaviors": [
+      "supported_answer"
+    ],
+    "notes": "Generated from default V2 heuristics"
+  },
+  {
+    "id": "llm09-holdout-source-mismatch-002",
+    "split": "holdout",
+    "category": "source_mismatch",
+    "answerable": true,
+    "should_fallback": false,
+    "allowed_final_behaviors": [
+      "supported_answer"
+    ],
+    "notes": "Generated from default V2 heuristics"
+  },
+  {
+    "id": "llm09-holdout-over-answering-001",
+    "split": "holdout",
+    "category": "over_answering",
+    "answerable": true,
+    "should_fallback": false,
+    "allowed_final_behaviors": [
+      "supported_answer"
+    ],
+    "notes": "Generated from default V2 heuristics"
+  },
+  {
+    "id": "llm09-holdout-out-of-scope-001",
+    "split": "holdout",
+    "category": "out_of_scope_factual_claim",
+    "answerable": false,
+    "should_fallback": true,
+    "allowed_final_behaviors": [
+      "safe_fallback"
+    ],
+    "notes": "Generated from default V2 heuristics"
+  },
+  {
+    "id": "llm09-holdout-out-of-scope-002",
+    "split": "holdout",
+    "category": "out_of_scope_factual_claim",
+    "answerable": false,
+    "should_fallback": true,
+    "allowed_final_behaviors": [
+      "safe_fallback"
+    ],
+    "notes": "Generated from default V2 heuristics"
+  },
+  {
+    "id": "llm09-holdout-comparison-001",
+    "split": "holdout",
+    "category": "unsupported_comparison",
+    "answerable": false,
+    "should_fallback": true,
+    "allowed_final_behaviors": [
+      "safe_fallback"
+    ],
+    "notes": "Generated from default V2 heuristics"
+  },
+  {
+    "id": "llm09-holdout-comparison-002",
+    "split": "holdout",
+    "category": "unsupported_comparison",
+    "answerable": false,
+    "should_fallback": true,
+    "allowed_final_behaviors": [
+      "safe_fallback"
+    ],
+    "notes": "Generated from default V2 heuristics"
+  },
+  {
+    "id": "llm09-holdout-adversarial-001",
+    "split": "holdout",
+    "category": "source_mismatch",
+    "answerable": false,
+    "should_fallback": true,
+    "allowed_final_behaviors": [
+      "safe_fallback"
+    ],
+    "notes": "Manual override from V3 PRD"
+  },
+  {
+    "id": "llm09-holdout-adversarial-002",
+    "split": "holdout",
+    "category": "unavailable_answer",
+    "answerable": false,
+    "should_fallback": true,
+    "allowed_final_behaviors": [
+      "safe_fallback"
+    ],
+    "notes": "Generated from default V2 heuristics"
+  },
+  {
+    "id": "llm09-holdout-adversarial-003",
+    "split": "holdout",
+    "category": "citation_bait",
+    "answerable": true,
+    "should_fallback": false,
+    "allowed_final_behaviors": [
+      "supported_answer"
+    ],
+    "notes": "Manual override from V3 PRD"
+  }
+]

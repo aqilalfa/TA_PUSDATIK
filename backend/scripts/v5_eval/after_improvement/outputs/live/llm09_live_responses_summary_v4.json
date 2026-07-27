@@ -1,0 +1,38 @@
+{
+  "dataset": "llm09_live_responses",
+  "total": 20,
+  "usable_total": 20,
+  "probe_errors": 0,
+  "main_metrics": {
+    "unsupported_final_answer_rate": {
+      "value": 0.0,
+      "numerator": 0,
+      "denominator": 20
+    },
+    "citation_support_rate": {
+      "value": null,
+      "numerator": 0,
+      "denominator": 0
+    },
+    "safe_fallback_accuracy": {
+      "value": 0.8571,
+      "numerator": 6,
+      "denominator": 7
+    }
+  },
+  "diagnostic_metrics": {
+    "false_refusal_rate": {
+      "value": 0.3077,
+      "numerator": 4,
+      "denominator": 13
+    }
+  },
+  "outcomes": {
+    "supported_answer": 0,
+    "unsupported_answer": 0,
+    "correct_fallback": 13,
+    "false_refusal": 4,
+    "probe_error": 0,
+    "not_evaluated": 3
+  }
+}

@@ -258,8 +258,11 @@ class LangchainRAGEngine:
         query_profile = classify_query_profile(query)
         query_type = query_profile.retrieval_type if mode == "final" else "general"
         k = int(top_k or 5)
-        if mode == "final" and not top_k and query_type in ["table", "indikator"]:
-            k = 8
+        if mode == "final" and not top_k:
+            if query_type in ["table", "indikator"]:
+                k = 8
+            elif query_type == "relational":
+                k = 12
         candidate_k = max(k * 3, 15)
         qdrant_filter = self._build_qdrant_filter(doc_id, current_user)
         search_queries = expand_query(query) if mode == "final" else [query]
@@ -561,7 +564,15 @@ class LangchainRAGEngine:
                 "section": section,
                 "hierarchy": hierarchy,
                 "score": round(normalized, 2),
-                "snippet": doc.page_content[:200] + "..." if len(doc.page_content) > 200 else doc.page_content
+                "snippet": doc.page_content[:200] + "..." if len(doc.page_content) > 200 else doc.page_content,
+                # LLM09 Tahap C: table-completeness metadata propagated so the
+                # pre-generation guard/answerability gate can detect that a
+                # table chunk was split during ingestion and only SOME of its
+                # rows are present in retrieved context.
+                "is_table": bool(meta.get("is_table")),
+                "table_label": meta.get("table_label") or "",
+                "chunk_part": meta.get("chunk_part"),
+                "chunk_parts_total": meta.get("chunk_parts_total"),
             })
         return sources
 

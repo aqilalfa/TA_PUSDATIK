@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "annotation_file": "llm09_holdout_manual_annotations_revised_final.json",
+  "datasets": {
+    "holdout": {
+      "dataset": "holdout",
+      "total_responses": 23,
+      "claim_counts": {
+        "not_applicable": 5,
+        "supported": 25,
+        "unsupported": 4
+      },
+      "response_outcomes": {
+        "correct_fallback": 7,
+        "acceptable_fallback": 10,
+        "false_refusal": 3,
+        "supported_answer": 1,
+        "unsupported_answer": 2
+      },
+      "main_metrics": {
+        "unsupported_final_answer_rate": {
+          "value": 0.087,
+          "percentage": 8.7,
+          "numerator": 2,
+          "denominator": 23
+        },
+        "citation_support_rate": {
+          "value": 0.8621,
+          "percentage": 86.21,
+          "numerator": 25,
+          "denominator": 29,
+          "partially_supported_claims": 0,
+          "unsupported_claims": 4
+        },
+        "safe_fallback_accuracy": {
+          "value": 10,
+          "percentage": 100.0,
+          "numerator": 10,
+          "denominator": 10
+        }
+      },
+      "diagnostic_metrics": {
+        "false_refusal_rate": {
+          "value": 0.2308,
+          "percentage": 23.08,
+          "numerator": 3,
+          "denominator": 13
+        }
+      }
+    }
+  }
+}

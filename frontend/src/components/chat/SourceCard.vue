@@ -26,7 +26,11 @@
         <button class="action-btn pdf" @click.stop="openPdf">
           📄 Buka PDF ↗
         </button>
-        <button class="action-btn ctx" @click.stop="openContext">
+        <button
+          v-if="canViewContext"
+          class="action-btn ctx"
+          @click.stop="openContext"
+        >
           🔍 Lihat Konteks →
         </button>
       </div>
@@ -35,7 +39,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
+import { isAdminUser } from '@/services/auth'
 import { openDocumentFile } from '@/services/documentService'
 
 const props = defineProps({
@@ -43,14 +48,19 @@ const props = defineProps({
 })
 
 const expanded = ref(false)
+// Staff/evaluator (role: staff) cannot open chunk detail pages; only admin_pusdatik.
+const canViewContext = computed(() => isAdminUser())
 
 function toggleExpanded() {
   expanded.value = !expanded.value
 }
 
 async function openPdf() {
-  if (props.source.doc_id) {
+  if (!props.source.doc_id) return
+  try {
     await openDocumentFile(props.source.doc_id)
+  } catch (error) {
+    window.alert(error?.message || 'Gagal membuka PDF.')
   }
 }
 

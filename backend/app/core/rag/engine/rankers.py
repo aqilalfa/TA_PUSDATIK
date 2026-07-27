@@ -559,7 +559,7 @@ class RAGRanker:
                 if candidate_limit_override is not None:
                     candidate_limit = max(1, int(candidate_limit_override))
                     candidate_policy = "override"
-                elif retrieval_type in {"pasal", "table", "indikator"}:
+                elif retrieval_type in {"pasal", "table", "indikator", "relational"}:
                     candidate_limit = 32
                     candidate_policy = "adaptive-specialized"
                 elif self._has_clear_rrf_boundary(docs):

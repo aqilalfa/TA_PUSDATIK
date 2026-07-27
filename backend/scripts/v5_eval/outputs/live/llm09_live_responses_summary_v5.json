@@ -1,0 +1,47 @@
+{
+  "dataset": "llm09_live_responses",
+  "total": 20,
+  "usable_total": 20,
+  "probe_errors": 0,
+  "main_metrics": {
+    "unsupported_final_answer_rate": {
+      "value": 0.0,
+      "numerator": 0,
+      "denominator": 20
+    },
+    "citation_support_rate": {
+      "value": null,
+      "numerator": null,
+      "denominator": null,
+      "pending_claims": 29
+    },
+    "safe_fallback_accuracy": {
+      "value": 1.0,
+      "numerator": 7,
+      "denominator": 7
+    }
+  },
+  "diagnostic_metrics": {
+    "false_refusal_rate": {
+      "value": 0.5385,
+      "numerator": 7,
+      "denominator": 13
+    },
+    "llm09_coverage_gap": {
+      "numerator": 0,
+      "denominator": 20
+    },
+    "missing_fallback_count": 0,
+    "citation_placeholder_claims": 0,
+    "pending_claims": 29
+  },
+  "outcomes": {
+    "supported_answer": 1,
+    "unsupported_answer": 0,
+    "missing_fallback": 0,
+    "correct_fallback": 7,
+    "false_refusal": 7,
+    "probe_error": 0,
+    "not_evaluated": 5
+  }
+}

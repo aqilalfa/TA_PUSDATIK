@@ -9,7 +9,9 @@ Mendukung dua mode lookup berdasarkan parameter {doc_id}:
 """
 
 import json
+import os
 from pathlib import Path
+from loguru import logger
 
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import FileResponse
@@ -57,6 +59,73 @@ def _document_access_metadata(document: Document) -> dict:
         return {}
 
 
+def _resolve_real_path(stored_path: str | None) -> Path | None:
+    """
+    Resolve absolute path from DB string.
+    Works transparently inside Docker (/app/data) and local Dev.
+    """
+    if not stored_path:
+        return None
+        
+    # 1. Coba path yang persis ada di database (selalu berhasil di Docker)
+    p = Path(stored_path)
+    if p.exists():
+        return p
+        
+    # 2. Jika gagal dan path adalah /app/data/... (artinya jalan di lokal OS), 
+    # terjemahkan ke direktori proyek lokal
+    if stored_path.startswith("/app/data/"):
+        local_backend_dir = Path(__file__).resolve().parent.parent.parent
+        # local_backend_dir == .../backend
+        translated = local_backend_dir / "data" / stored_path[10:] 
+        if translated.exists():
+            return translated
+
+    # 3. Handle legacy absolute Windows paths mapped to docker
+    # e.g. D:\aqil\pusdatik\data\documents\... -> /app/data/documents/...
+    if "\\" in stored_path and "data\\documents" in stored_path.lower():
+        # Extrak bagian setelah data\documents
+        try:
+            parts = stored_path.lower().split("data\\documents\\")
+            if len(parts) == 2:
+                # Reconstruct path inside docker
+                relative_part = parts[1].replace("\\", "/")
+                docker_path = Path("/app/data/documents") / relative_part
+                logger.warning(f"[_resolve_real_path] checking Docker path: {docker_path}")
+                if docker_path.exists():
+                    return docker_path
+        except Exception as e:
+            logger.warning(f"[_resolve_real_path] exception parsing docker path: {e}")
+
+    # 4. Fallback: Cari nama file-nya saja di direktori uploads atau documents
+    filename = Path(stored_path.replace("\\", "/")).name
+    
+    # Check uploads dengan suffix/akhiran file name jika ada UUID prefix
+    uploads_dir = Path(__file__).resolve().parent.parent.parent / "data" / "uploads"
+    fallback_exact = uploads_dir / filename
+    if fallback_exact.exists():
+        return fallback_exact
+        
+    # Search inside uploads_dir for files ending with our filename
+    # e.g., 8bd71bb1_Permenpan_RB_Nomor_59_Tahun_2020.pdf matching "Permenpan RB Nomor 59 Tahun 2020.pdf"
+    if uploads_dir.exists():
+        # Clean filename for substring match (replace spaces with underscores if needed)
+        clean_name = filename.replace(" ", "_").lower()
+        for f in uploads_dir.iterdir():
+            if f.is_file():
+                if filename.lower() in f.name.lower() or clean_name in f.name.lower():
+                    return f
+
+    # Check documents (recursive if possible, but for safety check common subdirs)
+    docs_dir = Path(__file__).resolve().parent.parent.parent.parent / "data" / "documents"
+    for subdir in ["peraturan", "audit", "pedoman", "lainnya", ""]:
+        sub_fallback = docs_dir / subdir / filename
+        if sub_fallback.exists():
+            return sub_fallback
+            
+    # Try one level up (if running locally out of docker)
+    return None
+
 @router.get("/by-doc-id/{doc_id}/file")
 def serve_document_file(
     doc_id: str,
@@ -71,15 +140,16 @@ def serve_document_file(
     if not user_can_access_metadata(_document_access_metadata(document), _user):
         raise HTTPException(status_code=403, detail="Document access denied")
 
-    file_path = document.file_path or document.original_path
-    if not file_path or not Path(file_path).exists():
+    real_path = _resolve_real_path(document.file_path) or _resolve_real_path(document.original_path)
+    
+    if not real_path:
         raise HTTPException(
             status_code=404,
-            detail=f"File not found on disk (path: {file_path!r})"
+            detail=f"File not found on disk (path: {document.file_path or document.original_path!r})"
         )
 
     return FileResponse(
-        path=file_path,
+        path=str(real_path),
         media_type="application/pdf",
         filename=document.original_filename or document.filename,
     )

@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "annotation_file": "llm09_manual_annotations_combined.json",
+  "datasets": {
+    "holdout": {
+      "dataset": "holdout",
+      "total_responses": 23,
+      "claim_counts": {
+        "supported": 18,
+        "partially_supported": 8,
+        "unsupported": 17
+      },
+      "response_outcomes": {
+        "correct_fallback": 10,
+        "acceptable_fallback": 2,
+        "supported_answer": 2,
+        "unsupported_answer": 8,
+        "false_refusal": 1
+      },
+      "main_metrics": {
+        "unsupported_final_answer_rate": {
+          "value": 0.3478,
+          "percentage": 34.78,
+          "numerator": 8,
+          "denominator": 23
+        },
+        "citation_support_rate": {
+          "value": 0.4186,
+          "percentage": 41.86,
+          "numerator": 18,
+          "denominator": 43,
+          "partially_supported_claims": 8,
+          "unsupported_claims": 17
+        },
+        "safe_fallback_accuracy": {
+          "value": 1.0,
+          "percentage": 100.0,
+          "numerator": 10,
+          "denominator": 10
+        }
+      }
+    },
+    "live": {
+      "dataset": "live",
+      "total_responses": 20,
+      "claim_counts": {
+        "supported": 24,
+        "unsupported": 12,
+        "partially_supported": 3
+      },
+      "response_outcomes": {
+        "correct_fallback": 9,
+        "acceptable_fallback": 4,
+        "unsupported_answer": 4,
+        "supported_answer": 2,
+        "false_refusal": 1
+      },
+      "main_metrics": {
+        "unsupported_final_answer_rate": {
+          "value": 0.2,
+          "percentage": 20.0,
+          "numerator": 4,
+          "denominator": 20
+        },
+        "citation_support_rate": {
+          "value": 0.6154,
+          "percentage": 61.54,
+          "numerator": 24,
+          "denominator": 39,
+          "partially_supported_claims": 3,
+          "unsupported_claims": 12
+        },
+        "safe_fallback_accuracy": {
+          "value": 1.0,
+          "percentage": 100.0,
+          "numerator": 9,
+          "denominator": 9
+        }
+      }
+    }
+  }
+}

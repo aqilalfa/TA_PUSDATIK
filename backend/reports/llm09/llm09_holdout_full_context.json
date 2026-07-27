@@ -1,0 +1,354 @@
+[
+  {
+    "response_id": "llm09-holdout-unavailable-001",
+    "sources": []
+  },
+  {
+    "response_id": "llm09-holdout-unavailable-002",
+    "sources": []
+  },
+  {
+    "response_id": "llm09-holdout-unavailable-003",
+    "sources": [
+      {
+        "id": 1,
+        "document": "peraturan bssn no 8 tahun 2024",
+        "section": "peraturan bssn no 8 tahun 2024 > BAB I KETENTUAN UMUM > Pasal 1",
+        "full_chunk_text": "peraturan bssn no 8 tahun 2024 > BAB I KETENTUAN UMUM > Pasal 1: Dalam Peraturan Badan ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyelenggaraan\npemerintahan yang memanfaatkan teknologi informasi\ndan komunikasi untuk memberikan layanan kepada\npengguna sistem pemerintahan berbasis elektronik.\n2. Keamanan SPBE adalah pengendalian keamanan yang\nterpadu dalam SPBE.\n3. Audit Keamanan SPBE adalah audit teknologi informasi\ndan komunikasi cakupan keamanan SPBE.\n4. Audit Teknologi Informasi dan Komunikasi yang\nselanjutnya disebut Audit TIK adalah proses yang\nsistematis untuk memperoleh dan mengevaluasi bukti\nsecara objektif terhadap aset teknologi informasi dan\nkomunikasi dengan tujuan untuk menetapkan tingkat\nkesesuaian antara teknologi informasi dan komunikasi\ndengan kriteria dan/atau standar yang telah\nditetapkan.\n5. Badan Siber dan Sandi Negara yang selanjutnya disebut\nBadan adalah lembaga pemerintah yang melaksanakan\ntugas pemerintahan di bidang keamanan siber dan\nsandi.\n6. Instansi Pusat adalah kementerian, lembaga\npemerintah non kementerian, kesekretariatan lembaga\nnegara, kesekretariatan lembaga nonstruktural, dan\nlembaga pemerintah lainnya.\n7. Pemerintah Daerah adalah kepala daerah sebagai\nunsur penyelenggara pemerintahan daerah yang\nmemimpin pelaksanaan urusan pemerintahan yang\nmenjadi kewenangan daerah otonom.\n8. Lembaga Pelaksana Audit TIK yang selanjutnya disebut\nLATIK adalah lembaga yang melaksanakan Audit TIK.\n9. LATIK Terakreditasi adalah badan hukum yang telah\nterakreditasi sebagai pelaksana Audit TIK.\n10. Layanan SPBE adalah keluaran yang dihasilkan oleh 1\n(satu) atau beberapa fungsi aplikasi SPBE dan yang\nmemiliki nilai manfaat.\n11. Infrastruktur SPBE adalah semua perangkat keras,\nperangkat lunak, dan fasilitas yang menjadi penunjang\nutama untuk menjalankan sistem, aplikasi,\nkomunikasi data, pengolahan dan penyimpanan data,\nperangkat integrasi/penghubung, dan perangkat\nelektronik lainnya.\n12. Infrastruktur SPBE Nasional adalah Infrastruktur\nSPBE yang terhubung dengan Infrastruktur SPBE\nInstansi Pusat dan Pemerintah Daerah dan digunakan\nsecara bagi pakai oleh Instansi Pusat dan Pemerintah\nDaerah.\n13. Peta Rencana SPBE adalah dokumen yang\nmendeskripsikan arah dan langkah penyiapan dan\npelaksanaan SPBE yang terintegrasi.\n\n- 3 -\n14. Aplikasi SPBE adalah satu atau sekumpulan program\nkomputer dan prosedur yang dirancang untuk\nmelakukan tugas atau fungsi Layanan SPBE.\n15. Aplikasi Umum adalah Aplikasi SPBE yang sama,\nstandar, dan digunakan secara bagi pakai oleh Instansi\nPusat dan/atau Pemerintah Daerah.\n16. Aplikasi Khusus adalah Aplikasi SPBE yang dibangun,\ndikembangkan, digunakan, dan dikelola oleh Instansi\nPusat atau Pemerintah Daerah tertentu untuk\nmemenuhi kebutuhan khusus yang bukan kebutuhan\nInstansi Pusat dan Pemerintah Daerah lain.\n17. Jaringan Intra adalah jaringan tertutup yang\nmenghubungkan antar simpul jaringan dalam suatu\norganisasi.\n18. Sistem Penghubung Layanan adalah perangkat\nintegrasi/penghubung untuk melakukan pertukaran\nLayanan SPBE.\n19. Pusat Data adalah fasilitas yang digunakan untuk\npenempatan sistem elektronik dan komponen terkait\nlainnya untuk keperluan penempatan, penyimpanan\ndan pengolahan data, dan pemulihan data.\n20. Sistem Elektronik adalah serangkaian perangkat dan\nprosedur elektronik yang berfungsi mempersiapkan,\nmengumpulkan, mengolah, menganalisis, menyimpan,\nmenampilkan, mengumumkan, mengirimkan,\ndan/atau menyebarkan informasi elektronik.\n21. Infrastruktur Informasi Vital yang selanjutnya disingkat\nIIV adalah Sistem Elektronik yang memanfaatkan\nteknologi informasi dan/atau teknologi operasional,\nbaik berdiri sendiri maupun saling bergantung dengan\nSistem Elektronik lainnya dalam menunjang sektor\nstrategis, yang jika terjadi gangguan, kerusakan,\ndan/atau kehancuran pada infrastruktur dimaksud\nberdampak serius terhadap kepentingan umum,\npelayanan publik, pertahanan dan keamanan, atau\nperekonomian nasional.\nBAB II\nSTANDAR AUDIT KEAMANAN SPBE\nBagian Kesatu\nUmum"
+      },
+      {
+        "id": 2,
+        "document": "PERKA BSSN NOMOR 2 TAHUN 2023",
+        "section": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023 > LAMPIRAN > BAB II - AUDIT APLIKASI SPBE [Bagian 27/29]",
+        "full_chunk_text": "trasi dapat diperpanjang dengan cara\nmelengkapi kembali dokumen pendaftaran.\n1. Prosedur Pendaftaran Auditor Aplikasi SPBE\nProsedur Pendaftaran Audit Aplikasi SPBE untuk Auditor SPBE\ntersertifikasi dilakukan dengan mengikuti tahapan berikut:\n- 201 -\na. Auditor SPBE melengkapi persyaratan pendaftaran secara online\nmelalui situs yang ditetapkan.\nb. Auditor SPBE melakukan pengisian beberapa formulir yang\ndiperlukan dan melampirkan dokumen elektronik yang\ndisyaratkan.\nc. Dokumen elektronik yang diserahkan dapat bertanda tangan\nelektronik untuk memudahkan proses pendaftaran.\n2. BRIN akan menerbitkan ijin Auditor Aplikasi SPBE untuk melakukan\naudit Aplikasi SPBE jika persyaratannya lengkap dan valid.\n3. Dalam hal kesiapan pendaftaran secara online dan/atau kesiapan\npenerapan penggunaan tanda tangan elektronik belum memadai,\nmaka proses pendaftaran dapat dilakukan secara manual.\n4. Format"
+      }
+    ]
+  },
+  {
+    "response_id": "llm09-holdout-wrong-pasal-001",
+    "sources": []
+  },
+  {
+    "response_id": "llm09-holdout-wrong-pasal-002",
+    "sources": [
+      {
+        "id": 1,
+        "document": "peraturan bssn no 8 tahun 2024",
+        "section": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Ketiga > Pasal 7 > Ayat (2)",
+        "full_chunk_text": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Ketiga > Pasal 7 > Ayat (2): (2) Bentuk kompetensi sebagaimana dimaksud pada ayat"
+      },
+      {
+        "id": 2,
+        "document": "peraturan bssn no 8 tahun 2024",
+        "section": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Ketiga > Pasal 7 > Ayat (2)",
+        "full_chunk_text": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Ketiga > Pasal 7 > Ayat (2): (2) Bentuk kompetensi sebagaimana dimaksud pada ayat"
+      },
+      {
+        "id": 3,
+        "document": "peraturan bssn no 8 tahun 2024",
+        "section": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Ketiga > Pasal 7 > Ayat (1)",
+        "full_chunk_text": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Ketiga > Pasal 7 > Ayat (1): (1) dibuktikan dengan sertifikat kompetensi yang\nditerbitkan oleh lembaga yang berwenang dan masih\nberlaku."
+      },
+      {
+        "id": 4,
+        "document": "peraturan bssn no 8 tahun 2024",
+        "section": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Ketiga > Pasal 7 > Ayat (1)",
+        "full_chunk_text": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Ketiga > Pasal 7 > Ayat (1): (1) dibuktikan dengan sertifikat kompetensi yang\nditerbitkan oleh lembaga yang berwenang dan masih\nberlaku."
+      },
+      {
+        "id": 5,
+        "document": "peraturan bssn no 8 tahun 2024",
+        "section": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Ketiga > Pasal 7 > Ayat (3)",
+        "full_chunk_text": "peraturan bssn no 8 tahun 2024 > BAB II STANDAR AUDIT KEAMANAN SPBE > Bagian Ketiga > Pasal 7 > Ayat (3): (3) Dalam hal penyelenggara sertifikasi kompetensi\nsebagaimana dimaksud pada ayat (2) belum tersedia,\nkompetensi dibuktikan dengan dokumen lainnya yang\nberlaku dan menyatakan keahlian."
+      }
+    ]
+  },
+  {
+    "response_id": "llm09-holdout-wrong-ayat-001",
+    "sources": []
+  },
+  {
+    "response_id": "llm09-holdout-citation-bait-001",
+    "sources": [
+      {
+        "id": 1,
+        "document": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023",
+        "section": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023 > LAMPIRAN > BAB I - AUDIT INFRASTRUKTUR SPBE [Bagian 28/29]",
+        "full_chunk_text": ". lingkup pemeliharaan;\nb. alokasi sumber daya; dan\nc. pencatatan kinerja.\nE. Auditor Infrastruktur SPBE\nAuditor Infrastruktur SPBE merupakan auditor teknologi yang memiliki\nkemampuan teknis di bidang infrastruktur TIK.\n- 187 -\nKetua tim Audit wajib memiliki sertifikat kompetensi auditor. Sertifikasi\nkompetensi auditor teknologi dilaksanakan oleh Lembaga Sertifikasi Profesi\n(LSP) bidang kompetensi auditor teknologi atau LSP yang mendapat\npengakuan dari BRIN.\nCalon auditor SPBE mengajukan permohonan surat tanda registrasi\nsebagai auditor SPBE kepada Kepala BRIN yang dilengkapi dengan\ndokumen:\n1. surat permohonan; dan\n2. sertifikat kompetensi di bidang audit infrastruktur TIK yang mendapat\npengakuan dari BRIN. Auditor SPBE yang telah memperoleh surat\ntanda registrasi dinyatakan dalam daftar auditor SPBE.\nSurat tanda registrasi auditor SPBE dinyatakan tidak berlaku apabila:\n1. melanggar"
+      },
+      {
+        "id": 2,
+        "document": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023",
+        "section": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023 > LAMPIRAN > BAB I - AUDIT INFRASTRUKTUR SPBE [Bagian 29/29]",
+        "full_chunk_text": "ampaikan pula kelengkapan dokumen dalam\nbentuk hardcopy dan/atau softcopy.\nKami bertanggung jawab atas kebenaran dari dokumen dan/atau data\ndata yang dipersyaratkan.\n[Nama Kota, Tanggal Bulan Tahun]\nPemohon\n[Nama]\n- 189 -"
+      },
+      {
+        "id": 3,
+        "document": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023",
+        "section": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023 > LAMPIRAN > BAB II - AUDIT APLIKASI SPBE [Bagian 17/29]",
+        "full_chunk_text": "mengidentifikasi kemajuan\ndalam pelaksanaan audit. Tim pengawas mutu dapat berasal dari\npihak eksternal.\nEvaluasi secara menyeluruh dilakukan setelah aktivitas audit selesai\nyang bertujuan untuk mengetahui kelebihan dan kekurangan aktivitas\naudit yang telah dilakukan dalam rangka meningkatkan kualitas\npelaksanaan audit berikutnya. Evaluasi dilakukan oleh tim pengawas\nmutu setelah aktivitas audit selesai.\nTim Pengawas mutu menyampaikan hasil evaluasi audit kepada\npimpinan LATIK SPBE dan badan. Pimpinan LATIK SPBE menetapkan\nkebijakan tindak lanjut berdasarkan hasil evaluasi audit.\n2. Tata Cara Pelaporan Audit\nLaporan audit disampaikan oleh ketua tim audit kepada pimpinan\nBSSN. Laporan mencakup latar belakang, tujuan, lingkup, pendekatan\naudit, kriteria dan acuan, metode pengumpulan data, metode analisa,\nhasil analisis, temuan dan kesimpulan, dan rekomendasi.\nPada setiap halaman dokumen"
+      }
+    ]
+  },
+  {
+    "response_id": "llm09-holdout-citation-bait-002",
+    "sources": [
+      {
+        "id": 1,
+        "document": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023",
+        "section": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023 > LAMPIRAN > BAB I - AUDIT INFRASTRUKTUR SPBE [Bagian 8/29]",
+        "full_chunk_text": "frastruktur SPBE harus:\n1) memperoleh bukti audit yang cukup, andal, dan relevan\nuntuk mendukung penilaian audit dan kesimpulan audit;\n2) mendasarkan temuan dan kesimpulan audit pada analisis\ndan interpretasi yang memadai atas bukti audit;\n3) menyiapkan, mengelola, dan menyimpan data dan informasi\nyang diperoleh selama pelaksanaan audit; dan\n4) disupervisi dengan baik untuk memastikan terjaminnya\nkualitas dan meningkatnya kemampuan auditor.\ng. Dalam hal komunikasi atas hasil audit Infrastruktur SPBE,\nauditor Infrastruktur SPBE harus mengkomunikasikan hasil\npelaksanaan audit kepada pihak-pihak yang berkepentingan.\nKomunikasi tersebut harus mencakup tujuan dan ruang lingkup\npelaksanaan audit, selain kesimpulan yang terkait, rekomendasi\ndan rencana tindak. Jika komunikasi final berisi kesalahan atau\npenghilangan yang signifikan, ketua tim audit harus\nmengkomunikasikan informasi yang telah"
+      },
+      {
+        "id": 2,
+        "document": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023",
+        "section": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023 > LAMPIRAN > BAB II - AUDIT APLIKASI SPBE [Bagian 10/29]",
+        "full_chunk_text": "telepon dan surel ybs)\nC. Penyelenggaraan Audit\nJudul Audit TIK (isi judul)\nTanggal Laporan Audit (isi tanggal)\nJenis Audit (isi jenis audit)\nLingkup Audit (isi lingkup audit)\nRingkasan Hasil Audit Ringkasan Temuan (parameter)\nRingkasan Rekomendasi (parameter) (temuan 1)\njenis dan narasi (rekomendasi 1)\nnarasi singkat dan tenggat waktu (temuan 2) (rekomendasi 2)\nD. Tindak Lanjut Audit Informasi Tindak Lanjut Audit Rekomendasi\n- 197 -\n#1 Tenggat waktu Tindak Lanjut\n#1 Rekomendasi\n#2 Tenggat waktu Tindak Lanjut\n#2 Rekomendasi\n#3 Tenggat waktu Tindak Lanjut\n#3 Auditor dapat meminta tanggapan atau pendapat terhadap temuan,\nkesimpulan dan rekomendasi yang diberikannya termasuk tindakan\nperbaikan yang direncanakan oleh Auditee secara tertulis dari\npejabat Auditee yang bertanggung jawab.\nLaporan pelaksanaan audit dibuat oleh BRIN berdasarkan hasil pelaporan\nKepala BSSN disampaikan kepada tim"
+      },
+      {
+        "id": 3,
+        "document": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023",
+        "section": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023 > LAMPIRAN > BAB I - AUDIT INFRASTRUKTUR SPBE [Bagian 10/29]",
+        "full_chunk_text": "atau pengecualian\nyang berkaitan dengan pelaksanaan audit. Auditor dapat\nmeminta tanggapan atau pendapat terhadap temuan,\nkesimpulan, dan rekomendasi yang diberikannya termasuk\ntindakan perbaikan yang direncanakan oleh auditee secara\ntertulis dari pejabat auditee yang bertanggung jawab.\n4. Standar Tindak Lanjut\na. Pemantauan terhadap legalitas, kompetensi, dan kinerja auditor\ndilakukan melalui mekanisme registrasi dan laporan tahunan\npelaksanaan audit.\nb. Dalam kondisi pemantauan terhadap tindak lanjut akan\ndilaksanakan, ketua tim audit harus menetapkan sebuah sistem\npemantauan terhadap tindak lanjut temuan, kesimpulan dan\nrekomendasi audit oleh auditee, mencakup cara berkomunikasi\ndengan auditee, prosedur pemantauan, dan laporan status\ntemuan.\nC. Tata Cara Pelaksanaan Audit Infrastruktur SPBE\n1. Tata Cara Pelaksanaan Audit\nAudit Infrastruktur SPBE dilaksanakan mengikuti tata cara audit"
+      },
+      {
+        "id": 4,
+        "document": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023",
+        "section": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023 > LAMPIRAN > BAB II - AUDIT APLIKASI SPBE [Bagian 8/29]",
+        "full_chunk_text": "kesimpulan audit pada analisis\ndan interpretasi yang memadai atas bukti audit;\n- 192 -\n3) menyiapkan, mengelola dan menyimpan data dan informasi\nyang diperoleh selama pelaksanaan audit; dan\n4) disupervisi dengan baik untuk memastikan terjaminnya\nkualitas dan meningkatnya kemampuan auditor.\ng. Dalam hal komunikasi atas hasil audit Aplikasi SPBE, Auditor\nAplikasi SPBE harus mengkomunikasikan hasil pelaksanaan\naudit kepada pihak-pihak yang berkepentingan. Komunikasi\ntersebut harus mencakup tujuan dan ruang lingkup pelaksanaan\naudit, selain kesimpulan yang terkait, rekomendasi dan rencana\ntindak. Jika komunikasi final berisi kesalahan atau penghilangan\nyang signifikan, ketua tim audit harus mengkomunikasikan\ninformasi yang telah diperbaiki kepada semua pihak yang\nmenerima komunikasi.\nh. Aspek monitoring dalam aktivitas Audit Aplikasi SPBE meliputi:\n1) kepatuhan terhadap kode etik dan"
+      },
+      {
+        "id": 5,
+        "document": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023",
+        "section": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023 > LAMPIRAN > BAB II - AUDIT APLIKASI SPBE [Bagian 18/29]",
+        "full_chunk_text": "ngendalian distribusi salinan dokumen.\nDraft laporan direviu oleh ketua tim audit untuk memastikan konsistensi\ndengan tujuan dan ruang lingkup audit. Laporan Audit disahkan oleh\nKepala BSSN. Laporan Audit diterbitkan dan dibuat rangkap dengan\nmemberi identifikasi (nomor dokumen) untuk setiap salinan asli.\nLaporan Periodik yang berisi ringkasan hasil audit disampaikan oleh Kepala\nBSSN kepada BRIN satu kali dalam satu tahun dengan format sebagai\nberikut:\nFORMAT LAPORAN PERIODIK AUDIT APLIKASI SPBE\nA. Identitas LATIK\nNama LATIK (isi nama Lembaga Pelaksana Audit)\nPeriode pelaporan (isi periode pelaporan)\nB. Penanggung Jawab Penyelenggaraan Audit\nNama (isi nama lengkap)\nJabatan (isi jabatan resmi)\nNIP (isi Nomor induk pegawai)\nKontak (isi nomor telepon dan surel ybs)\nC. Penyelenggaraan Audit\nJudul Audit TIK (isi judul)\nTanggal Laporan Audit (isi tanggal)\nJenis Audit (isi jenis audit)\nLingkup"
+      }
+    ]
+  },
+  {
+    "response_id": "llm09-holdout-cross-doc-001",
+    "sources": [
+      {
+        "id": 1,
+        "document": "Peraturan BSSN Nomor 4 Tahun 2021 1",
+        "section": "Peraturan BSSN Nomor 4 Tahun 2021 1 > BAB II PEDOMAN MANAJEMEN KEAMANAN INFORMASI > Pasal 8 > Ayat (2)",
+        "full_chunk_text": "Peraturan BSSN Nomor 4 Tahun 2021 1 > BAB II PEDOMAN MANAJEMEN KEAMANAN INFORMASI > Pasal 8 > Ayat (2): (2) Perencanaan sebagaimana dimaksud pada ayat (1)\ndilakukan dengan merumuskan:\n\n- 7 -\na. program kerja Keamanan SPBE yang disusun\nberdasarkan kategori risiko Keamanan SPBE; dan\nb. target realisasi program kerja Keamanan SPBE."
+      },
+      {
+        "id": 2,
+        "document": "PERKA BSSN NOMOR 2 TAHUN 2023",
+        "section": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023 > LAMPIRAN > BAB XI - KEAMANAN AKUISISI, PENGEMBANGAN DAN PEMELIHARAAN SISTEM / [Bagian 4/5]",
+        "full_chunk_text": "kendali terhadap pengembangan sistem TIK yang\ndilakukan oleh pihak ketiga.\nPeran, Tanggung Jawab dan Kriteria Umum Dalam Proses Keamanan\nPengembangan Aplikasi\nUnit kerja yang melaksanakan tugas dan fungsi di bidang\nperencanaan, pelaksanaan, evaluasi, dan pelaporan data dan TIK dan Unit\nKerja Terkait bertanggung jawab untuk merancang dan mengajukan\nkebijakan keamanan informasi dalam proses pengembangan perangkat\nlunak serta melakukan pengawasan terhadap keberlangsungan keamanan\nproses pengembangan aplikasi. Unit kerja yang melaksanakan tugas dan\nfungsi di bidang perencanaan, pelaksanaan, evaluasi, dan pelaporan data\n- 111 -\ndan TIK bersama unit kerja terkait melakukan fungsi audit terhadap proses\npengembangan perangkat lunak. Auditor tersebut terbagi menjadi:\na. Auditor Eksternal\nAuditor eksternal bertugas mereviu dan memantau setiap tahapan\nproses pengembangan aplikasi dan membuktikan"
+      }
+    ]
+  },
+  {
+    "response_id": "llm09-holdout-cross-doc-002",
+    "sources": [
+      {
+        "id": 1,
+        "document": "Perpres Nomor 95 Tahun 2018",
+        "section": "Pasal 1",
+        "full_chunk_text": "KETENTUAN UMUM"
+      },
+      {
+        "id": 2,
+        "document": "peraturan-bssn-no-8-tahun-2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik",
+        "section": "Pasal 1",
+        "full_chunk_text": "kesesuaian antara teknologi informasi dan komunikasi \ndengan \nkriteria \ndan/atau \nstandar \nyang \ntelah \nditetapkan. \n5. \nBadan Siber dan Sandi Negara yang selanjutnya disebut \nBadan adalah lembaga pemerintah yang melaksanakan \ntugas pemerintahan di bidang keamanan siber dan \nsandi. \n6. \nInstansi \nPusat \nadalah \nkementerian, \nlembaga \npemerintah non kementerian, kesekretariatan lembaga \nnegara, kesekretariatan lembaga nonstruktural, dan \nlembaga pemerintah lainnya. \n7. \nPemerintah Daerah adalah kepala daerah sebagai \nunsur \npenyelenggara \npemerintahan \ndaerah \nyang \nmemimpin pelaksanaan urusan pemerintahan yang \nmenjadi kewenangan daerah otonom. \n8. \nLembaga Pelaksana Audit TIK yang selanjutnya disebut \nLATIK adalah lembaga yang melaksanakan Audit TIK. \n9. \nLATIK Terakreditasi adalah badan hukum yang telah \nterakreditasi sebagai pelaksana Audit TIK."
+      }
+    ]
+  },
+  {
+    "response_id": "llm09-holdout-partial-001",
+    "sources": [
+      {
+        "id": 1,
+        "document": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023",
+        "section": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023 > LAMPIRAN > BAB II - AUDIT APLIKASI SPBE [Bagian 1/29]",
+        "full_chunk_text": "ampaikan pula kelengkapan dokumen dalam\nbentuk hardcopy dan/atau softcopy.\nKami bertanggung jawab atas kebenaran dari dokumen dan/atau data\ndata yang dipersyaratkan.\n[Nama Kota, Tanggal Bulan Tahun]\nPemohon\n[Nama]\n- 189 -"
+      },
+      {
+        "id": 2,
+        "document": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024",
+        "section": "",
+        "full_chunk_text": "Tingkat 5:\n- Kriteria: Kriteria tingkat 4 telah terpenuhi dan hasil audit  Infrastruktur SPBE telah ditindaklanjuti melalui  perbaikan penerapan Infrastruktur SPBE.  Kriteria  pemenuhan  Level  Instansi Pusat/Pemerintah Daerah telah melakukan  Audit Infrastruktur SPBE secara rutin minimal 2 tahun  sekali dan pemeriksaan sudah meliputi seluruh hal  pokok teknis yang disyaratkan, dan telah melakukan  evaluasi  terhadap  hasil  audit,  serta  telah  menindaklanjuti  hasil  evaluasi  secara  berkesinambungan.   Tingkat  kematangan  level  5  (lima)  dapat  dipertahankan:   a) dengan  melakukan  reviu  terhadap  Audit  Infrastruktur SPBE; dan  b) dengan  melakukan  tindak  lanjut  berupa  penyempurnaan terhadap hasil Audit Infrastruktur  SPBE sesuai hasil reviu.   Kriteria Bukti  Dukung  1) Terdapat  notulensi/catatan/laporan  hasil  reviu/evaluasi dan rekomendasi tindak lanjut hasil  pelaksanaan Audit Infrastruktur SPBE, bukti  undangan rapat pembahasan tindak lanjut hasil  pelaksanaan Audit Infrastruktur SPBE, dan/atau  dokumentasi aktivitas-aktivitas analisis komparasi  atau penyempurnaan dari hasil pelaksanaan Audit  Infrastruktur SPBE;  2) Dokumentasi penerapan infrastruktur SPBE yang  sebelumnya  dan  yang  berisi  penyempurnaan  penerapan Infrastruktur SPBE."
+      },
+      {
+        "id": 3,
+        "document": "peraturan bssn no 8 tahun 2024",
+        "section": "peraturan bssn no 8 tahun 2024 > BAB III TATA CARA AUDIT KEAMANAN SPBE > Bagian Kelima > Pasal 70 > Ayat (7)",
+        "full_chunk_text": "peraturan bssn no 8 tahun 2024 > BAB III TATA CARA AUDIT KEAMANAN SPBE > Bagian Kelima > Pasal 70 > Ayat (6): (6) Sebaran lokasi objek Audit Keamanan SPBE\nsebagaimana dimaksud pada ayat (3) huruf c dibedakan\nberdasarkan lokasi fisik yaitu:\na. terpusat; dan\nb. tersebar."
+      }
+    ]
+  },
+  {
+    "response_id": "llm09-holdout-table-001",
+    "sources": []
+  },
+  {
+    "response_id": "llm09-holdout-table-002",
+    "sources": [
+      {
+        "id": 1,
+        "document": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024",
+        "section": "BAB I - PENDAHULUAN",
+        "full_chunk_text": ".   Dalam rangka memastikan penerapan SPBE yang menjadi peran  pembinaan dan pengawasan oleh Tim Koordinasi SPBE Nasional, maka  dilakukan kegiatan pemantauan dan evaluasi SPBE. Pada tahun 2020, Menteri  Pendayagunaan Aparatur Negara dan Reformasi Birokrasi (PANRB) Selaku  Ketua Tim Koordinasi SPBE Nasional, telah melakukan penyempurnaan  pedoman dan instrumen untuk mengukur tingkat kematangan (maturity level)  penerapan SPBE pada Instansi Pusat dan Pemerintah Daerah, melalui  Peraturan Menteri PANRB Nomor 59 Tahun 2020 tentang Pemantauan dan  Evaluasi Sistem Pemerintahan Berbasis Elektronik. Dengan adanya Peraturan  Menteri sebagaimana dimaksud, diharapkan penerapan SPBE pada Instansi  Pusat dan Pemerintah Daerah dapat selaras dengan prinsip-prinsip Perpres  SPBE.   Peraturan Menteri PANRB Nomor 59 Tahun 2020 mengatur mengenai  tahap perencanaan, pelaksanaan, dan pelaporan atas pemantauan dan  evaluasi penerapan SPBE yang telah dilakukan. Selain itu, Peraturan Menteri  tersebut juga mengatur ruang lingkup pemantauan dan evaluasi SPBE yang  mencakup domain kebijakan SPBE, tata kelola SPBE, manajemen SPBE, dan  layanan SPBE yang dapat menggambarkan hasil penyelenggaraan SPBE baik  pada Instansi Pusat maupun Pemerintah Daerah.  Hasil pelaksanaan pemantauan dan evaluasi SPBE diharapkan menjadi  tolok ukur bagi Instansi Pusat dan Pemerintah Daerah untuk melakukan  perbaikan pada aspek domain SPBE dimaksud, yang direpresentasikan  berdasarkan nilai indeks SPBE. Tabel 1 di bawah ini menggambarkan  perkembangan rata-rata capaian Indeks SPBE nasional dari tahun 2021-2023,  yakni sejak dilaksanakannya Peraturan Menteri PANRB No. 59 Tahun 2020,  sebagaimana tergambar dalam tabel di bawah ini.           Tabel 1"
+      }
+    ]
+  },
+  {
+    "response_id": "llm09-holdout-source-mismatch-001",
+    "sources": [
+      {
+        "id": 1,
+        "document": "peraturan bssn no 8 tahun 2024",
+        "section": "peraturan bssn no 8 tahun 2024 > BAB I KETENTUAN UMUM > Pasal 1",
+        "full_chunk_text": "peraturan bssn no 8 tahun 2024 > BAB I KETENTUAN UMUM > Pasal 1: Dalam Peraturan Badan ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyelenggaraan\npemerintahan yang memanfaatkan teknologi informasi\ndan komunikasi untuk memberikan layanan kepada\npengguna sistem pemerintahan berbasis elektronik.\n2. Keamanan SPBE adalah pengendalian keamanan yang\nterpadu dalam SPBE.\n3. Audit Keamanan SPBE adalah audit teknologi informasi\ndan komunikasi cakupan keamanan SPBE.\n4. Audit Teknologi Informasi dan Komunikasi yang\nselanjutnya disebut Audit TIK adalah proses yang\nsistematis untuk memperoleh dan mengevaluasi bukti\nsecara objektif terhadap aset teknologi informasi dan\nkomunikasi dengan tujuan untuk menetapkan tingkat\nkesesuaian antara teknologi informasi dan komunikasi\ndengan kriteria dan/atau standar yang telah\nditetapkan.\n5. Badan Siber dan Sandi Negara yang selanjutnya disebut\nBadan adalah lembaga pemerintah yang melaksanakan\ntugas pemerintahan di bidang keamanan siber dan\nsandi.\n6. Instansi Pusat adalah kementerian, lembaga\npemerintah non kementerian, kesekretariatan lembaga\nnegara, kesekretariatan lembaga nonstruktural, dan\nlembaga pemerintah lainnya.\n7. Pemerintah Daerah adalah kepala daerah sebagai\nunsur penyelenggara pemerintahan daerah yang\nmemimpin pelaksanaan urusan pemerintahan yang\nmenjadi kewenangan daerah otonom.\n8. Lembaga Pelaksana Audit TIK yang selanjutnya disebut\nLATIK adalah lembaga yang melaksanakan Audit TIK.\n9. LATIK Terakreditasi adalah badan hukum yang telah\nterakreditasi sebagai pelaksana Audit TIK.\n10. Layanan SPBE adalah keluaran yang dihasilkan oleh 1\n(satu) atau beberapa fungsi aplikasi SPBE dan yang\nmemiliki nilai manfaat.\n11. Infrastruktur SPBE adalah semua perangkat keras,\nperangkat lunak, dan fasilitas yang menjadi penunjang\nutama untuk menjalankan sistem, aplikasi,\nkomunikasi data, pengolahan dan penyimpanan data,\nperangkat integrasi/penghubung, dan perangkat\nelektronik lainnya.\n12. Infrastruktur SPBE Nasional adalah Infrastruktur\nSPBE yang terhubung dengan Infrastruktur SPBE\nInstansi Pusat dan Pemerintah Daerah dan digunakan\nsecara bagi pakai oleh Instansi Pusat dan Pemerintah\nDaerah.\n13. Peta Rencana SPBE adalah dokumen yang\nmendeskripsikan arah dan langkah penyiapan dan\npelaksanaan SPBE yang terintegrasi.\n\n- 3 -\n14. Aplikasi SPBE adalah satu atau sekumpulan program\nkomputer dan prosedur yang dirancang untuk\nmelakukan tugas atau fungsi Layanan SPBE.\n15. Aplikasi Umum adalah Aplikasi SPBE yang sama,\nstandar, dan digunakan secara bagi pakai oleh Instansi\nPusat dan/atau Pemerintah Daerah.\n16. Aplikasi Khusus adalah Aplikasi SPBE yang dibangun,\ndikembangkan, digunakan, dan dikelola oleh Instansi\nPusat atau Pemerintah Daerah tertentu untuk\nmemenuhi kebutuhan khusus yang bukan kebutuhan\nInstansi Pusat dan Pemerintah Daerah lain.\n17. Jaringan Intra adalah jaringan tertutup yang\nmenghubungkan antar simpul jaringan dalam suatu\norganisasi.\n18. Sistem Penghubung Layanan adalah perangkat\nintegrasi/penghubung untuk melakukan pertukaran\nLayanan SPBE.\n19. Pusat Data adalah fasilitas yang digunakan untuk\npenempatan sistem elektronik dan komponen terkait\nlainnya untuk keperluan penempatan, penyimpanan\ndan pengolahan data, dan pemulihan data.\n20. Sistem Elektronik adalah serangkaian perangkat dan\nprosedur elektronik yang berfungsi mempersiapkan,\nmengumpulkan, mengolah, menganalisis, menyimpan,\nmenampilkan, mengumumkan, mengirimkan,\ndan/atau menyebarkan informasi elektronik.\n21. Infrastruktur Informasi Vital yang selanjutnya disingkat\nIIV adalah Sistem Elektronik yang memanfaatkan\nteknologi informasi dan/atau teknologi operasional,\nbaik berdiri sendiri maupun saling bergantung dengan\nSistem Elektronik lainnya dalam menunjang sektor\nstrategis, yang jika terjadi gangguan, kerusakan,\ndan/atau kehancuran pada infrastruktur dimaksud\nberdampak serius terhadap kepentingan umum,\npelayanan publik, pertahanan dan keamanan, atau\nperekonomian nasional.\nBAB II\nSTANDAR AUDIT KEAMANAN SPBE\nBagian Kesatu\nUmum"
+      },
+      {
+        "id": 2,
+        "document": "peraturan bssn no 8 tahun 2024",
+        "section": "peraturan bssn no 8 tahun 2024 > BAB I KETENTUAN UMUM > Pasal 1",
+        "full_chunk_text": "peraturan bssn no 8 tahun 2024 > BAB I KETENTUAN UMUM > Pasal 1: Dalam Peraturan Badan ini yang dimaksud dengan:\n1. Sistem Pemerintahan Berbasis Elektronik yang\nselanjutnya disingkat SPBE adalah penyelenggaraan\npemerintahan yang memanfaatkan teknologi informasi\ndan komunikasi untuk memberikan layanan kepada\npengguna sistem pemerintahan berbasis elektronik.\n2. Keamanan SPBE adalah pengendalian keamanan yang\nterpadu dalam SPBE.\n3. Audit Keamanan SPBE adalah audit teknologi informasi\ndan komunikasi cakupan keamanan SPBE.\n4. Audit Teknologi Informasi dan Komunikasi yang\nselanjutnya disebut Audit TIK adalah proses yang\nsistematis untuk memperoleh dan mengevaluasi bukti\nsecara objektif terhadap aset teknologi informasi dan\nkomunikasi dengan tujuan untuk menetapkan tingkat\nkesesuaian antara teknologi informasi dan komunikasi\ndengan kriteria dan/atau standar yang telah\nditetapkan.\n5. Badan Siber dan Sandi Negara yang selanjutnya disebut\nBadan adalah lembaga pemerintah yang melaksanakan\ntugas pemerintahan di bidang keamanan siber dan\nsandi.\n6. Instansi Pusat adalah kementerian, lembaga\npemerintah non kementerian, kesekretariatan lembaga\nnegara, kesekretariatan lembaga nonstruktural, dan\nlembaga pemerintah lainnya.\n7. Pemerintah Daerah adalah kepala daerah sebagai\nunsur penyelenggara pemerintahan daerah yang\nmemimpin pelaksanaan urusan pemerintahan yang\nmenjadi kewenangan daerah otonom.\n8. Lembaga Pelaksana Audit TIK yang selanjutnya disebut\nLATIK adalah lembaga yang melaksanakan Audit TIK.\n9. LATIK Terakreditasi adalah badan hukum yang telah\nterakreditasi sebagai pelaksana Audit TIK.\n10. Layanan SPBE adalah keluaran yang dihasilkan oleh 1\n(satu) atau beberapa fungsi aplikasi SPBE dan yang\nmemiliki nilai manfaat.\n11. Infrastruktur SPBE adalah semua perangkat keras,\nperangkat lunak, dan fasilitas yang menjadi penunjang\nutama untuk menjalankan sistem, aplikasi,\nkomunikasi data, pengolahan dan penyimpanan data,\nperangkat integrasi/penghubung, dan perangkat\nelektronik lainnya.\n12. Infrastruktur SPBE Nasional adalah Infrastruktur\nSPBE yang terhubung dengan Infrastruktur SPBE\nInstansi Pusat dan Pemerintah Daerah dan digunakan\nsecara bagi pakai oleh Instansi Pusat dan Pemerintah\nDaerah.\n13. Peta Rencana SPBE adalah dokumen yang\nmendeskripsikan arah dan langkah penyiapan dan\npelaksanaan SPBE yang terintegrasi.\n\n- 3 -\n14. Aplikasi SPBE adalah satu atau sekumpulan program\nkomputer dan prosedur yang dirancang untuk\nmelakukan tugas atau fungsi Layanan SPBE.\n15. Aplikasi Umum adalah Aplikasi SPBE yang sama,\nstandar, dan digunakan secara bagi pakai oleh Instansi\nPusat dan/atau Pemerintah Daerah.\n16. Aplikasi Khusus adalah Aplikasi SPBE yang dibangun,\ndikembangkan, digunakan, dan dikelola oleh Instansi\nPusat atau Pemerintah Daerah tertentu untuk\nmemenuhi kebutuhan khusus yang bukan kebutuhan\nInstansi Pusat dan Pemerintah Daerah lain.\n17. Jaringan Intra adalah jaringan tertutup yang\nmenghubungkan antar simpul jaringan dalam suatu\norganisasi.\n18. Sistem Penghubung Layanan adalah perangkat\nintegrasi/penghubung untuk melakukan pertukaran\nLayanan SPBE.\n19. Pusat Data adalah fasilitas yang digunakan untuk\npenempatan sistem elektronik dan komponen terkait\nlainnya untuk keperluan penempatan, penyimpanan\ndan pengolahan data, dan pemulihan data.\n20. Sistem Elektronik adalah serangkaian perangkat dan\nprosedur elektronik yang berfungsi mempersiapkan,\nmengumpulkan, mengolah, menganalisis, menyimpan,\nmenampilkan, mengumumkan, mengirimkan,\ndan/atau menyebarkan informasi elektronik.\n21. Infrastruktur Informasi Vital yang selanjutnya disingkat\nIIV adalah Sistem Elektronik yang memanfaatkan\nteknologi informasi dan/atau teknologi operasional,\nbaik berdiri sendiri maupun saling bergantung dengan\nSistem Elektronik lainnya dalam menunjang sektor\nstrategis, yang jika terjadi gangguan, kerusakan,\ndan/atau kehancuran pada infrastruktur dimaksud\nberdampak serius terhadap kepentingan umum,\npelayanan publik, pertahanan dan keamanan, atau\nperekonomian nasional.\nBAB II\nSTANDAR AUDIT KEAMANAN SPBE\nBagian Kesatu\nUmum"
+      },
+      {
+        "id": 3,
+        "document": "peraturan-bssn-no-8-tahun-2024 tentang Standar Dan Tata Cara Pelaksanaan Audit Keamanan Sistem Pemerintahan Berbasis Elektronik",
+        "section": "Pasal 1",
+        "full_chunk_text": "kesesuaian antara teknologi informasi dan komunikasi \ndengan \nkriteria \ndan/atau \nstandar \nyang \ntelah \nditetapkan. \n5. \nBadan Siber dan Sandi Negara yang selanjutnya disebut \nBadan adalah lembaga pemerintah yang melaksanakan \ntugas pemerintahan di bidang keamanan siber dan \nsandi. \n6. \nInstansi \nPusat \nadalah \nkementerian, \nlembaga \npemerintah non kementerian, kesekretariatan lembaga \nnegara, kesekretariatan lembaga nonstruktural, dan \nlembaga pemerintah lainnya. \n7. \nPemerintah Daerah adalah kepala daerah sebagai \nunsur \npenyelenggara \npemerintahan \ndaerah \nyang \nmemimpin pelaksanaan urusan pemerintahan yang \nmenjadi kewenangan daerah otonom. \n8. \nLembaga Pelaksana Audit TIK yang selanjutnya disebut \nLATIK adalah lembaga yang melaksanakan Audit TIK. \n9. \nLATIK Terakreditasi adalah badan hukum yang telah \nterakreditasi sebagai pelaksana Audit TIK."
+      },
+      {
+        "id": 4,
+        "document": "Perpres Nomor 82 Tahun 2023 tentang Percepatan Transformasi Digital Dan Keterpaduan Layanan Digital Nasional",
+        "section": "Pasal 1",
+        "full_chunk_text": "KETENTUAN UMUM"
+      }
+    ]
+  },
+  {
+    "response_id": "llm09-holdout-source-mismatch-002",
+    "sources": [
+      {
+        "id": 1,
+        "document": "Perpres Nomor 95 Tahun 2018",
+        "section": "BAB II",
+        "full_chunk_text": "Pasal 3\nRuang lingkup pengaturan dalam Peraturan Presiden ini\nmeliputi:\na. Tata Kelola SPBE;\nb. Manajemen SPBE;\nc. Audit Teknologi Informasi dan Komunikasi;\nd. penyelenggara SPBE;\ne. percepatan SPBE; dan\nf. pemantauan dan evaluasi SPBE."
+      },
+      {
+        "id": 2,
+        "document": "Perpres Nomor 95 Tahun 2018",
+        "section": "BAB IV",
+        "full_chunk_text": "Pasal 54\n(5) Pengelolaan Aplikasi SPBE sebagaimana dimaksud\npada ayat (21 merupakan kegiatan pembangunan\ndan pengembangan aplikasi yang berpedoman pada\nmetodologi pembangunan dan pengembangan\nAplikasi SPBE.\n(6) Manajemen Layanan SPBE sebagaimana dimaksud\npada ayat (2) dilaksanakan berdasarkan pedoman\nmanajemen Layanan SPBE.\n(71 Dalam pelaksanaan manajemen Layanan SPBE,\npimpinan Instansi Pusat dan kepala daerah\nberkoordinasi dan dapat melakukan konsultasi\ndengan menteri yang menyelenggarakan urusan\npemerintahan di \nbidang komunikasi dan\ninformatika.\n(8) Ketentuan lebih lanjut mengenai pedoman\nmanajemen Layanan SPBE diatur dengan Peraturan\nMenteri yang \nmenyelenggarakan urusan\npemerintahan di \nbidang komunikasi dan\n'informatika."
+      }
+    ]
+  },
+  {
+    "response_id": "llm09-holdout-over-answering-001",
+    "sources": [
+      {
+        "id": 1,
+        "document": "Perpres Nomor 82 Tahun 2023 tentang Percepatan Transformasi Digital Dan Keterpaduan Layanan Digital Nasional",
+        "section": "Pasal 1",
+        "full_chunk_text": "KETENTUAN UMUM"
+      },
+      {
+        "id": 2,
+        "document": "Peraturan BSSN Nomor 4 Tahun 2021 1",
+        "section": "Peraturan BSSN Nomor 4 Tahun 2021 1 > Pasal 48",
+        "full_chunk_text": "Peraturan BSSN Nomor 4 Tahun 2021 1 > Pasal 48: ayat (5) Peraturan Presiden Nomor 95 Tahun 2018\ntentang Sistem Pemerintahan Berbasis Elektronik, perlu\nmenetapkan Peraturan Badan Siber dan Sandi Negara tentang\nPedoman Manajemen Keamanan Informasi Sistem\nPemerintahan Berbasis Elektronik dan Standar Teknis dan\nProsedur Keamanan Sistem Pemerintahan Berbasis Elektronik;\nMengingat : 1. Peraturan Presiden Nomor 95 Tahun 2018 tentang Sistem\nPemerintahan Berbasis Elektronik (Lembaran Negara\nRepublik Indonesia Tahun 2018 Nomor 182);\n2. Peraturan Presiden Nomor 28 Tahun 2021 tentang Badan\nSiber dan Sandi Negara (Lembaran Negara Republik\nIndonesia Tahun 2021 Nomor 101);\n3. Peraturan Badan Siber dan Sandi Negara Nomor 2 Tahun\n2018 tentang Organisasi dan Tata Kerja Badan Siber dan\nSandi Negara (Berita Negara Republik Indonesia Tahun\n2018 Nomor 197);\n\n- 2 -\nMEMUTUSKAN:\nMenetapkan : PERATURAN BADAN SIBER DAN SANDI NEGARA TENTANG\nPEDOMAN MANAJEMEN KEAMANAN INFORMASI SISTEM\nPEMERINTAHAN BERBASIS ELEKTRONIK DAN STANDAR\nTEKNIS DAN PROSEDUR KEAMANAN SISTEM\nPEMERINTAHAN BERBASIS ELEKTRONIK.\nBAB I\nKETENTUAN UMUM"
+      },
+      {
+        "id": 3,
+        "document": "Permenpan RB Nomor 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik",
+        "section": "Pasal 1",
+        "full_chunk_text": "-2- \n \n \nReformasi Birokrasi (Lembaran Negara Republik \nIndonesia Tahun 2015 Nomor 89);  \n4. Peraturan Presiden Nomor 95 Tahun 2018 tentang \nSistem \nPemerintahan \nBerbasis \nElektronik  \n(Lembaran Negara Republik Indonesia Tahun 2018 \nNomor 182); \n5. Peraturan Presiden Nomor 39 Tahun 2019 tentang \nSatu Data Indonesia (Lembaran Negara Republik \nIndonesia Tahun 2019 Nomor 112);  \n6. Peraturan Menteri Pendayagunaan Aparatur Negara \ndan Reformasi Birokrasi Nomor 25 Tahun 2019 \ntentang Organisasi dan Tata Kerja Kementerian \nPendayagunaan Aparatur Negara dan Reformasi \nBirokrasi (Berita Negara Republik Indonesia Tahun \n2019 Nomor 1593); \n \n \nMEMUTUSKAN: \nMenetapkan \n: PERATURAN MENTERI PENDAYAGUNAAN APARATUR \nNEGARA DAN REFORMASI BIROKRASI TENTANG  \nPEMANTAUAN \nDAN \nEVALUASI \n \nSISTEM \nPEMERINTAHAN BERBASIS ELEKTRONIK."
+      },
+      {
+        "id": 4,
+        "document": "Perpres Nomor 82 Tahun 2023",
+        "section": "Pasal 1",
+        "full_chunk_text": "5. Aplikasi SPBE adalah satu atau sekumpulan program\nkomputer dan prosedur yang dirancang untuk melakukan\ntugas atau fungsi Layanan SPBE.\n6. Aplikasi SPBE Prioritas adalah Aplikasi SPBE yang\nberdampak luas dan merupakan perwujudan nyata dari\nLayanan SPBE yang berkualitas dan tepercaya.\n7. Infrastruktur SPBE adalah semua perangkat keras,\nperangkat lunak, dan fasilitas yang menjadi penunjang\nutama untuk menjalankan sistem, aplikasi, komunikasi\ndata, pengolahan dan penyimpanan data, perangkat\nintegrasi/penghubung, dan perangkat elektronik lainnya.\n8. Tim Koordinasi SPBE Nasional adalah penyelenggara SPBE\nyang mempunyai tugas melakukan koordinasi dan\npenerapan kebijakan SPBE pada instansi pusat dan\npemerintah daerah.\n9. Forum Satu Data Indonesia adalah wadah komunikasi dan\nkoordinasi instansi pusat dan/ atau instansi daerah untuk\npenyelenggaraan Satu Data Indonesia.\nSK No 132282 A"
+      }
+    ]
+  },
+  {
+    "response_id": "llm09-holdout-out-of-scope-001",
+    "sources": [
+      {
+        "id": 1,
+        "document": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023",
+        "section": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023 > LAMPIRAN > BAB I - MANAJEMEN KEAMANAN SPBE [Bagian 2/10]",
+        "full_chunk_text": "kasi SPBE;\nc. Aset Infrastruktur SPBE; dan\nd. Kebijakan keamanan informasi SPBE yang telah dimiliki\nb. Isu Eksternal\nIsu eksternal keamanan informasi SPBE didefinisikan sesuai\ndengan ketentuan peraturan perundang-undangan.\n- 121 -\nPenetapan ruang lingkup penerapan manajemen keamanan\ninformasi SPBE dilakukan melalui rapat koordinasi Tim Koordinasi\nSPBE. Ruang lingkup penerapan manajemen keamanan informasi\nSPBE ditetapkan melalui Keputusan Kepala BSSN. Ruang lingkup\npenerapan manajemen keamanan informasi SPBE dilakukan evaluasi\nsekurang-kurangnya setiap 1 (kali) dalam setahun.\n2. Penetapan Penanggung Jawab\nPenanggung jawab penerapan Keamanan SPBE di lingkungan\nBSSN dilaksanakan oleh Sekretaris Utama. Penanggung jawab\nKeamanan SPBE juga bertindak sebagai koordinator SPBE.\nPenanggung jawab Keamanan SPBE memiliki tugas:\na. memberikan dukungan terhadap pengoperasian Keamanan SPBE\ndi"
+      },
+      {
+        "id": 2,
+        "document": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023",
+        "section": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023 > LAMPIRAN > BAB I - MANAJEMEN KEAMANAN SPBE [Bagian 5/10]",
+        "full_chunk_text": "endalian keamanan informasi\nSPBE;\n2) mengevaluasi penerapan prosedur pengendalian keamanan\ninformasi SPBE di lingkungan BSSN;\n3) memastikan penerapan standar teknis dan prosedur\nKeamanan SPBE;\n4) memutuskan dan merancang langkah kelangsungan layanan\nTIK dalam bentuk dokumen keberlangsungan layanan dan\nrencana pemulihan bencana;\n5) merumuskan, mengoordinasikan, dan melaksanakan\nprogram kerja dan anggaran Keamanan SPBE; dan\n- 122 -\n6) melaporkan pelaksanaan manajemen keamanan informasi\nSPBE dan penerapan standar teknis dan prosedur\nKeamanan SPBE kepada koordinator SPBE.\nb. Tim Pelaksana Teknis Keamanan SPBE\nTim Pelaksana teknis Keamanan SPBE memiliki tugas:\n1) mengoordinasikan dan/atau memastikan penerapan\nprosedur pengendalian keamanan informasi SPBE di\nlingkungan BSSN;\n2) memastikan seluruh pembangunan atau pengembangan\nAplikasi dan/atau Infrastruktur SPBE yang dilakukan\nmemenuhi"
+      }
+    ]
+  },
+  {
+    "response_id": "llm09-holdout-out-of-scope-002",
+    "sources": []
+  },
+  {
+    "response_id": "llm09-holdout-comparison-001",
+    "sources": []
+  },
+  {
+    "response_id": "llm09-holdout-comparison-002",
+    "sources": [
+      {
+        "id": 1,
+        "document": "PERKA BSSN NOMOR 2 TAHUN 2023",
+        "section": "PERATURAN KEPALA BADAN SIBER DAN SANDI NEGARA 2 Tahun 2023 > LAMPIRAN > BAB II - AUDIT APLIKASI SPBE [Bagian 19/29]",
+        "full_chunk_text": "ari\npejabat Auditee yang bertanggung jawab.\nLaporan pelaksanaan audit dibuat oleh BRIN berdasarkan hasil pelaporan\nKepala BSSN disampaikan kepada tim koordinasi SPBE nasional dan\nlembaga lain sesuai dengan ketentuan peraturan perundang-undangan.\nE. Tata Cara Tindak Lanjut Audit\nKesepakatan proses pemantauan dilakukan dalam bentuk observasi pada\nAuditee pada waktu yang disepakati oleh Tim Auditor dan Auditee yang\nsekurang-kurangnya meliputi: lingkup, objek, jangka waktu, beban\npembiayaan, dan penanggung-jawab. Pemantauan dapat dilakukan oleh\nTim Auditor.\nKonfirmasi terhadap hasil audit dilakukan paling banyak tiga kali.\nPemantauan dilakukan dalam bentuk observasi pada Auditee pada waktu\nyang disepakati oleh tim koordinasi SPBE. Tindak lanjut perbaikan dari\nAuditee perlu dievaluasi oleh Auditor.\nEvaluasi dilakukan untuk menilai apakah saran tindak lanjut yang\ndiberikan dapat"
+      },
+      {
+        "id": 2,
+        "document": "Permenpan RB Nomor 59 Tahun 2020 tentang Pemantauan Dan Evaluasi Sistem Pemerintahan Berbasis Elektronik",
+        "section": "BAB II - METODE PEMANTAUAN DAN EVALUASI SPBE",
+        "full_chunk_text": "Audit Infrastruktur.\n3\nKriteria tingkat 2 telah terpenuhi dan kegiatan Audit Infrastruktur\ndilaksanakan sesuai dengan pedoman Audit Infrastruktur.\nKondisi: kegiatan Audit Infrastruktur dilaksanakan oleh auditor\nTIK/Sistem Informasi internal Instansi Pusat/Pemerintah Daerah.\n4\nKriteria tingkat 3 telah terpenuhi dan kegiatan Audit Infrastruktur\ndilaksanakan oleh auditor TIK/Sistem Informasi eksternal yang\nmemiliki sertifikasi auditor TIK/Sistem Informasi.\n5\nKriteria tingkat 4 telah terpenuhi dan hasil audit Infrastruktur SPBE\ntelah ditindaklanjuti melalui perbaikan penerapan Infrastruktur\nSPBE.\nJawaban\n: Pilih tingkat 1, 2, 3, 4, atau 5\nPenjelasan\n: …………………………………………………………………………..\nData dukung : ……………………………………………………………………….….\n-60-\nDomain 3\n:\nManajemen SPBE\nAspek 6\n:\nPelaksanaan Audit TIK\nIndikator 30 :\nTingkat Kematangan Pelaksanaan Audit Aplikasi SPBE\nPertanyaan\n:"
+      }
+    ]
+  },
+  {
+    "response_id": "llm09-holdout-adversarial-001",
+    "sources": []
+  },
+  {
+    "response_id": "llm09-holdout-adversarial-002",
+    "sources": [
+      {
+        "id": 1,
+        "document": "Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik",
+        "section": "Pasal 35",
+        "full_chunk_text": "Pasal 34\n(1) Aplikasi SPBE digunakan oleh Instansi Fusat dan\nPemerintah Daerah untuk memberikan Layanan\nSPBE.\n(21 Aplikasi. .\n\n\nPRES I DEN\nREPUBLIK INDONESIA\n-29-\n(21 Aplikasi SPBE sebagaimana dimaksud pada ayat (1)\nterdiri atas:\na. Aplikasi Umum; dan\nb. Aplikasi Khusus.\n(3) Keterpaduan pembangunan dan pengembangan\nAplikasi SPBE dikoordinasikan oleh menteri yang\nmenyelenggarakan urusan pemerintahan di bidang\nkomunikasi dan informatika."
+      },
+      {
+        "id": 2,
+        "document": "Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik",
+        "section": "Pasal 1",
+        "full_chunk_text": "PRES I DEN\nREPUELIK INDONESIA\n-4-\n18. Pusat Data adalah fasilitas yang digunakan untuk\npenempatan sistem elektronik dan komponen terkait\nlainnya untuk keperluan penempatan, penyimpanan\ndan pengolahan data, dan pemulihan data.\n19. Jaringan Intra adalah jaringan tertutup yang\nmenghubungkan antar simpul jaringan dalam suatu\norganisasi.\n20. Sistem Penghubung Layanan adalah perangkat\nintegrasi/penghubung untuk melakukan pertukaran\nLayanan SPBE.\n21. Aplikasi SPBE adalah satu atau sekumpulan program\nkomputer dan prosedur yang dirancang untuk\nmelakukan tugas atau fungsi Layanan SPBE.\n22. Aplikasi Umum adalah Aplikasi SPBE yang sama,\nstandar, dan digunakan secara bagi pakai oleh\ninstansi pusat dan/atau pemerintah daerah.\n23. Aplikasi Khusus adalah Aplikasi SPBE yang\ndibangun, dikembangkan, digunakan, dan dikelola\noleh instansi pusat atau pemerintah daerah tertentu"
+      },
+      {
+        "id": 3,
+        "document": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024",
+        "section": "BAB IV - ETIKA ASESOR PEMANTAUAN DAN EVALUASI SPBE",
+        "full_chunk_text": ".4. Kompetensi  Kompetensi adalah kemampuan dan karakteristik yang dimiliki oleh  seseorang, berupa pengetahuan, keterampilan, dan sikap perilaku yang  diperlukan dalam pelaksanaan tugas jabatannya.  Asesor menerapkan  pengetahuan, keahlian dan keterampilan, serta pengalaman yang  diperlukan dalam pelaksanaan pemantauan dan evaluasi SPBE.    A.5. Akuntabel  Akuntabel  adalah  kemampuan  untuk  menyampaikan  pertanggungjawaban atau untuk menjawab dan menerangkan kinerja  dan tindakan seseorang kepada pihak yang memiliki hak atau  berkewenangan untuk meminta keterangan atau pertanggungjawaban.  Asesor wajib menyampaikan pertanggungjawaban atas kinerja dan  tindakannya kepada pihak yang memiliki hak atau kewenangan untuk  meminta keterangan atau pertanggungjawaban.    A.6. Perilaku Profesional  Perilaku professional adalah tindak tanduk yang merupakan ciri, mutu,  dan kualitas suatu profesi atau orang yang profesional di mana  memerlukan kepandaian khusus untuk menjalankannya. Asesor  sebaiknya bertindak dalam sikap konsisten dengan reputasi profesi yang  baik dan menahan diri dari segala perilaku yang mungkin menghilangkan  kepercayaan atas reputasi profesinya."
+      },
+      {
+        "id": 4,
+        "document": "PEDOMAN MENTERI PENDAYAGUNAAN APARATUR NEGARA DAN REFORMASI BIROKRASI REPUBLIK INDONESIA NOMOR 3 TAHUN 2024",
+        "section": "BAB III - TATA CARA DAN KAIDAH PENILAIAN PEMANTAUAN DAN EVALUASI SPBE",
+        "full_chunk_text": ".Kepwal-xx- 2020.pdf (Fakta).  Berdasarkan penjelasan dan data dukung yang disampaikan, maka  dokumentasi tata kelola/penerapan Inovasi Proses Bisnis telah  memenuhi kesuaian standar PermenPANRB No.19 Tahun 2020, namun  belum tergambarkan perbaikan sebagai bentuk inovasi Proses Bisnis  yang efisien (Analisis).  Hasil penilaian terhadap penjelasan dan data dukung menggambarkan  tingkat kematangan 2 (dua) (Justifikasi Hasil).”    C.3. Kaidah Penulisan Penjelasan Penilaian Dokumen Bagi Asesor Eksternal  Pada Domain Manajemen SPBE (Indikator 21-31).  Verifikasi dan validasi telah dilakukan terhadap penjelasan dan data  dukung pada Indikator <<No. dan Substansi Indikator>> pada  <<K/L/Pemda>>, dimana tercantum dalam <<Jenis Dokumentasi  Penerapan Manajemen SPBE (jika ada)>>, yaitu pada <<Nomor Bab,  Halaman, atau lampiran (jika ada)>> tentang <<Uraian Penerapan  Manajemen SPBE>> sesuai data dukung <<Nama File Lampiran Data  Dukung>> (kalimat penjelasan Fakta).  Berdasarkan penjelasan dan data dukung yang disampaikan, maka  dokumentasi penerapan <<Nama Substansi Indikator>> <<belum/telah  mencakup/memenuhi kesesuaian>>  mengenai <<uraian analisis  pemenuhan  kriteria  tingkat  kematangan  secara  berjenjang  (menyesuaikan pendapat Asesor Eksternal)>> (kalimat penjelasan  Analisis sesuai kriteria level yang dipenuhi).    Hasil penilaian terhadap penjelasan dan data dukung menggambarkan  <<Tingkat kematangan sesuai dengan analisis dan fakta>> (kalimat  penjelasan Justifikasi Hasil)"
+      }
+    ]
+  },
+  {
+    "response_id": "llm09-holdout-adversarial-003",
+    "sources": []
+  }
+]

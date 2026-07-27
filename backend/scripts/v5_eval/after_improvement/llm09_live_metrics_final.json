@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "annotation_file": "llm09_live_manual_annotations.json",
+  "datasets": {
+    "live": {
+      "dataset": "live",
+      "total_responses": 20,
+      "claim_counts": {
+        "not_applicable": 15
+      },
+      "response_outcomes": {
+        "correct_fallback": 13,
+        "acceptable_fallback": 3,
+        "false_refusal": 4
+      },
+      "main_metrics": {
+        "unsupported_final_answer_rate": {
+          "value": 0.0,
+          "percentage": 0.0,
+          "numerator": 0,
+          "denominator": 20
+        },
+        "citation_support_rate": {
+          "value": null,
+          "percentage": null,
+          "numerator": 0,
+          "denominator": 0,
+          "partially_supported_claims": 0,
+          "unsupported_claims": 0
+        },
+        "safe_fallback_accuracy": {
+          "value": 0.8571,
+          "percentage": 85.71,
+          "numerator": 6,
+          "denominator": 7
+        }
+      }
+    }
+  }
+}

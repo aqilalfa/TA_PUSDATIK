@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-04T00:00:00+07:00",
+  "title": "Design System: SPBE RAG System",
+  "extensions": {
+    "colorMeta": {
+      "primary-navy": {
+        "role": "primary",
+        "displayName": "Institutional Navy",
+        "canonical": "#1a3a6b",
+        "tonalRamp": ["#07101f", "#0c1f3b", "#122d57", "#1a3a6b", "#2c5282", "#587aa8", "#b8cce4", "#eef2f9"]
+      },
+      "gold-accent": {
+        "role": "secondary",
+        "displayName": "Archive Gold",
+        "canonical": "#c9a84c",
+        "tonalRamp": ["#2b2108", "#5c4612", "#8b6b22", "#c9a84c", "#d4b55e", "#e0c97a", "#f3e5ad", "#fff8df"]
+      },
+      "cream-bg": {
+        "role": "neutral",
+        "displayName": "Government Paper",
+        "canonical": "#f8f7f4",
+        "tonalRamp": ["#22201b", "#4d493f", "#8b8575", "#d8d2c4", "#f0ece4", "#f5f2ee", "#f8f7f4", "#ffffff"]
+      },
+      "action-blue": {
+        "role": "primary",
+        "displayName": "Operational Blue",
+        "canonical": "#0b4abf",
+        "tonalRamp": ["#031126", "#06235a", "#0b3670", "#0b4abf", "#3f73d9", "#88a8ee", "#dfeaff", "#f8fbff"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display Authority", "purpose": "Hero and major page headings only." },
+      "headline": { "displayName": "Section Headline", "purpose": "Section-level headings and strong dashboard moments." },
+      "title": { "displayName": "Product Title", "purpose": "Cards, panels, modals, and compact component headings." },
+      "body": { "displayName": "UI Body", "purpose": "Cards, helpers, metadata, and control-adjacent text." },
+      "body-serif": { "displayName": "Reading Body", "purpose": "Chat answers and longer formal prose." },
+      "label": { "displayName": "Operational Label", "purpose": "Badges, navigation, status, step labels, and short metadata." }
+    },
+    "shadows": [
+      { "name": "ambient-home-panel", "value": "0 18px 40px rgba(12, 43, 84, 0.08)", "purpose": "Elevated Home dashboard cards and CTA surfaces." },
+      { "name": "hero-lift", "value": "0 28px 70px rgba(12, 43, 84, 0.13)", "purpose": "One-per-page hero container." },
+      { "name": "chat-bubble-lift", "value": "0 10px 28px rgba(12, 43, 84, 0.06)", "purpose": "Assistant answer and evidence surfaces." },
+      { "name": "modal-lift", "value": "0 8px 32px rgba(26, 58, 107, 0.15)", "purpose": "Blocking overlays and confirmation modals." }
+    ],
+    "motion": [
+      { "name": "state-fast", "value": "150ms ease", "purpose": "Hover and focus feedback for dense product controls." },
+      { "name": "state-standard", "value": "180-250ms ease", "purpose": "Home card hover, modal/error entry, and small reveal states." },
+      { "name": "reduced-motion", "value": "@media (prefers-reduced-motion: reduce)", "purpose": "Disable or shorten non-essential transitions." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "640px" },
+      { "name": "tablet", "value": "820px" },
+      { "name": "desktop-collapse", "value": "1080px" },
+      { "name": "chat-stack", "value": "1180px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary CTA Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "High-confidence action for starting consultation or saving workflow progress.",
+      "html": "<button class=\"ds-btn-primary\">Mulai Konsultasi</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 22px; border: 0; border-radius: 14px; background: linear-gradient(135deg, var(--color-navy) 0%, #0b4abf 100%); color: #fff; font: 700 13px var(--font-ui); cursor: pointer; box-shadow: 0 16px 30px rgba(11, 74, 191, 0.25); transition: transform 0.18s ease, box-shadow 0.18s ease; } .ds-btn-primary:hover { transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: 3px solid rgba(201, 168, 76, 0.45); outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Quiet secondary action for navigation or learning more.",
+      "html": "<button class=\"ds-btn-secondary\">Pelajari Cara Kerja</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 22px; border: 1px solid #cbd9ec; border-radius: 14px; background: rgba(255, 255, 255, 0.84); color: #0b3670; font: 700 13px var(--font-ui); cursor: pointer; transition: transform 0.18s ease, border-color 0.18s ease; } .ds-btn-secondary:hover { transform: translateY(-2px); border-color: rgba(201, 168, 76, 0.65); } .ds-btn-secondary:focus-visible { outline: 3px solid rgba(201, 168, 76, 0.35); outline-offset: 2px; }"
+    },
+    {
+      "name": "Evidence Card",
+      "kind": "card",
+      "refersTo": "card-surface",
+      "description": "Source-backed answer or reference surface with calm containment.",
+      "html": "<article class=\"ds-evidence-card\"><strong>Jawaban berbasis rujukan</strong><p>Sistem menampilkan sumber agar pengguna dapat memeriksa kembali konteks dokumen.</p></article>",
+      "css": ".ds-evidence-card { border: 1px solid #dce6f3; border-radius: 18px; background: #fff; color: #27384f; padding: 17px; font: 13px/1.65 var(--font-ui); box-shadow: 0 10px 28px rgba(12, 43, 84, 0.06); } .ds-evidence-card strong { display: block; color: #0b3670; font-weight: 800; margin-bottom: 8px; } .ds-evidence-card p { margin: 0; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Compact government-form field for login, chat, and document workflows.",
+      "html": "<label class=\"ds-field\"><span>Alamat Email</span><input placeholder=\"admin@bssn.go.id\" /></label>",
+      "css": ".ds-field { display: grid; gap: 8px; font-family: var(--font-ui); } .ds-field span { color: var(--color-navy); font-size: 12px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; } .ds-field input { width: 100%; padding: 12px 16px; border: 1px solid #d0d0d0; border-radius: 3px; background: #faf9f7; color: var(--color-text); font: 14px var(--font-ui); } .ds-field input:focus { outline: none; border-color: var(--color-gold); background: #fff; box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1); }"
+    },
+    {
+      "name": "Top Navigation",
+      "kind": "nav",
+      "refersTo": "nav-topbar",
+      "description": "Dark navy product shell navigation with compact account and section links.",
+      "html": "<nav class=\"ds-topbar\"><div class=\"ds-logo\">AH</div><strong>Asisten Hukum SPBE</strong><a>Beranda</a><a class=\"active\">Layanan</a></nav>",
+      "css": ".ds-topbar { display: flex; align-items: center; gap: 12px; padding: 10px 32px; background: var(--color-navy); color: #fff; font-family: var(--font-ui); border-bottom: 1px solid rgba(201, 168, 76, 0.25); } .ds-logo { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 2px; background: var(--color-gold); color: var(--color-navy); font: 700 15px var(--font-display); } .ds-topbar strong { margin-right: auto; font: 700 16px var(--font-display); } .ds-topbar a { color: rgba(255,255,255,0.62); font-size: 11px; padding: 5px 10px; border-radius: 2px; } .ds-topbar a.active { color: var(--color-gold); }"
+    },
+    {
+      "name": "Status Chip",
+      "kind": "chip",
+      "refersTo": "card-surface",
+      "description": "Small operational state badge for API health, document indexing, and source availability.",
+      "html": "<span class=\"ds-status-chip\">Aktif</span>",
+      "css": ".ds-status-chip { display: inline-flex; align-items: center; min-height: 22px; padding: 3px 8px; border: 1px solid #a3d9b9; border-radius: 999px; background: #edf7f2; color: #2d7a4f; font: 800 11px var(--font-ui); letter-spacing: 0.3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Ruang Arsip yang Terang",
+    "overview": "The interface should feel like an internal government reading room: orderly, quiet, trustworthy, and ready for careful work. It is not a public marketing site and it is not an AI novelty surface. The design serves legal consultation, source review, document management, and accountable internal workflows.",
+    "keyCharacteristics": [
+      "Formal, calm, and trustworthy before expressive or playful.",
+      "Source-first: visual hierarchy should lead users toward rujukan, evidence, and verification.",
+      "Restrained color: navy carries structure, gold marks importance, white/cream preserve reading comfort.",
+      "Product consistency over surprise: repeated controls should look and behave the same across Home, Chat, Login, and Documents.",
+      "Accessible by default: strong contrast, keyboard-visible states, reduced motion alternatives, and clear Bahasa Indonesia."
+    ],
+    "rules": [
+      { "name": "The Rujukan Before Accent Rule", "body": "Gold and blue accents are earned by source, state, or primary action. Decoration alone does not earn accent color.", "section": "colors" },
+      { "name": "The Muted Text Rule", "body": "ink-light is prohibited for required instructions, labels, or legal caveats. Use ink-muted at minimum, and move toward ink when contrast is uncertain.", "section": "colors" },
+      { "name": "The Product Label Rule", "body": "Uppercase labels are allowed only for short operational markers such as status, stepper labels, and metadata. Body copy must never be uppercase.", "section": "typography" },
+      { "name": "The One Hero Rule", "body": "Only the main page hero may use the strongest shadow and largest radius. Reusing hero treatment on every section makes the product feel decorative.", "section": "elevation" },
+      { "name": "The Border First Rule", "body": "Dense product workflows start with borders and tonal layers. Add shadow only when hierarchy or overlay behavior needs it.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep the interface formal, calm, and trustworthy. Product UI must serve legal/SPBE work before visual novelty.",
+      "Do use navy for structure, gold for rare institutional emphasis, and white/cream for reading surfaces.",
+      "Do make rujukan and evidence visible before confidence. If an answer has sources, the UI should guide the user toward them.",
+      "Do maintain WCAG AA as the minimum for text contrast, keyboard focus, semantic structure, and reduced motion.",
+      "Do document every new reusable pattern in the same visual vocabulary: button, card, status, table, source panel, and form control."
+    ],
+    "donts": [
+      "Don't create a generic AI SaaS look: gradient-heavy hero sections, endless identical card grids, buzzword copy, or decorative glass effects.",
+      "Don't make the interface too busy. Decoration, animation, and novelty must never distract from legal text and source review.",
+      "Don't make authenticated internal screens feel like public/commercial marketing pages.",
+      "Don't hide accountability. Disclaimers, source state, retrieval state, and legal limitations must remain visible.",
+      "Don't use border-left or border-right greater than 1px as a colored stripe on cards, suggestions, or alerts. Replace with full borders, background tint, icons, or structured metadata.",
+      "Don't animate layout dimensions such as width/height for routine progress or navigation state. Use transform, opacity, or instant state changes.",
+      "Don't rely on low-opacity white text for essential nav/account information. If users need it, it must be readable."
+    ]
+  }
+}

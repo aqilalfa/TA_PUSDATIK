@@ -103,6 +103,28 @@ nul
 !backend/logs/backend/.gitkeep
 !backend/logs/nginx/.gitkeep
 
+
+# AI Tools & Agents
+.agent/
+.claude/
+.sisyphus/
+.opencode/
+
+# Unused configs
+.env.cloudflare.example
+docker-compose.cloudflare.yml
+docker-compose.ldap.yml
+start_all.bat
+take_screenshots.py
+frontend/take_screenshots.cjs
+
+# Documents and Reports (optional if you don't want them in repo)
+TUGAS AKHIR/
+TUGAS_AKHIR/
+OWASP LLM TOP10/
+tangkapan layar/
+*.pdf
+
 # Claude Code ephemeral state (dirty flags, session stamps)
 .claude/_state/*
 !.claude/_state/.gitkeep

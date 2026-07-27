@@ -1,0 +1,42 @@
+{
+  "dataset": "live_after_improvement",
+  "total_responses": 20,
+  "claim_counts": {
+    "not_evaluated": 15
+  },
+  "response_outcomes": {
+    "correct_fallback": 13,
+    "not_evaluated": 3,
+    "false_refusal": 4
+  },
+  "main_metrics": {
+    "unsupported_final_answer_rate": {
+      "value": 0.0,
+      "percentage": 0.0,
+      "numerator": 0,
+      "denominator": 20
+    },
+    "citation_support_rate": {
+      "value": null,
+      "percentage": null,
+      "numerator": 0,
+      "denominator": 0,
+      "not_evaluated_claims": 15
+    },
+    "safe_fallback_accuracy": {
+      "value": 0.8571,
+      "percentage": 85.71,
+      "numerator": 6,
+      "denominator": 7
+    }
+  },
+  "diagnostic_metrics": {
+    "false_refusal_rate": {
+      "value": 0.3077,
+      "percentage": 30.77,
+      "numerator": 4,
+      "denominator": 13
+    }
+  },
+  "note": "CSR is null because all extracted claims have status=not_evaluated (draft mode). After human review of claim statuses against retrieved context, CSR will be computed. There are 15 claims awaiting review."
+}

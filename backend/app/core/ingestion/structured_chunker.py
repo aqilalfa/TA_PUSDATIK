@@ -40,12 +40,60 @@ CHUNK_OVERLAP_LAPORAN    = getattr(settings, "CHUNK_OVERLAP_LAPORAN", 200)
 # Text splitting utilities
 # ---------------------------------------------------------------------------
 
+# LLM09 Tahap B (boundary-safe split): a legal list/ayat marker at the very
+# end of a candidate chunk boundary (e.g. "...ketentuan sebagai berikut:\na."
+# or "...dimaksud pada\n(1)") means the split point falls right BEFORE the
+# marker's content — the marker itself survives but is immediately orphaned
+# in the next chunk with zero body text, or worse, the marker plus a partial
+# first word gets cut mid-sentence. Detect this and push the boundary forward
+# so at least the marker + a few words of its content stay together, or pull
+# the boundary back to before the marker so the next chunk starts clean.
+_TRAILING_LIST_OR_AYAT_MARKER_PATTERN = re.compile(
+    r"(?:\n\s*(?:\(\d+\)|\d+\.|[a-z]\.)\s*[A-Za-z]*|\bpasal\s+\d+\s*|\bayat\s*\(\d+\)\s*)$",
+    re.IGNORECASE,
+)
+
+
+def _adjust_boundary_for_legal_markers(text: str, start: int, end: int, text_length: int) -> int:
+    """Pull `end` back before an orphaned trailing Pasal/Ayat/list marker.
+
+    Without this, `split_text_with_overlap` can produce a chunk that ends
+    with e.g. "...ketentuan sebagai berikut:\na." (marker with no content) —
+    the letter/number marker becomes meaningless without its body, and the
+    body then starts the NEXT chunk with a dangling continuation instead of
+    a marker, breaking the legal citation trail (PRD Tahap B: "chunk regulasi
+    tidak terpotong setelah nomor atau huruf daftar").
+    """
+    if end >= text_length:
+        return end
+
+    window = text[max(0, end - 40):end]
+    match = _TRAILING_LIST_OR_AYAT_MARKER_PATTERN.search(window)
+    if not match:
+        return end
+
+    marker_start_in_window = match.start()
+    adjusted_end = max(0, end - 40) + marker_start_in_window
+    # Only pull back if it still leaves a non-trivial chunk; otherwise keep
+    # the original boundary rather than producing a near-empty piece.
+    if adjusted_end > start + 20:
+        return adjusted_end
+    return end
+
+
 def split_text_with_overlap(
     text: str,
     max_size: int = MAX_CHUNK_SIZE,
     overlap: int = CHUNK_OVERLAP,
 ) -> List[str]:
-    """Split long text without importing heavyweight ML dependencies."""
+    """Split long text without importing heavyweight ML dependencies.
+
+    Boundary-safe (LLM09 Tahap B): prefers sentence/paragraph separators over
+    raw whitespace, and additionally pulls the split point back before any
+    orphaned trailing Pasal/Ayat/list marker (e.g. "...berikut:\na.") so a
+    numbered/lettered legal marker is never separated from its content across
+    chunk boundaries.
+    """
     if len(text) <= max_size:
         return [text]
 
@@ -67,6 +115,8 @@ def split_text_with_overlap(
                     split_len = len(separator)
             if split_at > start + max_size // 3:
                 end = split_at + split_len
+
+            end = _adjust_boundary_for_legal_markers(text, start, end, text_length)
 
         piece = text[start:end].strip()
         if piece:
@@ -905,7 +955,88 @@ def chunk_document(doc: Dict[str, Any], md_file_path: Optional[str] = None) -> L
     else:
         logger.warning(f"No chunks produced for {doc_type} document")
 
+    # LLM09 Tahap B: log (do not fail) any chunk whose pasal/ayat metadata
+    # label doesn't actually appear in its own text — this is a non-fatal
+    # ingestion-time signal, surfaced so a human can audit specific
+    # regulations before they are trusted for citation-grounded answers.
+    mismatches = find_metadata_text_mismatches(final_chunks)
+    if mismatches:
+        logger.warning(
+            "Chunked {} with {} pasal/ayat metadata-vs-text mismatch(es): {}",
+            doc_type,
+            len(mismatches),
+            mismatches[:3],
+        )
+
     return final_chunks
+
+
+# ---------------------------------------------------------------------------
+# LLM09 Tahap B: metadata-vs-text consistency validator
+# ---------------------------------------------------------------------------
+
+_PASAL_NUMBER_PATTERN = re.compile(r"\bpasal\s+(\d+)\b", re.IGNORECASE)
+_AYAT_NUMBER_PATTERN = re.compile(r"\bayat\s*\(?(\d+)\)?", re.IGNORECASE)
+
+
+def find_metadata_text_mismatches(chunks: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Detect chunks where the `pasal`/`ayat` metadata label doesn't match chunk text.
+
+    This is the deterministic check required by PRD Tahap B: "Buat unit test
+    untuk memastikan metadata sesuai dengan isi." It never mutates chunks —
+    only reports mismatches for audit/logging so ingestion never silently
+    trusts a wrong Pasal/Ayat citation label.
+
+    A mismatch is reported when:
+      - metadata declares a single Pasal number, but that number does not
+        appear as "Pasal N" anywhere in the chunk text, OR
+      - metadata declares a single Ayat number (not a range like "(1)-(3)"),
+        but that number does not appear as an ayat marker in the chunk text.
+
+    Range labels (produced when multiple ayat are merged into one chunk,
+    e.g. "Ayat (1)-(3)") and empty metadata are intentionally skipped —
+    those are valid multi-ayat chunks, not mismatches.
+    """
+    mismatches: List[Dict[str, Any]] = []
+
+    for chunk in chunks:
+        meta = chunk.get("metadata", {}) or {}
+        text = chunk.get("text", "") or ""
+
+        pasal_label = str(meta.get("pasal") or "").strip()
+        if pasal_label:
+            label_match = _PASAL_NUMBER_PATTERN.search(pasal_label)
+            if label_match:
+                pasal_num = label_match.group(1)
+                if not re.search(rf"\bpasal\s+{re.escape(pasal_num)}\b", text, re.IGNORECASE):
+                    mismatches.append(
+                        {
+                            "type": "pasal",
+                            "declared": pasal_label,
+                            "chunk_index": chunk.get("chunk_index"),
+                            "text_preview": text[:120],
+                        }
+                    )
+
+        ayat_label = str(meta.get("ayat") or "").strip()
+        if ayat_label and "-" not in ayat_label:
+            label_match = _AYAT_NUMBER_PATTERN.search(ayat_label)
+            if label_match:
+                ayat_num = label_match.group(1)
+                # Check for either explicit word "Ayat N" or the "(N)" prefix at start of lines
+                if not re.search(rf"\bayat\s*\(?{re.escape(ayat_num)}\)?", text, re.IGNORECASE) and not re.search(
+                    rf"(?m)^\s*\(?{re.escape(ayat_num)}\)?\s", text
+                ):
+                    mismatches.append(
+                        {
+                            "type": "ayat",
+                            "declared": ayat_label,
+                            "chunk_index": chunk.get("chunk_index"),
+                            "text_preview": text[:120],
+                        }
+                    )
+
+    return mismatches
 
 
 # ===========================================================================

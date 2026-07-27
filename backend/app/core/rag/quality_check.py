@@ -21,7 +21,7 @@ CONTEXTUAL_PARTIAL_CLAIM_PATTERNS = (
 )
 
 CONTEXTUAL_PARTIAL_NEGATION_PATTERN = re.compile(
-    r"hanya\s+(?:mencantumkan|memuat)[^\n\r\.;:]{0,140}\b(?:tanpa|tidak|belum|sementara)\b",
+    r"hanya\s+(?:mencantumkan|memuat|mengatur|menjelaskan)[^\n\r\.;:]{0,140}\b(?:tanpa|tidak|belum|sementara)\b",
     re.IGNORECASE,
 )
 
@@ -34,9 +34,11 @@ LOCAL_EVIDENCE_PATTERNS = (
     re.compile(r"\b(?:sangat\s+baik|baik|cukup|kurang|memuaskan)\b", re.IGNORECASE),
     re.compile(r"bobot[^\n]{0,40}\d", re.IGNORECASE),
     re.compile(r"\[\d+\]"),
+    # New pattern: if the "tidak ditemukan" is followed by a connective like "Namun," or "Tetapi," it's likely a corrective statement, not a blind refusal.
+    re.compile(r"(?:\bnamun\b|\btetapi\b|\bwalaupun\b|\bmengatur\b|\bmenyebutkan\b|\badalah\b)", re.IGNORECASE),
 )
 
-LOCAL_EVIDENCE_WINDOW = 140
+LOCAL_EVIDENCE_WINDOW = 200
 
 GENERIC_STOPWORDS = {
     "yang", "dan", "atau", "dari", "pada", "untuk", "dalam", "dengan", "sebagai", 

@@ -86,7 +86,7 @@ def test_rerank_uses_24_cross_encoder_candidates_for_general_queries():
     assert results[0].metadata["rerank_elapsed_ms"] >= 0.0
 
 
-@pytest.mark.parametrize("retrieval_type", ["pasal", "table", "indikator"])
+@pytest.mark.parametrize("retrieval_type", ["pasal", "table", "indikator", "relational"])
 def test_rerank_uses_32_cross_encoder_candidates_for_specialized_queries(retrieval_type):
     reranker = _recording_reranker()
     ranker = RAGRanker(reranker_instance=reranker)

@@ -1,0 +1,38 @@
+{
+  "dataset": "llm09_holdout_responses",
+  "total": 23,
+  "usable_total": 23,
+  "probe_errors": 0,
+  "main_metrics": {
+    "unsupported_final_answer_rate": {
+      "value": 0.087,
+      "numerator": 2,
+      "denominator": 23
+    },
+    "citation_support_rate": {
+      "value": null,
+      "numerator": 0,
+      "denominator": 2
+    },
+    "safe_fallback_accuracy": {
+      "value": 0.4,
+      "numerator": 4,
+      "denominator": 10
+    }
+  },
+  "diagnostic_metrics": {
+    "false_refusal_rate": {
+      "value": 0.2308,
+      "numerator": 3,
+      "denominator": 13
+    }
+  },
+  "outcomes": {
+    "supported_answer": 0,
+    "unsupported_answer": 2,
+    "correct_fallback": 7,
+    "false_refusal": 3,
+    "probe_error": 0,
+    "not_evaluated": 11
+  }
+}

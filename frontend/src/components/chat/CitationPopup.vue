@@ -28,7 +28,13 @@
         <div class="popup-text">{{ truncatedText }}</div>
         <div class="popup-actions">
           <button class="popup-btn pdf" @click="openPdf">📄 Buka PDF ↗</button>
-          <button class="popup-btn ctx" @click="openContext">🔍 Lihat Konteks →</button>
+          <button
+            v-if="canViewContext"
+            class="popup-btn ctx"
+            @click="openContext"
+          >
+            🔍 Lihat Konteks →
+          </button>
         </div>
       </template>
     </div>
@@ -37,6 +43,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { isAdminUser } from '@/services/auth'
 import { getChunkByIndex, openDocumentFile } from '@/services/documentService'
 
 const props = defineProps({
@@ -52,6 +59,8 @@ const visible = ref(false)
 const loading = ref(false)
 const error = ref(false)
 const chunk = ref(null)
+// Staff/evaluator (role: staff) cannot open chunk detail pages; only admin_pusdatik.
+const canViewContext = computed(() => isAdminUser())
 let closeTimer = null
 
 const positionStyle = computed(() => {
@@ -117,8 +126,11 @@ function cancelClose() {
 }
 
 async function openPdf() {
-  if (props.source?.doc_id) {
+  if (!props.source?.doc_id) return
+  try {
     await openDocumentFile(props.source.doc_id)
+  } catch (error) {
+    window.alert(error?.message || 'Gagal membuka PDF.')
   }
 }
 

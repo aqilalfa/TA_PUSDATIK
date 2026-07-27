@@ -17,6 +17,8 @@ from app.core.rag.langchain_engine import langchain_engine, classify_query
 from app.core.rag.observability import RagTrace
 from app.core.rag.prompts import validate_answer
 from app.core.rag.llm09_guard import assess_llm09_pre_generation_guard
+from app.core.rag.answerability import assess_answerability, build_partial_answer_instruction
+from app.core.rag.claim_verifier import verify_claims, apply_verifier_edits, summarize_verdicts
 from app.core.rag.structured_facts import (
     find_structured_fact_answer,
     format_structured_fact_answer,
@@ -25,9 +27,11 @@ from app.core.rag.guardrails import PROMPT_INJECTION_REFUSAL, build_security_war
 from app.core.rag.output_guardrails import validate_llm_output_contract
 from app.core.formatting import (
     sanitize_citations,
+    strip_invalid_citation_markers,
     strip_markdown_emphasis,
     append_citation_reference_block,
     renumber_citations_and_sources,
+    strip_flagged_ayat_references,
 )
 from datetime import datetime, timezone
 from typing import List, Dict, Any
@@ -38,7 +42,6 @@ import json
 import os
 import time
 import uuid
-import re
 import asyncio
 
 router = APIRouter()
@@ -534,18 +537,29 @@ async def chat_stream(
                 yield f"event: complete\ndata: {json.dumps(complete_data, ensure_ascii=False)}\n\n"
                 return
 
-            llm09_guard = assess_llm09_pre_generation_guard(
+            # LLM09 Tahap D: Answerability Gate. Classifies evidence sufficiency
+            # into COMPLETE / PARTIAL / NONE *before* generation, instead of the
+            # previous binary allow/block gate. NONE still fail-closes exactly as
+            # before; PARTIAL now proceeds to generation with an explicit
+            # system-prompt directive to answer only the supported slice.
+            answerability = assess_answerability(
                 request.message,
                 context,
                 sources_for_response,
             )
-            if not llm09_guard.allowed:
+            trace.stage(
+                "answerability.assessed",
+                status="ok",
+                level=answerability.level,
+                focus_coverage=answerability.focus_coverage,
+            )
+            if answerability.level == "NONE":
                 full_response = _build_llm09_insufficient_context_answer()
                 latency = int((time.perf_counter() - start_time) * 1000)
                 validation = _build_llm09_guard_validation(
-                    llm09_guard.reason,
-                    llm09_guard.risk_category,
-                    llm09_guard.details,
+                    answerability.reason,
+                    str(answerability.details.get("risk_category", "evidence_sufficiency")),
+                    answerability.details,
                 )
                 _persist_exchange(
                     db=db,
@@ -557,7 +571,7 @@ async def chat_stream(
                     latency_ms=latency,
                 )
 
-                yield f"event: llm09_guard\ndata: {json.dumps({'blocked': True, 'risk_category': llm09_guard.risk_category, 'reason': llm09_guard.reason}, ensure_ascii=False)}\n\n"
+                yield f"event: llm09_guard\ndata: {json.dumps({'blocked': True, 'answerability': answerability.level, 'reason': answerability.reason}, ensure_ascii=False)}\n\n"
                 yield f"event: token\ndata: {json.dumps({'t': full_response}, ensure_ascii=False)}\n\n"
                 complete_data = {
                     "request_id": trace.request_id,
@@ -567,17 +581,25 @@ async def chat_stream(
                     "timing": {"total_ms": latency},
                     "model_used": "llm09-pre-generation-guard",
                     "validation": validation,
+                    "answerability": answerability.to_dict(),
                     "quality_check": {
                         "score": None,
                         "needs_retry": False,
-                        "retry_reasons": [llm09_guard.risk_category],
-                        "focus_coverage": llm09_guard.details.get("focus_coverage"),
+                        "retry_reasons": [str(answerability.details.get("risk_category", "evidence_sufficiency"))],
+                        "focus_coverage": answerability.focus_coverage,
                         "has_unavailable_claim": True,
                         "unavailable_triggers_active": [],
                     },
                 }
                 yield f"event: complete\ndata: {json.dumps(complete_data, ensure_ascii=False)}\n\n"
                 return
+
+            partial_answer_instruction = (
+                build_partial_answer_instruction(answerability)
+                if answerability.level == "PARTIAL"
+                else ""
+            )
+            yield f"event: answerability\ndata: {json.dumps(answerability.to_dict(), ensure_ascii=False)}\n\n"
 
             # 3. Load chat history menggunakan session_id lokal
             history = await asyncio.get_event_loop().run_in_executor(
@@ -603,6 +625,7 @@ async def chat_stream(
                 model_name=model,
                 query_type=query_type,
                 max_tokens=request.max_tokens,
+                extra_system_instruction=partial_answer_instruction,
             ):
                 if await _request_disconnected(http_request):
                     raise asyncio.CancelledError()
@@ -677,6 +700,7 @@ async def chat_stream(
             # by a decorative source footer.
 
             # 5. Post-process jawaban: validasi sitasi, plain text emphasis, dan peta referensi
+            full_response = strip_invalid_citation_markers(full_response)
             full_response = sanitize_citations(full_response, len(sources_for_response))
             full_response = strip_markdown_emphasis(full_response)
             full_response, used_sources_for_response = renumber_citations_and_sources(
@@ -686,19 +710,19 @@ async def chat_stream(
             full_response = append_citation_reference_block(full_response, used_sources_for_response)
 
             validation = None
+            quality_outcome = "quality"
             if context:
                 validation = validate_answer(full_response, context, used_sources_for_response)
                 if validation.get("warnings"):
-                    # Remove Ayat references flagged as not present in context.
-                    # This keeps legal citations faithful without altering core content.
-                    if any(
-                        "Kemungkinan Ayat yang tidak ada di konteks" in w
-                        for w in validation.get("warnings", [])
-                    ):
-                        cleaned = re.sub(r"\s+[Aa]yat\s*\(\d+\)", "", full_response)
-                        if cleaned != full_response:
-                            full_response = cleaned
-                            validation = validate_answer(full_response, context, used_sources_for_response)
+                    # Remove ONLY the Ayat references flagged as not present in
+                    # context (LLM09 review fix H6) — supported Ayat citations and
+                    # the reference block must stay intact.
+                    cleaned = strip_flagged_ayat_references(
+                        full_response, validation.get("warnings", [])
+                    )
+                    if cleaned != full_response:
+                        full_response = cleaned
+                        validation = validate_answer(full_response, context, used_sources_for_response)
 
                     yield (
                         "event: validation\n"
@@ -709,7 +733,6 @@ async def chat_stream(
                     full_response = _build_llm09_safe_fallback(validation)
                     yield f"event: replace\ndata: {json.dumps({'answer': full_response}, ensure_ascii=False)}\n\n"
 
-            quality_outcome = "quality"
             if validation and validation.get("is_valid") is False:
                 used_sources_for_response = []
                 quality_outcome = "no_evidence"
@@ -804,6 +827,7 @@ async def chat_stream(
                     model_name=model,
                     query_type=query_type,
                     max_tokens=request.max_tokens,
+                    extra_system_instruction=partial_answer_instruction,
                 ):
                     if await _request_disconnected(http_request):
                         raise asyncio.CancelledError()
@@ -821,6 +845,7 @@ async def chat_stream(
                     )
                     break
 
+                retry_response = strip_invalid_citation_markers(retry_response)
                 retry_response = sanitize_citations(retry_response, len(sources_for_response))
                 retry_response = strip_markdown_emphasis(retry_response)
                 retry_response, retry_sources = renumber_citations_and_sources(
@@ -880,6 +905,51 @@ async def chat_stream(
                 needs_retry=selected_quality.get("needs_retry"),
                 retry_reasons=selected_quality.get("retry_reasons", []),
             )
+
+            # LLM09 Tahap G: per-claim verifier on the FINAL answer (after quality
+            # retries/security gates already ran). Grades every extractable claim
+            # against retrieved context and STRIPS only the unsupported ones,
+            # instead of discarding the whole answer when a single claim fails
+            # (the previous behavior — replacing the entire response on any
+            # `validate_answer` warning — inflated Unsupported Final Answer Rate
+            # and forced unnecessary fallbacks even when most claims were fine).
+            # Skipped when the answer is already a security/no-evidence fallback.
+            if quality_outcome not in ("no_evidence", "security") and context:
+                claim_verdicts = verify_claims(full_response, context, used_sources_for_response)
+                verifier_summary = summarize_verdicts(claim_verdicts)
+                if claim_verdicts:
+                    trace.stage(
+                        "answer.claim_verification.completed",
+                        status="ok",
+                        claim_count=verifier_summary["claim_count"],
+                        supported=verifier_summary["supported_claims"],
+                        partially_supported=verifier_summary["partially_supported_claims"],
+                        unsupported=verifier_summary["unsupported_claims"],
+                    )
+                    if verifier_summary["unsupported_claims"] > 0:
+                        edited_response, has_remaining_claim = apply_verifier_edits(full_response, claim_verdicts)
+                        if not has_remaining_claim:
+                            full_response = _build_llm09_insufficient_context_answer()
+                            used_sources_for_response = []
+                            quality_outcome = "no_evidence"
+                            yield f"event: replace\ndata: {json.dumps({'answer': full_response, 'reason': 'unsupported_claims'}, ensure_ascii=False)}\n\n"
+                        elif edited_response != full_response:
+                            full_response, used_sources_for_response = renumber_citations_and_sources(
+                                edited_response,
+                                used_sources_for_response,
+                            )
+                            full_response = append_citation_reference_block(full_response, used_sources_for_response)
+                            # The edited answer differs from what validation and the
+                            # quality report described — recompute both so the
+                            # persisted/streamed payloads match the final answer.
+                            validation = validate_answer(full_response, context, used_sources_for_response)
+                            selected_quality = build_answer_quality_report(
+                                query=request.message,
+                                context=context,
+                                answer=full_response,
+                                source_count=len(used_sources_for_response),
+                            )
+                            yield f"event: replace\ndata: {json.dumps({'answer': full_response, 'reason': 'claim_edited'}, ensure_ascii=False)}\n\n"
 
             # 6. Save response to DB
             latency = int((time.perf_counter() - start_time) * 1000)

@@ -6,7 +6,7 @@ from typing import Literal, cast
 
 from app.core.rag.prompts import _classify_question_type
 
-RetrievalType = Literal["general", "pasal", "table", "indikator"]
+RetrievalType = Literal["general", "pasal", "table", "indikator", "relational"]
 AnswerType = Literal[
     "purpose",
     "definition",
@@ -29,12 +29,17 @@ class QueryProfile:
 
 def _classify_retrieval_type(query: str) -> RetrievalType:
     normalized = str(query or "").lower()
+    # Specific legal/table/indikator references stay prioritized so grounding
+    # rules (SYSTEM_PROMPT_LEGAL, 32-candidate rerank) are not weakened when a
+    # relational keyword ("hubungan Pasal X dengan Y") also appears.
     if re.search(r"\btabel\b|\btable\b", normalized):
         return "table"
     if re.search(r"\bindikator\b|\bid[-\s]*\d+", normalized):
         return "indikator"
     if re.search(r"\bpasal\b|\bayat\b|\bperpres\b|\bpermenpan\b|\bpp\s*\d+\b|\bse\s+menteri\b", normalized):
         return "pasal"
+    if re.search(r"\b(?:hubungan|kaitan|relasi|perbandingan|dibandingkan|korelasi)\b", normalized):
+        return "relational"
     return "general"
 
 

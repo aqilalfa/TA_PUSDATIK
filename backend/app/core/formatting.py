@@ -9,10 +9,24 @@ Functions:
     filter_used_sources: Filter to only actually-cited sources
     strip_markdown_emphasis: Remove markdown emphasis markers from text
     append_citation_reference_block: Append human-readable citation-to-title map
+    strip_invalid_citation_markers: Remove literal/placeholder markers like [n], [?], [source]
+    extract_citation_ids: Extract cited numeric IDs in order of first appearance
+    validate_citation_ids: Deterministic structural validation of citation markers
 """
 
+import logging
 import re
 from typing import List, Dict
+
+logger = logging.getLogger(__name__)
+
+# Placeholder/invalid citation markers the model sometimes hallucinates instead
+# of a real numeric reference. These are NOT valid `[n]` numeric citations and
+# must never reach the user — they look like real citations but point nowhere.
+INVALID_CITATION_MARKER_PATTERN = re.compile(
+    r"\[\s*(?:n|no|num|number|\?|source|citation\s+needed|ref|reference|x|xx|angka|nomor)\s*\]",
+    re.IGNORECASE,
+)
 
 
 def extract_sources(chunks: List[Dict]) -> List[Dict]:
@@ -106,6 +120,28 @@ def sanitize_citations(answer: str, valid_source_count: int) -> str:
     return sanitized.strip()
 
 
+def strip_invalid_citation_markers(answer: str) -> str:
+    """Remove literal/placeholder citation markers like [n], [?], [source].
+
+    These are hallucinated marker artifacts, not real numeric citations
+    (`\\[(\\d+)\\]` never matches them because they contain no digits), so
+    `sanitize_citations` alone cannot catch them. Left unhandled, they reach
+    the user looking like real citations while pointing to nothing — this was
+    a confirmed false-negative in prior LLM09 evaluation rounds (V3).
+    """
+    if not answer:
+        return answer or ""
+
+    cleaned = INVALID_CITATION_MARKER_PATTERN.sub("", answer)
+    if cleaned != answer:
+        logger.warning("[LLM09] Removed invalid literal citation marker(s) from answer")
+
+    cleaned = re.sub(r"  +", " ", cleaned)
+    cleaned = re.sub(r" +\.", ".", cleaned)
+    cleaned = re.sub(r" +,", ",", cleaned)
+    return cleaned.strip()
+
+
 def strip_markdown_emphasis(text: str) -> str:
     """Remove markdown emphasis markers to keep legal answers plain/formal."""
     if not text:
@@ -129,6 +165,54 @@ def _extract_citation_ids(answer: str) -> List[int]:
             seen.add(cid)
             ids.append(cid)
     return ids
+
+
+def extract_citation_ids(answer: str) -> List[int]:
+    """Extract all numeric citation ids `[n]` in order of appearance (duplicates kept).
+
+    Public counterpart of `_extract_citation_ids` per LLM09 hardening spec
+    (Tahap F): downstream validators need every occurrence, not just unique
+    first-appearance order, to check placement/proximity to claims.
+    """
+    ids: List[int] = []
+    for match in re.findall(r"\[(\d+)\]", str(answer or "")):
+        try:
+            ids.append(int(match))
+        except ValueError:
+            continue
+    return ids
+
+
+def validate_citation_ids(answer: str, source_count: int) -> List[str]:
+    """Deterministic structural validation of citation markers in `answer`.
+
+    This performs FORMAT-level checks only — it does not (and cannot) verify
+    that a citation semantically supports the claim it is attached to. That
+    responsibility belongs to the claim-grounding verifier (Tahap G).
+
+    Checks performed:
+        1. No literal/placeholder markers such as [n], [?], [source].
+        2. No citation id below 1.
+        3. No citation id greater than the number of available sources.
+
+    Returns a list of human-readable error strings; empty list means the
+    answer passed all structural checks.
+    """
+    errors: List[str] = []
+    text = str(answer or "")
+
+    if INVALID_CITATION_MARKER_PATTERN.search(text):
+        errors.append("Ditemukan marker sitasi tidak valid (mis. [n], [?], [source]).")
+
+    for citation_id in extract_citation_ids(text):
+        if citation_id < 1:
+            errors.append(f"Sitasi [{citation_id}] tidak valid (nomor harus >= 1).")
+        elif citation_id > source_count:
+            errors.append(
+                f"Sitasi [{citation_id}] berada di luar jumlah sumber (hanya ada {source_count})."
+            )
+
+    return errors
 
 
 def append_citation_reference_block(
@@ -192,6 +276,34 @@ def filter_used_sources(answer: str, sources: List[Dict]) -> List[Dict]:
     return [s for s in sources if s.get("id") in used_ids]
 
 
+AYAT_WARNING_PATTERN = re.compile(r"Kemungkinan Ayat yang tidak ada di konteks:\s*([0-9,\s]+)")
+
+
+def strip_flagged_ayat_references(answer: str, warnings: List[str]) -> str:
+    """Remove only the Ayat references flagged as hallucinated by validate_answer.
+
+    Scoped in two ways: only the flagged ayat numbers are removed (supported
+    Ayat citations stay), and only the answer core is edited so the appended
+    reference block keeps its section paths intact.
+    """
+    flagged: set[str] = set()
+    for warning in warnings or []:
+        match = AYAT_WARNING_PATTERN.search(str(warning or ""))
+        if match:
+            flagged.update(re.findall(r"\d+", match.group(1)))
+    if not flagged:
+        return answer
+
+    parts = re.split(r"(?im)^(?=referensi\s+dokumen\s*:)", answer or "", maxsplit=1)
+    core = parts[0]
+    suffix = parts[1] if len(parts) > 1 else ""
+    for number in flagged:
+        core = re.sub(rf"\s+[Aa]yat\s*\({number}\)", "", core)
+        # Line-initial occurrences have no preceding whitespace to consume.
+        core = re.sub(rf"(?m)^[Aa]yat\s*\({number}\)\s*", "", core)
+    return core + suffix
+
+
 def renumber_citations_and_sources(answer: str, sources: List[Dict]) -> tuple[str, List[Dict]]:
     """Renumber cited sources by first citation appearance and update source IDs to match.
 
@@ -250,7 +362,10 @@ def renumber_citations_and_sources(answer: str, sources: List[Dict]) -> tuple[st
             continue
         updated = dict(src)
         updated["id"] = new_id
-        updated["original_id"] = old_id
+        # Keep the retrieval-layer id stable across repeated renumber passes so
+        # the audit trail back to the original [n] context blocks survives.
+        existing_original = src.get("original_id")
+        updated["original_id"] = existing_original if isinstance(existing_original, int) else old_id
         renumbered_sources.append(updated)
 
     return renumbered_answer, renumbered_sources

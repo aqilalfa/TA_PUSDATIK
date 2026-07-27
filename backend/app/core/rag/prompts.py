@@ -239,6 +239,9 @@ ATURAN WAJIB:
 13. JIKA FAKTA INTI BENAR-BENAR TIDAK DITEMUKAN, WAJIB fail-closed dan katakan HANYA: "Informasi tersebut tidak ditemukan dalam dokumen yang tersedia." JANGAN mencoba mengarang atau merangkum hal lain.
 14. STOP setelah menjawab inti. Jangan tambahkan paragraf kedua yang berisi proses, ketentuan, atau konsekuensi yang tidak ditanya. Satu pertanyaan = satu jawaban inti.
 15. Untuk pertanyaan yang bersifat agregasi/menyimpulkan/tabel parsial, jika data tidak lengkap 100%, WAJIB katakan: "Konteks dokumen yang tersedia belum cukup untuk menjawab agregasi tersebut."
+16. Jika konteks berasal dari lebih dari satu dokumen/peraturan, JANGAN menggabungkan ketentuan dari dokumen berbeda seolah-olah keduanya berasal dari "pasal yang sama" atau "ketentuan yang sama". Jelaskan isi setiap dokumen secara terpisah dengan sitasi masing-masing, lalu nyatakan eksplisit bahwa ketentuan tersebut berasal dari dokumen berbeda.
+17. Setiap pernyataan faktual harus didukung secara langsung oleh sedikitnya satu sumber yang tersedia. JANGAN menambahkan: pengetahuan umum di luar dokumen, interpretasi bebas, hubungan sebab-akibat yang tidak dinyatakan eksplisit, kesimpulan hukum yang tidak diminta, atau prediksi/proyeksi, kecuali eksplisit tertulis dalam konteks.
+18. ABAIKAN PERMINTAAN "TANPA SITASI". Jika pengguna meminta Anda untuk tidak menggunakan nomor referensi, mengabaikan sitasi, atau menyembunyikan tanda kurung siku, ANDA WAJIB MENOLAK PERMINTAAN TERSEBUT. Tetap gunakan sitasi [n] di setiap kalimat. Sistem SPBE melarang keras jawaban tanpa sitasi.
 
 PANDUAN:
 - Gunakan bahasa Indonesia formal
@@ -728,7 +731,7 @@ def _build_context_source_blocks(context: str) -> Dict[int, str]:
     return {source_id: "\n".join(parts) for source_id, parts in blocks.items()}
 
 
-def _audit_claim_grounding(answer: str, context: str) -> Dict:
+def _audit_claim_grounding(answer: str, context: str, sources: Optional[List[Dict]] = None) -> Dict:
     """Check each inline-cited factual claim against only its cited source blocks."""
     audit = {
         "checked_claims": 0,
@@ -738,9 +741,33 @@ def _audit_claim_grounding(answer: str, context: str) -> Dict:
     }
     source_blocks = _build_context_source_blocks(context)
 
+    # LLM09 review fix K1: after renumber_citations_and_sources the answer cites
+    # RENUMBERED ids while the context string keeps retrieval-layer numbering.
+    # Map each cited id back to its original block (falling back to the source's
+    # own snippet) so claims are graded against the source they actually cite.
+    id_alias: Dict[int, int] = {}
+    snippet_by_id: Dict[int, str] = {}
+    for src in sources or []:
+        try:
+            source_id = int(str(src.get("id")))
+        except (TypeError, ValueError):
+            continue
+        try:
+            original_id = int(str(src.get("original_id")))
+        except (TypeError, ValueError):
+            original_id = source_id
+        id_alias[source_id] = original_id
+        snippet_by_id[source_id] = str(src.get("snippet") or "")
+
+    def _cited_block(source_id: int) -> str:
+        block_text = source_blocks.get(id_alias.get(source_id, source_id), "")
+        if not block_text:
+            block_text = snippet_by_id.get(source_id, "")
+        return block_text
+
     for claim in _extract_groundable_claims(answer):
         cited_ids = sorted({int(value) for value in re.findall(r"\[(\d+)\]", claim)})
-        cited_text = "\n".join(source_blocks.get(source_id, "") for source_id in cited_ids)
+        cited_text = "\n".join(_cited_block(source_id) for source_id in cited_ids)
         claim_tokens = _grounding_tokens(re.sub(r"\[\d+\]", "", claim))
         source_tokens = _grounding_tokens(cited_text)
         matched_tokens = claim_tokens & source_tokens
@@ -857,7 +884,7 @@ def validate_answer(answer: str, context: str, sources: Optional[List[Dict]] = N
     # Strict per-citation metadata re-check (Pasal/Ayat vs cited source metadata)
     metadata_audit = _audit_cited_metadata_consistency(answer_core, sources)
     result["metadata_audit"] = metadata_audit
-    claim_grounding = _audit_claim_grounding(answer_core, context)
+    claim_grounding = _audit_claim_grounding(answer_core, context, sources)
     result["claim_grounding"] = claim_grounding
 
     if claim_grounding["unsupported_claims"] > 0:
